@@ -1,0 +1,26 @@
+# ******************************************
+# Nawaz Builds - Robots.txt
+# ******************************************
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /config/
+Disallow: /private/
+
+# Block AI Scrapers (Apne content ko AI se bachane ke liye)
+User-agent: GPTBot
+Disallow: /
+User-agent: ChatGPT-User
+Disallow: /
+User-agent: ClaudeBot
+Disallow: /
+User-agent: CCBot
+Disallow: /
+
+# Allow Meta Ads Bot (Zaroori hai taake Ads sahi chalein)
+User-agent: facebookexternalhit
+Allow: /
+
+# Sitemap ka rasta (Link to your sitemap)
+Sitemap: https://www.nawazbuilds.com/sitemap.xml

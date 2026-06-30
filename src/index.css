@@ -1,0 +1,284 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter_28pt-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter_28pt-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter_28pt-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
+
+/* @font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter_28pt-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-display: swap;
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 263 70% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 263 50% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 263 50% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 40 95% 55%;
+    --primary-foreground: 263 70% 8%;
+
+    --secondary: 263 30% 20%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 263 30% 16%;
+    --muted-foreground: 260 10% 65%;
+
+    --accent: 263 40% 22%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 263 30% 20%;
+    --input: 263 30% 20%;
+    --ring: 40 95% 55%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 263 50% 10%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 40 95% 55%;
+    --sidebar-primary-foreground: 263 70% 8%;
+    --sidebar-accent: 263 40% 18%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 263 30% 20%;
+    --sidebar-ring: 40 95% 55%;
+
+    /* Custom tokens */
+    --success: 142 70% 45%;
+    --success-foreground: 0 0% 100%;
+    --gold: 40 95% 55%;
+    --gold-glow: 35 100% 60%;
+    --purple-deep: 263 70% 8%;
+    --purple-mid: 263 50% 18%;
+    --purple-glow: 270 60% 35%;
+
+    --gradient-hero: linear-gradient(180deg, hsl(263 70% 6%) 0%, hsl(263 60% 12%) 50%, hsl(270 50% 15%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(263 50% 14% / 0.6) 0%, hsl(263 40% 10% / 0.4) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(40 95% 55%) 0%, hsl(30 100% 50%) 100%);
+    --gradient-cta-hover: linear-gradient(135deg, hsl(35 100% 60%) 0%, hsl(25 100% 55%) 100%);
+
+    --glass-bg: hsl(263 50% 14% / 0.4);
+    --glass-border: hsl(263 30% 30% / 0.5);
+    --glass-shadow: 0 8px 32px hsl(263 70% 5% / 0.4);
+
+    --shadow-glow-gold: 0 0 30px hsl(40 95% 55% / 0.3);
+    --shadow-glow-purple: 0 0 80px hsl(270 60% 35% / 0.4);
+  }
+
+  .dark {
+    --background: 263 70% 8%;
+    --foreground: 0 0% 98%;
+  }
+}
+
+/* @layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+} */
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    /* font-sans ko remove kiya taake sirf local files render hon bina delay ke */
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400; /* Default weight force kiya */
+  }
+}
+
+
+
+@layer components {
+  .glass-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: var(--radius);
+  }
+
+  .gradient-cta {
+    background: var(--gradient-cta);
+    color: hsl(var(--primary-foreground));
+    font-weight: 700;
+    border: none;
+    transition: all 0.3s ease;
+  }
+
+  .gradient-cta:hover {
+    background: var(--gradient-cta-hover);
+    box-shadow: var(--shadow-glow-gold);
+    transform: scale(1.03);
+  }
+
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .radial-glow {
+    position: relative;
+  }
+
+  .radial-glow::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, hsl(270 60% 35% / 0.25) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .text-gradient-gold {
+    background: var(--gradient-cta);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .check-green {
+    color: hsl(var(--success));
+  }
+
+  /* --- Blog Content Styling --- */
+  .blog-rich-text h2 {
+    @apply text-3xl font-bold text-white mt-12 mb-6 tracking-tight border-l-4 border-primary pl-4;
+  }
+  
+  .blog-rich-text h3 {
+    @apply text-2xl font-bold text-white mt-10 mb-4 tracking-tight;
+  }
+
+  .blog-rich-text p {
+    @apply text-lg text-white/70 mb-6 leading-relaxed;
+  }
+
+  /* FIX: Default bullets removed to avoid duplication */
+  .blog-rich-text ul {
+    @apply list-none mb-8 space-y-3;
+  }
+  
+  /* FIX: Ordered list default numbering preserved */
+  .blog-rich-text ol {
+    @apply list-decimal pl-5 mb-8 space-y-3 text-lg text-white/70;
+  }
+
+  /* FIX: Cleaned up structure for custom bullet styling */
+  .blog-rich-text ul li {
+    @apply text-lg text-white/70 flex items-start gap-2;
+  }
+
+  .blog-rich-text ul li::before {
+    content: '•';
+    @apply text-primary font-bold;
+  }
+
+  /* --- Table Styling --- */
+  .blog-rich-text table {
+    @apply w-full my-8 border-collapse overflow-hidden rounded-lg;
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .blog-rich-text th {
+    @apply bg-white/10 text-white font-bold p-4 text-left border-b border-white/10;
+  }
+
+  .blog-rich-text td {
+    @apply p-4 text-white/60 border-b border-white/5;
+  }
+
+  /* --- FAQ Accordion Styles --- */
+  .faq-accordion details {
+    @apply mb-4 overflow-hidden rounded-xl border border-white/10 transition-all duration-300;
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .faq-accordion summary {
+    @apply flex cursor-pointer items-center justify-between p-5 text-left font-bold text-white transition-colors hover:bg-white/5;
+    list-style: none;
+  }
+
+  .faq-accordion summary::-webkit-details-marker {
+    display: none;
+  }
+
+  /* FAQ Icon: Default state */
+  .faq-accordion summary::after {
+    content: '+';
+    @apply text-2xl font-light text-primary transition-transform duration-300 block;
+  }
+
+  .faq-accordion details[open] {
+    @apply border-primary/30 bg-white/5;
+  }
+
+  .faq-accordion details[open] summary {
+    @apply border-b border-white/5;
+  }
+
+  /* FAQ Icon: Smooth Rotate Animation when opened */
+  .faq-accordion details[open] summary::after {
+    transform: rotate(45deg);
+  }
+
+  .faq-accordion details p {
+    @apply p-6 text-white/70 leading-relaxed bg-black/20;
+    margin-bottom: 0 !important;
+  }
+
+  .blog-rich-text {
+    text-align: left;
+  }
+}
+
+/* src/index.css overlays */
+.vignette-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, transparent 40%, rgba(0, 0, 0, 0.7) 100%);
+  pointer-events: none;
+  z-index: 10;
+}

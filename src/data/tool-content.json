@@ -1,0 +1,54 @@
+{
+    "theme-detector": {
+      "title": "Best Shopify Theme Detector 2026",
+      "description": "Our advanced Shopify Theme Spy uses deep-scan technology to reveal the exact theme and apps behind any successful dropshipping store.",
+      "features": [
+        { "title": "Deep Scan", "detail": "Detects parent themes even if they are heavily renamed by the owner." },
+        { "title": "App Intelligence", "detail": "Identifies over 50+ Shopify apps including Klaviyo, Loox, and PageFly." },
+        { "title": "Fast & Lite", "detail": "Powered by lightweight proxies to ensure 3-second results without lag." }
+      ],
+      "faqs": [
+        { "q": "How does the Shopify Theme Detector work?", "a": "It scans the publicly available liquid files and CSS signatures of a store." },
+        { "q": "Can I detect themes on password stores?", "a": "No, the tool requires the store to be public to read the theme's architecture." }
+      ]
+    },
+    "name-generator": {
+      "title": "Best AI Business Name Generator 2026",
+      "description": "Our smart engine generates catchy, brandable, and SEO-friendly names for your Shopify store using deep-learning linguistics.",
+      "features": [
+        { "title": "Category Based", "detail": "Niche-specific suffixes and prefixes for maximum brand relevance." },
+        { "title": "AI Logic", "detail": "Smart combinations that sound professional and modern." },
+        { "title": "One-Click Copy", "detail": "Instantly save your favorite names to your clipboard." }
+      ],
+      "faqs": [
+        { "q": "Are these names domain-ready?", "a": "Yes, most names are generated to be short and brandable for easy domain registration." },
+        { "q": "How many names can I generate?", "a": "You can generate unlimited combinations by changing your keywords." }
+      ]
+    },
+    "profit-calculator": {
+      "title": "Shopify Profit & Margin Calculator 2026",
+      "description": "Stop guessing your profits. Use our advanced calculator to factor in COGS, shipping, and ad spend to find your true net profit.",
+      "features": [
+        { "title": "Net Margin Analysis", "detail": "Calculate exactly how much you keep after all expenses." },
+        { "title": "ROI Tracker", "detail": "Measure the effectiveness of your ad spend instantly." },
+        { "title": "Break-Even Point", "detail": "Know the minimum price you need to sell at to stay in profit." }
+      ],
+      "faqs": [
+        { "q": "What is a good profit margin for dropshipping?", "a": "Typically, a net profit margin between 15% to 25% is considered healthy." },
+        { "q": "Does this include Shopify fees?", "a": "You can add Shopify transaction fees into the 'Other Costs' field for better accuracy." }
+      ]
+    },
+    "policy-generator": {
+      "title": "Legal Policy Generator 2026",
+      "description": "Generate high-quality Privacy Policies, Refund Policies, and Terms of Service. Custom-tailored for Dropshipping and E-commerce stores.",
+      "features": [
+        { "title": "Custom Logic", "detail": "Policies change based on your business model and refund window." },
+        { "title": "GDPR Ready", "detail": "Includes standard clauses for data protection and cookie consent." },
+        { "title": "Instant Copy", "detail": "Perfectly formatted text ready to be pasted into your Shopify legal settings." }
+      ],
+      "faqs": [
+        { "q": "Are these policies legally binding?", "a": "These are templates based on standard practices. We recommend a legal review for 100% compliance." },
+        { "q": "Can I use these for TikTok Shop?", "a": "Yes, these templates follow the general requirements for most e-commerce platforms." }
+      ]
+    }
+  }
