@@ -12,74 +12,26 @@ export default defineConfig(({ mode }) => ({
       overlay: false,
     },
   },
-
   plugins: [
     react(),
     mode === "development" && componentTagger(),
   ].filter(Boolean),
-
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-
   build: {
     rollupOptions: {
       output: {
+        // Is se saari heavy third-party libraries vendor chunk mein alag ho jayengi
         manualChunks(id) {
-          if (!id.includes("node_modules")) {
-            return;
+          if (id.includes("node_modules")) {
+            return "vendor";
           }
-
-          /*
-           * React core aur routing
-           */
-          if (
-            id.includes("/react/") ||
-            id.includes("/react-dom/") ||
-            id.includes("/react-router/") ||
-            id.includes("/react-router-dom/")
-          ) {
-            return "react-vendor";
-          }
-
-          /*
-           * Framer Motion animations
-           */
-          if (id.includes("/framer-motion/")) {
-            return "motion-vendor";
-          }
-
-          /*
-           * Shadcn ke Radix UI components
-           */
-          if (id.includes("/@radix-ui/")) {
-            return "radix-vendor";
-          }
-
-          /*
-           * React Query
-           */
-          if (id.includes("/@tanstack/react-query/")) {
-            return "query-vendor";
-          }
-
-          /*
-           * Lucide icons
-           */
-          if (id.includes("/lucide-react/")) {
-            return "icons-vendor";
-          }
-
-          /*
-           * Remaining third-party packages
-           */
-          return "vendor";
         },
       },
     },
-
-    sourcemap: false,
+    sourcemap: false, // Production build ka size chota rakhne ke liye maps off kiye hain
   },
 }));
