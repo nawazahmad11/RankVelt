@@ -1,42 +1,53 @@
-import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom"; 
-import { motion, AnimatePresence } from "framer-motion";
-import { X, ArrowRight, CheckCircle2 } from "lucide-react";
+import { useEffect, useState, type FormEvent } from "react";
+import { useLocation } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
+import { ArrowRight, CheckCircle2, X } from "lucide-react";
+
+const AUDIT_SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbyMUlRY1rQYmA450Lf1t0lMp-C_WAwoCjBpjqDEigCy2fb58dNF4jD7muP2Vi5Ig2odAg/exec";
 
 const AuditPopup = () => {
+  const location = useLocation();
+
   const [isOpen, setIsOpen] = useState(false);
-  const [hasShown, setHasShown] = useState(false); 
+  const [hasShown, setHasShown] = useState(false);
   const [step, setStep] = useState<"form" | "success">("form");
-  const [formData, setFormData] = useState({ name: "", email: "" });
   const [loading, setLoading] = useState(false);
-  
-  const location = useLocation(); 
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+  });
 
   useEffect(() => {
-    // Sirf Home page par popup trigger hoga
     if (location.pathname !== "/") return;
 
     const handleScroll = () => {
-      const winScroll = window.pageYOffset || document.documentElement.scrollTop;
-      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = (winScroll / height) * 100;
-      
-      // 40% scroll + top reload protection
-      if (scrolled > 40 && !hasShown && winScroll > 300) {
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+
+      const scrollableHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollableHeight <= 0) return;
+
+      const scrollPercent = (scrollTop / scrollableHeight) * 100;
+
+      if (scrollPercent > 40 && !hasShown && scrollTop > 300) {
         setIsOpen(true);
-        setHasShown(true); 
+        setHasShown(true);
       }
     };
 
-    const handleExitIntent = (e: MouseEvent) => {
-      // Exit intent trigger after 500px scroll
-      if (e.clientY <= 0 && !hasShown && window.scrollY > 500) {
+    const handleExitIntent = (event: MouseEvent) => {
+      if (event.clientY <= 0 && !hasShown && window.scrollY > 500) {
         setIsOpen(true);
-        setHasShown(true); 
+        setHasShown(true);
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     document.addEventListener("mouseleave", handleExitIntent);
 
     return () => {
@@ -45,25 +56,28 @@ const AuditPopup = () => {
     };
   }, [hasShown, location.pathname]);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async (event: FormEvent) => {
+    event.preventDefault();
+
     setLoading(true);
 
     try {
-      // Same endpoint and mode as your original script
-      await fetch("https://script.google.com/macros/s/AKfycbyMUlRY1rQYmA450Lf1t0lMp-C_WAwoCjBpjqDEigCy2fb58dNF4jD7muP2Vi5Ig2odAg/exec", {
+      await fetch(AUDIT_SCRIPT_URL, {
         method: "POST",
-        mode: "no-cors", 
-        headers: { "Content-Type": "application/json" },
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify({
-          email: formData.email,
-          name: formData.name,
-          type: "Free Audit" 
+          email: formData.email.trim(),
+          name: formData.name.trim(),
+          type: "Free SEO Opportunity Check",
         }),
       });
+
       setStep("success");
     } catch (error) {
-      console.error("Error submitting lead:", error);
+      console.error("SEO audit lead submission error:", error);
     } finally {
       setLoading(false);
     }
@@ -73,77 +87,138 @@ const AuditPopup = () => {
     <AnimatePresence>
       {isOpen && location.pathname === "/" && (
         <>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[9998] bg-black/70 backdrop-blur-[2px]"
           />
 
-          <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 pointer-events-none">
-            <motion.div 
+          <div className="pointer-events-none fixed inset-0 z-[9999] flex items-center justify-center p-4">
+            <motion.div
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              className="relative w-full max-w-md bg-[#0f1115] border border-white/10 rounded-[2.5rem] p-10 shadow-2xl pointer-events-auto overflow-hidden"
+              className="pointer-events-auto relative w-full max-w-md overflow-hidden rounded-[2.5rem] border border-white/10 bg-[#0f1115] p-7 shadow-2xl sm:p-10"
             >
-              <button 
-                onClick={() => setIsOpen(false)} 
-                className="absolute top-6 right-6 text-white/40 hover:text-white transition-colors z-10"
+              <button
+                type="button"
+                onClick={() => setIsOpen(false)}
+                className="absolute right-6 top-6 z-10 text-white/40 transition-colors hover:text-white"
+                aria-label="Close SEO audit popup"
               >
                 <X size={24} />
               </button>
 
               <AnimatePresence mode="wait">
                 {step === "form" ? (
-                  <motion.div key="form" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-                    <div className="flex justify-center mb-6">
-                      <span className="bg-primary/20 text-primary text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full border border-primary/30">
-                        Free Offer
+                  <motion.div
+                    key="form"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  >
+                    <div className="mb-6 flex justify-center">
+                      <span className="rounded-full border border-primary/30 bg-primary/20 px-4 py-1.5 text-[10px] font-black uppercase tracking-widest text-primary">
+                        Free SEO Opportunity Check
                       </span>
                     </div>
-                    
-                    <h3 className="text-3xl font-black text-white text-center mb-4 leading-tight">
-                      Wait — before you go!
+
+                    <h3 className="mb-4 text-center text-3xl font-black leading-tight text-white">
+                      Before you go, find what is holding your website back.
                     </h3>
-                    <p className="text-white/50 text-center mb-8 text-sm leading-relaxed">
-                      Get a <span className="text-primary font-bold">free 15-minute Shopify store audit</span> — I'll find the top 3 things killing your conversions.
+
+                    <p className="mb-7 text-center text-sm leading-relaxed text-white/50">
+                      Get a focused first look at SEO, search visibility,
+                      technical, local, or eCommerce growth opportunities.
                     </p>
 
+                    <div className="mb-7 space-y-3">
+                      {[
+                        "Search visibility review",
+                        "Technical and on-page gaps",
+                        "Local or eCommerce opportunities",
+                      ].map((item) => (
+                        <div
+                          key={item}
+                          className="flex items-center gap-3 text-sm text-white/70"
+                        >
+                          <CheckCircle2 size={16} className="text-primary" />
+                          {item}
+                        </div>
+                      ))}
+                    </div>
+
                     <form onSubmit={handleSubmit} className="space-y-4">
-                      <input 
-                        type="text" required placeholder="Your name"
-                        className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl text-white focus:outline-none focus:border-primary/50 transition-all"
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      <input
+                        type="text"
+                        required
+                        value={formData.name}
+                        placeholder="Your name"
+                        className="w-full rounded-2xl border border-white/10 bg-white/5 px-6 py-4 text-white transition-all placeholder:text-white/30 focus:border-primary/50 focus:outline-none"
+                        onChange={(event) =>
+                          setFormData((previous) => ({
+                            ...previous,
+                            name: event.target.value,
+                          }))
+                        }
                       />
-                      <input 
-                        type="email" required placeholder="Your email *"
-                        className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl text-white focus:outline-none focus:border-primary/50 transition-all"
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+
+                      <input
+                        type="email"
+                        required
+                        value={formData.email}
+                        placeholder="Business email"
+                        className="w-full rounded-2xl border border-white/10 bg-white/5 px-6 py-4 text-white transition-all placeholder:text-white/30 focus:border-primary/50 focus:outline-none"
+                        onChange={(event) =>
+                          setFormData((previous) => ({
+                            ...previous,
+                            email: event.target.value,
+                          }))
+                        }
                       />
-                      <button 
+
+                      <button
+                        type="submit"
                         disabled={loading}
-                        className="w-full py-5 bg-primary text-black font-black uppercase tracking-widest rounded-2xl hover:brightness-110 transition-all flex items-center justify-center gap-2 shadow-[0_10px_30px_rgba(var(--primary-rgb),0.2)]"
+                        className="flex w-full items-center justify-center gap-2 rounded-2xl bg-primary py-5 font-black uppercase tracking-widest text-black transition-all hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-60"
                       >
-                        {loading ? "Processing..." : "Get My Free Audit"} <ArrowRight size={20} />
+                        {loading ? "Processing..." : "Request My Free SEO Check"}
+
+                        <ArrowRight size={20} />
                       </button>
                     </form>
-                    <p className="text-[10px] text-white/20 text-center mt-6 uppercase tracking-widest">No spam. Response within 24hrs.</p>
+
+                    <p className="mt-6 text-center text-[10px] uppercase tracking-widest text-white/20">
+                      No spam. Response within 24hrs.
+                    </p>
                   </motion.div>
                 ) : (
-                  <motion.div key="success" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="text-center py-10">
-                    <div className="flex justify-center mb-6 text-primary">
+                  <motion.div
+                    key="success"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="py-10 text-center"
+                  >
+                    <div className="mb-6 flex justify-center text-primary">
                       <CheckCircle2 size={64} strokeWidth={1.5} />
                     </div>
-                    <h3 className="text-3xl font-black text-white mb-4 italic tracking-tight">You're on the list!</h3>
-                    <p className="text-white/50 leading-relaxed text-sm">
-                      I've received your request. I'll review your store and send the audit report to your inbox within 24 hours.
+
+                    <h3 className="mb-4 text-3xl font-black italic tracking-tight text-white">
+                      Request received!
+                    </h3>
+
+                    <p className="text-sm leading-relaxed text-white/50">
+                      Your SEO opportunity check request has been received.
+                      RankVelt will review it and reply with the next steps.
                     </p>
-                    <button 
-                      onClick={() => setIsOpen(false)} 
-                      className="mt-8 px-8 py-3 border border-white/10 rounded-xl text-white/60 text-xs font-bold uppercase tracking-widest hover:bg-white/5 transition-all"
+
+                    <button
+                      type="button"
+                      onClick={() => setIsOpen(false)}
+                      className="mt-8 rounded-xl border border-white/10 px-8 py-3 text-xs font-bold uppercase tracking-widest text-white/60 transition-all hover:bg-white/5"
                     >
-                      Close Window
+                      Continue Browsing
                     </button>
                   </motion.div>
                 )}

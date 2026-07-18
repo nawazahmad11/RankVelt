@@ -1,1 +1,23 @@
 node_modules
+.vercel
+
+
+
+# macOS system files
+.DS_Store
+**/.DS_Store
+
+# Production build output
+dist/
+
+# Local backups and temporary files
+scripts/backups/
+scripts/scripts/
+src/data/*.before-*.ts
+src/components/Untitled
+src/pages/Untitled
+
+# Environment variables
+.env
+.env.*
+!.env.example

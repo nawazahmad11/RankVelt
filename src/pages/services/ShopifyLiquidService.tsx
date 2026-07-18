@@ -261,7 +261,7 @@ export default function ShopifyLiquidService() {
                                 <span className="w-2.5 h-2.5 rounded-full bg-red-500/40"></span>
                                 <span className="w-2.5 h-2.5 rounded-full bg-amber-500/40"></span>
                                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/40"></span>
-                                <span className="text-[11px] text-zinc-600 font-mono ml-2 tracking-tight">shopify.preview/saha</span>
+                                <span className="text-[11px] text-zinc-600 font-mono ml-2 tracking-tight">rankvelt.preview/saha</span>
                             </div>
 
                             <div className="aspect-[16/11] bg-zinc-950 rounded-lg border border-zinc-800/80 relative overflow-hidden group-hover:border-amber-500/30 transition-colors duration-300">

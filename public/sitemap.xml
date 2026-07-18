@@ -1,62 +1,169 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
+
   <url>
-    <loc>https://www.nawazbuilds.com/</loc>
-    <lastmod>2026-05-11</lastmod>
-    <priority>1.0</priority>
+    <loc>https://rankvelt.com/</loc>
   </url>
 
   <url>
-    <loc>https://www.nawazbuilds.com/blog/why-shopify-stores-fail</loc>
-    <lastmod>2026-05-11</lastmod>
-    <priority>0.8</priority>
+    <loc>https://rankvelt.com/local-seo</loc>
   </url>
-  <url>
-    <loc>https://www.nawazbuilds.com/blog/high-converting-product-pages</loc>
-    <lastmod>2026-05-11</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.nawazbuilds.com/blog/shopify-redesign-signs-2026</loc>
-    <lastmod>2026-05-11</lastmod>
-    <priority>0.8</priority>
-  </url>
-    <url>
-    <loc>https://www.nawazbuilds.com/tools/profit-margin-calculator</loc>
-    <lastmod>2026-05-11</lastmod>
-    <priority>0.9</priority>
-    </url>
-    <url>
-    <loc>https://www.nawazbuilds.com/tools/legal-policy-generator</loc>
-    <lastmod>2026-05-11</lastmod>
-    <priority>0.9</priority>
-    </url>
-    <url>
-    <loc>https://www.nawazbuilds.com/tools/shopify-theme-detector</loc> 
-    <lastmod>2026-05-11</lastmod>
-    <priority>0.9</priority>
-    </url>
-    <url>
-    <loc>https://www.nawazbuilds.com/tools/business-name-generator</loc>
-    <lastmod>2026-05-11</lastmod>
-    <priority>0.9</priority>
-    </url>
 
   <url>
-    <loc>https://www.nawazbuilds.com/privacy-policy</loc>
-    <lastmod>2026-05-11</lastmod>
-    <priority>0.3</priority>
+    <loc>https://rankvelt.com/ecommerce-seo</loc>
   </url>
+
   <url>
-    <loc>https://www.nawazbuilds.com/terms-of-service</loc>
-    <lastmod>2026-05-11</lastmod>
-    <priority>0.3</priority>
+    <loc>https://rankvelt.com/business-seo</loc>
   </url>
+
   <url>
-    <loc>https://www.nawazbuilds.com/refund-policy</loc>
-    <lastmod>2026-05-11</lastmod>
-    <priority>0.3</priority>
+    <loc>https://rankvelt.com/blog</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+
+  <url>
+    <loc>https://rankvelt.com/tools</loc>
+  </url>
+
+  <url>
+    <loc>https://rankvelt.com/tools/meta-title-description-checker</loc>
+  </url>
+
+  <url>
+    <loc>https://rankvelt.com/tools/schema-markup-generator</loc>
+  </url>
+
+  <url>
+    <loc>https://rankvelt.com/tools/robots-txt-generator</loc>
+  </url>
+
+  <url>
+    <loc>https://rankvelt.com/tools/xml-sitemap-generator</loc>
+  </url>
+
+  <url>
+    <loc>https://rankvelt.com/tools/local-seo-checklist</loc>
+  </url>
+
+  <url>
+    <loc>https://rankvelt.com/tools/redirect-mapping-generator</loc>
+  </url>
+
+  <url>
+    <loc>https://rankvelt.com/case-studies</loc>
+  </url>
+
+  <url>
+    <loc>https://rankvelt.com/case-studies/project-meridian</loc>
+  </url>
+
+  <url>
+    <loc>https://rankvelt.com/case-studies/civic-access</loc>
+  </url>
+
+  <url>
+    <loc>https://rankvelt.com/case-studies/clear-ride-auto-glass</loc>
+  </url>
+
+  <url>
+    <loc>https://rankvelt.com/case-studies/bluebridge</loc>
+  </url>
+
+  <url>
+    <loc>https://rankvelt.com/case-studies/harborline</loc>
+  </url>
+
+  <url>
+    <loc>https://rankvelt.com/services/custom-liquid-development</loc>
+  </url>
+
+  <url>
+    <loc>https://rankvelt.com/services/mobile-first-ux</loc>
+  </url>
+
+  <url>
+    <loc>https://rankvelt.com/services/visual-storytelling</loc>
+  </url>
+
+  <url>
+    <loc>https://rankvelt.com/services/app-api-sync</loc>
+  </url>
+
+  <url>
+    <loc>https://rankvelt.com/services/checkout-flow</loc>
+  </url>
+
+  <url>
+    <loc>https://rankvelt.com/privacy-policy</loc>
+  </url>
+
+  <url>
+    <loc>https://rankvelt.com/terms-of-service</loc>
+  </url>
+
+  <url>
+    <loc>https://rankvelt.com/refund-policy</loc>
+  </url>
+
+  <url>
+    <loc>https://rankvelt.com/blog/seo-vs-aeo-vs-geo</loc>
+    <lastmod>2026-07-14</lastmod>
+  </url>
+
+  <url>
+    <loc>https://rankvelt.com/blog/optimize-google-ai-overviews</loc>
+    <lastmod>2026-07-14</lastmod>
+  </url>
+
+  <url>
+    <loc>https://rankvelt.com/blog/local-seo-ai-overviews</loc>
+    <lastmod>2026-07-14</lastmod>
+  </url>
+
+  <url>
+    <loc>https://rankvelt.com/blog/service-area-pages</loc>
+    <lastmod>2026-07-14</lastmod>
+  </url>
+
+  <url>
+    <loc>https://rankvelt.com/blog/shopify-seo-checklist</loc>
+    <lastmod>2026-07-14</lastmod>
+  </url>
+
+  <url>
+    <loc>https://rankvelt.com/blog/structured-website-design</loc>
+    <lastmod>2026-07-14</lastmod>
+  </url>
+
+  <url>
+    <loc>https://rankvelt.com/blog/website-redesign-seo-checklist</loc>
+    <lastmod>2026-07-14</lastmod>
+  </url>
+
+  <url>
+    <loc>https://rankvelt.com/blog/internal-linking-seo-ai</loc>
+    <lastmod>2026-07-14</lastmod>
+  </url>
+
+  <url>
+    <loc>https://rankvelt.com/blog/seo-growth-case-study-lessons</loc>
+    <lastmod>2026-07-14</lastmod>
+  </url>
+
+  <url>
+    <loc>https://rankvelt.com/blog/why-shopify-stores-fail</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+
+  <url>
+    <loc>https://rankvelt.com/blog/high-converting-product-pages</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+
+  <url>
+    <loc>https://rankvelt.com/blog/shopify-redesign-signs</loc>
+    <lastmod>2026-07-15</lastmod>
   </url>
 
 </urlset>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://rankvelt.com/</loc>
+    <image:image>
+      <image:loc>https://rankvelt.com/yt-poster.webp</image:loc>
+    </image:image>
+  </url>
+
+  <!-- SEO, AEO and GEO -->
+  <url>
+    <loc>https://rankvelt.com/blog/seo-vs-aeo-vs-geo</loc>
+    <image:image>
+      <image:loc>https://rankvelt.com/seo-vs-aeo-vs-geo.webp</image:loc>
+    </image:image>
+  </url>
+
+  <!-- Google AI Overviews -->
+  <url>
+    <loc>https://rankvelt.com/blog/optimize-google-ai-overviews</loc>
+    <image:image>
+      <image:loc>https://rankvelt.com/google-ai-overviews-ai-mode.webp</image:loc>
+    </image:image>
+  </url>
+
+  <!-- Local SEO and AI Overviews -->
+  <url>
+    <loc>https://rankvelt.com/blog/local-seo-ai-overviews</loc>
+    <image:image>
+      <image:loc>https://rankvelt.com/local-seo-ai-overviews.webp</image:loc>
+    </image:image>
+  </url>
+
+  <!-- Service Area Pages -->
+  <url>
+    <loc>https://rankvelt.com/blog/service-area-pages</loc>
+    <image:image>
+      <image:loc>https://rankvelt.com/service-area-pages.webp</image:loc>
+    </image:image>
+  </url>
+
+  <!-- Shopify SEO Checklist -->
+  <url>
+    <loc>https://rankvelt.com/blog/shopify-seo-checklist</loc>
+    <image:image>
+      <image:loc>https://rankvelt.com/shopify-seo-checklist.webp</image:loc>
+    </image:image>
+  </url>
+
+  <!-- Structured Website Design -->
+  <url>
+    <loc>https://rankvelt.com/blog/structured-website-design</loc>
+    <image:image>
+      <image:loc>https://rankvelt.com/structured-website-design.webp</image:loc>
+    </image:image>
+  </url>
+
+  <!-- Website Redesign SEO Checklist -->
+  <url>
+    <loc>https://rankvelt.com/blog/website-redesign-seo-checklist</loc>
+    <image:image>
+      <image:loc>https://rankvelt.com/website-redesign-seo-checklist.webp</image:loc>
+    </image:image>
+  </url>
+
+  <!-- Internal Linking for SEO and AI -->
+  <url>
+    <loc>https://rankvelt.com/blog/internal-linking-seo-ai</loc>
+    <image:image>
+      <image:loc>https://rankvelt.com/internal-linking-seo-ai.webp</image:loc>
+    </image:image>
+  </url>
+
+  <!-- SEO Growth Case Study Lessons -->
+  <url>
+    <loc>https://rankvelt.com/blog/seo-growth-case-study-lessons</loc>
+    <image:image>
+      <image:loc>https://rankvelt.com/seo-growth-case-study-lessons.webp</image:loc>
+    </image:image>
+  </url>
+
+  <!-- Why Shopify Stores Fail -->
+  <url>
+    <loc>https://rankvelt.com/blog/why-shopify-stores-fail</loc>
+    <image:image>
+      <image:loc>https://rankvelt.com/shopify-store-failure-reasons.webp</image:loc>
+    </image:image>
+  </url>
+
+  <!-- High-Converting Product Pages -->
+  <url>
+    <loc>https://rankvelt.com/blog/high-converting-product-pages</loc>
+    <image:image>
+      <image:loc>https://rankvelt.com/shopify-conversion-rates.webp</image:loc>
+    </image:image>
+  </url>
+
+  <!-- Shopify Redesign Signs -->
+  <url>
+    <loc>https://rankvelt.com/blog/shopify-redesign-signs</loc>
+    <image:image>
+      <image:loc>https://rankvelt.com/shopify-store-redesign-signs.webp</image:loc>
+    </image:image>
+  </url>
+
+</urlset>

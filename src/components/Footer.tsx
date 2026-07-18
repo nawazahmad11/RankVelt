@@ -1,210 +1,446 @@
-import { useState } from "react"; // Nayi state add ki
-import { useNavigate, useLocation, Link } from "react-router-dom";
-import { Instagram, Linkedin, Mail, MapPin, Youtube, Send, MessageCircle } from "lucide-react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import {
+  Instagram,
+  Linkedin,
+  Mail,
+  MapPin,
+  Youtube,
+  Send,
+  MessageCircle,
+} from "lucide-react";
+
+const NEWSLETTER_SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbyMUlRY1rQYmA450Lf1t0lMp-C_WAwoCjBpjqDEigCy2fb58dNF4jD7muP2Vi5Ig2odAg/exec";
 
 const Footer = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const websiteLogo = "/NawazCart.webp"; 
 
-  // --- Naya Function: Newsletter Logic ---
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
 
-  const handleSubscribe = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
+  const resetTimerRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (resetTimerRef.current) {
+        window.clearTimeout(resetTimerRef.current);
+      }
+    };
+  }, []);
+
+  const scheduleStatusReset = (delay: number) => {
+    if (resetTimerRef.current) {
+      window.clearTimeout(resetTimerRef.current);
+    }
+
+    resetTimerRef.current = window.setTimeout(() => {
+      setStatus("idle");
+    }, delay);
+  };
+
+  const handleSubscribe = async (event: FormEvent) => {
+    event.preventDefault();
+
+    if (!email.trim()) return;
 
     setStatus("loading");
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyMUlRY1rQYmA450Lf1t0lMp-C_WAwoCjBpjqDEigCy2fb58dNF4jD7muP2Vi5Ig2odAg/exec"; 
 
     try {
-      await fetch(SCRIPT_URL, {
+      await fetch(NEWSLETTER_SCRIPT_URL, {
         method: "POST",
-        mode: "no-cors", 
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: email }),
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email.trim(),
+          type: "Newsletter Subscription",
+        }),
       });
+
       setStatus("success");
-      setEmail(""); 
-      setTimeout(() => setStatus("idle"), 5000);
+      setEmail("");
+      scheduleStatusReset(5000);
     } catch (error) {
+      console.error("Newsletter subscription error:", error);
       setStatus("error");
-      setTimeout(() => setStatus("idle"), 3000);
+      scheduleStatusReset(3500);
     }
   };
-  // --------------------------------------
 
   const scrollToSection = (id: string) => {
+    const performScroll = () => {
+      const element = document.getElementById(id);
+
+      if (!element) return;
+
+      const headerOffset = 100;
+      const position =
+        element.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: position,
+        behavior: "smooth",
+      });
+    };
+
     if (location.pathname !== "/") {
       navigate("/");
-      setTimeout(() => {
-        const element = document.getElementById(id);
-        if (element) element.scrollIntoView({ behavior: "smooth" });
-      }, 300);
-    } else {
-      const element = document.getElementById(id);
-      if (element) element.scrollIntoView({ behavior: "smooth" });
+      window.setTimeout(performScroll, 400);
+      return;
     }
+
+    performScroll();
   };
 
+  const socials = [
+    {
+      icon: <Youtube size={20} />,
+      url: "",
+      label: "Visit YouTube",
+    },
+    {
+      icon: <Linkedin size={20} />,
+      url: "https://www.linkedin.com/in/nawaz-ahmad-shopify/",
+      label: "Visit LinkedIn",
+    },
+    {
+      icon: <Instagram size={20} />,
+      url: "https://www.instagram.com/nawazbuilds.official/",
+      label: "Visit Instagram",
+    },
+    {
+      icon: <MessageCircle size={20} />,
+      url: "https://wa.me/923244146447",
+      label: "Chat on WhatsApp",
+    },
+  ];
+
   return (
-    <footer className="border-t border-white/5 bg-[#050505] w-full overflow-hidden">
-      <div className="w-full max-w-full mx-auto px-6 md:px-12 lg:px-20 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 xl:gap-20 mb-16">
-          
-          <div className="lg:col-span-4 space-y-7">
-            <div className="flex items-center space-x-3">
-              
-              {/* <img src={websiteLogo} alt="Logo" className="h-10 w-auto rounded-full object-contain" /> */}
+    <footer className="w-full overflow-hidden border-t border-white/5 bg-[#050505]">
+      <div className="mx-auto w-full max-w-full px-6 py-16 md:px-12 lg:px-20">
+        <div className="mb-16 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-12 xl:gap-20">
+          <div className="space-y-7 lg:col-span-4">
+            <button
+              type="button"
+              onClick={() => {
+                if (location.pathname !== "/") {
+                  navigate("/");
+                  return;
+                }
 
-              <img 
-                  src={websiteLogo} 
-                  alt="Logo" 
-                  width={40} 
-                  height={40} 
-                  className="h-10 w-auto object-contain rounded-full" 
-                />
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }}
+              className="flex items-center gap-3 text-left"
+              aria-label="Go to RankVelt homepage"
+            >
+              <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#f9a825]/35 bg-[#f9a825]/10 text-base font-black text-[#f9a825]">
+                R
+              </span>
 
-              <h3 className="text-xl font-bold tracking-tight text-white italic">Nawaz Ahmad</h3>
-            </div>
-            <p className="text-white/70 text-sm leading-relaxed max-w-md">Shopify Architect & Performance Expert. Helping e-commerce brands scale from $0 to 7-figures with high-performance stores.</p>
-            <div className="space-y-4 text-sm text-white/70">
-              <div className="flex items-center space-x-3 hover:text-[#f9a825] transition-colors cursor-pointer group">
-                <Mail size={16} />
-                <a href="mailto:info@nawazahmad.com">info@nawazbuilds.com</a>
+              <div>
+                <h3 className="text-xl font-bold tracking-tight text-white italic">
+                  Rank<span className="text-[#f9a825]">Velt</span>
+                </h3>
+
+                <p className="mt-1 text-[9px] font-black uppercase tracking-[0.18em] text-white/35">
+                  SEO & Web Growth Studio
+                </p>
               </div>
-              <div className="flex items-center space-x-3"><MapPin size={16} /><span>Lahore, Dubai & Remote</span></div>
+            </button>
+
+            <p className="max-w-md text-sm leading-relaxed text-white/70">
+              Founder-led SEO and web growth support for local businesses,
+              eCommerce brands, and companies that want stronger Google
+              visibility.
+            </p>
+
+            <div className="space-y-4 text-sm text-white/70">
+              <div className="group flex items-center space-x-3 transition-colors hover:text-[#f9a825]">
+                <Mail size={16} />
+
+                {/* Keep this email until your RankVelt business email is ready */}
+                <a href="mailto:info@nawazahmad.com">
+                  info@nawazbuilds.com
+                </a>
+              </div>
+
+              <div className="flex items-center space-x-3">
+                <MapPin size={16} />
+                <span>Lahore, Dubai & Remote</span>
+              </div>
             </div>
           </div>
 
-          <div className="lg:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 lg:col-span-8">
             <div className="space-y-5">
-              <h4 className="text-[13px] font-black text-white uppercase tracking-widest">Expertise</h4>
-              <ul className="space-y-3 text-sm text-white/70 font-medium">
-                <li><button onClick={() => scrollToSection("services")} className="hover:text-[#f9a825] transition-colors">Development</button></li>
-                <li><button onClick={() => scrollToSection("performance")} className="hover:text-[#f9a825] transition-colors">Optimization</button></li>
-                <li><Link to="/blog" className="hover:text-[#f9a825] transition-colors">Case Studies</Link></li>
-              </ul>
-            </div>
+              <h4 className="text-[13px] font-black uppercase tracking-widest text-white">
+                SEO Services
+              </h4>
 
-
-
-
-            <div className="space-y-5">
-              <h4 className="text-[13px] font-black text-white uppercase tracking-widest">Growth Tools</h4>
-              <ul className="space-y-3 text-sm text-white/70 font-medium">
-                <li><Link to="/tools/profit-margin-calculator" className="hover:text-[#f9a825] transition-colors">Profit Calculator</Link></li>
-                <li><Link to="/tools/legal-policy-generator"  className="hover:text-[#f9a825] transition-colors">Policy Generator</Link></li>
-                <li><Link to="/tools/business-name-generator" className="hover:text-[#f9a825] transition-colors">Name Generator</Link></li>
-                <li><Link to="/tools/shopify-theme-detector" className="hover:text-[#f9a825] transition-colors">Theme Detector</Link></li>
-              </ul>
-            </div>
-
-
-            {/* --- Naya Legal Section --- */}
-            <div className="space-y-5">
-              <h4 className="text-[13px] font-black text-white uppercase tracking-widest">Legal</h4>
-              <ul className="space-y-3 text-sm text-white/70 font-medium">
+              <ul className="space-y-3 text-sm font-medium text-white/70">
                 <li>
-                  <Link to="/privacy-policy" className="hover:text-[#f9a825] transition-colors">
+                  <button
+                    type="button"
+                    onClick={() => scrollToSection("services")}
+                    className="transition-colors hover:text-[#f9a825]"
+                  >
+                    Local SEO
+                  </button>
+                </li>
+
+                <li>
+                  <button
+                    type="button"
+                    onClick={() => scrollToSection("services")}
+                    className="transition-colors hover:text-[#f9a825]"
+                  >
+                    eCommerce SEO
+                  </button>
+                </li>
+
+                <li>
+                  <button
+                    type="button"
+                    onClick={() => scrollToSection("services")}
+                    className="transition-colors hover:text-[#f9a825]"
+                  >
+                    Business SEO
+                  </button>
+                </li>
+
+                <li>
+                  <button
+                    type="button"
+                    onClick={() => scrollToSection("audit")}
+                    className="transition-colors hover:text-[#f9a825]"
+                  >
+                    SEO Audit
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+            <div className="space-y-5">
+              <h4 className="text-[13px] font-black uppercase tracking-widest text-white">
+                Web Design
+              </h4>
+
+              <ul className="space-y-3 text-sm font-medium text-white/70">
+                <li>
+                  <button
+                    type="button"
+                    onClick={() => scrollToSection("services")}
+                    className="transition-colors hover:text-[#f9a825]"
+                  >
+                    WordPress Websites
+                  </button>
+                </li>
+
+                <li>
+                  <button
+                    type="button"
+                    onClick={() => scrollToSection("services")}
+                    className="transition-colors hover:text-[#f9a825]"
+                  >
+                    Shopify Store Design
+                  </button>
+                </li>
+
+                <li>
+                  <button
+                    type="button"
+                    onClick={() => scrollToSection("portfolio")}
+                    className="transition-colors hover:text-[#f9a825]"
+                  >
+                    Website Projects
+                  </button>
+                </li>
+
+                <li>
+                  <Link
+                    to="/case-studies"
+                    className="transition-colors hover:text-[#f9a825]"
+                  >
+                    Selected Case Studies
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div className="space-y-5">
+              <h4 className="text-[13px] font-black uppercase tracking-widest text-white">
+                Growth Tools
+              </h4>
+
+              <ul className="space-y-3 text-sm font-medium text-white/70">
+                <li>
+                  <Link
+                    to="/tools/profit-margin-calculator"
+                    className="transition-colors hover:text-[#f9a825]"
+                  >
+                    Profit Calculator
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    to="/tools/legal-policy-generator"
+                    className="transition-colors hover:text-[#f9a825]"
+                  >
+                    Policy Generator
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    to="/tools/business-name-generator"
+                    className="transition-colors hover:text-[#f9a825]"
+                  >
+                    Name Generator
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    to="/tools/shopify-theme-detector"
+                    className="transition-colors hover:text-[#f9a825]"
+                  >
+                    Theme Detector
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div className="space-y-5">
+              <h4 className="text-[13px] font-black uppercase tracking-widest text-white">
+                Legal & Resources
+              </h4>
+
+              <ul className="space-y-3 text-sm font-medium text-white/70">
+                <li>
+                  <Link
+                    to="/blog"
+                    className="transition-colors hover:text-[#f9a825]"
+                  >
+                    SEO Insights
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    to="/privacy-policy"
+                    className="transition-colors hover:text-[#f9a825]"
+                  >
                     Privacy Policy
                   </Link>
                 </li>
+
                 <li>
-                  <Link to="/refund-policy" className="hover:text-[#f9a825] transition-colors">
+                  <Link
+                    to="/refund-policy"
+                    className="transition-colors hover:text-[#f9a825]"
+                  >
                     Refund Policy
                   </Link>
                 </li>
+
                 <li>
-                  <Link to="/terms-of-service" className="hover:text-[#f9a825] transition-colors">
+                  <Link
+                    to="/terms-of-service"
+                    className="transition-colors hover:text-[#f9a825]"
+                  >
                     Terms of Service
                   </Link>
                 </li>
               </ul>
             </div>
-
-
-
-
-
-
-            <div className="space-y-5">
-              <h4 className="text-[13px] font-black text-white uppercase tracking-widest">Resources</h4>
-              <ul className="space-y-3 text-sm text-white/70 font-medium">
-                <li><Link to="/blog" className="hover:text-[#f9a825] transition-colors">Shopify Tips</Link></li>
-                <li><a href="#" className="hover:text-[#f9a825] transition-colors">WhatsApp Channel</a></li>
-              </ul>
-            </div>
-
-            <div className="space-y-5">
-              <h4 className="text-[13px] font-black text-white uppercase tracking-widest">Connect</h4>
-              <ul className="space-y-3 text-sm text-white/70 font-medium">
-                <li><a href="https://wa.me/923244146447" className="flex items-center gap-2 hover:text-[#f9a825] transition-colors"><MessageCircle size={14} /> WhatsApp</a></li>
-                <li><a href="mailto:info@nawazahmad.com" className="flex items-center gap-2 hover:text-[#f9a825] transition-colors"><Mail size={14} /> Email Me</a></li>
-              </ul>
-            </div>
           </div>
         </div>
 
-        <div className="py-12 border-t border-white/5 flex flex-col xl:flex-row items-center justify-between gap-10 text-center xl:text-left">
+        <div className="flex flex-col items-center justify-between gap-10 border-t border-white/5 py-12 text-center xl:flex-row xl:text-left">
           <div>
-            <h4 className="text-xl font-bold text-white mb-2 italic">Scale Your Shopify Store</h4>
-            <p className="text-sm text-white/70">Get conversion and speed tips directly to your inbox.</p>
+            <h4 className="mb-2 text-xl font-bold text-white italic">
+              Get practical SEO growth insights.
+            </h4>
+
+            <p className="text-sm text-white/70">
+              Receive useful SEO, web design, visibility, and conversion tips.
+            </p>
           </div>
-          {/* Form ko update kiya taake functions connect ho sakein */}
-          <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-4 w-full xl:w-auto xl:min-w-[500px]">
-            <input 
-              placeholder="you@example.com" 
-              className="flex-1 px-6 py-4 rounded-xl border border-white/10 bg-white/5 text-white focus:outline-none focus:border-[#f9a825]/50 transition-all" 
-              type="email" 
+
+          <form
+            onSubmit={handleSubscribe}
+            className="flex w-full flex-col gap-4 sm:flex-row xl:w-auto xl:min-w-[500px]"
+          >
+            <input
+              placeholder="you@example.com"
+              className="flex-1 rounded-xl border border-white/10 bg-white/5 px-6 py-4 text-white transition-all placeholder:text-white/30 focus:border-[#f9a825]/50 focus:outline-none"
+              type="email"
               required
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(event) => setEmail(event.target.value)}
               disabled={status === "loading" || status === "success"}
+              aria-label="Email address for newsletter"
             />
-            <button 
+
+            <button
               type="submit"
               disabled={status === "loading" || status === "success"}
-              className="px-6 py-4 rounded-xl bg-[#f9a825] text-black font-black uppercase text-[17px] tracking-widest hover:brightness-110 transition-all flex items-center justify-center gap-3 disabled:opacity-50 min-w-[180px]"
+              className="flex min-w-[180px] items-center justify-center gap-3 rounded-xl bg-[#f9a825] px-6 py-4 text-[17px] font-black uppercase tracking-widest text-black transition-all hover:brightness-110 disabled:opacity-50"
             >
-              {status === "loading" ? "Wait..." : status === "success" ? "Subscribed!" : "Subscribe"} 
+              {status === "loading"
+                ? "Wait..."
+                : status === "success"
+                  ? "Subscribed!"
+                  : status === "error"
+                    ? "Try Again"
+                    : "Subscribe"}
+
               <Send size={19} />
             </button>
           </form>
         </div>
 
-        <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="flex items-center space-x-6">
-              <span className="text-[10px] font-black uppercase tracking-[3px] text-white/60">Socials:</span>
-              <div className="flex items-center space-x-4">
-                {[
-                  { icon: <Youtube size={20} />, url: "", label: "Visit YouTube" },
-                  { icon: <Linkedin size={20} />, url: "https://www.linkedin.com/in/nawaz-ahmad-shopify/", label: "Visit LinkedIn" },
-                  { icon: <Instagram size={20} />, url: "https://www.instagram.com/nawazbuilds.official/", label: "Visit Instagram" },
-                  { icon: <MessageCircle size={20} />, url: "https://wa.me/923244146447", label: "Chat on WhatsApp" }
-                ].map((social, i) => (
-                  <a 
-                    key={i} 
-                    href={social.url || "#"} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    aria-label={social.label} // Ye line Google PageSpeed score fix karegi
-                    className="w-10 h-10 rounded-xl bg-white/5 border border-white/5 flex items-center justify-center text-white/40 hover:text-[#f9a825] hover:border-[#f9a825]/40 transition-all"
-                  >
-                    {social.icon}
-                  </a>
-                ))}
-              </div>
-            </div>
-            <div className="text-[11px] font-bold text-white/60 uppercase tracking-[6px]">
-              © {new Date().getFullYear()} NAWAZ AHMAD. ALL RIGHTS RESERVED.
+        <div className="flex flex-col items-center justify-between gap-8 border-t border-white/5 pt-12 md:flex-row">
+          <div className="flex items-center space-x-6">
+            <span className="text-[10px] font-black uppercase tracking-[3px] text-white/60">
+              Socials:
+            </span>
+
+            <div className="flex items-center space-x-4">
+              {socials.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.url || "#"}
+                  target={social.url ? "_blank" : undefined}
+                  rel={social.url ? "noopener noreferrer" : undefined}
+                  onClick={(event) => {
+                    if (!social.url) {
+                      event.preventDefault();
+                    }
+                  }}
+                  aria-label={social.label}
+                  className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/5 bg-white/5 text-white/40 transition-all hover:border-[#f9a825]/40 hover:text-[#f9a825]"
+                >
+                  {social.icon}
+                </a>
+              ))}
             </div>
           </div>
+
+          <div className="text-[11px] font-bold uppercase tracking-[4px] text-white/60 md:tracking-[6px]">
+            © {new Date().getFullYear()} RANKVELT. ALL RIGHTS RESERVED.
+          </div>
         </div>
-
-
-
+      </div>
     </footer>
   );
 };

@@ -2,114 +2,160 @@ import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
 
 const PricingSection = () => {
-  
-  // Redirection function with Package Tracking
   const handleCTA = (packageName: string) => {
     const encodedPackage = encodeURIComponent(packageName);
-   
+
     window.location.href = `/strategy-call?package=${encodedPackage}`;
   };
 
+  const plans = [
+    {
+      title: "SEO Opportunity Check",
+      price: "Free",
+      subtitle: "A Focused Starting Point",
+      features: [
+        "Initial website opportunity review",
+        "Top SEO and visibility gaps",
+        "Local or eCommerce direction",
+        "Practical next-step priorities",
+      ],
+      buttonLabel: "Request Free Check",
+      packageName: "Free SEO Opportunity Check",
+      featured: false,
+    },
+    {
+      title: "SEO Growth Plan",
+      price: "Custom",
+      subtitle: "For Ongoing SEO Growth",
+      features: [
+        "SEO audit and growth roadmap",
+        "Priority page optimization",
+        "Technical SEO improvements",
+        "Content and keyword strategy",
+        "Clear reporting and next steps",
+      ],
+      buttonLabel: "Request a Proposal",
+      packageName: "SEO Growth Plan",
+      featured: true,
+    },
+    {
+      title: "Website + SEO",
+      price: "Custom",
+      subtitle: "For Businesses Building Better Foundations",
+      features: [
+        "SEO-ready WordPress website",
+        "Shopify store design and structure",
+        "Landing pages built for conversion",
+        "Technical and on-page SEO setup",
+        "Custom scope around business goals",
+      ],
+      buttonLabel: "Discuss Your Project",
+      packageName: "Website + SEO Project",
+      featured: false,
+    },
+  ];
+
   return (
-    <section id="pricing" className="py-24 z-20 relative overflow-hidden">
+    <section id="pricing" className="relative z-20 overflow-hidden py-24">
       <div className="section-container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
-          className="text-center mb-16"
+          className="mb-16 text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-black mb-4 text-white tracking-tight">
-            Ready to Scale Your <span className="text-gradient-gold">Business?</span>
+          <p className="mb-4 text-[11px] font-black uppercase tracking-[0.25em] text-primary">
+            Flexible Growth Support
+          </p>
+
+          <h2 className="mb-4 text-4xl font-black tracking-tight text-white md:text-5xl">
+            Choose the right{" "}
+            <span className="text-gradient-gold">starting point.</span>
           </h2>
-          <p className="text-[19px] text-white/60 max-w-[600px] mx-auto text-lg font-light">
-            Transparent pricing with no hidden developer fees.
+
+          <p className="mx-auto max-w-[650px] text-lg font-light text-white/60">
+            Every business has a different website, market, and competition
+            level. RankVelt scopes SEO and web work around your actual growth
+            goals instead of forcing a generic package.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto items-stretch">
-          
-          {/* 1. MAINTENANCE */}
-          <motion.div 
-            whileHover={{ y: -8 }}
-            className="glass-card p-8 flex flex-col border border-white/5 shadow-lg h-full transition-transform duration-300 hover:border-white/20 bg-white/[0.02]"
-          >
-            <div className="h-32 mb-6">
-              <h3 className="text-lg font-bold text-white/70">Maintenance</h3>
-              <div className="text-4xl font-black text-white mt-2">$99</div>
-              <p className="text-[12px] text-white/55 mt-1 italic uppercase tracking-wider">Store Refresh & Fixes</p>
-            </div>
-            <ul className="space-y-3 mb-8 flex-1">
-              {["Speed Optimization (90+)", "Bug Fixes & App Setup", "10 Product Listings", "Conversion Audit", "2-3 Days Delivery"].map((item, i) => (
-                <li key={i} className="flex items-center gap-3 text-sm text-white/70 font-light">
-                  <CheckCircle className="w-4 h-4 text-green-500/80 flex-shrink-0" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-            <button 
-              onClick={() => handleCTA("Maintenance ($99)")}
-              className="w-full py-3 rounded-lg text-sm font-semibold bg-white/5 text-white border border-white/10 hover:bg-white/10 hover:text-white transition-colors duration-300"
+        <div className="mx-auto grid max-w-7xl items-stretch gap-6 md:grid-cols-3 lg:gap-8">
+          {plans.map((plan) => (
+            <motion.div
+              key={plan.title}
+              whileHover={{ y: plan.featured ? -12 : -8 }}
+              className={`glass-card relative flex h-full flex-col p-8 transition-all duration-300 ${
+                plan.featured
+                  ? "z-30 border-2 border-primary/40 bg-white/[0.04] shadow-2xl shadow-primary/10 hover:border-primary/60 md:scale-105"
+                  : "border border-white/5 bg-white/[0.02] shadow-lg hover:border-white/20"
+              }`}
             >
-              Get Started
-            </button>
-          </motion.div>
+              {plan.featured && (
+                <div className="absolute -top-3 left-1/2 z-40 -translate-x-1/2 whitespace-nowrap rounded-full bg-primary px-4 py-1 text-[10px] font-black uppercase text-black shadow-md animate-pulse">
+                  Most Popular
+                </div>
+              )}
 
-          {/* 2. STANDARD (BEST SELLER) */}
-          <motion.div 
-            whileHover={{ y: -12 }}
-            className="glass-card p-8 flex flex-col border-2 border-primary/40 shadow-2xl shadow-primary/10 relative bg-white/[0.04] md:scale-105 z-30 h-full transition-all duration-300 hover:border-primary/60"
-          >
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-black text-[10px] font-black px-4 py-1 rounded-full uppercase z-40 whitespace-nowrap shadow-md animate-pulse">
-              Best Seller
-            </div>
-            <div className="h-32 mb-6">
-              <h3 className="text-xl font-bold text-primary">Full Store Design</h3>
-              <div className="text-5xl font-black text-white mt-2 drop-shadow-sm">$299</div>
-              <p className="text-[12px] text-primary/70 mt-2 font-medium italic">*Premium theme license cost not included</p>
-            </div>
-            <ul className="space-y-4 mb-8 flex-1">
-              {["High-Converting UI/UX Design", "Winning Product Research", "Custom Liquid Functionality", "13-15 Days Rapid Delivery", "Mobile-First Optimization", "Marketing Pixel Setup", "30 Days Support"].map((item, i) => (
-                <li key={i} className="flex items-center gap-3 text-sm text-white/90">
-                  <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
-                  <span className={item.includes("13-15 Days") ? "font-bold text-primary" : ""}>{item}</span>
-                </li>
-              ))}
-            </ul>
-            <button 
-              onClick={() => handleCTA("Full Store Design ($299)")}
-              className="gradient-cta w-full py-4 rounded-xl text-sm font-black text-black uppercase tracking-widest hover:shadow-lg hover:shadow-primary/30 transition-all duration-300"
-            >
-              Claim This Offer
-            </button>
-          </motion.div>
+              <div className="mb-6 min-h-32">
+                <h3
+                  className={`text-lg font-bold ${
+                    plan.featured ? "text-primary" : "text-white/70"
+                  }`}
+                >
+                  {plan.title}
+                </h3>
 
-          {/* 3. ENTERPRISE */}
-          <motion.div 
-            whileHover={{ y: -8 }}
-            className="glass-card p-8 flex flex-col border border-white/5 shadow-lg h-full transition-transform duration-300 hover:border-white/20 bg-white/[0.02]"
-          >
-            <div className="h-32 mb-6">
-              <h3 className="text-lg font-bold text-white/70">Enterprise</h3>
-              <div className="text-4xl font-black text-white mt-2 italic tracking-tighter">Custom</div>
-              <p className="text-[12px] text-white/55 mt-1 italic uppercase tracking-wider">7-Figure Scalability</p>
-            </div>
-            <ul className="space-y-3 mb-8 flex-1">
-              {["Headless Shopify (Hydrogen)", "Custom App Development", "Advanced API Integration", "Unlimited Support", "Full Brand Strategy", "Priority 24/7 Support"].map((item, i) => (
-                <li key={i} className="flex items-center gap-3 text-sm text-white/70 font-light">
-                  <CheckCircle className="w-4 h-4 text-green-500/80 flex-shrink-0" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-            <button 
-              onClick={() => handleCTA("Enterprise (Custom)")}
-              className="w-full py-3 rounded-lg text-sm font-semibold bg-white/5 text-white border border-white/10 hover:bg-white/10 hover:text-white transition-colors duration-300"
-            >
-              Book Discovery Call
-            </button>
-          </motion.div>
+                <div
+                  className={`mt-2 text-4xl font-black tracking-tight ${
+                    plan.featured ? "text-white md:text-5xl" : "text-white"
+                  }`}
+                >
+                  {plan.price}
+                </div>
 
+                <p
+                  className={`mt-2 text-[12px] italic uppercase tracking-wider ${
+                    plan.featured ? "text-primary/70" : "text-white/55"
+                  }`}
+                >
+                  {plan.subtitle}
+                </p>
+              </div>
+
+              <ul className="mb-8 flex-1 space-y-3">
+                {plan.features.map((item) => (
+                  <li
+                    key={item}
+                    className={`flex items-center gap-3 text-sm ${
+                      plan.featured
+                        ? "text-white/90"
+                        : "font-light text-white/70"
+                    }`}
+                  >
+                    <CheckCircle
+                      className={`h-4 w-4 shrink-0 ${
+                        plan.featured ? "text-primary" : "text-green-500/80"
+                      }`}
+                    />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <button
+                type="button"
+                onClick={() => handleCTA(plan.packageName)}
+                className={
+                  plan.featured
+                    ? "gradient-cta w-full rounded-xl py-4 text-sm font-black uppercase tracking-widest text-black transition-all duration-300 hover:shadow-lg hover:shadow-primary/30"
+                    : "w-full rounded-lg border border-white/10 bg-white/5 py-3 text-sm font-semibold text-white transition-colors duration-300 hover:bg-white/10"
+                }
+              >
+                {plan.buttonLabel}
+              </button>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

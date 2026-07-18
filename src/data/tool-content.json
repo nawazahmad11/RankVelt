@@ -1,54 +1,178 @@
 {
-    "theme-detector": {
-      "title": "Best Shopify Theme Detector 2026",
-      "description": "Our advanced Shopify Theme Spy uses deep-scan technology to reveal the exact theme and apps behind any successful dropshipping store.",
-      "features": [
-        { "title": "Deep Scan", "detail": "Detects parent themes even if they are heavily renamed by the owner." },
-        { "title": "App Intelligence", "detail": "Identifies over 50+ Shopify apps including Klaviyo, Loox, and PageFly." },
-        { "title": "Fast & Lite", "detail": "Powered by lightweight proxies to ensure 3-second results without lag." }
-      ],
-      "faqs": [
-        { "q": "How does the Shopify Theme Detector work?", "a": "It scans the publicly available liquid files and CSS signatures of a store." },
-        { "q": "Can I detect themes on password stores?", "a": "No, the tool requires the store to be public to read the theme's architecture." }
-      ]
-    },
-    "name-generator": {
-      "title": "Best AI Business Name Generator 2026",
-      "description": "Our smart engine generates catchy, brandable, and SEO-friendly names for your Shopify store using deep-learning linguistics.",
-      "features": [
-        { "title": "Category Based", "detail": "Niche-specific suffixes and prefixes for maximum brand relevance." },
-        { "title": "AI Logic", "detail": "Smart combinations that sound professional and modern." },
-        { "title": "One-Click Copy", "detail": "Instantly save your favorite names to your clipboard." }
-      ],
-      "faqs": [
-        { "q": "Are these names domain-ready?", "a": "Yes, most names are generated to be short and brandable for easy domain registration." },
-        { "q": "How many names can I generate?", "a": "You can generate unlimited combinations by changing your keywords." }
-      ]
-    },
-    "profit-calculator": {
-      "title": "Shopify Profit & Margin Calculator 2026",
-      "description": "Stop guessing your profits. Use our advanced calculator to factor in COGS, shipping, and ad spend to find your true net profit.",
-      "features": [
-        { "title": "Net Margin Analysis", "detail": "Calculate exactly how much you keep after all expenses." },
-        { "title": "ROI Tracker", "detail": "Measure the effectiveness of your ad spend instantly." },
-        { "title": "Break-Even Point", "detail": "Know the minimum price you need to sell at to stay in profit." }
-      ],
-      "faqs": [
-        { "q": "What is a good profit margin for dropshipping?", "a": "Typically, a net profit margin between 15% to 25% is considered healthy." },
-        { "q": "Does this include Shopify fees?", "a": "You can add Shopify transaction fees into the 'Other Costs' field for better accuracy." }
-      ]
-    },
-    "policy-generator": {
-      "title": "Legal Policy Generator 2026",
-      "description": "Generate high-quality Privacy Policies, Refund Policies, and Terms of Service. Custom-tailored for Dropshipping and E-commerce stores.",
-      "features": [
-        { "title": "Custom Logic", "detail": "Policies change based on your business model and refund window." },
-        { "title": "GDPR Ready", "detail": "Includes standard clauses for data protection and cookie consent." },
-        { "title": "Instant Copy", "detail": "Perfectly formatted text ready to be pasted into your Shopify legal settings." }
-      ],
-      "faqs": [
-        { "q": "Are these policies legally binding?", "a": "These are templates based on standard practices. We recommend a legal review for 100% compliance." },
-        { "q": "Can I use these for TikTok Shop?", "a": "Yes, these templates follow the general requirements for most e-commerce platforms." }
-      ]
-    }
+  "theme-detector": {
+    "title": "How to Interpret Your Theme Result",
+    "description": "A detected theme is a research clue, not a complete store audit. Use the result to understand public storefront patterns, then review the store's navigation, product pages, mobile UX, content, speed, and customer journey.",
+    "features": [
+      {
+        "title": "Public Storefront Signals",
+        "detail": "Reviews publicly accessible storefront information that may indicate the likely Shopify theme setup."
+      },
+      {
+        "title": "Redesign Research",
+        "detail": "Useful for researching theme direction before planning a Shopify redesign, new store build, or custom development project."
+      },
+      {
+        "title": "Store Structure Context",
+        "detail": "Helps you start a wider review of navigation, collections, product pages, content, mobile UX, and conversion pathways."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How accurate is the Shopify Theme Detector?",
+        "a": "The tool uses publicly available storefront signals, so results should be treated as a likely indication rather than a guaranteed technical audit. Custom code, renamed themes, private assets, headless setups, and third-party tools can affect detection."
+      },
+      {
+        "q": "Can the tool detect a custom or renamed Shopify theme?",
+        "a": "Sometimes, but not always. A store may heavily customise a theme, rename theme files, use a custom build, or hide relevant signals. In those cases, the result may be limited or unavailable."
+      },
+      {
+        "q": "Can the Shopify Theme Detector identify apps?",
+        "a": "It may identify some public storefront clues, but it is not a full app audit. Many apps, backend workflows, tracking tools, and custom integrations are not publicly visible."
+      },
+      {
+        "q": "Why does a Shopify store return no theme result?",
+        "a": "The store may be password-protected, use a headless storefront, hide public theme signals, use a heavily customised setup, block requests, or not be running Shopify in the way the detector expects."
+      },
+      {
+        "q": "Can I inspect a password-protected Shopify store?",
+        "a": "No. The detector only works with publicly accessible storefront information. It cannot inspect private, password-protected, or admin-only store areas."
+      },
+      {
+        "q": "Will using the same Shopify theme create the same results as another store?",
+        "a": "No. Theme choice is only one part of an eCommerce store. Product quality, pricing, traffic quality, collection structure, SEO, mobile UX, trust content, product pages, and customer service all affect performance."
+      }
+    ]
+  },
+  "name-generator": {
+    "title": "How to Shortlist a Business Name",
+    "description": "Use generated names as starting ideas. A good final name should be easy to remember, practical to spell, suitable for your audience, and available for domains, social profiles, registrations, and trademarks.",
+    "features": [
+      {
+        "title": "Niche-Led Ideas",
+        "detail": "Generate starting directions using a product type, service, audience, niche, location idea, or preferred brand style."
+      },
+      {
+        "title": "Brand Planning Support",
+        "detail": "Useful for eCommerce stores, local services, agencies, product launches, side projects, and early-stage business ideas."
+      },
+      {
+        "title": "Availability Checklist",
+        "detail": "Shortlist names first, then check domains, social handles, business registrations, and trademark availability before using one."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Are generated business names guaranteed to be available?",
+        "a": "No. A generated name may already be used by another business or protected by a trademark. Always check domains, social profiles, local registration requirements, and relevant trademark databases before using a name commercially."
+      },
+      {
+        "q": "Should my business name include SEO keywords?",
+        "a": "Not necessarily. A name should first be clear, memorable, and easy to use. Your website titles, service pages, content, Google Business Profile, and on-page SEO can target keywords without making the brand name awkward."
+      },
+      {
+        "q": "Should I check domain and social-handle availability before choosing a name?",
+        "a": "Yes. Check whether a sensible domain and matching social profiles are available before investing in a logo, website, packaging, paid ads, or printed materials."
+      },
+      {
+        "q": "How should I check for trademark conflicts?",
+        "a": "Search the trademark database relevant to the markets where you plan to operate, then consider qualified legal advice before launching. A basic search is useful, but it does not guarantee that a name is safe to use."
+      },
+      {
+        "q": "Can I use this generator for a local service business?",
+        "a": "Yes. Enter your service, niche, customer type, city concept, or preferred style. Keep the final name broad enough that it can still work if you add services or locations later."
+      },
+      {
+        "q": "What makes a business name scalable?",
+        "a": "A scalable name is easy to pronounce, easy to spell, relevant to your audience, distinct from competitors, and broad enough to support future products, services, locations, or content."
+      }
+    ]
+  },
+  "profit-calculator": {
+    "title": "Understand Your Profit Result",
+    "description": "Use the result as a planning estimate. Compare selling price against direct product costs, shipping, fees, advertising spend, and other relevant costs before changing pricing, discounts, bundles, or paid campaigns.",
+    "features": [
+      {
+        "title": "Product-Level Planning",
+        "detail": "Use the calculator to estimate how much room may remain after the costs you enter are deducted from your selling price."
+      },
+      {
+        "title": "Pricing Scenario Checks",
+        "detail": "Compare different prices, discount levels, shipping offers, bundle ideas, and estimated advertising costs before making a decision."
+      },
+      {
+        "title": "Margin Awareness",
+        "detail": "Use margin direction to identify products that may need better pricing, lower costs, stronger average order value, or different acquisition strategy."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the difference between gross margin and net profit margin?",
+        "a": "Gross margin usually compares revenue with direct product costs such as cost of goods sold. Net profit margin can include additional expenses such as marketing, payment fees, shipping subsidies, software, salaries, returns, and other operating costs."
+      },
+      {
+        "q": "Which costs should I include in a product profit calculation?",
+        "a": "Include the costs that directly affect the sale, such as product cost, fulfilment, shipping, packaging, payment fees, advertising cost per sale, marketplace fees, discounts, returns, and other relevant expenses."
+      },
+      {
+        "q": "What is considered a healthy eCommerce profit margin?",
+        "a": "There is no universal healthy margin because products, industries, fulfilment models, ad costs, return rates, and operating expenses vary. Review your margin after the full set of relevant costs, not only the supplier price."
+      },
+      {
+        "q": "How do free shipping and discounts affect profit margin?",
+        "a": "Free shipping and discounts reduce the money left from each order unless they are offset by higher prices, lower fulfilment costs, a higher average order value, or stronger repeat purchase behaviour. Test the scenario before launching it."
+      },
+      {
+        "q": "Can I use this calculator before running Meta or Google Ads?",
+        "a": "Yes. Add an estimated advertising cost per sale to see how customer acquisition could affect the remaining profit. Recheck the numbers once real campaign data becomes available."
+      },
+      {
+        "q": "How do I calculate my break-even selling price?",
+        "a": "Your break-even selling price is the point where revenue covers the costs included in your calculation. Add product cost, fees, shipping, fulfilment, ad spend, and other direct costs to estimate the minimum price needed before profit."
+      }
+    ]
+  },
+  "policy-generator": {
+    "title": "Before You Publish Your Policy",
+    "description": "Generated content is a starting draft, not legal advice. Review every section to make sure it reflects your actual products, services, returns, shipping process, payment methods, data collection, and customer support practices.",
+    "features": [
+      {
+        "title": "Privacy Policy Drafts",
+        "detail": "Create starter wording for businesses that collect enquiries, customer information, analytics data, newsletter signups, or online payments."
+      },
+      {
+        "title": "Refund and Terms Content",
+        "detail": "Generate a structured starting point for refunds, cancellations, customer responsibilities, website use, and service or product conditions."
+      },
+      {
+        "title": "Website Launch Checklist",
+        "detail": "Use the draft as part of a wider launch review that includes checkout information, shipping rules, contact details, data practices, and customer support."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Do I need privacy, refund, shipping, and terms pages on my website?",
+        "a": "The pages you need depend on your business model, location, customers, and what you sell. Many online stores need privacy, refund or return, shipping, and terms information, while service businesses may also need cancellation and booking terms."
+      },
+      {
+        "q": "Are generated policies legally valid?",
+        "a": "Generated content is a starter template only. It is not legal advice and does not guarantee compliance. Review it carefully and consider qualified legal advice before publishing policies for a live business."
+      },
+      {
+        "q": "When should I update my website policies?",
+        "a": "Update policies when you add new payment methods, analytics, cookies, email marketing, apps, recurring services, international delivery, subscriptions, new forms, or different data-collection practices."
+      },
+      {
+        "q": "Do I need privacy-policy wording for analytics and marketing tools?",
+        "a": "You should clearly explain relevant data practices when using tools that collect visitor or customer information. Requirements can differ by location and tool, so review your actual setup and seek appropriate advice where needed."
+      },
+      {
+        "q": "Can I use this generator for Shopify, WordPress, or a service website?",
+        "a": "Yes. The generated draft can be adapted for Shopify stores, WordPress websites, WooCommerce stores, local service businesses, agencies, freelancers, and other business websites."
+      },
+      {
+        "q": "Does Shopify automatically make my refund policy legally correct?",
+        "a": "No. Shopify can help you add policy pages, but the wording still needs to accurately reflect your own products, returns, shipping, payments, customer support process, and applicable legal requirements."
+      }
+    ]
   }
+}

@@ -1,90 +1,20 @@
-import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect, useMemo, useCallback } from "react";
-
-// ✅ Optimized Icon Imports
-import ArrowRight from "lucide-react/dist/esm/icons/arrow-right";
-import ExternalLink from "lucide-react/dist/esm/icons/external-link";
-import CheckCircle2 from "lucide-react/dist/esm/icons/check-circle-2";
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import {
+  ArrowRight,
+  CheckCircle2,
+  ImageOff,
+} from "lucide-react";
 
-// ✅ Naya Data Array Modal File se direct import kiya
 import { portfolioProjects } from "@/components/PortfolioModal";
+import { seoCaseStudies } from "@/data/seoCaseStudyData";
 
-const fadeInUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.2, duration: 0.6, ease: "easeOut" as const },
-  }),
-};
+const spotlightProjects = portfolioProjects
+  .filter((project) => Boolean(project.thumbnail))
+  .slice(0, 9);
 
-// --- SPOTLIGHT DATA SECTION ---
-const showcaseProjects = [
-  {
-    title: "Forma Liv",
-    description: "A minimalist furniture store designed for a premium feel. We kept the layout clean and warm, making it easy for customers to browse and shop for high-end home decor without any distractions.",
-    features: ["45% Increase in Mobile CR", "Sub-1s Loading Time", "Custom Scent Finder" , "Clean & Minimal Design"],
-    img: "/forma-liv.webp",
-    color: "#facc15"
-  },
-  {
-    title: "AeroTech Gear",
-    description: "A sharp, modern tech store built for gadgets and drones. I focused on a professional look and a fast checkout flow to make buying electronics easy and reliable.",
-    features: ["Flash Sale Optimization", "Advanced Inventory Sync", "3D Product Previews"],
-    img: "/aerotech-gear-shopify-store.webp",
-    color: "#ffffff"
-  },
-  {
-    title: "Axeon Sport",
-    description: "A high-performance store built for athletes. I combined a bold, technical look with a fast shopping flow to make sure the gear stands out and the checkout is effortless.",
-    features: ["Rapid Peak Scaling", "UGC Integration", "Mobile Optimization"],
-    img: "/axeon-sport-shopify-store.webp",
-    color: "#facc15"
-  },
-  {
-    title: "Haven Loom",
-    description: "A high-end, bespoke furniture store designed for the thoughtful home. I combined a clean, natural palette with a seamless interface to make shopping for handcrafted luxury simple and incredibly intuitive.",
-    features: ["Bespoke UI Design", "360° AR Visualization", "Mobile-First Luxury"],
-    img: "/haven-loom-shopify-store.webp",
-    color: "#facc15"
-  },  
-  {
-    title: "Naturale Skincare",
-    description: "Experience botanical luxury. I crafted this premium skincare store with a focus on natural elegance and modern functionality. The goal was to make high-end beauty shopping feel effortless and perfectly personalized for every customer.",
-    features: ["Smart Skincare Funnel", "UGC Integration", "Skincare Quiz Funnel"],
-    img: "/naturale-skincare-shopify-store.webp",
-    color: "#facc15"
-  },
-  {
-    title: "Sustainable Drops",
-    description: "Modern streetwear with a conscious soul. I designed this store to bridge the gap between high-end fashion and eco-friendly practices. The layout is intentionally clean, allowing the `recycled` aesthetic and premium textures to take center stage.",
-    features: ["Dynamic Drop Architecture", "Lookbook-Integrated UX", "Eco-Metric Visualization"],
-    img: "/sustainable-drops-shopify-store.webp",
-    color: "#facc15"
-  },
-  {
-    title: "Gadget Array",
-    description: "Premium tech meets effortless shopping. I designed this storefront for high-end electronics, focusing on a clean white-space aesthetic that highlights technical details. The goal was to create a trustworthy environment for gadget enthusiasts to explore and buy with ease.",
-    features: ["High-Fidelity Product Previews", "Unified Accessory Ecosystem", "Sub-1s Interaction Speed"],
-    img: "/gadget-array-shopify-store.webp",
-    color: "#facc15"
-  },
-  {
-    title: "Vitality Wellness",
-    description: "A serene, botanical-inspired store built for the health-conscious consumer. I created a calm, organic atmosphere using earthy tones to make browsing for premium supplements feel like a natural extension of a wellness routine.",
-    features: ["Smart Supplement Finder", "Subscription Model Ready", "Conversion-Optimized Flow"],
-    img: "/vitality-wellness-shopify-store.webp",
-    color: "#facc15"
-  },
-  {
-    title: "Culinary Edge",
-    description: "A sophisticated, high-end storefront built for professional chefs and home cooking enthusiasts. We designed this experience to reflect the precision of the tools it sells, using a bold, dark aesthetic that emphasizes quality, durability, and premium kitchen aesthetics.",
-    features: ["Precision UI Design", "Conversion-Optimized Checkout", "Dynamic Sales Analytics"],
-    img: "/culinary-edge-shopify-store.webp",
-    color: "#facc15"
-  }
-];
+const latestSeoCaseStudies = seoCaseStudies.slice(-5).reverse();
 
 interface PortfolioSectionProps {
   onProjectSelect: (id: string) => void;
@@ -92,184 +22,269 @@ interface PortfolioSectionProps {
 
 const PortfolioSection = ({ onProjectSelect }: PortfolioSectionProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [imageFailed, setImageFailed] = useState(false);
 
-  const duplicatedProjects = useMemo(() => {
-    return [...portfolioProjects, ...portfolioProjects, ...portfolioProjects];
+  const activeProject =
+    spotlightProjects[activeIndex] || spotlightProjects[0];
+
+  useEffect(() => {
+    if (spotlightProjects.length < 2) {
+      return;
+    }
+
+    const timer = window.setInterval(() => {
+      setActiveIndex((currentIndex) => {
+        return (currentIndex + 1) % spotlightProjects.length;
+      });
+    }, 6000);
+
+    return () => {
+      window.clearInterval(timer);
+    };
   }, []);
 
   useEffect(() => {
-    showcaseProjects.forEach((project) => {
-      const img = new Image();
-      img.src = project.img;
-    });
-  }, []);
+    setImageFailed(false);
+  }, [activeProject?.id]);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % showcaseProjects.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [activeIndex]);
+  if (!activeProject) {
+    return null;
+  }
 
-  const handleDotClick = useCallback((index: number) => {
-    setActiveIndex(index);
-  }, []);
+  const spotlightPoints = [
+    "Clearer visual hierarchy",
+    "Product discovery support",
+    "Mobile-first browsing",
+  ];
 
   return (
-    <section id="portfolio" className="py-20 bg-black/40 overflow-hidden relative">
-      <style>{`
-        @keyframes scroll-portfolio {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-33.33%); }
-        }
-        .animate-portfolio {
-          animation: scroll-portfolio 40s linear infinite;
-        }
-        .portfolio-container:hover .animate-portfolio {
-          animation-play-state: paused;
-        }
-      `}</style>
-
-      {/* --- HEADER --- */}
-      <div className="section-container mb-5 text-center">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeInUp} custom={0}>
-          <h2 className="text-4xl md:text-6xl font-black mb-4 text-white tracking-tight">
-            My <span className="text-gradient-gold">Work</span>
-          </h2>
-          <p className="text-white/60 text-lg max-w-2xl mx-auto font-light">
-            Premium Shopify stores designed for high conversions and global scale.
+    <section
+      id="portfolio"
+      className="relative overflow-hidden bg-[#0b0615] py-20 sm:py-24"
+    >
+      {/* SEO CASE STUDIES */}
+      <div className="relative mx-auto max-w-7xl px-6">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-[10px] font-black uppercase tracking-[0.24em] text-primary">
+            RankVelt Case Studies
           </p>
-        </motion.div>
-      </div>
 
-      {/* --- INFINITE MARQUEE SLIDER --- */}
-      <div className="portfolio-container relative flex items-center overflow-hidden py-10 mb-7">
-        <div className="animate-portfolio flex gap-8 whitespace-nowrap px-4">
-          {duplicatedProjects.map((project, i) => (
-            <motion.div 
-              key={i} 
-              whileHover={{ y: -10, scale: 1.02 }}
-              onClick={() => onProjectSelect(project.id)}
-              className="w-[350px] md:w-[450px] shrink-0 group relative rounded-3xl overflow-hidden border border-white/10 bg-white/5 shadow-2xl transition-all duration-500 cursor-pointer"
+          <h2 className="mt-4 text-4xl font-black leading-[1.02] tracking-[-0.04em] text-white sm:text-5xl md:text-6xl">
+            SEO Results Backed by{" "}
+            <span className="text-gradient-gold">Search Data.</span>
+          </h2>
+
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/70 sm:text-lg">
+            A focused selection of organic search growth and technical SEO work
+            supported by Google Search Console and website performance evidence.
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {latestSeoCaseStudies.map((study, index) => (
+            <motion.article
+              key={study.path}
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              viewport={{ once: true }}
             >
-              <div className="aspect-[16/11] overflow-hidden bg-white/5">
-                <img 
-                  // ✅ Fixed: Type assertions applied to read dynamic objects safely without errors
-                  src={project.thumbnail || (project as any).image || ""} 
-                  alt={project.title} 
-                  loading="lazy" 
-                  width="450"
-                  height="310"
-                  decoding="async" 
-                  className="w-full h-full object-cover transition-all duration-700 grayscale-[40%] group-hover:grayscale-0 group-hover:scale-110" 
-                />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-                <div className="transform translate-y-6 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                  <span className="text-primary text-[10px] font-black uppercase tracking-[0.3em] mb-2 block">
-                    {project.category || "Shopify Store"}
+              <Link
+                to={study.path}
+                aria-label={`Read ${study.title} SEO case study`}
+                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-white/[0.09] bg-white/[0.025] transition-all duration-300 hover:-translate-y-1 hover:border-primary/45 hover:bg-white/[0.05]"
+              >
+                <div className="relative aspect-[16/10] overflow-hidden bg-black">
+                  <img
+                    src={study.image}
+                    alt={`${study.title} SEO performance report`}
+                    loading="lazy"
+                    decoding="async"
+                    className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  />
+
+                  <span className="absolute left-3 top-3 rounded-full border border-primary/30 bg-black/75 px-3 py-1.5 text-[9px] font-black uppercase tracking-[0.14em] text-primary backdrop-blur-sm">
+                    SEO Case Study
                   </span>
-                  <h3 className="text-2xl font-bold text-white mb-4">{project.title}</h3>
-                  <div className="flex items-center gap-4">
-                    <button 
-                      className="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full text-xs font-bold hover:bg-primary transition-all duration-300"
-                    >
-                      View Details <ExternalLink className="w-3 h-3" />
-                    </button>
-                  </div>
                 </div>
-              </div>
-            </motion.div>
+
+                <div className="flex flex-1 flex-col p-5">
+                  <p className="text-[10px] font-black uppercase tracking-[0.16em] text-primary">
+                    {study.category}
+                  </p>
+
+                  <h3 className="mt-3 text-2xl font-black tracking-tight text-white">
+                    {study.title}
+                  </h3>
+
+                  <p className="mt-5 text-2xl font-black tracking-tight text-white">
+                    {study.result}
+                  </p>
+
+                  <p className="mt-1 text-xs leading-relaxed text-white/60">
+                    {study.period}
+                  </p>
+
+                  <span className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-primary transition-all group-hover:gap-3">
+                    Read Case Study
+                    <ArrowRight size={16} />
+                  </span>
+                </div>
+              </Link>
+            </motion.article>
           ))}
         </div>
-        <div className="absolute inset-y-0 left-0 w-32 md:w-64 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-        <div className="absolute inset-y-0 right-0 w-32 md:w-64 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+
+        <div className="mt-10 flex justify-center">
+          <Link
+            to="/case-studies"
+            className="group inline-flex items-center gap-2 rounded-full border border-primary/35 bg-primary/[0.06] px-5 py-2.5 text-xs font-black text-primary transition-all hover:border-primary hover:bg-primary/10"
+          >
+            View All Case Studies
+            <ArrowRight
+              size={15}
+              className="transition-transform group-hover:translate-x-1"
+            />
+          </Link>
+        </div>
       </div>
 
-      {/* --- FEATURE SHOWCASE (SPOTLIGHT) --- */}
-      <div className="section-container relative z-20 mt-[-20px]">
-        <div className="bg-white/[0.04] border border-white/[0.06] rounded-[2rem] p-6 md:p-8 backdrop-blur-xl relative"> 
-            
-          {/* --- View All Button --- */}
-          <div className="flex justify-start md:block mb-6 md:mb-0"> 
-            <Link 
-              to="/case-studies" 
-              className="relative md:absolute top-0 right-0 md:top-10 md:right-10 z-30 flex items-center gap-2.5 px-5 py-2 border border-[#f9a825]/40 rounded-full transition-all bg-white/5 hover:bg-[#f9a825]/10 hover:border-[#f9a825]/100 group"
-            >
-              <span className="text-[12px] md:text-[13px] font-bold text-[#f9a825]">
-                View all Case Studies
+      {/* SHOPIFY FEATURED WORK */}
+      <div className="relative mx-auto mt-24 max-w-7xl border-t border-white/10 px-6 pt-14">
+        <div className="max-w-2xl">
+          <p className="text-[10px] font-black uppercase tracking-[0.24em] text-primary">
+            Shopify Store Design
+          </p>
+
+          <h2 className="mt-4 text-3xl font-black leading-tight text-white sm:text-4xl">
+            Featured Ecommerce Store Work
+          </h2>
+
+          <p className="mt-4 text-base leading-relaxed text-white/70">
+            Selected Shopify design concepts focused on product discovery,
+            visual trust, mobile usability, and clearer buying journeys.
+          </p>
+        </div>
+
+        <div className="mt-10 overflow-hidden rounded-[2rem] border border-white/[0.08] bg-white/[0.025] p-5 sm:p-8">
+          <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+            <div className="order-2 lg:order-1">
+              <span className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">
+                Featured Project
               </span>
-              <ArrowRight size={14} className="text-[#f9a825] group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
-            
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              {/* Left Content Column */}
-              <div className="order-2 lg:order-1 min-h-[380px] py-4 flex flex-col justify-center relative overflow-hidden">
-                <AnimatePresence mode="wait"> 
-                  <motion.div
-                    key={activeIndex}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: 20 }}
-                    transition={{ duration: 0.4, ease: "easeInOut" }}
-                  >
-                    <span className="text-primary font-black tracking-widest text-xs uppercase mb-2 block">Project Spotlight</span>
-                    <h2 className="text-4xl md:text-5xl font-black text-white mb-3 leading-tight">
-                      {showcaseProjects[activeIndex].title}
-                    </h2>
-                    <p className="text-white/50 text-lg mb-5 font-light leading-relaxed">
-                      {showcaseProjects[activeIndex].description}
-                    </p>
-                    
-                    <div className="space-y-4 mb-2">
-                      {showcaseProjects[activeIndex].features.map((feature, idx) => (
-                        <div key={idx} className="flex items-center gap-3 text-white/80">
-                          <CheckCircle2 size={20} className="text-primary" />
-                          <span className="font-medium">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </motion.div>
-                </AnimatePresence>
 
-                <div className="flex gap-3 mt-8 z-30">
-                  {showcaseProjects.map((_, i) => (
-                    <button 
-                      key={i} 
-                      onClick={() => handleDotClick(i)}
-                      aria-label={`Go to slide ${i + 1}`}
-                      className={`h-1 transition-all duration-500 cursor-pointer rounded-full outline-none border-none ${activeIndex === i ? 'w-12 bg-primary' : 'w-4 bg-white/10'}`}
-                    />
-                  ))}
-                </div>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeProject.id}
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -12 }}
+                  transition={{ duration: 0.28 }}
+                  aria-live="polite"
+                >
+                  <h3 className="mt-4 text-3xl font-black leading-tight text-white sm:text-4xl">
+                    {activeProject.title}
+                  </h3>
+
+                  <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/70 sm:text-base">
+                    {activeProject.description}
+                  </p>
+
+                  <div className="mt-6 grid gap-3 sm:grid-cols-3">
+                    {spotlightPoints.map((point) => (
+                      <div
+                        key={point}
+                        className="flex items-start gap-2 text-xs leading-relaxed text-white/75"
+                      >
+                        <CheckCircle2
+                          size={16}
+                          className="mt-0.5 shrink-0 text-primary"
+                        />
+                        <span>{point}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="mt-8 flex flex-wrap gap-3">
+                    <button
+                      type="button"
+                      onClick={() => onProjectSelect(activeProject.id)}
+                      className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-xs font-black text-black transition-transform hover:scale-[1.02]"
+                    >
+                      View Project Details
+                      <ArrowRight size={15} />
+                    </button>
+
+                    <Link
+                      to="/case-studies"
+                      className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/[0.03] px-5 py-3 text-xs font-bold text-white/80 transition-colors hover:border-primary/35 hover:text-primary"
+                    >
+                      Explore More Work
+                      <ArrowRight size={15} />
+                    </Link>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+
+              <div className="mt-8 flex gap-2">
+                {spotlightProjects.map((project, index) => (
+                  <button
+                    key={project.id}
+                    type="button"
+                    onClick={() => setActiveIndex(index)}
+                    aria-label={`Show ${project.title} project`}
+                    aria-pressed={activeIndex === index}
+                    className={`h-1.5 rounded-full transition-all ${
+                      activeIndex === index
+                        ? "w-10 bg-primary"
+                        : "w-4 bg-white/15 hover:bg-white/35"
+                    }`}
+                  />
+                ))}
               </div>
+            </div>
 
-              {/* Right Image Column */}
-              <div className="order-1 lg:order-2 relative flex items-center justify-center min-h-[300px] lg:min-h-[400px]">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={activeIndex}
-                    initial={{ opacity: 0, scale: 0.95, filter: "blur(4px)" }}
-                    animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-                    exit={{ opacity: 0, scale: 0.95, filter: "blur(4px)" }}
-                    transition={{ duration: 0.4, ease: "easeInOut" }}
-                    className="w-full flex justify-center relative items-center py-4"
-                  >
+            <div className="order-1 lg:order-2">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeProject.id}
+                  initial={{ opacity: 0, scale: 0.98 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.98 }}
+                  transition={{ duration: 0.3 }}
+                  className="relative overflow-hidden rounded-2xl border border-white/[0.08] bg-black/30"
+                >
+                  {!imageFailed ? (
                     <img
-                      src={showcaseProjects[activeIndex].img}
-                      width="550"
-                      height="275"
-                      fetchPriority={activeIndex === 0 ? "high" : "auto"} 
-                      loading={activeIndex === 0 ? "eager" : "lazy"}
+                      src={activeProject.thumbnail}
+                      alt={`${activeProject.title} featured website project`}
+                      loading="lazy"
                       decoding="async"
-                      className="rounded-[1.2rem] w-full h-auto object-contain shadow-2xl" 
-                      alt={showcaseProjects[activeIndex].title}
+                      onError={() => setImageFailed(true)}
+                      className="aspect-[16/10] h-full w-full object-cover"
                     />
-                  </motion.div>
-                </AnimatePresence>
-                <div className="absolute -z-10 w-[70%] h-[70%] bg-primary/5 blur-[100px] rounded-full" />
-              </div>
+                  ) : (
+                    <div className="flex aspect-[16/10] flex-col items-center justify-center px-8 text-center">
+                      <ImageOff className="h-9 w-9 text-primary" />
+
+                      <p className="mt-4 text-lg font-black text-white">
+                        {activeProject.title}
+                      </p>
+
+                      <p className="mt-2 text-sm text-white/60">
+                        Website project preview
+                      </p>
+                    </div>
+                  )}
+
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
+
+                  <div className="absolute bottom-4 left-4 rounded-full border border-white/15 bg-black/45 px-3 py-1.5 text-[9px] font-black uppercase tracking-[0.18em] text-primary backdrop-blur-md">
+                    {activeProject.category}
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
           </div>
         </div>
       </div>
@@ -278,356 +293,3 @@ const PortfolioSection = ({ onProjectSelect }: PortfolioSectionProps) => {
 };
 
 export default PortfolioSection;
-
-
-
-
-
-
-
-
-
-// import { motion, AnimatePresence } from "framer-motion";
-// import { useState, useEffect, useMemo } from "react";
-
-// // ✅ Optimized Icon Imports (Har icon alag import taake bundle size chota rahe)
-// import ArrowRight from "lucide-react/dist/esm/icons/arrow-right";
-// import ExternalLink from "lucide-react/dist/esm/icons/external-link";
-// import CheckCircle2 from "lucide-react/dist/esm/icons/check-circle-2";
-
-// import { Link } from "react-router-dom";
-// import ChevronDown from "lucide-react/dist/esm/icons/chevron-down";
-
-// const fadeInUp = {
-//   hidden: { opacity: 0, y: 30 },
-//   visible: (i: number) => ({
-//     opacity: 1,
-//     y: 0,
-//     transition: { delay: i * 0.2, duration: 0.6, ease: "easeOut" as const },
-//   }),
-// };
-
-// // --- DATA SECTIONS (Unchanged as requested) ---
-// const showcaseProjects = [
-//   {
-//     title: "Forma Liv",
-//     description: "A minimalist furniture store designed for a premium feel. We kept the layout clean and warm, making it easy for customers to browse and shop for high-end home decor without any distractions.",
-//     features: ["45% Increase in Mobile CR", "Sub-1s Loading Time", "Custom Scent Finder" , "Clean & Minimal Design"],
-//     img: "/forma-liv.webp",
-//     color: "#facc15"
-//   },
-//   {
-//     title: "AeroTech Gear",
-//     description: "A sharp, modern tech store built for gadgets and drones. I focused on a professional look and a fast checkout flow to make buying electronics easy and reliable.",
-//     features: ["Flash Sale Optimization", "Advanced Inventory Sync", "3D Product Previews"],
-//     img: "/aerotech-gear-shopify-store.webp",
-//     color: "#ffffff"
-//   },
-//   {
-//     title: "Axeon Sport",
-//     description: "A high-performance store built for athletes. I combined a bold, technical look with a fast shopping flow to make sure the gear stands out and the checkout is effortless.",
-//     features: ["Rapid Peak Scaling", "UGC Integration", "Mobile Optimization"],
-//     img: "/axeon-sport-shopify-store.webp",
-//     color: "#facc15"
-//   },
-//   {
-//     title: "Haven Loom",
-//     description: "A high-end, bespoke furniture store designed for the thoughtful home. I combined a clean, natural palette with a seamless interface to make shopping for handcrafted luxury simple and incredibly intuitive.",
-//     features: ["Bespoke UI Design", "360° AR Visualization", "Mobile-First Luxury"],
-//     img: "/haven-loom-shopify-store.webp",
-//     color: "#facc15"
-//   },  
-//   {
-//     title: "Naturale Skincare",
-//     description: "Experience botanical luxury. I crafted this premium skincare store with a focus on natural elegance and modern functionality. The goal was to make high-end beauty shopping feel effortless and perfectly personalized for every customer.",
-//     features: ["Smart Skincare Funnel", "UGC Integration", "Skincare Quiz Funnel"],
-//     img: "/naturale-skincare-shopify-store.webp",
-//     color: "#facc15"
-//   },
-//   {
-//     title: "Sustainable Drops",
-//     description: "Modern streetwear with a conscious soul. I designed this store to bridge the gap between high-end fashion and eco-friendly practices. The layout is intentionally clean, allowing the `recycled` aesthetic and premium textures to take center stage.",
-//     features: ["Dynamic Drop Architecture", "Lookbook-Integrated UX", "Eco-Metric Visualization"],
-//     img: "/sustainable-drops-shopify-store.webp",
-//     color: "#facc15"
-//   },
-//   {
-//     title: "Gadget Array",
-//     description: "Premium tech meets effortless shopping. I designed this storefront for high-end electronics, focusing on a clean white-space aesthetic that highlights technical details. The goal was to create a trustworthy environment for gadget enthusiasts to explore and buy with ease.",
-//     features: ["High-Fidelity Product Previews", "Unified Accessory Ecosystem", "Sub-1s Interaction Speed"],
-//     img: "/gadget-array-shopify-store.webp",
-//     color: "#facc15"
-//   },
-//   {
-//     title: "Vitality Wellness",
-//     description: "A serene, botanical-inspired store built for the health-conscious consumer. I created a calm, organic atmosphere using earthy tones to make browsing for premium supplements feel like a natural extension of a wellness routine.",
-//     features: ["Smart Supplement Finder", "Subscription Model Ready", "Conversion-Optimized Flow"],
-//     img: "/vitality-wellness-shopify-store.webp",
-//     color: "#facc15"
-//   },
-//   {
-//     title: "Culinary Edge",
-//     description: "A sophisticated, high-end storefront built for professional chefs and home cooking enthusiasts. We designed this experience to reflect the precision of the tools it sells, using a bold, dark aesthetic that emphasizes quality, durability, and premium kitchen aesthetics.",
-//     features: ["Precision UI Design", "Conversion-Optimized Checkout", "Dynamic Sales Analytics"],
-//     img: "/culinary-edge-shopify-store.webp",
-//     color: "#facc15"
-//   }
-// ];
-
-// const projects = [
-//   { name: "Luxe Fragrances", 
-//     cat: "Luxury Perfumes", 
-//     img: "/perfume-shopify-store.webp",
-//     link: "https://LuxeFragrancess.com" 
-//   },
-    
-//   { name: "Gala Tea", 
-//     cat: "Fictional Novels", 
-//     img: "/fictional-books-shopify-store.webp", 
-//     link: "https://shop.galatea.com/"
-//   },
-
-//   { name: "FitGears", 
-//     cat: "Fitness Apparel", 
-//     img: "/gym-couture-shopify-store.webp",
-//     link: "https://gymcouture.co.uk/"
-//   },
-
-//   { name: "Silk & Stone", 
-//     cat: "Modern Fashion", 
-//     img: "/ovrthnk-shopify-store.webp",
-//     link: "https://ovrthnk.us/"
-//   },
-
-//   { name: "Urban Fit", 
-//     cat: "Clothing Store", 
-//     img: "/urban-clothing-shopify-store.webp",
-//     link: "https://urbanfits.co.in/"  
-//   },
-  
-//   { name: "Roasted Cherry", 
-//     cat: "Coffee Shop", 
-//     img: "/coffee-shopify-store.webp",
-//     link: "https://roastedcherry.ca/"
-//   },
-
-//   { name: "Revoo Concept", 
-//     cat: "Food Store", 
-//     img: "/olive-oil-shopify-store.webp",
-//     link: "https://revooconcept.com/"  
-//   },
-
-//   { name: "Nura Fashion", 
-//     cat: "Fashion", 
-//     img: "/ladies-shopify-store.webp",
-//     link: "https://nurafashion.com/"  
-//   },
-
-//   { name: "Little Wren", 
-//     cat: "Kids Accessories", 
-//     img: "/little-wren-shopify-store.webp",
-//     link: "https://www.ohlittlewren.com/" 
-//   },
-
-//   { name: "Denim Den", 
-//     cat: "Kids Wear", 
-//     img: "/kids-wear-shopify-store.webp",
-//     link: "https://denimden.shop/"
-//   },
-
-//   { name: "Welevate club", 
-//     cat: "Personal Accessories", 
-//     img: "/breathe-freely-shopify-store.webp", 
-//     link: "https://welevateclub.com/"}
-// ];
-
-
-
-// const PortfolioSection = () => {
-//   const [activeIndex, setActiveIndex] = useState(0);
-
-//   // Memoize duplicated projects to prevent re-renders on every scroll
-//   const duplicatedProjects = useMemo(() => [...projects, ...projects, ...projects], []);
-
-//   useEffect(() => {
-//     const timer = setInterval(() => {
-//       setActiveIndex((prev) => (prev + 1) % showcaseProjects.length);
-//     }, 5000);
-//     return () => clearInterval(timer);
-//   }, []);
-
-//   return (
-//     <section id="portfolio" className="py-20 bg-black/40 overflow-hidden relative">
-
-//       <style>{`
-//         @keyframes scroll-portfolio {
-//           0% { transform: translateX(0); }
-//           100% { transform: translateX(-33.33%); }
-//         }
-//         .animate-portfolio {
-//           animation: scroll-portfolio 40s linear infinite;
-//         }
-//         .portfolio-container:hover .animate-portfolio {
-//           animation-play-state: paused;
-//         }
-//       `}</style>
-
-//       {/* --- HEADER --- */}
-//       <div className="section-container mb-5 text-center">
-//         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeInUp} custom={0}>
-//           <h2 className="text-4xl md:text-6xl font-black mb-4 text-white tracking-tight">
-//             My <span className="text-gradient-gold">Work</span>
-//           </h2>
-//           <p className="text-white/60 text-lg max-w-2xl mx-auto font-light">
-//             Premium Shopify stores designed for high conversions and global scale.
-//           </p>
-//         </motion.div>
-//       </div>
-
-//       <div className="portfolio-container relative flex items-center overflow-hidden py-10 mb-7">
-//         <div className="animate-portfolio flex gap-8 whitespace-nowrap px-4">
-
-
-//           {duplicatedProjects.map((project, i) => (
-//             <motion.div key={i} whileHover={{ y: -10, scale: 1.02 }} 
-//             className="w-[350px] md:w-[450px] shrink-0 group relative rounded-3xl overflow-hidden border border-white/10 bg-white/5 shadow-2xl transition-all duration-500 cursor-pointer">
-//               <div className="aspect-[16/11] overflow-hidden bg-white/5">
-//                 <img 
-//                   src={project.img} 
-//                   alt={project.name} 
-//                   loading="lazy" 
-//                   width="450"
-//                   height="310"
-//                   decoding="async" 
-//                   className="w-full h-full object-cover transition-all duration-700 grayscale-[40%] group-hover:grayscale-0 group-hover:scale-110" 
-//                 />
-//               </div>
-//               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-//                 <div className="transform translate-y-6 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-//                   <span className="text-primary text-[10px] font-black uppercase tracking-[0.3em] mb-2 block">{project.cat}</span>
-//                   <h3 className="text-2xl font-bold text-white mb-4">{project.name}</h3>
-//                   <div className="flex items-center gap-4">
-//                     <a 
-//                       href={project.link} 
-//                       target="_blank" 
-//                       rel="noopener noreferrer"
-//                       className="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full text-xs font-bold hover:bg-primary transition-all duration-300"
-//                     >
-//                       Live Preview <ExternalLink className="w-3 h-3" />
-//                     </a>
-//                   </div>
-//                 </div>
-//               </div>
-//             </motion.div>
-//           ))}
-//         </div>
-//         <div className="absolute inset-y-0 left-0 w-32 md:w-64 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-//         <div className="absolute inset-y-0 right-0 w-32 md:w-64 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
-//       </div>
-
-//       <div className="section-container relative z-20 mt-[-20px]"> {/* Slider ke mazeed kareeb karne ke liye negative margin */}
-//         <div className="bg-white/[0.04] border border-white/6 rounded-[2rem] p-6 md:p-8 backdrop-blur-xl"> {/* p-8 ko md:p-8 rakha magar mobile pe p-6 kiya */}
-            
-
-//         <div className="flex justify-start md:block mb-6 md:mb-0"> 
-//           <Link 
-//             to="/case-studies" 
-//             className="
-//               /* Mobile par simple relative position, Desktop par absolute */
-//               relative md:absolute 
-//               top-0 right-0 md:top-10 md:right-10 
-//               z-30 flex items-center gap-2.5 px-5 py-2 
-//               border border-[#f9a825]/40 rounded-full transition-all 
-//               bg-white/5 hover:bg-[#f9a825]/10 hover:border-[#f9a825] group
-//             "
-//           >
-//             <span className="text-[12px] md:text-[13px] font-bold text-[#f9a825]">
-//               View all Case Studies
-//             </span>
-//             <ArrowRight size={14} className="text-[#f9a825] group-hover:translate-x-1 transition-transform" />
-//           </Link>
-//         </div>
-            
-//             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-
-
-//                 <div className="order-2 lg:order-1 min-h-fit py-4 flex flex-col justify-center relative">
-
-//                     <AnimatePresence mode="popLayout"> 
-//                         <motion.div
-//                             key={activeIndex}
-//                             initial={{ opacity: 0, x: -20 }}
-//                             animate={{ opacity: 1, x: 0 }}
-//                             exit={{ opacity: 0, x: 20 }}
-//                             transition={{ duration: 0.5 }}
-//                         >
-//                             <span className="text-primary font-black tracking-widest text-xs uppercase mb-2 block">Project Spotlight</span>
-//                             <h2 className="text-4xl md:text-5xl font-black text-white mb-3 leading-tight">
-//                                 {showcaseProjects[activeIndex].title}
-//                             </h2>
-//                             <p className="text-white/50 text-lg mb-5 font-light leading-relaxed">
-//                                 {showcaseProjects[activeIndex].description}
-//                             </p>
-                            
-//                             <div className="space-y-4 mb-2">
-//                                 {showcaseProjects[activeIndex].features.map((feature, idx) => (
-//                                     <div key={idx} className="flex items-center gap-3 text-white/80">
-//                                         <CheckCircle2 size={20} className="text-primary" />
-//                                         <span className="font-medium">{feature}</span>
-//                                     </div>
-//                                 ))}
-//                             </div>
-//                         </motion.div>
-//                     </AnimatePresence>
-
-//                     <div className="flex gap-3 mt-8"> 
-//                         {showcaseProjects.map((_, i) => (
-//                             <div 
-//                                 key={i} 
-//                                 onClick={() => setActiveIndex(i)}
-//                                 className={`h-1 transition-all duration-500 cursor-pointer rounded-full ${activeIndex === i ? 'w-12 bg-primary' : 'w-4 bg-white/10'}`}
-//                             />
-//                         ))}
-//                     </div>
-//                 </div>
-
-//                 <div className="order-1 lg:order-2 relative flex items-center justify-center min-h-fit lg:min-h-[400px]">
-//                     <AnimatePresence mode="popLayout">
-//                         <motion.div
-//                             key={activeIndex}
-//                             initial={{ opacity: 0, x: 50, filter: "blur(10px)", scale: 0.95 }}
-//                             animate={{ opacity: 1, x: 0, filter: "blur(0px)", scale: 1 }}
-//                             exit={{ opacity: 0, x: -50, filter: "blur(10px)", scale: 0.95 }}
-//                             transition={{ type: "spring", stiffness: 100, damping: 20, duration: 0.8 }}
-//                             className="w-full flex justify-center relative items-center py-4"
-//                         >
-//                            <img
-//                             src={showcaseProjects[activeIndex].img}
-//                             width="550"
-//                             height="275"
-//                             // Isse performance mazeed behtar hogi
-//                             fetchPriority={activeIndex === 0 ? "high" : "auto"} 
-//                             loading={activeIndex === 0 ? "eager" : "lazy"}
-//                             decoding="async"
-//                             className="rounded-[1.2rem] w-full h-auto object-contain shadow-2xl" 
-//                             alt={showcaseProjects[activeIndex].title}
-//                         />
-
-//                         <div className="hidden">
-//                           {showcaseProjects.map((project, index) => (
-//                             <link key={index} rel="preload" as="image" href={project.img} />
-//                           ))}
-//                         </div>
-//                         </motion.div>
-//                     </AnimatePresence>
-
-//                     <div className="absolute -z-10 w-[70%] h-[70%] bg-primary/5 blur-[100px] rounded-full" />
-//                 </div>
-//             </div>
-//         </div>
-//       </div>
-//         </section>
-//       );
-//     };
-
-// export default PortfolioSection;

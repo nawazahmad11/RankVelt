@@ -1,47 +1,59 @@
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const AuditSection = () => {
+  const navigate = useNavigate();
+
   const points = [
-    "PageSpeed analysis",
-    "UX & mobile review",
-    "Conversion opportunities",
-    "Delivered in 48hrs",
+    "Search visibility review",
+    "Technical & on-page gaps",
+    "Local or eCommerce opportunities",
+    "Clear next-step priorities",
   ];
 
+  const handleAuditRequest = () => {
+    navigate(
+      `/strategy-call?package=${encodeURIComponent(
+        "Free SEO Opportunity Check",
+      )}`,
+    );
+  };
+
   return (
-    <section className="py-12 px-6">
-      <div className="max-w-7xl mx-auto">
-        <motion.div 
+    <section className="px-6 py-12">
+      <div className="mx-auto max-w-7xl">
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative overflow-hidden rounded-[2rem] border border-white/5 bg-gradient-to-br from-white/[0.03] to-transparent p-8 md:p-10 shadow-2xl backdrop-blur-md"
+          className="relative overflow-hidden rounded-[2rem] border border-white/5 bg-gradient-to-br from-white/[0.03] to-transparent p-8 shadow-2xl backdrop-blur-md md:p-10"
         >
-          {/* Background Decor */}
-          <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-primary/10 blur-[120px] rounded-full pointer-events-none" />
+          <div className="pointer-events-none absolute right-0 top-0 h-96 w-96 translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 blur-[120px]" />
 
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-12 relative z-10">
-            
-            {/* Left Side: Content */}
+          <div className="relative z-10 flex flex-col items-center justify-between gap-12 lg:flex-row">
             <div className="flex-1 space-y-6 text-center lg:text-left">
-              <div className="inline-flex items-center px-3 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary text-[10px] font-black uppercase tracking-widest">
-                Free Offer
+              <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-[10px] font-black uppercase tracking-widest text-primary">
+                Free SEO Opportunity Check
               </div>
-              
-              <h3 className="text-4xl md:text-5xl font-black text-white tracking-tight">
-                Get a free <span className="text-primary">store audit.</span>
+
+              <h3 className="text-4xl font-black tracking-tight text-white md:text-5xl">
+                Find out what is holding your{" "}
+                <span className="text-primary">website back.</span>
               </h3>
-              
-              <p className="text-white/70 text-lg leading-relaxed max-w-2xl">
-                I'll review your Shopify store and send you a personalised report 
-                covering speed, UX, mobile experience, and conversion rate — 
-                <span className="text-white"> completely free, no strings attached.</span>
+
+              <p className="max-w-2xl text-lg leading-relaxed text-white/70">
+                Share your website and business details. RankVelt will identify
+                the most important visibility, website, technical, or
+                conversion opportunities worth addressing first.
               </p>
 
-              <div className="flex flex-wrap justify-center lg:justify-start gap-3 pt-4">
-                {points.map((point, i) => (
-                  <div key={i} className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/2 bg-white/[0.1] text-[11px] font-bold text-white/65 uppercase tracking-wider">
+              <div className="flex flex-wrap justify-center gap-3 pt-4 lg:justify-start">
+                {points.map((point) => (
+                  <div
+                    key={point}
+                    className="flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-[11px] font-bold uppercase tracking-wider text-white/65"
+                  >
                     <CheckCircle2 size={14} className="text-primary" />
                     {point}
                   </div>
@@ -49,31 +61,22 @@ const AuditSection = () => {
               </div>
             </div>
 
-            {/* Right Side: CTA */}
-            <div className="text-center shrink-0">
+            <div className="shrink-0 text-center">
               <motion.button
+                type="button"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="group relative px-10 py-5 rounded-2xl bg-primary text-black font-black uppercase text-[15px] tracking-widest flex items-center gap-3 shadow-[0_20px_40px_rgba(var(--primary-rgb),0.3)] hover:shadow-primary/40 transition-all"
+                onClick={handleAuditRequest}
+                className="group flex items-center gap-3 rounded-2xl bg-primary px-10 py-5 text-[15px] font-black uppercase tracking-widest text-black shadow-[0_20px_40px_rgba(var(--primary-rgb),0.3)] transition-all hover:shadow-primary/40"
               >
-                {/* Start Your Project */}
-
-            <button 
-                onClick={() => window.location.href = '/strategy-call?package=Maintenance'}
-                className="btn-primary" // Ya jo bhi aapki class hai
-                    >
-                Start Your Project →
-            </button>
-
-
-                <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+                Request My SEO Check
+                <ArrowRight className="transition-transform group-hover:translate-x-1" />
               </motion.button>
-              
-              <p className="mt-4 text-[11px] font-mono text-white/60 uppercase tracking-[0.2em]">
+
+              <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white/60">
                 No obligation · Response within 48hrs
               </p>
             </div>
-
           </div>
         </motion.div>
       </div>
