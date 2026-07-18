@@ -7,7 +7,7 @@ import {
   ImageOff,
 } from "lucide-react";
 
-import { portfolioProjects } from "@/components/PortfolioModal";
+import { portfolioProjects } from "@/data/portfolioProjects";
 import { seoCaseStudies } from "@/data/seoCaseStudyData";
 
 const spotlightProjects = portfolioProjects
