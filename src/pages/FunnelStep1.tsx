@@ -587,7 +587,7 @@ const FunnelStep1 = () => {
               custom={0}
               className="text-3xl font-bold text-white sm:text-4xl"
             >
-              Why Businesses Struggle to{" "}
+              Why Businesses Struggle to{""}
               <span className="mx-2 text-4xl italic text-destructive sm:text-5xl">
                 Rank
               </span>

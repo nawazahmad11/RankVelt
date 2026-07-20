@@ -287,7 +287,7 @@ const Header = () => {
             : "w-full max-w-7xl bg-transparent px-6 py-4"
           }`}
       >
-        <button
+        {/* <button
           type="button"
           onClick={goHome}
           className="flex shrink-0 items-center gap-3 text-left"
@@ -306,7 +306,33 @@ const Header = () => {
               SEO & Web Growth Studio
             </span>
           </span>
-        </button>
+        </button> */}
+
+<button
+  type="button"
+  onClick={goHome}
+  className="flex shrink-0 items-center gap-3 text-left"
+  aria-label="Go to RankVelt homepage"
+>
+  <img
+    src="/rankvelt-icon.webp"
+    alt="RankVelt Logo"
+    className="h-12 w-auto object-contain"
+  />
+
+  <span className="flex flex-col">
+    <span className="text-xl font-black tracking-tight text-white italic">
+      Rank<span className="text">Velt</span>
+    </span>
+
+    <span className="hidden text-[8px] font-black uppercase tracking-[0.18em] text-white/35 sm:block">
+      SEO & Web Growth Studio
+    </span>
+  </span>
+</button>
+
+
+
 
         <nav className="hidden items-center gap-6 xl:flex">
           <div
