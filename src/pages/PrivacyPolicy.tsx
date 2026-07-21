@@ -11,7 +11,7 @@ const PrivacyPolicy = () => {
   /*
     Replace this email once your final RankVelt business email is ready.
   */
-  const contactEmail = "info@nawazbuilds.com";
+  const contactEmail = "info@rankvelt.com";
 
   const handleInternalLink = (id: string) => {
     navigate("/");
@@ -120,6 +120,8 @@ const PrivacyPolicy = () => {
             Form and Service Providers
           </h2>
 
+          
+
           <p className="leading-relaxed text-white/60">
             RankVelt currently uses third-party services to operate website
             forms and enquiries. Strategy-call requests may be processed through
@@ -134,6 +136,25 @@ const PrivacyPolicy = () => {
             later.
           </p>
         </section>
+        <section>
+        <h2 className="mb-4 text-2xl font-bold text-white">
+          Analytics and Website Improvement
+        </h2>
+
+        <p className="leading-relaxed text-white/60">
+          RankVelt may use analytics and performance tools to understand website
+          usage, improve user experience, measure website performance, and identify
+          opportunities to improve our services.
+        </p>
+
+        <p className="mt-4 leading-relaxed text-white/60">
+          These tools may collect general information such as pages visited, device
+          type, browser information, and interaction data. This information helps
+          RankVelt improve website functionality and service quality.
+        </p>
+      </section>
+
+        
 
         <section>
           <h2 className="mb-4 text-2xl font-bold text-white">
@@ -215,13 +236,12 @@ const PrivacyPolicy = () => {
               Email RankVelt
             </a>
 
-            <button
-              type="button"
-              onClick={() => handleInternalLink("portfolio")}
-              className="border-none bg-transparent p-0 font-bold text-primary hover:underline"
+            <a
+            href="/strategy-call?package=Free%20SEO%20Opportunity%20Check"
+            className="font-bold text-primary hover:underline"
             >
-              View website work
-            </button>
+            Request Free SEO Opportunity Check
+            </a>
           </div>
         </section>
 

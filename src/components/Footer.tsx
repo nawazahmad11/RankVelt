@@ -217,14 +217,20 @@ const Footer = () => {
               className="flex items-center gap-3 text-left"
               aria-label="Go to RankVelt homepage"
             >
-              <span className="flex h-11 w-11 items-center justify-center rounded-full border border-[#f9a825]/35 bg-[#f9a825]/10 text-base font-black text-[#f9a825]">
+              {/* <span className="flex h-11 w-11 items-center justify-center rounded-full border border-[#f9a825]/35 bg-[#f9a825]/10 text-base font-black text-[#f9a825]">
                 R
-              </span>
+              </span> */}
+
+              <img
+                  src="/rankvelt-icon.webp"
+                  alt="RankVelt Logo"
+                  className="h-12 w-auto object-contain"
+                />
 
               <span>
                 <span className="block text-xl font-black tracking-tight text-white">
                   Rank
-                  <span className="text-[#f9a825]">
+                  <span className="text">
                     Velt
                   </span>
                 </span>
@@ -451,15 +457,16 @@ const Footer = () => {
               after the official RankVelt company page
               URL is available.
             */}
-            <button
-              type="button"
-              disabled
-              aria-label="RankVelt LinkedIn page coming soon"
-              title="RankVelt LinkedIn page coming soon"
-              className="flex h-10 w-10 cursor-not-allowed items-center justify-center rounded-xl border border-white/[0.06] bg-white/[0.035] text-white/20"
-            >
-              <Linkedin size={18} />
-            </button>
+            <a
+      href="https://www.linkedin.com/company/rank-velt"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Visit RankVelt on LinkedIn"
+      title="Visit RankVelt on LinkedIn"
+      className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.04] text-white/45 transition-colors hover:border-[#0A66C2]/50 hover:bg-[#0A66C2]/10 hover:text-[#0A66C2]"
+    >
+      <Linkedin size={18} aria-hidden="true" />
+    </a>
 
             <a
               href="https://wa.me/923244146447"

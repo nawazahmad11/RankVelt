@@ -151,11 +151,12 @@ const RefundPolicy = () => {
           </h2>
 
           <p className="relative z-10 leading-relaxed text-white/60">
-            SEO and website-growth services cannot guarantee rankings, traffic,
-            leads, revenue, or sales. Refund requests cannot be based solely on
-            a particular ranking, traffic, revenue, or timeline expectation
-            unless a specific written agreement explicitly says otherwise.
-          </p>
+          SEO and website-growth services cannot guarantee specific rankings,
+          traffic levels, leads, revenue, or sales outcomes. Search engine algorithms,
+          competitor activity, market conditions, website history, content quality,
+          user behaviour, and third-party platforms may influence results outside
+          RankVelt's control.
+          </p>    
 
           <div className="pointer-events-none absolute right-[-20px] top-[-20px] select-none text-8xl font-black text-primary/5">
             SEO
@@ -175,7 +176,7 @@ const RefundPolicy = () => {
           </p>
 
           <a
-            href="mailto:info@nawazbuilds.com"
+            href="mailto:info@rankvelt.com"
             className="mt-5 inline-flex font-bold text-primary hover:underline"
           >
             Contact RankVelt about a refund request

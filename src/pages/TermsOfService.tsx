@@ -146,6 +146,12 @@ const TermsOfService = () => {
             retains ownership of its pre-existing tools, methods, templates,
             systems, frameworks, know-how, reusable code, and brand assets.
           </p>
+          <p className="mt-4 leading-relaxed text-white/60">
+Client-owned assets, trademarks, content, and materials supplied by you
+remain your property. RankVelt retains ownership of internal processes,
+frameworks, templates, methodologies, reusable systems, and development
+approaches used to deliver services.
+</p>
 
           <p className="mt-4 leading-relaxed text-white/60">
             RankVelt may display completed work in a portfolio or case-study
@@ -216,12 +222,14 @@ const TermsOfService = () => {
           </p>
 
           <button
-            type="button"
-            onClick={() => handleInternalLink("portfolio")}
-            className="mt-5 border-none bg-transparent p-0 font-bold text-primary hover:underline"
-          >
-            View RankVelt website work
-          </button>
+ type="button"
+ onClick={() =>
+ navigate("/strategy-call?package=Free%20SEO%20Opportunity%20Check")
+ }
+ className="mt-5 border-none bg-transparent p-0 font-bold text-primary hover:underline"
+>
+Request Free SEO Opportunity Check
+</button>
         </section>
 
         <footer className="flex flex-col items-center gap-4 border-t border-white/5 pt-12 md:flex-row md:justify-between">
