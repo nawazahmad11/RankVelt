@@ -83,7 +83,7 @@ const RedirectMappingGenerator = lazy(
 /*
  * Case-study pages
  */
-const ProjectMeridianCaseStudy = lazy(
+const ProductDiscoveryCaseStudy = lazy(
   () => import("./pages/ProductDiscoveryCaseStudy"),
 );
 
@@ -297,8 +297,8 @@ const App = () => (
             />
 
             <Route
-              path="/case-studies/project-meridian"
-              element={<ProjectMeridianCaseStudy />}
+              path="/case-studies/product-discovery-at-scale"
+              element={<ProductDiscoveryCaseStudy />}
             />
 
             <Route
@@ -325,6 +325,7 @@ const App = () => (
               path="/case-studies/:projectId"
               element={<CaseStudyDetail />}
             />
+
 
             {/* Legal pages */}
             <Route

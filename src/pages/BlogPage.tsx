@@ -36,31 +36,56 @@ const BlogPage = () => {
 
   useEffect(() => {
     const previousTitle = document.title;
-    const previousDescription = document
-      .querySelector('meta[name="description"]')
-      ?.getAttribute("content");
-
-    document.title = "RankVelt Insights | SEO, eCommerce & Website Growth";
-
-    let descriptionElement = document.querySelector(
+  
+    const descriptionElementBefore = document.querySelector(
       'meta[name="description"]',
     ) as HTMLMetaElement | null;
-
+  
+    const previousDescription =
+      descriptionElementBefore?.getAttribute("content");
+  
+    document.title =
+      "RankVelt Insights | SEO, eCommerce & Website Growth";
+  
+    let descriptionElement = descriptionElementBefore;
+  
+    const descriptionWasCreated = !descriptionElement;
+  
     if (!descriptionElement) {
       descriptionElement = document.createElement("meta");
       descriptionElement.name = "description";
       document.head.appendChild(descriptionElement);
     }
-
+  
     descriptionElement.content =
       "Practical insights from RankVelt on SEO, eCommerce growth, Shopify performance, website structure, conversion-focused design, and search visibility.";
-
+  
+    let canonicalElement = document.querySelector(
+      'link[rel="canonical"]',
+    ) as HTMLLinkElement | null;
+  
+    const canonicalWasCreated = !canonicalElement;
+  
+    if (!canonicalElement) {
+      canonicalElement = document.createElement("link");
+      canonicalElement.rel = "canonical";
+      document.head.appendChild(canonicalElement);
+    }
+  
+    const previousCanonical =
+      canonicalElement.getAttribute("href");
+  
+    canonicalElement.href = `${SITE_URL}/blog`;
+  
     const schemaId = "rankvelt-blog-schema";
+  
     document.getElementById(schemaId)?.remove();
-
+  
     const schemaScript = document.createElement("script");
+  
     schemaScript.id = schemaId;
     schemaScript.type = "application/ld+json";
+  
     schemaScript.text = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "CollectionPage",
@@ -74,16 +99,32 @@ const BlogPage = () => {
         url: SITE_URL,
       },
     });
-
+  
     document.head.appendChild(schemaScript);
-
+  
     return () => {
       document.title = previousTitle;
-
-      if (descriptionElement && previousDescription) {
-        descriptionElement.content = previousDescription;
+  
+      if (descriptionElement) {
+        if (descriptionWasCreated) {
+          descriptionElement.remove();
+        } else if (previousDescription === null) {
+          descriptionElement.removeAttribute("content");
+        } else {
+          descriptionElement.content = previousDescription;
+        }
       }
-
+  
+      if (canonicalElement) {
+        if (canonicalWasCreated) {
+          canonicalElement.remove();
+        } else if (previousCanonical === null) {
+          canonicalElement.removeAttribute("href");
+        } else {
+          canonicalElement.href = previousCanonical;
+        }
+      }
+  
       schemaScript.remove();
     };
   }, []);
@@ -246,7 +287,7 @@ const BlogPage = () => {
                 </h2>
 
                 <p className="mt-5 leading-relaxed text-white/60">
-                  {getExcerpt(featuredPost.content)}
+                {featuredPost.excerpt || getExcerpt(featuredPost.content)}
                 </p>
 
                 <span className="mt-7 inline-flex items-center gap-2 text-sm font-black text-[#f9a825]">
@@ -351,7 +392,7 @@ const BlogPage = () => {
                       </h3>
 
                       <p className="mt-4 flex-1 text-sm leading-relaxed text-white/60">
-                        {getExcerpt(post.content)}
+                      {post.excerpt || getExcerpt(post.content)}
                       </p>
 
                       <span className="mt-7 inline-flex items-center gap-2 text-sm font-black text-[#f9a825]">

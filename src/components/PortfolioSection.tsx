@@ -14,7 +14,7 @@ const spotlightProjects = portfolioProjects
   .filter((project) => Boolean(project.thumbnail))
   .slice(0, 9);
 
-const latestSeoCaseStudies = seoCaseStudies.slice(-5).reverse();
+const latestSeoCaseStudies = seoCaseStudies.slice(-3).reverse();
 
 interface PortfolioSectionProps {
   onProjectSelect: (id: string) => void;

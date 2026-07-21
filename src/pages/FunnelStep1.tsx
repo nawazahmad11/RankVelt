@@ -2,36 +2,27 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import {
   ArrowRight,
-  BarChart3,
   Building2,
   CheckCircle,
-  Globe2,
   MapPinned,
-  Package,
-  Play,
   Rocket,
   Search,
   Shield,
-  ShieldCheck,
   ShoppingBag,
   Smartphone,
   Star,
   Target,
   TrendingDown,
   Wrench,
-  Zap,
 } from "lucide-react";
 
 import PortfolioSection from "@/components/PortfolioSection";
-import AboutSection from "@/components/AboutSection";
 import FAQSection from "@/components/FAQSection";
 import BlogSection from "@/components/BlogSection";
 import PricingSection from "@/components/PricingSection";
 import { AnimatedCounter } from "@/components/Tools/AnimatedCounter";
 import AuditSection from "@/components/AuditSection";
 import ProcessSection from "@/components/ProcessSection";
-// import LiteYouTubeEmbed from "react-lite-youtube-embed";
-// import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 
 import FloatingIcon from "@/components/FloatingIcon";
 
@@ -96,58 +87,6 @@ const serviceItems = [
     link: "/services/cro",
   },
 ];
-// const serviceItems = [
-//   {
-//     label: "Local SEO",
-//     desc: "Improve Google Maps visibility, local relevance, service-area pages, and qualified local enquiries.",
-//     link: "/local-seo",
-//   },
-//   {
-//     label: "eCommerce SEO",
-//     desc: "Grow organic product discovery through stronger Shopify collections, product pages, and technical SEO.",
-//     link: "/ecommerce-seo",
-//   },
-//   {
-//     label: "Business SEO",
-//     desc: "Build stronger service pages, organic lead-generation pathways, technical SEO, and content strategy.",
-//     link: "/business-seo",
-//   },
-//   {
-//     label: "Technical SEO Audit",
-//     desc: "Find indexation, internal linking, site structure, speed, and on-page SEO issues.",
-//     link: "#audit",
-//   },
-//   {
-//     label: "SEO-Ready WordPress Websites",
-//     desc: "Build clear service pages, conversion paths, and a strong foundation for future SEO growth.",
-//     link: "#audit",
-//   },
-//   {
-//     label: "Shopify Store Design & SEO",
-//     desc: "Improve Shopify navigation, product discovery, collection structure, and conversion journeys.",
-//     link: "/services/custom-liquid-development",
-//   },
-//   {
-//     label: "Mobile UX & Conversion Support",
-//     desc: "Create faster, clearer, mobile-first experiences that make important actions easier.",
-//     link: "/services/mobile-first-ux",
-//   },
-//   {
-//     label: "Website Systems & API Support",
-//     desc: "Support reliable integrations, tracking, and scalable site functionality.",
-//     link: "/services/app-api-sync",
-//   },
-//   {
-//     label: "Visual Storytelling & Landing Pages",
-//     desc: "Build high-trust landing pages that explain your offer and guide visitors toward action.",
-//     link: "/services/visual-storytelling",
-//   },
-//   {
-//     label: "Checkout & CRO Support",
-//     desc: "Reduce friction across key eCommerce conversion paths and purchase journeys.",
-//     link: "/services/checkout-flow",
-//   },
-// ];
 
 
 const reviewData = [
@@ -319,7 +258,7 @@ const FunnelStep1 = () => {
   const navigate = useNavigate();
 
   const [activeProjectId, setActiveProjectId] = useState<string | null>(null);
-  const [playVideo, setPlayVideo] = useState(false);
+
 
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({
@@ -342,12 +281,16 @@ const FunnelStep1 = () => {
     scrollToSection(link.replace("#", ""));
   };
 
-  const repeatedReviews = [...reviewData, ...reviewData];
+  const featuredReviews = reviewData.slice(0, 10);
 
+  const repeatedReviews = [
+    ...featuredReviews,
+    ...featuredReviews,
+  ];
+  
   const testimonialRows = [
-    repeatedReviews.slice(0, 13),
-    repeatedReviews.slice(13, 26),
-    repeatedReviews.slice(26, 39),
+    repeatedReviews.slice(0, 10),
+    repeatedReviews.slice(10, 20),
   ];
 
   return (
@@ -429,7 +372,6 @@ const FunnelStep1 = () => {
                 style={{
                   backgroundImage: "linear-gradient(135deg, #3b82f6 0%, #a855f7 25%, #ec4899 50%, #a855f7 75%, #3b82f6 100%)",
                   WebkitBackgroundClip: "text",
-                  // animation: "aurora 2s linear infinite" // Animation ko filhal comment kar diya hai
                 }}>
                 Expert
               </span>
@@ -442,7 +384,7 @@ const FunnelStep1 = () => {
                   style={{
                     backgroundImage: "linear-gradient(135deg, #3b82f6 0%, #a855f7 25%, #ec4899 50%, #a855f7 75%, #3b82f6 100%)",
                     WebkitBackgroundClip: "text",
-                    // animation: "aurora 6s linear infinite" // Animation ko filhal comment kar diya hai
+                    
                   }}>
                   Growth
                 </span>
@@ -573,7 +515,7 @@ const FunnelStep1 = () => {
         </div>
       </section>
 
-      <section className="relative z-20 py-20">
+      <section className="relative z-20 pb-10 pt-16">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -687,7 +629,10 @@ const FunnelStep1 = () => {
         </div>
       </section>
 
-      <section id="services" className="relative z-20 scroll-mt-28 py-10">
+      <section
+  id="services"
+  className="relative z-20 scroll-mt-28 pb-16 pt-6"
+>
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -764,10 +709,6 @@ const FunnelStep1 = () => {
         </div>
       </section>
 
-      {/* <div id="about-me" className="relative z-20 scroll-mt-28">
-        <AboutSection />
-      </div> */}
-
       <div id="portfolio" className="relative z-20 scroll-mt-28">
         <PortfolioSection
           onProjectSelect={(id) => setActiveProjectId(id)}
@@ -784,7 +725,7 @@ const FunnelStep1 = () => {
         )}
       </Suspense>
 
-      <section className="relative z-20 overflow-hidden py-12">
+      <section className="relative z-20 overflow-hidden py-10">
         <div className="section-container relative z-10 text-white">
           <motion.div
             className="mb-16 grid grid-cols-2 gap-11 border-y border-white/5 bg-white/[0.01] py-10 shadow-inner backdrop-blur-sm lg:grid-cols-4"
@@ -946,10 +887,6 @@ const FunnelStep1 = () => {
         </div>
       </section>
 
-      <div className="relative z-20">
-        <PricingSection />
-      </div>
-
       <div id="process" className="relative z-20 scroll-mt-28">
         <ProcessSection />
       </div>
@@ -998,12 +935,12 @@ const FunnelStep1 = () => {
             <motion.div variants={fadeInUp} custom={2}>
               <button
                 type="button"
-                onClick={() => handleCTA("SEO Growth Strategy Call")}
+                onClick={() => handleCTA("Free SEO Opportunity Check")}
                 className="gradient-cta inline-flex items-center gap-2 rounded-xl px-10 py-5 text-lg shadow-2xl shadow-primary/20 transition-transform duration-300 hover:scale-105"
                 aria-label="Request an SEO growth strategy call"
               >
                 <Rocket className="h-5 w-5" />
-                Request a Strategy Call
+                Get a Free SEO Audit
               </button>
             </motion.div>
 

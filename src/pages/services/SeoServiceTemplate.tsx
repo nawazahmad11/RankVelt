@@ -1,11 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {
   ArrowLeft,
   ArrowRight,
   CheckCircle2,
   ChevronDown,
-  FileSearch,
   Search,
   ShieldCheck,
   Sparkles,
@@ -32,50 +31,29 @@ export type SeoServicePageConfig = {
   eyebrow: string;
   h1: string;
   intro: string;
-  ctaPackage: string;
   focusAreas: string[];
+
   overviewTitle: string;
   overviewParagraphs: string[];
+
   deliverablesTitle: string;
   deliverables: string[];
+
   audienceTitle: string;
   audience: string[];
+
   processTitle: string;
   process: {
     step: string;
     title: string;
     description: string;
   }[];
+
+  outcomesTitle: string;
+  outcomes: string[];
+
   faqs: ServiceFaq[];
   relatedServices: RelatedService[];
-};
-
-const setMetaByName = (name: string, content: string) => {
-  let element = document.querySelector(
-    `meta[name="${name}"]`,
-  ) as HTMLMetaElement | null;
-
-  if (!element) {
-    element = document.createElement("meta");
-    element.name = name;
-    document.head.appendChild(element);
-  }
-
-  element.content = content;
-};
-
-const setCanonical = (canonicalUrl: string) => {
-  let canonical = document.querySelector(
-    'link[rel="canonical"]',
-  ) as HTMLLinkElement | null;
-
-  if (!canonical) {
-    canonical = document.createElement("link");
-    canonical.rel = "canonical";
-    document.head.appendChild(canonical);
-  }
-
-  canonical.href = canonicalUrl;
 };
 
 const SeoServiceTemplate = ({
@@ -85,17 +63,60 @@ const SeoServiceTemplate = ({
 }) => {
   const navigate = useNavigate();
 
+  const [openFaqIndex, setOpenFaqIndex] = useState<
+    number | null
+  >(0);
+
   useEffect(() => {
+    const previousTitle = document.title;
+
+    const existingDescription = document.querySelector(
+      'meta[name="description"]',
+    ) as HTMLMetaElement | null;
+
+    const existingCanonical = document.querySelector(
+      'link[rel="canonical"]',
+    ) as HTMLLinkElement | null;
+
+    const previousDescription =
+      existingDescription?.getAttribute("content");
+
+    const previousCanonical =
+      existingCanonical?.getAttribute("href");
+
     document.title = config.metaTitle;
 
-    setMetaByName("description", config.metaDescription);
-    setCanonical(`${SITE_URL}${config.slug}`);
+    let descriptionElement = existingDescription;
+    const descriptionCreated = !descriptionElement;
 
-    document.getElementById("rankvelt-service-schema")?.remove();
+    if (!descriptionElement) {
+      descriptionElement = document.createElement("meta");
+      descriptionElement.name = "description";
+      document.head.appendChild(descriptionElement);
+    }
+
+    descriptionElement.content = config.metaDescription;
+
+    let canonicalElement = existingCanonical;
+    const canonicalCreated = !canonicalElement;
+
+    if (!canonicalElement) {
+      canonicalElement = document.createElement("link");
+      canonicalElement.rel = "canonical";
+      document.head.appendChild(canonicalElement);
+    }
+
+    canonicalElement.href = `${SITE_URL}${config.slug}`;
+
+    const schemaId = "rankvelt-service-schema";
+
+    document.getElementById(schemaId)?.remove();
 
     const schemaScript = document.createElement("script");
-    schemaScript.id = "rankvelt-service-schema";
+
+    schemaScript.id = schemaId;
     schemaScript.type = "application/ld+json";
+
     schemaScript.text = JSON.stringify({
       "@context": "https://schema.org",
       "@graph": [
@@ -109,6 +130,7 @@ const SeoServiceTemplate = ({
             name: "RankVelt",
             url: SITE_URL,
           },
+          areaServed: "Worldwide",
         },
         {
           "@type": "FAQPage",
@@ -127,18 +149,40 @@ const SeoServiceTemplate = ({
     document.head.appendChild(schemaScript);
 
     return () => {
+      document.title = previousTitle;
+
+      if (descriptionElement) {
+        if (descriptionCreated) {
+          descriptionElement.remove();
+        } else if (previousDescription === null) {
+          descriptionElement.removeAttribute("content");
+        } else if (previousDescription !== undefined) {
+          descriptionElement.content = previousDescription;
+        }
+      }
+
+      if (canonicalElement) {
+        if (canonicalCreated) {
+          canonicalElement.remove();
+        } else if (previousCanonical === null) {
+          canonicalElement.removeAttribute("href");
+        } else if (previousCanonical !== undefined) {
+          canonicalElement.href = previousCanonical;
+        }
+      }
+
       schemaScript.remove();
     };
   }, [config]);
 
-  const requestStrategyCall = () => {
+  const openStrategyForm = () => {
     navigate(
-      `/strategy-call?package=${encodeURIComponent(config.ctaPackage)}`,
+      "/strategy-call?package=Free%20SEO%20Opportunity%20Check",
     );
   };
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#090611] pt-40 text-white sm:pt-44">
+    <main className="min-h-screen overflow-hidden bg-[#090611] pt-36 text-white sm:pt-40">
       <section className="relative overflow-hidden pb-16 sm:pb-20">
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute left-1/2 top-[-240px] h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-primary/12 blur-[150px]" />
@@ -159,7 +203,7 @@ const SeoServiceTemplate = ({
               {config.eyebrow}
             </span>
 
-            <h1 className="mt-6 text-4xl font-black leading-[0.98] tracking-[-0.045em] text-white sm:text-5xl md:text-6xl">
+            <h1 className="mt-6 text-4xl font-black leading-[0.98] tracking-[-0.045em] sm:text-5xl md:text-6xl">
               {config.h1}
             </h1>
 
@@ -170,19 +214,21 @@ const SeoServiceTemplate = ({
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
               <button
                 type="button"
-                onClick={requestStrategyCall}
+                onClick={openStrategyForm}
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-sm font-black text-black transition-transform hover:scale-[1.02]"
               >
-                Request a Strategy Call
+                Get a Free SEO Opportunity Check
                 <ArrowRight size={17} />
               </button>
 
               <button
                 type="button"
                 onClick={() =>
-                  document.getElementById("service-overview")?.scrollIntoView({
-                    behavior: "smooth",
-                  })
+                  document
+                    .getElementById("service-overview")
+                    ?.scrollIntoView({
+                      behavior: "smooth",
+                    })
                 }
                 className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/[0.03] px-6 py-3.5 text-sm font-bold text-white/75 transition-colors hover:border-primary/35 hover:text-primary"
               >
@@ -197,7 +243,10 @@ const SeoServiceTemplate = ({
                   key={item}
                   className="inline-flex items-center gap-2 text-xs font-semibold text-white/65"
                 >
-                  <CheckCircle2 size={15} className="text-primary" />
+                  <CheckCircle2
+                    size={15}
+                    className="text-primary"
+                  />
                   {item}
                 </span>
               ))}
@@ -210,145 +259,132 @@ const SeoServiceTemplate = ({
         id="service-overview"
         className="scroll-mt-32 border-y border-white/[0.06] bg-black/20 py-16 sm:py-20"
       >
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="grid gap-10 lg:grid-cols-[1fr_0.9fr] lg:items-start">
-            <div>
-              <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">
-                SEO Strategy With Clear Priorities
-              </p>
+        <div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-[1fr_0.9fr]">
+          <div>
+            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-primary">
+              Service Overview
+            </p>
 
-              <h2 className="mt-4 text-3xl font-black leading-tight text-white sm:text-4xl">
-                {config.overviewTitle}
-              </h2>
+            <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl">
+              {config.overviewTitle}
+            </h2>
 
-              <div className="mt-6 space-y-4 text-base leading-relaxed text-white/62">
-                {config.overviewParagraphs.map((paragraph) => (
+            <div className="mt-6 space-y-5 text-base leading-relaxed text-white/65">
+              {config.overviewParagraphs.map(
+                (paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
-                ))}
-              </div>
+                ),
+              )}
             </div>
+          </div>
 
-            <aside className="rounded-3xl border border-white/[0.08] bg-white/[0.025] p-6 sm:p-7">
-              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                <FileSearch size={21} />
-              </div>
+          <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-7">
+            <div className="flex items-center gap-3">
+              <Target className="text-primary" />
 
-              <h2 className="mt-5 text-2xl font-black text-white">
+              <h2 className="text-xl font-black">
                 {config.deliverablesTitle}
               </h2>
+            </div>
 
-              <ul className="mt-6 space-y-3.5">
-                {config.deliverables.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-3 text-sm leading-relaxed text-white/70"
-                  >
-                    <CheckCircle2
-                      size={17}
-                      className="mt-0.5 shrink-0 text-primary"
-                    />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </aside>
+            <ul className="mt-6 space-y-4">
+              {config.deliverables.map((item) => (
+                <li
+                  key={item}
+                  className="flex gap-3 text-sm leading-relaxed text-white/70"
+                >
+                  <CheckCircle2
+                    size={17}
+                    className="mt-0.5 shrink-0 text-primary"
+                  />
+
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
 
       <section className="py-16 sm:py-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="grid gap-5 lg:grid-cols-2">
-            <article className="rounded-3xl border border-white/[0.08] bg-white/[0.025] p-6 sm:p-8">
-              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                <Target size={21} />
-              </div>
+        <div className="mx-auto grid max-w-7xl gap-8 px-6 lg:grid-cols-2">
+          <div className="rounded-3xl border border-white/10 bg-white/[0.025] p-7">
+            <Search className="text-primary" />
 
-              <h2 className="mt-5 text-3xl font-black text-white">
-                {config.audienceTitle}
-              </h2>
+            <h2 className="mt-5 text-2xl font-black">
+              {config.audienceTitle}
+            </h2>
 
-              <ul className="mt-6 space-y-3.5">
-                {config.audience.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-3 text-sm leading-relaxed text-white/65"
-                  >
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </article>
+            <ul className="mt-6 space-y-4">
+              {config.audience.map((item) => (
+                <li
+                  key={item}
+                  className="flex gap-3 text-sm leading-relaxed text-white/70"
+                >
+                  <CheckCircle2
+                    size={17}
+                    className="mt-0.5 shrink-0 text-primary"
+                  />
 
-            <article className="rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/[0.09] via-white/[0.02] to-purple-500/[0.08] p-6 sm:p-8">
-              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/[0.08] text-primary">
-                <ShieldCheck size={21} />
-              </div>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
 
-              <h2 className="mt-5 text-3xl font-black text-white">
-                Practical, Ethical SEO Work
-              </h2>
+          <div className="rounded-3xl border border-white/10 bg-white/[0.025] p-7">
+            <ShieldCheck className="text-primary" />
 
-              <p className="mt-5 text-sm leading-relaxed text-white/65 sm:text-base">
-                RankVelt does not sell guaranteed rankings or shortcut tactics.
-                The focus is on useful pages, clean structure, technical
-                improvements, search intent, user experience, and sustainable
-                visibility.
-              </p>
+            <h2 className="mt-5 text-2xl font-black">
+              {config.outcomesTitle}
+            </h2>
 
-              <p className="mt-4 text-sm leading-relaxed text-white/65 sm:text-base">
-                The work is prioritised around your market, current website,
-                competition, business model, and the actions visitors need to
-                take after finding you.
-              </p>
+            <ul className="mt-6 space-y-4">
+              {config.outcomes.map((item) => (
+                <li
+                  key={item}
+                  className="flex gap-3 text-sm leading-relaxed text-white/70"
+                >
+                  <CheckCircle2
+                    size={17}
+                    className="mt-0.5 shrink-0 text-primary"
+                  />
 
-              <button
-                type="button"
-                onClick={requestStrategyCall}
-                className="mt-7 inline-flex items-center gap-2 text-sm font-black text-primary transition-transform hover:translate-x-1"
-              >
-                Discuss Your SEO Priorities
-                <ArrowRight size={16} />
-              </button>
-            </article>
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
 
       <section className="border-y border-white/[0.06] bg-black/20 py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="max-w-3xl">
-            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">
-              How the Service Works
-            </p>
+          <div className="mx-auto max-w-3xl text-center">
+            <Sparkles className="mx-auto text-primary" />
 
-            <h2 className="mt-4 text-3xl font-black text-white sm:text-4xl">
+            <h2 className="mt-5 text-3xl font-black sm:text-4xl">
               {config.processTitle}
             </h2>
           </div>
 
-          <div className="relative mt-10 border-l border-primary/25 pl-7 sm:pl-9">
-            {config.process.map((item, index) => (
+          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+            {config.process.map((item) => (
               <article
                 key={item.step}
-                className={`relative ${
-                  index !== config.process.length - 1 ? "pb-10" : ""
-                }`}
+                className="rounded-2xl border border-white/10 bg-white/[0.025] p-6"
               >
-                <span className="absolute -left-[39px] top-0 flex h-6 w-6 items-center justify-center rounded-full border border-primary/40 bg-[#090611] text-[9px] font-black text-primary sm:-left-[47px]">
+                <span className="text-xs font-black text-primary">
                   {item.step}
                 </span>
 
-                <div className="grid gap-2 sm:grid-cols-[150px_1fr] sm:gap-7">
-                  <h3 className="text-xl font-black text-white">
-                    {item.title}
-                  </h3>
+                <h3 className="mt-4 text-xl font-black">
+                  {item.title}
+                </h3>
 
-                  <p className="max-w-2xl text-sm leading-relaxed text-white/60 sm:text-base">
-                    {item.description}
-                  </p>
-                </div>
+                <p className="mt-3 text-sm leading-relaxed text-white/60">
+                  {item.description}
+                </p>
               </article>
             ))}
           </div>
@@ -357,122 +393,92 @@ const SeoServiceTemplate = ({
 
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-4xl px-6">
-          <div className="text-center">
-            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">
-              Service FAQs
-            </p>
-
-            <h2 className="mt-4 text-3xl font-black text-white sm:text-4xl">
-              Questions About {config.eyebrow}
-            </h2>
-          </div>
-
-          <div className="mt-10 space-y-3">
-            {config.faqs.map((faq) => (
-              <details
-                key={faq.question}
-                className="group rounded-2xl border border-white/[0.08] bg-white/[0.025] p-5 open:border-primary/35"
-              >
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-5 text-left text-base font-black text-white sm:text-lg">
-                  {faq.question}
-                  <ChevronDown
-                    size={19}
-                    className="shrink-0 text-primary transition-transform group-open:rotate-180"
-                  />
-                </summary>
-
-                <p className="mt-4 max-w-3xl text-sm leading-relaxed text-white/60 sm:text-base">
-                  {faq.answer}
-                </p>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="border-t border-white/[0.06] bg-black/20 py-16 sm:py-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="rounded-[2rem] border border-white/[0.08] bg-white/[0.025] p-6 sm:p-8">
-            <div className="flex flex-col justify-between gap-7 md:flex-row md:items-end">
-              <div className="max-w-2xl">
-                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                  <Sparkles size={20} />
-                </div>
-
-                <h2 className="mt-5 text-3xl font-black text-white">
-                  Explore Related RankVelt Services
-                </h2>
-
-                <p className="mt-3 leading-relaxed text-white/60">
-                  Your best next step depends on your website, market, and
-                  growth goals. Explore a related service or request a focused
-                  review.
-                </p>
-              </div>
-
-              <button
-                type="button"
-                onClick={requestStrategyCall}
-                className="inline-flex w-fit items-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-sm font-black text-black transition-transform hover:scale-[1.02]"
-              >
-                Get a Free SEO Audit
-                <ArrowRight size={16} />
-              </button>
-            </div>
-
-            <div className="mt-8 grid gap-3 md:grid-cols-2">
-              {config.relatedServices.map((service) => (
-                <Link
-                  key={service.path}
-                  to={service.path}
-                  className="group rounded-2xl border border-white/[0.08] bg-black/20 p-5 transition-all hover:border-primary/35 hover:bg-primary/[0.04]"
-                >
-                  <h3 className="text-xl font-black text-white transition-colors group-hover:text-primary">
-                    {service.title}
-                  </h3>
-
-                  <p className="mt-3 text-sm leading-relaxed text-white/55">
-                    {service.description}
-                  </p>
-
-                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-black text-primary">
-                    Explore service
-                    <ArrowRight
-                      size={15}
-                      className="transition-transform group-hover:translate-x-1"
-                    />
-                  </span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="relative overflow-hidden py-16 sm:py-20">
-        <div className="pointer-events-none absolute left-1/2 top-1/2 h-[360px] w-[360px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/[0.08] blur-[130px]" />
-
-        <div className="relative mx-auto max-w-3xl px-6 text-center">
-          <Search className="mx-auto text-primary" size={25} />
-
-          <h2 className="mt-5 text-3xl font-black text-white sm:text-4xl">
-            Ready to Discuss Your Search Growth?
+          <h2 className="text-center text-3xl font-black sm:text-4xl">
+            Frequently Asked Questions
           </h2>
 
-          <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-white/60 sm:text-base">
-            Share your website and goals. RankVelt will help you identify the
-            right service, priority opportunities, and a practical route
-            forward.
-          </p>
+          <div className="mt-10 space-y-3">
+            {config.faqs.map((faq, index) => {
+              const isOpen = openFaqIndex === index;
 
-          <button
-            type="button"
-            onClick={requestStrategyCall}
-            className="mt-7 inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-sm font-black text-black transition-transform hover:scale-[1.02]"
-          >
-            Request My SEO Opportunity Check
-            <ArrowRight size={16} />
-          </button>
+              return (
+                <article
+                  key={faq.question}
+                  className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.025]"
+                >
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setOpenFaqIndex(
+                        isOpen ? null : index,
+                      )
+                    }
+                    className="flex w-full items-center justify-between gap-4 px-5 py-5 text-left"
+                    aria-expanded={isOpen}
+                  >
+                    <span className="font-bold">
+                      {faq.question}
+                    </span>
+
+                    <ChevronDown
+                      size={18}
+                      className={`shrink-0 text-primary transition-transform ${
+                        isOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+
+                  {isOpen && (
+                    <p className="border-t border-white/10 px-5 py-5 text-sm leading-relaxed text-white/65">
+                      {faq.answer}
+                    </p>
+                  )}
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-white/[0.06] bg-black/25 py-16">
+        <div className="mx-auto max-w-7xl px-6">
+          <h2 className="text-center text-3xl font-black">
+            Related RankVelt Services
+          </h2>
+
+          <div className="mt-8 grid gap-5 md:grid-cols-3">
+            {config.relatedServices.map((service) => (
+              <Link
+                key={service.path}
+                to={service.path}
+                className="rounded-2xl border border-white/10 bg-white/[0.025] p-6 transition-colors hover:border-primary/40"
+              >
+                <h3 className="text-xl font-black">
+                  {service.title}
+                </h3>
+
+                <p className="mt-3 text-sm leading-relaxed text-white/60">
+                  {service.description}
+                </p>
+
+                <span className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-primary">
+                  Explore Service
+                  <ArrowRight size={15} />
+                </span>
+              </Link>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <button
+              type="button"
+              onClick={openStrategyForm}
+              className="inline-flex items-center gap-2 rounded-xl bg-primary px-7 py-4 text-sm font-black text-black"
+            >
+              Get a Free SEO Opportunity Check
+              <ArrowRight size={17} />
+            </button>
+          </div>
         </div>
       </section>
     </main>
