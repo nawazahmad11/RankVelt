@@ -297,7 +297,8 @@ const FunnelStep1 = () => {
     <div className="relative min-h-screen overflow-hidden bg-background pt-16">
       <div className="vignette-overlay" />
 
-      <div className="pointer-events-none absolute inset-0 z-10 hidden md:block overflow-hidden">
+      {/* <div className="pointer-events-none absolute inset-0 z-10 hidden md:block overflow-hidden"> */}
+      <div className="pointer-events-none absolute inset-0 z-10 hidden md:block">
         <FloatingIcon
           iconUrl="/nawaz-builds-icon-google.webp"
           altText="Google Search"
