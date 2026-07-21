@@ -314,8 +314,8 @@ const Header = () => {
           className="flex shrink-0 items-center gap-3 text-left"
           aria-label="Go to RankVelt homepage"
         >
-   <img
-  src="/rankvelt-icon.webp"
+<img
+  src="/rankvelt-icon-64.webp"
   alt="RankVelt SEO and Web Growth Studio"
   width="42"
   height="42"

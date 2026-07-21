@@ -221,11 +221,14 @@ const Footer = () => {
                 R
               </span> */}
 
-              <img
-                  src="/rankvelt-icon.webp"
-                  alt="RankVelt Logo"
-                  className="h-12 w-auto object-contain"
-                />
+<img
+  src="/rankvelt-icon.webp"
+  alt="RankVelt SEO and Web Growth Studio"
+  width="42"
+  height="42"
+  loading="eager"
+  decoding="async"
+/>
 
               <span>
                 <span className="block text-xl font-black tracking-tight text-white">
