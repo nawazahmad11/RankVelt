@@ -222,7 +222,7 @@ const Footer = () => {
               </span> */}
 
 <img
-  src="/rankvelt-icon.webp"
+  src="/rankvelt-icon-64.webp"
   alt="RankVelt SEO and Web Growth Studio"
   width="42"
   height="42"
