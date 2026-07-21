@@ -297,7 +297,7 @@ const FunnelStep1 = () => {
     <div className="relative min-h-screen overflow-hidden bg-background pt-16">
       <div className="vignette-overlay" />
 
-      <div className="pointer-events-none absolute inset-0 z-10 h-full overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 z-10 hidden md:block overflow-hidden">
         <FloatingIcon
           iconUrl="/nawaz-builds-icon-google.webp"
           altText="Google Search"
@@ -329,8 +329,8 @@ const FunnelStep1 = () => {
 
       <section className="relative z-20 overflow-hidden py-24 lg:py-28">
         <div className="absolute inset-0 -z-10 overflow-hidden">
-          <div className="pointer-events-none absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 opacity-50 blur-[120px]" />
-          <div className="pointer-events-none absolute right-[-5%] top-[-10%] h-[300px] w-[300px] rounded-full bg-gold/5 blur-[100px]" />
+        <div className="pointer-events-none absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 opacity-50 blur-[80px]" />
+        <div className="pointer-events-none absolute right-[-5%] top-[-10%] h-[300px] w-[300px] rounded-full bg-gold/5 blur-[60px]" />
         </div>
 
         <div className="section-container relative z-10">
@@ -392,7 +392,6 @@ const FunnelStep1 = () => {
               <span className="text-white font-medium">Partner</span>
             </span>
           </h1>
-
 
           <p className="mx-auto mb-8 mt-5 max-w-2xl text-center text-lg font-normal leading-relaxed text-white/60 md:text-xl">
             RankVelt helps businesses improve Google visibility, attract more
@@ -970,15 +969,23 @@ const FunnelStep1 = () => {
       </div>
 
       <style>{`
-        .shimmer-text-effect {
-          background: linear-gradient(90deg, #666 0%, #fff 50%, #666 100%);
-          background-size: 200% auto;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          animation: shine 3s linear infinite;
-        }
-        @keyframes shine {
-          to {
+      .shimmer-text-effect {
+  background: linear-gradient(90deg, #666 0%, #fff 50%, #666 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+@media (min-width: 768px) {
+  .shimmer-text-effect {
+    animation: shine 3s linear infinite;
+  }
+}
+        @keyframes shine 
+        {
+          to 
+          {
             background-position: 200% center;
           }
         }
