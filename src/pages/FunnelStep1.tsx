@@ -24,7 +24,7 @@ import { AnimatedCounter } from "@/components/Tools/AnimatedCounter";
 import AuditSection from "@/components/AuditSection";
 import ProcessSection from "@/components/ProcessSection";
 
-import FloatingIcon from "@/components/FloatingIcon";
+// import FloatingIcon from "@/components/FloatingIcon";
 
 import { lazy, Suspense, useState } from "react";
 
@@ -295,10 +295,10 @@ const FunnelStep1 = () => {
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-background pt-16">
-      <div className="vignette-overlay" />
+      <div className="pointer-events-none absolute inset-0 bg-black/20" />
 
       {/* <div className="pointer-events-none absolute inset-0 z-10 hidden md:block overflow-hidden"> */}
-      <div className="pointer-events-none absolute inset-0 z-10 hidden md:block">
+      {/* <div className="pointer-events-none absolute inset-0 z-10 hidden md:block">
         <FloatingIcon
           iconUrl="/nawaz-builds-icon-google.webp"
           altText="Google Search"
@@ -326,14 +326,25 @@ const FunnelStep1 = () => {
           positionClass="bottom-[20%] right-[4%] md:bottom-[28%] md:right-[12%]"
           delay="3.8s"
         />
-      </div>
+      </div> */}
 
       <section className="relative z-20 overflow-hidden py-24 lg:py-28">
         <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="pointer-events-none absolute left-1/2 top-1/2 h-[300px] w-[300px] -translate-x-1/2 
-            -translate-y-1/2 rounded-full bg-primary/10 opacity-50 blur-[40px] md:h-[400px] md:w-[400px]
-            md:blur-[80px]" 
-            />
+        <div className="
+          pointer-events-none
+          absolute
+          left-1/2
+          top-1/2
+          hidden
+          h-[400px]
+          w-[400px]
+          -translate-x-1/2
+          -translate-y-1/2
+          rounded-full
+          bg-primary/10
+          blur-[80px]
+          md:block
+          "/>
         <div className="pointer-events-none absolute right-[-5%] top-[-10%] h-[300px] w-[300px] rounded-full bg-gold/5 blur-[60px]" />
         </div>
 
