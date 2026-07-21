@@ -330,7 +330,10 @@ const FunnelStep1 = () => {
 
       <section className="relative z-20 overflow-hidden py-24 lg:py-28">
         <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="pointer-events-none absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 opacity-50 blur-[80px]" />
+        <div className="pointer-events-none absolute left-1/2 top-1/2 h-[300px] w-[300px] -translate-x-1/2 
+            -translate-y-1/2 rounded-full bg-primary/10 opacity-50 blur-[40px] md:h-[400px] md:w-[400px]
+            md:blur-[80px]" 
+            />
         <div className="pointer-events-none absolute right-[-5%] top-[-10%] h-[300px] w-[300px] rounded-full bg-gold/5 blur-[60px]" />
         </div>
 
@@ -803,12 +806,21 @@ const FunnelStep1 = () => {
             100% { transform: translateX(0); }
           }
 
+          .animate-left,
+          .animate-right {
+          animation:none;
+          }
+
+          @media(min-width:768px){
+
           .animate-left {
-            animation: marquee-left 90s linear infinite;
+          animation: marquee-left 90s linear infinite;
           }
 
           .animate-right {
-            animation: marquee-right 90s linear infinite;
+          animation: marquee-right 90s linear infinite;
+          }
+
           }
 
           .marquee-wrapper:hover .animate-left,
@@ -834,10 +846,14 @@ const FunnelStep1 = () => {
                   >
                     <div className="mb-3 flex items-center justify-between">
                       <div className="flex items-center gap-2">
-                        <img
-                          src={testimonial.logo}
-                          alt={testimonial.platform}
-                          className="h-4 w-4 opacity-70"
+                      <img
+                        src={testimonial.logo}
+                        alt={testimonial.platform}
+                        width="16"
+                        height="16"
+                        loading="lazy"
+                        decoding="async"
+                        className="h-4 w-4 opacity-70"
                         />
 
                         <span className="text-[9.5px] font-bold uppercase tracking-widest text-white/60">
