@@ -308,17 +308,20 @@ const Header = () => {
           </span>
         </button> */}
 
-<button
-  type="button"
-  onClick={goHome}
-  className="flex shrink-0 items-center gap-3 text-left"
-  aria-label="Go to RankVelt homepage"
->
-  <img
-    src="/rankvelt-icon.webp"
-    alt="RankVelt Logo"
-    className="h-12 w-auto object-contain"
-  />
+        <button
+          type="button"
+          onClick={goHome}
+          className="flex shrink-0 items-center gap-3 text-left"
+          aria-label="Go to RankVelt homepage"
+        >
+   <img
+  src="/rankvelt-icon.webp"
+  alt="RankVelt SEO and Web Growth Studio"
+  width="42"
+  height="42"
+  loading="eager"
+  decoding="async"
+/>
 
   <span className="flex flex-col">
     <span className="text-xl font-black tracking-tight text-white italic">
