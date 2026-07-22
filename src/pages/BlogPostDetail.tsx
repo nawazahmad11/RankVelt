@@ -801,7 +801,7 @@ const BlogPostDetail = () => {
                         {relatedPost.title}
                       </h3>
 
-                      <p className="mt-4 text-xs leading-relaxed text-white/55">
+                      <p className="mt-4 text-xs leading-relaxed text-white/75">
                         {relatedPost.date} ·{" "}
                         {relatedPost.readTime}
                       </p>

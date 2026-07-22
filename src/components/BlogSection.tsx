@@ -39,7 +39,7 @@ const BlogSection = () => {
               <span className="text-gradient-gold">Website Growth</span>
             </h2>
 
-            <p className="max-w-2xl text-lg font-light leading-relaxed text-white/60">
+            <p className="max-w-2xl text-lg font-light leading-relaxed text-white/70">
               Practical articles on search visibility, Shopify performance,
               conversion-focused design, website structure, and stronger growth
               foundations.
@@ -89,7 +89,7 @@ const BlogSection = () => {
                   </span>
                 </div>
 
-                <div className="flex items-center gap-3 text-[10px] font-black uppercase tracking-wider text-white/40">
+                <div className="flex items-center gap-3 text-[10px] font-black uppercase tracking-wider text-white/70">
                   <span className="inline-flex items-center gap-1.5">
                     <Calendar size={12} />
                     {blog.date}
@@ -105,7 +105,7 @@ const BlogSection = () => {
                   {blog.title}
                 </h3>
 
-                <p className="mb-6 mt-4 flex-1 text-sm font-light leading-relaxed text-white/60">
+                <p className="mb-6 mt-4 flex-1 text-sm font-light leading-relaxed text-white/70">
                   {getExcerpt(blog.content)}
                 </p>
 

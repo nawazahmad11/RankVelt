@@ -200,13 +200,13 @@ const BlogPage = () => {
           <div className="rounded-[2rem] border border-white/[0.08] bg-white/[0.025] p-5 backdrop-blur-xl sm:p-7">
             <label
               htmlFor="article-search"
-              className="mb-3 block text-[11px] font-black uppercase tracking-[0.2em] text-white/60"
+              className="mb-3 block text-[11px] font-black uppercase tracking-[0.2em] text-white/75"
             >
               Search RankVelt Insights
             </label>
 
             <div className="relative">
-              <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-white/60" />
+              <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-white/70" />
 
               <input
                 id="article-search"
@@ -440,7 +440,7 @@ const BlogPage = () => {
                 {service.title}
               </h2>
 
-              <p className="mt-3 text-sm leading-relaxed text-white/55">
+              <p className="mt-3 text-sm leading-relaxed text-white/75">
                 {service.description}
               </p>
 
