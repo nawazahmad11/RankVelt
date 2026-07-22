@@ -328,7 +328,7 @@ const Header = () => {
       Rank<span className="text">Velt</span>
     </span>
 
-    <span className="hidden text-[8px] font-black uppercase tracking-[0.18em] text-white/35 sm:block">
+    <span className="hidden text-[9px] font-black uppercase tracking-[0.18em] text-white/60 sm:block">
       SEO & Web Growth Studio
     </span>
   </span>

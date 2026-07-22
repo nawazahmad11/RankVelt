@@ -238,7 +238,7 @@ const Footer = () => {
                   </span>
                 </span>
 
-                <span className="mt-1 block text-[9px] font-black uppercase tracking-[0.18em] text-white/35">
+                <span className="mt-1 block text-[9px] font-black uppercase tracking-[0.18em] text-white/60">
                   SEO & Web Growth Studio
                 </span>
               </span>
