@@ -295,7 +295,7 @@ const FunnelStep1 = () => {
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-background pt-16">
-      <div className="pointer-events-none absolute inset-0 bg-black/20" />
+      <div className="pointer-events-none absolute inset-0 bg-black/60" />
 
       {/* <div className="pointer-events-none absolute inset-0 z-10 hidden md:block overflow-hidden"> */}
       {/* <div className="pointer-events-none absolute inset-0 z-10 hidden md:block">

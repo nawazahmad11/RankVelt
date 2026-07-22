@@ -177,7 +177,7 @@ const BlogPage = () => {
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5">
               <Sparkles size={12} className="text-[#f9a825]" />
 
-              <span className="text-[10px] font-black uppercase tracking-widest text-white/55">
+              <span className="text-[10px] font-black uppercase tracking-widest text-white/75">
                 RankVelt Insights
               </span>
             </div>
@@ -190,7 +190,7 @@ const BlogPage = () => {
               </span>
             </h1>
 
-            <p className="mt-7 max-w-xl text-lg leading-relaxed text-white/60">
+            <p className="mt-7 max-w-xl text-lg leading-relaxed text-white/75">
               Practical insights for local businesses, eCommerce brands, and
               growing companies that want clearer website strategy, stronger
               search visibility, and better conversion pathways.
@@ -200,27 +200,27 @@ const BlogPage = () => {
           <div className="rounded-[2rem] border border-white/[0.08] bg-white/[0.025] p-5 backdrop-blur-xl sm:p-7">
             <label
               htmlFor="article-search"
-              className="mb-3 block text-[11px] font-black uppercase tracking-[0.2em] text-white/45"
+              className="mb-3 block text-[11px] font-black uppercase tracking-[0.2em] text-white/60"
             >
               Search RankVelt Insights
             </label>
 
             <div className="relative">
-              <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-white/35" />
+              <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-white/60" />
 
               <input
                 id="article-search"
                 value={searchQuery}
                 onChange={(event) => setSearchQuery(event.target.value)}
                 placeholder="Try Shopify SEO, conversion rate, website redesign..."
-                className="w-full rounded-2xl border border-white/10 bg-black/25 py-4 pl-12 pr-12 text-sm text-white outline-none transition-all placeholder:text-white/25 focus:border-[#f9a825]/50"
+                className="w-full rounded-2xl border border-white/10 bg-black/25 py-4 pl-12 pr-12 text-sm text-white outline-none transition-all placeholder:text-white/45 focus:border-[#f9a825]/50"
               />
 
               {searchQuery && (
                 <button
                   type="button"
                   onClick={() => setSearchQuery("")}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-white/35 transition-colors hover:text-[#f9a825]"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-white/45 transition-colors hover:text-[#f9a825]"
                   aria-label="Clear article search"
                 >
                   <X size={18} />
@@ -274,7 +274,7 @@ const BlogPage = () => {
               </div>
 
               <div className="flex flex-col justify-center p-7 sm:p-10">
-                <div className="flex flex-wrap items-center gap-4 text-[10px] font-black uppercase tracking-[0.18em] text-white/40">
+                <div className="flex flex-wrap items-center gap-4 text-[10px] font-black uppercase tracking-[0.18em] text-white/70">
                   <span>{featuredPost.category}</span>
                   <span className="h-1 w-1 rounded-full bg-[#f9a825]" />
                   <span>{featuredPost.date}</span>
@@ -286,7 +286,7 @@ const BlogPage = () => {
                   {featuredPost.title}
                 </h2>
 
-                <p className="mt-5 leading-relaxed text-white/60">
+                <p className="mt-5 leading-relaxed text-white/75">
                 {featuredPost.excerpt || getExcerpt(featuredPost.content)}
                 </p>
 
@@ -339,7 +339,7 @@ const BlogPage = () => {
                 </h2>
               </div>
 
-              <p className="text-sm text-white/45">
+              <p className="text-sm text-white/55">
                 {filteredPosts.length} article
                 {filteredPosts.length !== 1 ? "s" : ""} available
               </p>
@@ -375,7 +375,7 @@ const BlogPage = () => {
                     </div>
 
                     <div className="flex flex-1 flex-col p-6">
-                      <div className="flex items-center gap-3 text-[10px] font-black uppercase tracking-wider text-white/40">
+                    <div className="flex items-center gap-3 text-[10px] font-black uppercase tracking-wider text-white/70">
                         <span className="inline-flex items-center gap-1.5">
                           <Calendar size={12} />
                           {post.date}
@@ -391,7 +391,7 @@ const BlogPage = () => {
                         {post.title}
                       </h3>
 
-                      <p className="mt-4 flex-1 text-sm leading-relaxed text-white/60">
+                      <p className="mt-4 flex-1 text-sm leading-relaxed text-white/75">
                       {post.excerpt || getExcerpt(post.content)}
                       </p>
 
