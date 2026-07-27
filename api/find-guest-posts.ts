@@ -33,6 +33,51 @@ const KEYWORDS = [
     message?: string;
   };
   
+  // Helper function: Direct fetch with AllOrigins Proxy fallback for Cloudflare/403 blocks
+  async function fetchPageHtml(targetUrl: string, headers: Record<string, string>): Promise<{ html: string | null; isBlocked: boolean }> {
+    // 1. Direct Fetch
+    try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 6000);
+  
+      const response = await fetch(targetUrl, {
+        signal: controller.signal,
+        headers,
+      });
+      clearTimeout(timeoutId);
+  
+      if (response.ok) {
+        const html = await response.text();
+        return { html, isBlocked: false };
+      }
+  
+      if (response.status === 403 || response.status === 401) {
+        // Direct request blocked, proceed to proxy
+      }
+    } catch {
+      // Timeout or network error, proceed to proxy fallback
+    }
+  
+    // 2. Proxy Fallback (Bypasses Cloudflare / 403 blocks)
+    try {
+      const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`;
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 7000);
+  
+      const proxyRes = await fetch(proxyUrl, { signal: controller.signal });
+      clearTimeout(timeoutId);
+  
+      if (proxyRes.ok) {
+        const html = await proxyRes.text();
+        return { html, isBlocked: false };
+      }
+    } catch {
+      // Proxy also failed
+    }
+  
+    return { html: null, isBlocked: true };
+  }
+  
   export default async function handler(req: any, res: any) {
     if (req.method !== "POST") {
       return res.status(405).json({ error: "Method not allowed" });
@@ -58,29 +103,8 @@ const KEYWORDS = [
     };
   
     try {
-      let html = "";
-      let isBlocked = false;
-  
-      // 1. Fetch Homepage
-      try {
-        const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 8000);
-  
-        const response = await fetch(baseUrl, {
-          signal: controller.signal,
-          headers,
-        });
-        clearTimeout(timeoutId);
-  
-        if (response.ok) {
-          html = await response.text();
-        } else if (response.status === 403 || response.status === 401) {
-          isBlocked = true;
-        }
-      } catch {
-        // Fallback to path prediction if homepage fetch hits error/timeout
-      }
-  
+      // 1. Fetch Homepage HTML
+      const { html, isBlocked } = await fetchPageHtml(baseUrl, headers);
       let matchedPageUrl: string | null = null;
   
       // Method A: Check Links in Homepage HTML
@@ -117,27 +141,15 @@ const KEYWORDS = [
         }
       }
   
-      // Method B: Fallback Path Probing (If link not found in HTML or JS rendered)
+      // Method B: Fallback Path Probing (If link not found in HTML, JS rendered, or 403 blocked)
       if (!matchedPageUrl) {
         for (const path of COMMON_PATHS) {
-          try {
-            const testUrl = new URL(path, baseUrl).href;
-            const probeController = new AbortController();
-            const probeTimeout = setTimeout(() => probeController.abort(), 4000);
+          const testUrl = new URL(path, baseUrl).href;
+          const pathData = await fetchPageHtml(testUrl, headers);
   
-            const probeRes = await fetch(testUrl, {
-              method: "HEAD",
-              signal: probeController.signal,
-              headers,
-            });
-            clearTimeout(probeTimeout);
-  
-            if (probeRes.ok) {
-              matchedPageUrl = testUrl;
-              break;
-            }
-          } catch {
-            // Probe next path
+          if (pathData.html && pathData.html.length > 500) {
+            matchedPageUrl = testUrl;
+            break;
           }
         }
       }
@@ -152,23 +164,10 @@ const KEYWORDS = [
   
       // 2. Fetch matched Guest Post page to extract page text & emails
       if (matchedPageUrl) {
-        try {
-          const pageController = new AbortController();
-          const pageTimeout = setTimeout(() => pageController.abort(), 6000);
-  
-          const pageRes = await fetch(matchedPageUrl, {
-            signal: pageController.signal,
-            headers,
-          });
-          clearTimeout(pageTimeout);
-  
-          if (pageRes.ok) {
-            const pageHtml = await pageRes.text();
-            const pageEmails = pageHtml.match(EMAIL_REGEX) || [];
-            foundEmails.push(...pageEmails);
-          }
-        } catch {
-          // Keep matched URL
+        const pageData = await fetchPageHtml(matchedPageUrl, headers);
+        if (pageData.html) {
+          const pageEmails = pageData.html.match(EMAIL_REGEX) || [];
+          foundEmails.push(...pageEmails);
         }
       }
   
@@ -196,10 +195,10 @@ const KEYWORDS = [
         emails: cleanedEmails,
         status: matchedPageUrl
           ? "found"
-          : isBlocked
+          : isBlocked && !matchedPageUrl
           ? "error"
           : "not_found",
-        message: isBlocked ? "HTTP 403 (Protected)" : undefined,
+        message: isBlocked && !matchedPageUrl ? "HTTP 403 (Protected)" : undefined,
       };
   
       return res.status(200).json({ result });
