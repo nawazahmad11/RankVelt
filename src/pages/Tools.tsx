@@ -31,9 +31,11 @@ import PolicyGenerator from "../components/Tools/PolicyGenerator";
 
 import toolContentJson from "../data/tool-content.json";
 
+import GuestPostFinder from "../components/Tools/GuestPostFinder";
+
 const SITE_URL = "https://rankvelt.com";
 
-type ToolType = "calculator" | "policy" | "detector" | "generator";
+type ToolType = "calculator" | "policy" | "detector" | "generator"| "guest-post";
 
 type ToolFaq = {
   q: string;
@@ -90,6 +92,11 @@ const toolMapping: Record<string, ToolType> = {
   "business-name-generator": "generator",
   "name-generator": "generator",
   generator: "generator",
+
+
+  "guest-post-finder": "guest-post",
+  "guest-post": "guest-post",
+
 };
 
 const tools: ToolConfig[] = [
@@ -245,6 +252,45 @@ const tools: ToolConfig[] = [
       },
     ],
   },
+  // 👇 YAHAN NAYA TOOL CONFIG BLOCK ADD KAREIN:
+  {
+    toolType: "guest-post",
+    slug: "guest-post-finder",
+    contentKey: "guest-post-finder",
+    badge: "Free SEO & Outreach Tool",
+    title: "Guest Post Finder",
+    pageTitle: "Free Guest Post & Email Outreach Finder",
+    metaTitle: "Free Guest Post & Email Outreach Finder | RankVelt",
+    metaDescription:
+      "Find guest post opportunities and outreach emails directly from websites using RankVelt's free outreach tool.",
+    shortDescription:
+      "Find guest posting opportunities and outreach emails fast.",
+    intro:
+      "Scan target websites to instantly identify guest post guidelines, write-for-us pages, and direct contact email addresses.",
+    guideTitle: "Scale Your Backlink & SEO Outreach Effortlessly",
+    guideText:
+      "Manual outreach takes hours. Use this tool to quickly filter through domains, discover submission guidelines, and extract contact emails for guest blogging campaigns.",
+    bestFor: [
+      "SEO specialists looking for high-quality backlink sources.",
+      "Content marketers searching for guest blogging opportunities.",
+      "Agencies building targeted outreach email lists.",
+      "Founders doing manual link-building research.",
+    ],
+    relatedLinks: [
+      {
+        title: "eCommerce SEO",
+        description:
+          "Improve product discovery, collection structure, and qualified organic traffic.",
+        path: "/ecommerce-seo",
+      },
+      {
+        title: "Business SEO",
+        description:
+          "Build stronger service pages, technical foundations, and organic lead pathways.",
+        path: "/business-seo",
+      },
+    ],
+  },
 ];
 
 const getIcon = (
@@ -260,6 +306,9 @@ const getIcon = (
 
     case "detector":
       return <Layout className={className} />;
+
+    case "guest-post":
+      return <Search className={className} />;
 
     case "generator":
     default:
@@ -277,6 +326,9 @@ const getIconClass = (toolType: ToolType) => {
 
     case "detector":
       return "text-blue-400";
+
+    case "guest-post":
+      return "text-purple-400";
 
     case "generator":
     default:
@@ -473,6 +525,9 @@ const ToolsPage = () => {
 
       case "detector":
         return <ThemeDetector />;
+
+        case "guest-post":
+        return <GuestPostFinder />;
 
       case "generator":
       default:
