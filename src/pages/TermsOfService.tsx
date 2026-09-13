@@ -6,7 +6,7 @@ import LegalLayout from "../components/LegalLayout";
 const TermsOfService = () => {
   const navigate = useNavigate();
 
-  const lastUpdated = "July 3, 2026";
+  const lastUpdated = "Aug 11, 2026";
 
   const handleInternalLink = (id: string) => {
     navigate("/");

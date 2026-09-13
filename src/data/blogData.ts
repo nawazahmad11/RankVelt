@@ -72,9 +72,9 @@ export const blogPosts: BlogPost[] = [
     socialDescription:
       "See how SEO, AEO, and GEO fit together—and how to split your budget, tactics, and KPIs in 2026.",
 
-    date: "July 14, 2026",
-    datePublished: "2026-07-14",
-    dateModified: "2026-07-14",
+    date: "Aug 11, 2026",
+    datePublished: "2026-08-11",
+    dateModified: "2026-08-11",
 
     author: "RankVelt Editorial Team",
     authorType: "Organization",
@@ -623,9 +623,9 @@ export const blogPosts: BlogPost[] = [
     socialDescription:
       "Improve AI search visibility with proven SEO, content, citation, and tracking tactics.",
 
-    date: "July 14, 2026",
-    datePublished: "2026-07-14",
-    dateModified: "2026-07-14",
+    date: "Aug 11, 2026",
+    datePublished: "2026-08-11",
+    dateModified: "2026-08-11",
 
     author: "RankVelt Editorial Team",
     authorType: "Organization",
@@ -1433,9 +1433,9 @@ export const blogPosts: BlogPost[] = [
     socialDescription:
       "Win Maps rankings, AI citations, and qualified local leads with a practical 2026 SEO framework.",
 
-    date: "July 14, 2026",
-    datePublished: "2026-07-14",
-    dateModified: "2026-07-14",
+    date: "Aug 11, 2026",
+    datePublished: "2026-08-11",
+    dateModified: "2026-08-11",
 
     author: "RankVelt Editorial Team",
     authorType: "Organization",
@@ -2151,9 +2151,9 @@ export const blogPosts: BlogPost[] = [
     socialDescription:
       "Build city pages with local proof, clear intent, and a practical doorway-risk audit.",
 
-    date: "July 14, 2026",
-    datePublished: "2026-07-14",
-    dateModified: "2026-07-14",
+    date: "Aug 11, 2026",
+    datePublished: "2026-08-11",
+    dateModified: "2026-08-11",
 
     author: "RankVelt Editorial Team",
     authorType: "Organization",
@@ -3433,9 +3433,9 @@ export const blogPosts: BlogPost[] = [
     socialDescription:
       "Audit your Shopify store with 32 prioritized SEO fixes for indexing, products, speed, feeds and AI search.",
 
-    date: "July 14, 2026",
-    datePublished: "2026-07-14",
-    dateModified: "2026-07-14",
+    date: "Aug 11, 2026",
+    datePublished: "2026-08-11",
+    dateModified: "2026-08-11",
 
     author: "RankVelt Editorial Team",
     authorType: "Organization",
@@ -4986,9 +4986,9 @@ export const blogPosts: BlogPost[] = [
     socialDescription:
       "Build a site structure that helps Google crawl pages and guides more visitors toward enquiries.",
 
-    date: "July 14, 2026",
-    datePublished: "2026-07-14",
-    dateModified: "2026-07-14",
+    date: "Aug 11, 2026",
+    datePublished: "2026-08-11",
+    dateModified: "2026-08-11",
 
     author: "RankVelt Editorial Team",
     authorType: "Organization",
@@ -6008,9 +6008,9 @@ export const blogPosts: BlogPost[] = [
     socialDescription:
       "Protect rankings, leads and sales during a WordPress or Shopify redesign with this launch-ready SEO checklist.",
 
-    date: "July 14, 2026",
-    datePublished: "2026-07-14",
-    dateModified: "2026-07-14",
+    date: "Aug 11, 2026",
+    datePublished: "2026-08-11",
+    dateModified: "2026-08-11",
 
     author: "RankVelt Editorial Team",
     authorType: "Organization",
@@ -6744,9 +6744,9 @@ export const blogPosts: BlogPost[] = [
     socialDescription:
       "Build internal links that clarify page relationships, improve crawling, and support AI search discovery.",
 
-    date: "July 14, 2026",
-    datePublished: "2026-07-14",
-    dateModified: "2026-07-14",
+    date: "Aug 11, 2026",
+    datePublished: "2026-08-11",
+    dateModified: "2026-08-11",
 
     author: "RankVelt Editorial Team",
     authorType: "Organization",
@@ -7370,9 +7370,9 @@ export const blogPosts: BlogPost[] = [
     socialDescription:
       "Real SEO data reveals why impressions, CTR, rankings and PageSpeed scores must be judged together.",
 
-    date: "July 14, 2026",
-    datePublished: "2026-07-14",
-    dateModified: "2026-07-14",
+    date: "Aug 11, 2026",
+    datePublished: "2026-08-11",
+    dateModified: "2026-08-11",
 
     author: "RankVelt Editorial Team",
     authorType: "Organization",
@@ -7854,9 +7854,9 @@ export const blogPosts: BlogPost[] = [
     socialDescription:
       "Discover the SEO, UX, technical and conversion problems that prevent Shopify stores from growing after launch.",
   
-    date: "July 3, 2026",
-    datePublished: "2026-07-03",
-    dateModified: "2026-07-15",
+    date: "Aug 11, 2026",
+    datePublished: "2026-08-11",
+    dateModified: "2026-08-11",
   
     author: "RankVelt Editorial Team",
     authorType: "Organization",
@@ -8186,9 +8186,9 @@ export const blogPosts: BlogPost[] = [
     socialDescription:
       "Improve Shopify product pages with clearer content, stronger trust signals, better mobile UX, internal links and technical SEO.",
   
-    date: "July 3, 2026",
-    datePublished: "2026-07-03",
-    dateModified: "2026-07-15",
+    date: "Aug 11, 2026",
+    datePublished: "2026-08-11",
+    dateModified: "2026-08-11",
   
     author: "RankVelt Editorial Team",
     authorType: "Organization",
@@ -8483,9 +8483,9 @@ export const blogPosts: BlogPost[] = [
     socialDescription:
       "Learn when a Shopify redesign can improve product discovery, mobile usability, SEO foundations, customer trust and conversion paths.",
   
-    date: "July 3, 2026",
-    datePublished: "2026-07-03",
-    dateModified: "2026-07-15",
+    date: "Aug 11, 2026",
+    datePublished: "2026-08-11",
+    dateModified: "2026-08-11",
   
     author: "RankVelt Editorial Team",
     authorType: "Organization",

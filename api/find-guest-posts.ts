@@ -11,15 +11,13 @@ const KEYWORDS = [
     "contribute",
   ];
   
-  // Common fallback paths for Shopify, WordPress, and Custom CMS
   const COMMON_PATHS = [
-    "/pages/write-for-us",
     "/write-for-us",
     "/write-for-us/",
+    "/pages/write-for-us",
     "/guest-post",
     "/guest-post/",
     "/pages/guest-post",
-    "/pages/contribute",
     "/contribute",
   ];
   
@@ -33,49 +31,70 @@ const KEYWORDS = [
     message?: string;
   };
   
-  // Helper function: Direct fetch with AllOrigins Proxy fallback for Cloudflare/403 blocks
-  async function fetchPageHtml(targetUrl: string, headers: Record<string, string>): Promise<{ html: string | null; isBlocked: boolean }> {
-    // 1. Direct Fetch
+  // Robust Fetch with Multi-Proxy Bypass for Cloudflare 403s
+  async function fetchWithBypass(targetUrl: string): Promise<string | null> {
+    const headers = {
+      "User-Agent":
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      Accept:
+        "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+      "Accept-Language": "en-US,en;q=0.9",
+    };
+  
+    // Attempt 1: Direct Fetch
     try {
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 6000);
+      const timeoutId = setTimeout(() => controller.abort(), 5000);
+      const res = await fetch(targetUrl, { signal: controller.signal, headers });
+      clearTimeout(timeoutId);
   
-      const response = await fetch(targetUrl, {
+      if (res.ok) {
+        const text = await res.text();
+        // Ensure it's not a Cloudflare Challenge page
+        if (!text.includes("Just a moment...") && !text.includes("Enable JavaScript and cookies to continue")) {
+          return text;
+        }
+      }
+    } catch {
+      // Proceed to Fallbacks
+    }
+  
+    // Attempt 2: Scraper Proxy 1 (corsproxy.io)
+    try {
+      const proxyUrl = `https://corsproxy.io/?${encodeURIComponent(targetUrl)}`;
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 6000);
+      const res = await fetch(proxyUrl, { signal: controller.signal });
+      clearTimeout(timeoutId);
+  
+      if (res.ok) {
+        const text = await res.text();
+        if (text && text.length > 300) return text;
+      }
+    } catch {
+      // Proceed to Fallback 3
+    }
+  
+    // Attempt 3: Jina AI Web Reader (Extremely good at bypassing Cloudflare blocks)
+    try {
+      const jinaUrl = `https://r.jina.ai/${targetUrl}`;
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 7000);
+      const res = await fetch(jinaUrl, {
         signal: controller.signal,
-        headers,
+        headers: { "X-Return-Format": "html" },
       });
       clearTimeout(timeoutId);
   
-      if (response.ok) {
-        const html = await response.text();
-        return { html, isBlocked: false };
-      }
-  
-      if (response.status === 403 || response.status === 401) {
-        // Direct request blocked, proceed to proxy
+      if (res.ok) {
+        const text = await res.text();
+        if (text && text.length > 200) return text;
       }
     } catch {
-      // Timeout or network error, proceed to proxy fallback
+      // Final fail
     }
   
-    // 2. Proxy Fallback (Bypasses Cloudflare / 403 blocks)
-    try {
-      const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`;
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 7000);
-  
-      const proxyRes = await fetch(proxyUrl, { signal: controller.signal });
-      clearTimeout(timeoutId);
-  
-      if (proxyRes.ok) {
-        const html = await proxyRes.text();
-        return { html, isBlocked: false };
-      }
-    } catch {
-      // Proxy also failed
-    }
-  
-    return { html: null, isBlocked: true };
+    return null;
   }
   
   export default async function handler(req: any, res: any) {
@@ -88,66 +107,70 @@ const KEYWORDS = [
       return res.status(400).json({ error: "URL is required" });
     }
   
-    let baseUrl = url.trim();
-    if (!baseUrl.startsWith("http://") && !baseUrl.startsWith("https://")) {
-      baseUrl = `https://${baseUrl}`;
+    let inputUrl = url.trim();
+    if (!inputUrl.startsWith("http://") && !inputUrl.startsWith("https://")) {
+      inputUrl = `https://${inputUrl}`;
     }
   
-    const headers = {
-      "User-Agent":
-        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
-      Accept:
-        "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
-      "Accept-Language": "en-US,en;q=0.9",
-      "Cache-Control": "no-cache",
-    };
-  
     try {
-      // 1. Fetch Homepage HTML
-      const { html, isBlocked } = await fetchPageHtml(baseUrl, headers);
-      let matchedPageUrl: string | null = null;
+      const parsedUrl = new URL(inputUrl);
+      const baseUrl = `${parsedUrl.protocol}//${parsedUrl.hostname}`;
+      
+      // Check if the provided URL is ALREADY a guest post page (e.g. tashiara.com/p/submit-guest-post...)
+      const isDirectGuestPostUrl = KEYWORDS.some((kw) => {
+        const normKw = kw.replace(/[\s-]/g, "");
+        const normPath = parsedUrl.pathname.toLowerCase().replace(/[\s-]/g, "");
+        return normPath.includes(normKw);
+      });
   
-      // Method A: Check Links in Homepage HTML
-      if (html) {
-        const linkRegex = /href=["']([^"']+)["']/gi;
-        let match;
+      let matchedPageUrl: string | null = isDirectGuestPostUrl ? inputUrl : null;
+      let homepageHtml: string | null = null;
   
-        while ((match = linkRegex.exec(html)) !== null) {
-          const href = match[1];
-          const lowerHref = href.toLowerCase();
+      // Fetch Homepage if not a direct guest post URL
+      if (!matchedPageUrl) {
+        homepageHtml = await fetchWithBypass(baseUrl);
   
-          if (
-            lowerHref.startsWith("#") ||
-            lowerHref.startsWith("javascript:") ||
-            lowerHref.startsWith("mailto:")
-          ) {
-            continue;
-          }
+        if (homepageHtml) {
+          const linkRegex = /href=["']([^"']+)["']/gi;
+          let match;
   
-          const isMatch = KEYWORDS.some((kw) => {
-            const normKw = kw.replace(/[\s-]/g, "");
-            const normHref = lowerHref.replace(/[\s-]/g, "");
-            return normHref.includes(normKw);
-          });
+          while ((match = linkRegex.exec(homepageHtml)) !== null) {
+            const href = match[1];
+            const lowerHref = href.toLowerCase();
   
-          if (isMatch) {
-            try {
-              matchedPageUrl = new URL(href, baseUrl).href;
-            } catch {
-              matchedPageUrl = href;
+            if (
+              lowerHref.startsWith("#") ||
+              lowerHref.startsWith("javascript:") ||
+              lowerHref.startsWith("mailto:")
+            ) {
+              continue;
             }
-            break;
+  
+            const isMatch = KEYWORDS.some((kw) => {
+              const normKw = kw.replace(/[\s-]/g, "");
+              const normHref = lowerHref.replace(/[\s-]/g, "");
+              return normHref.includes(normKw);
+            });
+  
+            if (isMatch) {
+              try {
+                matchedPageUrl = new URL(href, baseUrl).href;
+              } catch {
+                matchedPageUrl = href;
+              }
+              break;
+            }
           }
         }
       }
   
-      // Method B: Fallback Path Probing (If link not found in HTML, JS rendered, or 403 blocked)
+      // Path Probing Fallback for sites where link isn't found in HTML
       if (!matchedPageUrl) {
         for (const path of COMMON_PATHS) {
           const testUrl = new URL(path, baseUrl).href;
-          const pathData = await fetchPageHtml(testUrl, headers);
+          const testHtml = await fetchWithBypass(testUrl);
   
-          if (pathData.html && pathData.html.length > 500) {
+          if (testHtml && testHtml.length > 500) {
             matchedPageUrl = testUrl;
             break;
           }
@@ -157,21 +180,21 @@ const KEYWORDS = [
       let foundEmails: string[] = [];
   
       // Extract emails from Homepage HTML
-      if (html) {
-        const homeEmails = html.match(EMAIL_REGEX) || [];
+      if (homepageHtml) {
+        const homeEmails = homepageHtml.match(EMAIL_REGEX) || [];
         foundEmails.push(...homeEmails);
       }
   
-      // 2. Fetch matched Guest Post page to extract page text & emails
+      // Extract emails from Matched Guest Post page
       if (matchedPageUrl) {
-        const pageData = await fetchPageHtml(matchedPageUrl, headers);
-        if (pageData.html) {
-          const pageEmails = pageData.html.match(EMAIL_REGEX) || [];
+        const pageHtml = await fetchWithBypass(matchedPageUrl);
+        if (pageHtml) {
+          const pageEmails = pageHtml.match(EMAIL_REGEX) || [];
           foundEmails.push(...pageEmails);
         }
       }
   
-      // Advanced Filter: Remove CSS/JS libraries, assets, and dummy emails
+      // Clean up extracted emails
       const cleanedEmails = Array.from(new Set(foundEmails)).filter((e) => {
         const lower = e.toLowerCase();
         return (
@@ -193,12 +216,7 @@ const KEYWORDS = [
         website: url,
         guestPostUrl: matchedPageUrl,
         emails: cleanedEmails,
-        status: matchedPageUrl
-          ? "found"
-          : isBlocked && !matchedPageUrl
-          ? "error"
-          : "not_found",
-        message: isBlocked && !matchedPageUrl ? "HTTP 403 (Protected)" : undefined,
+        status: matchedPageUrl ? "found" : "not_found",
       };
   
       return res.status(200).json({ result });

@@ -884,7 +884,7 @@ const DecorStore = ({ s }: { s: any }) => {
                 <p className="text-sm text-gray-500 leading-relaxed max-w-2xl">Summary Selecting the right planters for commercial environments isn’t just about aesthetics—it’s a long-term investment decision. This gui...</p>
                 <div className="flex justify-between items-center pt-4 border-t border-gray-100">
                   <span className="text-[10px] font-bold uppercase tracking-widest border-b border-black pb-1">Read More</span>
-                  <span className="text-[9px] text-gray-300 uppercase font-bold">April 14, 2026</span>
+                  <span className="text-[9px] text-gray-300 uppercase font-bold">Aug 11, 2026</span>
                 </div>
               </div>
             </div>

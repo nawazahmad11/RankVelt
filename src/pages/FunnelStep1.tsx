@@ -455,8 +455,127 @@ const FunnelStep1 = () => {
         </div>
       </section>
 
+      <section className="relative z-20 overflow-hidden border-y border-white/5 bg-black/20 py-16 lg:py-24">
+  {/* Background Glow Effect */}
+  <div className="pointer-events-none absolute right-0 top-1/2 -z-10 h-[400px] w-[400px] -translate-y-1/2 rounded-full bg-primary/10 blur-[120px]" />
 
-      <section className="relative z-20 border-y border-white/5 bg-black/10 py-16">
+  <div className="section-container relative z-10">
+    <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
+      
+      {/* --- LEFT SIDE: Content & Cards --- */}
+      <div className="lg:col-span-7">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={staggerContainer}
+          className="mb-8 text-left"
+        >
+          <motion.p
+            variants={fadeInUp}
+            custom={0}
+            className="mb-3 text-[11px] font-black uppercase tracking-[0.25em] text-primary"
+          >
+            Who RankVelt Helps
+          </motion.p>
+
+          <motion.h2
+            variants={fadeInUp}
+            custom={1}
+            className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl"
+          >
+            Turn Google Visibility into <br className="hidden sm:inline" />
+            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Real Leads & Revenue.
+            </span>
+          </motion.h2>
+        </motion.div>
+
+        {/* Vertical Compact Cards List */}
+        <div className="flex flex-col gap-4">
+          {[
+            {
+              icon: MapPinned,
+              title: "Local Businesses",
+              desc: "For businesses that need stronger Google Maps visibility, local search relevance, calls, enquiries, and service-area leads.",
+            },
+            {
+              icon: ShoppingBag,
+              title: "eCommerce Brands",
+              desc: "For Shopify stores and online brands that need better product discovery, category visibility, and sustainable organic sales.",
+            },
+            {
+              icon: Building2,
+              title: "Growing Companies",
+              desc: "For service businesses, consultants, agencies, and brands that need stronger pages, websites, and organic lead generation.",
+            },
+          ].map((item, index) => {
+            const Icon = item.icon;
+
+            return (
+              <motion.article
+                key={item.title}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.12, duration: 0.5 }}
+                viewport={{ once: true }}
+                className="group flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.02] p-5 backdrop-blur-md transition-all duration-300 hover:border-primary/40 hover:bg-white/[0.04] hover:shadow-lg hover:shadow-primary/5"
+              >
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-black">
+                  <Icon size={22} />
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-bold text-white transition-colors duration-300 group-hover:text-primary">
+                    {item.title}
+                  </h3>
+                  <p className="mt-1 text-sm leading-relaxed text-white/60">
+                    {item.desc}
+                  </p>
+                </div>
+              </motion.article>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* --- RIGHT SIDE: WebM Video Container --- */}
+      <div className="relative flex justify-center lg:col-span-5 lg:justify-end">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="group relative w-full max-w-[500px]"
+        >
+          {/* Subtle Ambient Outer Glow */}
+          <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-primary/30 to-purple-500/30 opacity-30 blur-xl transition-opacity duration-500 group-hover:opacity-70" />
+
+          {/* Glass Card Container */}
+          <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/40 p-2 backdrop-blur-xl transition-all duration-500 group-hover:border-primary/50">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              aria-hidden="true"
+              className="h-auto w-full rounded-xl object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+            >
+              <source src="/rankvelt-real-stats.webm" type="video/webm" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </motion.div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+      {/* <section className="relative z-20 border-y border-white/5 bg-black/10 py-16">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -527,7 +646,7 @@ const FunnelStep1 = () => {
             })}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="relative z-20 pb-10 pt-16">
         <div className="section-container">

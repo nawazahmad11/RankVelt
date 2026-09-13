@@ -189,7 +189,7 @@ const AuditPopup = () => {
                       </button>
                     </form>
 
-                    <p className="mt-6 text-center text-[10px] uppercase tracking-widest text-white/20">
+                    <p className="mt-6 text-center text-[10px] uppercase tracking-widest text-white/55">
                       No spam. Response within 24hrs.
                     </p>
                   </motion.div>

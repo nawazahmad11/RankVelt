@@ -6,7 +6,7 @@ import LegalLayout from "../components/LegalLayout";
 const PrivacyPolicy = () => {
   const navigate = useNavigate();
 
-  const lastUpdated = "July 3, 2026";
+  const lastUpdated = "Aug 11, 2026";
 
   /*
     Replace this email once your final RankVelt business email is ready.
