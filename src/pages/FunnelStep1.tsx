@@ -483,7 +483,7 @@ const FunnelStep1 = () => {
       <motion.h2
         variants={fadeInUp}
         custom={1}
-        className="text-2xl font-bold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl whitespace-nowrap"
+        className="text-2xl font-bold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl sm:whitespace-nowrap"
       >
         Turn Google Visibility into{" "}
         <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
