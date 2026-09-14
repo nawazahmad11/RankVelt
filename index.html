@@ -17,9 +17,15 @@
   <!-- Replace only when your final RankVelt favicon is ready -->
   <link rel="icon" type="image/png" href="/rankvelt-icon.webp" />
 
-  <link rel="preload" href="/fonts/Inter_28pt-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+  <!-- Preconnect to third-party origins that will be requested shortly after load (GTM) -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" />
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
-  <link rel="preload" href="/fonts/Inter_28pt-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+  <link rel="preload" href="/fonts/Inter_28pt-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous"
+    fetchpriority="high" />
+
+  <link rel="preload" href="/fonts/Inter_28pt-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous"
+    fetchpriority="high" />
 
 
 

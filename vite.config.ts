@@ -24,10 +24,22 @@ export default defineConfig(({ mode }) => ({
   build: {
     rollupOptions: {
       output: {
-        // Is se saari heavy third-party libraries vendor chunk mein alag ho jayengi
+        // Sirf hamesha-zaroori core libraries (react/react-dom/react-router) ek chhote
+        // stable chunk mein rakhte hain. Baqi sab (radix-ui, embla-carousel, recharts,
+        // supabase, react-hook-form, wagera) ko Rollup apne aap alag chunks mein tor dega,
+        // aligned with hamare lazy()/dynamic import boundaries - taake unused libraries
+        // sirf tab download hon jab unki zaroorat ho (lazy-loaded section open ho).
         manualChunks(id) {
           if (id.includes("node_modules")) {
-            return "vendor";
+            if (
+              id.includes("react-dom") ||
+              id.includes("/react/") ||
+              id.includes("react-router")
+            ) {
+              return "vendor-core";
+            }
+            // baqi sab ko default automatic splitting par chor dete hain
+            return undefined;
           }
         },
       },
