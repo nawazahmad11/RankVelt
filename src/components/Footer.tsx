@@ -367,7 +367,7 @@ const Footer = () => {
               Get practical SEO growth insights.
             </h2>
 
-            <p className="mt-2 max-w-xl text-sm leading-relaxed text-white/60">
+            <p className="mt-2 max-w-xl text-sm leading-relaxed text-white/65">
               Receive useful guidance about SEO,
               eCommerce visibility, website structure,
               AI search and conversion-focused growth.
@@ -449,7 +449,7 @@ const Footer = () => {
 
         {/* Bottom bar */}
         <div className="mt-10 flex flex-col gap-6 border-t border-white/[0.06] pt-8 md:flex-row md:items-center md:justify-between">
-          <p className="text-center text-xs leading-relaxed text-white/45 md:text-left">
+          <p className="text-center text-xs leading-relaxed text-white/60 md:text-left">
             © {new Date().getFullYear()} RankVelt.
             All rights reserved.
           </p>
