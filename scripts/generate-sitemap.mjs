@@ -22,6 +22,7 @@ const staticRoutes = [
   "/",
 
   "/local-seo",
+  "/local-seo/dentists",
   "/ecommerce-seo",
   "/business-seo",
 
@@ -36,7 +37,7 @@ const staticRoutes = [
   "/tools/redirect-mapping-generator",
 
   "/case-studies",
-  "/case-studies/project-meridian",
+  "/case-studies/product-discovery-at-scale",
   "/case-studies/civic-access",
   "/case-studies/clear-ride-auto-glass",
   "/case-studies/bluebridge",

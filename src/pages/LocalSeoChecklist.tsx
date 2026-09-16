@@ -1275,6 +1275,27 @@ const LocalSeoChecklist = () => {
                 <ArrowRight size={15} />
               </span>
             </Link>
+
+            <Link
+              to="/local-seo/dentists"
+              className="group rounded-2xl border border-white/[0.1] bg-black/25 p-5 transition-all hover:border-primary/45 hover:bg-primary/[0.05]"
+            >
+              <h3 className="text-lg font-black text-white group-hover:text-primary">
+                Dental SEO Services
+              </h3>
+
+              <p className="mt-2 text-sm leading-relaxed text-white/75">
+                See how these principles apply specifically to dental practices and treatment pages.
+              </p>
+
+              <span className="mt-5 inline-flex items-center gap-2 text-sm font-black text-primary">
+                Explore Dental SEO
+                <ArrowRight size={15} />
+              </span>
+            </Link>
+
+
+
           </div>
         </section>
       </div>

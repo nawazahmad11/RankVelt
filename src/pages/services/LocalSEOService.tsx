@@ -54,7 +54,8 @@ const localSeoConfig: SeoServicePageConfig = {
 
   audience: [
     "Home-service businesses such as roofers, plumbers, cleaners and electricians.",
-    "Clinics, salons, gyms and appointment-led businesses.",
+    "Dentists, orthodontists, clinics and other appointment-based healthcare practices.",
+    "Salons, gyms and other appointment-led local businesses.",
     "Consultants, accountants, lawyers and professional service companies.",
     "Companies serving specific cities, suburbs or service areas.",
     "Businesses with visibility but weak calls, enquiries or bookings.",
@@ -128,16 +129,16 @@ const localSeoConfig: SeoServicePageConfig = {
 
   relatedServices: [
     {
+      title: "Local SEO for Dentists",
+      description:
+        "See how RankVelt applies local SEO to dental practices, treatment pages and Google Maps visibility.",
+      path: "/local-seo/dentists",
+    },
+    {
       title: "Business SEO",
       description:
         "Build stronger service pages and organic lead-generation systems.",
       path: "/business-seo",
-    },
-    {
-      title: "Mobile-First UX",
-      description:
-        "Improve mobile usability and lead-generation journeys.",
-      path: "/services/mobile-first-ux",
     },
     {
       title: "SEO Tools",

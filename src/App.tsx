@@ -27,6 +27,10 @@ import WhatsAppButton from "./components/WhatsAppButton";
  */
 import FunnelStep1 from "./pages/FunnelStep1";
 
+
+const LocalSEODentists = lazy(
+  () => import("./pages/services/LocalSEODentists"),
+);
 /*
  * Lead funnel pages
  */
@@ -248,6 +252,11 @@ const App = () => (
               path="/blog/:id"
               element={<BlogPostDetail />}
             />
+
+<Route
+  path="/local-seo/dentists"
+  element={<LocalSEODentists />}
+/>
 
             {/* Tools */}
             <Route

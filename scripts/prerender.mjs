@@ -6,6 +6,7 @@ import path from "path";
 const routes = [
   "/",
   "/local-seo",
+  "/local-seo/dentists",
   "/ecommerce-seo",
   "/business-seo",
   "/blog",

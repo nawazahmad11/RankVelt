@@ -238,13 +238,13 @@ const Footer = () => {
                   </span>
                 </span>
 
-                <span className="mt-1 block text-[9px] font-black uppercase tracking-[0.18em] text-white/60">
+                <span className="mt-1 block text-[9px] font-black uppercase tracking-[0.18em] text-white/70">
                   SEO & Web Growth Studio
                 </span>
               </span>
             </button>
 
-            <p className="mt-6 max-w-md text-sm leading-7 text-white/65">
+            <p className="mt-6 max-w-md text-sm leading-7 text-white/70">
               RankVelt helps local businesses,
               eCommerce brands and growing companies
               improve search visibility, website
@@ -252,7 +252,7 @@ const Footer = () => {
               conversion-focused customer journeys.
             </p>
 
-            <div className="mt-6 space-y-3 text-sm text-white/65">
+            <div className="mt-6 space-y-3 text-sm text-white/70">
               <a
                 href="mailto:info@rankvelt.com"
                 className="flex w-fit items-center gap-3 transition-colors hover:text-[#f9a825]"
@@ -367,7 +367,7 @@ const Footer = () => {
               Get practical SEO growth insights.
             </h2>
 
-            <p className="mt-2 max-w-xl text-sm leading-relaxed text-white/65">
+            <p className="mt-2 max-w-xl text-sm leading-relaxed text-white/70">
               Receive useful guidance about SEO,
               eCommerce visibility, website structure,
               AI search and conversion-focused growth.
@@ -402,7 +402,7 @@ const Footer = () => {
                   status === "loading" ||
                   status === "success"
                 }
-                className="min-h-12 flex-1 rounded-xl border border-white/10 bg-white/[0.045] px-5 py-3 text-sm text-white outline-none transition-colors placeholder:text-white/30 focus:border-[#f9a825]/55 disabled:cursor-not-allowed disabled:opacity-60"
+                className="min-h-12 flex-1 rounded-xl border border-white/10 bg-white/[0.045] px-5 py-3 text-sm text-white outline-none transition-colors placeholder:text-white/45 focus:border-[#f9a825]/55 disabled:cursor-not-allowed disabled:opacity-60"
               />
 
               <button
@@ -449,7 +449,7 @@ const Footer = () => {
 
         {/* Bottom bar */}
         <div className="mt-10 flex flex-col gap-6 border-t border-white/[0.06] pt-8 md:flex-row md:items-center md:justify-between">
-          <p className="text-center text-xs leading-relaxed text-white/60 md:text-left">
+          <p className="text-center text-xs leading-relaxed text-white/70 md:text-left">
             © {new Date().getFullYear()} RankVelt.
             All rights reserved.
           </p>
@@ -466,7 +466,7 @@ const Footer = () => {
       rel="noopener noreferrer"
       aria-label="Visit RankVelt on LinkedIn"
       title="Visit RankVelt on LinkedIn"
-      className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.04] text-white/45 transition-colors hover:border-[#0A66C2]/50 hover:bg-[#0A66C2]/10 hover:text-[#0A66C2]"
+      className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.04] text-white/60 transition-colors hover:border-[#0A66C2]/50 hover:bg-[#0A66C2]/10 hover:text-[#0A66C2]"
     >
       <Linkedin size={18} aria-hidden="true" />
     </a>
@@ -476,7 +476,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Chat with RankVelt on WhatsApp"
-              className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.04] text-white/45 transition-colors hover:border-[#f9a825]/40 hover:text-[#f9a825]"
+              className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.04] text-white/60 transition-colors hover:border-[#f9a825]/40 hover:text-[#f9a825]"
             >
               <MessageCircle size={18} />
             </a>
@@ -484,7 +484,7 @@ const Footer = () => {
             <a
               href="mailto:info@rankvelt.com"
               aria-label="Email RankVelt"
-              className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.04] text-white/45 transition-colors hover:border-[#f9a825]/40 hover:text-[#f9a825]"
+              className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.04] text-white/60 transition-colors hover:border-[#f9a825]/40 hover:text-[#f9a825]"
             >
               <Mail size={18} />
             </a>
