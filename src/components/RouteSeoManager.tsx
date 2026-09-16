@@ -40,6 +40,12 @@ const staticPageMeta: Record<string, RouteMeta> = {
       "RankVelt provides Business SEO services for service companies, consultants, agencies, and growing businesses that need stronger website visibility, qualified traffic, and organic leads.",
   },
 
+  "/local-seo/dentists": {
+  title: "Dental SEO Services | Local SEO for Dentists | RankVelt",
+  description:
+    "RankVelt provides dental SEO services that improve Google Maps visibility, local rankings, citations, reviews and patient enquiries for dental practices.",
+  },
+
   "/blog": {
     title: "RankVelt Insights | SEO, eCommerce & Website Growth",
     description:
