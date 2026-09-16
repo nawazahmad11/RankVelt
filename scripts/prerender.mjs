@@ -1,4 +1,6 @@
-import puppeteer from "puppeteer";
+import puppeteerCore from "puppeteer-core";
+import puppeteerFull from "puppeteer";
+import chromium from "@sparticuz/chromium";
 import http from "http";
 import fs from "fs";
 import path from "path";
@@ -66,7 +68,6 @@ const server = http.createServer((req, res) => {
       return sendFile(filePath, res);
     }
 
-    // agar folder hai to uske andar index.html dhoondo
     if (!err && stats.isDirectory()) {
       const indexInFolder = path.join(filePath, "index.html");
       if (fs.existsSync(indexInFolder)) {
@@ -74,7 +75,6 @@ const server = http.createServer((req, res) => {
       }
     }
 
-    // kuch na mile to SPA fallback: root index.html bhejo
     return sendFile(path.join(DIST, "index.html"), res);
   });
 });
@@ -94,12 +94,32 @@ function sendFile(filePath, res) {
   });
 }
 
+// Vercel pe apna khud ka VERCEL environment variable set karta hai.
+// Mac pe ye exist nahi karta, is liye wahan normal puppeteer chalega.
+async function launchBrowser() {
+  const isVercel = Boolean(process.env.VERCEL);
+
+  if (isVercel) {
+    console.log("Vercel environment detected — using @sparticuz/chromium");
+
+    return puppeteerCore.launch({
+      args: chromium.args,
+      executablePath: await chromium.executablePath(),
+      headless: chromium.headless,
+    });
+  }
+
+  console.log("Local environment detected — using full puppeteer");
+
+  return puppeteerFull.launch({
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+  });
+}
+
 server.listen(PORT, async () => {
   console.log(`Local server running on http://localhost:${PORT}`);
 
-  const browser = await puppeteer.launch({
-    args: ["--no-sandbox", "--disable-setuid-sandbox"],
-  });
+  const browser = await launchBrowser();
 
   for (const route of routes) {
     const page = await browser.newPage();
