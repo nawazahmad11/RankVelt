@@ -9,6 +9,10 @@ const routes = [
   "/",
   "/local-seo",
   "/local-seo/dentists",
+"/local-seo/plumbers",
+"/blog/plumbing-seo-guide",
+
+
   "/ecommerce-seo",
   "/business-seo",
   "/blog",

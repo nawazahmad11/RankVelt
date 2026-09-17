@@ -7834,6 +7834,351 @@ export const blogPosts: BlogPost[] = [
     `,
   },
 
+  {
+    id: "plumbing-seo-guide",
+  
+    title: "Plumbing SEO: The Complete Guide to More Calls and Booked Jobs",
+  
+    seoTitle:
+      "Plumbing SEO Guide 2026: Rank Higher & Get More Calls",
+  
+    metaDescription:
+      "A practical plumbing SEO guide covering local SEO, common mistakes, quick wins, and a step-by-step checklist for USA, UK, Canada and Australia contractors.",
+  
+    ogTitle:
+      "The Complete Plumbing SEO Guide for More Calls",
+  
+    socialDescription:
+      "Real plumbing SEO guidance covering local rankings, common mistakes, and a practical checklist you can use this week.",
+  
+    date: "Sep 17, 2026",
+    datePublished: "2026-09-17",
+    dateModified: "2026-09-17",
+  
+    author: "RankVelt Editorial Team",
+    authorType: "Organization",
+  
+    category: "LOCAL SEO",
+    readTime: "11 min read",
+  
+    image: "/blog/plumbing-seo-guide.webp",
+  
+    imageAlt:
+      "Plumbing SEO guide showing Google Business Profile, local rankings and service pages for a plumbing company",
+  
+    excerpt:
+      "A complete plumbing SEO guide covering local rankings, Google Business Profile, common mistakes, quick wins, and a practical checklist for plumbing companies in the USA, UK, Canada and Australia.",
+  
+    relatedPostIds: [
+      "local-seo-ai-overviews",
+      "service-area-pages",
+      "seo-vs-aeo-vs-geo",
+    ],
+  
+    showStandardCta: true,
+  
+    faqItems: [
+      {
+        question: "What is SEO for plumbers?",
+        answer:
+          "Plumbing SEO is the process of improving a plumbing company's online visibility so it appears higher in Google search results and the Google Map Pack when local customers search for plumbing services.",
+      },
+      {
+        question: "How long does plumbing SEO take to show results?",
+        answer:
+          "Most plumbing businesses start seeing meaningful movement within three to six months. Highly competitive markets can take longer, while less competitive areas may show progress sooner.",
+      },
+      {
+        question: "How much does plumbing SEO cost?",
+        answer:
+          "Pricing varies widely based on market competition and scope of work, but many plumbing SEO services fall between a few hundred and a few thousand dollars per month. The right number depends on your goals and current website condition.",
+      },
+      {
+        question: "Do plumbers really need local SEO?",
+        answer:
+          "Yes. Plumbing is a local, urgent service, and most customers choose a plumber based on who appears first in local search results and Google Maps.",
+      },
+      {
+        question: "What is the difference between plumbing SEO and Google Ads?",
+        answer:
+          "Google Ads gets you visibility immediately, but it stops the moment you stop paying. SEO takes longer to build but keeps generating visibility without a cost per click.",
+      },
+      {
+        question: "Can I do plumbing SEO myself?",
+        answer:
+          "Basic steps, like updating your Google Business Profile and asking for reviews, can be done in-house. More technical work, like site structure and schema markup, usually benefits from experienced help.",
+      },
+    ],
+  
+    howTo: {
+      name: "How to Improve Local SEO for a Plumbing Business",
+  
+      description:
+        "A six-step process for reviewing and improving a plumbing company's Google Business Profile, service pages, and local search visibility.",
+  
+      steps: [
+        {
+          name: "Audit your Google Business Profile",
+          text: "Check your business hours, service area, categories, and photos for accuracy.",
+        },
+        {
+          name: "Fix citation inconsistencies",
+          text: "Make sure your business name, address, and phone number match across every directory.",
+        },
+        {
+          name: "Build dedicated service pages",
+          text: "Create a separate, detailed page for each high-value service instead of one generic page.",
+        },
+        {
+          name: "Collect detailed reviews",
+          text: "Ask customers to mention the specific service and neighbourhood in their review.",
+        },
+        {
+          name: "Improve mobile experience",
+          text: "Test your website on a real phone and fix slow-loading or broken pages first.",
+        },
+        {
+          name: "Track calls and enquiries",
+          text: "Review call volume and form submissions monthly, not just keyword rankings.",
+        },
+      ],
+    },
+  
+    toc: [
+      {
+        id: "what-is-plumbing-seo",
+        title: "What Is Plumbing SEO?",
+        level: 2,
+      },
+      {
+        id: "why-plumbers-need-seo",
+        title: "Why Plumbing Companies Need SEO",
+        level: 2,
+      },
+      {
+        id: "how-local-seo-works",
+        title: "How Local SEO Works for Plumbers",
+        level: 2,
+      },
+      {
+        id: "core-parts",
+        title: "The Core Parts of a Plumbing SEO Strategy",
+        level: 2,
+      },
+      {
+        id: "real-world-scenario",
+        title: "A Real-World Scenario",
+        level: 2,
+      },
+      {
+        id: "common-mistakes",
+        title: "Common Mistakes Plumbing Companies Make With SEO",
+        level: 2,
+      },
+      {
+        id: "what-most-blogs-dont-tell-you",
+        title: "What Most Plumbing SEO Blogs Don't Tell You",
+        level: 3,
+      },
+      {
+        id: "quick-wins",
+        title: "5 Quick Wins to Improve Plumbing SEO Fast",
+        level: 2,
+      },
+      {
+        id: "expert-tips",
+        title: "Expert Tips for Long-Term Growth",
+        level: 2,
+      },
+      {
+        id: "checklist",
+        title: "Actionable Plumbing SEO Checklist",
+        level: 2,
+      },
+      {
+        id: "rankvelt-approach",
+        title: "How RankVelt Approaches Plumbing SEO",
+        level: 2,
+      },
+      {
+        id: "faqs",
+        title: "Frequently Asked Questions",
+        level: 2,
+      },
+    ],
+  
+    content: `
+      <p class="article-updated"><strong>Last updated:</strong> September 2026</p>
+  
+      <div class="answer-box">
+        <p><strong>Plumbing SEO</strong> is the process of improving a plumbing company's website and Google Business Profile so it ranks higher for local searches. It combines local SEO, service-page content, technical fixes, and reviews. The goal is simple: show up when a customer searches for a plumber nearby.</p>
+      </div>
+  
+      <p>Most homeowners do not call a plumber they have never heard of. They search Google first. They check a few options fast. They call the one that looks trustworthy and close by.</p>
+  
+      <p>This guide covers what plumbing SEO actually means and how it works in practice. It also covers common mistakes and a checklist you can use right away. This guide applies to plumbing businesses in the USA, UK, Canada, and Australia.</p>
+  
+      <h2 id="what-is-plumbing-seo">What Is Plumbing SEO?</h2>
+  
+      <p>Plumbing SEO is the process of improving a plumbing website so it ranks higher on Google. It covers your Google Business Profile, your website content, your technical setup, and the links pointing to your site. The goal is to show up when local customers search for help.</p>
+  
+      <p>SEO is different from paid ads. Ads stop working the moment you stop paying. SEO builds visibility that keeps working over time, even on days you spend nothing. Most established plumbing companies treat SEO as a long-term asset, not a one-time task.</p>
+  
+      <h2 id="why-plumbers-need-seo">Why Plumbing Companies Need SEO</h2>
+  
+      <p>Plumbing is a local, high-intent service. When a pipe bursts, people do not browse casually. They search, compare a few options fast, and call one within minutes. If your business does not appear at that moment, a competitor gets the call instead.</p>
+  
+      <p>This pattern holds true across the USA, UK, Canada, and Australia. Search behaviour is nearly identical in all four markets. Local search comes first, reviews come second, and website trust comes third. The main differences are directory names and local competition levels, not the underlying strategy.</p>
+  
+      <p>Plumbing companies that invest in SEO consistently see more inbound calls without paying for every single lead. Over time, this lowers the cost of getting new customers compared to relying only on paid ads or lead-selling platforms.</p>
+  
+      <h2 id="how-local-seo-works">How Local SEO Works for Plumbers</h2>
+  
+      <p>Local SEO controls whether you appear in the Google Map Pack. This is the group of three business listings shown above regular search results. For plumbers, this is often the most valuable part of the whole strategy.</p>
+  
+      <p>Three things drive local rankings the most. These are your Google Business Profile accuracy, the number and quality of your reviews, and citation consistency across directories. Citations are simply your business name, address, and phone number listed the same way everywhere online.</p>
+  
+      <div class="answer-box">
+        <p><strong>Google Business Profile accuracy matters more than most plumbing companies realise.</strong> A profile with the wrong service area, an outdated phone number, or mismatched business hours actively hurts your ranking. Google rewards accuracy and consistency, and it quietly penalises confusion, even from a small typo.</p>
+      </div>
+  
+      <h2 id="core-parts">The Core Parts of a Plumbing SEO Strategy</h2>
+  
+      <p>A complete plumbing SEO strategy has four working parts. Each part supports the others, so skipping one weakens the whole system.</p>
+  
+      <ul>
+        <li><strong>On-page SEO:</strong> Clear service pages for each major service, such as drain cleaning, water heater repair, and sewer line replacement.</li>
+        <li><strong>Technical SEO:</strong> A fast, mobile-friendly website with clean site structure and no broken links.</li>
+        <li><strong>Content:</strong> Helpful blog posts and guides that answer real customer questions.</li>
+        <li><strong>Off-page SEO:</strong> Citations, backlinks, and reviews that build trust signals outside your own website.</li>
+      </ul>
+  
+      <h2 id="real-world-scenario">A Real-World Scenario</h2>
+  
+      <p>Picture a mid-sized plumbing company with a decent website but almost no SEO attention. Their Google Business Profile lists the wrong service radius. Their site has no dedicated page for emergency plumbing, one of their highest-value services.</p>
+  
+      <p>After fixing the profile, adding service-specific pages, and collecting detailed reviews for three months, this kind of business typically sees a steady rise in Map Pack visibility for its core services. The change rarely happens overnight. It builds week by week as Google gains confidence in the business.</p>
+  
+      <h2 id="common-mistakes">Common Mistakes Plumbing Companies Make With SEO</h2>
+  
+      <h3>Mistake 1: Ignoring the Google Business Profile</h3>
+      <p><strong>What it is:</strong> Many plumbing companies set up their profile once and never touch it again.</p>
+      <p><strong>Why it happens:</strong> Owners assume the profile runs itself once it is created.</p>
+      <p><strong>The impact:</strong> Outdated hours, missing photos, and old service lists quietly push you below competitors who stay active.</p>
+      <p><strong>The fix:</strong> Update your profile monthly. Add new photos, respond to reviews, and keep your service list current.</p>
+  
+      <h3>Mistake 2: One Generic Service Page for Everything</h3>
+      <p><strong>What it is:</strong> A single "Our Services" page listing everything in a few bullet points.</p>
+      <p><strong>Why it happens:</strong> It feels faster than writing a dedicated page for each service.</p>
+      <p><strong>The impact:</strong> Google cannot match a thin, generic page to a specific search like "sewer line repair near me" as well as a focused page built for that exact service.</p>
+      <p><strong>The fix:</strong> Create a separate page for each high-value service, with real details about how you handle that job.</p>
+  
+      <h3>Mistake 3: Duplicate City Pages With Swapped Names</h3>
+      <p><strong>What it is:</strong> Copying one city page multiple times and only changing the city name.</p>
+      <p><strong>Why it happens:</strong> It looks like a fast way to cover more locations.</p>
+      <p><strong>The impact:</strong> Google recognises duplicate patterns and often ignores these pages entirely, wasting the time spent creating them.</p>
+      <p><strong>The fix:</strong> Write unique, useful content for each service area, even if it takes longer.</p>
+  
+      <h3>Mistake 4: Generic Review Requests</h3>
+      <p><strong>What it is:</strong> Asking every customer for "a 5-star review" with no other guidance.</p>
+      <p><strong>Why it happens:</strong> It feels simple and non-intrusive.</p>
+      <p><strong>The impact:</strong> Vague reviews with no service or location details do little to support local rankings.</p>
+      <p><strong>The fix:</strong> Ask customers to briefly mention the service and their neighbourhood, such as "fixed our water heater in [area] quickly."</p>
+  
+      <h3>Mistake 5: No Mobile Optimisation</h3>
+      <p><strong>What it is:</strong> A website that loads slowly or looks broken on a phone.</p>
+      <p><strong>Why it happens:</strong> The site was originally built for desktop and never fully tested on mobile.</p>
+      <p><strong>The impact:</strong> Most plumbing searches happen on phones. A slow or broken mobile site loses the call before it even starts.</p>
+      <p><strong>The fix:</strong> Test your site on a real phone regularly and fix slow-loading pages first.</p>
+  
+      <h3 id="what-most-blogs-dont-tell-you">What Most Plumbing SEO Blogs Don't Tell You</h3>
+  
+      <p>Most plumbing SEO guides stop at traditional Google rankings. They rarely mention that AI answer engines, like ChatGPT Search, Gemini, and Perplexity, are becoming a new discovery channel for local services.</p>
+  
+      <div class="answer-box">
+        <p><strong>AI answer engines favour clear, structured content over keyword-stuffed pages.</strong> A plumbing business with clean service descriptions and honest FAQs has a real chance of being mentioned when someone asks an AI assistant for a recommendation.</p>
+      </div>
+  
+      <p>Another gap is how agencies treat reviews as a numbers game. Ten generic five-star reviews help less than three detailed reviews that mention a specific service and a specific neighbourhood. Search engines and AI tools both look for that kind of detail.</p>
+  
+      <h2 id="quick-wins">5 Quick Wins to Improve Plumbing SEO Fast</h2>
+  
+      <ol>
+        <li>Add your emergency phone number to every page header, not just the contact page.</li>
+        <li>Fix your Google Business Profile hours and service list this week.</li>
+        <li>Add real photos of your team and vehicles, not stock images.</li>
+        <li>Create one dedicated page for your highest-demand service if you don't have one yet.</li>
+        <li>Reply to every review, good or bad, within 48 hours.</li>
+      </ol>
+  
+      <h2 id="expert-tips">Expert Tips for Long-Term Growth</h2>
+  
+      <p>Treat SEO as a twelve-month project, not a thirty-day sprint. Rankings for competitive terms usually build gradually. Sudden ranking jumps are rare and often temporary.</p>
+  
+      <p>Track calls and form submissions, not just rankings. A page can rank well and still convert poorly if the content does not answer the visitor's real question or make it easy to call.</p>
+  
+      <p class="standalone-line">Keep your service pages updated as your business changes.</p>
+  
+      <p>If you add a new service or stop offering one, update your website the same week, not months later. Small, consistent updates matter more than occasional large rewrites.</p>
+  
+      <h2 id="checklist">Actionable Plumbing SEO Checklist</h2>
+  
+      <ul>
+        <li>Google Business Profile is fully filled out and updated monthly.</li>
+        <li>Each major service has its own dedicated page.</li>
+        <li>Business name, address, and phone number match across all directories.</li>
+        <li>Website loads quickly on mobile devices.</li>
+        <li>Reviews mention specific services and neighbourhoods where possible.</li>
+        <li>Blog content answers real customer questions, not just keywords.</li>
+        <li>Schema markup is added to service and FAQ pages.</li>
+        <li>Rankings and call volume are reviewed monthly, not ignored.</li>
+      </ul>
+  
+      <h2 id="rankvelt-approach">How RankVelt Approaches Plumbing SEO</h2>
+  
+      <p>Most plumbing SEO problems come down to the same root causes. These are an inconsistent Google Business Profile, thin service pages, and generic reviews. Fixing these three things alone solves a large part of the visibility problem for most plumbing businesses.</p>
+  
+      <p>RankVelt focuses on genuine local relevance rather than shortcuts like duplicate city pages. That means real service-area pages, accurate citations, and a Google Business Profile that stays current instead of being set up once and forgotten.</p>
+  
+      <p>If your plumbing business has visibility but weak call volume, or no visibility at all, a focused review of your current setup is usually the fastest way to find what is actually holding you back. See RankVelt's <a href="/local-seo/plumbers">plumbing SEO services</a> for how this works in practice.</p>
+  
+      <h2 id="faqs">Frequently Asked Questions</h2>
+  
+      <div class="faq-accordion">
+        <details>
+          <summary>What is SEO for plumbers?</summary>
+          <p>Plumbing SEO is the process of improving a plumbing company's online visibility so it appears higher in Google search results and the Google Map Pack when local customers search for plumbing services.</p>
+        </details>
+  
+        <details>
+          <summary>How long does plumbing SEO take to show results?</summary>
+          <p>Most plumbing businesses start seeing meaningful movement within three to six months. Highly competitive markets can take longer, while less competitive areas may show progress sooner.</p>
+        </details>
+  
+        <details>
+          <summary>How much does plumbing SEO cost?</summary>
+          <p>Pricing varies widely based on market competition and scope of work, but many plumbing SEO services fall between a few hundred and a few thousand dollars per month. The right number depends on your goals and current website condition.</p>
+        </details>
+  
+        <details>
+          <summary>Do plumbers really need local SEO?</summary>
+          <p>Yes. Plumbing is a local, urgent service, and most customers choose a plumber based on who appears first in local search results and Google Maps.</p>
+        </details>
+  
+        <details>
+          <summary>What is the difference between plumbing SEO and Google Ads?</summary>
+          <p>Google Ads gets you visibility immediately, but it stops the moment you stop paying. SEO takes longer to build but keeps generating visibility without a cost per click.</p>
+        </details>
+  
+        <details>
+          <summary>Can I do plumbing SEO myself?</summary>
+          <p>Basic steps, like updating your Google Business Profile and asking for reviews, can be done in-house. More technical work, like site structure and schema markup, usually benefits from experienced help.</p>
+        </details>
+      </div>
+    `,
+  },
+
+
   // Old articles Shopify
   
   {

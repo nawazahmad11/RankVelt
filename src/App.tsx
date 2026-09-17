@@ -31,6 +31,10 @@ import FunnelStep1 from "./pages/FunnelStep1";
 const LocalSEODentists = lazy(
   () => import("./pages/services/LocalSEODentists"),
 );
+
+const LocalSEOPlumbers = lazy(
+  () => import("./pages/services/LocalSEOPlumbers"),
+);
 /*
  * Lead funnel pages
  */
@@ -256,6 +260,11 @@ const App = () => (
 <Route
   path="/local-seo/dentists"
   element={<LocalSEODentists />}
+/>
+
+<Route
+  path="/local-seo/plumbers"
+  element={<LocalSEOPlumbers />}
 />
 
             {/* Tools */}

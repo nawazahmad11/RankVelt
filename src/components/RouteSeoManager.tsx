@@ -45,6 +45,11 @@ const staticPageMeta: Record<string, RouteMeta> = {
   description:
     "RankVelt provides dental SEO services that improve Google Maps visibility, local rankings, citations, reviews and patient enquiries for dental practices.",
   },
+  "/local-seo/plumbers": {
+  title: "Plumbing SEO Services | Local SEO for Plumbers | RankVelt",
+  description:
+    "RankVelt provides plumbing SEO services that improve Google Maps visibility, local rankings, citations, reviews and call volume for plumbing companies.",
+},
 
   "/blog": {
     title: "RankVelt Insights | SEO, eCommerce & Website Growth",
