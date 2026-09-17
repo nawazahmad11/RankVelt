@@ -8477,6 +8477,301 @@ export const blogPosts: BlogPost[] = [
     `,
   },
 
+  {
+    id: "hvac-seo-guide",
+  
+    title: "HVAC SEO: The Complete Guide to Ranking Locally in Every Season",
+  
+    seoTitle:
+      "HVAC SEO Guide 2026: Rank Higher & Get More Calls",
+  
+    metaDescription:
+      "A practical HVAC SEO guide covering local rankings, seasonal strategy, high-ticket replacements, and a step-by-step checklist for USA, UK, Canada and Australia contractors.",
+  
+    ogTitle:
+      "The Complete HVAC SEO Guide for More Calls in Every Season",
+  
+    socialDescription:
+      "Real HVAC SEO guidance covering local rankings, seasonal demand, high-ticket replacements, and a practical checklist you can use this week.",
+  
+    date: "Sep 17, 2026",
+    datePublished: "2026-09-17",
+    dateModified: "2026-09-17",
+  
+    author: "RankVelt Editorial Team",
+    authorType: "Organization",
+  
+    category: "LOCAL SEO",
+    readTime: "12 min read",
+  
+    image: "/blog/hvac-seo-guide.webp",
+  
+    imageAlt:
+      "HVAC SEO guide showing Google Business Profile, seasonal rankings and service pages for a heating and cooling company",
+  
+    excerpt:
+      "A complete HVAC SEO guide covering local rankings, Google Business Profile, seasonal search demand, high-ticket replacements, and a practical checklist for HVAC companies in the USA, UK, Canada and Australia.",
+  
+    relatedPostIds: [
+      "electrician-seo-guide",
+      "plumbing-seo-guide",
+      "local-seo-ai-overviews",
+    ],
+  
+    showStandardCta: true,
+  
+    faqItems: [
+      {
+        question: "What is SEO for HVAC companies?",
+        answer:
+          "HVAC SEO is the process of improving a heating and cooling company's online visibility so it appears higher in Google search results and the Google Map Pack when local customers search for HVAC services.",
+      },
+      {
+        question: "How long does HVAC SEO take to show results?",
+        answer:
+          "Most HVAC companies start seeing meaningful movement within three to six months. Highly competitive markets can take longer, while less competitive areas may show progress sooner.",
+      },
+      {
+        question: "How much does HVAC SEO cost?",
+        answer:
+          "Pricing varies widely based on market competition and scope of work, but many HVAC SEO services fall between a few hundred and a few thousand dollars per month. The right number depends on your goals and current website condition.",
+      },
+      {
+        question: "Do HVAC companies really need local SEO?",
+        answer:
+          "Yes. HVAC work is a local, urgent service, and most customers choose a company based on who appears first in local search results and Google Maps.",
+      },
+      {
+        question: "Can SEO help HVAC companies sell high-ticket replacements?",
+        answer:
+          "Yes. System replacements and heat pump upgrades are high-value searches. Dedicated content for these services helps a company appear when homeowners research a replacement instead of a repair.",
+      },
+      {
+        question: "How does seasonality affect HVAC SEO?",
+        answer:
+          "Search demand shifts between cooling and heating services depending on the season. A strong HVAC SEO strategy adjusts content and page priority to match what customers are searching for at that time of year.",
+      },
+    ],
+  
+    howTo: {
+      name: "How to Improve Local SEO for an HVAC Company",
+  
+      description:
+        "A six-step process for reviewing and improving an HVAC company's Google Business Profile, service pages, and local search visibility.",
+  
+      steps: [
+        {
+          name: "Audit your Google Business Profile",
+          text: "Check your business hours, service area, categories, and photos for accuracy.",
+        },
+        {
+          name: "Fix citation inconsistencies",
+          text: "Make sure your business name, address, and phone number match across every directory.",
+        },
+        {
+          name: "Build dedicated service pages",
+          text: "Create separate pages for repair, maintenance, and high-ticket replacement services.",
+        },
+        {
+          name: "Plan for seasonal demand",
+          text: "Prioritise cooling content before summer and heating content before winter.",
+        },
+        {
+          name: "Collect detailed reviews",
+          text: "Ask customers to mention the specific service and neighbourhood in their review.",
+        },
+        {
+          name: "Track calls and enquiries",
+          text: "Review call volume and form submissions monthly, not just keyword rankings.",
+        },
+      ],
+    },
+  
+    toc: [
+      { id: "what-is-hvac-seo", title: "What Is HVAC SEO?", level: 2 },
+      { id: "why-hvac-needs-seo", title: "Why HVAC Companies Need SEO", level: 2 },
+      { id: "how-local-seo-works", title: "How Local SEO Works for HVAC Companies", level: 2 },
+      { id: "core-parts", title: "The Core Parts of an HVAC SEO Strategy", level: 2 },
+      { id: "real-world-scenario", title: "A Real-World Scenario", level: 2 },
+      { id: "common-mistakes", title: "Common Mistakes HVAC Companies Make With SEO", level: 2 },
+      { id: "what-most-blogs-dont-tell-you", title: "What Most HVAC SEO Blogs Don't Tell You", level: 3 },
+      { id: "quick-wins", title: "5 Quick Wins to Improve HVAC SEO Fast", level: 2 },
+      { id: "expert-tips", title: "Expert Tips for Long-Term Growth", level: 2 },
+      { id: "checklist", title: "Actionable HVAC SEO Checklist", level: 2 },
+      { id: "rankvelt-approach", title: "How RankVelt Approaches HVAC SEO", level: 2 },
+      { id: "faqs", title: "Frequently Asked Questions", level: 2 },
+    ],
+  
+    content: `
+      <p class="article-updated"><strong>Last updated:</strong> September 2026</p>
+  
+      <div class="answer-box">
+        <p><strong>HVAC SEO</strong> is the process of improving a heating and cooling company's website and Google Business Profile so it ranks higher for local searches. It combines local SEO, service-page content, technical fixes, and reviews. The goal is simple: show up when a customer searches for heating or cooling help nearby.</p>
+      </div>
+  
+      <p>Most homeowners do not call an HVAC company they have never heard of. They search Google first. They check a few options fast. They call the one that looks trustworthy and close by.</p>
+  
+      <p>This guide covers what HVAC SEO actually means and how it works in practice. It also covers common mistakes and a checklist you can use right away. This guide applies to HVAC companies in the USA, UK, Canada, and Australia.</p>
+  
+      <h2 id="what-is-hvac-seo">What Is HVAC SEO?</h2>
+  
+      <p>HVAC SEO is the process of improving a heating and cooling company's website so it ranks higher on Google. It covers your Google Business Profile, your website content, your technical setup, and the links pointing to your site. The goal is to show up when local customers search for help.</p>
+  
+      <p>SEO is different from paid ads. Ads stop working the moment you stop paying. SEO builds visibility that keeps working over time, even on days you spend nothing. Most established HVAC companies treat SEO as a long-term asset, not a one-time task.</p>
+  
+      <h2 id="why-hvac-needs-seo">Why HVAC Companies Need SEO</h2>
+  
+      <p>HVAC demand is seasonal and urgent. When an air conditioner fails in summer or a furnace stops in winter, people do not browse casually. They search, compare a few options fast, and call one within minutes.</p>
+  
+      <p>This pattern holds true across the USA, UK, Canada, and Australia, though the exact seasons differ by hemisphere and climate. Local search comes first, reviews come second, and website trust comes third in every one of these markets.</p>
+  
+      <p>HVAC companies that invest in SEO consistently see more inbound calls without paying for every single lead. Over time, this lowers the cost of getting new customers compared to relying only on paid ads or lead-selling platforms.</p>
+  
+      <h2 id="how-local-seo-works">How Local SEO Works for HVAC Companies</h2>
+  
+      <p>Local SEO controls whether you appear in the Google Map Pack. This is the group of three business listings shown above regular search results. For HVAC companies, this is often the most valuable part of the whole strategy.</p>
+  
+      <p>Three things drive local rankings the most. These are your Google Business Profile accuracy, the number and quality of your reviews, and citation consistency across directories. Citations are simply your business name, address, and phone number listed the same way everywhere online.</p>
+  
+      <div class="answer-box">
+        <p><strong>Google Business Profile accuracy matters more than most HVAC companies realise.</strong> A profile with the wrong service area, an outdated phone number, or mismatched business hours actively hurts your ranking. Google rewards accuracy and consistency, and it quietly penalises confusion, even from a small typo.</p>
+      </div>
+  
+      <h2 id="core-parts">The Core Parts of an HVAC SEO Strategy</h2>
+  
+      <p>A complete HVAC SEO strategy has four working parts. Each part supports the others, so skipping one weakens the whole system.</p>
+  
+      <ul>
+        <li><strong>On-page SEO:</strong> Clear service pages for each major service, such as AC repair, furnace repair, and system replacement.</li>
+        <li><strong>Technical SEO:</strong> A fast, mobile-friendly website with clean site structure and no broken links.</li>
+        <li><strong>Content:</strong> Helpful blog posts and guides that answer real customer questions.</li>
+        <li><strong>Off-page SEO:</strong> Citations, backlinks, and reviews that build trust signals outside your own website.</li>
+      </ul>
+  
+      <h2 id="real-world-scenario">A Real-World Scenario</h2>
+  
+      <p>Picture a mid-sized HVAC company with a decent website but almost no SEO attention. Their Google Business Profile lists the wrong service radius. Their site has no dedicated page for system replacement, one of their highest-value services.</p>
+  
+      <p>After fixing the profile, adding service-specific pages, and collecting detailed reviews for three months, this kind of business typically sees a steady rise in Map Pack visibility for its core services. The change rarely happens overnight. It builds week by week as Google gains confidence in the business.</p>
+  
+      <h2 id="common-mistakes">Common Mistakes HVAC Companies Make With SEO</h2>
+  
+      <h3>Mistake 1: Ignoring the Google Business Profile</h3>
+      <p><strong>What it is:</strong> Many HVAC companies set up their profile once and never touch it again.</p>
+      <p><strong>Why it happens:</strong> Owners assume the profile runs itself once it is created.</p>
+      <p><strong>The impact:</strong> Outdated hours, missing photos, and old service lists quietly push you below competitors who stay active.</p>
+      <p><strong>The fix:</strong> Update your profile monthly. Add new photos, respond to reviews, and keep your service list current.</p>
+  
+      <h3>Mistake 2: Treating Every Season the Same Way</h3>
+      <p><strong>What it is:</strong> Keeping the same homepage and service focus all year round.</p>
+      <p><strong>Why it happens:</strong> It feels simpler to leave the website unchanged than to update it every few months.</p>
+      <p><strong>The impact:</strong> Search demand shifts sharply between cooling and heating seasons, so static content misses the exact moment customers are searching.</p>
+      <p><strong>The fix:</strong> Prioritise cooling content before summer and heating content before winter, and adjust homepage messaging to match.</p>
+  
+      <h3>Mistake 3: No Dedicated Page for System Replacements</h3>
+      <p><strong>What it is:</strong> Lumping high-ticket replacement work into a general "services" page.</p>
+      <p><strong>Why it happens:</strong> Replacement jobs feel like a natural extension of repair work.</p>
+      <p><strong>The impact:</strong> Homeowners researching a $8,000–$15,000 system replacement search differently than someone with a quick repair need, and a thin page fails to answer their specific questions.</p>
+      <p><strong>The fix:</strong> Build a dedicated page covering replacement options, efficiency ratings, and what to expect from the process.</p>
+  
+      <h3>Mistake 4: Generic Review Requests</h3>
+      <p><strong>What it is:</strong> Asking every customer for "a 5-star review" with no other guidance.</p>
+      <p><strong>Why it happens:</strong> It feels simple and non-intrusive.</p>
+      <p><strong>The impact:</strong> Vague reviews with no service or location details do little to support local rankings.</p>
+      <p><strong>The fix:</strong> Ask customers to briefly mention the service and their neighbourhood, such as "replaced our heat pump in [area] quickly."</p>
+  
+      <h3>Mistake 5: No Mobile Optimisation</h3>
+      <p><strong>What it is:</strong> A website that loads slowly or looks broken on a phone.</p>
+      <p><strong>Why it happens:</strong> The site was originally built for desktop and never fully tested on mobile.</p>
+      <p><strong>The impact:</strong> Most HVAC searches happen on phones, especially during emergencies. A slow or broken mobile site loses the call before it even starts.</p>
+      <p><strong>The fix:</strong> Test your site on a real phone regularly and fix slow-loading pages first.</p>
+  
+      <h3 id="what-most-blogs-dont-tell-you">What Most HVAC SEO Blogs Don't Tell You</h3>
+  
+      <p>Most HVAC SEO guides focus only on repair keywords and skip the high-ticket replacement side of the business entirely. This misses a large part of the search demand from homeowners researching a new system.</p>
+  
+      <div class="answer-box">
+        <p><strong>Brand-specific searches matter more than most guides admit.</strong> Homeowners often search for a specific brand, such as an authorised Trane, Carrier, Lennox, or Rheem repair provider. A website that clearly mentions the brands a company services has a better chance of matching that exact search.</p>
+      </div>
+  
+      <p>Another gap is proof of real, local work. Ten generic five-star reviews help less than three detailed reviews that mention a specific service and a specific neighbourhood, and real photos from completed jobs build more trust than stock images ever will.</p>
+  
+      <h2 id="quick-wins">5 Quick Wins to Improve HVAC SEO Fast</h2>
+  
+      <ol>
+        <li>Add your emergency phone number to every page header, not just the contact page.</li>
+        <li>Fix your Google Business Profile hours and service list this week.</li>
+        <li>Add real photos of your team and completed installations, not stock images.</li>
+        <li>Create a dedicated page for system replacement if you don't have one yet.</li>
+        <li>Reply to every review, good or bad, within 48 hours.</li>
+      </ol>
+  
+      <h2 id="expert-tips">Expert Tips for Long-Term Growth</h2>
+  
+      <p>Treat SEO as a twelve-month project, not a thirty-day sprint. Rankings for competitive terms usually build gradually. Sudden ranking jumps are rare and often temporary.</p>
+  
+      <p>Track calls and form submissions, not just rankings. A page can rank well and still convert poorly if the content does not answer the visitor's real question or make it easy to call.</p>
+  
+      <p class="standalone-line">Plan your content calendar around the seasons.</p>
+  
+      <p>Update your homepage and top service pages a few weeks before each season starts, not after the calls have already slowed down. Being early matters more than being reactive.</p>
+  
+      <h2 id="checklist">Actionable HVAC SEO Checklist</h2>
+  
+      <ul>
+        <li>Google Business Profile is fully filled out and updated monthly.</li>
+        <li>Each major service, including system replacement, has its own dedicated page.</li>
+        <li>Business name, address, and phone number match across all directories.</li>
+        <li>Website loads quickly on mobile devices.</li>
+        <li>Reviews mention specific services and neighbourhoods where possible.</li>
+        <li>Content is refreshed seasonally to match cooling and heating demand.</li>
+        <li>Schema markup is added to service and FAQ pages.</li>
+        <li>Rankings and call volume are reviewed monthly, not ignored.</li>
+      </ul>
+  
+      <h2 id="rankvelt-approach">How RankVelt Approaches HVAC SEO</h2>
+  
+      <p>Most HVAC SEO problems come down to the same root causes. These are an inconsistent Google Business Profile, thin service pages, and static content that ignores seasonal demand. Fixing these three things alone solves a large part of the visibility problem for most HVAC companies.</p>
+  
+      <p>RankVelt focuses on genuine local relevance rather than shortcuts like duplicate city pages. That means real service-area pages, accurate citations, and a Google Business Profile that stays current instead of being set up once and forgotten.</p>
+  
+      <p>If your HVAC business has visibility but weak call volume, or no visibility at all, a focused review of your current setup is usually the fastest way to find what is actually holding you back. See RankVelt's <a href="/local-seo/hvac">HVAC SEO services</a> for how this works in practice.</p>
+  
+      <h2 id="faqs">Frequently Asked Questions</h2>
+  
+      <div class="faq-accordion">
+        <details>
+          <summary>What is SEO for HVAC companies?</summary>
+          <p>HVAC SEO is the process of improving a heating and cooling company's online visibility so it appears higher in Google search results and the Google Map Pack when local customers search for HVAC services.</p>
+        </details>
+  
+        <details>
+          <summary>How long does HVAC SEO take to show results?</summary>
+          <p>Most HVAC companies start seeing meaningful movement within three to six months. Highly competitive markets can take longer, while less competitive areas may show progress sooner.</p>
+        </details>
+  
+        <details>
+          <summary>How much does HVAC SEO cost?</summary>
+          <p>Pricing varies widely based on market competition and scope of work, but many HVAC SEO services fall between a few hundred and a few thousand dollars per month. The right number depends on your goals and current website condition.</p>
+        </details>
+  
+        <details>
+          <summary>Do HVAC companies really need local SEO?</summary>
+          <p>Yes. HVAC work is a local, urgent service, and most customers choose a company based on who appears first in local search results and Google Maps.</p>
+        </details>
+  
+        <details>
+          <summary>Can SEO help HVAC companies sell high-ticket replacements?</summary>
+          <p>Yes. System replacements and heat pump upgrades are high-value searches. Dedicated content for these services helps a company appear when homeowners research a replacement instead of a repair.</p>
+        </details>
+  
+        <details>
+          <summary>How does seasonality affect HVAC SEO?</summary>
+          <p>Search demand shifts between cooling and heating services depending on the season. A strong HVAC SEO strategy adjusts content and page priority to match what customers are searching for at that time of year.</p>
+        </details>
+      </div>
+    `,
+  },
 
   // Old articles Shopify
   
@@ -9379,314 +9674,7 @@ export const blogPosts: BlogPost[] = [
       </div>
     `,
   },
-  {
-    id: "hvac-seo-guide",
-  
-    title: "HVAC SEO: The Complete Guide to Ranking Locally in Every Season",
-  
-    seoTitle:
-      "HVAC SEO Guide 2026: Rank Higher & Get More Calls",
-  
-    metaDescription:
-      "A practical HVAC SEO guide covering local rankings, seasonal strategy, high-ticket replacements, and a step-by-step checklist for USA, UK, Canada and Australia contractors.",
-  
-    ogTitle:
-      "The Complete HVAC SEO Guide for More Calls in Every Season",
-  
-    socialDescription:
-      "Real HVAC SEO guidance covering local rankings, seasonal demand, high-ticket replacements, and a practical checklist you can use this week.",
-  
-    date: "Sep 17, 2026",
-    datePublished: "2026-09-17",
-    dateModified: "2026-09-17",
-  
-    author: "RankVelt Editorial Team",
-    authorType: "Organization",
-  
-    category: "LOCAL SEO",
-    readTime: "12 min read",
-  
-    image: "/blog/hvac-seo-guide.webp",
-  
-    imageAlt:
-      "HVAC SEO guide showing Google Business Profile, seasonal rankings and service pages for a heating and cooling company",
-  
-    excerpt:
-      "A complete HVAC SEO guide covering local rankings, Google Business Profile, seasonal search demand, high-ticket replacements, and a practical checklist for HVAC companies in the USA, UK, Canada and Australia.",
-  
-    relatedPostIds: [
-      "electrician-seo-guide",
-      "plumbing-seo-guide",
-      "local-seo-ai-overviews",
-    ],
-  
-    showStandardCta: true,
-  
-    faqItems: [
-      {
-        question: "What is SEO for HVAC companies?",
-        answer:
-          "HVAC SEO is the process of improving a heating and cooling company's online visibility so it appears higher in Google search results and the Google Map Pack when local customers search for HVAC services.",
-      },
-      {
-        question: "How long does HVAC SEO take to show results?",
-        answer:
-          "Most HVAC companies start seeing meaningful movement within three to six months. Highly competitive markets can take longer, while less competitive areas may show progress sooner.",
-      },
-      {
-        question: "How much does HVAC SEO cost?",
-        answer:
-          "Pricing varies widely based on market competition and scope of work, but many HVAC SEO services fall between a few hundred and a few thousand dollars per month. The right number depends on your goals and current website condition.",
-      },
-      {
-        question: "Do HVAC companies really need local SEO?",
-        answer:
-          "Yes. HVAC work is a local, urgent service, and most customers choose a company based on who appears first in local search results and Google Maps.",
-      },
-      {
-        question: "Can SEO help HVAC companies sell high-ticket replacements?",
-        answer:
-          "Yes. System replacements and heat pump upgrades are high-value searches. Dedicated content for these services helps a company appear when homeowners research a replacement instead of a repair.",
-      },
-      {
-        question: "How does seasonality affect HVAC SEO?",
-        answer:
-          "Search demand shifts between cooling and heating services depending on the season. A strong HVAC SEO strategy adjusts content and page priority to match what customers are searching for at that time of year.",
-      },
-    ],
-  
-    howTo: {
-      name: "How to Improve Local SEO for an HVAC Company",
-  
-      description:
-        "A six-step process for reviewing and improving an HVAC company's Google Business Profile, service pages, and local search visibility.",
-  
-      steps: [
-        {
-          name: "Audit your Google Business Profile",
-          text: "Check your business hours, service area, categories, and photos for accuracy.",
-        },
-        {
-          name: "Fix citation inconsistencies",
-          text: "Make sure your business name, address, and phone number match across every directory.",
-        },
-        {
-          name: "Build dedicated service pages",
-          text: "Create separate pages for repair, maintenance, and high-ticket replacement services.",
-        },
-        {
-          name: "Plan for seasonal demand",
-          text: "Prioritise cooling content before summer and heating content before winter.",
-        },
-        {
-          name: "Collect detailed reviews",
-          text: "Ask customers to mention the specific service and neighbourhood in their review.",
-        },
-        {
-          name: "Track calls and enquiries",
-          text: "Review call volume and form submissions monthly, not just keyword rankings.",
-        },
-      ],
-    },
-  
-    toc: [
-      { id: "what-is-hvac-seo", title: "What Is HVAC SEO?", level: 2 },
-      { id: "why-hvac-needs-seo", title: "Why HVAC Companies Need SEO", level: 2 },
-      { id: "how-local-seo-works", title: "How Local SEO Works for HVAC Companies", level: 2 },
-      { id: "core-parts", title: "The Core Parts of an HVAC SEO Strategy", level: 2 },
-      { id: "real-world-scenario", title: "A Real-World Scenario", level: 2 },
-      { id: "common-mistakes", title: "Common Mistakes HVAC Companies Make With SEO", level: 2 },
-      { id: "what-most-blogs-dont-tell-you", title: "What Most HVAC SEO Blogs Don't Tell You", level: 3 },
-      { id: "quick-wins", title: "5 Quick Wins to Improve HVAC SEO Fast", level: 2 },
-      { id: "expert-tips", title: "Expert Tips for Long-Term Growth", level: 2 },
-      { id: "checklist", title: "Actionable HVAC SEO Checklist", level: 2 },
-      { id: "rankvelt-approach", title: "How RankVelt Approaches HVAC SEO", level: 2 },
-      { id: "faqs", title: "Frequently Asked Questions", level: 2 },
-    ],
-  
-    content: `
-      <p class="article-updated"><strong>Last updated:</strong> September 2026</p>
-  
-      <div class="answer-box">
-        <p><strong>HVAC SEO</strong> is the process of improving a heating and cooling company's website and Google Business Profile so it ranks higher for local searches. It combines local SEO, service-page content, technical fixes, and reviews. The goal is simple: show up when a customer searches for heating or cooling help nearby.</p>
-      </div>
-  
-      <p>Most homeowners do not call an HVAC company they have never heard of. They search Google first. They check a few options fast. They call the one that looks trustworthy and close by.</p>
-  
-      <p>This guide covers what HVAC SEO actually means and how it works in practice. It also covers common mistakes and a checklist you can use right away. This guide applies to HVAC companies in the USA, UK, Canada, and Australia.</p>
-  
-      <h2 id="what-is-hvac-seo">What Is HVAC SEO?</h2>
-  
-      <p>HVAC SEO is the process of improving a heating and cooling company's website so it ranks higher on Google. It covers your Google Business Profile, your website content, your technical setup, and the links pointing to your site. The goal is to show up when local customers search for help.</p>
-  
-      <p>SEO is different from paid ads. Ads stop working the moment you stop paying. SEO builds visibility that keeps working over time, even on days you spend nothing. Most established HVAC companies treat SEO as a long-term asset, not a one-time task.</p>
-  
-      <h2 id="why-hvac-needs-seo">Why HVAC Companies Need SEO</h2>
-  
-      <p>HVAC demand is seasonal and urgent. When an air conditioner fails in summer or a furnace stops in winter, people do not browse casually. They search, compare a few options fast, and call one within minutes.</p>
-  
-      <p>This pattern holds true across the USA, UK, Canada, and Australia, though the exact seasons differ by hemisphere and climate. Local search comes first, reviews come second, and website trust comes third in every one of these markets.</p>
-  
-      <p>HVAC companies that invest in SEO consistently see more inbound calls without paying for every single lead. Over time, this lowers the cost of getting new customers compared to relying only on paid ads or lead-selling platforms.</p>
-  
-      <h2 id="how-local-seo-works">How Local SEO Works for HVAC Companies</h2>
-  
-      <p>Local SEO controls whether you appear in the Google Map Pack. This is the group of three business listings shown above regular search results. For HVAC companies, this is often the most valuable part of the whole strategy.</p>
-  
-      <p>Three things drive local rankings the most. These are your Google Business Profile accuracy, the number and quality of your reviews, and citation consistency across directories. Citations are simply your business name, address, and phone number listed the same way everywhere online.</p>
-  
-      <div class="answer-box">
-        <p><strong>Google Business Profile accuracy matters more than most HVAC companies realise.</strong> A profile with the wrong service area, an outdated phone number, or mismatched business hours actively hurts your ranking. Google rewards accuracy and consistency, and it quietly penalises confusion, even from a small typo.</p>
-      </div>
-  
-      <h2 id="core-parts">The Core Parts of an HVAC SEO Strategy</h2>
-  
-      <p>A complete HVAC SEO strategy has four working parts. Each part supports the others, so skipping one weakens the whole system.</p>
-  
-      <ul>
-        <li><strong>On-page SEO:</strong> Clear service pages for each major service, such as AC repair, furnace repair, and system replacement.</li>
-        <li><strong>Technical SEO:</strong> A fast, mobile-friendly website with clean site structure and no broken links.</li>
-        <li><strong>Content:</strong> Helpful blog posts and guides that answer real customer questions.</li>
-        <li><strong>Off-page SEO:</strong> Citations, backlinks, and reviews that build trust signals outside your own website.</li>
-      </ul>
-  
-      <h2 id="real-world-scenario">A Real-World Scenario</h2>
-  
-      <p>Picture a mid-sized HVAC company with a decent website but almost no SEO attention. Their Google Business Profile lists the wrong service radius. Their site has no dedicated page for system replacement, one of their highest-value services.</p>
-  
-      <p>After fixing the profile, adding service-specific pages, and collecting detailed reviews for three months, this kind of business typically sees a steady rise in Map Pack visibility for its core services. The change rarely happens overnight. It builds week by week as Google gains confidence in the business.</p>
-  
-      <h2 id="common-mistakes">Common Mistakes HVAC Companies Make With SEO</h2>
-  
-      <h3>Mistake 1: Ignoring the Google Business Profile</h3>
-      <p><strong>What it is:</strong> Many HVAC companies set up their profile once and never touch it again.</p>
-      <p><strong>Why it happens:</strong> Owners assume the profile runs itself once it is created.</p>
-      <p><strong>The impact:</strong> Outdated hours, missing photos, and old service lists quietly push you below competitors who stay active.</p>
-      <p><strong>The fix:</strong> Update your profile monthly. Add new photos, respond to reviews, and keep your service list current.</p>
-  
-      <h3>Mistake 2: Treating Every Season the Same Way</h3>
-      <p><strong>What it is:</strong> Keeping the same homepage and service focus all year round.</p>
-      <p><strong>Why it happens:</strong> It feels simpler to leave the website unchanged than to update it every few months.</p>
-      <p><strong>The impact:</strong> Search demand shifts sharply between cooling and heating seasons, so static content misses the exact moment customers are searching.</p>
-      <p><strong>The fix:</strong> Prioritise cooling content before summer and heating content before winter, and adjust homepage messaging to match.</p>
-  
-      <h3>Mistake 3: No Dedicated Page for System Replacements</h3>
-      <p><strong>What it is:</strong> Lumping high-ticket replacement work into a general "services" page.</p>
-      <p><strong>Why it happens:</strong> Replacement jobs feel like a natural extension of repair work.</p>
-      <p><strong>The impact:</strong> Homeowners researching a $8,000–$15,000 system replacement search differently than someone with a quick repair need, and a thin page fails to answer their specific questions.</p>
-      <p><strong>The fix:</strong> Build a dedicated page covering replacement options, efficiency ratings, and what to expect from the process.</p>
-  
-      <h3>Mistake 4: Generic Review Requests</h3>
-      <p><strong>What it is:</strong> Asking every customer for "a 5-star review" with no other guidance.</p>
-      <p><strong>Why it happens:</strong> It feels simple and non-intrusive.</p>
-      <p><strong>The impact:</strong> Vague reviews with no service or location details do little to support local rankings.</p>
-      <p><strong>The fix:</strong> Ask customers to briefly mention the service and their neighbourhood, such as "replaced our heat pump in [area] quickly."</p>
-  
-      <h3>Mistake 5: No Mobile Optimisation</h3>
-      <p><strong>What it is:</strong> A website that loads slowly or looks broken on a phone.</p>
-      <p><strong>Why it happens:</strong> The site was originally built for desktop and never fully tested on mobile.</p>
-      <p><strong>The impact:</strong> Most HVAC searches happen on phones, especially during emergencies. A slow or broken mobile site loses the call before it even starts.</p>
-      <p><strong>The fix:</strong> Test your site on a real phone regularly and fix slow-loading pages first.</p>
-  
-      <h3 id="what-most-blogs-dont-tell-you">What Most HVAC SEO Blogs Don't Tell You</h3>
-  
-      <p>Most HVAC SEO guides focus only on repair keywords and skip the high-ticket replacement side of the business entirely. This misses a large part of the search demand from homeowners researching a new system.</p>
-  
-      <div class="answer-box">
-        <p><strong>Brand-specific searches matter more than most guides admit.</strong> Homeowners often search for a specific brand, such as an authorised Trane, Carrier, Lennox, or Rheem repair provider. A website that clearly mentions the brands a company services has a better chance of matching that exact search.</p>
-      </div>
-  
-      <p>Another gap is proof of real, local work. Ten generic five-star reviews help less than three detailed reviews that mention a specific service and a specific neighbourhood, and real photos from completed jobs build more trust than stock images ever will.</p>
-  
-      <h2 id="quick-wins">5 Quick Wins to Improve HVAC SEO Fast</h2>
-  
-      <ol>
-        <li>Add your emergency phone number to every page header, not just the contact page.</li>
-        <li>Fix your Google Business Profile hours and service list this week.</li>
-        <li>Add real photos of your team and completed installations, not stock images.</li>
-        <li>Create a dedicated page for system replacement if you don't have one yet.</li>
-        <li>Reply to every review, good or bad, within 48 hours.</li>
-      </ol>
-  
-      <h2 id="expert-tips">Expert Tips for Long-Term Growth</h2>
-  
-      <p>Treat SEO as a twelve-month project, not a thirty-day sprint. Rankings for competitive terms usually build gradually. Sudden ranking jumps are rare and often temporary.</p>
-  
-      <p>Track calls and form submissions, not just rankings. A page can rank well and still convert poorly if the content does not answer the visitor's real question or make it easy to call.</p>
-  
-      <p class="standalone-line">Plan your content calendar around the seasons.</p>
-  
-      <p>Update your homepage and top service pages a few weeks before each season starts, not after the calls have already slowed down. Being early matters more than being reactive.</p>
-  
-      <h2 id="checklist">Actionable HVAC SEO Checklist</h2>
-  
-      <ul>
-        <li>Google Business Profile is fully filled out and updated monthly.</li>
-        <li>Each major service, including system replacement, has its own dedicated page.</li>
-        <li>Business name, address, and phone number match across all directories.</li>
-        <li>Website loads quickly on mobile devices.</li>
-        <li>Reviews mention specific services and neighbourhoods where possible.</li>
-        <li>Content is refreshed seasonally to match cooling and heating demand.</li>
-        <li>Schema markup is added to service and FAQ pages.</li>
-        <li>Rankings and call volume are reviewed monthly, not ignored.</li>
-      </ul>
-  
-      <h2 id="rankvelt-approach">How RankVelt Approaches HVAC SEO</h2>
-  
-      <p>Most HVAC SEO problems come down to the same root causes. These are an inconsistent Google Business Profile, thin service pages, and static content that ignores seasonal demand. Fixing these three things alone solves a large part of the visibility problem for most HVAC companies.</p>
-  
-      <p>RankVelt focuses on genuine local relevance rather than shortcuts like duplicate city pages. That means real service-area pages, accurate citations, and a Google Business Profile that stays current instead of being set up once and forgotten.</p>
-  
-      <p>If your HVAC business has visibility but weak call volume, or no visibility at all, a focused review of your current setup is usually the fastest way to find what is actually holding you back. See RankVelt's <a href="/local-seo/hvac">HVAC SEO services</a> for how this works in practice.</p>
-  
-      <h2 id="faqs">Frequently Asked Questions</h2>
-  
-      <div class="faq-accordion">
-        <details>
-          <summary>What is SEO for HVAC companies?</summary>
-          <p>HVAC SEO is the process of improving a heating and cooling company's online visibility so it appears higher in Google search results and the Google Map Pack when local customers search for HVAC services.</p>
-        </details>
-  
-        <details>
-          <summary>How long does HVAC SEO take to show results?</summary>
-          <p>Most HVAC companies start seeing meaningful movement within three to six months. Highly competitive markets can take longer, while less competitive areas may show progress sooner.</p>
-        </details>
-  
-        <details>
-          <summary>How much does HVAC SEO cost?</summary>
-          <p>Pricing varies widely based on market competition and scope of work, but many HVAC SEO services fall between a few hundred and a few thousand dollars per month. The right number depends on your goals and current website condition.</p>
-        </details>
-  
-        <details>
-          <summary>Do HVAC companies really need local SEO?</summary>
-          <p>Yes. HVAC work is a local, urgent service, and most customers choose a company based on who appears first in local search results and Google Maps.</p>
-        </details>
-  
-        <details>
-          <summary>Can SEO help HVAC companies sell high-ticket replacements?</summary>
-          <p>Yes. System replacements and heat pump upgrades are high-value searches. Dedicated content for these services helps a company appear when homeowners research a replacement instead of a repair.</p>
-        </details>
-  
-        <details>
-          <summary>How does seasonality affect HVAC SEO?</summary>
-          <p>Search demand shifts between cooling and heating services depending on the season. A strong HVAC SEO strategy adjusts content and page priority to match what customers are searching for at that time of year.</p>
-        </details>
-      </div>
-    `,
-  },
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 ];
 
