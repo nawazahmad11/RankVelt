@@ -23,6 +23,8 @@ const staticRoutes = [
 
   "/local-seo",
   "/local-seo/dentists",
+  "/local-seo/plumbers",
+  "/local-seo/electricians",
   "/ecommerce-seo",
   "/business-seo",
 

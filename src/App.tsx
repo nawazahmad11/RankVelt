@@ -35,6 +35,13 @@ const LocalSEODentists = lazy(
 const LocalSEOPlumbers = lazy(
   () => import("./pages/services/LocalSEOPlumbers"),
 );
+
+const LocalSEOElectricians = lazy(
+  () => import("./pages/services/LocalSEOElectricians"),
+);
+
+
+
 /*
  * Lead funnel pages
  */
@@ -266,6 +273,13 @@ const App = () => (
   path="/local-seo/plumbers"
   element={<LocalSEOPlumbers />}
 />
+
+<Route
+  path="/local-seo/electricians"
+  element={<LocalSEOElectricians />}
+/>
+
+
 
             {/* Tools */}
             <Route

@@ -51,6 +51,13 @@ const staticPageMeta: Record<string, RouteMeta> = {
     "RankVelt provides plumbing SEO services that improve Google Maps visibility, local rankings, citations, reviews and call volume for plumbing companies.",
 },
 
+"/local-seo/electricians": {
+  title: "Electrician SEO Services | Local SEO for Electricians | RankVelt",
+  description:
+    "RankVelt provides electrician SEO services that improve Google Maps visibility, local rankings, citations, reviews and call volume for electrical contractors.",
+},
+
+
   "/blog": {
     title: "RankVelt Insights | SEO, eCommerce & Website Growth",
     description:

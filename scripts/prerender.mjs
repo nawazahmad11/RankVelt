@@ -13,6 +13,10 @@ const routes = [
 "/blog/plumbing-seo-guide",
 
 
+"/local-seo/electricians",
+"/blog/electrician-seo-guide",
+
+
   "/ecommerce-seo",
   "/business-seo",
   "/blog",
