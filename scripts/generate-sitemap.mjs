@@ -25,6 +25,9 @@ const staticRoutes = [
   "/local-seo/dentists",
   "/local-seo/plumbers",
   "/local-seo/electricians",
+  "/local-seo/hvac",
+
+
   "/ecommerce-seo",
   "/business-seo",
 

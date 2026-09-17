@@ -56,6 +56,13 @@ const staticPageMeta: Record<string, RouteMeta> = {
   description:
     "RankVelt provides electrician SEO services that improve Google Maps visibility, local rankings, citations, reviews and call volume for electrical contractors.",
 },
+"/local-seo/hvac": {
+  title: "HVAC SEO Services | Local SEO for Heating & Cooling | RankVelt",
+  description:
+    "RankVelt provides HVAC SEO services that improve Google Maps visibility, local rankings, citations, reviews and call volume for heating and cooling companies.",
+},
+
+
 
 
   "/blog": {

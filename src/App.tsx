@@ -40,6 +40,10 @@ const LocalSEOElectricians = lazy(
   () => import("./pages/services/LocalSEOElectricians"),
 );
 
+const LocalSEOHvac = lazy(
+  () => import("./pages/services/LocalSEOHvac"),
+);
+
 
 
 /*
@@ -277,6 +281,11 @@ const App = () => (
 <Route
   path="/local-seo/electricians"
   element={<LocalSEOElectricians />}
+/>
+
+<Route
+  path="/local-seo/hvac"
+  element={<LocalSEOHvac />}
 />
 
 
