@@ -8773,6 +8773,303 @@ export const blogPosts: BlogPost[] = [
     `,
   },
 
+  {
+    id: "law-firm-seo-guide",
+  
+    title: "Law Firm SEO: The Complete Guide to Getting Found by the Right Clients",
+  
+    seoTitle:
+      "Law Firm SEO Guide 2026: Rank Higher & Get More Enquiries",
+  
+    metaDescription:
+      "A practical law firm SEO guide covering local rankings, E-E-A-T, practice-area pages, and a step-by-step checklist for USA, UK, Canada and Australia firms.",
+  
+    ogTitle:
+      "The Complete Law Firm SEO Guide for More Client Enquiries",
+  
+    socialDescription:
+      "Real law firm SEO guidance covering local rankings, E-E-A-T, practice-area pages, and a practical checklist you can use this week.",
+  
+    date: "Sep 17, 2026",
+    datePublished: "2026-09-17",
+    dateModified: "2026-09-17",
+  
+    author: "RankVelt Editorial Team",
+    authorType: "Organization",
+  
+    category: "LOCAL SEO",
+    readTime: "12 min read",
+  
+    image: "/blog/law-firm-seo-guide.webp",
+  
+    imageAlt:
+      "Law firm SEO guide showing Google Business Profile, practice-area pages and local rankings for a legal practice",
+  
+    excerpt:
+      "A complete law firm SEO guide covering local rankings, E-E-A-T, practice-area pages, common mistakes, and a practical checklist for law firms in the USA, UK, Canada and Australia.",
+  
+    relatedPostIds: [
+      "hvac-seo-guide",
+      "local-seo-ai-overviews",
+      "seo-vs-aeo-vs-geo",
+    ],
+  
+    showStandardCta: true,
+  
+    faqItems: [
+      {
+        question: "What is SEO for law firms?",
+        answer:
+          "Law firm SEO is the process of improving a legal practice's online visibility so it appears higher in Google search results and the Google Map Pack when potential clients search for legal help.",
+      },
+      {
+        question: "How long does law firm SEO take to show results?",
+        answer:
+          "Most law firms start seeing meaningful movement within four to eight months. Competitive practice areas, such as personal injury, can take longer, while niche practice areas may show progress sooner.",
+      },
+      {
+        question: "How much does law firm SEO cost?",
+        answer:
+          "Pricing varies widely based on practice area competitiveness and scope of work, but many law firm SEO services fall between a few hundred and several thousand dollars per month. The right number depends on your goals and current website condition.",
+      },
+      {
+        question: "Do law firms really need local SEO?",
+        answer:
+          "Yes. Most clients start their search for a lawyer on Google, and local SEO determines whether your firm appears in the Map Pack and local search results for your practice areas.",
+      },
+      {
+        question: "What is E-E-A-T and why does it matter for law firms?",
+        answer:
+          "E-E-A-T stands for Experience, Expertise, Authoritativeness, and Trustworthiness. Google applies stricter standards to legal content because it can affect a person's rights and finances, so clear author credentials and accurate information matter more for law firms than for many other industries.",
+      },
+      {
+        question: "Can I do law firm SEO myself?",
+        answer:
+          "Basic steps, like updating your Google Business Profile and publishing accurate practice-area pages, can be done in-house. Technical work and content strategy across multiple practice areas usually benefits from experienced help.",
+      },
+    ],
+  
+    howTo: {
+      name: "How to Improve Local SEO for a Law Firm",
+  
+      description:
+        "A six-step process for reviewing and improving a law firm's Google Business Profile, practice-area pages, and local search visibility.",
+  
+      steps: [
+        {
+          name: "Audit your Google Business Profile",
+          text: "Check your business hours, practice areas, attorney profiles, and photos for accuracy.",
+        },
+        {
+          name: "Fix citation inconsistencies",
+          text: "Make sure your firm name, address, and phone number match across every legal directory.",
+        },
+        {
+          name: "Build dedicated practice-area pages",
+          text: "Create a separate, detailed page for each practice area instead of one generic services page.",
+        },
+        {
+          name: "Add clear author and credential information",
+          text: "Show attorney bios, bar admissions, and relevant experience on every practice-area page.",
+        },
+        {
+          name: "Collect detailed reviews",
+          text: "Ask satisfied clients to mention the type of matter handled, where appropriate and permitted.",
+        },
+        {
+          name: "Track enquiries, not just traffic",
+          text: "Review qualified enquiries and consultations booked monthly, not just keyword rankings.",
+        },
+      ],
+    },
+  
+    toc: [
+      { id: "what-is-law-firm-seo", title: "What Is Law Firm SEO?", level: 2 },
+      { id: "why-law-firms-need-seo", title: "Why Law Firms Need SEO", level: 2 },
+      { id: "how-local-seo-works", title: "How Local SEO Works for Law Firms", level: 2 },
+      { id: "core-parts", title: "The Core Parts of a Law Firm SEO Strategy", level: 2 },
+      { id: "real-world-scenario", title: "A Real-World Scenario", level: 2 },
+      { id: "common-mistakes", title: "Common Mistakes Law Firms Make With SEO", level: 2 },
+      { id: "what-most-blogs-dont-tell-you", title: "What Most Law Firm SEO Blogs Don't Tell You", level: 3 },
+      { id: "quick-wins", title: "5 Quick Wins to Improve Law Firm SEO Fast", level: 2 },
+      { id: "expert-tips", title: "Expert Tips for Long-Term Growth", level: 2 },
+      { id: "checklist", title: "Actionable Law Firm SEO Checklist", level: 2 },
+      { id: "rankvelt-approach", title: "How RankVelt Approaches Law Firm SEO", level: 2 },
+      { id: "faqs", title: "Frequently Asked Questions", level: 2 },
+    ],
+  
+    content: `
+      <p class="article-updated"><strong>Last updated:</strong> September 2026</p>
+  
+      <div class="answer-box">
+        <p><strong>Law firm SEO</strong> is the process of improving a legal practice's website and Google Business Profile so it ranks higher for relevant searches. It combines local SEO, practice-area content, technical fixes, and trust signals. The goal is simple: show up when someone searches for a lawyer who can help them.</p>
+      </div>
+  
+      <p>Most people do not hire a lawyer they have never heard of. They search Google first. They check a few firms fast. They contact the one that looks credible, relevant to their situation, and easy to reach.</p>
+  
+      <p>This guide covers what law firm SEO actually means and how it works in practice. It also covers common mistakes and a checklist you can use right away. This guide applies to law firms in the USA, UK, Canada, and Australia.</p>
+  
+      <h2 id="what-is-law-firm-seo">What Is Law Firm SEO?</h2>
+  
+      <p>Law firm SEO is the process of improving a legal practice's website so it ranks higher on Google. It covers your Google Business Profile, your website content, your technical setup, and the credibility signals search engines look for. The goal is to show up when potential clients search for help.</p>
+  
+      <p>SEO is different from paid ads. Ads stop working the moment you stop paying. SEO builds visibility that keeps working over time, even on days you spend nothing. Most established law firms treat SEO as a long-term asset, not a one-time task.</p>
+  
+      <h2 id="why-law-firms-need-seo">Why Law Firms Need SEO</h2>
+  
+      <p>Legal problems are often stressful and time-sensitive. When someone needs a lawyer, they usually search with a specific situation in mind, such as a car accident, a divorce, or a business dispute. They rarely browse casually.</p>
+  
+      <p>This pattern holds true across the USA, UK, Canada, and Australia, though legal terminology and directory names differ by country. Local search comes first, credibility signals come second, and website clarity comes third in every one of these markets.</p>
+  
+      <p>Law firms that invest in SEO consistently receive more qualified enquiries without paying for every single lead. Over time, this can lower the cost of acquiring new clients compared to relying only on paid ads or lead-referral services.</p>
+  
+      <h2 id="how-local-seo-works">How Local SEO Works for Law Firms</h2>
+  
+      <p>Local SEO controls whether you appear in the Google Map Pack. This is the group of three business listings shown above regular search results. For firms serving a specific city or region, this is often the most valuable part of the whole strategy.</p>
+  
+      <p>Three things drive local rankings the most. These are your Google Business Profile accuracy, the number and quality of your reviews, and citation consistency across legal directories. Citations are simply your firm name, address, and phone number listed the same way everywhere online.</p>
+  
+      <div class="answer-box">
+        <p><strong>Google Business Profile accuracy matters more than most firms realise.</strong> A profile with the wrong practice areas listed, an outdated phone number, or mismatched office hours actively hurts your ranking. Google rewards accuracy and consistency, and it quietly penalises confusion, even from a small typo.</p>
+      </div>
+  
+      <h2 id="core-parts">The Core Parts of a Law Firm SEO Strategy</h2>
+  
+      <p>A complete law firm SEO strategy has four working parts. Each part supports the others, so skipping one weakens the whole system.</p>
+  
+      <ul>
+        <li><strong>On-page SEO:</strong> A dedicated page for each practice area, such as personal injury, family law, or estate planning.</li>
+        <li><strong>Technical SEO:</strong> A fast, mobile-friendly website with clean site structure and no broken links.</li>
+        <li><strong>Content and E-E-A-T:</strong> Clear author credentials, accurate legal information, and content written or reviewed by qualified attorneys.</li>
+        <li><strong>Off-page SEO:</strong> Citations, legal directory listings, and reviews that build trust signals outside your own website.</li>
+      </ul>
+  
+      <h2 id="real-world-scenario">A Real-World Scenario</h2>
+  
+      <p>Picture a mid-sized firm with a decent website but almost no SEO attention. Their Google Business Profile lists only one practice area, even though the firm handles several. Their site has one generic "practice areas" page instead of dedicated pages for each matter type.</p>
+  
+      <p>After fixing the profile, building dedicated practice-area pages, and adding clear attorney credentials for three to four months, this kind of firm typically sees a steady rise in visibility for its core practice areas. The change rarely happens overnight. It builds gradually as Google gains confidence in the firm's content and authority.</p>
+  
+      <h2 id="common-mistakes">Common Mistakes Law Firms Make With SEO</h2>
+  
+      <h3>Mistake 1: Ignoring the Google Business Profile</h3>
+      <p><strong>What it is:</strong> Many firms set up their profile once and never touch it again.</p>
+      <p><strong>Why it happens:</strong> Owners assume the profile runs itself once it is created.</p>
+      <p><strong>The impact:</strong> Outdated hours, missing practice areas, and old attorney information quietly push you below competitors who stay active.</p>
+      <p><strong>The fix:</strong> Update your profile regularly. Keep practice areas, attorney details, and hours current.</p>
+  
+      <h3>Mistake 2: One Generic Practice Areas Page</h3>
+      <p><strong>What it is:</strong> A single "Practice Areas" page listing everything in a few bullet points.</p>
+      <p><strong>Why it happens:</strong> It feels faster than writing a dedicated page for each matter type.</p>
+      <p><strong>The impact:</strong> Google cannot match a thin, generic page to a specific search like "car accident lawyer" as well as a focused page built for that exact practice area.</p>
+      <p><strong>The fix:</strong> Create a separate, detailed page for each practice area, written around the questions that specific client actually has.</p>
+  
+      <h3>Mistake 3: Weak Author and Credential Signals</h3>
+      <p><strong>What it is:</strong> Publishing legal content with no visible author, credentials, or bar admission details.</p>
+      <p><strong>Why it happens:</strong> Content is often outsourced to writers without legal review or clear attribution.</p>
+      <p><strong>The impact:</strong> Legal content falls under Google's stricter YMYL standards, so weak credibility signals can limit how well a page performs, regardless of how well it is written.</p>
+      <p><strong>The fix:</strong> Attribute content to a named attorney, include bar admissions, and have qualified staff review published material.</p>
+  
+      <h3>Mistake 4: Generic Review Requests</h3>
+      <p><strong>What it is:</strong> Asking every client for "a 5-star review" with no other guidance.</p>
+      <p><strong>Why it happens:</strong> It feels simple and, in a sensitive industry, less intrusive.</p>
+      <p><strong>The impact:</strong> Vague reviews with no practice-area or location detail do less to support relevant local rankings.</p>
+      <p><strong>The fix:</strong> Where appropriate and within advertising rules, encourage clients to mention the type of matter handled and their general location.</p>
+  
+      <h3>Mistake 5: No Mobile Optimisation</h3>
+      <p><strong>What it is:</strong> A website that loads slowly or looks broken on a phone.</p>
+      <p><strong>Why it happens:</strong> The site was originally built for desktop and never fully tested on mobile.</p>
+      <p><strong>The impact:</strong> Most people research a lawyer on their phone first. A slow or broken mobile site loses the enquiry before it even starts.</p>
+      <p><strong>The fix:</strong> Test your site on a real phone regularly and fix slow-loading pages first.</p>
+  
+      <h3 id="what-most-blogs-dont-tell-you">What Most Law Firm SEO Blogs Don't Tell You</h3>
+  
+      <p>Most law firm SEO guides focus only on traditional Google rankings. They rarely explain how AI answer engines, like ChatGPT Search, Gemini, and Perplexity, are becoming a new discovery channel for legal help.</p>
+  
+      <div class="answer-box">
+        <p><strong>AI answer engines favour clear, well-sourced content over generic marketing copy.</strong> A firm with well-organised practice-area pages, accurate FAQs, and visible credentials has a better chance of being referenced when someone asks an AI assistant for guidance on finding a lawyer.</p>
+      </div>
+  
+      <p>Another gap is measuring the wrong thing. Traffic and rankings are useful signals, but a firm's real interest is qualified enquiries and retained matters. A page that ranks well but attracts the wrong type of client is not actually succeeding, even if the traffic numbers look strong.</p>
+  
+      <h2 id="quick-wins">5 Quick Wins to Improve Law Firm SEO Fast</h2>
+  
+      <ol>
+        <li>Add a clear, visible phone number and consultation request option to every page header.</li>
+        <li>Fix your Google Business Profile hours and practice-area list this week.</li>
+        <li>Add real attorney photos and short bios, not stock images.</li>
+        <li>Create one dedicated page for your highest-demand practice area if you don't have one yet.</li>
+        <li>Respond to every review professionally, in line with your bar's advertising rules.</li>
+      </ol>
+  
+      <h2 id="expert-tips">Expert Tips for Long-Term Growth</h2>
+  
+      <p>Treat SEO as a twelve-month project, not a thirty-day sprint. Rankings for competitive practice areas usually build gradually, and sudden ranking jumps are rare and often temporary.</p>
+  
+      <p>Track qualified enquiries and consultations, not just rankings. A page can rank well and still convert poorly if the content does not address the visitor's specific legal question or make it easy to get in touch.</p>
+  
+      <p class="standalone-line">Keep practice-area pages accurate as your firm changes.</p>
+  
+      <p>If an attorney leaves, joins, or a practice area is added, update the relevant pages the same month, not months later. Outdated legal information can affect both trust and rankings.</p>
+  
+      <h2 id="checklist">Actionable Law Firm SEO Checklist</h2>
+  
+      <ul>
+        <li>Google Business Profile is fully filled out and updated regularly.</li>
+        <li>Each practice area has its own dedicated, detailed page.</li>
+        <li>Firm name, address, and phone number match across all legal directories.</li>
+        <li>Website loads quickly on mobile devices.</li>
+        <li>Attorney bios, credentials, and bar admissions are visible on relevant pages.</li>
+        <li>Reviews are collected in line with applicable advertising and bar rules.</li>
+        <li>Schema markup is added to practice-area and FAQ pages.</li>
+        <li>Enquiries and consultations are reviewed monthly, not just rankings.</li>
+      </ul>
+  
+      <h2 id="rankvelt-approach">How RankVelt Approaches Law Firm SEO</h2>
+  
+      <p>Most law firm SEO problems come down to the same root causes. These are an inconsistent Google Business Profile, thin practice-area pages, and weak credibility signals. Fixing these three things alone solves a large part of the visibility problem for most firms.</p>
+  
+      <p>RankVelt focuses on genuine local relevance and clear practice-area structure rather than shortcuts like duplicate city pages. That means real practice-area pages, accurate citations, and a Google Business Profile that stays current instead of being set up once and forgotten.</p>
+  
+      <p>If your firm has visibility but weak enquiry volume, or no visibility at all, a focused review of your current setup is usually the fastest way to find what is actually holding you back. See RankVelt's <a href="/local-seo/lawyers">law firm SEO services</a> for how this works in practice.</p>
+  
+      <h2 id="faqs">Frequently Asked Questions</h2>
+  
+      <div class="faq-accordion">
+        <details>
+          <summary>What is SEO for law firms?</summary>
+          <p>Law firm SEO is the process of improving a legal practice's online visibility so it appears higher in Google search results and the Google Map Pack when potential clients search for legal help.</p>
+        </details>
+  
+        <details>
+          <summary>How long does law firm SEO take to show results?</summary>
+          <p>Most law firms start seeing meaningful movement within four to eight months. Competitive practice areas, such as personal injury, can take longer, while niche practice areas may show progress sooner.</p>
+        </details>
+  
+        <details>
+          <summary>How much does law firm SEO cost?</summary>
+          <p>Pricing varies widely based on practice area competitiveness and scope of work, but many law firm SEO services fall between a few hundred and several thousand dollars per month. The right number depends on your goals and current website condition.</p>
+        </details>
+  
+        <details>
+          <summary>Do law firms really need local SEO?</summary>
+          <p>Yes. Most clients start their search for a lawyer on Google, and local SEO determines whether your firm appears in the Map Pack and local search results for your practice areas.</p>
+        </details>
+  
+        <details>
+          <summary>What is E-E-A-T and why does it matter for law firms?</summary>
+          <p>E-E-A-T stands for Experience, Expertise, Authoritativeness, and Trustworthiness. Google applies stricter standards to legal content because it can affect a person's rights and finances, so clear author credentials and accurate information matter more for law firms than for many other industries.</p>
+        </details>
+  
+        <details>
+          <summary>Can I do law firm SEO myself?</summary>
+          <p>Basic steps, like updating your Google Business Profile and publishing accurate practice-area pages, can be done in-house. Technical work and content strategy across multiple practice areas usually benefits from experienced help.</p>
+        </details>
+      </div>
+    `,
+  },
+  
+
   // Old articles Shopify
   
   {

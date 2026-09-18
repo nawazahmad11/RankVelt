@@ -62,6 +62,12 @@ const staticPageMeta: Record<string, RouteMeta> = {
     "RankVelt provides HVAC SEO services that improve Google Maps visibility, local rankings, citations, reviews and call volume for heating and cooling companies.",
 },
 
+"/local-seo/lawyers": {
+  title: "Law Firm SEO Services | Local SEO for Lawyers | RankVelt",
+  description:
+    "RankVelt provides law firm SEO services that improve Google Maps visibility, local rankings, citations, reviews and qualified enquiries for legal practices.",
+},
+
 
 
 

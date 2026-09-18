@@ -9,14 +9,17 @@ const routes = [
   "/",
   "/local-seo",
   "/local-seo/dentists",
-"/local-seo/plumbers",
-"/blog/plumbing-seo-guide",
+  "/local-seo/plumbers",
+  "/blog/plumbing-seo-guide",
 
 
-"/local-seo/electricians",
-"/blog/electrician-seo-guide",
-"/local-seo/hvac",
-"/blog/hvac-seo-guide",
+  "/local-seo/electricians",
+  "/blog/electrician-seo-guide",
+  "/local-seo/hvac",
+  "/blog/hvac-seo-guide",
+
+  "/local-seo/lawyers",
+  "/blog/law-firm-seo-guide",
 
 
   "/ecommerce-seo",

@@ -42,6 +42,10 @@ const LocalSEOElectricians = lazy(
 
 const LocalSEOHvac = lazy(
   () => import("./pages/services/LocalSEOHvac"),
+); 
+
+const LocalSEOLawyers = lazy(
+  () => import("./pages/services/LocalSEOLawyers"),
 );
 
 
@@ -288,6 +292,10 @@ const App = () => (
   element={<LocalSEOHvac />}
 />
 
+<Route
+  path="/local-seo/lawyers"
+  element={<LocalSEOLawyers />}
+/>
 
 
             {/* Tools */}
