@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import {
   ChevronDown,
   Globe,
@@ -9,7 +8,6 @@ import {
   ShieldCheck,
   TrendingUp,
 } from "lucide-react";
-import * as Accordion from "@radix-ui/react-accordion";
 
 const faqs = [
   {
@@ -75,7 +73,6 @@ const FAQSection = () => {
               <p className="mt-6 text-lg font-light text-white/60">
                 Need clarity around your website, SEO, or growth priorities?
                 <br />
-
                 <a
                   href="https://wa.me/923244146447?text=Hi%20RankVelt%2C%20I%20have%20a%20question%20about%20SEO%20services."
                   target="_blank"
@@ -88,38 +85,33 @@ const FAQSection = () => {
             </div>
           </div>
 
-          <div className="lg:w-2/3">
-            <Accordion.Root type="single" collapsible className="space-y-4">
-              {faqs.map((faq, index) => (
-                <Accordion.Item
-                  key={faq.question}
-                  value={`item-${index}`}
-                  className="glass-card overflow-hidden border border-white/5 transition-all duration-300 data-[state=open]:border-primary/30"
-                >
-                  <Accordion.Header>
-                    <Accordion.Trigger className="group flex w-full items-center justify-between p-6 text-left">
-                      <div className="flex items-center gap-4">
-                        <div className="flex size-8 items-center justify-center rounded-lg bg-white/5 text-primary transition-colors group-data-[state=open]:bg-primary group-data-[state=open]:text-black">
-                          {faq.icon}
-                        </div>
-
-                        <span className="text-lg font-semibold text-white">
-                          {faq.question}
-                        </span>
-                      </div>
-
-                      <ChevronDown className="h-5 w-5 shrink-0 text-white/40 transition-transform group-data-[state=open]:rotate-180 group-data-[state=open]:text-primary" />
-                    </Accordion.Trigger>
-                  </Accordion.Header>
-
-                  <Accordion.Content className="animate-accordion-down px-6 pb-6 font-light leading-relaxed text-white/60">
-                    <div className="border-t border-white/5 pt-4">
-                      {faq.answer}
+          <div className="lg:w-2/3 space-y-4">
+            {faqs.map((faq) => (
+              <details
+                key={faq.question}
+                className="group glass-card overflow-hidden border border-white/5 transition-all duration-300 [&[open]]:border-primary/30"
+              >
+                <summary className="flex cursor-pointer select-none items-center justify-between p-6 list-none [&::-webkit-details-marker]:hidden">
+                  <div className="flex items-center gap-4">
+                    <div className="flex size-8 items-center justify-center rounded-lg bg-white/5 text-primary transition-colors group-open:bg-primary group-open:text-black">
+                      {faq.icon}
                     </div>
-                  </Accordion.Content>
-                </Accordion.Item>
-              ))}
-            </Accordion.Root>
+
+                    <span className="text-lg font-semibold text-white">
+                      {faq.question}
+                    </span>
+                  </div>
+
+                  <ChevronDown className="h-5 w-5 shrink-0 text-white/40 transition-transform duration-300 group-open:rotate-180 group-open:text-primary" />
+                </summary>
+
+                <div className="px-6 pb-6 font-light leading-relaxed text-white/60">
+                  <div className="border-t border-white/5 pt-4">
+                    {faq.answer}
+                  </div>
+                </div>
+              </details>
+            ))}
           </div>
         </div>
       </div>
