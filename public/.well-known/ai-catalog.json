@@ -1,0 +1,16 @@
+{
+    "specVersion": "1.0",
+    "host": {
+      "displayName": "RankVelt",
+      "identifier": "rankvelt.com"
+    },
+    "entries": [
+      {
+        "identifier": "urn:ai:rankvelt.com:knowledge:llms-txt",
+        "displayName": "RankVelt knowledge index (llms.txt)",
+        "type": "text/plain",
+        "url": "https://rankvelt.com/llms.txt",
+        "description": "Curated index of RankVelt's SEO services, industry-specific local SEO pages, and blog guides, formatted for AI agents and answer engines."
+      }
+    ]
+  }

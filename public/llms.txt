@@ -1,0 +1,24 @@
+# RankVelt
+
+> RankVelt is an SEO and web growth studio helping local businesses, eCommerce brands, and growing companies improve Google visibility through Local SEO, eCommerce SEO, Business SEO, technical SEO, and search-ready website design.
+
+## Services
+- [Local SEO](https://rankvelt.com/local-seo)
+- [eCommerce SEO](https://rankvelt.com/ecommerce-seo)
+- [Business SEO](https://rankvelt.com/business-seo)
+
+## Industry-Specific Local SEO
+- [Dental SEO](https://rankvelt.com/local-seo/dentists)
+- [Plumbing SEO](https://rankvelt.com/local-seo/plumbers)
+- [Electrician SEO](https://rankvelt.com/local-seo/electricians)
+- [HVAC SEO](https://rankvelt.com/local-seo/hvac)
+- [Law Firm SEO](https://rankvelt.com/local-seo/lawyers)
+
+## Resources
+- [Blog](https://rankvelt.com/blog)
+- [Case Studies](https://rankvelt.com/case-studies)
+- [Free SEO Tools](https://rankvelt.com/tools)
+
+## Contact
+- Website: https://rankvelt.com
+- Email: info@rankvelt.com
