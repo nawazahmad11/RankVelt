@@ -852,13 +852,13 @@ Learn More
 </div>
 </section>
 
-<div id="portfolio" className="relative z-20 scroll-mt-28">
+{/* <div id="portfolio" className="relative z-20 scroll-mt-28">
 <Suspense fallback={<div className="min-h-[400px]" aria-hidden="true" />}>
 <PortfolioSection
 onProjectSelect={(id) => setActiveProjectId(id)}
 />
 </Suspense>
-</div>
+</div> */}
 
 <Suspense fallback={null}>
 {activeProjectId && (
