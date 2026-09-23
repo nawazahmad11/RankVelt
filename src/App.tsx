@@ -15,11 +15,18 @@ import {
 } from "react-router-dom";
 
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+// import Footer from "@/components/Footer";
+const Footer = lazy(() => import("@/components/Footer"));
+
+
 import ScrollToTop from "./components/ScrollToTop";
 import RouteSeoManager from "./components/RouteSeoManager";
-import AuditPopup from "./components/AuditPopup";
-import WhatsAppButton from "./components/WhatsAppButton";
+// import AuditPopup from "./components/AuditPopup";
+// import WhatsAppButton from "./components/WhatsAppButton";
+const AuditPopup = lazy(() => import("./components/AuditPopup"));
+const WhatsAppButton = lazy(() => import("./components/WhatsAppButton"));
+
+
 
 /*
  * Homepage ko normal import rakha hai.
