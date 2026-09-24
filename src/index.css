@@ -303,8 +303,14 @@ div[data-framer-name],
   will-change: transform, opacity;
 }
 
-/* Scroll flickering & unexpected layout shift fix */
+/* --- FIX: Restructured Scroll & Viewport Properties --- */
 html, body {
   overflow-x: hidden;
-  overscroll-behavior-y: none;
+  overflow-y: auto;
+  overscroll-behavior-y: auto;
+}
+
+#root {
+  min-height: 100vh;
+  overflow-x: hidden;
 }
