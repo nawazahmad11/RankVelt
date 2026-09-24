@@ -1,4 +1,4 @@
-import { LazyMotion, domAnimation, m } from "framer-motion";
+import { LazyMotion, domAnimation, m, type Variants } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import {
   ArrowRight,
@@ -26,21 +26,21 @@ const AuditSection = lazy(() => import("@/components/AuditSection"));
 const BlogSection = lazy(() => import("@/components/BlogSection"));
 const FAQSection = lazy(() => import("@/components/FAQSection"));
 
-// Lightweight Mobile-friendly Animations
-const fadeInUp = {
+// Correctly typed Framer Motion Variants
+const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 15 },
   visible: (index: number) => ({
     opacity: 1,
     y: 0,
     transition: {
-      delay: index * 0.05,
+      delay: typeof index === "number" ? index * 0.05 : 0,
       duration: 0.4,
       ease: "easeOut",
     },
   }),
 };
 
-const staggerContainer = {
+const staggerContainer: Variants = {
   hidden: {},
   visible: {
     transition: {
@@ -524,7 +524,7 @@ const FunnelStep1 = () => {
           </div>
         </section>
 
-        {/* PROBLEM SECTION (Fixed Section where issue happened) */}
+        {/* PROBLEM SECTION */}
         <section className="relative z-20 pb-10 pt-16">
           <div className="section-container">
             <m.div
@@ -902,7 +902,7 @@ const FunnelStep1 = () => {
           </Suspense>
         </div>
 
-        {/* FINAL CTA */}
+        {/* FINAL CTA SECTION */}
         <section id="final-cta" className="radial-glow relative z-20 py-24">
           <div className="section-container relative z-10 text-center">
             <m.div
