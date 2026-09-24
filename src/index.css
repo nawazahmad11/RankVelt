@@ -294,14 +294,21 @@
 }
 
 /* --- FIX: Force Hardware Acceleration on Mobile Viewport --- */
-section, 
+
+
+/* --- FIX: Hardware acceleration only for elements that animate continuously --- */
+.animate-left,
+.animate-right {
+  will-change: transform;
+}
+/* section, 
 div[data-framer-name],
 .radial-glow {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transform: translateZ(0);
   will-change: transform, opacity;
-}
+} */
 
 /* --- FIX: Restructured Scroll & Viewport Properties --- */
 html, body {
