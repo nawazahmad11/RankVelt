@@ -123,16 +123,26 @@
   }
 }
 
-
-
 @layer components {
+  /* --- FIX: Mobile Glassmorphism Lag & Canvas Blank Issue --- */
   .glass-card {
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     box-shadow: var(--glass-shadow);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
     border-radius: var(--radius);
+    
+    /* Hardware Acceleration to prevent scroll glitches */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+  }
+
+  /* Desktop/Laptops par Blur apply hoga, Mobile par heavy Blur disable kardiya */
+  @media (min-width: 768px) {
+    .glass-card {
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
   }
 
   .gradient-cta {
@@ -281,4 +291,20 @@
   background: radial-gradient(circle at center, transparent 40%, rgba(0, 0, 0, 0.7) 100%);
   pointer-events: none;
   z-index: 10;
+}
+
+/* --- FIX: Force Hardware Acceleration on Mobile Viewport --- */
+section, 
+div[data-framer-name],
+.radial-glow {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  will-change: transform, opacity;
+}
+
+/* Scroll flickering & unexpected layout shift fix */
+html, body {
+  overflow-x: hidden;
+  overscroll-behavior-y: none;
 }

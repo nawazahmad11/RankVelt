@@ -320,36 +320,6 @@ return (
 <div className="relative min-h-screen overflow-hidden bg-background pt-16">
 <div className="pointer-events-none absolute inset-0 bg-black/60" />
 
-{/* <div className="pointer-events-none absolute inset-0 z-10 hidden md:block overflow-hidden"> */}
-{/* <div className="pointer-events-none absolute inset-0 z-10 hidden md:block">
- <FloatingIcon
- iconUrl="/nawaz-builds-icon-google.webp"
- altText="Google Search"
- positionClass="top-[10%] left-[4%] md:left-[8%] md:top-[15%]"
- delay="0s"
- />
-
- <FloatingIcon
- iconUrl="/nawaz-builds-icon-shopify.webp"
- altText="Shopify"
- positionClass="top-[15%] right-[4%] md:right-[8%] md:top-[22%]"
- delay="2.5s"
- />
-
- <FloatingIcon
- iconUrl="/nawaz-builds-icon-react.webp"
- altText="SEO-ready websites"
- positionClass="bottom-[20%] left-[5%] md:bottom-[28%] md:left-[8%]"
- delay="1.2s"
- />
-
- <FloatingIcon
- iconUrl="/nawaz-builds-icon-meta.webp"
- altText="Analytics and tracking"
- positionClass="bottom-[20%] right-[4%] md:bottom-[28%] md:right-[12%]"
- delay="3.8s"
- />
- </div> */}
 
 <section className="relative z-20 overflow-hidden py-24 lg:py-28">
 <div className="absolute inset-0 -z-10 overflow-hidden">
@@ -599,81 +569,6 @@ Your browser does not support the video tag.
 </section>
 
 
-
-
-{/* <section className="relative z-20 border-y border-white/5 bg-black/10 py-16">
- <div className="section-container">
- <m.div
- initial="hidden"
- whileInView="visible"
- viewport={{ once: true, margin: "-50px" }}
- variants={staggerContainer}
- className="mb-12 text-center"
- >
- <m.p
- variants={fadeInUp}
- custom={0}
- className="mb-3 text-[11px] font-black uppercase tracking-[0.25em] text-primary"
- >
- Who RankVelt Helps
- </m.p>
-
- <m.h2
- variants={fadeInUp}
- custom={1}
- className="text-3xl font-bold text-white sm:text-4xl"
- >
- Turn Google Visibility into Real Leads & Revenue.
- </m.h2>
- </m.div>
-
- <div className="grid gap-6 md:grid-cols-3">
- {[
- {
- icon: MapPinned,
- title: "Local Businesses",
- desc: "For businesses that need stronger Google Maps visibility, local search relevance, calls, enquiries, and service-area leads.",
- },
- {
- icon: ShoppingBag,
- title: "eCommerce Brands",
- desc: "For Shopify stores and online brands that need better product discovery, category visibility, and sustainable organic sales.",
- },
- {
- icon: Building2,
- title: "Growing Companies",
- desc: "For service businesses, consultants, agencies, and brands that need stronger pages, websites, and organic lead generation.",
- },
- ].map((item, index) => {
- const Icon = item.icon;
-
- return (
- <m.article
- key={item.title}
- initial={{ opacity: 0, y: 20 }}
- whileInView={{ opacity: 1, y: 0 }}
- transition={{ delay: index * 0.12 }}
- viewport={{ once: true }}
- className="rounded-3xl border border-white/10 bg-white/[0.025] p-7 transition-colors hover:border-primary/35 hover:bg-white/[0.04]"
- >
- <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
- <Icon size={23} />
- </div>
-
- <h3 className="mt-6 text-xl font-bold text-white">
- {item.title}
- </h3>
-
- <p className="mt-3 leading-relaxed text-white/60">
- {item.desc}
- </p>
- </m.article>
- );
- })}
- </div>
- </div>
- </section> */}
-
 <section className="relative z-20 pb-10 pt-16">
 <div className="section-container">
 <m.div
@@ -852,13 +747,13 @@ Learn More
 </div>
 </section>
 
-{/* <div id="portfolio" className="relative z-20 scroll-mt-28">
+<div id="portfolio" className="relative z-20 scroll-mt-28">
 <Suspense fallback={<div className="min-h-[400px]" aria-hidden="true" />}>
 <PortfolioSection
 onProjectSelect={(id) => setActiveProjectId(id)}
 />
 </Suspense>
-</div> */}
+</div>
 
 <Suspense fallback={null}>
 {activeProjectId && (
