@@ -536,7 +536,7 @@ className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-w
 </div>
 
 {/* Right Column: WebM Video/GIF Container */}
-<div className="flex items-center justify-center lg:col-span-5 lg:justify-end">
+{/* <div className="flex items-center justify-center lg:col-span-5 lg:justify-end">
 <m.div
 initial={{ opacity: 0, scale: 0.95 }}
 whileInView={{ opacity: 1, scale: 1 }}
@@ -544,10 +544,8 @@ transition={{ duration: 0.6, ease: "easeOut" }}
 viewport={{ once: true }}
 className="group relative h-full w-full max-w-[500px]"
 >
-{/* Outer Ambient Glow */}
 <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-primary/30 to-purple-500/30 opacity-30 blur-xl transition-opacity duration-500 group-hover:opacity-60" />
 
-{/* Glass Frame Wrapping Video */}
 <div className="relative flex h-full items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-black/40 p-3 backdrop-blur-xl transition-all duration-500 group-hover:border-primary/50">
   <div className="aspect-[4/5] w-full max-h-[420px]">
     <video
@@ -564,14 +562,14 @@ className="group relative h-full w-full max-w-[500px]"
   </div>
 </div>
 </m.div>
-</div>
+</div> */}
 
 </div>
 </div>
 </section>
 
 
-{/* <section className="relative z-20 pb-10 pt-16">
+<section className="relative z-20 pb-10 pt-16">
 <div className="section-container">
 <m.div
   initial="hidden"
@@ -668,7 +666,7 @@ See How RankVelt Fixes This
 </button>
 </m.div>
 </div>
-</section> */}
+</section>
 
 <section
 id="services"
