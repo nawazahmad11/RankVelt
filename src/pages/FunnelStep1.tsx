@@ -571,7 +571,7 @@ className="group relative h-full w-full max-w-[500px]"
 </section>
 
 
-<section className="relative z-20 pb-10 pt-16">
+{/* <section className="relative z-20 pb-10 pt-16">
 <div className="section-container">
 <m.div
   initial="hidden"
@@ -668,7 +668,7 @@ See How RankVelt Fixes This
 </button>
 </m.div>
 </div>
-</section>
+</section> */}
 
 <section
 id="services"
