@@ -17,7 +17,6 @@ import {
 } from "lucide-react";
 
 import { AnimatedCounter } from "@/components/Tools/AnimatedCounter";
-
 import { lazy, Suspense, useState, useRef, useEffect } from "react";
 
 const PortfolioModal = lazy(() => import("@/components/PortfolioModal"));
@@ -27,18 +26,14 @@ const AuditSection = lazy(() => import("@/components/AuditSection"));
 const BlogSection = lazy(() => import("@/components/BlogSection"));
 const FAQSection = lazy(() => import("@/components/FAQSection"));
 
-// Optimized Animations: Short duration, lower offset, instant response
 const fadeInUp = {
-  hidden: {
-    opacity: 0,
-    y: 15,
-  },
+  hidden: { opacity: 0, y: 20 },
   visible: (index: number) => ({
     opacity: 1,
     y: 0,
     transition: {
       delay: index * 0.05,
-      duration: 0.35,
+      duration: 0.4,
       ease: "easeOut" as const,
     },
   }),
@@ -251,7 +246,6 @@ const reviewData = [
 
 const FunnelStep1 = () => {
   const navigate = useNavigate();
-
   const [activeProjectId, setActiveProjectId] = useState<string | null>(null);
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
@@ -270,7 +264,7 @@ const FunnelStep1 = () => {
           }
         });
       },
-      { rootMargin: "200px" },
+      { rootMargin: "200px" }
     );
 
     observer.observe(node);
@@ -290,21 +284,15 @@ const FunnelStep1 = () => {
 
   const handleServiceLinkClick = (
     event: React.MouseEvent<HTMLAnchorElement>,
-    link: string,
+    link: string
   ) => {
     if (!link.startsWith("#")) return;
-
     event.preventDefault();
     scrollToSection(link.replace("#", ""));
   };
 
   const featuredReviews = reviewData.slice(0, 10);
-
-  const repeatedReviews = [
-    ...featuredReviews,
-    ...featuredReviews,
-  ];
-
+  const repeatedReviews = [...featuredReviews, ...featuredReviews];
   const testimonialRows = [
     repeatedReviews.slice(0, 10),
     repeatedReviews.slice(10, 20),
@@ -312,26 +300,13 @@ const FunnelStep1 = () => {
 
   return (
     <LazyMotion features={domAnimation} strict>
-      <div className="relative min-h-screen overflow-hidden bg-background pt-16">
+      <div className="relative min-h-screen overflow-hidden bg-background pt-16 transform-gpu">
         <div className="pointer-events-none absolute inset-0 bg-black/60" />
 
+        {/* HERO SECTION */}
         <section className="relative z-20 overflow-hidden py-24 lg:py-28">
           <div className="absolute inset-0 -z-10 overflow-hidden">
-            <div className="
-              pointer-events-none
-              absolute
-              left-1/2
-              top-1/2
-              hidden
-              h-[400px]
-              w-[400px]
-              -translate-x-1/2
-              -translate-y-1/2
-              rounded-full
-              bg-primary/10
-              blur-[80px]
-              md:block
-            "/>
+            <div className="pointer-events-none absolute left-1/2 top-1/2 hidden h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 blur-[80px] md:block" />
             <div className="pointer-events-none absolute right-[-5%] top-[-10%] h-[300px] w-[300px] rounded-full bg-gold/5 blur-[60px]" />
           </div>
 
@@ -350,15 +325,12 @@ const FunnelStep1 = () => {
                   <span className="shimmer-text-effect text-sm font-semibold tracking-wide">
                     Available for New Opportunities
                   </span>
-
                   <span className="h-4 w-0.5 border-l border-white/20" />
-
                   <div className="size-6 overflow-hidden rounded-full bg-background duration-500 group-hover:bg-white/20">
                     <div className="flex w-12 -translate-x-1/2 duration-500 ease-in-out group-hover:translate-x-0">
                       <span className="flex size-6">
                         <ArrowRight className="m-auto size-3 text-white" />
                       </span>
-
                       <span className="flex size-6">
                         <ArrowRight className="m-auto size-3 text-white" />
                       </span>
@@ -368,13 +340,17 @@ const FunnelStep1 = () => {
               </div>
             </div>
 
-            <h1 className="mx-auto mt-8 max-w-5xl text-balance text-5xl font-medium md:text-7xl lg:mt-10 xl:text-[6rem] tracking-tight leading-[1.1] text-white text-center">
-              SEO <span className="relative inline-block">
-                <span className="relative bg-[length:200%_auto] bg-clip-text text-transparent font-bold italic"
+            <h1 className="mx-auto mt-8 max-w-5xl text-balance text-center text-5xl font-medium leading-[1.1] tracking-tight text-white md:text-7xl lg:mt-10 xl:text-[6rem]">
+              SEO{" "}
+              <span className="relative inline-block">
+                <span
+                  className="relative bg-[length:200%_auto] bg-clip-text font-bold italic text-transparent"
                   style={{
-                    backgroundImage: "linear-gradient(135deg, #3b82f6 0%, #a855f7 25%, #ec4899 50%, #a855f7 75%, #3b82f6 100%)",
+                    backgroundImage:
+                      "linear-gradient(135deg, #3b82f6 0%, #a855f7 25%, #ec4899 50%, #a855f7 75%, #3b82f6 100%)",
                     WebkitBackgroundClip: "text",
-                  }}>
+                  }}
+                >
                   Expert
                 </span>
               </span>
@@ -382,15 +358,18 @@ const FunnelStep1 = () => {
               <span className="flex flex-wrap items-center justify-center gap-x-4">
                 <span className="font-light text-white/90">&</span>
                 <span className="relative inline-block">
-                  <span className="relative bg-[length:200%_auto] bg-clip-text text-transparent font-black"
+                  <span
+                    className="relative bg-[length:200%_auto] bg-clip-text font-black text-transparent"
                     style={{
-                      backgroundImage: "linear-gradient(135deg, #3b82f6 0%, #a855f7 25%, #ec4899 50%, #a855f7 75%, #3b82f6 100%)",
+                      backgroundImage:
+                        "linear-gradient(135deg, #3b82f6 0%, #a855f7 25%, #ec4899 50%, #a855f7 75%, #3b82f6 100%)",
                       WebkitBackgroundClip: "text",
-                    }}>
+                    }}
+                  >
                     Growth
                   </span>
                 </span>
-                <span className="text-white font-medium">Partner</span>
+                <span className="font-medium text-white">Partner</span>
               </span>
             </h1>
 
@@ -404,7 +383,7 @@ const FunnelStep1 = () => {
               <button
                 type="button"
                 onClick={() => handleCTA("Free SEO Opportunity Check")}
-                className="gradient-cta flex items-center gap-2 rounded-lg px-8 py-4 text-lg shadow-xl shadow-primary/20"
+                className="gradient-cta flex items-center gap-2 rounded-lg px-8 py-4 text-lg shadow-xl shadow-primary/20 cursor-pointer"
                 aria-label="Request a free SEO opportunity check"
               >
                 <Target className="h-5 w-5" />
@@ -414,7 +393,7 @@ const FunnelStep1 = () => {
               <button
                 type="button"
                 onClick={() => scrollToSection("services")}
-                className="flex items-center gap-2 rounded-lg border border-white/15 bg-white/[0.03] px-8 py-4 text-lg font-semibold text-white/80 transition-all hover:border-primary/50 hover:bg-primary/10 hover:text-primary"
+                className="flex items-center gap-2 rounded-lg border border-white/15 bg-white/[0.03] px-8 py-4 text-lg font-semibold text-white/80 transition-all hover:border-primary/50 hover:bg-primary/10 hover:text-primary cursor-pointer"
                 aria-label="Explore SEO services"
               >
                 Explore Services
@@ -427,12 +406,10 @@ const FunnelStep1 = () => {
                 <CheckCircle className="h-4 w-4 text-green-400" />
                 Founder-led strategy
               </span>
-
               <span className="flex items-center gap-1.5">
                 <CheckCircle className="h-4 w-4 text-green-400" />
                 Clear growth priorities
               </span>
-
               <span className="flex items-center gap-1.5">
                 <CheckCircle className="h-4 w-4 text-green-400" />
                 SEO-ready website support
@@ -441,40 +418,25 @@ const FunnelStep1 = () => {
           </div>
         </section>
 
-        {/* section#2 - Who RankVelt Helps */}
+        {/* SECTION 2: WHO RANKVELT HELPS */}
         <section className="relative z-20 overflow-hidden border-y border-white/5 bg-black/20 py-16 lg:py-24">
           <div className="pointer-events-none absolute right-0 top-1/2 -z-10 h-[400px] w-[400px] -translate-y-1/2 rounded-full bg-primary/10 blur-[120px]" />
 
           <div className="section-container relative z-10">
-            <m.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.1 }}
-              variants={staggerContainer}
-              className="mb-14 text-center"
-            >
-              <m.p
-                variants={fadeInUp}
-                custom={0}
-                className="mb-3 text-[11px] font-black uppercase tracking-[0.25em] text-gold"
-              >
+            <div className="mb-14 text-center">
+              <p className="mb-3 text-[11px] font-black uppercase tracking-[0.25em] text-gold">
                 WHO RANKVELT HELPS
-              </m.p>
-
-              <m.h2
-                variants={fadeInUp}
-                custom={1}
-                className="text-2xl font-bold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl sm:whitespace-nowrap"
-              >
+              </p>
+              <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl sm:whitespace-nowrap md:text-4xl lg:text-5xl">
                 Turn Google Visibility into{" "}
                 <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Real Leads & Revenue.
                 </span>
-              </m.h2>
-            </m.div>
+              </h2>
+            </div>
 
             <div className="grid grid-cols-1 items-stretch gap-8 lg:grid-cols-12">
-              <div className="flex flex-col justify-between gap-4 lg:col-span-12">
+              <div className="flex flex-col justify-between gap-4 lg:col-span-7">
                 {[
                   {
                     icon: MapPinned,
@@ -491,23 +453,16 @@ const FunnelStep1 = () => {
                     title: "Growing Companies",
                     desc: "For service businesses, consultants, agencies, and brands that need stronger pages, websites, and organic lead generation.",
                   },
-                ].map((item, index) => {
+                ].map((item) => {
                   const Icon = item.icon;
-
                   return (
-                    <m.article
+                    <div
                       key={item.title}
-                      initial={{ opacity: 0, y: 15 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ delay: index * 0.05, duration: 0.35, ease: "easeOut" }}
-                      viewport={{ once: true, amount: 0.1 }}
-                      style={{ willChange: "transform, opacity" }}
                       className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.02] p-5 backdrop-blur-md transition-all duration-300 hover:border-primary/40 hover:bg-white/[0.04]"
                     >
                       <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gold/10 text-gold transition-colors duration-300 group-hover:bg-gold group-hover:text-black">
                         <Icon size={22} />
                       </div>
-
                       <div>
                         <h3 className="text-lg font-bold text-gold transition-colors duration-300 group-hover:text-primary">
                           {item.title}
@@ -516,7 +471,7 @@ const FunnelStep1 = () => {
                           {item.desc}
                         </p>
                       </div>
-                    </m.article>
+                    </div>
                   );
                 })}
               </div>
@@ -524,36 +479,20 @@ const FunnelStep1 = () => {
           </div>
         </section>
 
-        {/* section#3 - Why Businesses Struggle */}
+        {/* WHY BUSINESSES STRUGGLE */}
         <section className="relative z-20 pb-10 pt-16">
           <div className="section-container">
-            <m.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.1 }}
-              variants={staggerContainer}
-              className="mb-12 text-center"
-            >
-              <m.h2
-                variants={fadeInUp}
-                custom={0}
-                className="text-3xl font-bold text-white sm:text-4xl"
-              >
-                Why Businesses Struggle to{""}
+            <div className="mb-12 text-center">
+              <h2 className="text-3xl font-bold text-white sm:text-4xl">
+                Why Businesses Struggle to{" "}
                 <span className="mx-2 text-4xl italic text-destructive sm:text-5xl">
                   Rank
                 </span>
                 <span className="text-white">on Google</span>
-              </m.h2>
-            </m.div>
+              </h2>
+            </div>
 
-            <m.div
-              className="mb-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.1 }}
-              variants={staggerContainer}
-            >
+            <div className="mb-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
               {[
                 {
                   icon: Search,
@@ -575,118 +514,76 @@ const FunnelStep1 = () => {
                   title: "No Growth Roadmap",
                   desc: "Random SEO tasks and disconnected content do not create a reliable path to long-term growth.",
                 },
-              ].map((item, index) => {
+              ].map((item) => {
                 const Icon = item.icon;
-
                 return (
-                  <m.div
+                  <div
                     key={item.title}
-                    variants={fadeInUp}
-                    custom={index}
-                    whileHover={{ scale: 1.02 }}
-                    style={{ willChange: "transform, opacity" }}
                     className="group relative rounded-2xl border border-white/5 bg-white/[0.02] p-8 text-center transition-all duration-300 hover:border-destructive/40"
                   >
                     <div className="absolute -inset-1 -z-10 bg-gradient-to-b from-destructive/20 to-transparent opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-100" />
-
                     <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-lg border border-destructive/20 bg-destructive/10 shadow-lg">
                       <Icon className="h-7 w-7 text-destructive transition-transform duration-300 group-hover:scale-110" />
                     </div>
-
                     <h3 className="mb-3 text-xl font-bold text-white transition-colors group-hover:text-destructive/90">
                       {item.title}
                     </h3>
-
                     <p className="text-m leading-relaxed text-white/70">
                       {item.desc}
                     </p>
-                  </m.div>
+                  </div>
                 );
               })}
-            </m.div>
+            </div>
 
-            <m.div
-              className="text-center"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true, amount: 0.1 }}
-            >
+            <div className="text-center">
               <button
                 type="button"
                 onClick={() => scrollToSection("services")}
                 aria-label="Explore RankVelt SEO services"
-                className="inline-flex items-center gap-2 border-none bg-transparent text-lg font-semibold text-primary transition-all hover:gap-4 hover:text-primary/80"
+                className="inline-flex cursor-pointer items-center gap-2 border-none bg-transparent text-lg font-semibold text-primary transition-all hover:gap-4 hover:text-primary/80"
               >
                 See How RankVelt Fixes This
                 <ArrowRight className="h-5 w-5" />
               </button>
-            </m.div>
+            </div>
           </div>
         </section>
 
-        {/* Services Section */}
+        {/* SERVICES SECTION */}
         <section
           id="services"
           className="relative z-20 scroll-mt-28 pb-16 pt-6"
         >
           <div className="section-container">
-            <m.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.1 }}
-              variants={staggerContainer}
-              className="mb-10 text-center"
-            >
-              <m.h2
-                variants={fadeInUp}
-                custom={0}
-                className="mb-3 text-3xl font-bold tracking-tight text-white sm:text-4xl"
-              >
+            <div className="mb-10 text-center">
+              <h2 className="mb-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
                 SEO Services for Growth & Revenue
-              </m.h2>
-
-              <m.p
-                variants={fadeInUp}
-                custom={1}
-                className="text-sm font-bold uppercase tracking-[0.2em] text-primary"
-              >
+              </h2>
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-primary">
                 SEO First. Web Design When It Supports Growth.
-              </m.p>
-            </m.div>
+              </p>
+            </div>
 
-            <m.div
-              className="mx-auto grid max-w-4xl gap-3 sm:grid-cols-2"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.1 }}
-              variants={staggerContainer}
-            >
-              {serviceItems.map((item, index) => (
-                <m.div
+            <div className="mx-auto grid max-w-4xl gap-3 sm:grid-cols-2">
+              {serviceItems.map((item) => (
+                <div
                   key={item.label}
-                  variants={fadeInUp}
-                  custom={index}
-                  whileHover={{ y: -2, scale: 1.01 }}
-                  style={{ willChange: "transform, opacity" }}
                   className="group relative flex cursor-default items-center gap-3 overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] p-3 backdrop-blur-md transition-all duration-300 hover:border-primary/50 hover:bg-white/[0.05]"
                 >
                   <div className="absolute -inset-1 bg-gradient-to-r from-primary/10 to-transparent opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-100" />
-
                   <div className="z-10 shrink-0">
                     <div className="rounded-md bg-primary/10 p-1.5 text-primary shadow-sm shadow-primary/20 transition-colors duration-300 group-hover:bg-primary group-hover:text-black">
                       <CheckCircle className="h-4 w-4" />
                     </div>
                   </div>
-
                   <div className="z-10 flex w-full flex-col">
                     <h3 className="text-[16px] font-semibold text-white transition-colors duration-300 group-hover:text-primary">
                       {item.label}
                     </h3>
-
                     <p className="text-[15px] leading-tight text-white/65 transition-colors group-hover:text-white/80">
                       {item.desc}
                     </p>
-
                     <a
                       href={item.link}
                       onClick={(event) =>
@@ -700,14 +597,17 @@ const FunnelStep1 = () => {
                       </span>
                     </a>
                   </div>
-                </m.div>
+                </div>
               ))}
-            </m.div>
+            </div>
           </div>
         </section>
 
+        {/* PORTFOLIO SECTION */}
         <div id="portfolio" className="relative z-20 scroll-mt-28">
-          <Suspense fallback={<div className="min-h-[400px]" aria-hidden="true" />}>
+          <Suspense
+            fallback={<div className="min-h-[400px]" aria-hidden="true" />}
+          >
             <PortfolioSection
               onProjectSelect={(id) => setActiveProjectId(id)}
             />
@@ -724,13 +624,14 @@ const FunnelStep1 = () => {
           )}
         </Suspense>
 
+        {/* STATS & TESTIMONIALS SECTION */}
         <section className="relative z-20 overflow-hidden py-10">
           <div className="section-container relative z-10 text-white">
             <m.div
               className="mb-16 grid grid-cols-2 gap-11 border-y border-white/5 bg-white/[0.01] py-10 shadow-inner backdrop-blur-sm lg:grid-cols-4"
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.1 }}
+              viewport={{ once: true }}
               variants={staggerContainer}
             >
               {[
@@ -760,14 +661,12 @@ const FunnelStep1 = () => {
                   key={stat.label}
                   variants={fadeInUp}
                   custom={index}
-                  style={{ willChange: "transform, opacity" }}
                   className="group cursor-default text-center"
                 >
                   <div className="mb-2 text-4xl font-black text-primary drop-shadow-[0_0_10px_rgba(var(--primary),0.3)] transition-transform duration-300 group-hover:scale-110 sm:text-5xl">
                     {stat.prefix && <span>{stat.prefix}</span>}
                     <AnimatedCounter value={stat.value} suffix={stat.suffix} />
                   </div>
-
                   <div className="text-xs font-medium uppercase tracking-[0.2em] text-white/60 transition-colors group-hover:text-white/60 sm:text-sm">
                     {stat.label}
                   </div>
@@ -775,32 +674,61 @@ const FunnelStep1 = () => {
               ))}
             </m.div>
 
-            <m.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.1 }}
-              variants={staggerContainer}
-              className="mb-16 text-center"
-            >
+            <div className="mb-16 text-center">
               <h2 className="mb-4 text-3xl font-bold tracking-tight text-white md:text-5xl">
                 Built for Businesses That Need Better Visibility
               </h2>
-
               <p className="mx-auto max-w-[600px] text-lg font-light text-white/60">
-                Client feedback on SEO structure, technical improvements, ecommerce UX, and websites built to support long-term growth.
+                Client feedback on SEO structure, technical improvements,
+                ecommerce UX, and websites built to support long-term growth.
               </p>
-            </m.div>
+            </div>
           </div>
 
-          <div className="marquee-wrapper relative flex flex-col gap-4 py-4">
+          <style>{`
+            @keyframes marquee-left {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-50%); }
+            }
+
+            @keyframes marquee-right {
+              0% { transform: translateX(-50%); }
+              100% { transform: translateX(0); }
+            }
+
+            .animate-left,
+            .animate-right {
+              will-change: transform;
+            }
+
+            @media(min-width:768px){
+              .animate-left {
+                animation: marquee-left 90s linear infinite;
+              }
+              .animate-right {
+                animation: marquee-right 90s linear infinite;
+              }
+            }
+
+            .marquee-wrapper:hover .animate-left,
+            .marquee-wrapper:hover .animate-right {
+              animation-play-state: paused;
+            }
+          `}</style>
+
+          <div
+            className="marquee-wrapper relative flex flex-col gap-4 py-4"
+            style={{ contain: "layout paint" }}
+          >
             {testimonialRows.map((rowData, rowIndex) => (
               <div
                 key={rowIndex}
                 className="marquee-container relative flex overflow-hidden py-1"
               >
                 <div
-                  className={`flex gap-4 whitespace-nowrap ${rowIndex === 1 ? "animate-right" : "animate-left"
-                    }`}
+                  className={`flex gap-4 whitespace-nowrap ${
+                    rowIndex === 1 ? "animate-right" : "animate-left"
+                  }`}
                 >
                   {rowData.map((testimonial, index) => (
                     <div
@@ -818,12 +746,10 @@ const FunnelStep1 = () => {
                             decoding="async"
                             className="h-4 w-4 opacity-70"
                           />
-
                           <span className="text-[9.5px] font-bold uppercase tracking-widest text-white/80">
                             {testimonial.platform}
                           </span>
                         </div>
-
                         <div className="flex gap-0.5">
                           {[...Array(5)].map((_, starIndex) => (
                             <Star
@@ -844,12 +770,10 @@ const FunnelStep1 = () => {
                         >
                           {testimonial.initial}
                         </div>
-
                         <div>
                           <div className="text-xs font-semibold text-white">
                             {testimonial.name}
                           </div>
-
                           <div className="text-[9px] uppercase tracking-wider text-white/80">
                             Client
                           </div>
@@ -866,89 +790,81 @@ const FunnelStep1 = () => {
           </div>
         </section>
 
+        {/* SUSPENSE LAZY SECTIONS */}
         <div id="process" className="relative z-20 scroll-mt-28">
-          <Suspense fallback={<div className="min-h-[300px]" aria-hidden="true" />}>
+          <Suspense
+            fallback={<div className="min-h-[300px]" aria-hidden="true" />}
+          >
             <ProcessSection />
           </Suspense>
         </div>
 
         <div id="audit" className="relative z-20 scroll-mt-28">
-          <Suspense fallback={<div className="min-h-[300px]" aria-hidden="true" />}>
+          <Suspense
+            fallback={<div className="min-h-[300px]" aria-hidden="true" />}
+          >
             <AuditSection />
           </Suspense>
         </div>
 
         <div className="relative z-20">
-          <Suspense fallback={<div className="min-h-[300px]" aria-hidden="true" />}>
+          <Suspense
+            fallback={<div className="min-h-[300px]" aria-hidden="true" />}
+          >
             <BlogSection />
           </Suspense>
         </div>
 
         <div className="relative z-20">
-          <Suspense fallback={<div className="min-h-[300px]" aria-hidden="true" />}>
+          <Suspense
+            fallback={<div className="min-h-[300px]" aria-hidden="true" />}
+          >
             <FAQSection />
           </Suspense>
         </div>
 
+        {/* FINAL CTA */}
         <section id="final-cta" className="radial-glow relative z-20 py-24">
           <div className="section-container relative z-10 text-center">
-            <m.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.1 }}
-              variants={staggerContainer}
-            >
-              <m.h2
-                variants={fadeInUp}
-                custom={0}
-                className="mb-6 text-3xl font-bold text-white sm:text-4xl lg:text-5xl"
-              >
-                Ready to Build Stronger{" "}
-                <span className="text-gradient-gold">
-                  Google Visibility & Growth?
-                </span>
-              </m.h2>
+            <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
+              Ready to Build Stronger{" "}
+              <span className="text-gradient-gold">
+                Google Visibility & Growth?
+              </span>
+            </h2>
 
-              <m.p
-                variants={fadeInUp}
-                custom={1}
-                className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-white/60"
-              >
-                Start with a focused conversation about your website, your
-                current visibility, and the highest-priority opportunities for
-                growth.
-              </m.p>
+            <p className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-white/60">
+              Start with a focused conversation about your website, your
+              current visibility, and the highest-priority opportunities for
+              growth.
+            </p>
 
-              <m.div variants={fadeInUp} custom={2}>
-                <button
-                  type="button"
-                  onClick={() => handleCTA("Free SEO Opportunity Check")}
-                  className="gradient-cta inline-flex items-center gap-2 rounded-xl px-10 py-5 text-lg shadow-2xl shadow-primary/20 transition-transform duration-300 hover:scale-105"
-                  aria-label="Request an SEO growth strategy call"
-                >
-                  <Rocket className="h-5 w-5" />
-                  Get a Free SEO Audit
-                </button>
-              </m.div>
-
-              <m.p
-                variants={fadeInUp}
-                custom={3}
-                className="mt-6 flex items-center justify-center text-sm text-muted-foreground"
+            <div>
+              <button
+                type="button"
+                onClick={() => handleCTA("Free SEO Opportunity Check")}
+                className="gradient-cta inline-flex items-center gap-2 rounded-xl px-10 py-5 text-lg shadow-2xl shadow-primary/20 transition-transform duration-300 hover:scale-105 cursor-pointer"
+                aria-label="Request an SEO growth strategy call"
               >
-                <Shield className="mr-2 h-4 w-4 text-primary" />
-                Clear priorities, direct communication, and no unnecessary agency
-                layers.
-              </m.p>
-            </m.div>
+                <Rocket className="h-5 w-5" />
+                Get a Free SEO Audit
+              </button>
+            </div>
+
+            <p className="mt-6 flex items-center justify-center text-sm text-muted-foreground">
+              <Shield className="mr-2 h-4 w-4 text-primary" />
+              Clear priorities, direct communication, and no unnecessary agency
+              layers.
+            </p>
           </div>
         </section>
 
+        {/* MOBILE STICKY CTA */}
         <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-background/80 p-4 pb-safe backdrop-blur-xl sm:hidden">
           <button
             type="button"
             onClick={() => handleCTA("SEO Growth Strategy Call")}
-            className="gradient-cta flex w-full items-center justify-center gap-2 rounded-lg py-3.5 font-semibold shadow-lg shadow-primary/20"
+            className="gradient-cta flex w-full items-center justify-center gap-2 rounded-lg py-3.5 font-semibold shadow-lg shadow-primary/20 cursor-pointer"
             aria-label="Request a strategy call"
           >
             <Target className="h-5 w-5" />
@@ -957,68 +873,28 @@ const FunnelStep1 = () => {
         </div>
 
         <style>{`
-        .shimmer-text-effect {
-          background: linear-gradient(90deg, #666 0%, #fff 50%, #666 100%);
-          background-size: 200% auto;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
-
-        @media (min-width: 768px) {
           .shimmer-text-effect {
-            animation: shine 3s linear infinite;
-          }
-        }
-
-        @keyframes shine {
-          to {
-            background-position: 200% center;
-          }
-        }
-
-        @keyframes marquee-left {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-
-        @keyframes marquee-right {
-          0% { transform: translateX(-50%); }
-          100% { transform: translateX(0); }
-        }
-
-        .animate-left,
-        .animate-right {
-          animation: none;
-        }
-
-        @media (min-width: 768px) {
-          .animate-left {
-            animation: marquee-left 90s linear infinite;
+            background: linear-gradient(90deg, #666 0%, #fff 50%, #666 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
           }
 
-          .animate-right {
-            animation: marquee-right 90s linear infinite;
+          @media (min-width: 768px) {
+            .shimmer-text-effect {
+              animation: shine 3s linear infinite;
+            }
           }
-        }
 
-        .marquee-wrapper:hover .animate-left,
-        .marquee-wrapper:hover .animate-right {
-          animation-play-state: paused;
-        }
-
-        /* Mobile specific lag reduction */
-        @media (max-width: 768px) {
-          .backdrop-blur-md,
-          .backdrop-blur-xl,
-          .backdrop-blur-sm {
-            backdrop-filter: none !important;
-            -webkit-backdrop-filter: none !important;
+          @keyframes shine {
+            to {
+              background-position: 200% center;
+            }
           }
-        }
 
-        .pb-safe {
-          padding-bottom: env(safe-area-inset-bottom, 16px);
-        }
+          .pb-safe {
+            padding-bottom: env(safe-area-inset-bottom, 16px);
+          }
         `}</style>
       </div>
     </LazyMotion>
