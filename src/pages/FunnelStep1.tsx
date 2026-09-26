@@ -430,6 +430,7 @@ const FunnelStep1 = () => {
                 })}
               </div>
             </div>
+            
           </div>
         </section>
 

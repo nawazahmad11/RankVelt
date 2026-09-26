@@ -22,6 +22,12 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
+    // Lazy chunks (StatsGrid, PortfolioSection, framer-motion gestures/proxy, ...)
+    // ko initial load par preload mat karo. Vite by default har dynamic import ke
+    // liye <link rel="modulepreload"> inject karta hai — ~15 chunks FCP/LCP se
+    // bandwidth chheen lete hain (slow 4G par). Chunks React.lazy se on-demand
+    // load honge jaise pehle hote thay; koi visual ya behavior change nahi.
+    modulePreload: false,
     rollupOptions: {
       output: {
         // Sirf hamesha-zaroori core libraries (react/react-dom/react-router) ek chhote
