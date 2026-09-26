@@ -1,4 +1,3 @@
-import { LazyMotion, domAnimation, m } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import {
   ArrowRight,
@@ -16,8 +15,9 @@ import {
   Wrench,
 } from "lucide-react";
 
-import { AnimatedCounter } from "@/components/Tools/AnimatedCounter";
-import { lazy, Suspense, useState, useRef, useEffect } from "react";
+import { lazy, Suspense, useState } from "react";
+
+const StatsGrid = lazy(() => import("@/components/StatsGrid"));
 
 const PortfolioModal = lazy(() => import("@/components/PortfolioModal"));
 const PortfolioSection = lazy(() => import("@/components/PortfolioSection"));
@@ -25,28 +25,6 @@ const ProcessSection = lazy(() => import("@/components/ProcessSection"));
 const AuditSection = lazy(() => import("@/components/AuditSection"));
 const BlogSection = lazy(() => import("@/components/BlogSection"));
 const FAQSection = lazy(() => import("@/components/FAQSection"));
-
-const fadeInUp = {
-  hidden: { opacity: 0, y: 20 },
-  visible: (index: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: index * 0.05,
-      duration: 0.4,
-      ease: "easeOut" as const,
-    },
-  }),
-};
-
-const staggerContainer = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.05,
-    },
-  },
-};
 
 const serviceItems = [
   {
@@ -72,7 +50,7 @@ const serviceItems = [
   {
     label: "Website SEO & Design",
     desc: "SEO-ready WordPress & Shopify websites built for speed, structure, and conversion-focused growth.",
-    link: "#websites",
+    link: "#portfolio",
   },
   {
     label: "Conversion Optimization (CRO)",
@@ -247,29 +225,6 @@ const reviewData = [
 const FunnelStep1 = () => {
   const navigate = useNavigate();
   const [activeProjectId, setActiveProjectId] = useState<string | null>(null);
-  const videoRef = useRef<HTMLVideoElement | null>(null);
-
-  useEffect(() => {
-    const node = videoRef.current;
-    if (!node) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            node.src = "/rankvelt-real-stats.webm";
-            node.load();
-            node.play().catch(() => {});
-            observer.disconnect();
-          }
-        });
-      },
-      { rootMargin: "200px" }
-    );
-
-    observer.observe(node);
-    return () => observer.disconnect();
-  }, []);
 
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({
@@ -299,8 +254,7 @@ const FunnelStep1 = () => {
   ];
 
   return (
-    <LazyMotion features={domAnimation} strict>
-      <div className="relative min-h-screen overflow-hidden bg-background pt-16 transform-gpu">
+    <div className="relative min-h-screen overflow-hidden bg-background pb-20 pt-16 sm:pb-0">
         <div className="pointer-events-none absolute inset-0 bg-black/60" />
 
         {/* HERO SECTION */}
@@ -420,7 +374,7 @@ const FunnelStep1 = () => {
 
         {/* SECTION 2: WHO RANKVELT HELPS */}
         <section className="relative z-20 overflow-hidden border-y border-white/5 bg-black/20 py-16 lg:py-24">
-          <div className="pointer-events-none absolute right-0 top-1/2 -z-10 h-[400px] w-[400px] -translate-y-1/2 rounded-full bg-primary/10 blur-[120px]" />
+          <div className="pointer-events-none absolute right-0 top-1/2 -z-10 h-[400px] w-[400px] -translate-y-1/2 rounded-full bg-[radial-gradient(closest-side,hsl(var(--primary)_/_0.1),transparent)]" />
 
           <div className="section-container relative z-10">
             <div className="mb-14 text-center">
@@ -458,7 +412,7 @@ const FunnelStep1 = () => {
                   return (
                     <div
                       key={item.title}
-                      className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.02] p-5 backdrop-blur-md transition-all duration-300 hover:border-primary/40 hover:bg-white/[0.04]"
+                      className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.04] p-5 transition-all duration-300 hover:border-primary/40 hover:bg-white/[0.06]"
                     >
                       <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gold/10 text-gold transition-colors duration-300 group-hover:bg-gold group-hover:text-black">
                         <Icon size={22} />
@@ -627,52 +581,11 @@ const FunnelStep1 = () => {
         {/* STATS & TESTIMONIALS SECTION */}
         <section className="relative z-20 overflow-hidden py-10">
           <div className="section-container relative z-10 text-white">
-            <m.div
-              className="mb-16 grid grid-cols-2 gap-11 border-y border-white/5 bg-white/[0.01] py-10 shadow-inner backdrop-blur-sm lg:grid-cols-4"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={staggerContainer}
+            <Suspense
+              fallback={<div className="mb-16 min-h-[180px]" aria-hidden="true" />}
             >
-              {[
-                {
-                  value: 120,
-                  suffix: "+",
-                  label: "Websites Ranked on Google",
-                },
-                {
-                  value: 10,
-                  prefix: "$",
-                  suffix: "M+",
-                  label: "Organic Revenue Impact Generated",
-                },
-                {
-                  value: 500,
-                  suffix: "k+",
-                  label: "Monthly Organic Clicks Driven",
-                },
-                {
-                  value: 85,
-                  suffix: "%",
-                  label: "Average SEO Traffic Growth",
-                },
-              ].map((stat, index) => (
-                <m.div
-                  key={stat.label}
-                  variants={fadeInUp}
-                  custom={index}
-                  className="group cursor-default text-center"
-                >
-                  <div className="mb-2 text-4xl font-black text-primary drop-shadow-[0_0_10px_rgba(var(--primary),0.3)] transition-transform duration-300 group-hover:scale-110 sm:text-5xl">
-                    {stat.prefix && <span>{stat.prefix}</span>}
-                    <AnimatedCounter value={stat.value} suffix={stat.suffix} />
-                  </div>
-                  <div className="text-xs font-medium uppercase tracking-[0.2em] text-white/60 transition-colors group-hover:text-white/60 sm:text-sm">
-                    {stat.label}
-                  </div>
-                </m.div>
-              ))}
-            </m.div>
+              <StatsGrid />
+            </Suspense>
 
             <div className="mb-16 text-center">
               <h2 className="mb-4 text-3xl font-bold tracking-tight text-white md:text-5xl">
@@ -860,7 +773,7 @@ const FunnelStep1 = () => {
         </section>
 
         {/* MOBILE STICKY CTA */}
-        <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-background/80 p-4 pb-safe backdrop-blur-xl sm:hidden">
+        <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-background p-4 pb-safe sm:hidden">
           <button
             type="button"
             onClick={() => handleCTA("SEO Growth Strategy Call")}
@@ -896,8 +809,7 @@ const FunnelStep1 = () => {
             padding-bottom: env(safe-area-inset-bottom, 16px);
           }
         `}</style>
-      </div>
-    </LazyMotion>
+    </div>
   );
 };
 

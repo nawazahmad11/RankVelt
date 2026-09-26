@@ -368,6 +368,8 @@ const CivicAccess = () => {
             <img
               src={GSC_IMAGE}
               alt="Google Search Console report showing 32.3K organic clicks, 439K impressions, 7.4 percent click-through rate, and 3.7 average position over 28 days"
+              loading="lazy"
+              decoding="async"
               className="h-auto w-full rounded-lg border border-white/10"
             />
 
@@ -508,6 +510,8 @@ const CivicAccess = () => {
                 <img
                   src={TRAFFIC_IMAGE}
                   alt="Third-party organic traffic estimate report showing 94.9K estimated organic traffic, 4.1 thousand dollars estimated traffic value, and an upward growth trend"
+                  loading="lazy"
+                  decoding="async"
                   className="h-auto w-full rounded-lg border border-white/10"
                 />
 
@@ -559,6 +563,8 @@ const CivicAccess = () => {
                 <img
                   src={SPEED_IMAGE}
                   alt="Google PageSpeed Insights mobile report showing 97 performance, 93 accessibility, 100 best practices, and 100 SEO"
+                  loading="lazy"
+                  decoding="async"
                   className="h-auto w-full rounded-lg border border-white/10"
                 />
 

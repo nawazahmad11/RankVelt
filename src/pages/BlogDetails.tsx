@@ -66,6 +66,30 @@ const BlogDetails = () => {
     return () => observer.disconnect();
   }, [blog]);
 
+  const [shareLabel, setShareLabel] = useState("Share Article");
+
+  const handleShare = async () => {
+    if (!blog) return;
+    const url = window.location.href;
+    try {
+      if (navigator.share) {
+        await navigator.share({
+          title: blog.title,
+          text: `Read this RankVelt insight: ${blog.title}`,
+          url,
+        });
+        return;
+      }
+      await navigator.clipboard.writeText(url);
+      setShareLabel("Link copied");
+      window.setTimeout(() => {
+        setShareLabel("Share Article");
+      }, 2200);
+    } catch (error) {
+      console.error("Article share action failed:", error);
+    }
+  };
+
   if (!blog) return <div className="text-white text-center py-20 font-black uppercase">Post Not Found.</div>;
 
   return (
@@ -210,8 +234,8 @@ const BlogDetails = () => {
                     </div>
 
                     <div className="pt-8 border-t border-white/5">
-                        <button className="flex items-center gap-3 text-white/20 hover:text-white transition-all text-[10px] font-black uppercase tracking-widest">
-                            <Share2 size={16} /> Share Article
+                        <button onClick={handleShare} className="flex items-center gap-3 text-white/20 hover:text-white transition-all text-[10px] font-black uppercase tracking-widest">
+                            <Share2 size={16} /> {shareLabel}
                         </button>
                     </div>
                 </div>

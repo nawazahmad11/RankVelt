@@ -30,7 +30,7 @@ import SeoServiceTemplate, {
       "Build Local Visibility Around the Treatments and Areas You Actually Serve",
   
     overviewParagraphs: [
-      "Patients usually search for a dentist the same way they search for any local service, by typing what they need and where they are, such as \"dentist near me\" or \"emergency dentist in [city]\". Dental SEO focuses on making sure your practice appears, and looks trustworthy, at that exact moment.",
+      "Patients usually search for a dentist the same way they search for any local service, by typing what they need and where they are, such as \"dentist near me\" or \"emergency dentist in your area\". Dental SEO focuses on making sure your practice appears, and looks trustworthy, at that exact moment.",
   
       "RankVelt reviews the complete local search journey for a dental practice. This includes Google Business Profile accuracy, treatment-page clarity, citation consistency, review activity, mobile usability and how easily a visitor can call or book an appointment.",
   

@@ -376,6 +376,8 @@ const ClearRide = () => {
             <img
               src={GSC_IMAGE}
               alt="Google Search Console report showing 18.4K clicks, 779K impressions, 2.4 percent CTR, and 6.9 average position over 28 days"
+              loading="lazy"
+              decoding="async"
               className="h-auto w-full rounded-lg border border-white/10"
             />
 
@@ -552,6 +554,8 @@ const ClearRide = () => {
                 <img
                   src={SPEED_BEFORE_IMAGE}
                   alt="Before Google PageSpeed Insights mobile report showing failed Core Web Vitals assessment, 76 performance score, and 85 SEO score"
+                  loading="lazy"
+                  decoding="async"
                   className="h-auto w-full rounded-lg border border-white/10"
                 />
 
@@ -603,6 +607,8 @@ const ClearRide = () => {
                 <img
                   src={SPEED_AFTER_IMAGE}
                   alt="After Google PageSpeed Insights mobile report showing 91 performance, 93 accessibility, 100 best practices, and 100 SEO"
+                  loading="lazy"
+                  decoding="async"
                   className="h-auto w-full rounded-lg border border-white/10"
                 />
 

@@ -3,7 +3,7 @@ import { useInView, useMotionValue, useSpring, animate } from "framer-motion";
 
 export const AnimatedCounter = ({ value, suffix = "" }: { value: number; suffix?: string }) => {
   const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true }); // Jab nazar aaye tab start ho
+  const inView = useInView(ref, { once: true }); // Start counting when scrolled into view
   const motionValue = useMotionValue(0);
   const springValue = useSpring(motionValue, {
     damping: 30,
@@ -12,7 +12,10 @@ export const AnimatedCounter = ({ value, suffix = "" }: { value: number; suffix?
 
   useEffect(() => {
     if (inView) {
-      animate(motionValue, value, { duration: 2 }); // 2 seconds mein animation complete hogi
+      // Reset to 0 first so the count-up always starts from zero,
+      // then animate to the final value.
+      motionValue.set(0);
+      animate(motionValue, value, { duration: 2 }); // Animation completes in 2 seconds
     }
   }, [inView, value, motionValue]);
 
@@ -24,5 +27,13 @@ export const AnimatedCounter = ({ value, suffix = "" }: { value: number; suffix?
     });
   }, [springValue, suffix]);
 
-  return <span ref={ref}>0{suffix}</span>;
+  // Progressive enhancement: render the final value as static HTML so
+  // crawlers and no-JS users see the real number. Once the section
+  // scrolls into view, the animation overwrites it with the count-up.
+  return (
+    <span ref={ref}>
+      {value.toLocaleString()}
+      {suffix}
+    </span>
+  );
 };

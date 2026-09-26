@@ -376,6 +376,8 @@ const Bluebridge = () => {
             <img
               src={GSC_IMAGE}
               alt="Google Search Console report showing 6.68K clicks, 49K impressions, 13.6 percent CTR, and 5.5 average position over three months"
+              loading="lazy"
+              decoding="async"
               className="h-auto w-full rounded-lg border border-white/10"
             />
 
@@ -520,6 +522,8 @@ const Bluebridge = () => {
                 <img
                   src={SPEED_BEFORE_IMAGE}
                   alt="Baseline Google PageSpeed Insights mobile report showing 59 performance, 79 accessibility, 69 best practices, and 92 SEO"
+                  loading="lazy"
+                  decoding="async"
                   className="h-auto w-full rounded-lg border border-white/10"
                 />
 
@@ -578,6 +582,8 @@ const Bluebridge = () => {
                 <img
                   src={SPEED_AFTER_IMAGE}
                   alt="Later Google PageSpeed Insights mobile report showing 79 performance, 96 accessibility, 100 best practices, and 92 SEO"
+                  loading="lazy"
+                  decoding="async"
                   className="h-auto w-full rounded-lg border border-white/10"
                 />
 

@@ -30,7 +30,7 @@ import SeoServiceTemplate, {
       "Build Local Visibility Around the Practice Areas and Locations You Actually Serve",
   
     overviewParagraphs: [
-      "Most legal searches start with a specific situation, such as \"personal injury lawyer near me\" or \"family law attorney in [city]\". Law firm SEO focuses on making sure your firm appears, and looks credible, at that exact moment.",
+      "Most legal searches start with a specific situation, such as \"personal injury lawyer near me\" or \"family law attorney in your area\". Law firm SEO focuses on making sure your firm appears, and looks credible, at that exact moment.",
   
       "RankVelt reviews the complete local search journey for a law firm. This includes Google Business Profile accuracy, practice-area page clarity, citation consistency, review activity, mobile usability and how easily a visitor can request a consultation.",
   

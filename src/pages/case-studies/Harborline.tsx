@@ -336,6 +336,8 @@ const Harborline = () => {
             <img
               src={GSC_IMAGE}
               alt="Google Search Console report showing 18.7K clicks, 387K impressions, 4.8 percent CTR, and 5.8 average position over 28 days"
+              loading="lazy"
+              decoding="async"
               className="h-auto w-full rounded-lg border border-white/10"
             />
 
@@ -474,7 +476,9 @@ const Harborline = () => {
               <figure className="mt-10">
                 <img
                   src={SPEED_IMAGE}
-                  alt="Google PageSpeed Insights mobile report showing 91 performance, 93 accessibility, 100 best practices, and 100 SEO"
+                  alt="PageSpeed Insights mobile audit screenshot shown as a visual placeholder"
+                  loading="lazy"
+                  decoding="async"
                   className="h-auto w-full rounded-lg border border-white/10"
                 />
 

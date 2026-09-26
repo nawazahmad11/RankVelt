@@ -30,7 +30,7 @@ import SeoServiceTemplate, {
       "Build Local Visibility Around the Services and Areas You Actually Cover",
   
     overviewParagraphs: [
-      "Most plumbing calls start with an urgent Google search, such as \"emergency plumber near me\" or \"water heater repair in [city]\". Plumbing SEO focuses on making sure your business appears, and looks trustworthy, at that exact moment.",
+      "Most plumbing calls start with an urgent Google search, such as \"emergency plumber near me\" or \"water heater repair in your area\". Plumbing SEO focuses on making sure your business appears, and looks trustworthy, at that exact moment.",
   
       "RankVelt reviews the complete local search journey for a plumbing business. This includes Google Business Profile accuracy, service-page clarity, citation consistency, review activity, mobile usability and how easily a visitor can call or request a booking.",
   

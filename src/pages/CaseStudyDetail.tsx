@@ -7,12 +7,6 @@ import {
   Heart,
   ChevronLeft,
   ChevronRight,
-  ChevronDown, // Yeh add karein
-  ChevronUp,   // Yeh add karein
-  Truck,
-  RotateCcw,
-  BadgePercent,
-  Headphones,
   Star,
   ArrowRight,
   Clock,
@@ -26,7 +20,7 @@ import {
 import { caseStudies } from "../data/caseStudyData";
 import { seoCaseStudies } from "../data/seoCaseStudyData";
 
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 // --- 1. District 99 STUDIO DESIGN (STREETWEAR) ---
 const AurexStore = ({ s }: { s: any }) => {
@@ -217,9 +211,9 @@ const ClothingStore = ({ s }: { s: any }) => {
           <div className="sticky top-[90px] p-12">
             <div className="mb-10">
               <div className="flex justify-between items-start mb-4">
-                <h1 className="text-4xl font-bold uppercase tracking-tighter leading-none">
+                <h2 className="text-4xl font-bold uppercase tracking-tighter leading-none">
                   Heavyweight<br />Boxy Tee
-                </h1>
+                </h2>
               </div>
               <span className="text-2xl font-medium">$45.00</span>
 
@@ -486,9 +480,9 @@ const JewelryStore = ({ s }: { s: any }) => {
             <p className="text-[#c4a484] text-[12px] font-bold uppercase tracking-[0.5em] mb-4">
               {slides[currentSlide].subtitle}
             </p>
-            <h1 className="text-6xl font-black leading-[0.95] text-zinc-900 mb-8 tracking-tighter">
+            <h2 className="text-6xl font-black leading-[0.95] text-zinc-900 mb-8 tracking-tighter">
               {slides[currentSlide].mainText}
-            </h1>
+            </h2>
             <p className="text-zinc-500 text-[16px] mb-10 max-w-sm font-light">
               Elevate your presence with pieces designed for the modern connoisseur of fine jewelry.
             </p>
@@ -744,7 +738,7 @@ const DecorStore = ({ s }: { s: any }) => {
         <img src="/saha-garden-cover-shopify-store.webp" className="w-full h-full object-cover" alt="Hero" />
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-4">
-          <h1 className="text-7xl font-light tracking-[0.1em] uppercase mb-4 drop-shadow-sm">Designer Planters</h1>
+          <h2 className="text-7xl font-light tracking-[0.1em] uppercase mb-4 drop-shadow-sm">Designer Planters</h2>
           <p className="text-sm tracking-widest mb-8 opacity-90">Elevate your home and garden.</p>
           <button className="text-[10px] font-bold uppercase tracking-[0.4em] border-b-2 border-white pb-2 hover:opacity-70 transition-all">Explore</button>
         </div>
@@ -950,7 +944,7 @@ const KithStore = ({ s }: { s: any }) => {
         <img src={s.hero.backgroundImage} className="w-full h-full object-cover grayscale-[20%] group-hover:scale-105 transition-transform duration-[length:3000ms]" alt="Hero" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
         <div className="absolute bottom-20 left-10 text-white max-w-xl">
-          <h1 className="text-4xl font-serif mb-4 leading-tight" dangerouslySetInnerHTML={{ __html: s.hero.headline }} />
+          <h2 className="text-4xl font-serif mb-4 leading-tight" dangerouslySetInnerHTML={{ __html: s.hero.headline }} />
           <p className="text-[11px] uppercase tracking-[0.2em] mb-8 opacity-80 leading-loose">
             Defined by KITH signature shoes dedicated to our hometown modern people.
           </p>
@@ -1150,85 +1144,8 @@ const StorePreview = ({ project }: { project: any }) => {
   );
 };
 
-// const seoCaseStudies = [
-//   {
-//     title: "Product Discovery at Scale",
-//     category: "Ecommerce SEO",
-//     result: "26.9K Organic Clicks",
-//     period: "Three-month Google Search Console report",
-//     summary:
-//       "Organic growth, product discovery, category-page visibility, and stronger search performance.",
-//     image: "/case-studies/product-discovery-at-scale-gsc.webp",
-//     path: "/case-studies/product-discovery-at-scale",
-//   },
-//   {
-//     title: "Civic Access",
-//     category: "Search Growth & Technical SEO",
-//     result: "32.3K Organic Clicks",
-//     period: "28-day Google Search Console report",
-//     summary:
-//       "Search visibility growth, content clarity, mobile performance, and technical quality improvements.",
-//     image: "/case-studies/civic-gsc.webp",
-//     path: "/case-studies/civic-access",
-//   },
-//   {
-//     title: "ClearRide Auto Glass",
-//     category: "Local SEO & Performance",
-//     result: "18.4K Organic Clicks",
-//     period: "28-day Google Search Console report",
-//     summary:
-//       "Local search visibility, service-page performance, mobile usability, and technical improvement work.",
-//     image: "/case-studies/clear-ride-gsc.webp",
-//     path: "/case-studies/clear-ride-auto-glass",
-//   },
-//   {
-//     title: "Bluebridge Partners",
-//     category: "Search Growth & Technical SEO",
-//     result: "6.68K Organic Clicks",
-//     period: "Three-month Google Search Console report",
-//     summary:
-//       "Organic momentum, high click-through performance, accessibility improvements, and technical SEO review.",
-//     image: "/case-studies/bluebridge-gsc.webp",
-//     path: "/case-studies/bluebridge",
-//   },
-//   {
-//     title: "Harborline",
-//     category: "Organic Growth & Technical SEO",
-//     result: "18.7K Organic Clicks",
-//     period: "28-day Google Search Console report",
-//     summary:
-//       "Growing organic search visibility, stronger mobile audit quality, and search-intent optimisation.",
-//     image: "/case-studies/harborline-gsc.webp",
-//     path: "/case-studies/harborline",
-//   },
-// ];
-
 const CaseStudyDetail = () => {
   const { projectId } = useParams();
-
-  // A. Listing View
-  // if (!projectId) {
-  //   return (
-  //     <div className="min-h-screen bg-[#050505] text-white pt-40 pb-20 px-6">
-  //       <div className="max-w-[1400px] mx-auto">
-  //         <span className="text-[#f9a825] text-xs font-black uppercase tracking-[0.4em] mb-4 block">Website & eCommerce Projects</span>
-  //         <h1 className="text-7xl md:text-8xl font-black tracking-tighter uppercase leading-[0.8] mb-16">
-  //           Case <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f9a825] to-[#ffe066]">Studies.</span>
-  //         </h1>
-
-  //         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-  //           {caseStudies.map((p) => (
-  //             <Link key={p.id} to={`/case-studies/${p.id}`} className="group p-4 bg-white/5 border border-white/5 rounded-[2rem] hover:border-[#f9a825]/30 transition-all">
-  //               <img src={p.image} className="w-full aspect-video object-cover rounded-2xl mb-6 grayscale group-hover:grayscale-0 transition-all" alt={`${p.title} ${p.category} website project case study`}  loading="lazy" decoding="async"/>
-  //               <h2 className="text-2xl font-black uppercase tracking-tighter">{p.title}</h2>
-  //               <p className="text-[10px] font-black uppercase tracking-widest text-[#f9a825] mt-2">{p.category}</p>
-  //             </Link>
-  //           ))}
-  //         </div>
-  //       </div>
-  //     </div>
-  //   );
-  // }
 
 // A. Listing View
 if (!projectId) {

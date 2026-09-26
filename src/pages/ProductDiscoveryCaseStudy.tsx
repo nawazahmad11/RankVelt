@@ -349,6 +349,8 @@ const ProductDiscoveryCaseStudy = () => {
             <img
               src={CASE_STUDY_IMAGE}
               alt="Google Search Console report showing 26.9K clicks, 1.82M impressions, 1.5 percent CTR, and 6.8 average position across three months"
+              loading="lazy"
+              decoding="async"
               className="h-auto w-full rounded-lg border border-white/10"
             />
 
