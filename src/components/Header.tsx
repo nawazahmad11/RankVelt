@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
 import {
   ArrowRight,
   Calculator,
@@ -620,136 +619,149 @@ const Header = () => {
             aria-label={isMobileMenuOpen ? "Close menu" : "Open navigation menu"}
             aria-expanded={isMobileMenuOpen}
           >
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={isMobileMenuOpen ? "close" : "menu"}
-                initial={{ opacity: 0, rotate: -90 }}
-                animate={{ opacity: 1, rotate: 0 }}
-                exit={{ opacity: 0, rotate: 90 }}
-                transition={{ duration: 0.2 }}
+            {/* Icon swap (was framer-motion AnimatePresence mode="wait"):
+                exiting icon fades/rotates out over 0.2s, entering icon fades/
+                rotates in over 0.2s after a 0.2s delay — same sequential timing. */}
+            <span className="relative block h-7 w-7" aria-hidden="true">
+              <span
+                className={`absolute inset-0 transition-all duration-200 ease-out ${
+                  isMobileMenuOpen
+                    ? "rotate-90 opacity-0"
+                    : "rotate-0 opacity-100 delay-200"
+                }`}
               >
-                {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-              </motion.div>
-            </AnimatePresence>
+                <Menu size={28} />
+              </span>
+              <span
+                className={`absolute inset-0 transition-all duration-200 ease-out ${
+                  isMobileMenuOpen
+                    ? "rotate-0 opacity-100 delay-200"
+                    : "-rotate-90 opacity-0"
+                }`}
+              >
+                <X size={28} />
+              </span>
+            </span>
           </button>
         </div>
       </div>
 
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="pointer-events-auto fixed inset-0 left-0 top-0 z-[105] flex h-screen w-full flex-col overflow-y-auto bg-black/98 p-8 pt-32 backdrop-blur-2xl"
+      {/* Mobile menu (was framer-motion AnimatePresence): same 0.3s fade + 20px
+          slide on open AND close, pure CSS. `visibility` flips discretely
+          (visible at open-start, hidden at close-end) so the panel leaves the
+          tab order and a11y tree exactly like the old unmount. */}
+      <div
+        className={`fixed inset-0 left-0 top-0 z-[105] flex h-screen w-full flex-col overflow-y-auto bg-black/98 p-8 pt-32 backdrop-blur-2xl transition-[opacity,transform,visibility] duration-300 ease-out ${
+          isMobileMenuOpen
+            ? "visible translate-y-0 opacity-100 pointer-events-auto"
+            : "invisible -translate-y-5 pointer-events-none opacity-0"
+        }`}
+      >
+        <div className="mx-auto flex w-full max-w-md flex-col gap-5">
+          <button
+            type="button"
+            onClick={() => handleNavClick("portfolio")}
+            className="text-left text-3xl font-bold text-white transition-colors hover:text-[#f9a825]"
           >
-            <div className="mx-auto flex w-full max-w-md flex-col gap-5">
-              <button
-                type="button"
-                onClick={() => handleNavClick("portfolio")}
-                className="text-left text-3xl font-bold text-white transition-colors hover:text-[#f9a825]"
-              >
-                Work
-              </button>
+            Work
+          </button>
 
+          <Link
+            to="/blog"
+            onClick={closeAllMenus}
+            className="text-3xl font-bold text-white transition-colors hover:text-[#f9a825]"
+          >
+            Insights
+          </Link>
+
+          <Link
+            to="/case-studies"
+            onClick={closeAllMenus}
+            className="text-3xl font-bold text-white transition-colors hover:text-[#f9a825]"
+          >
+            Case Studies
+          </Link>
+
+          <button
+            type="button"
+            onClick={() => handleNavClick("faq")}
+            className="text-left text-3xl font-bold text-white transition-colors hover:text-[#f9a825]"
+          >
+            FAQ
+          </button>
+
+          <div className="my-2 h-px bg-white/10" />
+
+          <span className="text-[11px] font-black uppercase tracking-[0.25em] text-[#f9a825]">
+            SEO Services
+          </span>
+
+          {seoServiceLinks.map((service) => (
+            <Link
+              key={service.path}
+              to={service.path}
+              onClick={closeAllMenus}
+              className="rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4"
+            >
+              <span className="block text-lg font-black text-white">
+                {service.name}
+              </span>
+
+              <span className="mt-1 block text-sm leading-relaxed text-white/55">
+                {service.description}
+              </span>
+            </Link>
+          ))}
+
+          <span className="mt-2 text-[11px] font-black uppercase tracking-[0.25em] text-white/40">
+            Website Support
+          </span>
+
+          <div className="grid gap-3 sm:grid-cols-2">
+            {websiteSupportLinks.map((service) => (
               <Link
-                to="/blog"
+                key={service.path}
+                to={service.path}
                 onClick={closeAllMenus}
-                className="text-3xl font-bold text-white transition-colors hover:text-[#f9a825]"
+                className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-4 text-sm font-bold text-white/75 transition-colors hover:border-[#f9a825]/35 hover:text-[#f9a825]"
               >
-                Insights
+                {service.name}
               </Link>
+            ))}
+          </div>
 
+          <span className="mt-2 text-[11px] font-black uppercase tracking-[0.25em] text-white/40">
+            Free Tools
+          </span>
+
+          <div className="grid grid-cols-2 gap-3">
+            {tools.map((tool) => (
               <Link
-                to="/case-studies"
+                key={tool.name}
+                to={tool.path}
                 onClick={closeAllMenus}
-                className="text-3xl font-bold text-white transition-colors hover:text-[#f9a825]"
+                className="flex flex-col items-center justify-center gap-3 rounded-3xl border border-white/5 bg-white/5 p-5 transition-all hover:bg-white/10 active:scale-95"
               >
-                Case Studies
+                <span className="rounded-full bg-[#f9a825]/10 p-2 text-[#f9a825]">
+                  {tool.icon}
+                </span>
+
+                <span className="text-center text-[12px] font-medium text-white/90">
+                  {tool.name}
+                </span>
               </Link>
+            ))}
+          </div>
 
-              <button
-                type="button"
-                onClick={() => handleNavClick("faq")}
-                className="text-left text-3xl font-bold text-white transition-colors hover:text-[#f9a825]"
-              >
-                FAQ
-              </button>
-
-              <div className="my-2 h-px bg-white/10" />
-
-              <span className="text-[11px] font-black uppercase tracking-[0.25em] text-[#f9a825]">
-                SEO Services
-              </span>
-
-              {seoServiceLinks.map((service) => (
-                <Link
-                  key={service.path}
-                  to={service.path}
-                  onClick={closeAllMenus}
-                  className="rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4"
-                >
-                  <span className="block text-lg font-black text-white">
-                    {service.name}
-                  </span>
-
-                  <span className="mt-1 block text-sm leading-relaxed text-white/55">
-                    {service.description}
-                  </span>
-                </Link>
-              ))}
-
-              <span className="mt-2 text-[11px] font-black uppercase tracking-[0.25em] text-white/40">
-                Website Support
-              </span>
-
-              <div className="grid gap-3 sm:grid-cols-2">
-                {websiteSupportLinks.map((service) => (
-                  <Link
-                    key={service.path}
-                    to={service.path}
-                    onClick={closeAllMenus}
-                    className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-4 text-sm font-bold text-white/75 transition-colors hover:border-[#f9a825]/35 hover:text-[#f9a825]"
-                  >
-                    {service.name}
-                  </Link>
-                ))}
-              </div>
-
-              <span className="mt-2 text-[11px] font-black uppercase tracking-[0.25em] text-white/40">
-                Free Tools
-              </span>
-
-              <div className="grid grid-cols-2 gap-3">
-                {tools.map((tool) => (
-                  <Link
-                    key={tool.name}
-                    to={tool.path}
-                    onClick={closeAllMenus}
-                    className="flex flex-col items-center justify-center gap-3 rounded-3xl border border-white/5 bg-white/5 p-5 transition-all hover:bg-white/10 active:scale-95"
-                  >
-                    <span className="rounded-full bg-[#f9a825]/10 p-2 text-[#f9a825]">
-                      {tool.icon}
-                    </span>
-
-                    <span className="text-center text-[12px] font-medium text-white/90">
-                      {tool.name}
-                    </span>
-                  </Link>
-                ))}
-              </div>
-
-              <button
-                type="button"
-                onClick={() => handleNavClick("audit")}
-                className="mt-4 rounded-2xl bg-gradient-to-r from-[#ffb347] via-[#f9a825] to-[#f57c00] px-5 py-4 text-sm font-black uppercase tracking-wider text-black"
-              >
-                Get a Free SEO Audit
-              </button>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          <button
+            type="button"
+            onClick={() => handleNavClick("audit")}
+            className="mt-4 rounded-2xl bg-gradient-to-r from-[#ffb347] via-[#f9a825] to-[#f57c00] px-5 py-4 text-sm font-black uppercase tracking-wider text-black"
+          >
+            Get a Free SEO Audit
+          </button>
+        </div>
+      </div>
     </header>
   );
 };
