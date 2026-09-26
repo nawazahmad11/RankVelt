@@ -251,7 +251,7 @@ export const blogPosts: BlogPost[] = [
     ],
 
     content: `
-      <p class="article-updated"><strong>Last updated:</strong> July 2026</p>
+      <p class="article-updated"><strong>Last updated:</strong> August 2026</p>
 
       <p>SEO, AEO, and GEO compete for the same marketing budget, but they do not produce the same result. SEO builds discoverability and traffic. AEO improves the chance that a concise answer gets selected. GEO focuses on whether an AI system cites, mentions, or recommends the brand behind that answer.</p>
 
@@ -865,7 +865,7 @@ export const blogPosts: BlogPost[] = [
     ],
 
     content: `
-      <p class="article-updated"><strong>Last updated:</strong> July 2026</p>
+      <p class="article-updated"><strong>Last updated:</strong> August 2026</p>
 
       <p>There are two ways marketers approach AI search optimization.</p>
 
@@ -1651,7 +1651,7 @@ export const blogPosts: BlogPost[] = [
     ],
 
     content: `
-      <p class="article-updated"><strong>Last updated:</strong> July 2026</p>
+      <p class="article-updated"><strong>Last updated:</strong> August 2026</p>
 
       <p>Local businesses now compete across Google Maps, organic results, AI Overviews, AI Mode, and conversational recommendation tools. Ranking still matters, but it is no longer the only measure of search visibility.</p>
 
@@ -2378,7 +2378,7 @@ export const blogPosts: BlogPost[] = [
 
     content: `
       <p class="article-updated">
-        <strong>Last updated:</strong> July 2026
+        <strong>Last updated:</strong> August 2026
       </p>
 
       <p>
@@ -3589,7 +3589,7 @@ export const blogPosts: BlogPost[] = [
 
     content: `
       <p class="article-updated">
-        <strong>Last updated:</strong> July 2026
+        <strong>Last updated:</strong> August 2026
       </p>
 
       <div class="answer-box">
@@ -5199,7 +5199,7 @@ export const blogPosts: BlogPost[] = [
 
     content: `
       <p class="article-updated">
-        <strong>Last updated:</strong> July 2026
+        <strong>Last updated:</strong> August 2026
       </p>
 
       <p class="standalone-line">
@@ -6223,7 +6223,7 @@ export const blogPosts: BlogPost[] = [
     ],
 
     content: `
-      <p class="article-updated"><strong>Last updated:</strong> July 2026</p>
+      <p class="article-updated"><strong>Last updated:</strong> August 2026</p>
 
       <p>A visual reskin, a full rebuild, and a platform migration are not the same project. A reskin can preserve nearly every SEO signal. A rebuild may change templates, navigation, code, and content. Moving from WordPress to Shopify—or the other way around—adds URL and platform restrictions.</p>
 
@@ -6959,7 +6959,7 @@ export const blogPosts: BlogPost[] = [
     ],
 
     content: `
-      <p class="article-updated"><strong>Last updated:</strong> July 2026</p>
+      <p class="article-updated"><strong>Last updated:</strong> August 2026</p>
 
       <p>This works best for content-heavy websites, SaaS resource centres, ecommerce catalogues, publishers, and service businesses with several related pages. It won’t help if the destination pages are blocked, noindexed, duplicated, broken, or inaccessible to the relevant crawler.</p>
 
@@ -7532,7 +7532,7 @@ export const blogPosts: BlogPost[] = [
     ],
 
     content: `
-      <p class="article-updated"><strong>Last updated:</strong> July 2026</p>
+      <p class="article-updated"><strong>Last updated:</strong> August 2026</p>
 
       <div class="answer-box">
         <p><strong>What We Learned From Five SEO Growth Case Studies</strong> refers to the repeatable patterns found by comparing search visibility, CTR, average position, content relevance, and mobile audit evidence across several projects. The goal is not to copy one tactic. It is to understand which signals deserve action and which need more context.</p>

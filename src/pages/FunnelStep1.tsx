@@ -15,7 +15,7 @@ import {
   Wrench,
 } from "lucide-react";
 
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense, useEffect, useRef, useState } from "react";
 
 const StatsGrid = lazy(() => import("@/components/StatsGrid"));
 
@@ -45,7 +45,7 @@ const serviceItems = [
   {
     label: "Technical SEO Audit",
     desc: "Fix indexing, speed, structure, and on-page SEO issues to improve overall Google performance.",
-    link: "#audit",
+    link: "/tools",
   },
   {
     label: "Website SEO & Design",
@@ -226,6 +226,34 @@ const FunnelStep1 = () => {
   const navigate = useNavigate();
   const [activeProjectId, setActiveProjectId] = useState<string | null>(null);
 
+  // Lazy "real stats" video: zero network cost until the section scrolls
+  // near the viewport (preload="none" + IntersectionObserver gating).
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [videoVisible, setVideoVisible] = useState(false);
+  const [videoFailed, setVideoFailed] = useState(false);
+
+  useEffect(() => {
+    const node = videoRef.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            node.src = "/rankvelt-real-stats.webm";
+            node.load();
+            node.play().catch(() => {});
+            observer.disconnect();
+          }
+        });
+      },
+      { rootMargin: "200px" },
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({
       behavior: "smooth",
@@ -246,11 +274,12 @@ const FunnelStep1 = () => {
     scrollToSection(link.replace("#", ""));
   };
 
-  const featuredReviews = reviewData.slice(0, 10);
-  const repeatedReviews = [...featuredReviews, ...featuredReviews];
+  // Two marquee rows, each with 10 UNIQUE reviews.
+  // Items are duplicated inside the animated track (rendered below) so the
+  // -50% translateX loop stays seamless without repeating visible reviews.
   const testimonialRows = [
-    repeatedReviews.slice(0, 10),
-    repeatedReviews.slice(10, 20),
+    reviewData.slice(0, 10),
+    reviewData.slice(10, 20),
   ];
 
   return (
@@ -429,8 +458,39 @@ const FunnelStep1 = () => {
                   );
                 })}
               </div>
+
+              {/* Lazy "real stats" video — loads only when scrolled into view.
+                  Requires /rankvelt-real-stats.webm in the public folder. */}
+              {!videoFailed && (
+                <div className="lg:col-span-5">
+                  <div className="group relative mx-auto h-full w-full max-w-[500px]">
+                    {/* Outer Ambient Glow */}
+                    <div
+                      aria-hidden="true"
+                      className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-primary/30 to-purple-500/30 opacity-30 blur-xl transition-opacity duration-500 group-hover:opacity-60"
+                    />
+                    {/* Glass Frame Wrapping Video */}
+                    <div className="relative flex h-full items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-black/40 p-3 backdrop-blur-xl transition-all duration-500 group-hover:border-primary/50">
+                      <video
+                        ref={videoRef}
+                        loop
+                        muted
+                        playsInline
+                        preload="none"
+                        aria-hidden="true"
+                        onCanPlay={() => setVideoVisible(true)}
+                        onError={() => setVideoFailed(true)}
+                        className={`h-auto max-h-[420px] w-full rounded-xl object-contain transition-opacity duration-700 ${
+                          videoVisible ? "opacity-100" : "opacity-0"
+                        }`}
+                      >
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
-            
           </div>
         </section>
 
@@ -644,7 +704,10 @@ const FunnelStep1 = () => {
                     rowIndex === 1 ? "animate-right" : "animate-left"
                   }`}
                 >
-                  {rowData.map((testimonial, index) => (
+                  {/* Duplicate the row's items inside the track so the
+                      -50% marquee loop is seamless. Keys stay unique because
+                      index spans the doubled array. */}
+                  {[...rowData, ...rowData].map((testimonial, index) => (
                     <div
                       key={`${testimonial.name}-${rowIndex}-${index}`}
                       className="w-[320px] shrink-0 whitespace-normal rounded-xl border border-white/10 bg-white/[0.03] p-5 shadow-md md:backdrop-blur-md transition-all duration-300 hover:border-primary/40 hover:bg-white/[0.05]"
