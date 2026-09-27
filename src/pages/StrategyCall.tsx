@@ -284,7 +284,7 @@ const StrategyCallForm = () => {
                     handleChange("whatsapp", event.target.value)
                   }
                   className="w-full rounded-lg border border-white/10 bg-secondary/50 py-3 pl-10 pr-4 text-sm outline-none transition-all focus:ring-2 focus:ring-primary/50"
-                  placeholder="+92 300 1234567"
+                  placeholder="+92 324 4146447"
                 />
               </div>
             </div>

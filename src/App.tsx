@@ -23,7 +23,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import RouteSeoManager from "./components/RouteSeoManager";
 // import AuditPopup from "./components/AuditPopup";
 // import WhatsAppButton from "./components/WhatsAppButton";
-const AuditPopup = lazy(() => import("./components/AuditPopup"));
+// const AuditPopup = lazy(() => import("./components/AuditPopup"));
 const WhatsAppButton = lazy(() => import("./components/WhatsAppButton"));
 
 
@@ -434,7 +434,7 @@ const App = () => (
         </Suspense>
 
         <Footer />
-        <AuditPopup />
+        {/* <AuditPopup /> */}
         <WhatsAppButton />
       </BrowserRouter>
     </TooltipProvider>

@@ -159,7 +159,7 @@ const BlogDetails = () => {
                                 <button onClick={() => navigate('/schedule')} className="bg-primary text-black px-8 py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform">
                                     Book a Call <ArrowRight size={16} />
                                 </button>
-                                <a href="https://wa.me/923059552222" target="_blank" className="bg-white/5 border border-white/10 px-8 py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest text-center hover:bg-white/10 transition-all text-white">
+                                <a href="https://wa.me/923244146447" target="_blank" className="bg-white/5 border border-white/10 px-8 py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest text-center hover:bg-white/10 transition-all text-white">
                                     WhatsApp
                                 </a>
                             </div>

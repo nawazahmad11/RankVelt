@@ -743,7 +743,7 @@ const SchemaMarkupGenerator = () => {
             <InputField
               label="Public Phone Number"
               value={form.telephone}
-              placeholder="+92 300 1234567"
+              placeholder="+923244146447"
               onChange={(value) => updateField("telephone", value)}
             />
 
@@ -785,7 +785,7 @@ const SchemaMarkupGenerator = () => {
             <InputField
               label="Public Phone Number"
               value={form.telephone}
-              placeholder="+92 300 1234567"
+              placeholder="+923244146447"
               onChange={(value) => updateField("telephone", value)}
             />
 

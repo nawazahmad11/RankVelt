@@ -56,6 +56,15 @@ const AuditPopup = () => {
     };
   }, [hasShown, location.pathname]);
 
+  useEffect(() => {
+    if (!isOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isOpen]);
+
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
 
@@ -91,15 +100,16 @@ const AuditPopup = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            onClick={() => setIsOpen(false)}
             className="fixed inset-0 z-[9998] bg-black/70 backdrop-blur-[2px]"
           />
 
-          <div className="pointer-events-none fixed inset-0 z-[9999] flex items-center justify-center p-4">
+          <div className="pointer-events-none fixed inset-0 z-[9999] flex items-center justify-center overflow-y-auto p-4">
             <motion.div
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              className="pointer-events-auto relative w-full max-w-md overflow-hidden rounded-[2.5rem] border border-white/10 bg-[#0f1115] p-7 shadow-2xl sm:p-10"
+              className="pointer-events-auto relative m-auto max-h-[92dvh] w-full max-w-md overflow-y-auto overscroll-contain rounded-[1.75rem] border border-white/10 bg-[#0f1115] p-6 shadow-2xl sm:rounded-[2.5rem] sm:p-10"
             >
               <button
                 type="button"
@@ -124,7 +134,7 @@ const AuditPopup = () => {
                       </span>
                     </div>
 
-                    <h3 className="mb-4 text-center text-3xl font-black leading-tight text-white">
+                    <h3 className="mb-4 text-center text-2xl font-black leading-tight text-white sm:text-3xl">
                       Before you go, find what is holding your website back.
                     </h3>
 
@@ -204,7 +214,7 @@ const AuditPopup = () => {
                       <CheckCircle2 size={64} strokeWidth={1.5} />
                     </div>
 
-                    <h3 className="mb-4 text-3xl font-black italic tracking-tight text-white">
+                    <h3 className="mb-4 text-2xl font-black italic tracking-tight text-white sm:text-3xl">
                       Request received!
                     </h3>
 
