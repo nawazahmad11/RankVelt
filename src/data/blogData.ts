@@ -60,6 +60,426 @@ export type BlogPost = {
 };
 
 export const blogPosts: BlogPost[] = [
+
+  {
+    id: "google-ai-overviews-how-it-works",
+
+    title: "Google AI Overviews: How It Works in 2026 (Simple Explanation)",
+
+    seoTitle: "Google AI Overviews: How It Works in 2026",
+
+    metaDescription:
+      "Learn how Google AI Overviews work in 2026: what triggers them, how Google builds the summary, and what it means for SEO. A simple step-by-step guide.",
+
+    ogTitle: "Google AI Overviews: How It Works in 2026",
+
+    socialDescription:
+      "A simple step-by-step explanation of Google AI Overviews: what triggers them, how the summary is built, and what it means for SEO.",
+
+    date: "Sep 30, 2026",
+    datePublished: "2026-09-30",
+    dateModified: "2026-09-30",
+
+    author: "RankVelt Editorial Team",
+    authorType: "Organization",
+
+    category: "AI SEARCH SEO",
+    readTime: "11 min read",
+
+    image: "/google-ai-overviews-how-it-works.webp",
+
+    imageAlt:
+      "How Google AI Overviews work in 2026, showing the four steps from query to AI-generated summary with source citations",
+
+    excerpt:
+      "Google AI Overviews are AI-generated summaries that appear above search results. This guide explains how they work in 2026, what triggers them, and what they mean for SEO, in plain steps.",
+
+      relatedPostIds: [
+        "optimize-google-ai-overviews",
+        "seo-vs-aeo-vs-geo",
+        "local-seo-ai-overviews",
+      ],
+
+    primaryService: {
+      title: "Business SEO",
+      description:
+        "Improve technical eligibility, content structure, internal linking, search visibility, and the conversion journey across commercially important pages.",
+      path: "/business-seo",
+    },
+
+    showStandardCta: true,
+
+    keyTakeaways: [
+      "Google AI Overviews are AI-written summaries that appear above organic results, built by reading multiple pages and citing the sources.",
+      "Informational, long-tail questions trigger overviews most often, while transactional and navigational queries rarely do.",
+      "Pages do not need to rank #1 to get cited; around 40% of cited sources rank in positions 11 to 20.",
+      "Clear answers under question-based headings, short paragraphs, FAQs, and fresh content increase citation chances.",
+    ],
+
+    faqItems: [
+      {
+        question: "What is an AI overview?",
+        answer:
+          "An AI overview is a short summary written by Google's AI that appears at the top of search results. It combines information from several web pages into one answer, with links to the sources.",
+      },
+      {
+        question: "What is Google AI overview?",
+        answer:
+          "It is Google's name for its AI-generated search summaries, built on the Gemini AI model. It launched widely in 2024 as part of the Search Generative Experience and now appears in about 20% of searches.",
+      },
+      {
+        question: "How do Google AI overviews work?",
+        answer:
+          "Google understands your question, gathers information from multiple web pages, uses AI to write a summary, and displays it with source links. The overview typically cites three or more sources.",
+      },
+      {
+        question: "How can I get my website cited in AI Overviews?",
+        answer:
+          "Write clear, direct answers to specific questions. Use question-based headings, keep paragraphs short, add FAQs, and keep content fresh. Pages do not need to rank #1 to be cited.",
+      },
+      {
+        question: "Can I turn off Google AI Overviews?",
+        answer:
+          "There is no official off switch. You can use the Web filter tab in search results to see only traditional links instead.",
+      },
+      {
+        question: "Do AI Overviews hurt website traffic?",
+        answer:
+          "They can reduce clicks, with top pages losing up to 64% of clicks on affected queries. But being cited keeps your brand visible, and many businesses report a net positive effect on visibility.",
+      },
+    ],
+
+    toc: [
+      {
+        id: "what-are-ai-overviews",
+        title: "What Are Google AI Overviews?",
+        level: 2,
+      },
+      {
+        id: "how-ai-overviews-work",
+        title: "How Do Google AI Overviews Work? (Step by Step)",
+        level: 2,
+      },
+      {
+        id: "step-1-understand-query",
+        title: "Step 1: Google Figures Out What You Really Asked",
+        level: 3,
+      },
+      {
+        id: "step-2-gather-information",
+        title: "Step 2: Google Gathers Information From Many Pages",
+        level: 3,
+      },
+      {
+        id: "step-3-ai-writes-summary",
+        title: "Step 3: The AI Writes the Summary",
+        level: 3,
+      },
+      {
+        id: "step-4-answer-with-sources",
+        title: "Step 4: Google Shows the Answer With Source Links",
+        level: 3,
+      },
+      {
+        id: "overviews-vs-snippets-vs-ai-mode",
+        title: "AI Overviews vs Featured Snippets vs AI Mode",
+        level: 2,
+      },
+      {
+        id: "what-triggers-ai-overview",
+        title: "What Triggers an AI Overview?",
+        level: 2,
+      },
+      {
+        id: "queries-that-trigger",
+        title: "Queries That Trigger AI Overviews",
+        level: 3,
+      },
+      {
+        id: "queries-that-rarely-trigger",
+        title: "Queries That Rarely Trigger Them",
+        level: 3,
+      },
+      {
+        id: "why-not-seeing-overviews",
+        title: "Why Am I Not Seeing AI Overviews?",
+        level: 2,
+      },
+      {
+        id: "turn-on-or-off",
+        title: "How to Turn AI Overviews On or Off",
+        level: 2,
+      },
+      {
+        id: "what-it-means-for-seo",
+        title: "What AI Overviews Mean for SEO in 2026",
+        level: 2,
+      },
+      {
+        id: "five-quick-wins",
+        title: "5 Quick Wins to Show Up in AI Overviews",
+        level: 3,
+      },
+      {
+        id: "beginner-mistakes",
+        title: "Beginner Mistakes to Avoid",
+        level: 2,
+      },
+      {
+        id: "what-blogs-dont-tell-you",
+        title: "What Most Blogs Don't Tell You",
+        level: 2,
+      },
+      {
+        id: "faqs",
+        title: "Frequently Asked Questions",
+        level: 2,
+      },
+      {
+        id: "conclusion",
+        title: "Conclusion",
+        level: 2,
+      },
+    ],
+
+    content: `
+      <p>Google AI Overviews are AI-generated summaries that appear above the regular search results. When you search a question, Google reads information from several web pages and uses its Gemini AI model to write one short answer, with links to the sources it used.</p>
+
+      <p>This matters more than ever in 2026. Studies show that up to 58% of searches now end without a single click, because people get their answer right on the results page. If your content is not clear enough for Google's AI to read and cite, you become invisible even when you rank.</p>
+
+      <p>In this guide, we explain how Google AI Overviews work in 2026 in plain steps. No jargon. You will learn what triggers them, how Google builds the summary, and what it means for your website. Whether you run a small business site or just want to understand the new search, this is written for you.</p>
+
+      <h2 id="what-are-ai-overviews">What Are Google AI Overviews?</h2>
+
+      <p>Google AI Overviews are short answers written by artificial intelligence. They sit at the very top of the search results page, above the blue links you are used to.</p>
+
+      <p>They started as part of something Google called the Search Generative Experience (SGE). Google tested it in 2023, launched it widely in 2024, and by 2026 it has become a normal part of search in 200 countries and 40 languages.</p>
+
+      <p>Here is a simple way to picture it. Before, Google was a librarian who pointed you to the right books. Now, Google also reads the books for you and tells you the summary. The librarian still shows you where the books are (those are the cited links), but many people just listen to the summary and leave.</p>
+
+      <p>One important note: an AI Overview is not the same as a featured snippet. A featured snippet copies one short passage from one page. An AI Overview reads many pages and writes a brand new summary in its own words. That difference matters, and we compare them in detail below.</p>
+
+      <h2 id="how-ai-overviews-work">How Do Google AI Overviews Work? (Step by Step)</h2>
+
+      <p>When you type a question into Google, four things happen in about a second. Let us walk through each one.</p>
+
+      <figure>
+        <img src="/ai-overviews-how-it-works-infographic.webp" alt="Infographic showing how Google AI Overviews work: user query, Google Search retrieval, Gemini AI system, and the AI Overview on the search page" loading="lazy" />
+        <figcaption>The four stages of a Google AI Overview, from your query to the AI-written summary.</figcaption>
+      </figure>
+
+      <h3 id="step-1-understand-query">Step 1: Google Figures Out What You Really Asked</h3>
+
+      <p>First, Google does not just match your exact words. It tries to understand the meaning behind them. If you type "why is my tomato plant dying," Google knows you want plant care advice, not a biology lesson about tomatoes.</p>
+
+      <p>This is why longer, specific questions work best with AI Overviews. A vague two-word search does not give Google enough to summarize. A full question does.</p>
+
+      <h3 id="step-2-gather-information">Step 2: Google Gathers Information From Many Pages</h3>
+
+      <p>Next, Google searches the web almost like normal. It finds pages that seem relevant to your question. But here is the interesting part: it does not only look at the top 10 results.</p>
+
+      <p>Research shows that around 40% of pages cited in AI Overviews rank between positions 11 and 20. So even pages on page two of Google can end up as sources. Google also pulls from community discussions. About 5.5% of AI Overviews cite Reddit, where real people share real experiences.</p>
+
+      <p>The system typically cites three or more sources per answer. Only 1% of overviews rely on a single source. Longer answers cite more, sometimes close to 28 sources.</p>
+
+      <h3 id="step-3-ai-writes-summary">Step 3: The AI Writes the Summary</h3>
+
+      <p>This is where Google's Gemini AI model does its job. It reads all the gathered pages and writes one clear summary in natural language.</p>
+
+      <p>Think of it like a student writing an essay after reading five articles. The essay is new writing, but the facts come from the articles. That is exactly what the AI does. It combines, shortens, and simplifies.</p>
+
+      <p>Because the summary is newly written, two people can get slightly different wordings for the same question. The facts stay similar, but the phrasing changes.</p>
+
+      <h3 id="step-4-answer-with-sources">Step 4: Google Shows the Answer With Source Links</h3>
+
+      <p>Finally, Google displays the summary at the top of your results with small links to the source pages. On desktop, you often see the links beside the overview. On mobile, you tap to expand and see them.</p>
+
+      <p>Here is the catch most people miss: 7 out of 10 users only read the first few lines of the overview. So if your page gets cited but the citation sits at the bottom, most readers will never see your name. Being cited early in the summary is what really counts.</p>
+
+      <p><strong>A simple analogy:</strong> Imagine you ask three friends about the best pizza in town. Each friend gives you their opinion. Then a fourth friend listens to all three and tells you, "Most people say Tony's is the best because of the crust, and here is what each person said." That fourth friend is the AI Overview. Your website wants to be one of the three friends it listens to.</p>
+
+      <h2 id="overviews-vs-snippets-vs-ai-mode">AI Overviews vs Featured Snippets vs AI Mode</h2>
+
+      <p>People mix these up all the time. Here is the clear difference:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>AI Overviews</th>
+            <th>Featured Snippets</th>
+            <th>AI Mode</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>What it is</strong></td>
+            <td>AI-written summary from many pages</td>
+            <td>Copied passage from one page</td>
+            <td>Full AI chat-style search mode</td>
+          </tr>
+          <tr>
+            <td><strong>Sources used</strong></td>
+            <td>3 or more</td>
+            <td>1</td>
+            <td>Many, conversational</td>
+          </tr>
+          <tr>
+            <td><strong>Position</strong></td>
+            <td>Top of results</td>
+            <td>Top of results (position zero)</td>
+            <td>Separate tab and experience</td>
+          </tr>
+          <tr>
+            <td><strong>Launched</strong></td>
+            <td>2024 (from SGE)</td>
+            <td>2014</td>
+            <td>2025, expanded in 2026</td>
+          </tr>
+          <tr>
+            <td><strong>Best for</strong></td>
+            <td>Explanations and advice</td>
+            <td>Quick facts</td>
+            <td>Follow-up questions</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>AI Mode is Google's newer, bigger step. It has passed 1 billion monthly users and works more like ChatGPT inside Google Search. You can ask follow-up questions and dig deeper. AI Overviews, in comparison, give you one quick summary and stop. Both pull from the same web, so optimizing for one helps with the other.</p>
+
+      <h2 id="what-triggers-ai-overview">What Triggers an AI Overview?</h2>
+
+      <p>Not every search gets an AI Overview. Google is picky. Here is what we know from large studies:</p>
+
+      <h3 id="queries-that-trigger">Queries That Trigger AI Overviews</h3>
+
+      <ul>
+        <li><strong>Informational questions.</strong> Around 88% of AI Overview triggers come from informational searches. "How," "what," "why," and "best way to" questions are the most common.</li>
+        <li><strong>Long questions.</strong> Searches with eight or more words are about 7 times more likely to trigger an overview. Short, vague searches usually do not.</li>
+        <li><strong>Health, home, and how-to topics.</strong> Health queries trigger overviews 60.7% of the time. Home improvement is close behind at 50.4%.</li>
+      </ul>
+
+      <h3 id="queries-that-rarely-trigger">Queries That Rarely Trigger Them</h3>
+
+      <ul>
+        <li><strong>Transactional searches.</strong> "Buy running shoes" or "plumber near me" rarely get summaries. Google is careful here because wrong answers could cost people money.</li>
+        <li><strong>Navigational searches.</strong> Typing "facebook login" just takes you to Facebook. No summary needed.</li>
+        <li><strong>Local searches.</strong> Only about 7% of local-intent searches show an overview.</li>
+      </ul>
+
+      <p>The pattern is simple: if the query needs an explanation, Google summarizes. If it needs a product, a place, or a specific site, Google shows links instead.</p>
+
+      <h2 id="why-not-seeing-overviews">Why Am I Not Seeing AI Overviews?</h2>
+
+      <p>This is one of the most searched questions about the feature, so let us answer it directly. If you search something and no overview appears, it is usually one of these reasons:</p>
+
+      <ol>
+        <li><strong>Your query does not need a summary.</strong> Short, transactional, or navigational searches skip the feature by design.</li>
+        <li><strong>It is not rolled out for your region or language yet.</strong> Coverage ranges from 37% in some countries to much lower in others.</li>
+        <li><strong>You are signed out or in an experiment group.</strong> Google sometimes tests different layouts on different users.</li>
+        <li><strong>The topic is too new or too sensitive.</strong> Breaking news and medical advice get extra caution.</li>
+      </ol>
+
+      <p>Try this yourself: search a long, specific how-to question like "how to fix a leaking kitchen faucet step by step" on your phone. In most countries, an overview will appear. That is the feature working as intended.</p>
+
+      <h2 id="turn-on-or-off">How to Turn AI Overviews On or Off</h2>
+
+      <p>There is no single on-off switch, which confuses a lot of people. Here is the honest situation:</p>
+
+      <ul>
+        <li><strong>You cannot fully disable AI Overviews</strong> in normal Google Search. Google treats them as a core part of results now.</li>
+        <li><strong>A workaround exists.</strong> Click the "Web" filter tab under the search bar to see only traditional blue links without the AI summary.</li>
+        <li>On mobile, the Google app settings have some AI feature toggles in certain regions, but they change often.</li>
+      </ul>
+
+      <p>Our advice: instead of fighting the feature, learn to benefit from it. The rest of this guide shows you how.</p>
+
+      <h2 id="what-it-means-for-seo">What AI Overviews Mean for SEO in 2026</h2>
+
+      <p>Here is the honest picture. AI Overviews take clicks away. Pages in the top position can lose 34% to 64% of their clicks when an overview appears above them. That hurts.</p>
+
+      <p>But there is another side. Being cited inside the overview keeps your brand visible even without the click. Around 63% of businesses said AI Overviews had a positive effect on their visibility. The game changed from "rank and get clicks" to "get cited and get remembered."</p>
+
+      <p>So the new goal is simple: become the source Google quotes. If you want to learn how to rank in Google AI Overviews, start with these five moves.</p>
+
+      <h3 id="five-quick-wins">5 Quick Wins to Show Up in AI Overviews</h3>
+
+      <ol>
+        <li><strong>Answer the question in the first 50 words.</strong> Put a clear, direct answer right under your H2 heading. Google lifts these blocks straight into overviews.</li>
+        <li><strong>Use question-based headings.</strong> Headings like "What triggers an AI overview?" match the exact phrases people search.</li>
+        <li><strong>Add a short FAQ to every guide.</strong> Four to six questions with two-sentence answers. This is the easiest win on this entire list.</li>
+        <li><strong>Keep paragraphs short and scannable.</strong> Two to three lines max. AI models extract clean blocks, not walls of text.</li>
+        <li><strong>Update your content dates.</strong> Freshness is a known citation factor. Review your top pages every few months and refresh the stats.</li>
+      </ol>
+
+      <h2 id="beginner-mistakes">Beginner Mistakes to Avoid</h2>
+
+      <p><strong>Mistake 1: Writing for keywords instead of questions.</strong><br>Why it happens: old SEO training said to repeat the keyword everywhere. What impact it creates: the content reads robotic, and AI models prefer natural question-and-answer blocks. How pros fix it: write one clear answer per heading, phrased the way a person would ask it.</p>
+
+      <p><strong>Mistake 2: Burying the answer at the bottom.</strong><br>Why it happens: writers build up to the answer like a story. What impact it creates: Google's AI reads the top of the page first. If the answer is 1,000 words down, a competitor's clear answer gets cited instead. How pros fix it: put the direct answer in the first paragraph under every H2.</p>
+
+      <p><strong>Mistake 3: Publishing once and forgetting.</strong><br>Why it happens: people think SEO is a one-time job. What impact it creates: stats go stale, and AI models favor fresh content for fast-changing topics. How pros fix it: set a reminder to refresh your most important pages every 3 to 4 months.</p>
+
+      <p><strong>Mistake 4: Ignoring pages that do not rank on page one.</strong><br>Why it happens: everyone only checks page one rankings. What impact it creates: you miss that pages in positions 11 to 20 still get cited in overviews. How pros fix it: check Search Console for pages with high impressions but low clicks, and improve their answer blocks.</p>
+
+      <h2 id="what-blogs-dont-tell-you">What Most Blogs Don't Tell You</h2>
+
+      <ul>
+        <li><strong>You do not need to rank #1 to get cited.</strong> As we saw, 40% of cited sources sit in positions 11 to 20. Clarity beats position.</li>
+        <li><strong>Reddit threads get cited.</strong> Google trusts real human discussions. Authentic, experience-based content has an edge over polished corporate copy.</li>
+        <li><strong>Brand mentions matter as much as links.</strong> When AI summarizes, it often names brands without linking. Getting your brand name into the conversation is a win even without the click.</li>
+        <li><strong>AI Overviews are expanding into shopping queries.</strong> Transactional coverage grew from 2% to 14% in 2025. Ecommerce sites should prepare now, not later.</li>
+        <li><strong>Most blogs copy the same statistics.</strong> If you publish one original observation from your own work, your content instantly stands out to both readers and AI. For example, check your own Search Console: filter queries where your impressions are high but clicks dropped, and you will often find an AI Overview sitting above you. That is your starting list for optimization.</li>
+      </ul>
+
+      <h2 id="faqs">Frequently Asked Questions</h2>
+
+      <details>
+        <summary>What is an AI overview?</summary>
+        <p>An AI overview is a short summary written by Google's AI that appears at the top of search results. It combines information from several web pages into one answer, with links to the sources.</p>
+      </details>
+
+      <details>
+        <summary>What is Google AI overview?</summary>
+        <p>It is Google's name for its AI-generated search summaries, built on the Gemini AI model. It launched widely in 2024 as part of the Search Generative Experience and now appears in about 20% of searches.</p>
+      </details>
+
+      <details>
+        <summary>How do Google AI overviews work?</summary>
+        <p>Google understands your question, gathers information from multiple web pages, uses AI to write a summary, and displays it with source links. The full four-step process is explained above.</p>
+      </details>
+
+      <details>
+        <summary>How can I get my website cited in AI Overviews?</summary>
+        <p>Write clear, direct answers to specific questions. Use question-based headings, keep paragraphs short, add FAQs, and keep content fresh. Pages do not need to rank #1 to be cited.</p>
+      </details>
+
+      <details>
+        <summary>Can I turn off Google AI Overviews?</summary>
+        <p>There is no official off switch. You can use the Web filter tab in search results to see only traditional links instead.</p>
+      </details>
+
+      <details>
+        <summary>Do AI Overviews hurt website traffic?</summary>
+        <p>They can reduce clicks, with top pages losing up to 64% of clicks on affected queries. But being cited keeps your brand visible, and many businesses report a net positive effect on visibility.</p>
+      </details>
+
+      <h2 id="conclusion">Conclusion</h2>
+
+      <p>Google AI Overviews changed search from a list of links into a source of answers. The websites that win in 2026 are not the ones with the most keywords. They are the ones with the clearest answers.</p>
+
+      <p>Start small. Pick your five most important pages. Add a direct answer under each main heading, add a short FAQ, and refresh your stats. Those three steps alone put you ahead of most competitors.</p>
+
+      <p>For the full optimization playbook, read our guide on <a href="/blog/optimize-google-ai-overviews">how to optimize for Google AI Overviews and AI Mode</a>.</p>
+
+      <div class="cta-premium-block">
+        <h2>Want Your Site Cited in AI Overviews?</h2>
+        <p>RankVelt helps businesses become the source Google quotes with AI-first SEO audits, answer-focused content structure, and citation tracking.</p>
+        <a href="/strategy-call?package=AI%20Search%20Visibility%20Audit" class="shimmer-btn">Get Your AI Search Audit</a>
+      </div>
+    `,
+  },
+
   
   
   {
@@ -645,6 +1065,7 @@ export const blogPosts: BlogPost[] = [
         "seo-vs-aeo-vs-geo",
         "internal-linking-seo-ai",
         "local-seo-ai-overviews",
+        "google-ai-overviews-how-it-works",
       ],
 
     primaryService: {
@@ -9975,7 +10396,6 @@ export const blogPosts: BlogPost[] = [
       </div>
     `,
   },
- 
 
 ];
 
