@@ -28,6 +28,19 @@
       ]
     }
   ],
+  "redirects": [
+  {
+    "source": "/:path*",
+    "has": [
+      {
+        "type": "host",
+        "value": "rank-velt.vercel.app"
+      }
+    ],
+    "destination": "https://www.rankvelt.com/:path*",
+    "permanent": true
+  }
+],
   "rewrites": [
     {
       "source": "/(.*)",
