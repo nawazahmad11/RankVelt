@@ -376,7 +376,7 @@ const XmlSitemapGenerator = () => {
     const pageTitle = "Free XML Sitemap Generator | RankVelt";
 
     const pageDescription =
-      "Create a clean XML sitemap from your canonical website URLs. Check duplicates, invalid entries, off-domain URLs, copy the XML, and download sitemap.xml with RankVelt's free generator.";
+      "Free XML sitemap generator: build a clean sitemap from canonical URLs, check duplicates and invalid entries, then copy or download sitemap.xml.";
 
     document.title = pageTitle;
 

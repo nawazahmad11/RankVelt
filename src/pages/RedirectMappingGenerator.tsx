@@ -556,7 +556,7 @@ const RedirectMappingGenerator = () => {
     const pageTitle = "Free Redirect Mapping Generator | RankVelt";
 
     const pageDescription =
-      "Create a practical old URL to new URL redirect map. Generate CSV, Apache, or Nginx redirect rules with RankVelt's free Redirect Mapping Generator.";
+      "Free redirect mapping generator and redirect mapper: build old-to-new URL maps and generate CSV, Apache, or Nginx redirect rules in seconds.";
 
     document.title = pageTitle;
 

@@ -1,3 +1,4 @@
+// HEADER-VERSION-11 : 11 tools in menu (2026-09-30)
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
@@ -68,6 +69,11 @@ const tools = [
     name: "Name Generator",
     icon: <ShoppingBag size={14} />,
     path: "/tools/business-name-generator",
+  },
+  {
+    name: "Guest Post Finder",
+    icon: <Search size={14} />,
+    path: "/tools/guest-post-finder",
   },
   {
     name: "Meta Title Checker",
