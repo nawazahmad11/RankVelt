@@ -39,7 +39,19 @@
     ],
     "destination": "https://www.rankvelt.com/:path*",
     "permanent": true
+  },
+  {
+    "source": "/",
+    "has": [
+      {
+        "type": "host",
+        "value": "rank-velt.vercel.app"
+      }
+    ],
+    "destination": "https://www.rankvelt.com/",
+    "permanent": true
   }
+  
 ],
   "rewrites": [
     {
