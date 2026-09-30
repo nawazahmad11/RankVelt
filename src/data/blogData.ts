@@ -625,7 +625,7 @@ export const blogPosts: BlogPost[] = [
 
     date: "Aug 11, 2026",
     datePublished: "2026-08-11",
-    dateModified: "2026-08-11",
+    dateModified: "2026-09-30",
 
     author: "RankVelt Editorial Team",
     authorType: "Organization",
@@ -865,7 +865,9 @@ export const blogPosts: BlogPost[] = [
     ],
 
     content: `
-      <p class="article-updated"><strong>Last updated:</strong> August 2026</p>
+      <p class="article-updated"><strong>Last updated:</strong> September 2026</p>
+
+      <p class="direct-answer">To optimize for Google AI Overviews, make sure your pages are crawled, indexed, and eligible for search snippets, then publish original, evidence-backed content that directly answers the searcher&apos;s question and the decisions around it. Google confirms AI Overviews are generated from its existing Search index, so no special AI markup or separate writing style is required.</p>
 
       <p>There are two ways marketers approach AI search optimization.</p>
 
@@ -1060,6 +1062,8 @@ export const blogPosts: BlogPost[] = [
       <p>In 2026, Google began testing a Search Console control that lets selected property owners include or exclude their sites from supported generative AI features. Inclusion is the default, while exclusion prevents links and content from appearing or grounding those responses. The control does not affect other parts of Search and does not manage AI training.</p>
 
       <p>Quick note: Google-Extended and Google Search visibility are not the same control. Googlebot and Search preview directives govern Search access and presentation, while Google-Extended covers certain uses outside Search.</p>
+
+      <p>Tip: before rewriting content, run a quick technical check with RankVelt&apos;s free <a href="/tools/xml-sitemap-generator">XML sitemap generator</a> and <a href="/tools/redirect-mapping-generator">redirect mapping generator</a> to catch crawl and migration issues early.</p>
 
       <h3 id="reader-decision">Step 2: Build Around the Reader’s Decision</h3>
 
@@ -8188,7 +8192,7 @@ export const blogPosts: BlogPost[] = [
       "Electrician SEO Guide 2026: Rank Higher & Get More Calls",
   
     metaDescription:
-      "A practical electrician SEO guide covering local rankings, EV charger schema, common mistakes, and a step-by-step checklist for USA, UK, Canada and Australia contractors.",
+      "A practical electrician SEO guide: local rankings, EV charger schema, common mistakes, and a step-by-step checklist for contractors.",
   
     ogTitle:
       "The Complete Electrician SEO Guide for More Calls and Bigger Jobs",
@@ -8198,7 +8202,7 @@ export const blogPosts: BlogPost[] = [
   
     date: "Sep 17, 2026",
     datePublished: "2026-09-17",
-    dateModified: "2026-09-17",
+    dateModified: "2026-09-30",
   
     author: "RankVelt Editorial Team",
     authorType: "Organization",
@@ -8486,7 +8490,7 @@ export const blogPosts: BlogPost[] = [
       "HVAC SEO Guide 2026: Rank Higher & Get More Calls",
   
     metaDescription:
-      "A practical HVAC SEO guide covering local rankings, seasonal strategy, high-ticket replacements, and a step-by-step checklist for USA, UK, Canada and Australia contractors.",
+      "A practical HVAC SEO guide: local rankings, seasonal strategy, high-ticket replacements, and a step-by-step checklist for contractors.",
   
     ogTitle:
       "The Complete HVAC SEO Guide for More Calls in Every Season",
@@ -8496,7 +8500,7 @@ export const blogPosts: BlogPost[] = [
   
     date: "Sep 17, 2026",
     datePublished: "2026-09-17",
-    dateModified: "2026-09-17",
+    dateModified: "2026-09-30",
   
     author: "RankVelt Editorial Team",
     authorType: "Organization",
