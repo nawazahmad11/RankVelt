@@ -18,7 +18,7 @@ const LegalLayout = ({
           publisher: {
             "@type": "Organization",
             name: "RankVelt",
-            url: "https://rankvelt.com",
+            url: "https://www.rankvelt.com",
           },
         }),
       }}

@@ -18,7 +18,7 @@ import {
   Sparkles,
 } from "lucide-react";
 
-const SITE_URL = "https://rankvelt.com";
+const SITE_URL = "https://www.rankvelt.com";
 
 type SitemapAnalysis = {
   validUrls: string[];

@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import { blogPosts } from "@/data/blogData";
 import { caseStudies } from "@/data/caseStudyData";
 
-const SITE_URL = "https://rankvelt.com";
+const SITE_URL = "https://www.rankvelt.com";
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.webp`;
 
 type RouteMeta = {

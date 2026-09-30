@@ -7,7 +7,7 @@ import {
   ChevronDown,
 } from "lucide-react";
 
-const SITE_URL = "https://rankvelt.com";
+const SITE_URL = "https://www.rankvelt.com";
 
 const GSC_IMAGE = "/case-studies/clear-ride-gsc.webp";
 const SPEED_BEFORE_IMAGE = "/case-studies/clear-ride-before.webp";

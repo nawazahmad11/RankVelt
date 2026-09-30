@@ -6,7 +6,7 @@ const currentFile = fileURLToPath(import.meta.url);
 const currentDirectory = dirname(currentFile);
 const projectRoot = resolve(currentDirectory, "..");
 
-const SITE_URL = "https://rankvelt.com";
+const SITE_URL = "https://www.rankvelt.com";
 
 const blogDataPath = resolve(
   projectRoot,
@@ -35,6 +35,11 @@ const staticRoutes = [
   "/blog",
 
   "/tools",
+  "/tools/profit-margin-calculator",
+  "/tools/legal-policy-generator",
+  "/tools/shopify-theme-detector",
+  "/tools/business-name-generator",
+  "/tools/guest-post-finder",
   "/tools/meta-title-description-checker",
   "/tools/schema-markup-generator",
   "/tools/robots-txt-generator",

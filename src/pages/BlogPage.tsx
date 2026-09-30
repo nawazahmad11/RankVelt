@@ -13,7 +13,7 @@ import { useEffect, useMemo, useState } from "react";
 
 import { blogPosts } from "../data/blogData";
 
-const SITE_URL = "https://rankvelt.com";
+const SITE_URL = "https://www.rankvelt.com";
 
 const getExcerpt = (content?: string) => {
   if (!content) {

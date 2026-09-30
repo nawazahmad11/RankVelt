@@ -21,7 +21,7 @@ import {
   Target,
 } from "lucide-react";
 
-const SITE_URL = "https://rankvelt.com";
+const SITE_URL = "https://www.rankvelt.com";
 const STORAGE_KEY = "rankvelt-local-seo-checklist-v1";
 
 type CategoryKey = "profile" | "website" | "reputation" | "authority";

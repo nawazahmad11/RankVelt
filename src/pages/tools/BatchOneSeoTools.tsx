@@ -17,7 +17,7 @@ import {
 
 import BulkEmailVerifier from "@/components/Tools/BulkEmailVerifier";
 
-const SITE_URL = "https://rankvelt.com";
+const SITE_URL = "https://www.rankvelt.com";
 
 type ToolFaq = {
   question: string;

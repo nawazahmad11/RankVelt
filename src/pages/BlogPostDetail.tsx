@@ -15,7 +15,7 @@ import {
 
 import { blogPosts } from "../data/blogData";
 
-const SITE_URL = "https://rankvelt.com";
+const SITE_URL = "https://www.rankvelt.com";
 
 interface TOCItem {
   id: string;

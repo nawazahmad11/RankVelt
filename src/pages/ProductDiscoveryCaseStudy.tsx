@@ -7,7 +7,7 @@ import {
   ChevronDown,
 } from "lucide-react";
 
-const SITE_URL = "https://rankvelt.com";
+const SITE_URL = "https://www.rankvelt.com";
 
 const CASE_STUDY_IMAGE =
   "/case-studies/product-discovery-at-scale-gsc.webp";

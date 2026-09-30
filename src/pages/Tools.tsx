@@ -34,7 +34,7 @@ import toolContentJson from "../data/tool-content.json";
 
 import GuestPostFinder from "../components/Tools/GuestPostFinder";
 
-const SITE_URL = "https://rankvelt.com";
+const SITE_URL = "https://www.rankvelt.com";
 
 type ToolType =
   | "calculator"
