@@ -228,6 +228,31 @@ function extractEmails(html) {
 
 const CONTACT_PATHS = ['/contact', '/contact-us', '/about', '/about-us'];
 
+// True when a URL looks like a contact/about page: one of its path segments
+// starts with contact or about (covers /contact, /contact-us, /contact_us.asp,
+// /about, /about-us ... but NOT /articles/all-about-x).
+function looksLikeContactPage(urlObj) {
+  return urlObj.pathname.toLowerCase().split('/').filter(Boolean)
+    .map((s) => s.replace(/\.(asp|html?|php)$/, ''))
+    .some((s) => /^(contact|about)([-_].*)?$/.test(s));
+}
+
+function sitemapContactUrls(xml, origin, maxUrls = 2) {
+  const out = [];
+  for (const m of String(xml).matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>/gi)) {
+    if (out.length >= maxUrls) break;
+    try {
+      const u = new URL(m[1].trim(), origin);
+      if (u.origin !== origin) continue; // never crawl another domain
+      if (looksLikeContactPage(u)) {
+        const clean = u.href.split('#')[0];
+        if (!out.includes(clean)) out.push(clean);
+      }
+    } catch { /* ignore bad urls */ }
+  }
+  return out;
+}
+
 async function extractSite(rawUrl) {
   const base = normalizeUrl(rawUrl);
   if (!base) return { emails: [], status: 'error: bad-url' };
@@ -243,25 +268,29 @@ async function extractSite(rawUrl) {
   const origin = new URL(usedBase).origin;
   const urls = new Set([usedBase]);
   for (const p of CONTACT_PATHS) urls.add(origin + p);
-  // discover contact-ish links on the homepage (max 2 extra pages, same site only)
+  // discover contact/about links on the homepage (max 2 extra pages, same site only)
   let found = 0;
   for (const m of homeHtml.matchAll(/href=["']([^"']+)["']/gi)) {
     if (found >= 2) break;
     const href = m[1];
-    if (/contact/i.test(href) && !href.startsWith('mailto:') && !href.startsWith('#') && !/^javascript:/i.test(href)) {
-      try {
-        const abs = new URL(href, usedBase);
-        if (abs.origin !== origin) continue; // never crawl another domain
-        urls.add(abs.href.split('#')[0]);
-        found++;
-      } catch { /* ignore */ }
-    }
+    if (href.startsWith('mailto:') || href.startsWith('#') || /^javascript:/i.test(href)) continue;
+    try {
+      const abs = new URL(href, usedBase);
+      if (abs.origin !== origin) continue; // never crawl another domain
+      if (!looksLikeContactPage(abs)) continue;
+      urls.add(abs.href.split('#')[0]);
+      found++;
+    } catch { /* ignore */ }
   }
+  // one cheap sitemap lookup per site to catch odd contact-page URLs
+  const sm = await fetchHtml(origin + '/sitemap.xml', 10000, 500000, 0);
+  for (const u of sitemapContactUrls(sm || '', origin)) urls.add(u);
 
   const all = new Set();
   let first = true;
   for (const u of urls) {
-    const html = first ? homeHtml : await fetchHtml(u);
+    // homepage already fetched; sub-pages get a shorter budget (10s, 1 retry)
+    const html = first ? homeHtml : await fetchHtml(u, 10000, 2000000, 1);
     first = false;
     if (!html) continue;
     for (const e of extractEmails(html)) all.add(e);
@@ -401,7 +430,23 @@ function smtpVerify(email, mxHost, timeoutMs = 20000) {
           else finish({ status: 'unknown', detail: 'mail-from-rejected' });
         } else if (stage === 'rcpt') {
           if (code === 250 || code === 251) { send('RCPT TO:<' + probe + '>'); stage = 'catchall'; }
-          else if (code >= 500 && code < 600) { send('QUIT'); finish({ status: 'invalid', detail: 'mailbox-rejected-' + code }); }
+          else if (code >= 500 && code < 600) {
+            send('QUIT');
+            // A 5xx here does NOT always mean the mailbox is dead. Policy and
+            // security rejections (5.7.x, blacklist, SPF/DKIM fail, "unauthenticated")
+            // are about OUR sender identity, not the mailbox. Calling those
+            // "invalid" would burn good leads, so only a clear mailbox-not-found
+            // counts as invalid. The server's own words go into detail.
+            const enhanced = (line.match(/\b(\d\.\d{1,2}\.\d{1,3})\b/) || [])[1] || '';
+            const mailboxGone = /5\.1\.[12]/.test(enhanced) || /user unknown|unknown user|mailbox unavailable|recipient unknown|no such (user|mailbox|recipient)/i.test(line);
+            const policyBlock = /^5\.7\./.test(enhanced) || /policy|blocked|blacklist|blacklisted|spam|reputation|unauthenticated|authentication|spf|dkim|dmarc|greylist/i.test(line);
+            const short = line.slice(0, 100);
+            if (mailboxGone || (!policyBlock && (code === 550 || code === 551 || code === 553))) {
+              finish({ status: 'invalid', detail: 'mailbox-not-found: ' + short });
+            } else {
+              finish({ status: 'unknown', detail: 'rcpt-rejected: ' + short });
+            }
+          }
           else { send('QUIT'); finish({ status: 'unknown', detail: 'rcpt-' + code }); }
         } else if (stage === 'catchall') {
           send('QUIT');

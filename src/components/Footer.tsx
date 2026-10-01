@@ -392,7 +392,7 @@ const Footer = () => {
                 type="email"
                 inputMode="email"
                 autoComplete="email"
-                placeholder="you@example.com"
+                placeholder="you @example.com"
                 required
                 value={email}
                 onChange={(event) =>
