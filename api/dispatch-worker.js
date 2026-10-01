@@ -23,16 +23,13 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'POST only' });
   }
 
-  const { mode, sheetId, tab, limit, key } = req.body || {};
+  const { sheetId, tab, limit, key } = req.body || {};
 
   const secret = process.env.WORKER_TRIGGER_SECRET;
   if (!secret || key !== secret) {
     return res.status(403).json({ error: 'Wrong trigger key' });
   }
 
-  if (!['extract', 'verify'].includes(mode)) {
-    return res.status(400).json({ error: 'mode must be extract or verify' });
-  }
   if (!sheetId || typeof sheetId !== 'string') {
     return res.status(400).json({ error: 'sheetId is required' });
   }
@@ -55,7 +52,6 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         ref: GIT_REF,
         inputs: {
-          mode,
           sheet: sheetId,
           tab: tab && typeof tab === 'string' ? tab : 'Websites',
           limit: limit ? String(limit) : '0',
@@ -71,9 +67,6 @@ export default async function handler(req, res) {
 
   return res.json({
     ok: true,
-    message:
-      mode === 'extract'
-        ? 'Extractor started. Emails will appear in your Google Sheet as they are found.'
-        : 'Verifier started. Results will appear in the Verified tab of your sheet.',
+    message: 'Extractor started. Emails will appear in your Google Sheet as they are found.',
   });
 };

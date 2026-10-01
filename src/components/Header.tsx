@@ -1,13 +1,16 @@
-// HEADER-VERSION-11 : 11 tools in menu (2026-09-30)
+// HEADER-VERSION-15
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   ArrowRight,
   Calculator,
   ChevronDown,
+  Image,
   Layout,
   Menu,
+  Repeat,
   Rocket,
+  ScanSearch,
   Search,
   ShieldCheck,
   ShoppingBag,
@@ -71,11 +74,6 @@ const tools = [
     path: "/tools/business-name-generator",
   },
   {
-    name: "Guest Post Finder",
-    icon: <Search size={14} />,
-    path: "/tools/guest-post-finder",
-  },
-  {
     name: "Meta Title Checker",
     icon: <Search size={14} />,
     path: "/tools/meta-title-description-checker",
@@ -104,6 +102,21 @@ const tools = [
     name: "Redirect Generator",
     icon: <ArrowRight size={14} />,
     path: "/tools/redirect-mapping-generator",
+  },
+  {
+    name: "Bulk Redirect Generator",
+    icon: <Repeat size={14} />,
+    path: "/tools/bulk-redirect-generator",
+  },
+  {
+    name: "Open Graph Preview",
+    icon: <Image size={14} />,
+    path: "/tools/open-graph-preview",
+  },
+  {
+    name: "Title Tag Preview",
+    icon: <ScanSearch size={14} />,
+    path: "/tools/title-tag-preview",
   },
 ];
 

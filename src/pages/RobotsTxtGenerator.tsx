@@ -1,342 +1,396 @@
-import { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
-import {
-  AlertTriangle,
-  ArrowLeft,
-  ArrowRight,
-  Bot,
-  CheckCircle2,
-  ChevronDown,
-  ClipboardCheck,
-  Copy,
-  Download,
-  FileCode2,
-  Globe2,
-  ListPlus,
-  RefreshCcw,
-  Search,
-  ShieldAlert,
-  Sparkles,
-} from "lucide-react";
+// RankVelt tool page: Robots.txt Generator (100% free, browser only)
+// Place at: src/pages/tools/RobotsTxtGenerator.tsx
+// Styled to match the RankVelt dark theme (same shell as Tools.tsx and BulkEmailExtractor.tsx).
+// No external dependencies beyond React.
 
-const SITE_URL = "https://www.rankvelt.com";
+import { useEffect, useMemo, useRef, useState } from "react";
 
-type CrawlMode = "allow" | "block";
+interface RuleGroup {
+  id: number;
+  userAgent: string;
+  customAgent: string;
+  agentMode: "preset" | "custom";
+  allows: string[];
+  disallows: string[];
+  crawlDelay: string;
+  aiBot: boolean;
+}
 
-const normaliseUrl = (value: string) => {
-  const cleanValue = value.trim();
+const PRESET_BOTS = [
+  "*",
+  "Googlebot",
+  "Bingbot",
+  "Googlebot-Image",
+  "DuckDuckBot",
+  "YandexBot",
+  "Baiduspider",
+];
 
-  if (!cleanValue) {
-    return "";
+const AI_BOTS = [
+  { agent: "GPTBot", label: "GPTBot (OpenAI training)" },
+  { agent: "ChatGPT-User", label: "ChatGPT-User (user browsing)" },
+  { agent: "OAI-SearchBot", label: "OAI-SearchBot (ChatGPT Search)" },
+  { agent: "ClaudeBot", label: "ClaudeBot (Anthropic)" },
+  { agent: "anthropic-ai", label: "anthropic-ai (Anthropic training)" },
+  { agent: "Google-Extended", label: "Google-Extended (Gemini training)" },
+  { agent: "CCBot", label: "CCBot (Common Crawl)" },
+  { agent: "PerplexityBot", label: "PerplexityBot (Perplexity search)" },
+  { agent: "Bytespider", label: "Bytespider (ByteDance)" },
+  { agent: "Meta-ExternalAgent", label: "Meta-ExternalAgent (Meta AI)" },
+];
+
+const inputCls =
+  "mt-1 w-full rounded-xl border border-white/[0.08] bg-black/30 px-3 py-2.5 text-sm text-white placeholder:text-white/30 outline-none transition-colors focus:border-primary/50";
+
+const labelCls =
+  "block text-[11px] font-black uppercase tracking-[0.18em] text-white/50";
+
+function effectiveAgent(g: RuleGroup): string {
+  return g.agentMode === "custom" ? g.customAgent.trim() : g.userAgent;
+}
+
+function buildRobotsTxt(groups: RuleGroup[], sitemap: string): string {
+  const lines: string[] = [];
+  groups.forEach((g, i) => {
+    const agent = effectiveAgent(g) || "*";
+    if (i > 0) lines.push("");
+    lines.push(`User-agent: ${agent}`);
+    g.allows
+      .map((p) => p.trim())
+      .filter(Boolean)
+      .forEach((p) => lines.push(`Allow: ${p}`));
+    g.disallows
+      .map((p) => p.trim())
+      .filter(Boolean)
+      .forEach((p) => lines.push(`Disallow: ${p}`));
+    if (g.crawlDelay.trim()) lines.push(`Crawl-delay: ${g.crawlDelay.trim()}`);
+  });
+  const sm = sitemap.trim();
+  if (sm) {
+    lines.push("");
+    lines.push(`Sitemap: ${sm}`);
   }
+  return lines.join("\n");
+}
 
-  if (/^https?:\/\//i.test(cleanValue)) {
-    return cleanValue.replace(/\/+$/, "");
-  }
+interface Warning {
+  level: "error" | "warn" | "info";
+  text: string;
+}
 
-  return `https://${cleanValue.replace(/^\/+/, "").replace(/\/+$/, "")}`;
-};
-
-const convertToPath = (value: string) => {
-  const cleanValue = value.trim();
-
-  if (!cleanValue || cleanValue.startsWith("#")) {
-    return "";
-  }
-
-  try {
-    if (/^https?:\/\//i.test(cleanValue)) {
-      const parsedUrl = new URL(cleanValue);
-      return `${parsedUrl.pathname}${parsedUrl.search}` || "/";
+function validate(groups: RuleGroup[], sitemap: string): Warning[] {
+  const out: Warning[] = [];
+  groups.forEach((g, i) => {
+    const n = i + 1;
+    const agent = effectiveAgent(g);
+    if (!agent) {
+      out.push({
+        level: "error",
+        text: `Rule block ${n} has no user-agent set. It will render as "User-agent: *".`,
+      });
     }
-  } catch {
-    return "";
+    const check = (p: string, kind: "Allow" | "Disallow") => {
+      const t = p.trim();
+      if (!t) return;
+      if (!t.startsWith("/")) {
+        out.push({
+          level: "error",
+          text: `Rule block ${n} (${agent || "*"}): ${kind} path "${t}" must start with a forward slash, for example "/admin/".`,
+        });
+      }
+      if (kind === "Disallow" && t === "/") {
+        out.push({
+          level: "error",
+          text: `Rule block ${n} (${agent || "*"}): "Disallow: /" blocks the ENTIRE site for this crawler. Only use this for staging sites.`,
+        });
+      }
+      if (/\s/.test(t)) {
+        out.push({
+          level: "warn",
+          text: `Rule block ${n} (${agent || "*"}): path "${t}" contains a space. Crawlers may read it incorrectly.`,
+        });
+      }
+    };
+    g.allows.forEach((p) => check(p, "Allow"));
+    g.disallows.forEach((p) => check(p, "Disallow"));
+    const allowSet = new Set(g.allows.map((p) => p.trim()).filter(Boolean));
+    g.disallows.forEach((p) => {
+      const t = p.trim();
+      if (t && allowSet.has(t)) {
+        out.push({
+          level: "warn",
+          text: `Rule block ${n} (${agent || "*"}): "${t}" appears in both Allow and Disallow. For an exact match the Allow wins, but you should clean this up.`,
+        });
+      }
+    });
+    if (g.crawlDelay.trim() && !/^\d+$/.test(g.crawlDelay.trim())) {
+      out.push({
+        level: "error",
+        text: `Rule block ${n} (${agent || "*"}): crawl-delay must be a whole number of seconds, for example "5".`,
+      });
+    }
+    const emptyBlock =
+      g.allows.every((p) => !p.trim()) && g.disallows.every((p) => !p.trim());
+    if (emptyBlock && agent === "*") {
+      out.push({
+        level: "info",
+        text: `Rule block ${n} allows everything ("User-agent: *" with no rules). That is the default for most sites.`,
+      });
+    }
+  });
+  const sm = sitemap.trim();
+  if (sm && !/^https?:\/\/.+/i.test(sm)) {
+    out.push({
+      level: "warn",
+      text: "The sitemap URL should be a full absolute URL starting with https://, for example \"https://example.com/sitemap.xml\".",
+    });
   }
+  out.push({
+    level: "info",
+    text: "Reminder: Googlebot ignores Crawl-delay. Robots.txt is a request, not security; never rely on it to protect private content.",
+  });
+  return out;
+}
 
-  return cleanValue.startsWith("/")
-    ? cleanValue
-    : `/${cleanValue.replace(/^\/+/, "")}`;
-};
+const SITE_URL = "https://rankvelt.com";
 
-const parsePaths = (value: string) => {
-  return Array.from(
-    new Set(
-      value
-        .split(/[\n,]/)
-        .map((item) => convertToPath(item))
-        .filter(Boolean),
-    ),
-  );
-};
-
-const copyToClipboard = async (value: string) => {
-  if (navigator.clipboard && window.isSecureContext) {
-    await navigator.clipboard.writeText(value);
-    return;
-  }
-
-  const textarea = document.createElement("textarea");
-
-  textarea.value = value;
-  textarea.style.position = "fixed";
-  textarea.style.opacity = "0";
-
-  document.body.appendChild(textarea);
-  textarea.focus();
-  textarea.select();
-
-  document.execCommand("copy");
-  document.body.removeChild(textarea);
-};
-
-const ensureMetaByName = (name: string) => {
-  let meta = document.querySelector(
-    `meta[name="${name}"]`,
-  ) as HTMLMetaElement | null;
-
-  if (!meta) {
-    meta = document.createElement("meta");
-    meta.name = name;
-    document.head.appendChild(meta);
-  }
-
-  return meta;
-};
-
-const ensureMetaByProperty = (property: string) => {
-  let meta = document.querySelector(
-    `meta[property="${property}"]`,
-  ) as HTMLMetaElement | null;
-
-  if (!meta) {
-    meta = document.createElement("meta");
-    meta.setAttribute("property", property);
-    document.head.appendChild(meta);
-  }
-
-  return meta;
-};
-
-const pageFaqs = [
+const FAQS: { q: string; a: string }[] = [
   {
-    question: "What does a robots.txt file do?",
-    answer:
-      "A robots.txt file gives crawler-access instructions for parts of a website. It can help guide crawlers away from selected URLs, folders, search pages, or staging paths.",
+    q: "What does a robots.txt generator do?",
+    a: "It builds a valid robots.txt file for you without hand-writing the syntax. You pick which crawlers the rules apply to, add Allow and Disallow paths, include your sitemap, and the tool outputs correctly formatted text you can upload to your site.",
   },
   {
-    question: "Does robots.txt remove a page from Google search results?",
-    answer:
-      "Not reliably. Robots.txt controls crawling, not guaranteed indexing. For a page that must stay out of Google Search, use an appropriate noindex method or protect the page with authentication.",
+    q: "Where do I upload the robots.txt file?",
+    a: "Upload it to the root directory of your domain so it is reachable at yourdomain.com/robots.txt. Crawlers only look in that one location, and each subdomain needs its own separate file.",
   },
   {
-    question: "Should I block every low-value page in robots.txt?",
-    answer:
-      "No. Only block pages when there is a clear crawl-management reason. Important public pages, CSS files, JavaScript files, images, and pages that need a noindex tag should normally remain crawlable.",
+    q: "What does \"User-agent: *\" mean?",
+    a: "The asterisk is a wildcard that applies the rule block to every crawler: Google, Bing, DuckDuckGo, AI bots, and the rest. A separate block for a named crawler like Googlebot overrides the wildcard block for that crawler.",
   },
   {
-    question: "Should I include my sitemap in robots.txt?",
-    answer:
-      "Usually yes, when your website has a working XML sitemap. Adding a sitemap line makes it easier for crawlers to discover the sitemap location.",
+    q: "What is the difference between Allow and Disallow?",
+    a: "Disallow tells crawlers not to visit matching paths, while Allow reopens a specific path inside a blocked area. Allow only matters when it is more specific than a Disallow; when both match equally, the longer, more specific rule wins.",
   },
   {
-    question: "Can robots.txt protect private customer or admin information?",
-    answer:
-      "No. Robots.txt is publicly accessible and should not be treated as a security feature. Use passwords, authentication, permissions, or server-side protection for private content.",
+    q: "Can robots.txt keep my data secure?",
+    a: "No. Robots.txt is a public, voluntary request, not a security mechanism. Anyone can read it and malicious bots ignore it. Use passwords or authentication for anything that must stay private.",
   },
   {
-    question: "How do I test my robots.txt file?",
-    answer:
-      "Publish it at the root of your domain as /robots.txt, then review it with crawler-testing tools and check that your important public pages remain accessible to search engines.",
+    q: "Can robots.txt remove a page from Google search results?",
+    a: "Not reliably. A blocked crawler cannot see a noindex tag, so the URL can stay indexed as a bare link. To remove a page, allow crawling and use a noindex meta tag or X-Robots-Tag header instead.",
+  },
+  {
+    q: "What is crawl-delay, and does Google honor it?",
+    a: "Crawl-delay asks crawlers to pause a set number of seconds between requests. Googlebot ignores it entirely. Bing and several smaller crawlers do honor it, so it is useful if non-Google bots are hammering your server.",
+  },
+  {
+    q: "How do I add my sitemap to robots.txt?",
+    a: "Add a line like \"Sitemap: https://yourdomain.com/sitemap.xml\" at the end of the file. You can include more than one Sitemap line. This helps search engines discover your pages faster, especially on new sites.",
+  },
+  {
+    q: "How do I test my robots.txt file?",
+    a: "In Google Search Console, open Settings and the robots.txt report to see the version Google fetched, then test individual URLs against your rules. Bing Webmaster Tools has a similar tester. Also load yourdomain.com/robots.txt in a browser to confirm it serves the right plain text.",
+  },
+  {
+    q: "Does every subdomain need its own robots.txt file?",
+    a: "Yes. Crawlers treat each subdomain as a separate host, so blog.yourdomain.com needs its own file. The same applies to staging subdomains, which you typically want fully blocked until launch.",
   },
 ];
 
-const RobotsTxtGenerator = () => {
-  const [siteUrl, setSiteUrl] = useState("");
-  const [userAgent, setUserAgent] = useState("*");
-  const [crawlMode, setCrawlMode] = useState<CrawlMode>("allow");
-  const [disallowInput, setDisallowInput] = useState("");
-  const [allowInput, setAllowInput] = useState("");
-  const [includeSitemap, setIncludeSitemap] = useState(true);
-  const [sitemapUrl, setSitemapUrl] = useState("");
-  const [copyStatus, setCopyStatus] = useState("");
+const RELATED = [
+  { href: "/tools/xml-sitemap-generator", name: "XML Sitemap Generator" },
+  { href: "/tools/bulk-redirect-generator", name: "Bulk Redirect Generator" },
+  { href: "/tools/title-tag-preview", name: "Title Tag Preview" },
+  { href: "/tools/open-graph-preview", name: "Open Graph Preview" },
+];
 
-  const disallowPaths = useMemo(
-    () => parsePaths(disallowInput),
-    [disallowInput],
+function RuleBlockEditor({
+  group,
+  index,
+  onChange,
+  onRemove,
+}: {
+  group: RuleGroup;
+  index: number;
+  onChange: (patch: Partial<RuleGroup>) => void;
+  onRemove: () => void;
+}) {
+  const [newAllow, setNewAllow] = useState("");
+  const [newDisallow, setNewDisallow] = useState("");
+
+  function addPath(kind: "allows" | "disallows", value: string) {
+    const t = value.trim();
+    if (!t) return;
+    onChange({ [kind]: [...group[kind], t] } as Partial<RuleGroup>);
+    if (kind === "allows") setNewAllow("");
+    else setNewDisallow("");
+  }
+
+  function removePath(kind: "allows" | "disallows", path: string) {
+    onChange({ [kind]: group[kind].filter((p) => p !== path) } as Partial<RuleGroup>);
+  }
+
+  return (
+    <div className="rounded-xl border border-white/[0.08] bg-black/20 p-4 sm:p-5">
+      <div className="flex items-center justify-between gap-3">
+        <h3 className="text-sm font-black uppercase tracking-[0.14em] text-white/80">
+          Rule block {index + 1}
+          {group.aiBot && (
+            <span className="ml-2 rounded-full border border-purple-500/30 bg-purple-500/10 px-2 py-0.5 text-[10px] normal-case tracking-normal text-purple-300">
+              AI crawler
+            </span>
+          )}
+        </h3>
+        <button
+          onClick={onRemove}
+          className="rounded-lg border border-white/10 px-2.5 py-1 text-xs font-bold text-white/50 transition-colors hover:border-red-500/40 hover:text-red-300"
+        >
+          Remove
+        </button>
+      </div>
+
+      <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div>
+          <label className={labelCls}>User-agent</label>
+          <div className="mt-1 flex gap-2">
+            <select
+              value={group.agentMode === "custom" ? "__custom__" : group.userAgent}
+              onChange={(e) => {
+                if (e.target.value === "__custom__") onChange({ agentMode: "custom" });
+                else onChange({ agentMode: "preset", userAgent: e.target.value });
+              }}
+              className="w-full rounded-xl border border-white/[0.08] bg-black/30 px-3 py-2.5 text-sm text-white outline-none focus:border-primary/50"
+            >
+              {PRESET_BOTS.map((b) => (
+                <option key={b} value={b} className="bg-black">
+                  {b === "*" ? "* (all crawlers)" : b}
+                </option>
+              ))}
+              <option value="__custom__" className="bg-black">
+                Custom...
+              </option>
+            </select>
+          </div>
+          {group.agentMode === "custom" && (
+            <input
+              value={group.customAgent}
+              onChange={(e) => onChange({ customAgent: e.target.value })}
+              placeholder="e.g. GPTBot"
+              className={inputCls}
+            />
+          )}
+        </div>
+        <div>
+          <label className={labelCls}>Crawl-delay (seconds, optional)</label>
+          <input
+            value={group.crawlDelay}
+            onChange={(e) => onChange({ crawlDelay: e.target.value.replace(/[^\d]/g, "") })}
+            placeholder="e.g. 5"
+            inputMode="numeric"
+            className={inputCls}
+          />
+          <p className="mt-1.5 text-[11px] leading-relaxed text-white/35">
+            Googlebot ignores this; Bing and smaller crawlers may honor it.
+          </p>
+        </div>
+      </div>
+
+      <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div>
+          <label className={labelCls}>Allow paths</label>
+          <div className="mt-1 flex gap-2">
+            <input
+              value={newAllow}
+              onChange={(e) => setNewAllow(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && addPath("allows", newAllow)}
+              placeholder="/images/logos/"
+              className="w-full rounded-xl border border-white/[0.08] bg-black/30 px-3 py-2.5 text-sm text-white placeholder:text-white/30 outline-none focus:border-primary/50"
+            />
+            <button
+              onClick={() => addPath("allows", newAllow)}
+              className="shrink-0 rounded-xl bg-white/10 px-4 text-sm font-bold text-white transition-colors hover:bg-white/15"
+            >
+              Add
+            </button>
+          </div>
+          {group.allows.length > 0 && (
+            <ul className="mt-2 space-y-1.5">
+              {group.allows.map((p) => (
+                <li
+                  key={p}
+                  className="flex items-center justify-between gap-2 rounded-lg bg-emerald-500/[0.08] px-3 py-1.5 font-mono text-xs text-emerald-300"
+                >
+                  <span className="truncate">{p}</span>
+                  <button
+                    onClick={() => removePath("allows", p)}
+                    className="text-white/40 hover:text-red-300"
+                    aria-label={`Remove allow path ${p}`}
+                  >
+                    x
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+        <div>
+          <label className={labelCls}>Disallow paths</label>
+          <div className="mt-1 flex gap-2">
+            <input
+              value={newDisallow}
+              onChange={(e) => setNewDisallow(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && addPath("disallows", newDisallow)}
+              placeholder="/admin/"
+              className="w-full rounded-xl border border-white/[0.08] bg-black/30 px-3 py-2.5 text-sm text-white placeholder:text-white/30 outline-none focus:border-primary/50"
+            />
+            <button
+              onClick={() => addPath("disallows", newDisallow)}
+              className="shrink-0 rounded-xl bg-white/10 px-4 text-sm font-bold text-white transition-colors hover:bg-white/15"
+            >
+              Add
+            </button>
+          </div>
+          {group.disallows.length > 0 && (
+            <ul className="mt-2 space-y-1.5">
+              {group.disallows.map((p) => (
+                <li
+                  key={p}
+                  className="flex items-center justify-between gap-2 rounded-lg bg-red-500/[0.08] px-3 py-1.5 font-mono text-xs text-red-300"
+                >
+                  <span className="truncate">{p}</span>
+                  <button
+                    onClick={() => removePath("disallows", p)}
+                    className="text-white/40 hover:text-red-300"
+                    aria-label={`Remove disallow path ${p}`}
+                  >
+                    x
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </div>
+    </div>
   );
+}
 
-  const allowPaths = useMemo(() => parsePaths(allowInput), [allowInput]);
-
-  const resolvedSiteUrl = useMemo(() => normaliseUrl(siteUrl), [siteUrl]);
-
-  const resolvedSitemapUrl = useMemo(() => {
-    const customSitemapUrl = normaliseUrl(sitemapUrl);
-
-    if (customSitemapUrl) {
-      return customSitemapUrl;
-    }
-
-    if (resolvedSiteUrl) {
-      return `${resolvedSiteUrl}/sitemap.xml`;
-    }
-
-    return "";
-  }, [resolvedSiteUrl, sitemapUrl]);
-
-  const robotsOutput = useMemo(() => {
-    const lines: string[] = [
-      "# robots.txt generated with RankVelt",
-      "# Review all rules before publishing on a live website.",
-      "",
-      `User-agent: ${userAgent || "*"}`,
-    ];
-
-    if (crawlMode === "block") {
-      lines.push("Disallow: /");
-    } else {
-      lines.push("Allow: /");
-    }
-
-    if (crawlMode === "allow") {
-      disallowPaths.forEach((path) => {
-        lines.push(`Disallow: ${path}`);
-      });
-    }
-
-    allowPaths.forEach((path) => {
-      lines.push(`Allow: ${path}`);
-    });
-
-    if (includeSitemap && resolvedSitemapUrl) {
-      lines.push("");
-      lines.push(`Sitemap: ${resolvedSitemapUrl}`);
-    }
-
-    return lines.join("\n");
-  }, [
-    allowPaths,
-    crawlMode,
-    disallowPaths,
-    includeSitemap,
-    resolvedSitemapUrl,
-    userAgent,
-  ]);
-
-  const validationNotes = useMemo(() => {
-    const notes: string[] = [];
-
-    if (!resolvedSiteUrl) {
-      notes.push(
-        "Add your live website URL so the generator can create the correct sitemap line.",
-      );
-    }
-
-    if (crawlMode === "block") {
-      notes.push(
-        "This setting blocks the entire website from the selected crawler. Use it only for a staging site or an intentional crawler lock-down.",
-      );
-    }
-
-    if (crawlMode === "allow" && !disallowPaths.length) {
-      notes.push(
-        "No specific paths are blocked. This is fine for many simple public websites.",
-      );
-    }
-
-    if (disallowPaths.length) {
-      notes.push(
-        "Do not block pages that need a robots meta noindex directive, because crawlers need access to read that directive.",
-      );
-    }
-
-    if (includeSitemap && !resolvedSitemapUrl) {
-      notes.push(
-        "Add a working sitemap URL or disable the sitemap line before downloading the file.",
-      );
-    }
-
-    return notes;
-  }, [
-    crawlMode,
-    disallowPaths.length,
-    includeSitemap,
-    resolvedSiteUrl,
-    resolvedSitemapUrl,
-  ]);
-
+export default function RobotsTxtGenerator() {
+  // FAQPage JSON-LD built from the same FAQ array rendered below.
   useEffect(() => {
-    const pageTitle = "Free Robots.txt Generator | RankVelt";
-    const pageDescription =
-      "Create a practical robots.txt file with crawler rules, path exclusions, allow rules, and a sitemap line using RankVelt's free robots.txt generator.";
-
-    document.title = pageTitle;
-
-    ensureMetaByName("description").content = pageDescription;
-    ensureMetaByName("robots").content = "index, follow";
-    ensureMetaByName("twitter:title").content = pageTitle;
-    ensureMetaByName("twitter:description").content = pageDescription;
-
-    ensureMetaByProperty("og:title").content = pageTitle;
-    ensureMetaByProperty("og:description").content = pageDescription;
-    ensureMetaByProperty("og:type").content = "website";
-    ensureMetaByProperty("og:url").content =
-      `${SITE_URL}/tools/robots-txt-generator`;
-
-    let canonical = document.querySelector(
-      'link[rel="canonical"]',
-    ) as HTMLLinkElement | null;
-
-    if (!canonical) {
-      canonical = document.createElement("link");
-      canonical.rel = "canonical";
-      document.head.appendChild(canonical);
-    }
-
-    canonical.href = `${SITE_URL}/tools/robots-txt-generator`;
-
-    document
-      .getElementById("rankvelt-robots-generator-schema")
-      ?.remove();
-
+    document.getElementById("rankvelt-robots-txt-schema")?.remove();
     const schemaScript = document.createElement("script");
-    schemaScript.id = "rankvelt-robots-generator-schema";
+    schemaScript.id = "rankvelt-robots-txt-schema";
     schemaScript.type = "application/ld+json";
-
     schemaScript.text = JSON.stringify({
       "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebApplication",
-          name: "Robots.txt Generator",
-          url: `${SITE_URL}/tools/robots-txt-generator`,
-          description: pageDescription,
-          applicationCategory: "BusinessApplication",
-          operatingSystem: "Any",
-          offers: {
-            "@type": "Offer",
-            price: "0",
-            priceCurrency: "USD",
-          },
-          publisher: {
-            "@type": "Organization",
-            name: "RankVelt",
-            url: SITE_URL,
-          },
-        },
-        {
-          "@type": "FAQPage",
-          mainEntity: pageFaqs.map((faq) => ({
-            "@type": "Question",
-            name: faq.question,
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: faq.answer,
-            },
-          })),
-        },
-      ],
+      "@type": "FAQPage",
+      mainEntity: FAQS.map((faq) => ({
+        "@type": "Question",
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
+      })),
     });
-
     document.head.appendChild(schemaScript);
 
     return () => {
@@ -344,545 +398,361 @@ const RobotsTxtGenerator = () => {
     };
   }, []);
 
-  const appendDisallowPath = (path: string) => {
-    const existingPaths = parsePaths(disallowInput);
+  const idRef = useRef(2);
 
-    if (existingPaths.includes(path)) {
-      return;
+  const makeGroup = (partial: Partial<RuleGroup> = {}): RuleGroup => ({
+    id: idRef.current++,
+    userAgent: "*",
+    customAgent: "",
+    agentMode: "preset",
+    allows: [],
+    disallows: [],
+    crawlDelay: "",
+    aiBot: false,
+    ...partial,
+  });
+
+  const [groups, setGroups] = useState<RuleGroup[]>(() => [
+    { id: 1, userAgent: "*", customAgent: "", agentMode: "preset", allows: [], disallows: [], crawlDelay: "", aiBot: false },
+  ]);
+  const [sitemap, setSitemap] = useState("");
+  const [copied, setCopied] = useState(false);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  const output = useMemo(() => buildRobotsTxt(groups, sitemap), [groups, sitemap]);
+  const warnings = useMemo(() => validate(groups, sitemap), [groups, sitemap]);
+  const aiSelected = useMemo(
+    () => new Set(groups.filter((g) => g.aiBot).map((g) => effectiveAgent(g))),
+    [groups]
+  );
+
+  function patchGroup(id: number, patch: Partial<RuleGroup>) {
+    setGroups((gs) => gs.map((g) => (g.id === id ? { ...g, ...patch } : g)));
+  }
+
+  function removeGroup(id: number) {
+    setGroups((gs) => (gs.length > 1 ? gs.filter((g) => g.id !== id) : gs));
+  }
+
+  function addGroup() {
+    setGroups((gs) => [...gs, makeGroup()]);
+  }
+
+  function applyPreset(kind: "allow" | "block" | "wordpress") {
+    if (kind === "allow") {
+      setGroups([makeGroup()]);
+    } else if (kind === "block") {
+      setGroups([makeGroup({ disallows: ["/"] })]);
+    } else {
+      setGroups([
+        makeGroup({
+          userAgent: "*",
+          allows: ["/wp-admin/admin-ajax.php"],
+          disallows: ["/wp-admin/", "/wp-includes/", "/wp-content/plugins/", "/wp-content/themes/", "/readme.html", "/?s="],
+        }),
+      ]);
     }
+  }
 
-    setDisallowInput((currentValue) => {
-      const trimmedValue = currentValue.trim();
-
-      return trimmedValue ? `${trimmedValue}\n${path}` : path;
+  function toggleAiBot(agent: string) {
+    setGroups((gs) => {
+      if (gs.some((g) => g.aiBot && effectiveAgent(g) === agent)) {
+        return gs.filter((g) => !(g.aiBot && effectiveAgent(g) === agent));
+      }
+      return [...gs, makeGroup({ agentMode: "custom", customAgent: agent, disallows: ["/"], aiBot: true })];
     });
-  };
+  }
 
-  const handleCopy = async () => {
+  async function copyOutput() {
+    let ok = false;
     try {
-      await copyToClipboard(robotsOutput);
-
-      setCopyStatus("robots.txt content copied successfully.");
-
-      window.setTimeout(() => {
-        setCopyStatus("");
-      }, 2000);
+      await navigator.clipboard.writeText(output);
+      ok = true;
     } catch {
-      setCopyStatus("Copy failed. Please copy the text manually.");
+      const ta = document.createElement("textarea");
+      ta.value = output;
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        ok = document.execCommand("copy");
+      } catch {
+        ok = false;
+      }
+      document.body.removeChild(ta);
     }
-  };
+    setCopied(ok);
+    if (ok) window.setTimeout(() => setCopied(false), 2000);
+  }
 
-  const handleDownload = () => {
-    const blob = new Blob([robotsOutput], {
-      type: "text/plain;charset=utf-8",
-    });
+  function download() {
+    const blob = new Blob([output], { type: "text/plain;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "robots.txt";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+  }
 
-    const objectUrl = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-
-    link.href = objectUrl;
-    link.download = "robots.txt";
-    link.click();
-
-    URL.revokeObjectURL(objectUrl);
-  };
-
-  const handleReset = () => {
-    setSiteUrl("");
-    setUserAgent("*");
-    setCrawlMode("allow");
-    setDisallowInput("");
-    setAllowInput("");
-    setIncludeSitemap(true);
-    setSitemapUrl("");
-    setCopyStatus("");
-  };
+  function reset() {
+    setGroups([
+      { id: idRef.current++, userAgent: "*", customAgent: "", agentMode: "preset", allows: [], disallows: [], crawlDelay: "", aiBot: false },
+    ]);
+    setSitemap("");
+  }
 
   return (
     <main className="min-h-screen bg-[#050505] pb-24 pt-40 text-white sm:pt-44">
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
-        <div className="absolute left-[-12%] top-[-10%] h-[390px] w-[390px] rounded-full bg-primary/[0.08] blur-[145px]" />
-        <div className="absolute bottom-[-12%] right-[-10%] h-[360px] w-[360px] rounded-full bg-purple-500/[0.1] blur-[145px]" />
+        <div className="absolute left-[-12%] top-[-8%] h-[390px] w-[390px] rounded-full bg-primary/[0.08] blur-[145px]" />
+        <div className="absolute bottom-[-15%] right-[-10%] h-[360px] w-[360px] rounded-full bg-purple-500/[0.08] blur-[145px]" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6">
-        <Link
-          to="/tools"
-          className="inline-flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.2em] text-white/75 transition-colors hover:text-primary"
-        >
-          <ArrowLeft size={15} />
-          Back to Free Tools
-        </Link>
-
-        <section className="mx-auto mt-12 max-w-4xl text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/[0.08] px-4 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-primary">
-            <Sparkles size={13} />
-            Free Technical SEO Tool
+        {/* Hero */}
+        <section className="mx-auto max-w-4xl text-center">
+          <span className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/[0.07] px-4 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-primary">
+            Free RankVelt Tool
           </span>
 
           <h1 className="mt-6 text-4xl font-black leading-[0.98] tracking-[-0.05em] text-white sm:text-5xl md:text-6xl">
-            Robots.txt{" "}
-            <span className="text-gradient-gold">Generator</span>
+            Free <span className="text-gradient-gold">Robots.txt</span> Generator
           </h1>
 
-          <p className="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-white/80 sm:text-lg">
-            Create a clean robots.txt starter file with crawler instructions,
-            path exclusions, optional allow rules, and a sitemap reference for
-            your live website.
+          <p className="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-white/60 sm:text-lg">
+            Build a valid robots.txt file in seconds. Add user-agent rules, allow and
+            disallow paths, block AI training crawlers, and include your sitemap, with a
+            live preview and safety warnings. Free, no signup, everything runs in your browser.
           </p>
         </section>
 
-        <section className="mt-12 grid gap-5 xl:grid-cols-[1.02fr_0.98fr]">
-          <article className="rounded-[2rem] border border-white/[0.1] bg-white/[0.03] p-5 sm:p-7">
-            <div className="flex items-center gap-3">
-              <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                <Bot size={21} />
-              </span>
-
-              <div>
-                <h2 className="text-2xl font-black text-white">
-                  Configure Your Crawler Rules
-                </h2>
-
-                <p className="mt-1 text-sm text-white/75">
-                  Add only paths you genuinely want crawlers to avoid.
-                </p>
+        {/* Tool UI */}
+        <section className="mx-auto mt-12 max-w-4xl">
+          <div className="rounded-2xl border border-white/[0.08] bg-white/[0.025] p-6 sm:p-8">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <h2 className="text-xl font-black text-white">Build your file</h2>
+              <div className="flex flex-wrap gap-2">
+                <button
+                  onClick={() => applyPreset("allow")}
+                  className="rounded-xl border border-white/10 bg-white/[0.04] px-3.5 py-2 text-xs font-bold text-white/70 transition-colors hover:border-primary/40 hover:text-white"
+                >
+                  Allow All
+                </button>
+                <button
+                  onClick={() => applyPreset("wordpress")}
+                  className="rounded-xl border border-white/10 bg-white/[0.04] px-3.5 py-2 text-xs font-bold text-white/70 transition-colors hover:border-primary/40 hover:text-white"
+                >
+                  WordPress
+                </button>
+                <button
+                  onClick={() => applyPreset("block")}
+                  className="rounded-xl border border-red-500/25 bg-red-500/[0.06] px-3.5 py-2 text-xs font-bold text-red-300 transition-colors hover:border-red-500/50"
+                >
+                  Block All
+                </button>
+                <button
+                  onClick={reset}
+                  className="rounded-xl border border-white/10 bg-white/[0.04] px-3.5 py-2 text-xs font-bold text-white/70 transition-colors hover:border-primary/40 hover:text-white"
+                >
+                  Reset
+                </button>
               </div>
             </div>
 
-            <div className="mt-7 space-y-5">
-              <label className="block">
-                <span className="text-[10px] font-black uppercase tracking-[0.18em] text-white/75">
-                  Website URL
-                </span>
-
-                <input
-                  value={siteUrl}
-                  onChange={(event) => setSiteUrl(event.target.value)}
-                  placeholder="https://example.com"
-                  className="mt-2 w-full rounded-xl border border-white/15 bg-black/30 px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-white/40 focus:border-primary/55"
+            <div className="mt-6 space-y-4">
+              {groups.map((g, i) => (
+                <RuleBlockEditor
+                  key={g.id}
+                  group={g}
+                  index={i}
+                  onChange={(patch) => patchGroup(g.id, patch)}
+                  onRemove={() => removeGroup(g.id)}
                 />
-              </label>
+              ))}
+            </div>
 
-              <label className="block">
-                <span className="text-[10px] font-black uppercase tracking-[0.18em] text-white/75">
-                  User Agent
-                </span>
+            <button
+              onClick={addGroup}
+              className="mt-4 w-full rounded-xl border border-dashed border-white/15 bg-transparent px-4 py-3 text-sm font-bold text-white/60 transition-colors hover:border-primary/40 hover:text-white"
+            >
+              + Add another user-agent block
+            </button>
 
-                <select
-                  value={userAgent}
-                  onChange={(event) => setUserAgent(event.target.value)}
-                  className="mt-2 w-full rounded-xl border border-white/15 bg-black/30 px-4 py-3 text-sm text-white outline-none transition-colors focus:border-primary/55"
-                >
-                  <option value="*">All Crawlers (*)</option>
-                  <option value="Googlebot">Googlebot</option>
-                  <option value="Bingbot">Bingbot</option>
-                </select>
-              </label>
-
-              <div>
-                <span className="text-[10px] font-black uppercase tracking-[0.18em] text-white/75">
-                  Crawl Access
-                </span>
-
-                <div className="mt-2 grid gap-3 sm:grid-cols-2">
-                  <button
-                    type="button"
-                    onClick={() => setCrawlMode("allow")}
-                    className={`rounded-2xl border p-4 text-left transition-all ${
-                      crawlMode === "allow"
-                        ? "border-primary/50 bg-primary/[0.1]"
-                        : "border-white/15 bg-black/20 hover:border-primary/35"
-                    }`}
-                  >
-                    <CheckCircle2
-                      size={18}
-                      className={
-                        crawlMode === "allow"
-                          ? "text-primary"
-                          : "text-white/50"
-                      }
-                    />
-
-                    <p className="mt-3 text-sm font-black text-white">
-                      Allow Public Crawling
-                    </p>
-
-                    <p className="mt-1 text-xs leading-relaxed text-white/70">
-                      Suitable for a normal public website.
-                    </p>
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={() => setCrawlMode("block")}
-                    className={`rounded-2xl border p-4 text-left transition-all ${
-                      crawlMode === "block"
-                        ? "border-red-400/50 bg-red-400/[0.08]"
-                        : "border-white/15 bg-black/20 hover:border-red-400/35"
-                    }`}
-                  >
-                    <ShieldAlert
-                      size={18}
-                      className={
-                        crawlMode === "block"
-                          ? "text-red-300"
-                          : "text-white/50"
-                      }
-                    />
-
-                    <p className="mt-3 text-sm font-black text-white">
-                      Block Entire Website
-                    </p>
-
-                    <p className="mt-1 text-xs leading-relaxed text-white/70">
-                      Only for staging or intentional lock-down.
-                    </p>
-                  </button>
-                </div>
+            {/* AI crawler blocking */}
+            <div className="mt-6 rounded-xl border border-white/[0.08] bg-black/20 p-4 sm:p-5">
+              <h3 className="text-sm font-black uppercase tracking-[0.14em] text-white/80">
+                Block AI training crawlers
+              </h3>
+              <p className="mt-1.5 text-xs leading-relaxed text-white/40">
+                One click adds a "Disallow: /" block for each selected AI bot. Blocking
+                training bots (GPTBot, CCBot) does not necessarily remove you from AI
+                search answers; blocking retrieval bots (OAI-SearchBot, PerplexityBot)
+                can. Choose intentionally.
+              </p>
+              <div className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2">
+                {AI_BOTS.map((b) => {
+                  const on = aiSelected.has(b.agent);
+                  return (
+                    <button
+                      key={b.agent}
+                      onClick={() => toggleAiBot(b.agent)}
+                      className={`flex items-center justify-between gap-2 rounded-lg border px-3 py-2 text-left text-xs font-semibold transition-colors ${
+                        on
+                          ? "border-purple-500/50 bg-purple-500/[0.12] text-purple-200"
+                          : "border-white/10 bg-white/[0.02] text-white/55 hover:border-white/25 hover:text-white/80"
+                      }`}
+                    >
+                      <span className="font-mono">{b.label}</span>
+                      <span
+                        className={`flex h-4 w-4 shrink-0 items-center justify-center rounded border text-[10px] ${
+                          on ? "border-purple-400 bg-purple-500 text-white" : "border-white/25 text-transparent"
+                        }`}
+                      >
+                        ✓
+                      </span>
+                    </button>
+                  );
+                })}
               </div>
+            </div>
 
-              <label className="block">
-                <span className="text-[10px] font-black uppercase tracking-[0.18em] text-white/75">
-                  Paths to Disallow
-                </span>
+            {/* Sitemap */}
+            <div className="mt-6">
+              <label className={labelCls}>Sitemap URL (optional)</label>
+              <input
+                value={sitemap}
+                onChange={(e) => setSitemap(e.target.value)}
+                placeholder="https://example.com/sitemap.xml"
+                inputMode="url"
+                className={inputCls}
+              />
+              <p className="mt-1.5 text-[11px] leading-relaxed text-white/35">
+                Added as a "Sitemap:" line so crawlers can discover your pages faster.
+              </p>
+            </div>
 
-                <textarea
-                  value={disallowInput}
-                  onChange={(event) => setDisallowInput(event.target.value)}
-                  rows={6}
-                  placeholder={`/search/\n/admin/\n/private/`}
-                  className="mt-2 w-full resize-none rounded-xl border border-white/15 bg-black/30 px-4 py-3 font-mono text-sm leading-relaxed text-white outline-none transition-colors placeholder:text-white/40 focus:border-primary/55"
-                />
-
-                <p className="mt-2 text-xs leading-relaxed text-white/70">
-                  Add one path per line. Example: <code>/search/</code> or{" "}
-                  <code>/private/</code>
-                </p>
-              </label>
-
-              <div className="flex flex-wrap gap-2">
-                {[
-                  "/search/",
-                  "/admin/",
-                  "/staging/",
-                  "/preview/",
-                ].map((path) => (
-                  <button
-                    key={path}
-                    type="button"
-                    onClick={() => appendDisallowPath(path)}
-                    className="rounded-full border border-primary/25 bg-primary/[0.06] px-3 py-2 text-[10px] font-black text-primary transition-colors hover:bg-primary/[0.14]"
+            {/* Warnings */}
+            {warnings.length > 0 && (
+              <div className="mt-6 space-y-2">
+                {warnings.map((w, i) => (
+                  <div
+                    key={i}
+                    className={`rounded-xl border px-4 py-3 text-sm leading-relaxed ${
+                      w.level === "error"
+                        ? "border-red-500/30 bg-red-500/[0.07] text-red-300"
+                        : w.level === "warn"
+                          ? "border-amber-500/30 bg-amber-500/[0.07] text-amber-200"
+                          : "border-sky-500/25 bg-sky-500/[0.06] text-sky-200"
+                    }`}
                   >
-                    Add {path}
-                  </button>
+                    <span className="mr-2 font-black uppercase text-[10px] tracking-[0.18em]">
+                      {w.level === "error" ? "Error" : w.level === "warn" ? "Warning" : "Note"}
+                    </span>
+                    {w.text}
+                  </div>
                 ))}
               </div>
-
-              <label className="block">
-                <span className="text-[10px] font-black uppercase tracking-[0.18em] text-white/75">
-                  Allow Exceptions
-                </span>
-
-                <textarea
-                  value={allowInput}
-                  onChange={(event) => setAllowInput(event.target.value)}
-                  rows={4}
-                  placeholder={`/public-file.pdf\n/help/`}
-                  className="mt-2 w-full resize-none rounded-xl border border-white/15 bg-black/30 px-4 py-3 font-mono text-sm leading-relaxed text-white outline-none transition-colors placeholder:text-white/40 focus:border-primary/55"
-                />
-
-                <p className="mt-2 text-xs leading-relaxed text-white/70">
-                  Use only when you need an explicit exception for a path.
-                </p>
-              </label>
-
-              <div className="rounded-2xl border border-white/[0.1] bg-black/20 p-5">
-                <div className="flex items-center justify-between gap-4">
-                  <div>
-                    <p className="text-sm font-black text-white">
-                      Include Sitemap Line
-                    </p>
-
-                    <p className="mt-1 text-xs leading-relaxed text-white/70">
-                      Adds your XML sitemap location to the generated file.
-                    </p>
-                  </div>
-
-                  <button
-                    type="button"
-                    onClick={() => setIncludeSitemap((current) => !current)}
-                    className={`relative h-7 w-12 rounded-full transition-colors ${
-                      includeSitemap ? "bg-primary" : "bg-white/20"
-                    }`}
-                    aria-pressed={includeSitemap}
-                    aria-label="Toggle sitemap line"
-                  >
-                    <span
-                      className={`absolute top-1 h-5 w-5 rounded-full bg-white transition-transform ${
-                        includeSitemap ? "left-6" : "left-1"
-                      }`}
-                    />
-                  </button>
-                </div>
-
-                {includeSitemap && (
-                  <label className="mt-5 block">
-                    <span className="text-[10px] font-black uppercase tracking-[0.18em] text-white/75">
-                      Sitemap URL
-                    </span>
-
-                    <input
-                      value={sitemapUrl}
-                      onChange={(event) => setSitemapUrl(event.target.value)}
-                      placeholder={
-                        resolvedSiteUrl
-                          ? `${resolvedSiteUrl}/sitemap.xml`
-                          : "https://example.com/sitemap.xml"
-                      }
-                      className="mt-2 w-full rounded-xl border border-white/15 bg-black/30 px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-white/40 focus:border-primary/55"
-                    />
-
-                    <p className="mt-2 text-xs leading-relaxed text-white/70">
-                      Leave empty to automatically use{" "}
-                      <span className="font-semibold text-white/85">
-                        /sitemap.xml
-                      </span>{" "}
-                      from your website URL.
-                    </p>
-                  </label>
-                )}
-              </div>
-            </div>
-          </article>
-
-          <aside className="rounded-[2rem] border border-primary/30 bg-gradient-to-br from-primary/[0.08] via-white/[0.03] to-purple-500/[0.1] p-5 sm:p-7">
-            <div className="flex items-start justify-between gap-4">
-              <div>
-                <p className="text-[10px] font-black uppercase tracking-[0.2em] text-primary">
-                  Generated robots.txt
-                </p>
-
-                <h2 className="mt-3 text-2xl font-black text-white">
-                  Review Before Publishing
-                </h2>
-              </div>
-
-              <FileCode2 className="text-primary" size={23} />
-            </div>
-
-            <textarea
-              readOnly
-              value={robotsOutput}
-              spellCheck={false}
-              aria-label="Generated robots.txt file"
-              className="mt-7 min-h-[355px] w-full resize-y rounded-2xl border border-white/[0.12] bg-[#080808] p-5 font-mono text-xs leading-relaxed text-emerald-200 outline-none"
-            />
-
-            <div className="mt-5 flex flex-wrap gap-3">
-              <button
-                type="button"
-                onClick={handleCopy}
-                className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-xs font-black text-black transition-transform hover:scale-[1.02]"
-              >
-                <Copy size={15} />
-                Copy robots.txt
-              </button>
-
-              <button
-                type="button"
-                onClick={handleDownload}
-                className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/[0.04] px-5 py-3 text-xs font-black text-white transition-colors hover:border-primary/45 hover:text-primary"
-              >
-                <Download size={15} />
-                Download File
-              </button>
-
-              <button
-                type="button"
-                onClick={handleReset}
-                className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/[0.04] px-5 py-3 text-xs font-black text-white transition-colors hover:border-red-400/45 hover:text-red-300"
-              >
-                <RefreshCcw size={15} />
-                Reset
-              </button>
-            </div>
-
-            {copyStatus && (
-              <p className="mt-4 text-sm font-semibold text-emerald-300">
-                {copyStatus}
-              </p>
             )}
 
-            <div className="mt-8 rounded-2xl border border-white/[0.1] bg-black/25 p-5">
-              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-primary">
-                Safety Check
-              </p>
-
-              <ul className="mt-4 space-y-3">
-                {validationNotes.map((note) => (
-                  <li
-                    key={note}
-                    className="flex items-start gap-3 text-sm leading-relaxed text-white/80"
-                  >
-                    <Search
-                      size={16}
-                      className="mt-0.5 shrink-0 text-primary"
-                    />
-                    <span>{note}</span>
-                  </li>
-                ))}
-              </ul>
+            {/* Preview */}
+            <div className="mt-6">
+              <label className={labelCls}>Live preview</label>
+              <pre className="mt-1 max-h-96 overflow-auto whitespace-pre-wrap rounded-xl border border-white/[0.08] bg-black/50 p-4 font-mono text-[13px] leading-relaxed text-emerald-200">
+                {output || "Your robots.txt will appear here."}
+              </pre>
             </div>
-          </aside>
-        </section>
 
-        <section className="mt-16 grid gap-5 lg:grid-cols-3">
-          <article className="rounded-3xl border border-white/[0.1] bg-white/[0.03] p-6">
-            <Globe2 className="text-primary" size={22} />
-
-            <h2 className="mt-5 text-2xl font-black text-white">
-              Use the Root Location
-            </h2>
-
-            <p className="mt-4 text-sm leading-relaxed text-white/80">
-              Publish the final file at the root of your website so it is
-              available at <code>/robots.txt</code>.
-            </p>
-          </article>
-
-          <article className="rounded-3xl border border-primary/25 bg-gradient-to-br from-primary/[0.08] via-white/[0.03] to-purple-500/[0.1] p-6">
-            <ClipboardCheck className="text-primary" size={22} />
-
-            <h2 className="mt-5 text-2xl font-black text-white">
-              Review Public Pages
-            </h2>
-
-            <p className="mt-4 text-sm leading-relaxed text-white/80">
-              Do not accidentally block service pages, blog posts, assets, or
-              other URLs that should remain accessible to search crawlers.
-            </p>
-          </article>
-
-          <article className="rounded-3xl border border-white/[0.1] bg-white/[0.03] p-6">
-            <ShieldAlert className="text-primary" size={22} />
-
-            <h2 className="mt-5 text-2xl font-black text-white">
-              Do Not Use It for Security
-            </h2>
-
-            <p className="mt-4 text-sm leading-relaxed text-white/80">
-              Sensitive pages and files require authentication or proper
-              server-side protection. Robots.txt is publicly visible.
-            </p>
-          </article>
-        </section>
-
-        <section className="mt-16">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">
-              Robots.txt FAQs
-            </p>
-
-            <h2 className="mt-3 text-3xl font-black text-white">
-              Questions Before You Publish
-            </h2>
-          </div>
-
-          <div className="mx-auto mt-8 max-w-4xl space-y-3">
-            {pageFaqs.map((faq) => (
-              <details
-                key={faq.question}
-                className="group rounded-2xl border border-white/[0.1] bg-white/[0.03] p-5 open:border-primary/45"
+            <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <button
+                onClick={copyOutput}
+                className="rounded-xl bg-primary px-4 py-3.5 text-sm font-black uppercase tracking-[0.18em] text-black transition-opacity hover:opacity-90"
               >
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-5 text-left text-sm font-black text-white sm:text-base">
-                  {faq.question}
-
-                  <ChevronDown
-                    size={18}
-                    className="shrink-0 text-primary transition-transform group-open:rotate-180"
-                  />
-                </summary>
-
-                <p className="mt-4 text-sm leading-relaxed text-white/80">
-                  {faq.answer}
-                </p>
-              </details>
-            ))}
+                {copied ? "Copied!" : "Copy robots.txt"}
+              </button>
+              <button
+                onClick={download}
+                className="rounded-xl border border-primary/40 bg-primary/[0.08] px-4 py-3.5 text-sm font-black uppercase tracking-[0.18em] text-primary transition-colors hover:bg-primary/[0.14]"
+              >
+                Download robots.txt
+              </button>
+            </div>
           </div>
         </section>
 
-        <section className="mt-16 rounded-[2rem] border border-white/[0.1] bg-white/[0.03] p-6 sm:p-8">
-          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-            <div className="max-w-2xl">
-              <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">
-                Continue Your Technical SEO Work
-              </p>
-
-              <h2 className="mt-3 text-3xl font-black text-white">
-                Improve Crawling, Indexing & Site Structure
-              </h2>
-
-              <p className="mt-3 text-sm leading-relaxed text-white/80">
-                Robots.txt is only one technical SEO setting. Better organic
-                performance also depends on useful pages, sitemap coverage,
-                crawlable internal links, page quality, and a healthy website
-                structure.
-              </p>
-            </div>
-
-            <Link
-              to="/strategy-call?package=Technical%20SEO%20Opportunity%20Check"
-              className="inline-flex w-fit items-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-xs font-black text-black transition-transform hover:scale-[1.02]"
-            >
-              Request a Free SEO Check
-              <ArrowRight size={15} />
-            </Link>
+        {/* How to use */}
+        <section className="mx-auto mt-8 max-w-4xl">
+          <div className="rounded-2xl border border-white/[0.08] bg-white/[0.025] p-6 sm:p-8">
+            <h2 className="text-xl font-black text-white">How to use this generator</h2>
+            <ol className="mt-4 list-decimal space-y-2.5 pl-5 text-sm leading-relaxed text-white/60">
+              <li>
+                Pick a preset or start from the default allow-all template. Add a rule
+                block for each crawler you want to treat differently, choosing
+                Googlebot, Bingbot, or a custom user-agent like GPTBot.
+              </li>
+              <li>
+                Add Allow and Disallow paths to each block, set a crawl-delay if needed,
+                optionally block AI training crawlers with one click, and paste your
+                sitemap URL. Watch the live preview and fix any warnings.
+              </li>
+              <li>
+                Copy the text or download it as robots.txt, upload it to your site root
+                (https://yourdomain.com/robots.txt), then test it in Google Search
+                Console under Settings before relying on it.
+              </li>
+            </ol>
+            <p className="mt-4 text-sm leading-relaxed text-white/60">
+              Nothing leaves your browser. The tool never fetches your site, so it cannot
+              validate that your paths exist. After publishing, confirm important pages
+              still crawl in Search Console.
+            </p>
           </div>
+        </section>
 
-          <div className="mt-7 grid gap-3 md:grid-cols-2">
-            <Link
-              to="/business-seo"
-              className="group rounded-2xl border border-white/[0.1] bg-black/25 p-5 transition-all hover:border-primary/45 hover:bg-primary/[0.05]"
-            >
-              <h3 className="text-lg font-black text-white group-hover:text-primary">
-                Business SEO
-              </h3>
+        {/* FAQ */}
+        <section className="mx-auto mt-8 max-w-4xl">
+          <div className="rounded-2xl border border-white/[0.08] bg-white/[0.025] p-6 sm:p-8">
+            <h2 className="text-xl font-black text-white">Frequently asked questions</h2>
+            <div className="mt-4 divide-y divide-white/[0.06]">
+              {FAQS.map((f, i) => (
+                <div key={i}>
+                  <button
+                    onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                    className="flex w-full items-center justify-between gap-4 py-4 text-left"
+                  >
+                    <span className="text-sm font-bold text-white/85">{f.q}</span>
+                    <span className="shrink-0 text-lg text-primary">
+                      {openFaq === i ? "-" : "+"}
+                    </span>
+                  </button>
+                  {openFaq === i && (
+                    <p className="pb-4 pr-8 text-sm leading-relaxed text-white/60">{f.a}</p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-              <p className="mt-2 text-sm leading-relaxed text-white/75">
-                Improve technical foundations, content clarity, service-page
-                structure, and qualified organic lead generation.
-              </p>
-
-              <span className="mt-5 inline-flex items-center gap-2 text-sm font-black text-primary">
-                Explore Business SEO
-                <ArrowRight size={15} />
-              </span>
-            </Link>
-
-            <Link
-              to="/local-seo"
-              className="group rounded-2xl border border-white/[0.1] bg-black/25 p-5 transition-all hover:border-primary/45 hover:bg-primary/[0.05]"
-            >
-              <h3 className="text-lg font-black text-white group-hover:text-primary">
-                Local SEO
-              </h3>
-
-              <p className="mt-2 text-sm leading-relaxed text-white/75">
-                Improve local service pages, business information, Maps
-                visibility, and qualified customer enquiries.
-              </p>
-
-              <span className="mt-5 inline-flex items-center gap-2 text-sm font-black text-primary">
-                Explore Local SEO
-                <ArrowRight size={15} />
-              </span>
-            </Link>
+        {/* Related tools */}
+        <section className="mx-auto mt-8 max-w-4xl">
+          <div className="rounded-2xl border border-white/[0.08] bg-white/[0.025] p-6 sm:p-8">
+            <h2 className="text-xl font-black text-white">Related free tools</h2>
+            <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              {RELATED.map((t) => (
+                <a
+                  key={t.href}
+                  href={t.href}
+                  className="rounded-xl border border-white/[0.08] bg-black/20 px-4 py-3.5 text-sm font-bold text-white/75 transition-colors hover:border-primary/40 hover:text-white"
+                >
+                  {t.name} <span className="text-primary">→</span>
+                </a>
+              ))}
+            </div>
           </div>
         </section>
       </div>
     </main>
   );
-};
-
-export default RobotsTxtGenerator;
+}

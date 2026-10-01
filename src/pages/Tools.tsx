@@ -1,4 +1,4 @@
-// TOOLS-VERSION-11 : 11 tools hub (2026-09-30)
+// TOOLS-VERSION-15
 import {
   useEffect,
   useMemo,
@@ -34,7 +34,7 @@ import toolContentJson from "../data/tool-content.json";
 
 import GuestPostFinder from "../components/Tools/GuestPostFinder";
 
-const SITE_URL = "https://www.rankvelt.com";
+const SITE_URL = "https://rankvelt.com";
 
 type ToolType =
   | "calculator"
@@ -42,13 +42,10 @@ type ToolType =
   | "detector"
   | "generator"
   | "guest-post"
-  | "meta-checker"
-  | "schema"
-  | "robots"
-  | "sitemap"
-  | "seo-checklist"
   | "redirect"
-  | "email-extractor";
+  | "opengraph"
+  | "robots"
+  | "serp";
 
 type ToolFaq = {
   q: string;
@@ -86,7 +83,7 @@ type ToolConfig = {
     description: string;
     path: string;
   }[];
-  directPath?: string;
+  standalone?: boolean;
 };
 
 const toolJson = toolContentJson as ToolJsonMap;
@@ -123,7 +120,7 @@ const tools: ToolConfig[] = [
     pageTitle: "Free Profit Margin Calculator for eCommerce",
     metaTitle: "Free Profit Margin Calculator for eCommerce | RankVelt",
     metaDescription:
-      "Free eCommerce profit margin calculator: estimate selling margin, product profit, costs, fees, and break-even pricing direction.",
+      "Use RankVelt's free eCommerce profit margin calculator to estimate selling margin, product profit, direct costs, advertising costs, fees, and break-even pricing direction.",
     shortDescription:
       "Estimate product profit, costs, margin direction, and pricing scenarios.",
     intro:
@@ -161,7 +158,7 @@ const tools: ToolConfig[] = [
     pageTitle: "Free Legal Policy Generator for Websites",
     metaTitle: "Free Legal Policy Generator for Websites | RankVelt",
     metaDescription:
-      "Free legal policy generator: create starter privacy, refund, and terms content for websites, Shopify stores, and local businesses.",
+      "Generate starter privacy, refund, and terms-policy content for websites, Shopify stores, eCommerce brands, and local businesses with RankVelt's free policy generator.",
     shortDescription:
       "Create starter privacy, refund, and terms content for your website.",
     intro:
@@ -197,9 +194,9 @@ const tools: ToolConfig[] = [
     badge: "Free Shopify Research Tool",
     title: "Shopify Theme Detector",
     pageTitle: "Free Shopify Theme Detector Tool",
-    metaTitle: "Free Shopify Theme Detector | RankVelt",
+    metaTitle: "Shopify Theme Detector Tool | RankVelt",
     metaDescription:
-      "Free Shopify theme detector and checker: paste any store URL to identify the likely Shopify theme behind a public eCommerce storefront.",
+      "Use RankVelt's free Shopify Theme Detector to check public storefront signals and identify the likely Shopify theme setup behind a public eCommerce store.",
     shortDescription:
       "Research likely Shopify theme setups using public storefront signals.",
     intro:
@@ -305,286 +302,161 @@ const tools: ToolConfig[] = [
       },
     ],
   },
-
-
-  
   {
-    toolType: "email-extractor",
-    slug: "bulk-email-extractor",
-    contentKey: "email-extractor",
-    badge: "Free Lead Generation Tool",
-    title: "Bulk Email Extractor",
-    pageTitle: "Free Bulk Email Extractor & Verifier",
-    metaTitle: "Free Bulk Email Extractor & Verifier | RankVelt",
+    toolType: "redirect",
+    slug: "bulk-redirect-generator",
+    contentKey: "redirect-generator",
+    badge: "Free Bulk Redirect Tool",
+    title: "Bulk Redirect Generator",
+    pageTitle: "Free Bulk Redirect Generator",
+    metaTitle: "Free Bulk Redirect Generator: 301/302 Rules for Apache & Nginx",
     metaDescription:
-      "Extract emails from any list of websites and verify them free with RankVelt's bulk email extractor and verifier tool.",
+      "Generate bulk 301 or 302 redirect rules in seconds. Paste old and new URLs, get Apache .htaccess, Nginx, or Cloudflare output. Free, runs in your browser.",
     shortDescription:
-      "Extract and verify emails from a bulk list of websites, free.",
+      "Generate bulk 301/302 redirect rules for Apache, Nginx, and Cloudflare.",
     intro:
-      "Paste a list of websites to extract public contact emails and verify them, all from one free tool.",
-    guideTitle: "Build Your Outreach List Faster",
+      "Paste your old and new URLs to generate ready-to-use 301 or 302 redirect rules for Apache .htaccess, Nginx, or Cloudflare. Free, runs entirely in your browser, no signup needed.",
+    guideTitle: "Map Every Old URL to Its New Home",
     guideText:
-      "Manual email collection takes hours. Paste your website list, extract contact emails in bulk, then verify them before outreach.",
+      "Site migrations, redesigns, and domain moves create redirect work that is easy to get wrong. Generate the full rule set here, validate each row before launch, and keep the 301s in place long enough for Google to pass ranking signals to the new URLs.",
     bestFor: [
-      "Founders building cold outreach lists.",
-      "Agencies collecting lead contact data.",
-      "Marketers cleaning email lists before campaigns.",
-      "Freelancers finding client contact emails.",
+      "Website migrations and domain moves with hundreds of URLs.",
+      "Redesigns where page slugs change across the site.",
+      "Cleaning up old campaign or deleted product URLs.",
+      "Agencies preparing redirect maps for client launches.",
     ],
     relatedLinks: [
       {
-        title: "Business SEO",
+        title: "XML Sitemap Generator",
         description:
-          "Build stronger service pages, technical foundations, and organic lead pathways.",
-        path: "/business-seo",
+          "Generate a fresh sitemap for the new URL structure after your redirects go live.",
+        path: "/tools/xml-sitemap-generator",
       },
-      {
-        title: "eCommerce SEO",
-        description:
-          "Improve product discovery, collection structure, and qualified organic traffic.",
-        path: "/ecommerce-seo",
-      },
-    ],
-  },
-  
-
-
-
-
-
-  {
-    toolType: "meta-checker",
-    slug: "meta-title-description-checker",
-    contentKey: "meta-checker",
-    badge: "Free SEO Metadata Tool",
-    title: "Meta Title Checker",
-    pageTitle: "Free Meta Title & Description Checker",
-    metaTitle: "Free Meta Title & Description Checker | RankVelt",
-    metaDescription:
-      "Check meta title and description length, clarity, and SERP preview with RankVelt's free SEO metadata checker.",
-    shortDescription:
-      "Check title and description length with a live SERP preview.",
-    intro:
-      "Paste a title and meta description to check length, clarity, and how the snippet looks in desktop and mobile search results.",
-    guideTitle: "Write Snippets People Want to Click",
-    guideText:
-      "Titles and descriptions do not change rankings directly, but they decide whether a searcher clicks your result. Check the length first, then make the wording specific to the query and the promise of the page.",
-    bestFor: [
-      "Blog editors reviewing titles before publishing.",
-      "SEO specialists auditing snippet quality at scale.",
-      "Shopify stores improving product and collection snippets.",
-      "Agencies standardising metadata across client sites.",
-    ],
-    relatedLinks: [
       {
         title: "Business SEO",
         description:
-          "Build stronger service pages, technical foundations, and organic lead pathways.",
+          "Plan the full technical migration with redirects, sitemaps, and on-page SEO.",
         path: "/business-seo",
       },
-      {
-        title: "SEO vs AEO vs GEO",
-        description:
-          "Understand how classic SEO, answer optimisation, and AI visibility fit together.",
-        path: "/blog/seo-vs-aeo-vs-geo",
-      },
     ],
-    directPath: "/tools/meta-title-description-checker",
+    standalone: true,
   },
   {
-    toolType: "schema",
-    slug: "schema-markup-generator",
-    contentKey: "schema",
-    badge: "Free Structured Data Tool",
-    title: "Schema Generator",
-    pageTitle: "Free Schema Markup Generator",
-    metaTitle: "Free Schema Markup Generator | RankVelt",
+    toolType: "opengraph",
+    slug: "open-graph-preview",
+    contentKey: "open-graph-preview",
+    badge: "Free Social Preview Tool",
+    title: "Open Graph Preview",
+    pageTitle: "Free Open Graph Checker & Preview Tool",
+    metaTitle: "Open Graph Checker & Social Preview Tool | RankVelt",
     metaDescription:
-      "Generate JSON-LD schema markup for Organization, LocalBusiness, FAQ, and Article pages with RankVelt's free generator.",
+      "Test Open Graph tags free: preview Facebook, X and LinkedIn link cards, check og:image sizes, catch missing tags, and copy the exact HTML to fix them.",
     shortDescription:
-      "Generate JSON-LD schema markup in seconds.",
+      "Preview Facebook, X, and LinkedIn link cards and validate OG tags.",
     intro:
-      "Fill in your business or page details to generate clean JSON-LD schema markup you can paste straight into your website.",
-    guideTitle: "Add Schema Without Writing Code",
+      "Enter your Open Graph tags to see exactly how your page will look when shared on Facebook, X, and LinkedIn. Catch missing tags, image problems, and length issues before you publish.",
+    guideTitle: "Make Every Shared Link Look Its Best",
     guideText:
-      "Structured data helps search engines understand your pages and can unlock rich results. Generate the markup here, add it to the page, then validate it before deploying.",
+      "Social platforms decide how your link looks from your Open Graph tags alone. A missing og:image or a cropped title costs clicks on every share. Test the tags here, copy the corrected HTML, and ship previews that earn the click.",
     bestFor: [
-      "Local businesses adding LocalBusiness schema.",
-      "Bloggers marking up articles and FAQs.",
-      "Agencies shipping schema across client sites.",
-      "Developers who want valid JSON-LD without hand-writing it.",
+      "Bloggers and content teams checking previews before publishing.",
+      "eCommerce brands sharing product pages on social.",
+      "Agencies auditing client sites for social readiness.",
+      "Anyone debugging a wrong image or stale link preview.",
     ],
     relatedLinks: [
       {
-        title: "Business SEO",
+        title: "Meta Title Checker",
         description:
-          "Build stronger service pages, technical foundations, and organic lead pathways.",
-        path: "/business-seo",
+          "Check any live page for missing or overlong titles and meta descriptions.",
+        path: "/tools/meta-title-description-checker",
       },
       {
-        title: "Local SEO",
+        title: "Title Tag Preview",
         description:
-          "Improve local visibility, service-area relevance, and Google Business Profile signals.",
-        path: "/local-seo",
+          "Preview how the same page appears in Google search results.",
+        path: "/tools/title-tag-preview",
       },
     ],
-    directPath: "/tools/schema-markup-generator",
+    standalone: true,
   },
   {
     toolType: "robots",
     slug: "robots-txt-generator",
-    contentKey: "robots",
-    badge: "Free Crawler Control Tool",
+    contentKey: "robots-txt-generator",
+    badge: "Free Technical SEO Tool",
     title: "Robots.txt Generator",
     pageTitle: "Free Robots.txt Generator",
     metaTitle: "Free Robots.txt Generator | RankVelt",
     metaDescription:
-      "Create a practical robots.txt file with crawler rules, path exclusions, and a sitemap line using RankVelt's free generator.",
+      "Build a valid robots.txt file in seconds. Add user-agent rules, allow and disallow paths, sitemap URL, and crawl delay with live preview. Free, no signup.",
     shortDescription:
-      "Build a clean robots.txt with crawler rules.",
+      "Build a valid robots.txt with rules, sitemap, and AI crawler controls.",
     intro:
-      "Choose which crawlers can access which parts of your site, add path exclusions, and include your sitemap location.",
-    guideTitle: "Control Crawlers Without Blocking the Wrong Pages",
+      "Create a valid robots.txt file in seconds with per-crawler rules, allow and disallow paths, your sitemap URL, and one-click AI crawler blocking. Live preview and validation included.",
+    guideTitle: "Tell Crawlers Exactly Where They Can Go",
     guideText:
-      "A small syntax error in robots.txt can block your whole site from search. Generate the file here, then test it in Search Console before uploading it to your server.",
+      "A robots.txt file is the first thing search crawlers read. One wrong Disallow can remove your whole site from Google, while a missing sitemap line slows down discovery. Build the file here, review the warnings, and upload it to your domain root.",
     bestFor: [
-      "New websites setting crawl rules for the first time.",
-      "Site owners blocking staging or internal sections.",
-      "SEOs auditing crawler access during technical reviews.",
-      "Agencies standardising robots.txt across client sites.",
+      "New websites preparing for their first Google crawl.",
+      "WordPress and Shopify sites with admin or staging areas to block.",
+      "Sites that want AI training crawlers blocked from content.",
+      "Agencies setting up technical foundations for clients.",
     ],
     relatedLinks: [
-      {
-        title: "Business SEO",
-        description:
-          "Build stronger service pages, technical foundations, and organic lead pathways.",
-        path: "/business-seo",
-      },
       {
         title: "XML Sitemap Generator",
         description:
-          "Build a clean XML sitemap to reference from your robots.txt file.",
+          "Generate the sitemap URL that your robots.txt file should reference.",
         path: "/tools/xml-sitemap-generator",
       },
+      {
+        title: "Bulk Redirect Generator",
+        description:
+          "Handle URL changes safely during migrations alongside robots rules.",
+        path: "/tools/bulk-redirect-generator",
+      },
     ],
-    directPath: "/tools/robots-txt-generator",
+    standalone: true,
   },
   {
-    toolType: "sitemap",
-    slug: "xml-sitemap-generator",
-    contentKey: "sitemap",
-    badge: "Free Technical SEO Tool",
-    title: "XML Sitemap Generator",
-    pageTitle: "Free XML Sitemap Generator",
-    metaTitle: "Free XML Sitemap Generator | RankVelt",
+    toolType: "serp",
+    slug: "title-tag-preview",
+    contentKey: "title-tag-preview",
+    badge: "Free SERP Preview Tool",
+    title: "Title Tag Preview",
+    pageTitle: "Free Title Tag Preview Tool",
+    metaTitle: "Title Tag Preview Tool: Free SERP Snippet Simulator",
     metaDescription:
-      "Build a clean XML sitemap from canonical URLs and download sitemap.xml with RankVelt's free generator.",
+      "Preview your title tag and meta description as Google shows them. Free SERP snippet tool: pixel widths, desktop and mobile views, copy-ready HTML tags.",
     shortDescription:
-      "Build and download a clean XML sitemap.",
+      "Preview Google snippets with pixel-accurate desktop and mobile views.",
     intro:
-      "Enter your canonical URLs to build a clean XML sitemap, then download the file and submit it in Search Console.",
-    guideTitle: "Help Google Find Every Important Page",
+      "Type your title tag and meta description to see exactly how Google will display them on desktop and mobile, with pixel-width measurement and copy-ready HTML.",
+    guideTitle: "Write Snippets That Earn the Click",
     guideText:
-      "A sitemap does not guarantee indexing, but it helps crawlers discover new and updated pages faster. Keep it limited to canonical, indexable URLs.",
+      "Google truncates titles by pixel width, not character count. Preview your snippet here to stay inside the limits, keep your keyword visible, and write descriptions that persuade before you publish.",
     bestFor: [
-      "New websites submitting their first sitemap.",
-      "Site owners cleaning up duplicate or invalid URLs.",
-      "SEOs auditing indexable URL lists.",
-      "Migrated sites confirming new URLs are discoverable.",
+      "SEO writers optimising titles and descriptions before publishing.",
+      "eCommerce brands improving product-page click-through rates.",
+      "Agencies preparing on-page recommendations for clients.",
+      "Bloggers checking how posts appear in Google results.",
     ],
     relatedLinks: [
       {
-        title: "Business SEO",
+        title: "Meta Title Checker",
         description:
-          "Build stronger service pages, technical foundations, and organic lead pathways.",
-        path: "/business-seo",
+          "Check any live page for missing or overlong titles and meta descriptions.",
+        path: "/tools/meta-title-description-checker",
       },
       {
-        title: "Robots.txt Generator",
+        title: "Open Graph Preview",
         description:
-          "Generate a robots.txt file that references your new sitemap.",
-        path: "/tools/robots-txt-generator",
+          "Preview how the same page looks when shared on social media.",
+        path: "/tools/open-graph-preview",
       },
     ],
-    directPath: "/tools/xml-sitemap-generator",
-  },
-  {
-    toolType: "seo-checklist",
-    slug: "local-seo-checklist",
-    contentKey: "seo-checklist",
-    badge: "Free Local SEO Tool",
-    title: "Local SEO Checklist",
-    pageTitle: "Free Local SEO Checklist & Scorecard",
-    metaTitle: "Free Local SEO Checklist & Scorecard | RankVelt",
-    metaDescription:
-      "Score your local SEO across Google Business Profile, service pages, reviews, and citations with RankVelt's free checklist.",
-    shortDescription:
-      "Score your local SEO with an actionable checklist.",
-    intro:
-      "Work through the checklist to score your Google Business Profile, service pages, reviews, and citations, then fix the weakest areas first.",
-    guideTitle: "Fix the Local Gaps That Cost Calls",
-    guideText:
-      "Most local businesses lose enquiries to small, fixable gaps: an incomplete profile, thin service pages, or missing reviews. The scorecard shows you exactly where to start.",
-    bestFor: [
-      "Local service businesses auditing their own visibility.",
-      "Multi-location brands standardising local pages.",
-      "Agencies onboarding new local SEO clients.",
-      "Founders preparing a Google Business Profile for launch.",
-    ],
-    relatedLinks: [
-      {
-        title: "Local SEO",
-        description:
-          "Improve local visibility, service-area relevance, and Google Business Profile signals.",
-        path: "/local-seo",
-      },
-      {
-        title: "Business SEO",
-        description:
-          "Build stronger service pages, technical foundations, and organic lead pathways.",
-        path: "/business-seo",
-      },
-    ],
-    directPath: "/tools/local-seo-checklist",
-  },
-  {
-    toolType: "redirect",
-    slug: "redirect-mapping-generator",
-    contentKey: "redirect",
-    badge: "Free Migration SEO Tool",
-    title: "Redirect Mapping Generator",
-    pageTitle: "Free Redirect Mapping Generator",
-    metaTitle: "Free Redirect Mapping Generator | RankVelt",
-    metaDescription:
-      "Build old-to-new URL redirect maps and generate CSV, Apache, or Nginx rules with RankVelt's free redirect mapping generator.",
-    shortDescription:
-      "Map old URLs to new ones and export redirect rules.",
-    intro:
-      "Paste your old and new URLs to build a clean redirect map, then export CSV, Apache, or Nginx rules for your migration.",
-    guideTitle: "Keep Rankings Through Every Migration",
-    guideText:
-      "Every URL that changes without a redirect leaks authority. Map each old URL to its closest new destination before launch, then test every rule after deployment.",
-    bestFor: [
-      "Site owners planning a redesign or replatform.",
-      "SEOs managing domain or URL structure migrations.",
-      "Agencies handling client site launches.",
-      "Shopify merchants cleaning up legacy URLs.",
-    ],
-    relatedLinks: [
-      {
-        title: "Business SEO",
-        description:
-          "Build stronger service pages, technical foundations, and organic lead pathways.",
-        path: "/business-seo",
-      },
-      {
-        title: "eCommerce SEO",
-        description:
-          "Improve product discovery, collection structure, and qualified organic traffic.",
-        path: "/ecommerce-seo",
-      },
-    ],
-    directPath: "/tools/redirect-mapping-generator",
+    standalone: true,
   },
 ];
 
@@ -605,23 +477,17 @@ const getIcon = (
     case "guest-post":
       return <Search className={className} />;
 
-    case "meta-checker":
-      return <Search className={className} />;
+    case "redirect":
+      return <ArrowRight className={className} />;
 
-    case "schema":
-      return <Layout className={className} />;
+    case "opengraph":
+      return <Sparkles className={className} />;
 
     case "robots":
       return <ShieldCheck className={className} />;
 
-    case "sitemap":
-      return <Target className={className} />;
-
-    case "seo-checklist":
-      return <CheckCircle2 className={className} />;
-
-    case "redirect":
-      return <ArrowRight className={className} />;
+    case "serp":
+      return <Search className={className} />;
 
     case "generator":
     default:
@@ -643,23 +509,17 @@ const getIconClass = (toolType: ToolType) => {
     case "guest-post":
       return "text-purple-400";
 
-    case "meta-checker":
-      return "text-cyan-400";
-
-    case "schema":
+    case "redirect":
       return "text-orange-400";
 
+    case "opengraph":
+      return "text-pink-400";
+
     case "robots":
-      return "text-red-400";
+      return "text-emerald-400";
 
-    case "sitemap":
-      return "text-teal-400";
-
-    case "seo-checklist":
-      return "text-lime-400";
-
-    case "redirect":
-      return "text-amber-400";
+    case "serp":
+      return "text-blue-400";
 
     case "generator":
     default:
@@ -750,11 +610,11 @@ const ToolsPage = () => {
 
   useEffect(() => {
     const pageTitle = isHubPage
-      ? "Free SEO, eCommerce & Business Tools | RankVelt"
+      ? "Free eCommerce & Business Tools | RankVelt"
       : selectedTool.metaTitle;
 
     const pageDescription = isHubPage
-      ? "Use RankVelt's free SEO, eCommerce, and business tools: profit margin calculator, policy generator, Shopify theme detector, business name generator, and outreach finder."
+      ? "Use RankVelt's free eCommerce and business tools for product-profit planning, policy drafts, Shopify theme research, and business-name ideas."
       : selectedTool.metaDescription;
 
     const canonicalPath = isHubPage
@@ -797,7 +657,7 @@ const ToolsPage = () => {
       "@graph": [
         {
           "@type": "WebApplication",
-          name: isHubPage ? "RankVelt Free Tools" : selectedTool.title,
+          name: selectedTool.title,
           url: `${SITE_URL}${canonicalPath}`,
           description: pageDescription,
           applicationCategory: "BusinessApplication",
@@ -813,21 +673,17 @@ const ToolsPage = () => {
             url: SITE_URL,
           },
         },
-        ...(!isHubPage && selectedToolContent.faqs.length
-          ? [
-              {
-                "@type": "FAQPage",
-                mainEntity: selectedToolContent.faqs.map((faq) => ({
-                  "@type": "Question",
-                  name: faq.q,
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: faq.a,
-                  },
-                })),
-              },
-            ]
-          : []),
+        {
+          "@type": "FAQPage",
+          mainEntity: selectedToolContent.faqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.q,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: faq.a,
+            },
+          })),
+        },
       ],
     });
 
@@ -839,7 +695,11 @@ const ToolsPage = () => {
   }, [isHubPage, selectedTool, selectedToolContent.faqs]);
 
   const handleToolClick = (tool: ToolConfig) => {
-    setActiveTool(tool.toolType);
+    // Standalone tools render on their own explicit routes, so the hub only
+    // navigates and never tries to render them inline.
+    if (!tool.standalone) {
+      setActiveTool(tool.toolType);
+    }
     navigate(`/tools/${tool.slug}`);
 
     window.setTimeout(() => {
@@ -902,8 +762,70 @@ const ToolsPage = () => {
           </p>
         </section>
 
-        {!isHubPage && (
-          <>
+        <section className="mt-12">
+          <div className="mb-5 flex flex-col justify-between gap-2 sm:flex-row sm:items-end">
+            <div>
+              <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">
+                Choose a Tool
+              </p>
+
+              <h2 className="mt-2 text-2xl font-black text-white sm:text-3xl">
+                Useful Tools for Website and Business Planning
+              </h2>
+            </div>
+
+            <p className="text-xs text-white/40">{tools.length} free tools available</p>
+          </div>
+
+          <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+            {tools.map((tool) => {
+              const isActive = activeTool === tool.toolType;
+
+              return (
+                <button
+                  key={tool.toolType}
+                  type="button"
+                  onClick={() => handleToolClick(tool)}
+                  className={`rounded-2xl border p-5 text-left transition-all ${
+                    isActive
+                      ? "border-primary/45 bg-primary/[0.08]"
+                      : "border-white/[0.08] bg-white/[0.025] hover:border-primary/30 hover:bg-white/[0.04]"
+                  }`}
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <span
+                      className={`flex h-10 w-10 items-center justify-center rounded-xl bg-black/25 ${getIconClass(
+                        tool.toolType,
+                      )}`}
+                    >
+                      {getIcon(tool.toolType)}
+                    </span>
+
+                    {isActive && (
+                      <span className="text-[8px] font-black uppercase tracking-widest text-primary">
+                        Active
+                      </span>
+                    )}
+                  </div>
+
+                  <h3 className="mt-5 text-lg font-black leading-tight text-white">
+                    {tool.title}
+                  </h3>
+
+                  <p className="mt-2 text-xs leading-relaxed text-white/55">
+                    {tool.shortDescription}
+                  </p>
+
+                  <span className="mt-5 inline-flex items-center gap-2 text-[11px] font-black text-primary">
+                    Open tool
+                    <ArrowRight size={14} />
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </section>
+
         <section ref={toolRef} className="mt-12 scroll-mt-32">
           <div className="mb-5 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-white/[0.08] bg-white/[0.025] px-5 py-4">
             <div className="flex items-center gap-3">
@@ -936,11 +858,7 @@ const ToolsPage = () => {
             {renderActiveTool()}
           </div>
         </section>
-          </>
-        )}
 
-        {!isHubPage && (
-          <>
         <section className="mt-14 border-y border-white/[0.08] py-12 sm:py-14">
           <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
@@ -983,114 +901,6 @@ const ToolsPage = () => {
             </aside>
           </div>
         </section>
-          </>
-        )}
-
-        <section className="mt-12">
-          <div className="mb-5 flex flex-col justify-between gap-2 sm:flex-row sm:items-end">
-            <div>
-              <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">
-                Choose a Tool
-              </p>
-
-              <h2 className="mt-2 text-2xl font-black text-white sm:text-3xl">
-                {isHubPage
-                  ? "Useful Tools for Website and Business Planning"
-                  : "Explore More Free Tools"}
-              </h2>
-            </div>
-
-            <p className="text-xs text-white/40">{tools.length} free tools available</p>
-          </div>
-
-          <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-            {tools.map((tool) => {
-              const isActive = activeTool === tool.toolType;
-
-              const cardClassName = `rounded-2xl border p-5 text-left transition-all ${
-                isActive
-                  ? "border-primary/45 bg-primary/[0.08]"
-                  : "border-white/[0.08] bg-white/[0.025] hover:border-primary/30 hover:bg-white/[0.04]"
-              }`;
-
-              const cardInner = (
-                <>
-                  <div className="flex items-start justify-between gap-4">
-                    <span
-                      className={`flex h-10 w-10 items-center justify-center rounded-xl bg-black/25 ${getIconClass(
-                        tool.toolType,
-                      )}`}
-                    >
-                      {getIcon(tool.toolType)}
-                    </span>
-
-                    {isActive && (
-                      <span className="text-[8px] font-black uppercase tracking-widest text-primary">
-                        Active
-                      </span>
-                    )}
-                  </div>
-
-                  <h3 className="mt-5 text-lg font-black leading-tight text-white">
-                    {tool.title}
-                  </h3>
-
-                  <p className="mt-2 text-xs leading-relaxed text-white/55">
-                    {tool.shortDescription}
-                  </p>
-
-                  <span className="mt-5 inline-flex items-center gap-2 text-[11px] font-black text-primary">
-                    Open tool
-                    <ArrowRight size={14} />
-                  </span>
-                </>
-              );
-
-              if (tool.directPath) {
-                return (
-                  <Link
-                    key={tool.toolType}
-                    to={tool.directPath}
-                    className={cardClassName}
-                  >
-                    {cardInner}
-                  </Link>
-                );
-              }
-
-              return (
-                <button
-                  key={tool.toolType}
-                  type="button"
-                  onClick={() => handleToolClick(tool)}
-                  className={cardClassName}
-                >
-                  {cardInner}
-                </button>
-              );
-            })}
-          </div>
-        </section>
-
-        {isHubPage && (
-          <section className="mt-14 rounded-[2rem] border border-white/[0.08] bg-white/[0.025] p-6 sm:p-8">
-            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">
-              Why Use These Tools
-            </p>
-            <h2 className="mt-3 text-3xl font-black text-white">
-              Free Tools Built for Real Work
-            </h2>
-            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-white/65 sm:text-base">
-              Every tool above is free and runs directly in your browser:
-              estimate product margins, draft website policies, research
-              Shopify themes, brainstorm business names, find guest-post
-              outreach targets, check meta titles, generate schema markup,
-              build robots.txt and XML sitemaps, score your local SEO, and
-              map redirects. Each tool page includes a practical guide so
-              you know exactly what to do with the result.
-            </p>
-          </section>
-        )}
 
         <section className="mt-14 rounded-[2rem] border border-white/[0.08] bg-white/[0.025] p-6 sm:p-8">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">

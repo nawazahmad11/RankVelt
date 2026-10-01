@@ -1,18 +1,12 @@
 name: Email Lead Worker
 
-# Runs the free bulk email extractor / verifier on GitHub's free runners.
+# Runs the free bulk email extractor on GitHub's free runners.
 # Trigger it from the RankVelt website (Start button) or manually from the Actions tab.
 # NOTE: this file must live at .github/workflows/email-worker.yml in the repo root.
 
 on:
   workflow_dispatch:
     inputs:
-      mode:
-        description: 'extract or verify'
-        required: true
-        default: 'extract'
-        type: choice
-        options: [extract, verify]
       sheet:
         description: 'Google Sheet ID (or full sheet URL)'
         required: true
@@ -47,4 +41,4 @@ jobs:
         working-directory: email-worker
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
-        run: node worker.js --mode=${{ inputs.mode }} --sheet=${{ inputs.sheet }} --tab=${{ inputs.tab }} --limit=${{ inputs.limit }}
+        run: node worker.js --mode=extract --sheet=${{ inputs.sheet }} --tab=${{ inputs.tab }} --limit=${{ inputs.limit }}

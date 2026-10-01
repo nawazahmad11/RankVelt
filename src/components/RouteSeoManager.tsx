@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import { blogPosts } from "@/data/blogData";
 import { caseStudies } from "@/data/caseStudyData";
 
-const SITE_URL = "https://www.rankvelt.com";
+const SITE_URL = "https://rankvelt.com";
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.webp`;
 
 type RouteMeta = {
@@ -111,6 +111,30 @@ const staticPageMeta: Record<string, RouteMeta> = {
     title: "Free Business Name Generator | RankVelt",
     description:
       "Generate business-name ideas for eCommerce stores, local businesses, and growing brands with RankVelt's free business name generator.",
+  },
+
+  "/tools/bulk-redirect-generator": {
+    title: "Free Bulk Redirect Generator: 301/302 Rules for Apache & Nginx",
+    description:
+      "Generate bulk 301 or 302 redirect rules in seconds. Paste old and new URLs, get Apache .htaccess, Nginx, or Cloudflare output. Free, runs in your browser.",
+  },
+
+  "/tools/open-graph-preview": {
+    title: "Open Graph Checker & Social Preview Tool | RankVelt",
+    description:
+      "Test Open Graph tags free: preview Facebook, X and LinkedIn link cards, check og:image sizes, catch missing tags, and copy the exact HTML to fix them.",
+  },
+
+  "/tools/robots-txt-generator": {
+    title: "Free Robots.txt Generator | RankVelt",
+    description:
+      "Build a valid robots.txt file in seconds. Add user-agent rules, allow and disallow paths, sitemap URL, and crawl delay with live preview. Free, no signup.",
+  },
+
+  "/tools/title-tag-preview": {
+    title: "Title Tag Preview Tool: Free SERP Snippet Simulator",
+    description:
+      "Preview your title tag and meta description as Google shows them. Free SERP snippet tool: pixel widths, desktop and mobile views, copy-ready HTML tags.",
   },
 
   "/privacy-policy": {

@@ -1,11 +1,9 @@
-// RankVelt tool page: Bulk Email Extractor + Verifier (100% free, no paid APIs)
+// RankVelt tool page: Bulk Email Extractor (100% free, no paid APIs)
 // Place at: src/pages/tools/BulkEmailExtractor.tsx
 // Styled to match the RankVelt dark theme (same shell as Tools.tsx).
 
 import { useState } from 'react';
 import { Sparkles, MailSearch, ShieldCheck } from 'lucide-react';
-
-type Mode = 'extract' | 'verify';
 
 const inputCls =
   'mt-1 w-full rounded-xl border border-white/[0.08] bg-black/30 px-3 py-2.5 text-sm text-white placeholder:text-white/30 outline-none transition-colors focus:border-primary/50';
@@ -16,7 +14,6 @@ const labelCls =
 export default function BulkEmailExtractor() {
   const [sheetInput, setSheetInput] = useState('');
   const [tab, setTab] = useState('Websites');
-  const [mode, setMode] = useState<Mode>('extract');
   const [limit, setLimit] = useState('');
   const [triggerKey, setTriggerKey] = useState(
     () => (typeof localStorage !== 'undefined' ? localStorage.getItem('rv-worker-key') || '' : '')
@@ -50,7 +47,6 @@ export default function BulkEmailExtractor() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          mode,
           sheetId,
           tab: tab.trim() || 'Websites',
           limit: limit.trim() || '0',
@@ -84,14 +80,13 @@ export default function BulkEmailExtractor() {
           </span>
 
           <h1 className="mt-6 text-4xl font-black leading-[0.98] tracking-[-0.05em] text-white sm:text-5xl md:text-6xl">
-            Bulk Email <span className="text-gradient-gold">Extractor</span> + Verifier
+            Bulk Email <span className="text-gradient-gold">Extractor</span>
           </h1>
 
           <p className="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-white/60 sm:text-lg">
             Paste a Google Sheet full of websites, press Start, and this tool crawls every
             site, pulls emails from contact pages, and writes them back into your sheet, row
-            by row. Then run Verify to check which emails are real. Free forever, no paid
-            APIs, no signup.
+            by row. Free, no paid APIs, no signup.
           </p>
         </section>
 
@@ -132,7 +127,7 @@ export default function BulkEmailExtractor() {
               </p>
             </div>
 
-            <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
+            <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div>
                 <label className={labelCls}>Tab name</label>
                 <input
@@ -140,17 +135,6 @@ export default function BulkEmailExtractor() {
                   onChange={(e) => setTab(e.target.value)}
                   className={inputCls}
                 />
-              </div>
-              <div>
-                <label className={labelCls}>Mode</label>
-                <select
-                  value={mode}
-                  onChange={(e) => setMode(e.target.value as Mode)}
-                  className={`${inputCls} [&>option]:bg-[#0a0a0a]`}
-                >
-                  <option value="extract">Extract emails</option>
-                  <option value="verify">Verify emails</option>
-                </select>
               </div>
               <div>
                 <label className={labelCls}>Limit per run</label>
@@ -168,7 +152,7 @@ export default function BulkEmailExtractor() {
               disabled={busy}
               className="mt-6 w-full rounded-xl bg-primary px-4 py-3.5 text-sm font-black uppercase tracking-[0.18em] text-black transition-opacity hover:opacity-90 disabled:opacity-50"
             >
-              {busy ? 'Starting...' : mode === 'extract' ? 'Start Extraction' : 'Start Verification'}
+              {busy ? 'Starting...' : 'Start Extraction'}
             </button>
 
             {message && (
@@ -198,7 +182,6 @@ export default function BulkEmailExtractor() {
               <li>Paste the sheet link above and press Start. The worker runs on free cloud runners.</li>
               <li>Every 100 websites it pauses briefly so no IP gets blocked. Emails appear in your sheet as they are found.</li>
               <li>Stop anytime. Press Start again and it resumes exactly where it left off, nothing is repeated.</li>
-              <li>Switch to Verify mode to check each email: syntax, MX records, and a real mailbox check.</li>
             </ol>
 
             <h3 className="mt-8 text-lg font-black text-white">One time setup</h3>

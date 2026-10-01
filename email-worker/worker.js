@@ -2,17 +2,11 @@
 /*
  * RankVelt Email Lead Worker - 100% free, no paid APIs.
  *
- * Two modes:
+ * Extracts emails from websites listed in a Google Sheet.
  *   node worker.js --mode=extract --sheet=SHEET_ID [--tab=Websites] [--limit=500]
- *   node worker.js --mode=verify  --sheet=SHEET_ID [--tab=Websites] [--limit=500]
  *
  * Sheet layout (tab "Websites"):
  *   A: Website   B: Emails (comma separated)   C: Status
- *
- * Verify results go to a second tab "Verified":
- *   A: Website   B: Email   C: Result   D: Detail
- *
- * Results: valid | invalid | catch_all | disposable | risky | unknown
  *
  * Auth: set GOOGLE_SERVICE_ACCOUNT_JSON env var (the whole JSON key),
  * or GOOGLE_SERVICE_ACCOUNT_FILE pointing at the downloaded key file.
@@ -20,8 +14,6 @@
  */
 
 const fs = require('fs');
-const net = require('net');
-const dns = require('dns').promises;
 
 // ---------------------------------------------------------------- args
 
@@ -36,20 +28,14 @@ function parseArgs() {
 }
 const ARGS = parseArgs();
 
-const MODE = ARGS.mode || 'extract';
 const LIMIT = ARGS.limit ? parseInt(ARGS.limit, 10) : 0;
 const SHEET_ID_RAW = ARGS.sheet || process.env.SHEET_ID || '';
 const TAB = ARGS.tab || process.env.SHEET_TAB || 'Websites';
-const VERIFIED_TAB = 'Verified';
 
 const EXTRACT_CONCURRENCY = parseInt(process.env.EXTRACT_CONCURRENCY || '5', 10);
 const BATCH_PAUSE_EVERY = parseInt(process.env.BATCH_PAUSE_EVERY || '100', 10);
 const BATCH_PAUSE_MS = parseInt(process.env.BATCH_PAUSE_MS || '90000', 10);
 const FLUSH_EVERY = 20;
-
-const VERIFY_FROM = process.env.VERIFY_FROM || 'verify@rankvelt.com';
-const VERIFY_HELO = process.env.VERIFY_HELO || 'rankvelt.com';
-const SMTP_CONCURRENCY = parseInt(process.env.SMTP_CONCURRENCY || '3', 10);
 
 function sheetIdFrom(input) {
   const m = String(input).match(/\/d\/([a-zA-Z0-9-_]+)/);
@@ -363,216 +349,6 @@ async function runExtract() {
   console.log(`Extract finished: ${doneCount} websites processed.`);
 }
 
-// ---------------------------------------------------------------- verification
-
-const ROLE_PREFIXES = new Set([
-  'info', 'support', 'sales', 'admin', 'contact', 'hello', 'help', 'marketing',
-  'team', 'office', 'enquiries', 'inquiries', 'service', 'services', 'billing',
-  'accounts', 'hr', 'careers', 'press', 'media', 'noreply', 'no-reply', 'donotreply',
-  'postmaster', 'webmaster', 'abuse', 'privacy', 'legal',
-]);
-const DISPOSABLE_DOMAINS = new Set([
-  'mailinator.com', 'tempmail.com', 'guerrillamail.com', '10minutemail.com',
-  'yopmail.com', 'throwawaymail.com', 'fakeinbox.com', 'getnada.com',
-  'trashmail.com', 'maildrop.cc', 'mintemail.com', 'mytemp.email',
-  'temp-mail.org', 'dispostable.com', 'mohmal.com', 'emailondeck.com',
-]);
-
-function syntaxOk(email) {
-  if (typeof email !== 'string' || email.length > 254) return false;
-  if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) return false;
-  if (email.includes('..')) return false;
-  return true;
-}
-
-function smtpVerify(email, mxHost, timeoutMs = 20000) {
-  return new Promise((resolve) => {
-    let finished = false;
-    const socket = new net.Socket();
-    const finish = (r) => {
-      if (finished) return;
-      finished = true;
-      clearTimeout(timer);
-      try { socket.destroy(); } catch { /* ignore */ }
-      resolve(r);
-    };
-    const timer = setTimeout(() => finish({ status: 'unknown', detail: 'smtp-timeout' }), timeoutMs);
-    const domain = email.split('@')[1];
-    const probe = 'probe' + Math.random().toString(36).slice(2, 10) + '@' + domain;
-    let stage = 'greet';
-    let buffer = '';
-    const send = (s) => { try { socket.write(s + '\r\n'); } catch { /* ignore */ } };
-
-    socket.on('data', (chunk) => {
-      buffer += chunk.toString('utf8');
-      let cut;
-      while ((cut = buffer.indexOf('\r\n')) !== -1) {
-        const line = buffer.slice(0, cut);
-        buffer = buffer.slice(cut + 2);
-        const m = line.match(/^(\d{3})([ -])/);
-        if (!m) continue;
-        if (m[2] === '-') continue; // multiline response, wait for the last line
-        const code = parseInt(m[1], 10);
-        if (stage === 'greet') {
-          if (code === 220) { send('EHLO ' + VERIFY_HELO); stage = 'ehlo'; }
-          else finish({ status: 'unknown', detail: 'no-smtp-greeting' });
-        } else if (stage === 'ehlo') {
-          if (code === 250) { send('MAIL FROM:<' + VERIFY_FROM + '>'); stage = 'mail'; }
-          else { send('HELO ' + VERIFY_HELO); stage = 'helo'; } // old servers may not know EHLO
-        } else if (stage === 'helo') {
-          if (code === 250) { send('MAIL FROM:<' + VERIFY_FROM + '>'); stage = 'mail'; }
-          else finish({ status: 'unknown', detail: 'helo-rejected' });
-        } else if (stage === 'mail') {
-          if (code === 250) { send('RCPT TO:<' + email + '>'); stage = 'rcpt'; }
-          else { send('MAIL FROM:<>'); stage = 'mail2'; } // null sender is widely accepted
-        } else if (stage === 'mail2') {
-          if (code === 250) { send('RCPT TO:<' + email + '>'); stage = 'rcpt'; }
-          else finish({ status: 'unknown', detail: 'mail-from-rejected' });
-        } else if (stage === 'rcpt') {
-          if (code === 250 || code === 251) { send('RCPT TO:<' + probe + '>'); stage = 'catchall'; }
-          else if (code >= 500 && code < 600) {
-            send('QUIT');
-            // A 5xx here does NOT always mean the mailbox is dead. Policy and
-            // security rejections (5.7.x, blacklist, SPF/DKIM fail, "unauthenticated")
-            // are about OUR sender identity, not the mailbox. Calling those
-            // "invalid" would burn good leads, so only a clear mailbox-not-found
-            // counts as invalid. The server's own words go into detail.
-            const enhanced = (line.match(/\b(\d\.\d{1,2}\.\d{1,3})\b/) || [])[1] || '';
-            const mailboxGone = /5\.1\.[12]/.test(enhanced) || /user unknown|unknown user|mailbox unavailable|recipient unknown|no such (user|mailbox|recipient)/i.test(line);
-            const policyBlock = /^5\.7\./.test(enhanced) || /policy|blocked|blacklist|blacklisted|spam|reputation|unauthenticated|authentication|spf|dkim|dmarc|greylist/i.test(line);
-            const short = line.slice(0, 100);
-            if (mailboxGone || (!policyBlock && (code === 550 || code === 551 || code === 553))) {
-              finish({ status: 'invalid', detail: 'mailbox-not-found: ' + short });
-            } else {
-              finish({ status: 'unknown', detail: 'rcpt-rejected: ' + short });
-            }
-          }
-          else { send('QUIT'); finish({ status: 'unknown', detail: 'rcpt-' + code }); }
-        } else if (stage === 'catchall') {
-          send('QUIT');
-          if (code === 250 || code === 251) finish({ status: 'catch_all', detail: 'server-accepts-any-address' });
-          else if (code >= 500 && code < 600) finish({ status: 'valid', detail: 'mailbox-exists' });
-          else finish({ status: 'unknown', detail: 'probe-inconclusive-' + code });
-        }
-      }
-    });
-    socket.on('error', () => finish({ status: 'unknown', detail: 'smtp-connect-failed' }));
-    socket.on('timeout', () => finish({ status: 'unknown', detail: 'smtp-timeout' }));
-    socket.setTimeout(timeoutMs);
-    socket.connect(25, mxHost);
-  });
-}
-
-let smtpBlocked = false;
-let smtpFailStreak = 0;
-
-async function verifyEmail(email) {
-  const e = String(email).trim().toLowerCase();
-  if (!syntaxOk(e)) return { result: 'invalid', detail: 'bad-syntax' };
-  const domain = e.split('@')[1];
-  const local = e.split('@')[0];
-
-  if (DISPOSABLE_DOMAINS.has(domain)) return { result: 'disposable', detail: 'disposable-domain' };
-  const roleBased = ROLE_PREFIXES.has(local);
-
-  let mxs = [];
-  let mxError = null;
-  try {
-    mxs = await dns.resolveMx(domain);
-  } catch (err) {
-    mxError = err;
-  }
-  if (mxError) {
-    // ENOTFOUND/ENODATA = domain really has no mail server -> invalid.
-    // Any other DNS failure (blocked network, timeout) -> unknown, do not mislabel.
-    const code = mxError.code || '';
-    if (code === 'ENOTFOUND' || code === 'ENODATA' || code === 'ENOTIMP') {
-      return { result: 'invalid', detail: 'no-mx-record' };
-    }
-    return { result: 'unknown', detail: 'mx-lookup-failed' };
-  }
-  if (!mxs.length) return { result: 'invalid', detail: 'no-mx-record' };
-  mxs.sort((a, b) => a.priority - b.priority);
-
-  if (smtpBlocked) return { result: 'unknown', detail: 'smtp-blocked-on-this-network' };
-
-  let last = { status: 'unknown', detail: 'no-mx-tried' };
-  for (const mx of mxs.slice(0, 2)) {
-    last = await smtpVerify(e, mx.exchange);
-    if (last.detail === 'smtp-connect-failed' || last.detail === 'smtp-timeout') {
-      smtpFailStreak++;
-      if (smtpFailStreak >= 8 && !smtpBlocked) {
-        smtpBlocked = true;
-        console.log('  WARNING: port 25 seems blocked on this network. Remaining emails will be marked unknown (syntax+MX only).');
-      }
-      continue; // try next MX
-    }
-    smtpFailStreak = 0;
-    break;
-  }
-
-  if (last.status === 'valid' && roleBased) return { result: 'risky', detail: 'role-based-address' };
-  if (last.status === 'valid') return { result: 'valid', detail: last.detail };
-  if (last.status === 'invalid') return { result: 'invalid', detail: last.detail };
-  if (last.status === 'catch_all') return { result: 'catch_all', detail: last.detail };
-  return { result: 'unknown', detail: last.detail };
-}
-
-async function runVerify() {
-  await ensureTab(VERIFIED_TAB, ['Website', 'Email', 'Result', 'Detail']);
-
-  const rows = await readRange(rq(TAB, 'A2:B'));
-  const jobs = [];
-  rows.forEach((r) => {
-    const website = (r[0] || '').trim();
-    const emails = (r[1] || '').trim();
-    if (!website || !emails) return;
-    for (const em of emails.split(',').map((s) => s.trim().toLowerCase()).filter(Boolean)) {
-      jobs.push({ website, email: em });
-    }
-  });
-
-  // resume: skip emails already verified; also dedupe repeats inside this run
-  const doneRows = await readRange(rq(VERIFIED_TAB, 'B2:B'));
-  const doneSet = new Set(doneRows.map((r) => String(r[0] || '').trim().toLowerCase()).filter(Boolean));
-  const seenThisRun = new Set();
-  const todoAll = jobs.filter((j) => {
-    if (doneSet.has(j.email) || seenThisRun.has(j.email)) return false;
-    seenThisRun.add(j.email);
-    return true;
-  });
-  const todo = LIMIT > 0 ? todoAll.slice(0, LIMIT) : todoAll;
-  console.log(`Verify: ${todo.length} emails to check (${todoAll.length} pending, ${doneSet.size} already verified).`);
-
-  let doneCount = 0;
-  let idx = 0;
-  let vRow = 2 + doneRows.length; // append after existing rows
-
-  async function workerFn() {
-    while (idx < todo.length) {
-      const job = todo[idx++];
-      let out;
-      try {
-        out = await withTimeout(verifyEmail(job.email), 90000, job.email);
-      } catch (err) {
-        out = { result: 'unknown', detail: 'error-' + String(err.message || err).slice(0, 60) };
-      }
-      const rowNum = vRow++;
-      queueWrite(rq(VERIFIED_TAB, `A${rowNum}:D${rowNum}`), [[job.website, job.email, out.result, out.detail]]);
-      doneCount++;
-      if (doneCount % FLUSH_EVERY === 0) {
-        await flushWrites();
-        console.log(`  ...${doneCount}/${todo.length} verified, progress saved`);
-      }
-      await sleep(400); // be gentle with mail servers
-    }
-  }
-
-  await Promise.all(Array.from({ length: SMTP_CONCURRENCY }, workerFn));
-  await flushWrites();
-  console.log(`Verify finished: ${doneCount} emails checked.`);
-}
-
 // ---------------------------------------------------------------- main
 
 async function main() {
@@ -580,13 +356,8 @@ async function main() {
     console.error('ERROR: sheet id missing. Use --sheet=SHEET_ID or SHEET_ID env var.');
     process.exit(1);
   }
-  if (!['extract', 'verify'].includes(MODE)) {
-    console.error('ERROR: --mode must be extract or verify.');
-    process.exit(1);
-  }
-  console.log(`RankVelt Email Lead Worker | mode=${MODE} | sheet=${SHEET_ID} | tab=${TAB}`);
-  if (MODE === 'extract') await runExtract();
-  else await runVerify();
+  console.log(`RankVelt Email Lead Worker | mode=extract | sheet=${SHEET_ID} | tab=${TAB}`);
+  await runExtract();
 }
 
 if (require.main === module) {
@@ -599,4 +370,4 @@ if (require.main === module) {
     });
 }
 
-module.exports = { extractEmails, normalizeUrl, syntaxOk, extractSite, verifyEmail, parseArgs: parseArgs, withTimeout, sheetIdFrom };
+module.exports = { extractEmails, normalizeUrl, extractSite, parseArgs: parseArgs, withTimeout, sheetIdFrom };

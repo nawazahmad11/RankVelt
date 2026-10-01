@@ -110,10 +110,18 @@ const RedirectMappingGenerator = lazy(
   () => import("./pages/RedirectMappingGenerator"),
 );
 
-const BulkEmailExtractor = lazy(
-  () => import("./pages/tools/BulkEmailExtractor"),
+/* New Batch 1 tools (browser-only). RobotsTxtGenerator already imported above. */
+const BulkRedirectGenerator = lazy(
+  () => import("./pages/tools/BulkRedirectGenerator"),
 );
 
+const OpenGraphPreview = lazy(
+  () => import("./pages/tools/OpenGraphPreview"),
+);
+
+const SerpSnippetPreview = lazy(
+  () => import("./pages/tools/SerpSnippetPreview"),
+);
 
 /*
  * Case-study pages
@@ -346,11 +354,21 @@ const App = () => (
               element={<RedirectMappingGenerator />}
             />
 
+            {/* ROUTES-VERSION-12 */}
             <Route
-              path="/tools/bulk-email-extractor"
-              element={<BulkEmailExtractor />}
+              path="/tools/bulk-redirect-generator"
+              element={<BulkRedirectGenerator />}
             />
 
+            <Route
+              path="/tools/open-graph-preview"
+              element={<OpenGraphPreview />}
+            />
+
+            <Route
+              path="/tools/title-tag-preview"
+              element={<SerpSnippetPreview />}
+            />
 
             <Route
               path="/tools/:toolName"
