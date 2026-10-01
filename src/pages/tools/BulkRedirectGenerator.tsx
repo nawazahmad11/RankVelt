@@ -1146,7 +1146,224 @@ export default function BulkRedirectGenerator() {
             </a>
           </div>
         </section>
+      <BulkRedirectGeneratorArticle />
       </div>
     </main>
+  );
+}
+
+/* ==================== SEO ARTICLE ==================== */
+function BulkRedirectGeneratorArticle() {
+  return (
+    <>
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">Migration Scenarios</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">When a Bulk 301 Redirect Is the Right Move</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>
+            Most redirect jobs start with a spreadsheet and a deadline. A redesign renames fifty URLs overnight. A rebrand
+            moves every page to a new domain. Two blogs merge into one. HTTP gives way to HTTPS site-wide. The
+            old addresses do not vanish: backlinks point to them, bookmarks reference them, and the index still lists
+            them. A bulk 301 redirect moves all that value to the new addresses in one controlled operation.
+          </p>
+          <p>
+            The domain move is the classic case. When an old brand domain becomes a new one, every product, category, and blog
+            page needs a forwarding address. That is realistic for ten pages and miserable for ten thousand, which is why bulk
+            generation exists: one old URL per line, one new URL per line, and the tool writes every rule in your server's
+            syntax.
+          </p>
+          <p>
+            Redesigns and CMS migrations are the second big trigger. Moving from WordPress to Shopify, or from a legacy CMS to
+            anything modern, almost always changes URL patterns. Date-based blog URLs like /blog/2019/05/my-post become
+            /blog/my-post. Product URLs lose their .html endings. Category paths get flattened. A bulk 301 redirect generator
+            turns the whole mapping into server-ready code in seconds.
+          </p>
+          <p>
+            Then there are the quieter jobs that still deserve bulk treatment. Merging thin pages into one strong page.
+            Cleaning up trailing-slash inconsistencies. Consolidating www and non-www onto one canonical host. Retiring a
+            campaign microsite whose pages now live on the main domain. Each unhandled one leaks a little traffic and
+            authority, and together they add up.
+          </p>
+          <ul className="list-disc space-y-2 pl-6">
+            <li>A redesign, rebrand, or domain change that alters URL patterns.</li>
+            <li>A CMS migration that renames paths or removes file extensions.</li>
+            <li>Search Console 404s for URLs that already have replacements.</li>
+                      </ul>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">Status Codes</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">301 vs 302: Picking the Right Status Code for Each Job</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>
+            The difference between a 301 and a 302 is intent. A 301 says this page has moved permanently, so update your
+            records. A 302 says this move is temporary, so keep the old address on file. Browsers cache 301 responses
+            aggressively and search engines transfer ranking signals to the new URL. With a 302, search engines keep ranking
+            the old URL because they expect it to come back.
+          </p>
+          <p>
+            For bulk redirect work, 301 is the default in the vast majority of cases. Migrations, redesigns, domain moves,
+            deleted pages with replacements, HTTP to HTTPS upgrades: all permanent, all 301. If you are generating hundreds
+            of rules for a site move, you almost certainly want every one of them to be a 301.
+          </p>
+          <p>
+            The 302 has its place, and it is always short term. Splitting traffic for an A/B test. Sending visitors to a
+            temporary promo page during a sale. Routing around a page that is down for maintenance. In each case the old URL
+            is coming back, so you do not want search engines to forget it or pass its signals away.
+          </p>
+          <p>
+            The expensive mistake is choosing wrong by accident. In Apache mod_rewrite, a bare [R] flag with no number means
+            302, not 301. Plenty of migrations shipped with [R,L] everywhere while rankings never transferred. Always write [R=301,L] explicitly
+            for permanent moves instead of trusting memory across hundreds of lines.
+          </p>
+          <ul className="list-disc space-y-2 pl-6">
+            <li>Permanent change, redesign, domain move, or deleted page with a replacement: use 301.</li>
+            <li>A/B test, temporary promo, or maintenance page: use 302.</li>
+            <li>Unsure but the change is meant to last: start with 301.</li>
+                      </ul>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">Apache Syntax</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">Writing htaccess Redirects That Do Not Break Your Site</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>
+            A single misplaced character in .htaccess can take down an entire site with a 500 error, which is why generated
+            rules beat hand-written ones. But even generated rules need to land in the right spot. Understanding the syntax of
+            a redirect url in htaccess helps you spot problems before they go live.
+          </p>
+          <p>
+            Apache offers two ways to write htaccess redirects. The mod_alias way is the plain Redirect directive: Redirect
+            301 /old-page https://example.com/new-page. The mod_rewrite way is a RewriteRule: RewriteRule ^old-page$
+            https://example.com/new-page [R=301,L]. The practical rule: if your .htaccess already uses RewriteRule, which
+            WordPress and most PHP setups do, keep everything in mod_rewrite. Mixing the two modules means they process the
+            same request independently, and rules can override each other in confusing ways.
+          </p>
+          <p>
+            RewriteRule patterns are regular expressions, and that is where hand-written rules go wrong. Dots must be
+            escaped, so page.html becomes page\.html, otherwise the dot matches any character. Anchors matter: ^old-page$
+            matches exactly that path, while an unanchored old-page would also match /old-page-2. A generator handles the
+            escaping and anchoring for you.
+          </p>
+          <p>
+            Where to put redirect in .htaccess matters as much as syntax. Paste rules near the top, after RewriteEngine On and
+            before catch-all rules like the WordPress block. Apache reads top to bottom, and an earlier catch-all will swallow
+            requests before your redirects see them. Within your redirect block, put specific rules above general ones.
+          </p>
+          <ul className="list-disc space-y-2 pl-6">
+            <li>Back up the current .htaccess before touching anything.</li>
+            <li>Use one module style for every rule, never a mix of Redirect and RewriteRule.</li>
+            <li>Escape dots and special regex characters in every pattern.</li>
+                      </ul>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">Nginx and Cloudflare</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">Nginx and Cloudflare: Same Redirect Map, Different Syntax</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>
+            Not every site runs Apache. On Nginx there is no .htaccess: redirects live in the server block, and the syntax
+            differs. The simplest form is return 301 https://example.com/new-page; inside a location block matching the old
+            path. For pattern-based redirects, Nginx uses rewrite ^/old-page$ https://example.com/new-page permanent; where
+            the word permanent is what makes the response a 301.
+          </p>
+          <p>
+            The placement logic rhymes with Apache even though the syntax differs. Nginx evaluates location blocks by
+            specificity, so exact matches beat prefix matches. As with .htaccess, generated rules save you from regex typos,
+            but you still need to reload Nginx after editing the config, and you still want a backup of the working
+            configuration first.
+          </p>
+          <p>
+            Cloudflare users get a third option needing no server access. Cloudflare Bulk Redirects accept a CSV upload with
+            source URL, target URL, status code, and options like preserving the query string. The redirects run at the edge
+            before traffic reaches your origin. For teams without server access, or a domain with no hosting attached, this is
+            often the cleanest path.
+          </p>
+          <p>
+            Decide upfront whether query strings should carry over. A redirect from /product?id=123 to /products/123 that
+            silently drops the query string can break tracking and pagination. Cloudflare's import lets you set query-string
+            preservation per rule; in Apache and Nginx you control it with flags. Keep the choice consistent across the whole
+            list.
+          </p>
+          <ul className="list-disc space-y-2 pl-6">
+            <li>Apache shared hosting or VPS: use the .htaccess output format.</li>
+            <li>Nginx server: use the server-block return or rewrite output format.</li>
+            <li>No server access, or a parked domain: use the Cloudflare CSV output.</li>
+                      </ul>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">Chains and Loops</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">Redirect Chains, Loops, and Other Silent Killers</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>
+            A redirect chain is a relay race nobody asked for: /a redirects to /b, and /b redirects to /c. Each hop adds
+            latency and forces crawlers to spend extra budget. Chains appear when a migration map is built from current URLs
+            without checking whether those URLs already redirect elsewhere. The fix: point every old URL directly at its
+            final destination.
+          </p>
+          <p>
+            Loops are chains that bite their own tail. The classic version is a trailing-slash fight: one rule strips
+            trailing slashes while the server adds them back to real directories, and the browser spins until it reports too
+            many redirects. Another is two rules pointing at each other, or a www-to-non-www rule fighting an opposite rule
+            written months earlier. Test folder URLs and both www variants specifically.
+          </p>
+          <p>
+            Duplicates are the quieter problem. The same old URL appearing twice with different destinations means one rule
+            silently wins and the other never runs. Case differences like /About versus /about can create two rules for what
+            the server treats as one path. Normalizing case and de-duplicating before generating output prevents a category
+            of mystery behavior that is painful to debug live.
+          </p>
+          <p>
+            Query strings deserve their own check. Tracking parameters like utm_source can make one page look like dozens of
+            URLs in an analytics export. Building your map from raw analytics data without normalizing parameters produces
+            hundreds of redundant rules. Settle the query-string policy first, then build the map.
+          </p>
+          <ul className="list-disc space-y-2 pl-6">
+            <li>Map every old URL straight to its final destination: exactly one hop.</li>
+            <li>Confirm no destination URL is also a source elsewhere in the list.</li>
+            <li>Test trailing-slash behavior and both www variants after deploying.</li>
+                      </ul>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">Testing and Monitoring</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">Testing Your Redirects Before and After Launch</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>
+            Never trust a redirect list you have not tested. Start small: pick old URLs covering each pattern in your map and
+            check them with curl -I https://example.com/old-page. You want a 301 Moved Permanently status and a Location
+            header pointing at the right new URL. Then open that new URL and confirm it returns 200, not another redirect.
+          </p>
+          <p>
+            For the full list, spot checks are not enough. Run old URLs through a crawler in list mode: tools like Screaming
+            Frog accept a URL list and report the status code and target for each one. Every old URL should return exactly
+            one 301 or 302 and land on the intended destination, with no chains or loops. Fix failures in the map,
+            regenerate, and re-test until the list is clean.
+          </p>
+          <p>
+            The work is not done at launch. Watch the Search Console Pages report for 404 spikes after a migration: each
+            unexpected 404 is an old URL you missed and earns a new rule. Submit the new sitemap so engines discover the new
+            addresses faster, and check Performance to confirm traffic is flowing to them.
+          </p>
+          <p>
+            Finally, resist the urge to clean up too soon. Keep redirect rules in place for at least a year, ideally
+            permanently. Other sites keep linking to your old URLs, bookmarks never update, and email archives are full of
+            ancient links. Removing redirects early quietly throws away traffic you already paid for with the migration
+            effort.
+          </p>
+          <ul className="list-disc space-y-2 pl-6">
+            <li>Sample URLs return a single correct 301 when checked with curl.</li>
+            <li>The full old-URL list is crawled: no chains, no loops, no 404s.</li>
+            <li>The new sitemap is submitted in Search Console.</li>
+                      </ul>
+        </div>
+      </section>
+    </>
   );
 }

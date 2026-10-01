@@ -748,7 +748,221 @@ export default function OpenGraphPreview() {
             </div>
           </div>
         </section>
+      <OpenGraphPreviewArticle />
       </div>
     </main>
+  );
+}
+
+/* ==================== SEO ARTICLE ==================== */
+function OpenGraphPreviewArticle() {
+  return (
+    <>
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">Why Previews Break</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">Why Your Link Preview Breaks When the Page Loads Fine</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>
+            The confusing thing about broken link previews is that the page itself works perfectly. You open it in your
+            browser, the image loads, everything looks right. Then you share the link and get a gray box or no card at all.
+            The reason: the preview is not made by your browser. It is made by a crawler on Facebook's, LinkedIn's, or X's
+            servers, working in a much harsher environment than your browser.
+          </p>
+          <p>
+            Your browser has cookies, a logged-in session, JavaScript, and a warm cache. The social crawler has none of that.
+            It fetches your raw HTML, reads the meta tags, then fetches the image URL separately. If your image only works
+            for logged-in users, needs JavaScript to render, or depends on a cookie, the crawler sees nothing and the card
+            comes out empty.
+          </p>
+          <p>
+            The usual suspects, in rough order of frequency: a relative image URL like /images/card.jpg instead of a full
+            https://yoursite.com/images/card.jpg. An image behind authentication or a staging password. Hotlink protection
+            or a firewall blocking unfamiliar user agents. A slow server, so the crawler gives up. A redirect chain on the
+            image URL itself, which many crawlers will not follow.
+          </p>
+          <p>
+            This is where a manual open graph checker earns its keep. URL-based checkers only fetch public pages, so they
+            cannot help with localhost, staging, or login-walled pages. Pasting your planned tags into a manual preview shows
+            exactly what the card will look like once the page is public, before any crawler ever sees it.
+          </p>
+          <ul className="list-disc space-y-2 pl-6">
+            <li>Is og:image an absolute https:// URL? Relative URLs are the top offender.</li>
+            <li>Does the image URL return 200 for a logged-out visitor?</li>
+            <li>Is the image behind auth, a firewall, or hotlink protection?</li>
+                      </ul>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">Image Dimensions</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">Exact Image Sizes for Every Network</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>
+            One image size rules them all: 1200 by 630 pixels, a 1.91 to 1 ratio. It renders crisply on Facebook, LinkedIn,
+            X, Slack, Discord, and most messaging apps. Design at exactly that size and you cover the common case with a
+            single asset, which is why every open graph image tester uses it as the baseline.
+          </p>
+          <p>
+            But the common case is not every case. X's large card crops to 2:1, slightly wider than Facebook's 1.91:1, so keep
+            faces, headlines, and logos inside a centered safe zone with generous margins. LinkedIn displays cards smaller
+            than Facebook does, so fine print legible at 1200 pixels turns to mush in the feed: use big type and high
+            contrast, and assume nobody will zoom in.
+          </p>
+          <p>
+            File size has limits too. Stay under 8 MB for Facebook and LinkedIn, and treat 5 MB as the practical ceiling.
+            WhatsApp is the picky one: keep preview images well under 300 KB if WhatsApp shares matter, because it routinely
+            refuses larger files. Heavy images risk the crawler timing out and rendering no image at all.
+          </p>
+          <p>
+            Two tags most people skip make everything more reliable: og:image:width and og:image:height. With explicit
+            dimensions, crawlers lay out the card without downloading the image first, which speeds up rendering. Add
+            og:image:alt too: it is the accessible description and the fallback text when the image cannot load.
+          </p>
+          <ul className="list-disc space-y-2 pl-6">
+            <li>1200 x 630 px canvas, centered safe zone, big readable type.</li>
+            <li>Absolute https:// URL on a publicly reachable, fast server.</li>
+            <li>Under 5 MB as a rule; under 300 KB if WhatsApp previews matter.</li>
+                      </ul>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">Twitter Cards</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">Twitter Cards: Summary vs Summary Large Image</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>
+            X reads your Open Graph tags as a fallback, but the card layout is controlled by one X-specific tag:
+            twitter:card. The summary card shows a small square thumbnail beside the text; summary_large_image shows a big
+            wide image above it. If twitter:card is missing, you usually get the small card even with a perfect 1200 by 630
+            og:image, which is why shares look underwhelming on X while looking great on Facebook.
+          </p>
+          <p>
+            For most marketing content, including blog posts, product pages, and landing pages, summary_large_image is the
+            right choice: the large visual dominates the timeline and earns the click. The small summary card suits utility
+            content where the image is secondary, like documentation or status updates. Match the card type to the content
+            instead of defaulting to whatever the template included.
+          </p>
+          <p>
+            You can set X-specific title, description, and image with twitter:title, twitter:description, and twitter:image
+            when you want different copy on X than everywhere else. Most sites do not need this: X falls back to og:title,
+            og:description, and og:image automatically. Keep og: tags as the single source of truth and add overrides only
+            when X genuinely needs different wording.
+          </p>
+          <p>
+            One more X quirk: the official card validator was retired, so you cannot force-refresh X's cache the way you can
+            with Facebook's debugger. X re-crawls on its own schedule and mistakes linger. Use a fresh URL or a cache-busting
+            query parameter while testing, and get tags right before the first real share, because that first scrape sets the
+            cached version.
+          </p>
+          <ul className="list-disc space-y-2 pl-6">
+            <li>Use summary_large_image for visual, marketing-led content.</li>
+            <li>Keep og: tags as the base layer; X falls back to them automatically.</li>
+                        <li>Finalize tags before the first share, since X offers no manual refresh.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">Titles and Descriptions</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">Writing Titles and Descriptions That Survive Truncation</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>
+            Every platform truncates, and every platform truncates at a different length. Facebook cuts titles at around 60
+            characters, X at around 70, LinkedIn somewhere in between, and descriptions get roughly 110 to 200 characters
+            depending on the network. A 120-character title is wasted effort if half of it never renders.
+          </p>
+          <p>
+            The fix is front-loading: put the important words first. Write every social title as if only the first 55
+            characters will ever be seen, because on some network, those will be the only characters seen. Branded openers
+            that bury the point lose to titles that state the value immediately.
+          </p>
+          <p>
+            Descriptions follow the same logic. Lead with the benefit or the differentiator, not the throat-clearing. A
+            description that opens with what the page does and who it is for outperforms a polite welcome message, because
+            the welcome gets cut and the benefit is what earns the click. Every word before the truncation point should earn
+            its place.
+          </p>
+          <p>
+            Keep text out of the image itself, or at least out of the edges. Platforms crop differently, messaging apps
+            shrink aggressively, and baked-in text becomes unreadable the moment it shrinks. If the image must carry words,
+            keep them large, centered, and few: a short headline and a logo, never a paragraph.
+          </p>
+          <ul className="list-disc space-y-2 pl-6">
+            <li>Titles under 60 characters with key words inside the first 55.</li>
+            <li>Descriptions of 110 to 155 characters that lead with the benefit.</li>
+                        <li>Preview the same tags for Facebook, X, and LinkedIn before publishing.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">Cache Busting</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">Beating the Cache: Forcing Platforms to Re-scrape</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>
+            The maddening scenario: you fix the tags, share the link again, and the old broken preview stares back. Nothing
+            is wrong with your tags anymore. The platform cached the earlier scrape and has no reason to fetch again.
+            Updating your HTML does not update the cache. You must ask each platform explicitly to re-scrape, which is what
+            every open graph debugger workflow is built around.
+          </p>
+          <p>
+            Facebook gives you the Sharing Debugger. Paste the URL and it shows what the crawler actually sees: fetched tags,
+            the image it found, and warnings worth fixing. Re-scrape until the preview matches your page. It is also the
+            fastest way to confirm a fix worked, because you see the crawler's view instead of guessing from the share
+            dialog.
+          </p>
+          <p>
+            LinkedIn has the Post Inspector for the same job: paste the URL, see what LinkedIn sees, and the inspection
+            refreshes the cached version. One gotcha: LinkedIn caches aggressively, and the inspector sometimes needs two or
+            three runs before the new image sticks. Re-run rather than assuming your tags are still wrong.
+          </p>
+          <p>
+            Two caveats surprise people every time. Already-published posts keep their old preview forever: refreshing the
+            cache only affects new shares. And while developing, dodge the cache entirely with versioned URLs: test with a
+            ?v=2 style parameter instead of fighting yesterday's scrape of the same address.
+          </p>
+          <ul className="list-disc space-y-2 pl-6">
+            <li>Fix tags first, then re-scrape in the Facebook Sharing Debugger.</li>
+            <li>Re-run the LinkedIn Post Inspector, twice if the image does not stick.</li>
+                        <li>Use versioned test URLs while developing to sidestep stale cache.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">Platform Quirks</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">LinkedIn, WhatsApp, and Slack: The Quirky Ones</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>
+            Facebook and X get the attention, but the strangest preview behavior lives elsewhere. LinkedIn is strictest about
+            caching and least forgiving about image problems: it wants the same 1200 by 630 image, displays it smaller than
+            Facebook does, and often shows no image at all rather than a degraded one when something is off. If LinkedIn
+            looks broken while Facebook looks fine, check image accessibility and re-run the Post Inspector first.
+          </p>
+          <p>
+            WhatsApp is the size snob. It builds previews on the sender's phone and simply skips images that are too large or
+            slow. If WhatsApp shares matter for your audience, keep the preview image small and light, well under 300 KB, on
+            a fast server. A multi-megabyte hero image that shines on Facebook may produce no preview at all in a chat.
+          </p>
+          <p>
+            Slack unfurls with its own logic: it prefers og: tags but falls back to the title tag and first suitable image
+            when they are missing, which is why Slack previews sometimes look fine with no Open Graph setup at all. Discord
+            renders rich embeds in its dark UI, and Telegram behaves much like WhatsApp: small, fast images win and heavy
+            ones get skipped.
+          </p>
+          <p>
+            You cannot perfect one setup for every network, but one disciplined setup avoids the common failures: an absolute
+            HTTPS image URL at 1200 by 630, under 5 MB and lighter when WhatsApp matters,
+            explicit og:image:width and og:image:height, and an honest title under 60 characters. That renders acceptably
+            everywhere, which beats perfect on one network and broken on three others.
+          </p>
+          <ul className="list-disc space-y-2 pl-6">
+            <li>One 1200 x 630 image on an absolute HTTPS URL served by a fast host.</li>
+            <li>Explicit og:image:width and og:image:height on every page.</li>
+            <li>Titles under 60 characters and front-loaded descriptions.</li>
+                      </ul>
+        </div>
+      </section>
+    </>
   );
 }

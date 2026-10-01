@@ -193,7 +193,94 @@ export default function BulkEmailExtractor() {
             </ol>
           </div>
         </section>
+      <BulkEmailExtractorArticle />
       </div>
     </main>
+  );
+}
+
+/* ==================== SEO ARTICLE ==================== */
+function BulkEmailExtractorArticle() {
+  return (
+    <>
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">HOW IT WORKS</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">What a Bulk Email Extractor Actually Does</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>A bulk email extractor is a tool that visits a list of websites and pulls out the email addresses published on their pages. Instead of opening hundreds of sites by hand and copying addresses one by one, you give the tool a list of domains and it handles the repetitive visiting and scanning. The tool loads each page, scans the visible text and page source for anything shaped like an email address, and records every match.</p>
+          <p>Most extractors look beyond the homepage. A business that wants to hear from customers usually publishes an address on its contact page, and many also list one in the footer, on the about page, or next to individual team members. A capable extractor walks through these likely spots instead of stopping at the front door, and some also check the sitemap for contact and about pages hidden from the navigation.</p>
+          <p>It helps to understand what these tools cannot do. They cannot log into private areas, read contact forms, or invent addresses. They only collect addresses a website has chosen to publish in the open. If a company keeps its emails behind a form or a login wall, an honest extractor reports that nothing was found, which is really a strength: every address you receive is one the business intended people to use.</p>
+        </div>
+      </section>
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">FINDING EMAILS</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">Where Business Contact Emails Actually Live on Websites</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>If you know where to look, you can predict what an extractor will find before you ever run it. The most common home for a public email is the contact page, usually at addresses like /contact or /contact-us. About pages are the second most common spot, especially for small businesses where the owner writes a personal bio and invites direct messages. Footers come third: many sites repeat a general inbox such as info@ or hello@ at the bottom of every page.</p>
+          <p>Team and staff pages deserve special attention. Agencies, law firms, clinics, and software companies often list each person with a direct address, or at least a consistent pattern you can learn from. Press and media pages are another reliable source, since companies want journalists to reach them quickly. Career pages sometimes expose a hiring inbox too, though that address belongs to recruiting rather than sales, and pitching it is a fast way to get ignored.</p>
+          <ul className="list-disc space-y-2 pl-6">
+            <li>The contact page and its regional variants, such as /contact, /contact-us, and /contacts</li>
+            <li>About pages, including /about-us, /our-team, and /meet-the-team</li>
+            <li>The site footer, which often repeats a general inbox on every page</li>
+            <li>Press, media, and newsroom pages built for journalists</li>
+            <li>Legal pages, where a privacy or terms page sometimes names a data contact</li>
+            <li>The sitemap, which lists pages the navigation menu hides</li>
+          </ul>
+          <p>Recognizing these patterns also helps you judge list quality. An extractor that only scans homepages will miss most of this. One that walks contact, about, and team pages plus the sitemap will return a much fuller picture of who is actually reachable.</p>
+        </div>
+      </section>
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">THE WORKFLOW</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">Running a Sheet-Based Extraction, Step by Step</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>This tool takes a different approach from the usual browser extension. Instead of scanning one page at a time while you click around, it works from a Google Sheet and processes your whole list in the background. You put one website per row in the first column, share the sheet with the tool's service account, paste the sheet link into the page above, and press Start. From there the work happens on free cloud runners rather than in your browser tab, so you can close the page and come back later.</p>
+          <p>For each website, the worker visits the homepage first, then tries the usual contact and about addresses, follows up to two promising links from the homepage, and pulls a couple of relevant URLs from the sitemap. It stays on the same domain throughout. Every hundred websites it pauses briefly to avoid tripping rate limits, then continues on its own.</p>
+          <p>Results land directly in your sheet under three columns: Website, Emails, and Status. A row marked done means at least one address was found. A done-no-email status means the site was reachable but published nothing the extractor could collect. An error status, such as fetch-failed, means the site could not be reached at all, which usually points to a dead domain, a bot blocker, or a server that refuses automated visits.</p>
+          <p>Two controls keep large runs manageable. The limit field processes a slice of the list, say five hundred rows, before you start again to continue. Because the worker skips rows that already have a result, stopping and resuming never repeats work. For a few thousand domains, running in slices beats trying to do everything in one go.</p>
+        </div>
+      </section>
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">CLEAN PROSPECTING</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">Why Building Your Own List Beats Buying a Database</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>It is tempting to buy a ready-made list of fifty thousand emails and start sending the same afternoon. Resist it. Purchased lists are usually stale, full of dead addresses, and shared with dozens of buyers who already burned them. They are also the fastest route to spam complaints, which damage your sending domain's reputation. Rebuilding that reputation takes far longer than building a clean list yourself.</p>
+          <p>A list you extract yourself from real websites has three advantages a bought list never will. First, every address traces back to a site you chose, so you know the context: the industry, the company size, the reason they might care about your message. Second, the data is fresh, collected this week rather than scraped years ago. Third, you control the targeting, because the website list itself is your targeting. A list of three hundred carefully chosen local businesses will outperform a bought list of thirty thousand random addresses for almost any outreach goal.</p>
+          <p>The website list is where the real work happens and deserves more thought than the extraction itself. Start from sources that already filter for fit: niche business directories, trade show exhibitor lists, industry association members, or trade publication advertisers. A spreadsheet of domains gathered this way is already a qualified prospect list. The extractor simply fills in the contact column you would otherwise complete by hand.</p>
+        </div>
+      </section>
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">NO EMAIL FOUND</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">What to Do When a Website Has No Email</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>Even a good extractor returns empty rows, and that is normal. Some businesses prefer contact forms; others hide addresses behind scripts or bot protection. A done-no-email status is information, not failure: it tells you this prospect needs a different route. Work down a short fallback ladder instead of guessing wildly or writing the row off.</p>
+          <ul className="list-disc space-y-2 pl-6">
+            <li>Use the contact form, but write like a human. One specific sentence about their business beats a copied pitch, and forms often reach the owner directly.</li>
+            <li>Check LinkedIn for the founder or relevant manager, then send a short connection note rather than a pitch.</li>
+            <li>Look for an email pattern. If you found maria@company.com on a partner page, addresses in the same format often follow it. Treat these as leads to verify, not confirmed contacts.</li>
+            <li>Try the press or partnerships page, which sometimes lists a different inbox than the main contact page.</li>
+            <li>Call, if the business lists a phone number and the deal size justifies it. A two minute call can succeed where ten emails fail.</li>
+          </ul>
+          <p>Keep these fallback attempts in the same sheet, in a notes column next to the status. Months later, when you wonder why a promising prospect never got a message, that note will tell you exactly what happened and what to try next.</p>
+        </div>
+      </section>
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">RESPONSIBLE OUTREACH</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">Reaching Out Without Burning Your Sender Reputation</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>Extracting emails is the easy half. Sending to them is where most people damage their own domain. An address being publicly listed does not mean its owner asked for your email. The rule that keeps you safe is simple: every message should be relevant, specific, and easy to ignore. Relevance means the recipient's business matches what you offer. Specific means you mention something real about them, not just their first name from a merge tag. Easy to ignore means one clear call to action and a visible way to opt out, with no guilt trip for not replying.</p>
+          <p>The technical basics matter as much as the words. Set up SPF, DKIM, and DMARC before your first campaign, warm the domain with low daily volumes, and remove hard bounces immediately. Most email providers publish sender guidelines, and following them is not optional if you want inbox placement. If you are unsure about regional rules such as GDPR in Europe or CAN-SPAM in the United States, read the actual regulations or ask someone qualified. This article is not legal advice.</p>
+          <p>Finally, respect the rhythm of outreach. One thoughtful email followed by a single polite follow-up a week later will outperform five aggressive nudges. If someone does not reply to two messages, move on. Persistence past that point stops being follow-up and starts being the behavior that gets domains blocklisted.</p>
+        </div>
+      </section>
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">FREE VS PAID</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">When a Free Email Extractor Is Enough</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>Paid prospecting tools charge per credit or per seat, which makes sense when you need verified direct dials, enrichment data, or intent signals at enterprise scale. But for the common job of turning a list of websites into contact emails, a free extractor covers the whole task. The expensive part of prospecting was never pattern matching. It was the hours of manual clicking, and that is exactly what automation removes.</p>
+          <p>A free tool fits best when you already know who you want to reach and you have their domains in a sheet. Local outreach, niche B2B prospecting, partnership research, and link building outreach all follow this shape: a defined universe of websites, one contact column to fill. In these cases paying per email would just tax you for work a simple crawler does in minutes.</p>
+          <p>Be honest about the edges, though. No free extractor verifies that an inbox is active, and none can reach addresses hidden behind logins or aggressive bot protection. If your campaign depends on near-perfect deliverability to executives at large enterprises, you will eventually want verification and enrichment services on top. Use the free extractor to build the raw list, then spend your budget verifying the slice that matters most instead of paying to discover addresses you could have collected for nothing.</p>
+        </div>
+      </section>
+    </>
   );
 }

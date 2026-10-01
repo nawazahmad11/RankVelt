@@ -41,7 +41,77 @@
         "q": "Will using the same Shopify theme create the same results as another store?",
         "a": "No. Theme choice is only one part of an eCommerce store. Product quality, pricing, traffic quality, collection structure, SEO, mobile UX, trust content, product pages, and customer service all affect performance."
       }
-    ]
+    ],
+    "article": {
+      "sections": [
+        {
+          "heading": "What a Shopify theme detector actually reads",
+          "paragraphs": [
+            "You see a Shopify store you like and wonder: what Shopify theme is that? A Shopify theme detector answers that question in seconds. You paste the store URL, the tool reads the store's publicly visible code, and it reports the theme name it finds there.",
+            "Every Shopify storefront publishes certain details about its theme in the page source, because the browser needs them to render the page. The most useful of these is the theme's underlying identifier, which stays the same even when a merchant renames the theme to something custom in their admin. A theme detector Shopify merchants rely on reads both the display name and that underlying identifier, so a renamed theme does not fool it.",
+            "This only works on public storefronts. Password-protected stores, coming-soon pages, and headless setups that do not serve a classic theme give the detector nothing to read, and any honest tool will say so instead of guessing.",
+            "Think of detection as reading a label, not performing an audit. It tells you the starting point the merchant chose, not how far they took it from there."
+          ]
+        },
+        {
+          "heading": "Why finding a competitor's theme is genuinely useful",
+          "paragraphs": [
+            "Most people run a Shopify theme checker out of curiosity. The real value is research. When a store in your niche performs well, its theme choice is a clue about which layouts, product page structures, and mobile patterns are working in your market right now.",
+            "Use it the way a designer uses references. Run five or ten competitors through the detector and look for patterns. If most of them use themes with large lifestyle imagery and sticky add-to-cart buttons, that tells you something about what shoppers in that niche expect. You are not copying a store; you are reading the market.",
+            "It also keeps your budget honest. Premium themes cost real money, and rebuilding a look you cannot buy costs far more. Knowing before you fall in love with a design whether it is a free theme, a paid theme you can install today, or a custom build that is not for sale at all prevents expensive surprises.",
+            "Agencies and freelancers get extra value here. When a prospective client asks for a redesign, running their current store and three competitors through a Shopify theme detector takes five minutes and gives you a concrete starting point for the conversation. You can show them exactly which themes their market runs on and explain what each choice would mean for their budget, which positions you as someone who does homework instead of guessing.",
+            "One warning before you go further: a theme is only the container. Product photography, pricing, reviews, shipping promises, and brand trust do the heavy lifting on conversions. Never assume that installing the same theme will produce the same store."
+          ]
+        },
+        {
+          "heading": "What the three possible results mean",
+          "paragraphs": [
+            "Every detection ends in one of three places, and each one means something different for your plans. Read which result you got before you plan anything.",
+            "- Official theme: the store runs a theme from the Shopify Theme Store more or less as sold. You can install the exact same theme, free or paid, and start from the same foundation.",
+            "- Customized official theme: the store started from a Theme Store theme and a developer changed the code. The detector names the base theme, which is the part you can buy. Everything layered on top was paid for separately, so budget for rebuilding the parts you actually want.",
+            "- Custom or headless build: the theme was built for that store alone, or the storefront does not use a classic theme at all. There is nothing to buy. Your realistic options are hiring a developer or rebuilding the two or three layouts you admired on top of a standard theme.",
+            "The gap between the first result and the third is the gap between an afternoon of setup and a development project. That is why the result matters more than the name."
+          ]
+        },
+        {
+          "heading": "Free vs paid vs custom themes: what each choice signals",
+          "paragraphs": [
+            "The result also tells you something about the business behind the store. Free themes like Dawn are solid, fast starting points, and plenty of serious stores run them. Seeing a free theme on a competitor does not mean they are amateur; it often means they put their budget into products, photography, or advertising instead.",
+            "Paid themes from the Theme Store are one-time purchases that usually add richer merchandising features: better filtering for large catalogs, lookbooks, video sections, and similar extras. When several leading stores in a niche run paid themes, that is a hint that shoppers there expect those features.",
+            "A custom theme signals that the company outgrew off-the-shelf options or needed something the platform does not offer. It also signals budget, because custom design and development is a serious investment. If you are just starting out, treat custom-theme competitors as layout inspiration, not as a shopping list.",
+            "Match the theme tier to your stage. A new store with twenty products does not need the filtering power of a theme built for ten thousand SKUs, and a large catalog will fight a minimal theme every single day."
+          ]
+        },
+        {
+          "heading": "What a theme detector cannot tell you",
+          "paragraphs": [
+            "Honest limits matter more than features. A Shopify theme finder names the theme; it does not show you the custom code a developer added after installation. Two stores on the same theme can look and behave completely differently, and the detector cannot measure that gap.",
+            "It cannot give you a full app list either. Some apps leave traces in the public code, but many live entirely in the backend: inventory tools, email platforms, analytics, and fulfillment integrations. The storefront shows you the surface, not the engine room.",
+            "It cannot measure how well the theme performs for that store. Speed, conversion rate, and revenue depend on images, apps, custom code, traffic quality, and many other factors. A lightweight theme weighed down by heavy apps and unoptimized images will still load slowly.",
+            "And it cannot tell you whether the theme is right for you. That decision needs your catalog size, your brand, your budget, and your technical comfort. Use detection as input to the decision, never as the decision itself."
+          ]
+        },
+        {
+          "heading": "Turning a detected theme into a decision for your store",
+          "paragraphs": [
+            "Here is a practical workflow. First, run five to ten stores you admire through the detector and write down the theme names. Look for repeats. A theme that keeps appearing across strong stores in your niche is worth a closer look.",
+            "Second, open the theme's demo store from its Theme Store listing and click through it on your phone, because that is where most of your traffic will arrive. Check the product page, the collection filters, and the cart behavior against the things your store actually needs.",
+            "Third, compare the feature list against your requirements before you pay anything. If you need advanced filtering, confirm the theme ships it natively instead of assuming an app will fix it later. Apps add monthly cost and can slow a store down.",
+            "Fourth, test the theme on a trial or development store using your own products and images. A theme that looks stunning with professional photography can look empty with supplier photos. Your content, not the demo content, is the real test.",
+            "Finally, commit based on fit, not fashion. The best theme for your store is the one whose built-in features match your catalog and whose layout flatters your products, even if it is not the theme your biggest competitor uses.",
+            "Keep notes as you go. A simple sheet with the store URL, detected theme, result type, and one line on what you liked about the store turns ten minutes of clicking into a reference you can use for weeks. When you sit down to choose, patterns in your own notes will point at the right theme faster than any best-of list."
+          ]
+        },
+        {
+          "heading": "The theme is the start of the review, not the end",
+          "paragraphs": [
+            "Once you know the theme, widen the lens. Open the store's navigation and count the clicks from the homepage to a product. Read a full product page: does it answer shipping, returns, and sizing questions? Check the mobile layout, the collection pages, and the footer for trust content.",
+            "This wider review is where the real lessons hide. Themes are public and purchasable; the merchandising judgment around them is not. Two stores can share a theme while one outsells the other many times over on the strength of photography, copy, and reviews.",
+            "Use the detector to shortcut the first question, what are they built on, so you can spend your time on the better questions: what are they doing that I am not, and which of those things can I realistically implement this month."
+          ]
+        }
+      ]
+    }
   },
   "name-generator": {
     "title": "How to Shortlist a Business Name",
@@ -85,7 +155,78 @@
         "q": "What makes a business name scalable?",
         "a": "A scalable name is easy to pronounce, easy to spell, relevant to your audience, distinct from competitors, and broad enough to support future products, services, locations, or content."
       }
-    ]
+    ],
+    "article": {
+      "sections": [
+        {
+          "heading": "What a business name generator is actually good for",
+          "paragraphs": [
+            "A business name generator does one job well: it breaks the blank-page problem. You type a keyword, pick a niche, and get a batch of brand name ideas in seconds. When you have been staring at the same three options for a week, that fresh batch is genuinely useful.",
+            "What it cannot do is just as important. No generator knows your market, your positioning, or your competitors. It cannot check trademarks, and it cannot tell you whether a name fits the brand you are building. Treat generated names as raw material, not finished decisions.",
+            "The right way to use one is simple: generate broadly, shortlist ruthlessly, then validate carefully. The tool gives you options; the judgment stays with you. Strong brand names usually survive dozens of weak ones first, and a generator just speeds up the weak ones."
+          ]
+        },
+        {
+          "heading": "The four kinds of business names",
+          "paragraphs": [
+            "Almost every business name falls into one of four buckets. Knowing which bucket you are shopping in makes the whole exercise easier, whether you are learning how to generate a business name for the first time or renaming an existing one.",
+            "- Descriptive names say what you do, with the product or service right in the name. They give instant clarity, which helps in crowded markets, but they are harder to protect legally and can box you in when you expand into new offerings.",
+            "- Founder names use a personal name. They signal accountability and work well in professional services. The tradeoff is that they can complicate a future sale and mean little to customers who do not know you yet.",
+            "- Invented names are made-up words. They are the easiest to own outright and the most flexible as you grow, but they start with zero meaning, so they demand more marketing before they stick in anyone's mind.",
+            "- Evocative names suggest a feeling or image without describing the business literally. They are often the strongest choice for consumer brands, because they create an emotional hook while staying legally ownable.",
+            "Before you commit to a lane, study your competitors. If every rival uses a descriptive name, an evocative or invented name will stand out. If the market is full of invented names, something plain and descriptive can feel refreshingly trustworthy. Being distinct within your category beats being distinct in the abstract."
+          ]
+        },
+        {
+          "heading": "What makes a name actually work",
+          "paragraphs": [
+            "Forget cleverness for a moment and test for function. A working name is easy to say, easy to spell, and easy to remember after hearing it once. If you have to spell it out every time you say it on a call, it will quietly cost you word-of-mouth for years.",
+            "Run the radio test: say the name to someone who cannot see it written down, then ask them to type it. If they get it right, you have a name that travels by voice, which is how most recommendations actually happen.",
+            "Shorter is usually stronger, but clarity beats brevity. A slightly longer name that people instantly understand will outperform a cryptic short one that needs explaining. Avoid hyphens, numbers, and unusual spellings unless you enjoy correcting people for the rest of your career.",
+            "Finally, check the name against your future, not just your present. A company name generator might suggest something tied to one product, one city, or one service, and that becomes a problem the moment you grow past it. Pick something that still fits if you add services, open in new places, or pivot entirely."
+          ]
+        },
+        {
+          "heading": "Naming for SEO without stuffing keywords",
+          "paragraphs": [
+            "A common question is whether the business name itself should contain keywords for Google. The honest answer is that it helps less than most people think, and stuffing keywords into your brand usually hurts more than it helps.",
+            "Search engines have moved past exact-match brand names. What ranks you is your content, your service pages, your titles and descriptions, and your overall authority. A clean, memorable brand with strong pages will outrank an awkward keyword-stuffed name with thin content behind it.",
+            "There is also a trust cost. Names that read like search queries look spammy to humans long before Google weighs in. Customers choose businesses they trust, and a name that sounds like a keyword list does not build trust.",
+            "The practical approach is to choose the name for humans and let your website do the keyword work. Your homepage title, service pages, and Google Business Profile are the right places for terms like your city and service. Keep the brand name clean and let the rest of the site carry the SEO weight."
+          ]
+        },
+        {
+          "heading": "The availability checks to run before you commit",
+          "paragraphs": [
+            "This is the step most people skip, and it is the one that causes the expensive mistakes. Before you spend money on a logo, a website, or packaging, run every name on your shortlist through these checks.",
+            "- Domain: check whether a sensible .com is available through a domain registrar's search. If your first choice is taken, look at reasonable alternatives, but be honest about whether you can live with a compromise. A domain held by a squatter is a negotiation, not necessarily a dead end, but know the likely cost before you commit emotionally.",
+            "- Social handles: check the major platforms for a matching or consistent handle. Inconsistent handles across Instagram, TikTok, and X make you harder to find and look less established. Free tools exist that check many platforms at once, which saves real time.",
+            "- Trademark databases: search the trademark registers for the markets where you plan to operate. In the United States that means the USPTO database; for international plans, WIPO is the starting point. This is general information, not legal advice, and a basic search does not guarantee safety. But skipping the search entirely is how founders end up with cease-and-desist letters.",
+            "- Google the exact phrase: search the name in quotes and review the first few pages. Established businesses using the same name, especially in your sector, are a warning sign. Negative stories attached to the phrase are an even louder one.",
+            "- Business registration: check your state or national company register where applicable, so the legal name you file does not collide with an existing entity.",
+            "Run these checks on your top three names, not just your favorite. Favorites have a habit of failing at the very last check."
+          ]
+        },
+        {
+          "heading": "Test the name with real people",
+          "paragraphs": [
+            "You are too close to your shortlist to judge it alone. Show the top names to people who resemble your future customers, not just friends who will be polite about everything.",
+            "Ask them to pronounce each name, spell it back to you, and describe what kind of business they imagine. The gap between what you intended and what they heard is the most valuable feedback you will get in the whole process.",
+            "Mock it up quickly. Type the name as a social handle, sketch it as a simple wordmark, say it out loud as an email address. Some names look fine in a list but fall apart as a compact logo or username. This exercise takes an hour and prevents months of regret.",
+            "If two finalists are tied, a simple poll among your target audience can break the deadlock. Do not overthink the sample size. Ten honest reactions beat another week of going back and forth inside your own head."
+          ]
+        },
+        {
+          "heading": "When to rebrand and when to keep the name",
+          "paragraphs": [
+            "Sometimes the question is not how to name a new business but whether to change an existing one. Rebrand when the name actively holds you back: it confuses customers, it boxes you into services you no longer sell, or it carries legal risk you cannot resolve any other way.",
+            "Do not rebrand out of boredom. Founders get tired of their names long before customers do. If the business is growing and nobody is confused, the name is doing its job, even if it no longer excites you personally.",
+            "Understand the cost before you decide. A rebrand means building new domain authority, redirecting every old URL, updating listings and profiles everywhere, and a transition period where some customers cannot find you. Much of that equity can be preserved with careful redirects and clear communication, but none of it transfers automatically.",
+            "Keep the right perspective: the name is one element of the business, not the business itself. Get it right at the start with the checks above and you will rarely need to revisit it. Fix it decisively if it is genuinely broken, and otherwise spend that energy on the business behind the name."
+          ]
+        }
+      ]
+    }
   },
   "profit-calculator": {
     "title": "Understand Your Profit Result",
@@ -174,5 +315,75 @@
         "a": "No. Shopify can help you add policy pages, but the wording still needs to accurately reflect your own products, returns, shipping, payments, customer support process, and applicable legal requirements."
       }
     ]
+  },
+  "guest-post-finder": {
+    "title": "",
+    "description": "",
+    "features": [],
+    "faqs": [],
+    "article": {
+      "sections": [
+        {
+          "heading": "Stop Chasing Giant Lists and Build a Shortlist Instead",
+          "paragraphs": [
+            "Search for guest posting sites and you will drown in lists: hundreds of free sites, instant approval blogs, and endless tables of domain authority scores. These lists feel productive to collect and turn out almost useless to work through. Most of the domains are irrelevant to your niche, many have not published anything worthwhile in months, and the good ones are already buried under hundreds of identical pitches from everyone else who downloaded the same list.",
+            "A shortlist of twenty carefully chosen sites will outperform a spreadsheet of five hundred random ones every time. The math is simple: a pitch to a publication whose readers match your customers has a real chance of being accepted, read, and clicked. A pitch to a generic blog that accepts everything has none of those, even if its metrics look impressive. Your goal is not the longest guest posting sites list. It is the smallest list you would be proud to appear on.",
+            "Start from relevance, not from inventory. Write down the ten publications you already read in your industry, then ten more your customers read. That is your seed list, and it is already better than anything you can download, because every name on it passed the only test that matters: real humans in your market pay attention to it."
+          ]
+        },
+        {
+          "heading": "How to Find Guest Posting Sites in Your Niche",
+          "paragraphs": [
+            "Once you have your seed list, expand it with search operators that surface write for us pages in your specific niche. The classic patterns still work: \"write for us\" plus your topic, \"submit a guest post\" plus your industry, \"become a contributor\" plus your niche. Put the topic first and the phrase second, and keep the phrase in quotes so the search engine treats it as exact.",
+            "Then go beyond the obvious phrases. Trade associations often run expert columns that never use the words \"write for us\", so try your industry plus \"contributor\" limited to .org domains. Local business publications respond to your city plus \"business contributor\". Podcasts and newsletters with companion blogs accept written contributions more often than people expect, so search your topic plus \"newsletter contributor\". Each of these surfaces prospects that never appear on the big generic lists, which means less competition for your pitch.",
+            "- \"your topic\" \"write for us\": the classic starting point for niche publications",
+            "- \"your topic\" \"guest post guidelines\": finds sites with a formal submission process",
+            "- \"your industry\" contributor site:.org: surfaces trade associations and expert columns",
+            "- \"your city\" business contributor: finds local and regional business publications",
+            "A finder tool speeds up this discovery by scanning target websites directly for guest post guidelines and submission pages, then pulling the contact email attached to them. Use it to process the domains you already suspect are a fit, rather than as a slot machine for random sites. Discovery is the cheap part. The judgment about whether a site deserves your pitch is where the value lives."
+          ]
+        },
+        {
+          "heading": "Vet Every Site Before You Pitch: Relevance Beats Metrics",
+          "paragraphs": [
+            "Authority metrics are a filter, not a verdict. A high domain authority score tells you a site has many backlinks. It tells you nothing about whether its readers care about your topic, whether anyone still reads it, or whether your article would sit next to spammy guest posts about unrelated industries. Treat metrics as a way to sort a long list, never as proof that a placement is worthwhile.",
+            "Read five recent articles before you pitch anywhere, and ask three questions. First, do the topics overlap with what your customers care about? Second, does the writing show editorial standards: named authors, original examples, updated posts, a real voice? Third, what do the outbound links look like? A few relevant references are normal. Repeated exact-match commercial anchors pointing at unrelated industries is a warning sign that the site exists mainly to sell placements.",
+            "Also confirm the contributor path is real. Open the guidelines page, check that it loads and describes an actual process, and look for a named editor or a submissions inbox rather than a dead form. A simple scorecard works well: give each prospect points for audience fit, editorial standards, and link behavior, then pitch the top scorers first. Rejecting weak placements early is faster than chasing a large list of easy submissions."
+          ]
+        },
+        {
+          "heading": "Find the Right Person, Not Just Any Inbox",
+          "paragraphs": [
+            "The contact email a finder tool surfaces is your starting point, not your destination. A generic info@ inbox might be monitored by an intern, a virtual assistant, or nobody at all. Your pitch needs to reach the person who decides what gets published: usually a content manager, a managing editor, or the blog owner on smaller sites.",
+            "Work outward from what you have. The guidelines page often names the editor or links their social profiles. The site's about or team page may list editorial staff with their roles. A quick search for the site name plus \"editor\" or \"content manager\" on a professional network usually identifies the right name within minutes. When you write, address that person by name and reference something specific they published recently. A pitch that opens with \"dear editor\" is how pitches go to die.",
+            "If you truly cannot find a name, a short and specific subject line sent to the general inbox still beats a personalized message addressed to the wrong person. Keep it honest: state the article idea in the first two sentences so whoever triages the inbox can route it correctly."
+          ]
+        },
+        {
+          "heading": "What Editors Actually Want to See in a Pitch",
+          "paragraphs": [
+            "Editors do not want your link. They want an article their readers will finish. Lead with a specific idea, not a topic area. \"A guest post about SEO\" is a topic. \"How small law firms can answer the five questions clients ask before hiring, based on real intake call data\" is an idea an editor can picture on their site. Name the reader problem and your angle in the first paragraph.",
+            "Then give the editor a reason to trust you with it. One sentence about your relevant experience, plus one link to something you have written or done that proves it. Follow with a proof point: the examples, screenshots, data, or customer stories you will include. Editors accept pitches that arrive with evidence attached, and they reject pitches that promise high-quality content with nothing behind the words.",
+            "Finally, be flexible about attribution. If a relevant page of yours deserves citation, mention it once and let the editor decide whether and how it belongs. Never demand a followed link, dictate anchor text, or ask to skip their editing process. The pitch that treats the link as a citation rather than the product being bought is the one that gets a yes."
+          ]
+        },
+        {
+          "heading": "Follow Up Once, Then Let It Go",
+          "paragraphs": [
+            "Most pitches are not rejected. They are buried. Editors are busy, inboxes overflow, and a good idea can sit unread for two weeks. One polite follow-up, seven to ten days after the first email, is not pushy. It is professional. Reference your original idea in one line, restate the angle in another, and close. That is the entire follow-up.",
+            "What you must not do is follow up four times, follow up the next day, or follow up with a guilt trip about being ignored. Each nudge past the second message reduces your chances instead of raising them, and it marks you as someone the editor will avoid next time. Silence after two messages is an answer. Move the prospect to a nurture list for a fresh idea in a few months.",
+            "Keep a simple log: prospect, date pitched, date followed up, outcome. This stops you from accidentally pitching the same site twice, and it shows you over a quarter which types of ideas get accepted. Outreach is a system, and systems need records."
+          ]
+        },
+        {
+          "heading": "Keep Anchor Text Natural and Accept Nofollow",
+          "paragraphs": [
+            "The fastest way to turn a good placement into a liability is to force commercial anchor text into it. Repeated exact-match anchors pointing at your money pages is exactly the pattern search engines describe as manipulative, and it puts the host publication at risk too. A natural mention uses your brand name or a descriptive phrase, with fuller attribution in the author bio where it belongs.",
+            "Accept nofollow and sponsored attributes gracefully. They do not erase the value of a placement: referral traffic from a real audience, brand exposure, and a relationship with an editor all compound regardless of how the link is tagged. The site that links to you naturally today may link again tomorrow, while the site you pressured for a followed keyword anchor will remember the experience.",
+            "As a rule of thumb, if an article would still be worth publishing with zero links in it, the links you do include will look natural. Write for the publication's readers first, cite sources the way any careful writer would, and let the SEO value be a byproduct of genuinely useful content rather than the reason it exists."
+          ]
+        }
+      ]
+    }
   }
 }

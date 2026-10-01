@@ -1,4 +1,4 @@
-// TOOLS-VERSION-16
+// TOOLS-VERSION-18
 import {
   useEffect,
   useMemo,
@@ -47,11 +47,25 @@ type ToolType =
   | "opengraph"
   | "robots"
   | "serp"
-  | "email-extractor";
+  | "email-extractor"
+  | "meta-title"
+  | "schema"
+  | "sitemap"
+  | "local-seo"
+  | "redirect-map";
 
 type ToolFaq = {
   q: string;
   a: string;
+};
+
+type ToolArticleSection = {
+  heading: string;
+  paragraphs: string[];
+};
+
+type ToolArticle = {
+  sections: ToolArticleSection[];
 };
 
 type ToolJsonContent = {
@@ -62,6 +76,7 @@ type ToolJsonContent = {
     detail: string;
   }[];
   faqs: ToolFaq[];
+  article?: ToolArticle;
 };
 
 type ToolJsonMap = Record<string, ToolJsonContent>;
@@ -502,6 +517,156 @@ const tools: ToolConfig[] = [
     ],
     standalone: true,
   },
+  {
+    toolType: "meta-title",
+    slug: "meta-title-description-checker",
+    contentKey: "meta-title-checker",
+    badge: "Free SEO Tool",
+    title: "Meta Title Checker",
+    pageTitle: "Free Meta Title Checker",
+    metaTitle: "Free Meta Title Checker | RankVelt",
+    metaDescription:
+      "Check your meta title and description length, preview the SERP snippet, and fix truncation issues.",
+    shortDescription:
+      "Check meta title and description length with a live SERP preview.",
+    intro:
+      "Paste your title and meta description to see exactly how they will look in Google search results, including pixel-based truncation warnings.",
+    guideTitle: "Fix Truncation Before You Publish",
+    guideText:
+      "Titles that get cut off in search results lose clicks. This tool measures your title in pixels, the same way Google does, so you can adjust before publishing.",
+    bestFor: [
+      "Bloggers and SEOs writing click-worthy titles.",
+      "Store owners fixing product page snippets.",
+    ],
+    relatedLinks: [
+      {
+        title: "Title Tag Preview",
+        description: "Preview Google snippets with pixel-accurate desktop and mobile views.",
+        path: "/tools/title-tag-preview",
+      },
+    ],
+    standalone: true,
+  },
+  {
+    toolType: "schema",
+    slug: "schema-markup-generator",
+    contentKey: "schema-generator",
+    badge: "Free SEO Tool",
+    title: "Schema Generator",
+    pageTitle: "Free Schema Markup Generator",
+    metaTitle: "Free Schema Markup Generator | RankVelt",
+    metaDescription:
+      "Generate valid JSON-LD schema markup for your pages: articles, products, FAQs, local business, and more.",
+    shortDescription:
+      "Generate valid JSON-LD schema markup for rich results.",
+    intro:
+      "Fill in the fields for your content type and get clean JSON-LD schema markup ready to paste into your page.",
+    guideTitle: "Qualify for Rich Results",
+    guideText:
+      "Schema markup helps search engines understand your pages and can unlock rich results like FAQs, reviews, and product info in the SERP.",
+    bestFor: [
+      "SEOs adding structured data without writing code.",
+      "Developers who want a quick valid starting point.",
+    ],
+    relatedLinks: [
+      {
+        title: "Robots.txt Generator",
+        description: "Build a valid robots.txt with rules, sitemap, and AI crawler controls.",
+        path: "/tools/robots-txt-generator",
+      },
+    ],
+    standalone: true,
+  },
+  {
+    toolType: "sitemap",
+    slug: "xml-sitemap-generator",
+    contentKey: "xml-sitemap-generator",
+    badge: "Free SEO Tool",
+    title: "XML Sitemap Generator",
+    pageTitle: "Free XML Sitemap Generator",
+    metaTitle: "Free XML Sitemap Generator | RankVelt",
+    metaDescription:
+      "Generate a clean XML sitemap for your website to help search engines discover and crawl your pages.",
+    shortDescription:
+      "Generate a clean XML sitemap for better crawling.",
+    intro:
+      "Enter your pages and generate a properly formatted XML sitemap that you can upload and submit to Google Search Console.",
+    guideTitle: "Help Google Find Every Page",
+    guideText:
+      "A sitemap does not guarantee indexing, but it gives crawlers a complete map of your site, which matters most for new or large websites.",
+    bestFor: [
+      "New websites waiting for first indexing.",
+      "Large sites with pages buried deep in navigation.",
+    ],
+    relatedLinks: [
+      {
+        title: "Robots.txt Generator",
+        description: "Build a valid robots.txt with rules, sitemap, and AI crawler controls.",
+        path: "/tools/robots-txt-generator",
+      },
+    ],
+    standalone: true,
+  },
+  {
+    toolType: "local-seo",
+    slug: "local-seo-checklist",
+    contentKey: "local-seo-checklist",
+    badge: "Free SEO Tool",
+    title: "Local SEO Checklist",
+    pageTitle: "Free Local SEO Checklist",
+    metaTitle: "Free Local SEO Checklist | RankVelt",
+    metaDescription:
+      "Work through a practical local SEO checklist: Google Business Profile, citations, reviews, and on-page local signals.",
+    shortDescription:
+      "A practical checklist to rank in local search and maps.",
+    intro:
+      "Go through the checklist step by step and tick off each local SEO task, from your Google Business Profile to reviews and citations.",
+    guideTitle: "Own Your Local Map Pack",
+    guideText:
+      "Local rankings are won with consistency: complete profiles, accurate citations, real reviews, and location pages that match what searchers see.",
+    bestFor: [
+      "Local businesses targeting map pack rankings.",
+      "Agencies auditing client local SEO setups.",
+    ],
+    relatedLinks: [
+      {
+        title: "Business Name Generator",
+        description: "Generate starting business-name ideas for brands, stores, and services.",
+        path: "/tools/business-name-generator",
+      },
+    ],
+    standalone: true,
+  },
+  {
+    toolType: "redirect-map",
+    slug: "redirect-mapping-generator",
+    contentKey: "redirect-mapping-generator",
+    badge: "Free SEO Tool",
+    title: "Redirect Generator",
+    pageTitle: "Free Redirect Mapping Generator",
+    metaTitle: "Free Redirect Mapping Generator | RankVelt",
+    metaDescription:
+      "Map old URLs to new ones and generate redirect rules for site migrations without losing rankings.",
+    shortDescription:
+      "Map old URLs to new ones for safe site migrations.",
+    intro:
+      "List your old and new URLs side by side to build a clean redirect map before a redesign, rebrand, or platform migration.",
+    guideTitle: "Migrate Without Losing Rankings",
+    guideText:
+      "A redirect map planned before launch prevents broken links and ranking drops. Every old URL should point to its closest matching new page.",
+    bestFor: [
+      "Site owners planning a redesign or rebrand.",
+      "SEOs managing domain or platform migrations.",
+    ],
+    relatedLinks: [
+      {
+        title: "Bulk Redirect Generator",
+        description: "Generate bulk 301/302 redirect rules for Apache, Nginx, and Cloudflare.",
+        path: "/tools/bulk-redirect-generator",
+      },
+    ],
+    standalone: true,
+  },
 ];
 
 const getIcon = (
@@ -535,6 +700,21 @@ const getIcon = (
 
     case "email-extractor":
       return <MailSearch className={className} />;
+
+    case "meta-title":
+      return <Target className={className} />;
+
+    case "schema":
+      return <Layout className={className} />;
+
+    case "sitemap":
+      return <ExternalLink className={className} />;
+
+    case "local-seo":
+      return <CheckCircle2 className={className} />;
+
+    case "redirect-map":
+      return <ArrowRight className={className} />;
 
     case "generator":
     default:
@@ -571,6 +751,21 @@ const getIconClass = (toolType: ToolType) => {
     case "email-extractor":
       return "text-cyan-400";
 
+    case "meta-title":
+      return "text-amber-400";
+
+    case "schema":
+      return "text-violet-400";
+
+    case "sitemap":
+      return "text-sky-400";
+
+    case "local-seo":
+      return "text-lime-400";
+
+    case "redirect-map":
+      return "text-orange-400";
+
     case "generator":
     default:
       return "text-primary";
@@ -604,6 +799,57 @@ const ensureMetaByProperty = (property: string) => {
 
   return element;
 };
+
+function renderArticleParagraphs(paragraphs: string[]): ReactNode {
+  const blocks: ReactNode[] = [];
+  let pending: string[] = [];
+  let key = 0;
+  const flush = () => {
+    if (pending.length > 0) {
+      const items = pending;
+      pending = [];
+      const listKey = key++;
+      blocks.push(
+        <ul key={`ul-${listKey}`} className="list-disc space-y-2 pl-6">
+          {items.map((b, bi) => (
+            <li key={bi}>{b.replace(/^-\s*/, "")}</li>
+          ))}
+        </ul>
+      );
+    }
+  };
+  paragraphs.forEach((p) => {
+    if (/^-\s/.test(p)) {
+      pending.push(p);
+    } else {
+      flush();
+      const pKey = key++;
+      blocks.push(<p key={`p-${pKey}`}>{p}</p>);
+    }
+  });
+  flush();
+  return <>{blocks}</>;
+}
+
+function ToolArticleBlock({ article }: { article?: ToolArticle }) {
+  if (!article || !article.sections || article.sections.length === 0) {
+    return null;
+  }
+  return (
+    <section className="mx-auto mt-16 max-w-4xl">
+      {article.sections.map((sec, si) => (
+        <div key={si} className={si === 0 ? "" : "mt-12"}>
+          <h2 className="text-2xl font-black tracking-tight text-white sm:text-3xl">
+            {sec.heading}
+          </h2>
+          <div className="mt-4 space-y-4 text-[15px] leading-[1.8] text-white/65">
+            {renderArticleParagraphs(sec.paragraphs)}
+          </div>
+        </div>
+      ))}
+    </section>
+  );
+}
 
 const ToolsPage = () => {
   const { toolName } = useParams();
@@ -1004,6 +1250,8 @@ const ToolsPage = () => {
             ))}
           </div>
         </section>
+
+        <ToolArticleBlock article={selectedToolContent.article} />
       </div>
     </main>
   );

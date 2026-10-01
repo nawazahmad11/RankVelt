@@ -752,7 +752,309 @@ export default function RobotsTxtGenerator() {
             </div>
           </div>
         </section>
+      <RobotsTxtGeneratorArticle />
       </div>
     </main>
+  );
+}
+
+/* ==================== SEO ARTICLE ==================== */
+// RankVelt SEO article: Robots.txt Generator (~1500 words)
+// Companion article rendered below the tool UI on /tools/robots-txt-generator.
+// The tool's own FAQ accordion stays short and practical; this article goes
+// deeper into parsing rules, wildcards, crawl budget, platform playbooks, and
+// AI crawlers. No em or en dashes used anywhere.
+
+const sectionCls = 'mt-10';
+const h2Cls = 'text-2xl font-black tracking-tight text-white sm:text-3xl';
+const pCls = 'mt-4 text-[15px] leading-[1.8] text-white/65';
+const ulCls = 'mt-4 space-y-2.5 text-[15px] leading-[1.8] text-white/65';
+const codeCls =
+  'mt-4 overflow-x-auto rounded-xl border border-white/[0.08] bg-black/50 p-4 font-mono text-[13px] leading-relaxed text-emerald-200';
+
+const faqs: Array<{ q: string; a: string }> = [
+  {
+    q: 'Which rule wins when Allow and Disallow both match a URL?',
+    a: 'The longest, most specific matching rule wins, and line order does not matter. So Disallow: /images/ loses to Allow: /images/logos/ for URLs inside the logos folder. On a rare exact tie, Google lets the Allow win. These behaviors are formalized in RFC 9309, which Google published in 2022 to document how its parser actually works.',
+  },
+  {
+    q: 'Do I need a robots.txt file if I want everything crawled?',
+    a: 'Strictly, no. A missing file is treated as full permission, and a file with only "User-agent: *" and an empty "Disallow:" line means the same. Still, publishing a minimal file silences 404 noise in your logs and gives you a place for the Sitemap line, which genuinely helps discovery on newer sites with few backlinks.',
+  },
+  {
+    q: 'Why do only * and $ work as wildcards?',
+    a: 'Because the robots exclusion protocol only ever defined those two. The asterisk matches any sequence of characters, including nothing, and the dollar sign marks the end of a URL, but only as the last character of the rule. Regex features like character classes are not supported, so Disallow: /page?.html would be read literally, question mark included.',
+  },
+  {
+    q: 'Can I block one file type across the whole site?',
+    a: 'Yes: Disallow: /*.pdf$ blocks every URL ending in .pdf while leaving other pages alone. The dollar sign does the real work. Without it, the rule would block any URL merely containing ".pdf", including a blog post about PDF tips. Always test broad patterns against your important URLs before shipping.',
+  },
+  {
+    q: 'What happens if robots.txt returns a server error?',
+    a: 'Google treats 5xx errors conservatively: Googlebot assumes crawling is not allowed and backs off, and prolonged failures can hurt visibility. A 404 is the opposite, meaning no rules, crawl everything. This is why uptime monitoring should cover your robots.txt URL, not just your homepage.',
+  },
+  {
+    q: 'Should I disallow my CSS and JavaScript folders?',
+    a: 'No. That advice is a leftover from the early 2000s. Google renders pages the way visitors see them and needs your CSS and JS to do it. If crawlers cannot load those files, Google sees a broken page and rankings can suffer. Keep asset folders and CDNs fully crawlable.',
+  },
+  {
+    q: 'How do I block a staging site without risking the launch?',
+    a: 'Use Disallow: / for every crawler on the staging host, remembering each hostname needs its own file. Then put a "check robots.txt" step on your written go-live checklist and verify the production file in Search Console on launch day. The classic disaster is a staging file copied to production during a deploy.',
+  },
+  {
+    q: 'Does blocking a bot in robots.txt stop AI model training?',
+    a: 'It stops compliant bots, which covers the major AI crawlers. But robots.txt is voluntary: scrapers that ignore it will keep coming, and already-scraped content cannot be unlearned. Treat robots.txt as your declared policy, then add real protection like authentication for anything that must stay out of training data.',
+  },
+  {
+    q: 'Can I put more than one Sitemap line in robots.txt?',
+    a: 'Yes, one per line, and crawlers read all of them. Each must be an absolute URL starting with https://, and in practice each sitemap should live on the same host as the robots.txt file. A sitemap index file is usually cleaner than many individual lines.',
+  },
+  {
+    q: 'Do comments work in robots.txt?',
+    a: 'Yes. Lines starting with # are ignored by crawlers, and blank lines are ignored too. A note like "# Staging block, remove on launch" next to Disallow: / has saved many sites. Keep the file short overall, since long files are harder to debug.',
+  },
+];
+
+function RobotsTxtGeneratorArticle() {
+  return (
+    <article className="mx-auto mt-16 max-w-4xl">
+      <section className={sectionCls}>
+        <h2 className={h2Cls}>What a robots.txt file actually does</h2>
+        <p className={pCls}>
+          A robots.txt file is a plain text file at the root of your website,
+          at an address like https://yourdomain.com/robots.txt. It tells
+          search engine crawlers which parts of your site they may visit and
+          which they should skip. When Googlebot, Bingbot, or an AI crawler
+          arrives at your domain, this is the first file it requests, which
+          makes it the first impression your site gives every search engine.
+        </p>
+        <p className={pCls}>
+          Two facts matter more than anything else. First, robots.txt is a
+          suggestion, not a command: compliant bots honor it, malicious bots
+          ignore it. Second, Disallow controls crawling, not indexing. A
+          blocked page can still appear in search results as a bare link if
+          other pages link to it, because the crawler never reaches the
+          noindex tag on it. Keep those two facts in mind and most robots.txt
+          confusion disappears.
+        </p>
+      </section>
+
+      <section className={sectionCls}>
+        <h2 className={h2Cls}>How Google really reads the file</h2>
+        <p className={pCls}>
+          In 2022 Google formalized its parsing behavior in RFC 9309. These
+          are the rules that decide which of your lines actually win:
+        </p>
+        <ul className={ulCls + ' list-disc pl-6'}>
+          <li>
+            <strong className="text-white/85">One group wins, no inheritance.</strong>{' '}
+            A crawler follows only its most specific matching user-agent
+            block. With a Googlebot block and a wildcard block present,
+            Googlebot uses only its own block.
+          </li>
+          <li>
+            <strong className="text-white/85">Longest match wins, order is irrelevant.</strong>{' '}
+            When Allow and Disallow both match, the more specific rule wins
+            wherever it sits. On an exact tie, Allow wins.
+          </li>
+          <li>
+            <strong className="text-white/85">Directives are case insensitive, paths are not.</strong>{' '}
+            USER-AGENT works like user-agent, but /Admin/ and /admin/ are
+            different paths.
+          </li>
+          <li>
+            <strong className="text-white/85">A 404 means crawl everything.</strong>{' '}
+            A missing file grants full permission, while a 5xx server error
+            makes Googlebot back off. Errors on this URL are more dangerous
+            than a missing file.
+          </li>
+        </ul>
+      </section>
+
+      <section className={sectionCls}>
+        <h2 className={h2Cls}>Wildcards and pattern matching, used without fear</h2>
+        <p className={pCls}>
+          The protocol supports exactly two special characters. The asterisk
+          (*) matches any sequence of characters, including nothing at all.
+          The dollar sign ($) marks the end of a URL, but only as the last
+          character of a rule. Nothing else from regular expressions works.
+        </p>
+        <p className={pCls}>
+          Matching is prefix based, which creates the classic trap: Disallow:
+          /admin also blocks /administrator and /admins, because they share
+          the prefix. If you mean only the folder, write Disallow: /admin/
+          with the trailing slash. The end anchor is your precision tool:
+          Disallow: /*.pdf$ blocks every PDF while leaving a blog post about
+          PDFs alone, because the URL must actually end there.
+        </p>
+        <pre className={codeCls}>{`User-agent: *
+Disallow: /admin/
+Disallow: /*?sort=
+Disallow: /*.pdf$
+Allow: /admin/public-docs/
+
+Sitemap: https://yourdomain.com/sitemap.xml`}</pre>
+      </section>
+
+      <section className={sectionCls}>
+        <h2 className={h2Cls}>The Sitemap line: the fastest indexing win</h2>
+        <p className={pCls}>
+          The Sitemap directive is not a rule, it is a pointer, and it is
+          global: it applies to all crawlers regardless of nearby
+          user-agent blocks. One line pointing at your XML sitemap tells
+          every crawler where your important pages live. For a new site with
+          few backlinks, this is often the fastest way to get pages
+          discovered. You can list multiple sitemaps, one per line, each as
+          an absolute https:// URL, though a single sitemap index file is
+          usually cleaner.
+        </p>
+      </section>
+
+      <section className={sectionCls}>
+        <h2 className={h2Cls}>Crawl budget: when this file moves the needle</h2>
+        <p className={pCls}>
+          Google gives every site limited crawling attention, and robots.txt
+          is how you aim it. For a small site with a few hundred pages,
+          budget is rarely the bottleneck. For large sites with faceted
+          navigation or endless parameter combinations, it is very real: every
+          crawl wasted on a filtered search page is stolen from a page that
+          earns revenue. Small sites should stay minimal (block admin, block
+          internal search, point to the sitemap, stop). Ecommerce sites
+          should be aggressive with patterns like /*?sort= and /*?filter=.
+          One caveat: Crawl-delay never slows Googlebot, which ignores it
+          entirely. It only affects Bing and smaller crawlers.
+        </p>
+      </section>
+
+      <section className={sectionCls}>
+        <h2 className={h2Cls}>Mistakes that take sites offline in search</h2>
+        <ul className={ulCls + ' list-disc pl-6'}>
+          <li>
+            <strong className="text-white/85">The staging leak.</strong> A
+            staging Disallow: / gets copied to production during launch and
+            traffic falls to zero. Put robots.txt on your go-live checklist.
+          </li>
+          <li>
+            <strong className="text-white/85">The trailing slash ambush.</strong>{' '}
+            Disallow: /admin blocks /administrator too. Decide whether you
+            mean the folder (/admin/) or the prefix (/admin).
+          </li>
+          <li>
+            <strong className="text-white/85">Blocking CSS and JavaScript.</strong>{' '}
+            Google renders pages like visitors see them. Blocked assets mean
+            Google sees a broken page.
+          </li>
+          <li>
+            <strong className="text-white/85">Using Disallow as a noindex.</strong>{' '}
+            A blocked crawler cannot read the page's noindex tag, so the URL
+            can linger in the index. Allow crawling and use noindex instead.
+          </li>
+          <li>
+            <strong className="text-white/85">Advertising private paths.</strong>{' '}
+            The file is public. Listing /secret-portal/ tells the internet it
+            exists. Use authentication for real security.
+          </li>
+        </ul>
+      </section>
+
+      <section className={sectionCls}>
+        <h2 className={h2Cls}>Platform playbooks: WordPress, Shopify, Wix, custom</h2>
+        <p className={pCls}>
+          <strong className="text-white/85">WordPress</strong> generates a
+          default file if you provide none, but a custom one gives real
+          control: block /wp-admin/, /wp-includes/, plugin and theme folders,
+          and internal search (/?s=), while allowing
+          /wp-admin/admin-ajax.php. That Allow matters, because blocking it
+          breaks AJAX features and Google needs it to render pages. The
+          WordPress preset in the tool above builds this in one click.{' '}
+          <strong className="text-white/85">Shopify and Wix</strong> manage
+          robots.txt for you with limited customization (Shopify's
+          robots.txt.liquid template, Wix's editor on paid plans), so add
+          rules surgically rather than replacing the platform's tuned file.{' '}
+          <strong className="text-white/85">Custom sites</strong> are entirely
+          your responsibility: keep the file minimal and correct.
+        </p>
+      </section>
+
+      <section className={sectionCls}>
+        <h2 className={h2Cls}>AI crawlers: training bots vs retrieval bots</h2>
+        <p className={pCls}>
+          The distinction that matters is between training crawlers, which
+          collect data to build AI models, and retrieval crawlers, which
+          fetch live pages to answer queries and cite sources. Blocking a
+          training bot does not remove you from AI search answers; blocking a
+          retrieval bot can. Many publishers now block the trainers while
+          staying open to retrieval.
+        </p>
+        <div className="mt-4 overflow-x-auto rounded-xl border border-white/[0.08]">
+          <table className="w-full min-w-[520px] text-left text-[13px] leading-relaxed text-white/65">
+            <thead>
+              <tr className="border-b border-white/[0.08] text-[11px] uppercase tracking-[0.14em] text-white/40">
+                <th className="px-4 py-3">User-agent</th>
+                <th className="px-4 py-3">Owner</th>
+                <th className="px-4 py-3">Purpose</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-white/[0.06]">
+              <tr><td className="px-4 py-2.5 font-mono text-white/80">GPTBot</td><td className="px-4 py-2.5">OpenAI</td><td className="px-4 py-2.5">Model training</td></tr>
+              <tr><td className="px-4 py-2.5 font-mono text-white/80">OAI-SearchBot</td><td className="px-4 py-2.5">OpenAI</td><td className="px-4 py-2.5">ChatGPT Search retrieval</td></tr>
+              <tr><td className="px-4 py-2.5 font-mono text-white/80">ChatGPT-User</td><td className="px-4 py-2.5">OpenAI</td><td className="px-4 py-2.5">User-triggered browsing</td></tr>
+              <tr><td className="px-4 py-2.5 font-mono text-white/80">Google-Extended</td><td className="px-4 py-2.5">Google</td><td className="px-4 py-2.5">Gemini training (no effect on Search rankings)</td></tr>
+              <tr><td className="px-4 py-2.5 font-mono text-white/80">ClaudeBot / anthropic-ai</td><td className="px-4 py-2.5">Anthropic</td><td className="px-4 py-2.5">Training and crawling</td></tr>
+              <tr><td className="px-4 py-2.5 font-mono text-white/80">CCBot</td><td className="px-4 py-2.5">Common Crawl</td><td className="px-4 py-2.5">Dataset used by many AI companies</td></tr>
+              <tr><td className="px-4 py-2.5 font-mono text-white/80">PerplexityBot</td><td className="px-4 py-2.5">Perplexity</td><td className="px-4 py-2.5">Search retrieval and citations</td></tr>
+              <tr><td className="px-4 py-2.5 font-mono text-white/80">Bytespider</td><td className="px-4 py-2.5">ByteDance</td><td className="px-4 py-2.5">Training</td></tr>
+              <tr><td className="px-4 py-2.5 font-mono text-white/80">Meta-ExternalAgent</td><td className="px-4 py-2.5">Meta</td><td className="px-4 py-2.5">AI products</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p className={pCls}>
+          The generator above has a one-click panel for blocking training
+          crawlers. Verify each provider's current documentation before
+          publishing, because bot names and behavior keep changing.
+        </p>
+      </section>
+
+      <section className={sectionCls}>
+        <h2 className={h2Cls}>Write it, test it, ship it</h2>
+        <p className={pCls}>
+          Never publish a robots.txt change without testing. In Google Search
+          Console, open Settings and the robots.txt report to see the exact
+          version Google last fetched, then test individual URLs against your
+          rules. Bing Webmaster Tools has its own tester. Manually, load
+          https://yourdomain.com/robots.txt in a browser and confirm it serves
+          plain text with a 200 status. Then watch coverage and crawl stats
+          for a week. This is the one file that can turn off all of Google
+          with a single misplaced slash, so it deserves the care of a deploy.
+        </p>
+        <p className={pCls}>
+          Continue with the{' '}
+          <a href="/tools/xml-sitemap-generator" className="text-primary underline underline-offset-2 hover:opacity-80">
+            XML Sitemap Generator
+          </a>{' '}
+          for the sitemap your file points to, the{' '}
+          <a href="/tools/bulk-redirect-generator" className="text-primary underline underline-offset-2 hover:opacity-80">
+            Bulk Redirect Generator
+          </a>{' '}
+          for migration-safe URL changes, and the{' '}
+          <a href="/tools/title-tag-preview" className="text-primary underline underline-offset-2 hover:opacity-80">
+            Title Tag Preview
+          </a>{' '}
+          to polish what searchers see once crawlers reach your pages.
+        </p>
+      </section>
+
+      <section className={sectionCls}>
+        <h2 className={h2Cls}>Frequently asked questions</h2>
+        <div className="mt-4 divide-y divide-white/[0.06]">
+          {faqs.map((f, i) => (
+            <div key={i} className="py-4">
+              <h3 className="text-[15px] font-bold text-white/90">{f.q}</h3>
+              <p className="mt-2 text-sm leading-[1.8] text-white/60">{f.a}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    </article>
   );
 }

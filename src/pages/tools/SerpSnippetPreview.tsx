@@ -993,7 +993,273 @@ export default function SerpSnippetPreview() {
             </div>
           </div>
         </section>
+      <TitleTagPreviewArticle />
       </div>
     </main>
+  );
+}
+
+/* ==================== SEO ARTICLE ==================== */
+// RankVelt SEO article: Title Tag Preview (~1500 words)
+// Companion article rendered below the tool UI on /tools/title-tag-preview.
+// The tool's own FAQ accordion covers the basics (pixel limits, rewrites,
+// meta descriptions); this article goes deeper into title craft, Google's
+// documented rewrite triggers, brand placement, and CTR optimization.
+// No em or en dashes used anywhere.
+
+const sectionCls = 'mt-10';
+const h2Cls = 'text-2xl font-black tracking-tight text-white sm:text-3xl';
+const pCls = 'mt-4 text-[15px] leading-[1.8] text-white/65';
+const ulCls = 'mt-4 space-y-2.5 text-[15px] leading-[1.8] text-white/65';
+const codeCls =
+  'mt-4 overflow-x-auto rounded-xl border border-white/[0.08] bg-black/50 p-4 font-mono text-[13px] leading-relaxed text-emerald-200';
+
+const titleArticleFaqs: Array<{ q: string; a: string }> = [
+  {
+    q: 'Should the keyword go at the start of the title?',
+    a: 'Yes, in most cases. Keywords near the front carry slightly more weight and they survive truncation. If a long title gets cut on desktop, the first 50 characters are what the searcher sees. Put the distinguishing words first and the brand last, and the title keeps working even when shortened.',
+  },
+  {
+    q: 'Where should I put my brand name in the title?',
+    a: 'At the end for most pages, separated by a pipe, dash, or colon: "Topic Phrase | Brand". The homepage is the exception, where brand-first is natural. Google sometimes strips the brand when it rewrites a title, but John Mueller has advised keeping it anyway, because it helps confirm the site name Google shows above the title link.',
+  },
+  {
+    q: 'Title tag vs H1: should they be identical?',
+    a: 'They can be similar but they serve different readers. The title tag is written for the searcher scanning results, so it carries the keyword, a qualifier, and the brand. The H1 is written for the reader already on the page, so it can be more natural. Google uses both as title-link sources, so keep them aligned in meaning even when the wording differs.',
+  },
+  {
+    q: 'Do emojis in title tags help click-through rates?',
+    a: 'They can stand out, but they are risky. Emojis eat pixel budget fast, render inconsistently across devices, and Google may strip them or rewrite the title around them. If emojis fit your brand voice, test one page first and check how Google actually displays it before rolling them out site-wide.',
+  },
+  {
+    q: 'Why did Google remove my brand from the title?',
+    a: 'Google routinely drops what it considers a redundant site name, especially when the name already appears above the title link. This is documented behavior, not a penalty. Keep the brand in your title anyway: it costs little pixel budget at the end.',
+  },
+  {
+    q: 'How long until a title change shows in search results?',
+    a: 'Google says changes take a few days to a few weeks to reflect, depending on how often the page is recrawled. High-traffic pages update faster. If the old title lingers for a week, that is normal. Verify the new title is actually in your HTML first, then be patient before changing it again.',
+  },
+  {
+    q: 'Can two pages share the same title tag?',
+    a: 'They should not. Duplicate titles are one of Google\'s documented rewrite triggers: when many pages share boilerplate titles, Google invents its own from headings and page content. Every page deserves a unique title describing what makes it different, even on large sites where templates generate them.',
+  },
+  {
+    q: 'Should I update the year in my titles every January?',
+    a: 'Only if the content is genuinely current. A 2026 in the title of a freshly updated guide is accurate and consistently lifts clicks. But stamping a new year on stale content is the "obsolete title" pattern Google rewrites, and readers notice. Update the content first, then the title earns the year.',
+  },
+  {
+    q: 'Do title tags affect AI Overviews and AI search?',
+    a: 'Indirectly but meaningfully. AI Overviews and AI search engines cite pages whose titles and content clearly match the query, and a precise title helps retrieval systems understand what the page covers. The same clarity that wins clicks in classic search helps your page get selected and cited in AI answers.',
+  },
+  {
+    q: 'Is it worth rewriting titles on pages that already rank?',
+    a: 'Yes, when the goal is clicks rather than rankings. A page at position 3 with a dull title can gain real traffic from a better title without moving a spot. Change one variable at a time, note the date, and watch Search Console click-through rate for that page over the next few weeks before deciding.',
+  },
+];
+
+function TitleTagPreviewArticle() {
+  return (
+    <article className="mx-auto mt-16 max-w-4xl">
+      <section className={sectionCls}>
+        <h2 className={h2Cls}>The highest-leverage line on your page</h2>
+        <p className={pCls}>
+          A title tag is a single line of HTML in your page's head section,
+          and it is the hardest working sentence in SEO. It becomes the blue
+          clickable headline in Google's results and the browser tab label.
+          Google confirms the
+          title element is by far the most-used source for the displayed
+          title link, ahead of headings, og:title, and prominent page text. A title tag preview tool exists for one
+          reason: to show you exactly how that line renders before a single
+          searcher ever sees it.
+        </p>
+        <p className={pCls}>
+          What makes titles tricky is that writing them is easy and writing
+          them well is not. The difference between a title that gets scanned
+          past and one that gets clicked is rarely the ranking position. It
+          is pixel budget, word order, and specificity.
+        </p>
+      </section>
+
+      <section className={sectionCls}>
+        <h2 className={h2Cls}>Pixels, not characters: how Google truncates</h2>
+        <p className={pCls}>
+          Google states plainly that there is no character limit on the title
+          element. The title link is truncated as needed to fit the device
+          width. On desktop the title renders on a single line in Arial at
+          about 20px, giving roughly 580 to 600 pixels before Google cuts it
+          with an ellipsis. On mobile the title can wrap to a second line,
+          which stretches the budget to about 920 pixels total.
+        </p>
+        <p className={pCls}>
+          The familiar "50 to 60 characters" guidance is a community
+          heuristic for the desktop limit, not a Google rule. A lowercase i
+          is far narrower than an uppercase W, so a title full of wide
+          letters can truncate at 45 characters while a narrow one survives
+          past 65. That is why character counters mislead and pixel
+          measurement does not: the preview above measures your actual text
+          the way Google renders it. Keep the distinguishing words inside
+          the first 50 characters and treat everything after as a bonus.
+        </p>
+      </section>
+
+      <section className={sectionCls}>
+        <h2 className={h2Cls}>Why Google rewrites titles, and how to avoid it</h2>
+        <p className={pCls}>
+          Google does not always use your title tag. When it rewrote titles
+          at scale in 2021, it documented exactly which patterns trigger a
+          rewrite. Treat this list as a lint checklist for every title you
+          write:
+        </p>
+        <ul className={ulCls + ' list-disc pl-6'}>
+          <li>
+            <strong className="text-white/85">Half-empty titles</strong> like
+            "| Site Name", where the descriptive part is missing.
+          </li>
+          <li>
+            <strong className="text-white/85">Obsolete titles</strong>, such as
+            a year that no longer matches the page's content.
+          </li>
+          <li>
+            <strong className="text-white/85">Inaccurate titles</strong> that
+            promise something the page does not deliver.
+          </li>
+          <li>
+            <strong className="text-white/85">Micro-boilerplate</strong>, the
+            same title repeated across many pages with tiny variations.
+          </li>
+          <li>
+            <strong className="text-white/85">Redundant site names</strong>,
+            where the brand adds nothing beyond what Google already shows.
+          </li>
+          <li>
+            <strong className="text-white/85">Language mismatch</strong>,
+            where the title is written in a different language than the page.
+          </li>
+        </ul>
+        <p className={pCls}>
+          The pattern is consistent: Google rewrites titles that fail at
+          describing the specific page. A unique, descriptive, honest title
+          that matches the H1 and the page content is the strongest
+          protection you have. Length alone is not a documented trigger: an
+          overlong title gets truncated, not rewritten.
+        </p>
+      </section>
+
+      <section className={sectionCls}>
+        <h2 className={h2Cls}>Keep the brand: Mueller's advice on rewrites</h2>
+        <p className={pCls}>
+          When site owners noticed Google stripping brand names from titles,
+          some concluded the brand should be dropped from the title tag.
+          Google's John Mueller advised the opposite: he would not assume
+          the rewritten version is better, and keeping the site name helps
+          confirm the site name Google displays above the title link.
+          Chasing Google's rewrite is a losing game since it varies by
+          query. Write the best title for humans, put the brand at the end,
+          and let Google do what it does.
+        </p>
+      </section>
+
+      <section className={sectionCls}>
+        <h2 className={h2Cls}>Anatomy of a title that earns the click</h2>
+        <p className={pCls}>
+          A strong title follows a simple shape: the distinguishing thing
+          first, a qualifier the searcher would type, then the brand. "Air
+          Max 90 Running Shoes, Men's | Acme" beats "Acme | Footwear |
+          Products" because the first three words already answer the
+          searcher's question. Front-loading the keyword also protects you
+          against truncation: whatever survives the pixel cut still makes
+          sense.
+        </p>
+        <p className={pCls}>
+          Specificity signals consistently test well in click-through
+          experiments. Numbers, current years, and bracketed qualifiers like
+          [2026 Guide] or (Free Tool) create visual separation in a wall of
+          links. Keep separators simple: pipes, dashes, and colons all work. Write in title case or sentence case consistently, avoid ALL
+          CAPS, and never stuff the keyword twice.
+        </p>
+        <pre className={codeCls}>{`<title>Free Robots.txt Generator | RankVelt</title>
+<meta name="description" content="Build a valid robots.txt file in seconds. Add user-agent rules, allow and disallow paths, and your sitemap URL with live preview. Free, no signup.">`}</pre>
+      </section>
+
+      <section className={sectionCls}>
+        <h2 className={h2Cls}>Title tag vs H1 vs og:title: three jobs</h2>
+        <p className={pCls}>
+          These three often get confused because they can contain similar
+          words. The title tag is written for the searcher scanning results,
+          so it carries the keyword, a qualifier, and the brand in minimal
+          space. The H1 is written for the reader already on the page, so it
+          can be warmer and more descriptive. The og:title controls how the
+          page looks when shared on social platforms, where curiosity can
+          matter more than keyword precision. Google may pull the displayed
+          title from any of them, so keep all three aligned in meaning even
+          when the wording differs. When they contradict each other, you are
+          inviting a rewrite.
+        </p>
+      </section>
+
+      <section className={sectionCls}>
+        <h2 className={h2Cls}>The meta description: your free ad copy</h2>
+        <p className={pCls}>
+          Google has confirmed the meta description is not a direct ranking
+          factor, which leads some people to skip it. That is a mistake. The
+          description is the only advertising copy you get in the search
+          results for free, and at a fixed ranking position, a better pitch
+          means more traffic with no ranking change at all. Write it as a
+          pitch, not a summary: start with the benefit, include the primary
+          keyword naturally so it bolds against the query, add a call to
+          action. Put the critical message in the first 120 characters
+          as a safety margin for mobile, where the budget shrinks to about
+          680 pixels. And accept what you cannot control: Google rewrites
+          descriptions frequently. A unique, honest, query-relevant
+          description is simply the version most likely to survive.
+        </p>
+      </section>
+
+      <section className={sectionCls}>
+        <h2 className={h2Cls}>One title for both devices</h2>
+        <p className={pCls}>
+          There is only one title tag per page, so there is no separate
+          mobile title. Mobile just gives the same title more room because
+          it wraps to a second line. Optimize for the tighter desktop budget
+          of about 600 pixels; a title that fits there renders in full
+          everywhere. The one mobile habit worth building is front-loading
+          the key message, because mobile searchers skim the first line
+          before anything else.
+        </p>
+      </section>
+
+      <section className={sectionCls}>
+        <h2 className={h2Cls}>Preview before you publish</h2>
+        <p className={pCls}>
+          The workflow that prevents truncation surprises is simple. Draft
+          the title and description, paste them into the preview above, and
+          check the pixel bars on desktop and mobile. Confirm the keyword
+          sits in the first 50 characters and nothing critical hangs past
+          the cutoff. Copy the generated HTML into your page head or CMS,
+          publish, and give Google a few days to reflect the change. For
+          the crawl side, see the{' '}
+          <a href="/tools/robots-txt-generator" className="text-primary underline underline-offset-2 hover:opacity-80">
+            Robots.txt Generator
+          </a>{' '}
+          guide, and for the social side, the{' '}
+          <a href="/tools/open-graph-preview" className="text-primary underline underline-offset-2 hover:opacity-80">
+            Open Graph Preview
+          </a>{' '}
+          companion article.
+        </p>
+      </section>
+
+      <section className={sectionCls}>
+        <h2 className={h2Cls}>Frequently asked questions</h2>
+        <div className="mt-4 divide-y divide-white/[0.06]">
+          {titleArticleFaqs.map((f, i) => (
+            <div key={i} className="py-4">
+              <h3 className="text-[15px] font-bold text-white/90">{f.q}</h3>
+              <p className="mt-2 text-sm leading-[1.8] text-white/60">{f.a}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    </article>
   );
 }
