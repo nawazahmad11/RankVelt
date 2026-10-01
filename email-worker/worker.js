@@ -153,19 +153,29 @@ function normalizeUrl(raw) {
   }
 }
 
-async function fetchHtml(url, timeoutMs = 15000, maxBytes = 2000000) {
-  const ctrl = new AbortController();
-  const t = setTimeout(() => ctrl.abort(), timeoutMs);
-  try {
-    const res = await fetch(url, {
-      signal: ctrl.signal,
-      redirect: 'follow',
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36',
-        Accept: 'text/html,application/xhtml+xml',
-      },
-    });
-    if (!res.ok || !res.body) return null;
+let lastFetchError = '';
+async function fetchHtml(url, timeoutMs = 15000, maxBytes = 2000000, retries = 2) {
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    const ctrl = new AbortController();
+    const t = setTimeout(() => ctrl.abort(), timeoutMs);
+    try {
+      const res = await fetch(url, {
+        signal: ctrl.signal,
+        redirect: 'follow',
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36',
+          Accept: 'text/html,application/xhtml+xml',
+        },
+      });
+      if (!res.ok || !res.body) {
+        lastFetchError = 'http-' + res.status;
+        // 4xx (block/deny) won't clear on retry; 5xx might, so retry those.
+        if (res.status >= 500 && attempt < retries) {
+          await sleep(2000 * (attempt + 1));
+          continue;
+        }
+        return null;
+      }
     const ct = res.headers.get('content-type') || '';
     if (!/text\/html|text\/plain/.test(ct)) return null;
     // stream with a hard size cap so one giant page cannot blow up memory
@@ -183,10 +193,16 @@ async function fetchHtml(url, timeoutMs = 15000, maxBytes = 2000000) {
       chunks.push(value);
     }
     return Buffer.concat(chunks).toString('utf8');
-  } catch {
+  } catch (e) {
+    lastFetchError = e && e.name === 'AbortError' ? 'timeout' : 'network-error';
+    if (attempt < retries) {
+      await sleep(2000 * (attempt + 1));
+      continue;
+    }
     return null;
   } finally {
     clearTimeout(t);
+  }
   }
 }
 
@@ -222,7 +238,7 @@ async function extractSite(rawUrl) {
     usedBase = base.replace(/^https:/, 'http:');
     homeHtml = await fetchHtml(usedBase);
   }
-  if (!homeHtml) return { emails: [], status: 'error: fetch-failed' };
+  if (!homeHtml) return { emails: [], status: 'error: fetch-failed' + (lastFetchError ? ' (' + lastFetchError + ')' : '') };
 
   const origin = new URL(usedBase).origin;
   const urls = new Set([usedBase]);
