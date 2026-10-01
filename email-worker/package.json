@@ -1,0 +1,1 @@
+{"dependencies":{"googleapis":"^140.0.0"},"description":"Free bulk email extractor and verifier worker for RankVelt. Google Sheets backed, no paid APIs.","engines":{"node":">=20"},"name":"rankvelt-email-lead-worker","private":true,"scripts":{"extract":"node worker.js --mode=extract","verify":"node worker.js --mode=verify"},"version":"1.0.0"}

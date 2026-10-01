@@ -2396,10 +2396,10 @@ export const blogPosts: BlogPost[] = [
     title: "How to Optimize for Google AI Overviews and AI Mode 2026",
 
     seoTitle:
-      "How to Optimize for Google AI Overviews and AI Mode 2026",
+      "How to Optimize for Google AI Overviews: 2026 Guide",
 
     metaDescription:
-      "How to optimize for Google AI Overviews and AI Mode using proven SEO, content, technical, and tracking steps that improve citations and qualified leads.",
+      "A 7-step process to optimize for Google AI Overviews and AI Mode: technical eligibility, original content, citations, internal linking, and AI search tracking.",
 
     ogTitle: "Optimize for Google AI Overviews and AI Mode",
 
@@ -2408,7 +2408,7 @@ export const blogPosts: BlogPost[] = [
 
     date: "Aug 11, 2026",
     datePublished: "2026-08-11",
-    dateModified: "2026-09-30",
+    dateModified: "2026-10-01",
 
     author: "RankVelt Editorial Team",
     authorType: "Organization",
@@ -2654,9 +2654,9 @@ export const blogPosts: BlogPost[] = [
     ],
 
     content: `
-      <p class="article-updated"><strong>Last updated:</strong> September 2026</p>
+      <p class="article-updated"><strong>Last updated:</strong> October 2026</p>
 
-      <p class="direct-answer">To optimize for Google AI Overviews, make sure your pages are crawled, indexed, and eligible for search snippets, then publish original, evidence-backed content that directly answers the searcher&apos;s question and the decisions around it. Google confirms AI Overviews are generated from its existing Search index, so no special AI markup or separate writing style is required.</p>
+      <p class="direct-answer">To optimize for Google AI Overviews, make sure your pages are crawled, indexed, and eligible for normal search snippets, then publish original, evidence-backed content that answers the searcher&apos;s question and the decisions around it. Google confirms AI Overviews are generated from its existing Search index, so no special AI markup or separate writing style is required.</p>
 
       <p>There are two ways marketers approach AI search optimization.</p>
 
@@ -9654,7 +9654,7 @@ export const blogPosts: BlogPost[] = [
     category: "LOCAL SEO",
     readTime: "11 min read",
   
-    image: "/blog/plumbing-seo-guide.webp",
+    image: "/plumbing-seo-guide.webp",
   
     imageAlt:
       "Plumbing SEO guide showing Google Business Profile, local rankings and service pages for a plumbing company",
@@ -9999,7 +9999,7 @@ export const blogPosts: BlogPost[] = [
     category: "LOCAL SEO",
     readTime: "12 min read",
   
-    image: "/blog/electrician-seo-guide.webp",
+    image: "/electrician-seo-guide.webp",
   
     imageAlt:
       "Electrician SEO guide showing Google Business Profile, local rankings and service pages for an electrical contractor",
@@ -10297,7 +10297,7 @@ export const blogPosts: BlogPost[] = [
     category: "LOCAL SEO",
     readTime: "12 min read",
   
-    image: "/blog/hvac-seo-guide.webp",
+    image: "/hvac-seo-guide.webp",
   
     imageAlt:
       "HVAC SEO guide showing Google Business Profile, seasonal rankings and service pages for a heating and cooling company",
@@ -10593,7 +10593,7 @@ export const blogPosts: BlogPost[] = [
     category: "LOCAL SEO",
     readTime: "12 min read",
   
-    image: "/blog/law-firm-seo-guide.webp",
+    image: "/law-firm-seo-guide.webp",
   
     imageAlt:
       "Law firm SEO guide showing Google Business Profile, practice-area pages and local rankings for a legal practice",

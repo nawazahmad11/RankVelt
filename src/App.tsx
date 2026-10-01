@@ -110,6 +110,11 @@ const RedirectMappingGenerator = lazy(
   () => import("./pages/RedirectMappingGenerator"),
 );
 
+const BulkEmailExtractor = lazy(
+  () => import("./pages/tools/BulkEmailExtractor"),
+);
+
+
 /*
  * Case-study pages
  */
@@ -340,6 +345,12 @@ const App = () => (
               path="/tools/redirect-mapping-generator"
               element={<RedirectMappingGenerator />}
             />
+
+            <Route
+              path="/tools/bulk-email-extractor"
+              element={<BulkEmailExtractor />}
+            />
+
 
             <Route
               path="/tools/:toolName"

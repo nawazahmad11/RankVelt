@@ -47,7 +47,8 @@ type ToolType =
   | "robots"
   | "sitemap"
   | "seo-checklist"
-  | "redirect";
+  | "redirect"
+  | "email-extractor";
 
 type ToolFaq = {
   q: string;
@@ -304,6 +305,53 @@ const tools: ToolConfig[] = [
       },
     ],
   },
+
+
+  
+  {
+    toolType: "email-extractor",
+    slug: "bulk-email-extractor",
+    contentKey: "email-extractor",
+    badge: "Free Lead Generation Tool",
+    title: "Bulk Email Extractor",
+    pageTitle: "Free Bulk Email Extractor & Verifier",
+    metaTitle: "Free Bulk Email Extractor & Verifier | RankVelt",
+    metaDescription:
+      "Extract emails from any list of websites and verify them free with RankVelt's bulk email extractor and verifier tool.",
+    shortDescription:
+      "Extract and verify emails from a bulk list of websites, free.",
+    intro:
+      "Paste a list of websites to extract public contact emails and verify them, all from one free tool.",
+    guideTitle: "Build Your Outreach List Faster",
+    guideText:
+      "Manual email collection takes hours. Paste your website list, extract contact emails in bulk, then verify them before outreach.",
+    bestFor: [
+      "Founders building cold outreach lists.",
+      "Agencies collecting lead contact data.",
+      "Marketers cleaning email lists before campaigns.",
+      "Freelancers finding client contact emails.",
+    ],
+    relatedLinks: [
+      {
+        title: "Business SEO",
+        description:
+          "Build stronger service pages, technical foundations, and organic lead pathways.",
+        path: "/business-seo",
+      },
+      {
+        title: "eCommerce SEO",
+        description:
+          "Improve product discovery, collection structure, and qualified organic traffic.",
+        path: "/ecommerce-seo",
+      },
+    ],
+  },
+  
+
+
+
+
+
   {
     toolType: "meta-checker",
     slug: "meta-title-description-checker",
