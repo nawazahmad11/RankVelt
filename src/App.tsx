@@ -110,6 +110,10 @@ const RedirectMappingGenerator = lazy(
   () => import("./pages/RedirectMappingGenerator"),
 );
 
+const BulkEmailExtractor = lazy(
+  () => import("./pages/tools/BulkEmailExtractor"),
+);
+
 /* New Batch 1 tools (browser-only). RobotsTxtGenerator already imported above. */
 const BulkRedirectGenerator = lazy(
   () => import("./pages/tools/BulkRedirectGenerator"),
@@ -354,7 +358,7 @@ const App = () => (
               element={<RedirectMappingGenerator />}
             />
 
-            {/* ROUTES-VERSION-12 */}
+            {/* ROUTES-VERSION-13 */}
             <Route
               path="/tools/bulk-redirect-generator"
               element={<BulkRedirectGenerator />}
@@ -368,6 +372,11 @@ const App = () => (
             <Route
               path="/tools/title-tag-preview"
               element={<SerpSnippetPreview />}
+            />
+
+            <Route
+              path="/tools/bulk-email-extractor"
+              element={<BulkEmailExtractor />}
             />
 
             <Route

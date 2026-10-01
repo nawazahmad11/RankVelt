@@ -113,6 +113,12 @@ const staticPageMeta: Record<string, RouteMeta> = {
       "Generate business-name ideas for eCommerce stores, local businesses, and growing brands with RankVelt's free business name generator.",
   },
 
+  "/tools/bulk-email-extractor": {
+    title: "Free Bulk Email Extractor for Websites | RankVelt",
+    description:
+      "Extract public contact emails from a list of websites straight into Google Sheets. Free extractor powered by GitHub Actions, no paid APIs.",
+  },
+
   "/tools/bulk-redirect-generator": {
     title: "Free Bulk Redirect Generator: 301/302 Rules for Apache & Nginx",
     description:

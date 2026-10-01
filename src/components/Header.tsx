@@ -1,4 +1,4 @@
-// HEADER-VERSION-15
+// HEADER-VERSION-16
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
@@ -7,6 +7,7 @@ import {
   ChevronDown,
   Image,
   Layout,
+  MailSearch,
   Menu,
   Repeat,
   Rocket,
@@ -117,6 +118,11 @@ const tools = [
     name: "Title Tag Preview",
     icon: <ScanSearch size={14} />,
     path: "/tools/title-tag-preview",
+  },
+  {
+    name: "Bulk Email Extractor",
+    icon: <MailSearch size={14} />,
+    path: "/tools/bulk-email-extractor",
   },
 ];
 

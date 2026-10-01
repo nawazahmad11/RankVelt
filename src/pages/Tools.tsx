@@ -1,4 +1,4 @@
-// TOOLS-VERSION-15
+// TOOLS-VERSION-16
 import {
   useEffect,
   useMemo,
@@ -18,6 +18,7 @@ import {
   CheckCircle2,
   ExternalLink,
   Layout,
+  MailSearch,
   Search,
   ShieldCheck,
   ShoppingBag,
@@ -45,7 +46,8 @@ type ToolType =
   | "redirect"
   | "opengraph"
   | "robots"
-  | "serp";
+  | "serp"
+  | "email-extractor";
 
 type ToolFaq = {
   q: string;
@@ -107,6 +109,9 @@ const toolMapping: Record<string, ToolType> = {
 
   "guest-post-finder": "guest-post",
   "guest-post": "guest-post",
+
+  "bulk-email-extractor": "email-extractor",
+  "email-extractor": "email-extractor",
 
 };
 
@@ -458,6 +463,45 @@ const tools: ToolConfig[] = [
     ],
     standalone: true,
   },
+  {
+    toolType: "email-extractor",
+    slug: "bulk-email-extractor",
+    contentKey: "bulk-email-extractor",
+    badge: "Free Lead Research Tool",
+    title: "Bulk Email Extractor",
+    pageTitle: "Free Bulk Email Extractor for Websites",
+    metaTitle: "Free Bulk Email Extractor for Websites | RankVelt",
+    metaDescription:
+      "Extract public contact emails from a list of websites straight into Google Sheets. Free extractor powered by GitHub Actions, no paid APIs.",
+    shortDescription:
+      "Pull public contact emails from a list of websites into a Google Sheet.",
+    intro:
+      "Paste a Google Sheet link with your website list, and the extractor checks each site's homepage, contact, and about pages for public email addresses. Results are written back into your sheet automatically.",
+    guideTitle: "Build Your Outreach List Faster",
+    guideText:
+      "Manually hunting for contact emails across hundreds of websites takes hours. This tool automates the repetitive part: it visits the pages where businesses normally publish contact details and collects what is publicly listed, so you can focus on the outreach itself.",
+    bestFor: [
+      "Agencies building prospect lists for outreach campaigns.",
+      "Freelancers finding contact emails of local businesses.",
+      "Link builders collecting outreach targets at scale.",
+      "Founders researching partners, vendors, or directories.",
+    ],
+    relatedLinks: [
+      {
+        title: "Guest Post Finder",
+        description:
+          "Find guest posting opportunities and outreach emails fast.",
+        path: "/tools/guest-post-finder",
+      },
+      {
+        title: "Bulk Redirect Generator",
+        description:
+          "Generate bulk 301/302 redirect rules for Apache, Nginx, and Cloudflare.",
+        path: "/tools/bulk-redirect-generator",
+      },
+    ],
+    standalone: true,
+  },
 ];
 
 const getIcon = (
@@ -488,6 +532,9 @@ const getIcon = (
 
     case "serp":
       return <Search className={className} />;
+
+    case "email-extractor":
+      return <MailSearch className={className} />;
 
     case "generator":
     default:
@@ -520,6 +567,9 @@ const getIconClass = (toolType: ToolType) => {
 
     case "serp":
       return "text-blue-400";
+
+    case "email-extractor":
+      return "text-cyan-400";
 
     case "generator":
     default:
