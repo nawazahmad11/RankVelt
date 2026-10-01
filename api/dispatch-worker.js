@@ -18,7 +18,7 @@
 const WORKFLOW_FILE = 'email-worker.yml';
 const GIT_REF = 'main'; // change if your default branch is different
 
-module.exports = async function handler(req, res) {
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'POST only' });
   }
