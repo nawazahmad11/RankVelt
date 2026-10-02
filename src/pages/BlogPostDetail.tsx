@@ -571,6 +571,17 @@ const BlogPostDetail = () => {
                 className="text-[#f9a825]"
               />
               {post.date}
+              {post.dateModified &&
+              post.datePublished &&
+              post.dateModified.slice(0, 7) !==
+                post.datePublished.slice(0, 7)
+                ? ` · Updated ${new Date(
+                    `${post.dateModified}T00:00:00`,
+                  ).toLocaleDateString("en-US", {
+                    month: "short",
+                    year: "numeric",
+                  })}`
+                : ""}
             </span>
 
             <span className="flex items-center gap-2">
