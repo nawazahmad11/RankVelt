@@ -70,6 +70,115 @@ import SeoServiceTemplate, {
       "More useful mobile journeys for calls and emergency requests.",
       "A scalable foundation for adding new locations or services.",
     ],
+  aiVisibility: {
+    title: "Found in Google Search, Maps and AI Answers",
+    intro:
+      "Homeowners ask Google, Maps and AI assistants for a plumber in the same moment something breaks. RankVelt structures your services, areas and call paths so the same clear information appears in all three.",
+    points: [
+      "Service and area information presented consistently across your website, Google Business Profile and directories.",
+      "Emergency and core service pages written so AI assistants can quote your services accurately.",
+      "Click to call and booking paths tested on mobile, where most emergency searches happen.",
+      "Review and trust signals reviewed as part of the visibility plan.",
+    ],
+  },
+
+  pricing: {
+    title: "Simple, Published Pricing",
+    intro:
+      "No hidden quotes and no pressure calls. This is exactly how a RankVelt engagement starts.",
+    steps: [
+      {
+        title: "Share your website",
+        description:
+          "Send your website, main services and the areas you cover through the free opportunity check form.",
+      },
+      {
+        title: "Get a prioritised review",
+        description:
+          "RankVelt reviews your visibility, your local competitors and the biggest growth opportunities first.",
+      },
+      {
+        title: "See the plan and the price",
+        description:
+          "You receive a clear plan with exact pricing before you decide anything.",
+      },
+    ],
+    price: "from $525",
+    unit: "/month",
+    term: "Minimum 3 months, then month-to-month.",
+    includes: [
+      "Google Business Profile optimisation priorities",
+      "Emergency and core service page SEO",
+      "Citation and NAP consistency cleanup",
+      "Review generation and response plan",
+      "Service-area pages for the areas you cover",
+      "Monthly progress summary",
+    ],
+    note: "Final pricing depends on your services, service areas and local competition. The free opportunity check confirms your exact price before any work starts.",
+    founderNote:
+      "Your work is led personally by founder Nawaz Ahmad. No juniors and no handoffs.",
+  },
+
+  guide: {
+    title: "The RankVelt Guide to Plumbing SEO",
+    intro:
+      "How customers search when water is already leaking, and how the right pages turn that search into a booked job.",
+    sections: [
+      {
+        heading: "How Plumbing Customers Actually Search",
+        paragraphs: [
+          "Most plumbing searches happen under stress. A pipe has burst, the water heater died this morning, or a drain is backing up. The customer picks from the first few Maps results, checks the rating and calls. Planned work, such as bathroom renovations or water heater replacement, is researched more calmly but still starts on Google.",
+          "That means plumbing SEO is really two jobs: being visible and trustworthy in the urgent moment, and having the service pages that win considered work. RankVelt plans for both.",
+        ],
+      },
+      {
+        heading: "Service Pages Built for Booked Jobs",
+        paragraphs: [
+          "Emergency plumbing, drain cleaning, water heater repair and repiping should never share one crowded page. Each service gets its own page written around what a worried customer needs to know: do you cover my area, how fast can you come, what does it involve and how do I reach you now.",
+          "Service-area pages follow the same rule. A page per town earns its place only with real local value. Swapping a town name into identical text creates doorway pages that hold the whole site back, so RankVelt builds fewer, better pages instead.",
+        ],
+        links: [
+          {
+            label: "Read the full Plumbing SEO Guide",
+            path: "/blog/plumbing-seo-guide",
+          },
+          {
+            label: "See the full Local SEO service",
+            path: "/local-seo",
+          },
+        ],
+      },
+      {
+        heading: "Common Plumbing SEO Mistakes",
+        paragraphs: [
+          "These are the patterns RankVelt finds in almost every plumbing website review.",
+        ],
+        bullets: [
+          "A click to call button that disappears or breaks on mobile, where emergency searches happen.",
+          "One services page listing ten jobs in a paragraph, giving Google nothing clear to rank.",
+          "Thin city pages built by copying text and changing the town name.",
+          "Google Business Profile categories that do not match the services on the website.",
+          "No dedicated emergency page, even though emergencies are the highest value calls.",
+          "Reviews spread across platforms and never answered or shown on the site.",
+        ],
+      },
+      {
+        heading: "What the First 90 Days Look Like",
+        paragraphs: [
+          "The first month is foundation work: profile cleanup, information consistency, priority service page fixes and technical issues that block visibility. These changes rarely move rankings overnight, but they remove the blockers that stop everything else from working.",
+          "From there, visibility builds gradually as pages improve and reviews accumulate. Competitive cities take longer than quiet ones. RankVelt reports what changed and what is next every month, so progress is visible even before it becomes booked jobs.",
+        ],
+        links: [
+          {
+            label: "Start with the free SEO Opportunity Check",
+            path: "/strategy-call?package=Free%20SEO%20Opportunity%20Check",
+          },
+        ],
+      },
+    ],
+  },
+
+
   
     processTitle: "A Practical Plumbing SEO Process",
   
@@ -131,6 +240,26 @@ import SeoServiceTemplate, {
         question: "Can RankVelt help a multi-location plumbing company?",
         answer:
           "Yes. Multi-location plumbing companies need consistent, non-duplicate location pages, separate Google Business Profiles for each location, and clear internal linking, which RankVelt plans as part of the strategy.",
+      },
+      {
+        question: "How much does plumbing SEO cost?",
+        answer:
+          "Plumbing SEO engagements at RankVelt start at $525 per month, with a minimum engagement of 3 months. Your exact price depends on the services you prioritise, the areas you cover and how competitive your local market is. The free opportunity check confirms your exact price before you commit to anything.",
+      },
+      {
+        question: "Do you require a long-term contract?",
+        answer:
+          "SEO needs a proper runway to work. Engagements start with a minimum of 3 months so improvements have time to compound, then continue month to month for as long as the work keeps delivering. There are no 6 or 12 month lock-ins.",
+      },
+      {
+        question: "What reporting do I receive?",
+        answer:
+          "A monthly summary covering visibility changes, the priority work completed, the signals worth watching and the next planned actions. The focus stays on calls, enquiries and booking requests, not vanity numbers.",
+      },
+      {
+        question: "Who will work on my account?",
+        answer:
+          "RankVelt is founder-led. Nawaz Ahmad reviews the strategy and progress personally instead of handing your account to a junior account manager.",
       },
     ],
   

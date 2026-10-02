@@ -70,6 +70,115 @@ import SeoServiceTemplate, {
       "More useful mobile journeys for calls and emergency requests.",
       "A scalable foundation for adding new locations or high-ticket services.",
     ],
+  aiVisibility: {
+    title: "Found in Google Search, Maps and AI Answers",
+    intro:
+      "Homeowners ask Google, Maps and AI assistants for heating and cooling help the moment the house gets uncomfortable. RankVelt structures your services, areas and call paths so the same clear information appears in all three.",
+    points: [
+      "Service and area information presented consistently across your website, Google Business Profile and directories.",
+      "Seasonal service pages written so AI assistants can quote your services accurately.",
+      "Click to call and quote paths tested on mobile, where most urgent searches happen.",
+      "Review and trust signals reviewed as part of the visibility plan.",
+    ],
+  },
+
+  pricing: {
+    title: "Simple, Published Pricing",
+    intro:
+      "No hidden quotes and no pressure calls. This is exactly how a RankVelt engagement starts.",
+    steps: [
+      {
+        title: "Share your website",
+        description:
+          "Send your website, main services and the areas you cover through the free opportunity check form.",
+      },
+      {
+        title: "Get a prioritised review",
+        description:
+          "RankVelt reviews your visibility, your local competitors and the biggest growth opportunities first.",
+      },
+      {
+        title: "See the plan and the price",
+        description:
+          "You receive a clear plan with exact pricing before you decide anything.",
+      },
+    ],
+    price: "from $525",
+    unit: "/month",
+    term: "Minimum 3 months, then month-to-month.",
+    includes: [
+      "Google Business Profile optimisation priorities",
+      "AC repair, furnace and replacement page SEO",
+      "Seasonal content planning for peak demand",
+      "Citation and NAP consistency cleanup",
+      "Review generation and response plan",
+      "Monthly progress summary",
+    ],
+    note: "Final pricing depends on your services, service areas and local competition. The free opportunity check confirms your exact price before any work starts.",
+    founderNote:
+      "Your work is led personally by founder Nawaz Ahmad. No juniors and no handoffs.",
+  },
+
+  guide: {
+    title: "The RankVelt Guide to HVAC SEO",
+    intro:
+      "How seasonal demand really works, and how the right pages keep the phone ringing in summer and winter.",
+    sections: [
+      {
+        heading: "HVAC Demand Is Seasonal. Your SEO Calendar Should Be Too",
+        paragraphs: [
+          "Heating and cooling searches follow the weather. AC repair spikes in the first heatwave. Furnace and heat pump searches climb when the cold arrives. The companies that win those weeks did the SEO work one or two seasons earlier, because rankings are built before the rush, not during it.",
+          "RankVelt plans the calendar backwards from your peaks: replacement and maintenance content published ahead of the season, repair pages strengthened before demand lands, and reviews gathered steadily so the profile is trusted when it matters most.",
+        ],
+      },
+      {
+        heading: "Repair vs Replacement: Two Different Searches",
+        paragraphs: [
+          "A broken AC unit is an urgent, price sensitive search won in Maps. A system replacement is a high ticket decision researched over days, won by pages that explain options, efficiency and process clearly. One generic services page serves neither customer well.",
+          "Repair services get fast, local, call focused pages. Replacement and heat pump work get detailed pages that answer cost and comparison questions honestly. Each page is built for the way that customer actually decides.",
+        ],
+        links: [
+          {
+            label: "Read the full HVAC SEO Guide",
+            path: "/blog/hvac-seo-guide",
+          },
+          {
+            label: "See the full Local SEO service",
+            path: "/local-seo",
+          },
+        ],
+      },
+      {
+        heading: "Common HVAC SEO Mistakes",
+        paragraphs: [
+          "These are the patterns RankVelt finds in almost every HVAC website review.",
+        ],
+        bullets: [
+          "Publishing seasonal content during the peak instead of one season ahead of it.",
+          "One services page covering repair, replacement and maintenance with no depth on any.",
+          "Thin city pages built by copying text and changing the town name.",
+          "No dedicated replacement or heat pump pages, even though they carry the highest ticket work.",
+          "Google Business Profile categories that do not match the services on the website.",
+          "Reviews ignored through the busy season, exactly when trust decides the call.",
+        ],
+      },
+      {
+        heading: "What the First 90 Days Look Like",
+        paragraphs: [
+          "The first month is foundation work: profile cleanup, information consistency, priority page fixes and technical issues that block visibility. Because HVAC demand is seasonal, early work is timed so your strongest pages are ready before the next peak rather than after it.",
+          "From there, visibility builds gradually as pages improve and reviews accumulate. RankVelt reports what changed and what is next every month, so progress is visible even before it becomes calls.",
+        ],
+        links: [
+          {
+            label: "Start with the free SEO Opportunity Check",
+            path: "/strategy-call?package=Free%20SEO%20Opportunity%20Check",
+          },
+        ],
+      },
+    ],
+  },
+
+
   
     processTitle: "A Practical HVAC SEO Process",
   
@@ -131,6 +240,26 @@ import SeoServiceTemplate, {
         question: "Can RankVelt help promote high-ticket system replacements?",
         answer:
           "Yes. RankVelt builds dedicated service pages and content for high-ticket HVAC work, such as system replacements and heat pump upgrades, rather than relying on one generic services page.",
+      },
+      {
+        question: "How much does HVAC SEO cost?",
+        answer:
+          "HVAC SEO engagements at RankVelt start at $525 per month, with a minimum engagement of 3 months. Your exact price depends on the services you prioritise, the areas you cover and how competitive your local market is. The free opportunity check confirms your exact price before you commit to anything.",
+      },
+      {
+        question: "Do you require a long-term contract?",
+        answer:
+          "SEO needs a proper runway to work. Engagements start with a minimum of 3 months so improvements have time to compound, then continue month to month for as long as the work keeps delivering. There are no 6 or 12 month lock-ins.",
+      },
+      {
+        question: "What reporting do I receive?",
+        answer:
+          "A monthly summary covering visibility changes, the priority work completed, the signals worth watching and the next planned actions. The focus stays on calls, enquiries and quote requests, not vanity numbers.",
+      },
+      {
+        question: "Who will work on my account?",
+        answer:
+          "RankVelt is founder-led. Nawaz Ahmad reviews the strategy and progress personally instead of handing your account to a junior account manager.",
       },
     ],
   
