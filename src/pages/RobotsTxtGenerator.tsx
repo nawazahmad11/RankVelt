@@ -753,6 +753,30 @@ export default function RobotsTxtGenerator() {
           </div>
         </section>
       <RobotsTxtGeneratorArticle />
+
+      <section className="mx-auto mt-8 max-w-4xl">
+        <div className="rounded-2xl border border-primary/25 bg-primary/[0.06] p-6 text-center sm:p-8">
+          <h2 className="text-2xl font-black text-white">Crawl Problems Hiding in Your Site?</h2>
+          <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-white/60 sm:text-base">
+            A robots.txt file is one line of defence. Indexing, crawl budget, and site structure
+            decide the rest. Get a free SEO audit and RankVelt will review the full picture.
+          </p>
+          <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <a
+              href="/strategy-call"
+              className="rounded-xl bg-primary px-6 py-3.5 text-sm font-black uppercase tracking-[0.18em] text-black transition-opacity hover:opacity-90"
+            >
+              Get a Free SEO Audit
+            </a>
+            <a
+              href="/tools"
+              className="rounded-xl border border-white/15 px-6 py-3.5 text-sm font-black uppercase tracking-[0.18em] text-white transition-colors hover:border-primary/50"
+            >
+              Browse All Tools
+            </a>
+          </div>
+        </div>
+      </section>
       </div>
     </main>
   );

@@ -749,6 +749,52 @@ export default function OpenGraphPreview() {
           </div>
         </section>
       <OpenGraphPreviewArticle />
+
+      <section className="mx-auto mt-8 max-w-4xl">
+        <div className="rounded-2xl border border-white/[0.08] bg-white/[0.025] p-6 sm:p-8">
+          <h2 className="text-xl font-black text-white">Related free tools</h2>
+          <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+            {[
+              { href: "/tools/title-tag-preview", name: "Title Tag Preview" },
+              { href: "/tools/robots-txt-generator", name: "Robots.txt Generator" },
+              { href: "/tools/xml-sitemap-generator", name: "XML Sitemap Generator" },
+              { href: "/tools/bulk-redirect-generator", name: "Bulk Redirect Generator" },
+            ].map((t) => (
+              <a
+                key={t.href}
+                href={t.href}
+                className="rounded-xl border border-white/[0.08] bg-black/20 px-4 py-3.5 text-sm font-bold text-white/75 transition-colors hover:border-primary/40 hover:text-white"
+              >
+                {t.name} <span className="text-primary">→</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-8 max-w-4xl">
+        <div className="rounded-2xl border border-primary/25 bg-primary/[0.06] p-6 text-center sm:p-8">
+          <h2 className="text-2xl font-black text-white">Shared Links Not Converting?</h2>
+          <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-white/60 sm:text-base">
+            A broken preview is usually a symptom of wider on-page and technical gaps. Get a free
+            SEO audit and RankVelt will check your tags, structure, and speed in one pass.
+          </p>
+          <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <a
+              href="/strategy-call"
+              className="rounded-xl bg-primary px-6 py-3.5 text-sm font-black uppercase tracking-[0.18em] text-black transition-opacity hover:opacity-90"
+            >
+              Get a Free SEO Audit
+            </a>
+            <a
+              href="/tools"
+              className="rounded-xl border border-white/15 px-6 py-3.5 text-sm font-black uppercase tracking-[0.18em] text-white transition-colors hover:border-primary/50"
+            >
+              Browse All Tools
+            </a>
+          </div>
+        </div>
+      </section>
       </div>
     </main>
   );

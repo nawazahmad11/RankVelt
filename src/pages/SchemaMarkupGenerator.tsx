@@ -22,7 +22,7 @@ import {
   Trash2,
 } from "lucide-react";
 
-const SITE_URL = "https://www.rankvelt.com";
+const SITE_URL = "https://rankvelt.com";
 
 type SchemaType =
   | "organization"
@@ -743,7 +743,7 @@ const SchemaMarkupGenerator = () => {
             <InputField
               label="Public Phone Number"
               value={form.telephone}
-              placeholder="+923244146447"
+              placeholder="+92 300 1234567"
               onChange={(value) => updateField("telephone", value)}
             />
 
@@ -785,7 +785,7 @@ const SchemaMarkupGenerator = () => {
             <InputField
               label="Public Phone Number"
               value={form.telephone}
-              placeholder="+923244146447"
+              placeholder="+92 300 1234567"
               onChange={(value) => updateField("telephone", value)}
             />
 
@@ -1413,9 +1413,162 @@ const SchemaMarkupGenerator = () => {
             </Link>
           </div>
         </section>
+
+        <section className="mx-auto mt-8 max-w-4xl">
+          <div className="rounded-2xl border border-white/[0.08] bg-white/[0.025] p-6 sm:p-8">
+            <h2 className="text-xl font-black text-white">Related free tools</h2>
+            <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <a
+                href="/tools/robots-txt-generator"
+                className="rounded-xl border border-white/[0.08] bg-black/20 px-4 py-3.5 text-sm font-bold text-white/75 transition-colors hover:border-primary/40 hover:text-white"
+              >
+                Robots.txt Generator <span className="text-primary">→</span>
+              </a>
+              <a
+                href="/tools/xml-sitemap-generator"
+                className="rounded-xl border border-white/[0.08] bg-black/20 px-4 py-3.5 text-sm font-bold text-white/75 transition-colors hover:border-primary/40 hover:text-white"
+              >
+                XML Sitemap Generator <span className="text-primary">→</span>
+              </a>
+              <a
+                href="/tools/title-tag-preview"
+                className="rounded-xl border border-white/[0.08] bg-black/20 px-4 py-3.5 text-sm font-bold text-white/75 transition-colors hover:border-primary/40 hover:text-white"
+              >
+                Title Tag Preview <span className="text-primary">→</span>
+              </a>
+              <a
+                href="/tools/open-graph-preview"
+                className="rounded-xl border border-white/[0.08] bg-black/20 px-4 py-3.5 text-sm font-bold text-white/75 transition-colors hover:border-primary/40 hover:text-white"
+              >
+                Open Graph Preview <span className="text-primary">→</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+      <SchemaMarkupGeneratorArticle />
       </div>
     </main>
   );
 };
 
 export default SchemaMarkupGenerator;
+
+/* ==================== SEO ARTICLE (Phase 1) ==================== */
+function SchemaMarkupGeneratorArticle() {
+  return (
+    <>
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">Getting Started</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">What a Schema Markup Generator Actually Gives You</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>A schema markup generator turns form answers into JSON-LD code. You pick a type, such as Organization, Article, Product, or Local Business, fill in plain fields like name, URL, price, or opening hours, and the tool assembles the brackets, quotes, and nesting for you. That matters because hand-written structured data is easy to break. One missing comma or one property placed at the wrong level can make the whole block unreadable to Google.</p>
+          <p>The generator removes the syntax risk, but it does not remove judgment. It cannot tell you whether the type matches your page, whether the facts you typed are true, or whether adding a property creates a policy problem. Those decisions stay with you. Treat generated code as a clean draft: accurate raw material that still needs a quick review before it goes live.</p>
+          <p>Used well, a schema generator speeds up three jobs. It produces consistent markup across pages, it reminds you which properties a type normally needs, and it gives you a readable starting point you can extend later as your pages grow.</p>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">Choosing Types</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">Which Schema Types Earn Rich Results, and Which Are Decorative</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>Not every Schema.org type can produce a rich result. Schema.org defines hundreds of types, but Google only supports enhanced displays for a limited set. Marking up a type Google does not use for rich results is not harmful, yet it will not change how your listing looks. Spend your effort where a visible payoff is possible.</p>
+          <p>Types with clear rich result potential include:</p>
+          <ul className="list-disc space-y-2 pl-6">
+            <li>Article and BlogPosting, which support article appearances and text signals like headline, image, and dates</li>
+            <li>Product with Offer details, which can surface price and availability when the facts are genuine and visible</li>
+            <li>BreadcrumbList, which helps Google show a breadcrumb trail instead of a raw URL</li>
+            <li>LocalBusiness, which feeds business knowledge and local visibility rather than a classic snippet enhancement</li>
+            <li>Event, Recipe, Review, and VideoObject, each tied to specific search features when the page truly contains that content</li>
+          </ul>
+          <p>Some once-popular options no longer earn displays. Google removed HowTo rich results, and FAQ rich results have been limited mainly to well-known government and health authority sites. FAQPage markup on an ordinary commercial page may still help machines read your questions and answers, but expecting an expandable FAQ in the results is now unrealistic for most sites. Knowing this saves you from building pages around a display that will never come.</p>
+          <p>The practical rule: mark up what your page genuinely is, and prioritize the types Google currently rewards.</p>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">Format Choice</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">JSON-LD vs Microdata: Why a Structured Data Generator Uses JSON-LD</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>Schema.org facts can be written into a page three ways: JSON-LD, Microdata, and RDFa. All three are accepted by Google, but they place the data in very different places. Microdata and RDFa weave attributes into your visible HTML tags, so every fact lives inside the element it describes. JSON-LD keeps everything in one separate script block, usually in the head or near the end of the body.</p>
+          <p>Google recommends JSON-LD. With Microdata, a redesign can quietly delete a wrapped element and take your markup with it. With JSON-LD, the structured data sits apart from layout, so you can edit, move, or regenerate it without touching the visible page structure. It is also far easier to review: one block, one place, no hunting through divs.</p>
+          <p>There is one caution. Because JSON-LD is separate from the visible text, it is easier to let the two drift apart. You change opening hours on the page but forget the script block, and now your markup contradicts what customers see. If your site already has correct Microdata maintained by a theme or plugin, there is no prize for converting everything. For anything you write yourself with a JSON-LD generator, JSON-LD is the right default.</p>
+          <p>Never describe the same facts twice in two formats on one page. Pick one source of truth per page and keep it accurate.</p>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">The Core Rule</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">Your Schema Must Match What Visitors Can See</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>The most important rule in structured data has nothing to do with syntax. Your markup must describe the main content that a visitor can actually see on that page. Google treats mismatched markup as a policy problem, not a formatting mistake. In serious cases it can lead to a structured data manual action, which removes rich result eligibility until the markup is fixed and a reconsideration request succeeds.</p>
+          <p>Common violations are usually shortcuts, not malice:</p>
+          <ul className="list-disc space-y-2 pl-6">
+            <li>Adding review stars or ratings that do not appear anywhere on the page</li>
+            <li>Marking up prices, offers, or events that the page never mentions</li>
+            <li>Copying a competitor's JSON-LD and swapping in your business name</li>
+            <li>Using FAQPage for questions invented only to fill the markup, with no visible FAQ section</li>
+            <li>Describing services in schema that the business does not actually provide</li>
+          </ul>
+          <p>A simple test keeps you safe. Open the page, read what a customer sees, then read your JSON-LD. Every claim in the code should be findable in the visible content, and every important visible fact should be written the same way. If the page says you close at 6 PM, the markup must not say 8 PM. If a product is out of stock on the page, the Offer must not claim it is available.</p>
+          <p>This is also why generic example data in any tool must be replaced with your real details before publishing. Placeholder phone numbers, sample reviews, and invented ratings are the fastest route to markup that misrepresents your business.</p>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">Validity</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">Required Properties, Recommended Properties, and the Errors That Break Markup</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>For each supported type, Google divides properties into two groups. Required properties must be present for the page to be eligible for the related rich result. Recommended properties are optional, but they give Google more complete information and can improve how the result is built. A JSON-LD generator helps most here, because it prompts you for the fields instead of letting you forget them.</p>
+          <p>Validity and eligibility are separate checks. A block can be perfectly valid Schema.org markup and still earn nothing because a required Google property is missing. It can also pass every syntax check and fail on policy because the content is not visible. Keep both tests in mind.</p>
+          <p>The errors that break markup in practice are mundane:</p>
+          <ul className="list-disc space-y-2 pl-6">
+            <li>Broken JSON, such as a trailing comma or an unclosed bracket, which makes the whole block unreadable</li>
+            <li>Dates without a timezone or in a free-text format instead of ISO format</li>
+            <li>Image or logo values that are relative paths or point to placeholder files</li>
+            <li>Properties placed at the wrong nesting level, such as an Offer floating outside its Product</li>
+            <li>Empty fields left in the output, producing values like an empty string for a phone number</li>
+          </ul>
+          <p>If a generator leaves a field blank, remove that property from the output rather than shipping it empty. An omitted optional property is harmless. An empty or invented value is a small lie your markup tells at scale.</p>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">Local Business</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">Local Business Schema: The Fields That Actually Matter</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>LocalBusiness markup works differently from snippet markup. Its job is to define your business as an entity: what it is, where it is, when it opens, and how it connects to the rest of the web. These details support knowledge panels and local understanding rather than a decorated link, so accuracy matters more than volume.</p>
+          <p>Start by choosing the most specific subtype that truly fits, such as Dentist, Plumber, Restaurant, or Attorney, instead of the generic LocalBusiness. Then make sure these fields are right:</p>
+          <ul className="list-disc space-y-2 pl-6">
+            <li>name, exactly as your business name appears to customers, with no added keywords</li>
+            <li>address, written as a proper PostalAddress with street, city, region, postal code, and country</li>
+            <li>geo, your latitude and longitude, which helps machines place the business precisely</li>
+            <li>telephone, in a consistent format that matches your site and Google Business Profile</li>
+            <li>openingHoursSpecification, with real opening and closing times per day, including special schedules where relevant</li>
+            <li>sameAs, links to your official profiles, such as your Google Business Profile and main social accounts</li>
+            <li>url and image, pointing to your real homepage and a genuine business photo or logo</li>
+          </ul>
+          <p>The sameAs property deserves attention because it is often skipped. It tells search engines that your website, your map listing, and your social profiles all describe one business. That entity clarity helps every other signal you build. Just as important: keep this block consistent with your Google Business Profile and your visible contact page. If the three disagree, the markup creates doubt instead of trust.</p>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">Workflow</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">Validate, Ship, and Monitor Your Structured Data</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>Good schema work follows a loop, not a one-time paste. Follow it every time you generate markup with this tool.</p>
+          <ul className="list-disc space-y-2 pl-6">
+            <li>Generate the JSON-LD and read it once yourself, checking every value against the visible page</li>
+            <li>Validate the code in Google's Rich Results Test to confirm eligibility for the feature you expect</li>
+            <li>Run it through the Schema.org validator as well, since it catches vocabulary and syntax problems the rich result test may not flag</li>
+            <li>Publish, then test the live URL, because templates, plugins, and minification can alter code after you paste it</li>
+            <li>Check the Enhancements reports in Google Search Console over the following weeks for errors and warnings by type</li>
+            <li>Update the markup whenever the page changes, especially hours, prices, availability, and business details</li>
+          </ul>
+          <p>Two habits protect you long term. First, put the JSON-LD in the page's initial HTML where possible. Markup injected late by JavaScript can be processed more slowly, which matters for time-sensitive facts like price and availability. Second, link related entities with @id references when a page carries several types, such as an Article published by an Organization. One clear definition of your business, referenced consistently, beats three slightly different copies.</p>
+          <p>Finally, keep expectations honest. Valid schema improves how machines understand your pages and can make you eligible for rich results, but eligibility never guarantees a display. Generate carefully, validate honestly, and let the markup describe your business exactly as your customers see it. That is the whole strategy, and it is enough.</p>
+        </div>
+      </section>
+    </>
+  );
+}

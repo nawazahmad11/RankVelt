@@ -21,7 +21,7 @@ import {
   Target,
 } from "lucide-react";
 
-const SITE_URL = "https://www.rankvelt.com";
+const SITE_URL = "https://rankvelt.com";
 const STORAGE_KEY = "rankvelt-local-seo-checklist-v1";
 
 type CategoryKey = "profile" | "website" | "reputation" | "authority";
@@ -1298,9 +1298,145 @@ const LocalSeoChecklist = () => {
 
           </div>
         </section>
+
+        <section className="mx-auto mt-8 max-w-4xl">
+          <div className="rounded-2xl border border-white/[0.08] bg-white/[0.025] p-6 sm:p-8">
+            <h2 className="text-xl font-black text-white">Related free tools</h2>
+            <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <a
+                href="/tools/business-name-generator"
+                className="rounded-xl border border-white/[0.08] bg-black/20 px-4 py-3.5 text-sm font-bold text-white/75 transition-colors hover:border-primary/40 hover:text-white"
+              >
+                Business Name Generator <span className="text-primary">→</span>
+              </a>
+              <a
+                href="/tools/bulk-email-extractor"
+                className="rounded-xl border border-white/[0.08] bg-black/20 px-4 py-3.5 text-sm font-bold text-white/75 transition-colors hover:border-primary/40 hover:text-white"
+              >
+                Bulk Email Extractor <span className="text-primary">→</span>
+              </a>
+              <a
+                href="/tools/guest-post-finder"
+                className="rounded-xl border border-white/[0.08] bg-black/20 px-4 py-3.5 text-sm font-bold text-white/75 transition-colors hover:border-primary/40 hover:text-white"
+              >
+                Guest Post Finder <span className="text-primary">→</span>
+              </a>
+              <a
+                href="/tools/title-tag-preview"
+                className="rounded-xl border border-white/[0.08] bg-black/20 px-4 py-3.5 text-sm font-bold text-white/75 transition-colors hover:border-primary/40 hover:text-white"
+              >
+                Title Tag Preview <span className="text-primary">→</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+      <LocalSeoChecklistArticle />
       </div>
     </main>
   );
 };
 
 export default LocalSeoChecklist;
+
+/* ==================== SEO ARTICLE (Phase 1) ==================== */
+function LocalSeoChecklistArticle() {
+  return (
+    <>
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">Start Here</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">Why Every Local SEO Audit Checklist Starts With Google Business Profile</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>When someone searches for a service near them, Google usually answers with the map pack: a map and a short list of businesses pulled largely from Google Business Profile data. Your website matters, your reviews matter, but the profile itself is the foundation. That is why a serious local SEO checklist starts there, before touching anything else.</p>
+          <p>Google weighs local results mainly by relevance, distance, and prominence. Relevance asks how well your profile matches the search. Distance asks how close you are to the searcher or the place they named. Prominence asks how well known and trusted your business appears across the web. You cannot move your building closer to every customer, so your practical levers are relevance and prominence, and both begin with a complete, accurate profile.</p>
+          <p>Work the checklist above in order. A verified profile with the right category, correct hours, real services, and current photos gives every later task something solid to build on. Skipping this step and jumping to links or content is building on sand.</p>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">Categories</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">Category and Attribute Choices Decide Which Searches You Can Enter</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>Your primary category is the single most consequential choice on your profile. It tells Google what your business is, and it heavily influences which searches you can appear for. A business tagged with a broad label like "contractor" competes in fewer, muddier searches than one tagged with the specific trade it actually performs. Choose the most specific category that honestly describes your main offer.</p>
+          <p>Then use additional categories for genuine secondary services. A dentist who also offers orthodontics, or a cafe that is also a bakery, can say so. The discipline is relevance: add a category only when a customer could reasonably book that service from you. Category stuffing with unrelated services confuses your relevance signals and can trigger edits or worse.</p>
+          <p>Attributes are the quieter half of this work. They describe how your business operates: things like accessibility, payment options, or service formats that apply to your business type. Review them whenever your operations change, because an attribute you set two years ago may no longer be true.</p>
+          <p>One warning that belongs in every google business profile checklist: keep your business name as your real-world name. Adding keywords, city names, or slogans to the name field is against Google's guidelines and is a common path to suspension. Earn relevance through categories and services, not through a rewritten name.</p>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">Business Model</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">Storefront, Service-Area, or Hybrid: Match the Profile to How You Work</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>Google supports different profile setups because businesses serve customers in different ways. Getting this wrong creates either a misleading listing or an invisible one.</p>
+          <ul className="list-disc space-y-2 pl-6">
+            <li>Storefront businesses, such as shops, clinics, and restaurants, show a public address because customers visit them there</li>
+            <li>Service-area businesses, such as plumbers, cleaners, and electricians, travel to customers, so they hide the address and define the areas they serve instead</li>
+            <li>Hybrid businesses, such as a repair shop that also does callouts, show the address and set service areas for the mobile side of the work</li>
+          </ul>
+          <p>If you work from home or from an address customers never visit, do not display it just to look established. Google expects the shown address to be a real, staffed location, and virtual offices or rented mailboxes are not eligible stand-ins. Listing one anyway risks suspension, which removes you from the map entirely.</p>
+          <p>For service areas, be realistic. Draw the zone you genuinely cover within a reasonable travel time. Claiming an enormous region you would never drive to does not extend your rankings in a useful way, because distance still counts. A tight, honest service area also sets customer expectations you can actually meet.</p>
+          <p>Whichever model you use, keep it consistent. The choice you make on the profile should match how your website describes the business, where your pages say you work, and what customers experience when they contact you.</p>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">Reviews</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">Review Velocity: Why a Steady Trickle Beats a Big Push</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>Most owners think about reviews as a total count. Search engines and customers read them differently: as a pattern over time. A business with a large stack of old reviews and silence since then looks inactive. A business earning a few fresh reviews every month looks alive, booked, and trusted. That steady pace is review velocity, and it is the part of your review profile you can actually manage.</p>
+          <p>Build the ask into your process instead of running occasional campaigns. The natural moment is right after a successful job, while the experience is fresh. A short personal request with your direct review link, sent through the channel the customer already uses with you, is enough. Make it easy, make it optional, and never tie it to a discount, a gift, or any condition. Incentivized and filtered reviews breach Google's rules, and fake reviews risk the whole profile.</p>
+          <p>Responding is the other half of the system. Thank people for positive reviews with a specific detail from the job, not a copied template. For negative reviews, reply calmly, acknowledge the problem, and offer a direct way to resolve it offline. Future customers read your responses more carefully than the complaint itself, because your reply shows how you behave when something goes wrong.</p>
+          <p>What you must not do matters as much. Do not gate feedback by sending only happy customers to Google. Do not review your own business, and do not ask staff or family to pose as customers. A smaller number of genuine reviews will outlast any shortcut.</p>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">Citations</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">NAP Consistency: The Boring Detail That Quietly Breaks Trust</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>NAP means your business name, address, and phone number. These three facts appear on your website, your Google Business Profile, map platforms, directories, and social pages. When they match everywhere, Google treats them as one confident record of a real business. When they drift, every listing becomes a small question mark.</p>
+          <p>Drift is usually accidental. The business moves and one directory keeps the old street. A call-tracking number replaces the real number on some listings. The name gains or loses a word, a suite number appears in one place and vanishes in another, or an abbreviation differs. None of these alone is dramatic. Together they weaken the citation signals that support your prominence.</p>
+          <p>The fix is methodical rather than hard:</p>
+          <ul className="list-disc space-y-2 pl-6">
+            <li>Write down one master version of your name, address, and phone, and treat it as the only approved format</li>
+            <li>Search your business name and city, open the listings you find, and correct each one against the master version</li>
+            <li>Prioritize the sources that matter most: Google, the major map platforms, your main industry directories, and your own website</li>
+            <li>After any move, rename, or number change, update the master record first, then work through the same list again</li>
+          </ul>
+          <p>Quality beats quantity here. A consistent presence on the listings your customers and Google actually use is worth far more than hundreds of sloppy entries on obscure directories.</p>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">Location Pages</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">Location Pages That Earn Their Place on Your Website</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>A location page exists to answer one searcher honestly: can this business help me, here? Pages built only by swapping a city name into the same template fail that test. Google has become good at recognizing them, and customers recognize them instantly.</p>
+          <p>A location page that earns its place usually includes:</p>
+          <ul className="list-disc space-y-2 pl-6">
+            <li>The services you actually provide in that area, written for that area</li>
+            <li>Real local proof: jobs you have done nearby, areas and neighborhoods you cover, realistic travel or response details</li>
+            <li>Practical information: how booking works there, typical scheduling, and how to reach you</li>
+            <li>Genuine customer feedback from that location, where you have permission to use it</li>
+            <li>Clear contact options, including a click-to-call phone number on mobile</li>
+          </ul>
+          <p>Structure matters too. Link each location page from your main services navigation, and link related service and location pages to each other so visitors and crawlers can move naturally. Keep the visible name, address, and phone details consistent with your profile, and add accurate local business structured data rather than copying a block from another page unchanged.</p>
+          <p>Discipline on quantity is part of the strategy. One strong page for an area you truly serve beats ten thin pages for places you would never drive to. If you cannot write something specifically true about serving a location, you probably should not publish a page for it yet.</p>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">Ongoing Work</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">Photos, Questions, and Tracking: The Maintenance That Holds Rankings</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>Local SEO decays quietly. Hours change for a holiday and never change back. A competitor edits a category. Reviews arrive and sit unanswered. A monthly maintenance rhythm catches this drift before it costs you enquiries.</p>
+          <p>Photos first. Add real photos on a regular basis: your premises, your team at work, finished jobs, and products as customers receive them. Current photos reassure customers that the business is active, and they give Google fresh, genuine material about what you do. Avoid stock imagery; customers can tell, and it does nothing for trust.</p>
+          <p>Questions and answers second. Your profile's Q&amp;A section is public, and anyone can ask or answer. Seed it with the questions customers genuinely ask you, and answer them yourself clearly. Then check it during your reviews routine, because an unanswered question, or worse, a wrong answer from a stranger, sits on your listing shaping decisions.</p>
+          <p>Finally, measure by geography, because local rankings are not one number. Your position in the map pack changes with the searcher's location, sometimes street by street. Track your main services from the areas you actually serve, using a grid or geo-based rank checker, and watch the pattern rather than a single result. Pair that with your profile insights (calls, direction requests, website clicks) and Search Console queries with local intent. When you see which neighborhoods respond and which services stall, your next month of work chooses itself.</p>
+          <p>That is the real purpose of this checklist. Not a one-time score, but a repeatable system: profile right, facts consistent, reviews flowing, pages honest, and a monthly look at the map. Run it steadily and your map pack ranking stops depending on luck.</p>
+        </div>
+      </section>
+    </>
+  );
+}

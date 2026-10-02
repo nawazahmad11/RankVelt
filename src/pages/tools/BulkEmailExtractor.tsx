@@ -2,8 +2,43 @@
 // Place at: src/pages/tools/BulkEmailExtractor.tsx
 // Styled to match the RankVelt dark theme (same shell as Tools.tsx).
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Sparkles, MailSearch, ShieldCheck } from 'lucide-react';
+
+const EXTRACTOR_FAQS = [
+  {
+    q: 'Is this bulk email extractor really free?',
+    a: 'Yes. The extractor runs on the free tier of GitHub Actions and uses no paid APIs. You bring your own Google Sheet and a free GitHub account, and the worker checks your websites and writes the results back into the sheet.',
+  },
+  {
+    q: 'Which pages does the extractor check on each website?',
+    a: 'For each site it loads the homepage, then the most likely contact locations: /contact, /contact-us, /about and /about-us. It also follows up to two relevant links from the homepage and checks likely pages discovered through the sitemap. It stays on the same domain and does not crawl the whole website.',
+  },
+  {
+    q: 'Why did some websites return no email?',
+    a: 'Some businesses only use contact forms, hide addresses behind logins, load them with JavaScript, or the site was unreachable during the run. In those cases the row is marked done-no-email, which is honest output: the tool only reports addresses a website actually publishes.',
+  },
+  {
+    q: 'How many websites can I process at once?',
+    a: 'Work in batches. The sheet limit is 1500 websites per run, and the worker pauses briefly after every 100 websites to reduce blocking risk. For a large list, split it across several runs or sheets.',
+  },
+  {
+    q: 'Do I need to keep this page open while it runs?',
+    a: 'No. Once you press Start, the worker runs in the cloud on GitHub Actions. You can close the page; results keep appearing in your Google Sheet as they are found.',
+  },
+  {
+    q: 'What format does my Google Sheet need?',
+    a: 'Use a tab named Websites with three columns in the first row: Website, Emails, Status. Put one website per row in the Website column and leave the rest empty. Share the sheet with the service account email as an Editor.',
+  },
+  {
+    q: 'Can I stop and resume a run?',
+    a: 'Yes. You can stop the run from GitHub Actions at any time. Pressing Start again resumes from the rows that are still empty, so no website is checked twice.',
+  },
+  {
+    q: 'Is collecting published emails allowed?',
+    a: 'The tool only collects email addresses that businesses publish publicly on their own websites. How you use them is your responsibility: send relevant, permission-aware outreach, include an opt-out, and follow the laws that apply to you, such as CAN-SPAM or GDPR. This is general information, not legal advice.',
+  },
+];
 
 const inputCls =
   'mt-1 w-full rounded-xl border border-white/[0.08] bg-black/30 px-3 py-2.5 text-sm text-white placeholder:text-white/30 outline-none transition-colors focus:border-primary/50';
@@ -21,6 +56,29 @@ export default function BulkEmailExtractor() {
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   const [isError, setIsError] = useState(false);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  // FAQPage JSON-LD built from the same FAQ array rendered below.
+  useEffect(() => {
+    document.getElementById('rankvelt-email-extractor-schema')?.remove();
+    const schemaScript = document.createElement('script');
+    schemaScript.id = 'rankvelt-email-extractor-schema';
+    schemaScript.type = 'application/ld+json';
+    schemaScript.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: EXTRACTOR_FAQS.map((faq) => ({
+        '@type': 'Question',
+        name: faq.q,
+        acceptedAnswer: { '@type': 'Answer', text: faq.a },
+      })),
+    });
+    document.head.appendChild(schemaScript);
+
+    return () => {
+      schemaScript.remove();
+    };
+  }, []);
 
   function sheetIdFrom(input: string): string {
     const m = input.match(/\/d\/([a-zA-Z0-9-_]+)/);
@@ -194,6 +252,74 @@ export default function BulkEmailExtractor() {
           </div>
         </section>
       <BulkEmailExtractorArticle />
+
+        <section className="mx-auto mt-16 max-w-4xl">
+          <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">FAQ</p>
+          <h2 className="mt-3 text-3xl font-black tracking-tight text-white">Frequently Asked Questions</h2>
+          <div className="mt-4 divide-y divide-white/[0.06]">
+            {EXTRACTOR_FAQS.map((f, i) => (
+              <div key={i}>
+                <button
+                  type="button"
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  className="flex w-full items-center justify-between gap-4 py-4 text-left"
+                >
+                  <span className="text-sm font-bold text-white/85">{f.q}</span>
+                  <span className="shrink-0 text-lg text-primary">{openFaq === i ? '-' : '+'}</span>
+                </button>
+                {openFaq === i && (
+                  <p className="pb-4 pr-8 text-sm leading-relaxed text-white/60">{f.a}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mx-auto mt-8 max-w-4xl">
+          <div className="rounded-2xl border border-white/[0.08] bg-white/[0.025] p-6 sm:p-8">
+            <h2 className="text-xl font-black text-white">Related free tools</h2>
+            <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              {[
+                { href: '/tools/guest-post-finder', name: 'Guest Post Finder' },
+                { href: '/tools/bulk-redirect-generator', name: 'Bulk Redirect Generator' },
+                { href: '/tools/title-tag-preview', name: 'Title Tag Preview' },
+                { href: '/tools/robots-txt-generator', name: 'Robots.txt Generator' },
+              ].map((t) => (
+                <a
+                  key={t.href}
+                  href={t.href}
+                  className="rounded-xl border border-white/[0.08] bg-black/20 px-4 py-3.5 text-sm font-bold text-white/75 transition-colors hover:border-primary/40 hover:text-white"
+                >
+                  {t.name} <span className="text-primary">→</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto mt-8 max-w-4xl">
+          <div className="rounded-2xl border border-primary/25 bg-primary/[0.06] p-6 text-center sm:p-8">
+            <h2 className="text-2xl font-black text-white">Need Leads That Actually Convert?</h2>
+            <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-white/60 sm:text-base">
+              A list of emails is only the start. RankVelt builds the pages, content, and SEO behind
+              outreach that gets replies. Get a free SEO audit and we will show you the gaps first.
+            </p>
+            <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <a
+                href="/strategy-call"
+                className="rounded-xl bg-primary px-6 py-3.5 text-sm font-black uppercase tracking-[0.18em] text-black transition-opacity hover:opacity-90"
+              >
+                Get a Free SEO Audit
+              </a>
+              <a
+                href="/tools"
+                className="rounded-xl border border-white/15 px-6 py-3.5 text-sm font-black uppercase tracking-[0.18em] text-white transition-colors hover:border-primary/50"
+              >
+                Browse All Tools
+              </a>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   );

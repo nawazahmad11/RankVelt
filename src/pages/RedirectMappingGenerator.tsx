@@ -18,7 +18,7 @@ import {
   Sparkles,
 } from "lucide-react";
 
-const SITE_URL = "https://www.rankvelt.com";
+const SITE_URL = "https://rankvelt.com";
 
 type RedirectFormat = "csv" | "apache" | "nginx";
 type RedirectStatus = "valid" | "review" | "invalid";
@@ -556,7 +556,7 @@ const RedirectMappingGenerator = () => {
     const pageTitle = "Free Redirect Mapping Generator | RankVelt";
 
     const pageDescription =
-      "Free redirect mapping generator and redirect mapper: build old-to-new URL maps and generate CSV, Apache, or Nginx redirect rules in seconds.";
+      "Create a practical old URL to new URL redirect map. Generate CSV, Apache, or Nginx redirect rules with RankVelt's free Redirect Mapping Generator.";
 
     document.title = pageTitle;
 
@@ -1228,9 +1228,140 @@ https://old-example.com/old-page -> https://new-example.com/new-page`}
             </Link>
           </div>
         </section>
+
+        <section className="mx-auto mt-8 max-w-4xl">
+          <div className="rounded-2xl border border-white/[0.08] bg-white/[0.025] p-6 sm:p-8">
+            <h2 className="text-xl font-black text-white">Related free tools</h2>
+            <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <a
+                href="/tools/bulk-redirect-generator"
+                className="rounded-xl border border-white/[0.08] bg-black/20 px-4 py-3.5 text-sm font-bold text-white/75 transition-colors hover:border-primary/40 hover:text-white"
+              >
+                Bulk Redirect Generator <span className="text-primary">→</span>
+              </a>
+              <a
+                href="/tools/xml-sitemap-generator"
+                className="rounded-xl border border-white/[0.08] bg-black/20 px-4 py-3.5 text-sm font-bold text-white/75 transition-colors hover:border-primary/40 hover:text-white"
+              >
+                XML Sitemap Generator <span className="text-primary">→</span>
+              </a>
+              <a
+                href="/tools/robots-txt-generator"
+                className="rounded-xl border border-white/[0.08] bg-black/20 px-4 py-3.5 text-sm font-bold text-white/75 transition-colors hover:border-primary/40 hover:text-white"
+              >
+                Robots.txt Generator <span className="text-primary">→</span>
+              </a>
+              <a
+                href="/tools/title-tag-preview"
+                className="rounded-xl border border-white/[0.08] bg-black/20 px-4 py-3.5 text-sm font-bold text-white/75 transition-colors hover:border-primary/40 hover:text-white"
+              >
+                Title Tag Preview <span className="text-primary">→</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+      <RedirectMappingGeneratorArticle />
       </div>
     </main>
   );
 };
 
 export default RedirectMappingGenerator;
+
+/* ==================== SEO ARTICLE (Phase 1) ==================== */
+function RedirectMappingGeneratorArticle() {
+  return (
+    <>
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">Planning First</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">Redirect Mapping Is the Planning Step, Not the Server Rule</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>Redirect mapping is the planning step that comes before any server file changes. Your redirect map records every old URL, its chosen destination, its redirect type, and which rows still need a decision. It is a website migration seo deliverable, not a config file. Implementation, meaning the actual .htaccess, Nginx, or Cloudflare rule syntax, is a separate job, and RankVelt has a Bulk Redirect Generator for that output step. This page focuses on the decisions that have to be right before anyone writes rules.</p>
+          <p>That separation matters in practice. When teams skip the mapping stage, developers end up guessing pairings under deadline pressure, and guessed pairings are how you get redirect chains, mismatched topics, and retired pages quietly pointed at the homepage. A completed redirect map gives developers one reviewed source of truth. Every row has already been checked for duplicates, query strings, and host mismatches before implementation begins.</p>
+          <p>This tool supports that planning review. You paste old and new URL pairs, choose 301 or 308, and the tool flags rows that need attention: duplicate old URLs, sources with query parameters, and targets on the wrong host. The CSV export is the spreadsheet you share with stakeholders, while the Apache and Nginx exports are ready for technical review after the decisions are made.</p>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">URL Inventory</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">Start With a Complete Inventory of the Old Site</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>You cannot redirect URLs you do not know exist, and no single export lists them all. Build the inventory from four sources and merge them into one spreadsheet.</p>
+          <ul className="list-disc space-y-2 pl-6">
+            <li>A full crawl of the current site, which finds everything reachable through navigation and internal links.</li>
+            <li>A Search Console export of URLs with clicks or impressions, which catches orphaned pages that still earn visits.</li>
+            <li>Server access logs, which show what is actually being requested, including old addresses people still reach from bookmarks and email links.</li>
+            <li>Your backlink profile, which lists the pages other websites link to and therefore the highest priority rows in the whole map.</li>
+          </ul>
+          <p>Deduplicate the merged list and expect surprises. Parameter variants, legacy campaign pages, and forgotten sections usually make the real inventory larger than anyone estimated. That number often changes the launch plan, which is exactly why the inventory comes first. Normalize the variants as you merge: the www and non-www versions, http and https, and trailing slash differences can all describe the same page, and treating them as separate rows produces conflicting targets later. Paste the cleaned old URL column into this generator and start assigning destinations row by row.</p>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">Intent Matching</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">Map by Intent, Not by URL Similarity</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>The fastest way to damage a migration is to match URLs by text similarity. An old page and a new page can share words in the path while serving completely different visitor intent, and search engines judge the pairing by content, not spelling.</p>
+          <p>Match on what the visitor wanted to accomplish. A service page maps to the equivalent service page. A how-to article maps to the guide that now covers that task. A location page maps to the same city on the new structure. String matching would pair an old SEO tips article with a new design tips article because the words look close, but one reader wants search advice and the other wants design examples.</p>
+          <p>Give your url mapping spreadsheet five columns: Old URL, New URL, Intent match, Priority, and Verified. The Intent match column forces a human judgment on every row instead of a formula guess, and the Verified column tracks which rows have been tested on staging. This generator keeps that review visible at scale by flagging duplicate source URLs and rows containing query parameters, both of which usually signal intent problems worth a manual look.</p>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">Missing Equivalents</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">When an Old Page Has No New Equivalent</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>Some rows have no successor. A discontinued product line, a closed service area, or a retired campaign page may have nothing on the new site that honestly replaces it. Forcing a destination for these rows is where redirect maps go wrong.</p>
+          <p>You have three honest options, and the right one depends on the page.</p>
+          <ul className="list-disc space-y-2 pl-6">
+            <li>Redirect to the closest category or parent service page when a visitor following the old link would still find something useful there.</li>
+            <li>Return a 410 Gone status when the page was removed deliberately and nothing similar exists. A 410 tells crawlers the removal is permanent, so the URL leaves the index faster than a fresh 404 would.</li>
+            <li>Leave a clean 404 when the removal is temporary or uncertain, and make sure the error page offers navigation to real sections of the site.</li>
+          </ul>
+          <p>What devalues the map is filling these rows with the homepage just to make the spreadsheet look complete. Search engines frequently treat a redirect from a specific page to an unrelated homepage as a soft 404, which means the row transfers little value while still sending a visitor somewhere they did not choose. An honest 410 or a well chosen category page is a stronger answer than a complete looking map.</p>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">Prioritization</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">Prioritize the URLs That Carry the Most Risk</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>Before you sort anything, export your current Search Console performance data and your analytics landing page report, and save both outside the project folder. That baseline is what lets you prove after launch whether a dip is normal reprocessing or a real mapping gap, and you cannot recreate it once the old site is gone. With the baseline saved, sort the spreadsheet by external links first and search clicks second, and work from the top down.</p>
+          <p>Not every row carries equal risk, so work the map in priority order instead of alphabetical order. If the launch deadline arrives early, the rows that matter most should already be finished and verified.</p>
+          <ul className="list-disc space-y-2 pl-6">
+            <li>First priority: URLs with external links pointing at them. A page with modest traffic but several referring domains loses real link equity if it starts returning 404, and that equity is far harder to rebuild than a ranking you can reoptimize later.</li>
+            <li>Second priority: pages with organic clicks or impressions in recent months, especially landing pages that convert. These carry visible business value.</li>
+            <li>Third priority: URLs with no backlinks, no search impressions, and no recent requests in the server log. Many of these can be retired deliberately or handled after launch without damage.</li>
+          </ul>
+          <p>This is also where your 301 redirect plan stays realistic. Permanent redirects are the default for rows you map, but the plan should name which rows you intentionally leave unmapped and why. A short written reason per retired row prevents someone from quietly redirecting it to the homepage during implementation week.</p>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">Staging QA</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">Test Every Row of the Map on Staging</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>Staging is where the map gets tested against reality. Request every old URL in the spreadsheet and confirm each one returns a single permanent redirect, a 301 or 308 depending on your stack, landing on the intended destination in one hop. Automate this check if the map is large, because hand testing a sample will miss the one broken pattern that affects hundreds of rows.</p>
+          <p>Status code alone is not enough. Open the destination and check content parity: does the new page cover the same topic at similar depth? A correct 301 pointing at a thin category page still fails the intent test for visitors and for search engines.</p>
+          <ul className="list-disc space-y-2 pl-6">
+            <li>Canonical tags on staging point at final new URLs, never at staging domains.</li>
+            <li>No staging noindex tags or robots.txt blocks are present that could ship to production.</li>
+            <li>The staging XML sitemap lists only new URLs, with no old or staging addresses mixed in.</li>
+            <li>Internal links on the new site point at new URLs, not at old ones that will redirect.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">Post-Launch</p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">Monitor the Map After Launch in Search Console</h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>After launch, Search Console becomes your monitoring dashboard. Submit the new XML sitemap immediately, and if the domain changed, use the Change of Address tool only after the redirects are live and verified. Watch the indexed page count daily during the first week and compare it against the pre-migration baseline you exported. A new indexed count that stalls well below the old total signals a technical block, not normal patience.</p>
+          <p>Work the 404 reports in priority order. When Search Console reports not found errors, check whether the URL had backlinks or traffic in your inventory. Rows that matter get a proper redirect added. Rows that were retired deliberately can stay as they are, but record the decision so nobody re-adds a guess later. Check crawl stats too: healthy crawling of new URLs within the first days means the migration is being picked up, long before rankings tell you anything useful.</p>
+          <p>Expect some ranking fluctuation while Google recrawls and reassociates every URL. That noise is normal and usually settles as processing completes. What is not normal is a steady rise in crawl errors or pages dropping out of the index week after week, and both point back to gaps in the redirect map. Keeping the map updated as a living document makes those gaps easy to find and fix.</p>
+        </div>
+      </section>
+    </>
+  );
+}

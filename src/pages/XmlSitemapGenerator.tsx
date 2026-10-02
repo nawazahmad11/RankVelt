@@ -18,7 +18,7 @@ import {
   Sparkles,
 } from "lucide-react";
 
-const SITE_URL = "https://www.rankvelt.com";
+const SITE_URL = "https://rankvelt.com";
 
 type SitemapAnalysis = {
   validUrls: string[];
@@ -376,7 +376,7 @@ const XmlSitemapGenerator = () => {
     const pageTitle = "Free XML Sitemap Generator | RankVelt";
 
     const pageDescription =
-      "Free XML sitemap generator: build a clean sitemap from canonical URLs, check duplicates and invalid entries, then copy or download sitemap.xml.";
+      "Create a clean XML sitemap from your canonical website URLs. Check duplicates, invalid entries, off-domain URLs, copy the XML, and download sitemap.xml with RankVelt's free generator.";
 
     document.title = pageTitle;
 
@@ -949,9 +949,309 @@ const XmlSitemapGenerator = () => {
             </Link>
           </div>
         </section>
+
+        <section className="mx-auto mt-8 max-w-4xl">
+          <div className="rounded-2xl border border-white/[0.08] bg-white/[0.025] p-6 sm:p-8">
+            <h2 className="text-xl font-black text-white">Related free tools</h2>
+            <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <a
+                href="/tools/robots-txt-generator"
+                className="rounded-xl border border-white/[0.08] bg-black/20 px-4 py-3.5 text-sm font-bold text-white/75 transition-colors hover:border-primary/40 hover:text-white"
+              >
+                Robots.txt Generator <span className="text-primary">→</span>
+              </a>
+              <a
+                href="/tools/bulk-redirect-generator"
+                className="rounded-xl border border-white/[0.08] bg-black/20 px-4 py-3.5 text-sm font-bold text-white/75 transition-colors hover:border-primary/40 hover:text-white"
+              >
+                Bulk Redirect Generator <span className="text-primary">→</span>
+              </a>
+              <a
+                href="/tools/schema-markup-generator"
+                className="rounded-xl border border-white/[0.08] bg-black/20 px-4 py-3.5 text-sm font-bold text-white/75 transition-colors hover:border-primary/40 hover:text-white"
+              >
+                Schema Generator <span className="text-primary">→</span>
+              </a>
+              <a
+                href="/tools/title-tag-preview"
+                className="rounded-xl border border-white/[0.08] bg-black/20 px-4 py-3.5 text-sm font-bold text-white/75 transition-colors hover:border-primary/40 hover:text-white"
+              >
+                Title Tag Preview <span className="text-primary">→</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+      <XmlSitemapGeneratorArticle />
       </div>
     </main>
   );
 };
 
 export default XmlSitemapGenerator;
+
+/* ==================== SEO ARTICLE (Phase 1) ==================== */
+function XmlSitemapGeneratorArticle() {
+  return (
+    <>
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">
+          XML Sitemap Generator
+        </p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">
+          What a Sitemap Does, and What It Cannot Do
+        </h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>
+            An XML sitemap is a list of the pages you most want search engines
+            to find, written in a format crawlers can read quickly. It helps
+            discovery: a new page with few internal links gets noticed sooner
+            when it sits in your sitemap.xml. It does not force anything.
+            Google still decides what to crawl and index based on quality,
+            links, and demand, so treat the file as a well-organized
+            suggestion, not a guarantee.
+          </p>
+          <p>
+            This generator turns the URLs you enter into a valid urlset,
+            checks them for duplicates and off-domain mistakes, and lets you
+            download a clean sitemap.xml. That is the right division of labor.
+            You decide which pages matter; the tool handles the syntax so a
+            stray character or broken tag does not quietly invalidate the
+            whole file.
+          </p>
+          <p>
+            Sitemaps earn their keep most clearly on new websites with no
+            backlinks yet, on large sites where some pages sit many clicks
+            from the homepage, and on pages that are rich in images or video
+            but light on text. A small site that is fully interlinked may see
+            little change, and that is normal. The file costs you an hour at
+            most; the discovery shortcut it gives crawlers is worth it
+            whenever your internal links do not yet do the job alone.
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">
+          Before You Generate
+        </p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">
+          Your CMS May Already Build One
+        </h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>
+            Honesty first: if your site runs on WordPress, an SEO plugin or
+            WordPress itself likely publishes a sitemap already, and Shopify
+            serves an automatic sitemap for every store. Building a second
+            one by hand on those platforms adds maintenance and can create a
+            conflicting file. Check yoursite.com/sitemap.xml before you
+            build anything.
+          </p>
+          <p>
+            A manual sitemap generator earns its place on static sites,
+            custom-coded sites, microsites, and quick launches where no CMS
+            manages the file for you. It is also the right tool when you
+            create XML sitemap files after a migration and need a precise,
+            hand-picked URL list today rather than whenever a plugin gets
+            configured. Decide which pages deserve discovery, generate the
+            file, and you control exactly what search engines are told to
+            look at.
+          </p>
+          <p>
+            If your CMS already publishes a sitemap, open it and read what
+            is actually inside before deciding anything. Auto-generated files
+            sometimes list attachment pages, thin archive pages, or other
+            URLs you would never choose by hand. When that happens, fix the
+            plugin or CMS settings rather than running a second manual file
+            alongside it. One accurate sitemap, kept current, is the goal,
+            whichever tool produces it.
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">
+          File Limits
+        </p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">
+          The 50,000 URL and 50MB Rules
+        </h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>
+            One sitemap file can hold at most 50,000 URLs, and the
+            uncompressed file cannot exceed 50MB. Those are protocol limits,
+            and search engines will simply stop reading beyond them. If your
+            URL list grows past either ceiling, split it into several files
+            grouped by section, such as pages, posts, and products, and
+            connect them with a sitemap index file that lists each child
+            sitemap.
+          </p>
+          <p>
+            Splitting has a practical benefit beyond size. Separate files make
+            troubleshooting easier: when Search Console reports fetch problems
+            or a drop in discovered URLs, you can see which section is
+            affected instead of digging through one enormous file. For most
+            small and mid-sized sites, one tidy file stays far below the
+            limits, and that is fine. The limits matter the day you stop
+            checking, so keep the file lean and current.
+          </p>
+          <p>
+            While you are looking at the file contents, skip the decorative
+            fields. Google ignores the priority and changefreq values
+            entirely, so this generator leaves them out rather than filling
+            your file with numbers that mean nothing. The one optional field
+            Google does use is lastmod, the date a page last changed in a
+            meaningful way. If that date is consistently accurate, Google may
+            use it to schedule recrawls. If every URL suddenly carries
+            today&apos;s date though nothing changed, the field loses
+            credibility for the whole site, and engines learn to ignore it.
+            That is why this tool applies one shared date to a batch only,
+            and why you should use it only when that batch genuinely changed
+            together.
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">
+          URL Quality
+        </p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">
+          A Sitemap Is a List of Your Priorities
+        </h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>
+            Every URL in your sitemap sends a message: this page is
+            canonical, indexable, and worth crawling. Keep that message
+            consistent. Include only live URLs that return a successful
+            response, use the HTTPS version, and match the preferred canonical
+            address exactly, including trailing slash choices. Redirects,
+            error pages, parameterized duplicates, and noindex pages
+            contradict the message and waste crawler attention.
+          </p>
+          <p>
+            Also keep the sitemap in step with your internal linking. A page
+            listed in the sitemap but linked from nowhere still looks
+            unimportant, because crawlers weigh both signals. If a page
+            matters enough to list, it matters enough to link from relevant
+            content. When URLs change, update both the links and the file
+            together; stale sitemap entries pointing at old addresses are
+            worse than a slightly shorter list.
+          </p>
+          <p>
+            Think of it as a three-way agreement. Your sitemap names a
+            preferred URL, your canonical tag names the same URL, and your
+            internal links point to that same URL. When all three agree,
+            crawlers get one clear instruction. When they disagree, Google
+            picks its own version, and it may not pick the one you wanted.
+            Most sitemap problems are really consistency problems wearing a
+            technical disguise.
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">
+          Robots.txt
+        </p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">
+          Your Sitemap and Robots.txt Must Agree
+        </h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>
+            These two files talk to the same crawlers, so they should not
+            contradict each other. Listing a URL in your sitemap while
+            robots.txt blocks crawling of that path sends a mixed signal: you
+            are highlighting a page the crawler is not allowed to read. Before
+            submitting, scan for overlaps and remove blocked URLs from the
+            sitemap, or remove the block if the page should be crawlable
+            after all.
+          </p>
+          <p>
+            Then use robots.txt as a free announcement channel. Add one line,
+            Sitemap: followed by the full address of your file, and every
+            crawler that reads robots.txt learns where the map lives without
+            waiting for a Search Console submission. You may list more than
+            one sitemap line if you run split files. It takes ten seconds and
+            helps engines beyond Google as well.
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">
+          Specialized Sitemaps
+        </p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">
+          Image, Video, and News Sitemaps
+        </h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>
+            Plain URL sitemaps cover most websites, but the protocol has
+            extensions for media. An image sitemap points search engines at
+            important images they might miss, which helps image search
+            discovery for portfolios, product catalogs, and galleries. A
+            video sitemap does the same for hosted video, and a news sitemap
+            is reserved for recently published articles on news sites.
+          </p>
+          <p>
+            Most small websites do not need any of these on day one. Add them
+            when the media is a real traffic channel for you, not because a
+            checklist mentioned them. A plain, accurate sitemap.xml submitted
+            and referenced in robots.txt already covers the discovery job;
+            extensions are an optimization for later, not a launch
+            requirement.
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">
+          Submission
+        </p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">
+          Submit It, Then Watch the Report
+        </h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>
+            When you submit a sitemap to Google and other engines, the steps
+            are short. Upload the downloaded sitemap.xml to your site root so
+            it loads at yoursite.com/sitemap.xml. In Google Search Console,
+            open the Sitemaps section, enter the file name, and submit. Do the
+            same in Bing Webmaster Tools; one submission there also supports
+            other engines that draw on Bing. Then return after a few days and
+            read the status, looking for fetch errors and how many URLs were
+            discovered.
+          </p>
+          <p>
+            Treat that report as feedback, not a scoreboard. Discovered URLs
+            that sit unindexed usually point to thin content or weak internal
+            links, and the sitemap has done its job by surfacing the problem.
+            Fix the pages, keep the file accurate as the site changes, and
+            resubmit only when the list meaningfully changes. A small, honest
+            sitemap maintained over time beats a bloated one uploaded once and
+            forgotten.
+          </p>
+          <p>
+            Build a small maintenance habit around the file. When you
+            publish a new important page, add its URL here and to your
+            navigation or related content. When you remove or move a page,
+            take the old address out the same day. A manual sitemap goes
+            stale silently, and a stale sitemap quietly teaches crawlers that
+            your list cannot be trusted. Five minutes of upkeep whenever the
+            site changes keeps the file doing its job for years.
+          </p>
+          <p>
+            If the report shows an error instead of a success, do not
+            resubmit blindly. A fetch failure usually means the address is
+            wrong, the file returns an error response, or robots.txt blocks
+            the file itself. Open the sitemap address in your browser first
+            and confirm it loads. Parse errors point to malformed XML, most
+            often an unescaped character in a URL, which is exactly what a
+            generator protects you from. Fix the cause, then submit once.
+          </p>
+        </div>
+      </section>
+    </>
+  );
+}

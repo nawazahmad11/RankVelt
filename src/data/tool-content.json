@@ -270,7 +270,96 @@
         "q": "How do I calculate my break-even selling price?",
         "a": "Your break-even selling price is the point where revenue covers the costs included in your calculation. Add product cost, fees, shipping, fulfilment, ad spend, and other direct costs to estimate the minimum price needed before profit."
       }
-    ]
+    ],
+    "article": {
+      "sections": [
+        {
+          "heading": "How this profit margin calculator works",
+          "paragraphs": [
+            "A profit margin calculator takes the numbers behind a single sale and shows you what is actually left after the sale happens. You enter the selling price, the product cost, the shipping cost, the payment processing fee, and your advertising spend per sale. The tool adds those costs together and compares the total with your selling price.",
+            "That comparison is the part most sellers skip. It is easy to look at a product that costs 35 and sells for 100 and assume the business is healthy. The calculator forces every cost into the open, including the ones that only appear after a customer checks out, so you see the margin you really keep.",
+            "The result gives you two things. First, the margin direction: whether the sale is making money, barely breaking even, or quietly losing money once everything is counted. Second, your break even point: the price, or the ad spend level, at which profit drops to zero. Those two numbers drive almost every pricing and advertising decision you make afterward.",
+            "Treat the output as a planning estimate, not a promise. Real costs move: shipping rates change, ad auctions get more expensive, and return rates vary by product. Run the calculator whenever one of those inputs changes."
+          ]
+        },
+        {
+          "heading": "Margin and markup are not the same number",
+          "paragraphs": [
+            "The most common pricing mistake in small business has nothing to do with math skills. It comes from mixing up two words that sound alike: margin and markup. Both describe the gap between what a product costs you and what you sell it for, but they measure that gap from opposite ends.",
+            "Margin measures profit as a share of the selling price. Markup measures profit as a share of your cost. Same sale, same dollars, two very different percentages. Here is one product worked both ways:",
+            "- Your product costs 40 and you sell it for 100. Your profit is 60.",
+            "- Margin: 60 divided by 100, which is a 60 percent margin.",
+            "- Markup: 60 divided by 40, which is a 150 percent markup.",
+            "The trap appears when you plan with one and calculate with the other. Say you decide you need a 40 percent margin, and you start with a cost of 50. If you apply a 40 percent markup instead, you price the product at 70. Your profit is 20, and 20 divided by 70 is a margin of about 28.6 percent. You gave away more than a quarter of your intended profit without noticing.",
+            "Two rules of thumb keep you safe. First, for any single sale, the margin percentage is always smaller than the markup percentage, because the selling price is always the bigger number. Second, margin can never go above 100 percent, while markup has no ceiling."
+          ]
+        },
+        {
+          "heading": "The costs sellers forget to enter",
+          "paragraphs": [
+            "Most wrong margins are not calculation errors. They are missing-cost errors. The seller enters the product cost and the price, sees a comfortable number, and never adds the costs that arrive later.",
+            "These are the costs that most often get left out:",
+            "- Returns: a returned item costs you the outbound shipping, the return shipping, inspection time, and sometimes the product itself if it cannot be resold.",
+            "- Packaging: boxes, mailers, inserts, labels, and tape are cheap per unit, but they are not free, and they scale with every order.",
+            "- Payment processing fees: your payment provider takes a cut of every transaction, usually on the full amount the customer paid, including tax and shipping.",
+            "- The shipping gap: if you charge the customer 5 for shipping and it costs you 11, that difference comes out of your margin.",
+            "- Platform and marketplace fees: selling through a marketplace or app store means referral fees and commissions on top of your other costs.",
+            "- Discount codes: a standing welcome code reduces your average selling price on every order that uses it.",
+            "- Freight and storage: getting inventory to your warehouse, and keeping it there, is part of what each unit really costs you.",
+            "None of these costs looks dramatic on its own. Stacked together on one order, they routinely turn a healthy looking margin into a break even sale. Add every cost you can think of when you enter your numbers, even rough estimates."
+          ]
+        },
+        {
+          "heading": "A worked example, start to finish",
+          "paragraphs": [
+            "Formulas stay abstract until you put real numbers through them. Take a simple product and walk through exactly what the calculator does:",
+            "- Selling price: 100",
+            "- Product cost: 35",
+            "- Shipping cost to you: 10",
+            "- Packaging: 2",
+            "- Payment fee: 3",
+            "- Advertising spend per sale: 25",
+            "Add the costs: 35 plus 10 plus 2 plus 3 plus 25 equals 75. Subtract from the price: 100 minus 75 leaves 25 in profit. Your profit margin percentage is 25 divided by 100, so 25 percent. That is the number the calculator reports, and it is very different from the 65 you would get if you only compared price with product cost.",
+            "Now change one input. Suppose advertising spend per sale climbs from 25 to 40. Total costs become 90, profit falls to 10, and your margin drops to 10 percent. Same product, same price, same supplier. The only thing that moved was the cost of winning the customer.",
+            "Run it the other way. Raise the price to 110 while ad spend stays at 40, and costs total 90, leaving 20 in profit and a margin of about 18 percent. This is the real value of the tool: it lets you test decisions before you commit to them."
+          ]
+        },
+        {
+          "heading": "Break even pricing and what it means for your ads",
+          "paragraphs": [
+            "Break even pricing asks a blunt question: at what point does this sale stop making money? Your break even price is simply the total of all costs tied to the sale. If one order costs you 75 to fulfil, any price below 75 loses money no matter how many units you sell. Volume never rescues a negative margin, it multiplies it.",
+            "The same idea controls your advertising. Work out how much room is left after every non-advertising cost is paid. If a 100 sale leaves 40 after product, shipping, packaging, and fees, then 40 per sale is the absolute ceiling for ad spend. Spend more than that on average and the campaign loses money even if it generates impressive revenue numbers.",
+            "Marketers often express this as break even ROAS, return on ad spend. Divide the selling price by the maximum ad spend you can afford. In the example above, 100 divided by 40 gives 2.5, meaning you need at least 2.5 in revenue for every 1 spent on ads just to break even. Anything below that line is a loss, anything above it is profit.",
+            "Treat break even as a floor, not a goal. A campaign that exactly breaks even still costs you time, risk, and cash flow, and leaves nothing for overheads like software or rent. Know your floor precisely, then set your real targets comfortably above it."
+          ]
+        },
+        {
+          "heading": "Signs a product looks profitable but is not",
+          "paragraphs": [
+            "Some products pass a quick price minus cost check and still lose money month after month. Watch for these patterns:",
+            "- Your return rate is climbing. Each return quietly doubles your shipping cost for that order and often writes off the product.",
+            "- Sales only move when a discount is live. If full price does not sell, your real average price is the discounted one, and that is the price your margin should be calculated on.",
+            "- You offer free shipping to stay competitive, but shipping has become your second biggest cost after the product itself.",
+            "- Your ad account reports strong revenue while your bank balance stays flat. That usually means ad spend is consuming the margin the product used to keep.",
+            "- Fees are stacking. Payment fees, marketplace commissions, app subscriptions, and fulfilment charges each take a small slice, and together they can remove most of the profit.",
+            "- One hero product carries the whole store. If a single product generates most of your profit, a cost increase or a cheaper competitor can hurt the entire business at once.",
+            "If two or three of these sound familiar, enter your real numbers into the calculator product by product. The products causing the problem are usually not the ones you suspect."
+          ]
+        },
+        {
+          "heading": "What to do with your result",
+          "paragraphs": [
+            "A margin number is only useful if it changes a decision. If your result comes back thin or negative, you have four levers, and the calculator lets you test each one before touching your store:",
+            "- Raise the price, or raise the perceived value first so the higher price makes sense.",
+            "- Reduce the product cost by renegotiating with your supplier, ordering differently, or simplifying the product.",
+            "- Cut the cost of the sale: cheaper packaging, better shipping rates, fewer stacked fees.",
+            "- Lower the cost of winning the customer with better product pages, better targeting, and traffic sources that do not charge you for every click.",
+            "Run this calculator before every sale event, ad campaign, and supplier price change. If you want a second pair of eyes on where your store is leaking money, traffic, or both, RankVelt can review your ecommerce SEO and page structure and show you where the recoverable margin is hiding.",
+            "Run this calculator before every sale event, every new ad campaign, and every supplier price change. If you want a second pair of eyes on where your store is leaking money, traffic, or both, RankVelt can review your ecommerce SEO and page structure and show you where the recoverable margin is hiding."
+          ]
+        }
+      ]
+    }
   },
   "policy-generator": {
     "title": "Before You Publish Your Policy",
@@ -314,7 +403,85 @@
         "q": "Does Shopify automatically make my refund policy legally correct?",
         "a": "No. Shopify can help you add policy pages, but the wording still needs to accurately reflect your own products, returns, shipping, payments, customer support process, and applicable legal requirements."
       }
-    ]
+    ],
+    "article": {
+      "sections": [
+        {
+          "heading": "What this generator gives you, and what it does not",
+          "paragraphs": [
+            "This tool builds starter drafts of the policy pages a website or online store needs: a privacy policy, a refund policy, and terms and conditions. You answer basic questions about your business, and the generator assembles structured wording you can adapt, instead of leaving you staring at a blank page.",
+            "Read this part carefully: everything this tool produces is a starter draft, not legal advice. A generated document does not guarantee that your business complies with the laws that apply to you, because no generator knows your full situation. Every business should have its published policies reviewed by a qualified lawyer, especially if you sell internationally, run subscriptions, collect sensitive information, or operate in a regulated industry like health, finance, or services for children.",
+            "What the draft does give you is a solid working structure: the right sections, in the right order, written around your actual products, payments, and data practices. That structure is the hard part for most small business owners. Edit it honestly, have it checked, and then publish it. That is a far stronger position than launching with no policies at all, or with wording copied from a random website."
+          ]
+        },
+        {
+          "heading": "The policy pages a store actually publishes",
+          "paragraphs": [
+            "A small online store usually ends up publishing four policy pages. Each one answers a different customer question, and each one protects you in a different way.",
+            "Your privacy policy explains what personal information you collect, why you collect it, who you share it with, and how customers can ask questions about it. If you take orders, run analytics, use a contact form, or collect email addresses for a newsletter, you are collecting personal data and this page is not optional.",
+            "Your terms and conditions set the rules of the relationship: what you sell, how orders are accepted, how payment works, what customers may and may not do with your products or website content, and what happens when something goes wrong. This is the document you point to when a dispute starts.",
+            "Your refund and returns policy tells customers how sending something back works, and your shipping policy explains dispatch times, delivery estimates, costs, and what happens with delays or international orders. Many stores fold shipping into the refund page or the FAQ, but customers look for it before buying, and payment providers look for it when they review your store."
+          ]
+        },
+        {
+          "heading": "What your refund policy must state clearly",
+          "paragraphs": [
+            "The refund policy is the page customers actually read, usually before they buy and again when something goes wrong. Vague wording here causes chargebacks, angry emails, and bad reviews. A clear policy answers these questions without making the customer guess:",
+            "- How long does the customer have to request a return, starting from delivery?",
+            "- What condition must the item be in, and what items cannot be returned at all, such as final sale products, gift cards, digital downloads, or hygiene items?",
+            "- Who pays for return shipping, you or the customer, and are there exceptions for faulty or incorrect items?",
+            "- How is the refund paid: original payment method, store credit, or exchange?",
+            "- How long does the refund take after you receive the item back?",
+            "- How does the customer start a return: which email, which form, and what information do they need to include?",
+            "- What happens if the item arrives damaged, faulty, or different from what was ordered?",
+            "Match this page to what you actually do. If your warehouse cannot process refunds in three days, do not publish a promise that says it can. Customers forgive slow processes they were warned about. They do not forgive surprises."
+          ]
+        },
+        {
+          "heading": "GDPR and CCPA, in plain language",
+          "paragraphs": [
+            "Two privacy laws come up more than any others for online sellers, and both can apply to a business far from their home territory.",
+            "The GDPR is the European Union privacy law, and it also matters in the UK through its local version. In plain terms, it applies when you sell to, deliver to, or track people located there, even if your business is based somewhere else entirely. It expects you to have a lawful reason for using personal data, to explain that use in your privacy policy, to respect rights like access and deletion requests, and to ask for consent before placing non-essential cookies such as advertising and analytics trackers.",
+            "The CCPA, updated by the CPRA, is the California privacy law. It gives California residents the right to know what personal information a business collects, to ask for it to be deleted, and to opt out of the sale or sharing of their information. Qualifying businesses that sell or share data need a visible way for people to exercise that opt out, commonly a link titled \"Do Not Sell or Share My Personal Information\".",
+            "Do not treat this section as a compliance test. Thresholds, definitions, and duties change over time, and other regions have their own laws. Use this as your plain language starting point: know where your customers are, say honestly what data you collect and why, give people a way to contact you about it, and let a lawyer confirm the details for the markets you actually serve."
+          ]
+        },
+        {
+          "heading": "Why copying a policy from another site backfires",
+          "paragraphs": [
+            "Copying the policy pages of a bigger store feels fast and safe. It is neither. That document describes their business, not yours, and the differences are exactly where trouble starts.",
+            "Their policy names the tools and services they use: their analytics setup, their email platform, their payment providers, their advertising pixels. Your stack is different, so the copied policy ends up describing data practices you do not have and missing the ones you do. If a customer, a payment provider, or a regulator ever compares the page with your real behaviour, the mismatch becomes your problem, not the original author's.",
+            "There are other risks. The text itself belongs to whoever wrote it, so republishing it word for word copies their document as well as their mistakes, which may include outdated legal references, promises their business can keep but yours cannot, and refund windows that do not match your operation. And if they update their policies later, yours silently falls behind. Writing your own draft from a generator, based on your actual practices, takes a little longer and holds up much better."
+          ]
+        },
+        {
+          "heading": "Mistakes that make a generated draft weak",
+          "paragraphs": [
+            "A generated policy fails most often through laziness, not through the generator itself. These are the mistakes to avoid when you turn the draft into a published page:",
+            "- Publishing with placeholders still in the text: blank business names, sample addresses, and bracketed notes left in by accident.",
+            "- Policies that contradict the checkout: a policy promising 30 day refunds while the product page says all sales are final.",
+            "- No contact method anywhere in the document, so customers cannot ask a privacy question or start a return.",
+            "- Hiding the pages. If customers cannot find your policies from the footer or checkout, the pages do not build trust and may not satisfy platform requirements.",
+            "- Writing the policy once and never touching it again, even after adding a new payment method, a chat widget, an analytics tool, or a loyalty programme.",
+            "- Promising more than you can deliver, such as deleting all data immediately or shipping refunds within a timeframe your team cannot meet.",
+            "Every one of these is fixable in one careful editing session. Read the draft against your actual store, field by field, and change anything that does not describe your business truthfully."
+          ]
+        },
+        {
+          "heading": "Before you publish: a short review checklist",
+          "paragraphs": [
+            "When your drafts are edited and you are close to publishing, run through this final check:",
+            "- Business name, address, and contact email are correct and consistent on every page.",
+            "- The privacy policy names the categories of data you really collect and the main tools you really use.",
+            "- Refund timelines, return windows, and shipping estimates match what your team actually does.",
+            "- Policy pages are linked in your website footer and reachable during checkout.",
+            "- A last updated date appears on each policy, so future changes are visible.",
+            "Then take the step that turns a good draft into a defensible one: send the documents to a qualified lawyer for review before they go live, or as soon as the business starts trading seriously. The cost of a short review is small compared with the cost of a dispute, a frozen payment account, or a regulator's questions.",
+            "Policies are part of your store's trust system, and trust shows up in sales. If your store needs the rest of that system in place, including product pages, technical SEO, and the structure search engines reward, RankVelt can audit your store and map out what to fix first."
+          ]
+        }
+      ]
+    }
   },
   "guest-post-finder": {
     "title": "",

@@ -13,7 +13,7 @@ import {
   Sparkles,
 } from "lucide-react";
 
-const SITE_URL = "https://www.rankvelt.com";
+const SITE_URL = "https://rankvelt.com";
 
 type PreviewMode = "desktop" | "mobile";
 
@@ -724,9 +724,312 @@ Page URL: https://${displayUrl}`;
             </Link>
           </div>
         </section>
+
+        <section className="mx-auto mt-8 max-w-4xl">
+          <div className="rounded-2xl border border-white/[0.08] bg-white/[0.025] p-6 sm:p-8">
+            <h2 className="text-xl font-black text-white">Related free tools</h2>
+            <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <a
+                href="/tools/title-tag-preview"
+                className="rounded-xl border border-white/[0.08] bg-black/20 px-4 py-3.5 text-sm font-bold text-white/75 transition-colors hover:border-primary/40 hover:text-white"
+              >
+                Title Tag Preview <span className="text-primary">→</span>
+              </a>
+              <a
+                href="/tools/open-graph-preview"
+                className="rounded-xl border border-white/[0.08] bg-black/20 px-4 py-3.5 text-sm font-bold text-white/75 transition-colors hover:border-primary/40 hover:text-white"
+              >
+                Open Graph Preview <span className="text-primary">→</span>
+              </a>
+              <a
+                href="/tools/schema-markup-generator"
+                className="rounded-xl border border-white/[0.08] bg-black/20 px-4 py-3.5 text-sm font-bold text-white/75 transition-colors hover:border-primary/40 hover:text-white"
+              >
+                Schema Generator <span className="text-primary">→</span>
+              </a>
+              <a
+                href="/tools/robots-txt-generator"
+                className="rounded-xl border border-white/[0.08] bg-black/20 px-4 py-3.5 text-sm font-bold text-white/75 transition-colors hover:border-primary/40 hover:text-white"
+              >
+                Robots.txt Generator <span className="text-primary">→</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+      <MetaTitleCheckerArticle />
       </div>
     </main>
   );
 };
 
 export default MetaTitleDescriptionChecker;
+
+/* ==================== SEO ARTICLE (Phase 1) ==================== */
+function MetaTitleCheckerArticle() {
+  return (
+    <>
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">
+          Meta Title Checker
+        </p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">
+          Character Count Is a Shortcut, Pixel Width Is the Limit
+        </h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>
+            Most people judge a title by counting characters, and that is
+            exactly where the trouble starts. Google does not reserve a fixed
+            number of character slots for your title. It reserves a strip of
+            screen space, roughly 600 pixels wide on desktop, and your title
+            is cut wherever that space runs out. A character counter cannot
+            see that difference, which is why the same 55 characters can
+            display in full on one page and truncate on another.
+          </p>
+          <p>
+            Letters are not equal width. A title packed with wide characters
+            like W, M, and capital letters fills the strip faster than one
+            built from narrow characters like i, l, and t. Numbers, brackets,
+            and separators also consume space. Front-load your most important
+            words, because the end of the title is the part most likely to
+            disappear. When this meta title checker flags a title as risky, it
+            is estimating that pixel pressure, not just tallying letters.
+          </p>
+          <p>
+            The practical routine is simple: write the title, check it, then
+            read the truncated version out loud. If the cut-off version still
+            tells a searcher what the page offers, you are in decent shape. If
+            the meaningful part sits after the cut, rewrite. Tools estimate
+            display, they do not control it, so leave a small safety margin
+            instead of writing right up to the edge.
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">
+          Meta Description Checker
+        </p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">
+          Write a Description Google Wants to Keep
+        </h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>
+            Google frequently replaces your meta description with text pulled
+            from the page itself, usually the passage that best matches the
+            search query. That surprises people, but it is not random. If your
+            description is vague, off-topic, or crammed with keywords, the
+            engine has little reason to use it. A meta description checker
+            helps you write the version most worth keeping: specific,
+            accurate, and written around the words searchers actually type.
+          </p>
+          <p>
+            Build your description like a short answer. Open with what the
+            visitor gets, add the detail that proves it, and close with a next
+            step when it fits. Keep the essential promise in the first 120
+            characters or so, because mobile results show less text than
+            desktop results. If your key point sits at character 150, a phone
+            user may never see it.
+          </p>
+          <p>
+            Also make sure the opening of your page earns its own snippet.
+            When Google does pull from the page, it usually reaches for the
+            introduction, a heading, or a clear summary line. If those first
+            lines are sharp, even a rewritten snippet tends to represent the
+            page well. Think of your description and your first paragraph as
+            two drafts of the same promise, and make both honest.
+          </p>
+          <p>
+            Resist decoration while you write. All caps, repeated
+            punctuation, and strings of brackets make a description look like
+            an ad from a decade ago and give Google another reason to replace
+            it. One clear sentence pattern works almost everywhere: what the
+            page is, who it helps, and what the visitor can do next. If the
+            description still reads well with the adjectives removed, it is
+            probably strong enough to survive.
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">
+          Click-Through Rate
+        </p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">
+          Your Snippet Is an Ad You Did Not Pay For
+        </h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>
+            Ranking gets you into the list. The snippet earns the click. Treat
+            the title as your headline and the description as supporting ad
+            copy: together they should tell a searcher, in one glance, why
+            this page is the right answer. That framing changes what you
+            write. A plain service label is forgettable. A title that names
+            the service, the audience, and a concrete benefit gives the
+            searcher a reason to choose you over the nine results around you.
+          </p>
+          <p>
+            Match the wording to the search intent behind the page. A buying
+            page should sound commercial and concrete, with true offers or
+            service details. A guide should promise a clear outcome, a
+            process, or an answer. Inflated claims tend to backfire: searchers
+            have learned to skip snippets that read like bait, and titles that
+            look sensational are candidates for a Google rewrite.
+          </p>
+          <ul className="list-disc space-y-2 pl-6">
+            <li>Put the page main topic in the first few words of the title</li>
+            <li>Use numbers or brackets only when they genuinely clarify the content</li>
+            <li>Name the audience when the page serves a specific one</li>
+            <li>Make one promise per page, and keep it in the snippet</li>
+          </ul>
+          <p>
+            After you draft, paste your title into this title tag checker
+            alongside the titles of pages already ranking for your target
+            search. Read them as a searcher would. If yours says the same
+            thing in the same order as everyone else, sharpen the angle, not
+            the adjectives.
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">
+          Page Formulas
+        </p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">
+          Title Formulas That Fit the Page Type
+        </h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>
+            Different pages do different jobs, so one formula does not fit
+            all. Use these starting patterns, then adapt the wording to your
+            actual offer and market. The brand name is optional in each
+            pattern; add it where recognition matters more than space.
+          </p>
+          <ul className="list-disc space-y-2 pl-6">
+            <li>Homepage: [Brand] | [Primary service or product] for [Audience or location]. The brand leads here because recognition is the point.</li>
+            <li>Service page: [Service] in [Location]: [Outcome or specialty] | [Brand]</li>
+            <li>Product page: [Product name] [Key attribute, size, or material] | [Brand or store]</li>
+            <li>Category page: [Category]: [What shoppers can compare, choose, or solve]</li>
+            <li>Guide or blog post: [Question answered or outcome delivered], with a number only when the content supports it</li>
+          </ul>
+          <p>
+            Two habits keep these formulas working. First, keep the topic
+            before the brand on inner pages, because searchers scan for their
+            problem, not your logo. Second, when a page targets a specific
+            search, mirror the language of that search early in the title.
+            Run each draft through the title tag checker and confirm the
+            important words survive truncation before you publish.
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">
+          Mobile and Desktop
+        </p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">
+          One Page Shows Two Different Snippets
+        </h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>
+            Your snippet is not one snippet. Desktop results give the title
+            roughly 600 pixels before cutting it, while phones show the title
+            and description in a narrower column and cut the description much
+            earlier, often around 120 characters. A title that looks perfect
+            on a wide monitor can still lose its ending on a phone, and most
+            searches happen on phones.
+          </p>
+          <p>
+            That is why this tool keeps a desktop and mobile switch on the
+            serp preview. Check both before publishing. On mobile, verify
+            three things: the meaningful words in the title survive, the
+            description still makes sense when stopped short, and the visible
+            URL looks clean and readable. If any of the three fail on the
+            small preview, shorten the front of the text rather than trimming
+            from the middle.
+          </p>
+          <p>
+            Judge meta tag length by what the preview shows, not by a
+            character target alone. Google varies the available space by
+            device, font rendering, ads, and result features, so treat both
+            previews as estimates. The goal is a title and description that
+            stays clear under the tighter of the two, with the core message
+            carried early in both fields.
+          </p>
+          <p>
+            One more space thief to plan around: Google often shows your site
+            name and favicon above the title. That block identifies you, so
+            repeating the full brand story inside the title wastes pixels you
+            could spend on the topic. Keep the title focused on the page
+            itself, and let the site name line do the branding work.
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">
+          Publishing Workflow
+        </p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">
+          A Checking Routine You Can Repeat
+        </h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>
+            Good metadata is a habit, not a one-time fix. Run this short
+            routine for every important page: draft from search intent, check
+            pixel pressure with the meta title checker, read both previews,
+            then compare against the pages already ranking for your target
+            search. Five minutes per page before publishing beats a rewrite
+            after the page has settled into the results.
+          </p>
+          <p>
+            Revisit your top pages on a regular cycle. CMS updates, theme
+            changes, and site migrations can quietly wipe or duplicate title
+            tags, and pages drift as your offer changes. Pull your titles into
+            a spreadsheet, scan for duplicates, missing descriptions, and
+            pages where every title follows the same template. Those are fast,
+            unglamorous wins.
+          </p>
+          <p>
+            Finally, remember what the checker cannot tell you. It measures
+            length and likely display; it cannot judge whether the page
+            deserves the click. That judgment comes from the content behind
+            the snippet. Use the tool to remove avoidable truncation, then
+            spend the effort you saved on the page itself, where rankings and
+            conversions are actually decided.
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-4xl">
+        <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">
+          After Publishing
+        </p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">
+          Measure What Searchers Actually See
+        </h2>
+        <div className="mt-5 space-y-5 text-base leading-relaxed text-white/75">
+          <p>
+            Publishing is the midpoint, not the finish. A few weeks later,
+            open Search Console and look at the queries bringing impressions
+            to the page. If Google shows a different title than the one you
+            wrote, do not panic and do not rewrite everything. A consistent
+            rewrite usually means your title and your on-page heading tell
+            different stories, or the title carries boilerplate the engine
+            trims away. Align those two first, then re-check the preview.
+          </p>
+          <p>
+            When you do change a title, change one thing at a time and give
+            it room to be judged. Compare the page click-through rate before
+            and after over a similar period, and expect noise in the first
+            days. Rewriting ten pages at once teaches you nothing, because
+            you cannot tell which change helped. Steady, measured iteration
+            on your highest-impression pages beats a sitewide metadata
+            overhaul almost every time.
+          </p>
+        </div>
+      </section>
+    </>
+  );
+}
