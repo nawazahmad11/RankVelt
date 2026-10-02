@@ -1,11 +1,13 @@
-// HEADER-VERSION-17
+// HEADER-VERSION-18
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   Activity,
   ArrowRight,
+  Bot,
   Calculator,
   ChevronDown,
+  Gauge,
   Image,
   Layout,
   Link2,
@@ -147,6 +149,16 @@ const tools = [
     name: "UTM Builder",
     icon: <Link2 size={14} />,
     path: "/tools/utm-builder",
+  },
+  {
+    name: "Website Speed Test",
+    icon: <Gauge size={14} />,
+    path: "/tools/website-speed-test",
+  },
+  {
+    name: "AEO Readiness Checker",
+    icon: <Bot size={14} />,
+    path: "/tools/aeo-readiness-checker",
   },
 ];
 

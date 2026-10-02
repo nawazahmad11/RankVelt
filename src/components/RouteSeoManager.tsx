@@ -167,6 +167,18 @@ const staticPageMeta: Record<string, RouteMeta> = {
       "Build UTM campaign URLs in seconds with presets and bulk mode. Free UTM builder for Google Analytics, ads, social, and email campaigns.",
   },
 
+  "/tools/website-speed-test": {
+    title: "Free Website Speed Test: Core Web Vitals Checker | RankVelt",
+    description:
+      "Test any website speed free: performance score, Core Web Vitals, and the fixes that matter most. Mobile and desktop results, no signup.",
+  },
+
+  "/tools/aeo-readiness-checker": {
+    title: "Free AEO Readiness Checker: AI Answer Visibility Score | RankVelt",
+    description:
+      "Check how ready any page is for AI answers: structure, schema, questions, and citable content scored free. No signup required.",
+  },
+
   "/privacy-policy": {
     title: "Privacy Policy | RankVelt",
     description:

@@ -1,4 +1,4 @@
-// TOOLS-VERSION-19
+// TOOLS-VERSION-20
 import {
   useEffect,
   useMemo,
@@ -14,9 +14,11 @@ import {
 } from "react-router-dom";
 import {
   ArrowRight,
+  Bot,
   Calculator,
   CheckCircle2,
   ExternalLink,
+  Gauge,
   Activity,
   Layout,
   Link2,
@@ -60,6 +62,8 @@ type ToolType =
   | "broken-link"
   | "http-status"
   | "ssl"
+  | "speed"
+  | "aeo"
   | "utm";
 
 type ToolFaq = {
@@ -795,6 +799,66 @@ const tools: ToolConfig[] = [
     ],
     standalone: true,
   },
+  {
+    toolType: "speed",
+    slug: "website-speed-test",
+    contentKey: "website-speed-test",
+    badge: "Free SEO Tool",
+    title: "Website Speed Test",
+    pageTitle: "Free Website Speed Test",
+    metaTitle: "Free Website Speed Test: Core Web Vitals Checker | RankVelt",
+    metaDescription:
+      "Test any website speed free: performance score, Core Web Vitals, and the fixes that matter most. Mobile and desktop results, no signup.",
+    shortDescription:
+      "Test any page speed and Core Web Vitals on mobile and desktop.",
+    intro:
+      "Enter a URL and get a full performance score with Core Web Vitals, powered by Google Lighthouse lab data and real Chrome field data where available.",
+    guideTitle: "Speed You Can Measure, Fixes You Can Prioritise",
+    guideText:
+      "A single score hides the story. This test shows which metric is failing, why it matters for visitors, and which fix saves the most time first.",
+    bestFor: [
+      "Site owners checking Core Web Vitals before a launch.",
+      "Agencies auditing client site performance.",
+    ],
+    relatedLinks: [
+      {
+        title: "SSL Checker",
+        description: "Check any domain certificate expiry, issuer, and validity.",
+        path: "/tools/ssl-checker",
+      },
+    ],
+    standalone: true,
+  },
+  {
+    toolType: "aeo",
+    slug: "aeo-readiness-checker",
+    contentKey: "aeo-readiness-checker",
+    badge: "Free AEO Tool",
+    title: "AEO Readiness Checker",
+    pageTitle: "Free AEO Readiness Checker",
+    metaTitle: "Free AEO Readiness Checker: AI Answer Visibility Score | RankVelt",
+    metaDescription:
+      "Check how ready any page is for AI answers: structure, schema, questions, and citable content scored free. No signup required.",
+    shortDescription:
+      "Score any page for AI answer readiness across 12 checks.",
+    intro:
+      "Enter a URL and score how ready the page is to be understood and cited by AI answer engines like ChatGPT, Google AI Overviews, and Perplexity.",
+    guideTitle: "Built for the AI Answer Era",
+    guideText:
+      "Search is shifting from ten blue links to direct answers. Pages with clear structure, direct answers, and machine readable signals get cited first.",
+    bestFor: [
+      "Site owners preparing content for AI search.",
+      "SEOs auditing pages for answer engine visibility.",
+    ],
+    relatedLinks: [
+      {
+        title: "Schema Markup Generator",
+        description: "Generate valid JSON-LD schema for your pages in minutes.",
+        path: "/tools/schema-markup-generator",
+      },
+    ],
+    standalone: true,
+  },
 ];
 
 const getIcon = (
@@ -837,6 +901,12 @@ const getIcon = (
 
     case "ssl":
       return <Lock className={className} />;
+
+    case "speed":
+      return <Gauge className={className} />;
+
+    case "aeo":
+      return <Bot className={className} />;
 
     case "utm":
       return <Link2 className={className} />;

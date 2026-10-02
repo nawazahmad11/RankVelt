@@ -144,6 +144,14 @@ const UtmBuilder = lazy(
   () => import("./pages/tools/UtmBuilder"),
 );
 
+const WebsiteSpeedTest = lazy(
+  () => import("./pages/tools/WebsiteSpeedTest"),
+);
+
+const AeoReadinessChecker = lazy(
+  () => import("./pages/tools/AeoReadinessChecker"),
+);
+
 /*
  * Case-study pages
  */
@@ -375,7 +383,7 @@ const App = () => (
               element={<RedirectMappingGenerator />}
             />
 
-            {/* ROUTES-VERSION-14 */}
+            {/* ROUTES-VERSION-15 */}
             <Route
               path="/tools/bulk-redirect-generator"
               element={<BulkRedirectGenerator />}
@@ -414,6 +422,16 @@ const App = () => (
             <Route
               path="/tools/utm-builder"
               element={<UtmBuilder />}
+            />
+
+            <Route
+              path="/tools/website-speed-test"
+              element={<WebsiteSpeedTest />}
+            />
+
+            <Route
+              path="/tools/aeo-readiness-checker"
+              element={<AeoReadinessChecker />}
             />
 
             <Route
