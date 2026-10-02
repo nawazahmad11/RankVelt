@@ -7,7 +7,7 @@
 // link-local addresses are rejected so the endpoint cannot be used to
 // probe internal networks. Each request has a hard timeout.
 
-const dns = require('dns').promises;
+import { promises as dns } from 'node:dns';
 
 const MAX_URLS = 20;
 const TIMEOUT_MS = 8000;
@@ -117,7 +117,7 @@ async function checkOne(input) {
   return result;
 }
 
-module.exports = async (req, res) => {
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.status(405).json({ ok: false, error: 'POST only.' });
     return;
@@ -134,4 +134,4 @@ module.exports = async (req, res) => {
   } catch (err) {
     res.status(500).json({ ok: false, error: (err && err.message) || 'Server error.' });
   }
-};
+}

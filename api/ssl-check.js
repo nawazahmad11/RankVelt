@@ -3,7 +3,7 @@
 // Opens a TLS connection and reports the certificate: issuer, validity
 // window, days remaining, SANs, protocol, and hostname match.
 
-const tls = require('tls');
+import tls from 'node:tls';
 
 const TIMEOUT_MS = 8000;
 
@@ -50,16 +50,14 @@ function sanList(cert) {
     .map((s) => s.slice(4));
 }
 
-module.exports = (req, res) => {
+export default function handler(req, res) {
   if (req.method !== 'POST') {
-    res.status(405).json({ ok: false, error: 'POST only.' });
-    return;
+    return res.status(405).json({ ok: false, error: 'POST only.' });
   }
-  const body = typeof req.body === 'string' ? JSON.parse(req.body || '{}') : req.body || {};
+  const body = req.body || {};
   const domain = cleanDomain(body.domain || body.url || '');
   if (!domain || !isValidHostname(domain)) {
-    res.status(400).json({ ok: false, error: 'Enter a valid domain, like example.com.' });
-    return;
+    return res.status(400).json({ ok: false, error: 'Enter a valid domain, like example.com.' });
   }
 
   let settled = false;
@@ -78,7 +76,9 @@ module.exports = (req, res) => {
       settled = true;
       try {
         const authorized = socket.authorized;
-        const authError = socket.authorizationError ? String(socket.authorizationError.message || socket.authorizationError) : null;
+        const authError = socket.authorizationError
+          ? String(socket.authorizationError.message || socket.authorizationError)
+          : null;
         const cert = socket.getPeerCertificate(true) || {};
         const protocol = socket.getProtocol();
         socket.end();
@@ -127,4 +127,4 @@ module.exports = (req, res) => {
     else if (/certificate/i.test(msg)) fail('The server presented a certificate problem: ' + msg);
     else fail('Could not connect to that server over HTTPS.');
   });
-};
+}

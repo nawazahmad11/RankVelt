@@ -8,7 +8,7 @@
 // link-local addresses are rejected. Response size and link count are
 // capped, and every request has a hard timeout.
 
-const dns = require('dns').promises;
+import { promises as dns } from 'node:dns';
 
 const TIMEOUT_MS = 8000;
 const MAX_BYTES = 2 * 1024 * 1024;
@@ -78,7 +78,7 @@ function extractLinks(html, baseUrl) {
   return links;
 }
 
-module.exports = async (req, res) => {
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.status(405).json({ ok: false, error: 'POST only.' });
     return;
@@ -138,4 +138,4 @@ module.exports = async (req, res) => {
         : (err && err.message) || 'Could not fetch that page.';
     res.status(200).json({ ok: false, error: message });
   }
-};
+}
