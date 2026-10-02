@@ -1,4 +1,4 @@
-// TOOLS-VERSION-20
+// TOOLS-VERSION-21
 import {
   useEffect,
   useMemo,
@@ -40,6 +40,8 @@ import PolicyGenerator from "../components/Tools/PolicyGenerator";
 import toolContentJson from "../data/tool-content.json";
 
 import GuestPostFinder from "../components/Tools/GuestPostFinder";
+
+import NotFound from "./NotFound";
 
 const SITE_URL = "https://rankvelt.com";
 
@@ -1083,6 +1085,7 @@ const ToolsPage = () => {
 
   const queryTool = searchParams.get("tool") || "";
   const isHubPage = !toolName && !queryTool;
+  const isInvalidToolSlug = Boolean(toolName && !toolMapping[toolName]);
 
   const selectedTool = useMemo(() => {
     return (
@@ -1119,7 +1122,8 @@ const ToolsPage = () => {
     }
 
     if (toolName) {
-      navigate("/tools", { replace: true });
+      // Unknown tool slugs render the 404 page below instead of
+      // redirecting to the tools hub. Soft 404 fix in TOOLS-VERSION-21.
       return;
     }
 
@@ -1127,6 +1131,15 @@ const ToolsPage = () => {
   }, [toolName, queryTool, navigate]);
 
   useEffect(() => {
+    if (isInvalidToolSlug) {
+      document.title = "Page Not Found | RankVelt";
+      ensureMetaByName("description").content =
+        "The page you are looking for might have been moved, deleted, or never existed.";
+      ensureMetaByName("robots").content = "noindex, follow";
+      document.getElementById("rankvelt-tool-schema")?.remove();
+      return;
+    }
+
     const pageTitle = isHubPage
       ? "Free eCommerce & Business Tools | RankVelt"
       : selectedTool.metaTitle;
@@ -1210,7 +1223,7 @@ const ToolsPage = () => {
     return () => {
       schemaScript.remove();
     };
-  }, [isHubPage, selectedTool, selectedToolContent.faqs]);
+  }, [isHubPage, selectedTool, selectedToolContent.faqs, isInvalidToolSlug]);
 
   const handleToolClick = (tool: ToolConfig) => {
     // Standalone tools render on their own explicit routes, so the hub only
@@ -1247,6 +1260,10 @@ const ToolsPage = () => {
         return <NameGenerator />;
     }
   };
+
+  if (isInvalidToolSlug) {
+    return <NotFound />;
+  }
 
   return (
     <main className="min-h-screen bg-[#050505] pb-24 pt-40 text-white sm:pt-44">

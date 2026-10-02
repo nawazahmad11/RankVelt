@@ -7,6 +7,42 @@ import { caseStudies } from "@/data/caseStudyData";
 const SITE_URL = "https://rankvelt.com";
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.webp`;
 
+// Every valid /tools/ slug: the 21 hub tools plus the short aliases that
+// Tools.tsx maps to the same tools. Unknown slugs must not inherit the
+// tools hub meta, they fall through to the Page Not Found meta below.
+const KNOWN_TOOL_SLUGS = new Set([
+  "profit-margin-calculator",
+  "legal-policy-generator",
+  "shopify-theme-detector",
+  "business-name-generator",
+  "guest-post-finder",
+  "bulk-redirect-generator",
+  "open-graph-preview",
+  "robots-txt-generator",
+  "title-tag-preview",
+  "bulk-email-extractor",
+  "meta-title-description-checker",
+  "schema-markup-generator",
+  "xml-sitemap-generator",
+  "local-seo-checklist",
+  "redirect-mapping-generator",
+  "bulk-broken-link-checker",
+  "bulk-http-status-checker",
+  "ssl-checker",
+  "utm-builder",
+  "website-speed-test",
+  "aeo-readiness-checker",
+  "calculator",
+  "policy",
+  "policy-generator",
+  "detector",
+  "theme-detector",
+  "generator",
+  "name-generator",
+  "guest-post",
+  "email-extractor",
+]);
+
 type RouteMeta = {
   title: string;
   description: string;
@@ -372,7 +408,11 @@ const RouteSeoManager = () => {
     }
 
     if (!routeMeta && pathname.startsWith("/tools/")) {
-      routeMeta = staticPageMeta["/tools"];
+      const toolSlug = pathname.replace("/tools/", "");
+
+      if (KNOWN_TOOL_SLUGS.has(toolSlug)) {
+        routeMeta = staticPageMeta["/tools"];
+      }
     }
 
     if (!routeMeta) {
