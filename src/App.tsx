@@ -127,6 +127,23 @@ const SerpSnippetPreview = lazy(
   () => import("./pages/tools/SerpSnippetPreview"),
 );
 
+/* New Phase 2 tools (API-assisted checkers + client-only UTM builder). */
+const BulkBrokenLinkChecker = lazy(
+  () => import("./pages/tools/BulkBrokenLinkChecker"),
+);
+
+const BulkHttpStatusChecker = lazy(
+  () => import("./pages/tools/BulkHttpStatusChecker"),
+);
+
+const SslChecker = lazy(
+  () => import("./pages/tools/SslChecker"),
+);
+
+const UtmBuilder = lazy(
+  () => import("./pages/tools/UtmBuilder"),
+);
+
 /*
  * Case-study pages
  */
@@ -358,7 +375,7 @@ const App = () => (
               element={<RedirectMappingGenerator />}
             />
 
-            {/* ROUTES-VERSION-13 */}
+            {/* ROUTES-VERSION-14 */}
             <Route
               path="/tools/bulk-redirect-generator"
               element={<BulkRedirectGenerator />}
@@ -377,6 +394,26 @@ const App = () => (
             <Route
               path="/tools/bulk-email-extractor"
               element={<BulkEmailExtractor />}
+            />
+
+            <Route
+              path="/tools/bulk-broken-link-checker"
+              element={<BulkBrokenLinkChecker />}
+            />
+
+            <Route
+              path="/tools/bulk-http-status-checker"
+              element={<BulkHttpStatusChecker />}
+            />
+
+            <Route
+              path="/tools/ssl-checker"
+              element={<SslChecker />}
+            />
+
+            <Route
+              path="/tools/utm-builder"
+              element={<UtmBuilder />}
             />
 
             <Route

@@ -143,6 +143,30 @@ const staticPageMeta: Record<string, RouteMeta> = {
       "Preview your title tag and meta description as Google shows them. Free SERP snippet tool: pixel widths, desktop and mobile views, copy-ready HTML tags.",
   },
 
+  "/tools/bulk-broken-link-checker": {
+    title: "Free Broken Link Checker for Websites | RankVelt",
+    description:
+      "Crawl your website free and find every broken link: internal and external links, status codes, and the pages they appear on. No signup.",
+  },
+
+  "/tools/bulk-http-status-checker": {
+    title: "Bulk HTTP Status Checker: URL & Redirect Chain Tool",
+    description:
+      "Check up to 100 URLs at once: status codes, redirect chains, final URLs, and response times. Free bulk HTTP status checker, no signup needed.",
+  },
+
+  "/tools/ssl-checker": {
+    title: "Free SSL Checker: Certificate Expiry & Validity | RankVelt",
+    description:
+      "Check any domain's SSL certificate free: expiration date, days remaining, issuer, validity, and hostname match. No signup required.",
+  },
+
+  "/tools/utm-builder": {
+    title: "Free UTM Builder: Campaign URL Builder | RankVelt",
+    description:
+      "Build UTM campaign URLs in seconds with presets and bulk mode. Free UTM builder for Google Analytics, ads, social, and email campaigns.",
+  },
+
   "/privacy-policy": {
     title: "Privacy Policy | RankVelt",
     description:

@@ -1,12 +1,15 @@
-// HEADER-VERSION-16
+// HEADER-VERSION-17
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
+  Activity,
   ArrowRight,
   Calculator,
   ChevronDown,
   Image,
   Layout,
+  Link2,
+  Lock,
   MailSearch,
   Menu,
   Repeat,
@@ -15,6 +18,7 @@ import {
   Search,
   ShieldCheck,
   ShoppingBag,
+  Unlink,
   X,
 } from "lucide-react";
 
@@ -123,6 +127,26 @@ const tools = [
     name: "Bulk Email Extractor",
     icon: <MailSearch size={14} />,
     path: "/tools/bulk-email-extractor",
+  },
+  {
+    name: "Broken Link Checker",
+    icon: <Unlink size={14} />,
+    path: "/tools/bulk-broken-link-checker",
+  },
+  {
+    name: "HTTP Status Checker",
+    icon: <Activity size={14} />,
+    path: "/tools/bulk-http-status-checker",
+  },
+  {
+    name: "SSL Checker",
+    icon: <Lock size={14} />,
+    path: "/tools/ssl-checker",
+  },
+  {
+    name: "UTM Builder",
+    icon: <Link2 size={14} />,
+    path: "/tools/utm-builder",
   },
 ];
 

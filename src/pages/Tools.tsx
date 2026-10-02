@@ -1,4 +1,4 @@
-// TOOLS-VERSION-18
+// TOOLS-VERSION-19
 import {
   useEffect,
   useMemo,
@@ -17,13 +17,17 @@ import {
   Calculator,
   CheckCircle2,
   ExternalLink,
+  Activity,
   Layout,
+  Link2,
+  Lock,
   MailSearch,
   Search,
   ShieldCheck,
   ShoppingBag,
   Sparkles,
   Target,
+  Unlink,
 } from "lucide-react";
 
 import NameGenerator from "../components/Tools/NameGenerator";
@@ -52,7 +56,11 @@ type ToolType =
   | "schema"
   | "sitemap"
   | "local-seo"
-  | "redirect-map";
+  | "redirect-map"
+  | "broken-link"
+  | "http-status"
+  | "ssl"
+  | "utm";
 
 type ToolFaq = {
   q: string;
@@ -667,6 +675,126 @@ const tools: ToolConfig[] = [
     ],
     standalone: true,
   },
+  {
+    toolType: "broken-link",
+    slug: "bulk-broken-link-checker",
+    contentKey: "broken-link-checker",
+    badge: "Free SEO Tool",
+    title: "Broken Link Checker",
+    pageTitle: "Free Broken Link Checker",
+    metaTitle: "Free Broken Link Checker for Websites | RankVelt",
+    metaDescription:
+      "Crawl your website free and find every broken link: internal and external links, status codes, and the pages they appear on. No signup.",
+    shortDescription:
+      "Crawl your site and find every broken internal and external link.",
+    intro:
+      "Enter your website URL and the checker crawls up to 25 pages, collects every link, and verifies each one from our servers, no signup and no captcha.",
+    guideTitle: "Find and Fix Broken Links Before Visitors Do",
+    guideText:
+      "Broken links waste crawl budget and send visitors to dead ends. This free checker finds them across your pages so you can fix, redirect, or remove them.",
+    bestFor: [
+      "Site owners auditing after a redesign or migration.",
+      "SEOs running monthly technical health checks.",
+    ],
+    relatedLinks: [
+      {
+        title: "Bulk HTTP Status Checker",
+        description: "Check up to 100 URLs at once: status codes, redirect chains, and response times.",
+        path: "/tools/bulk-http-status-checker",
+      },
+    ],
+    standalone: true,
+  },
+  {
+    toolType: "http-status",
+    slug: "bulk-http-status-checker",
+    contentKey: "http-status-checker",
+    badge: "Free SEO Tool",
+    title: "HTTP Status Checker",
+    pageTitle: "Bulk HTTP Status Checker",
+    metaTitle: "Bulk HTTP Status Checker: URL & Redirect Chain Tool",
+    metaDescription:
+      "Check up to 100 URLs at once: status codes, redirect chains, final URLs, and response times. Free bulk HTTP status checker, no signup needed.",
+    shortDescription:
+      "Check up to 100 URLs at once for status codes and redirect chains.",
+    intro:
+      "Paste a list of URLs and get each one's status code, full redirect chain, final destination, and response time in one table.",
+    guideTitle: "Audit Redirects in Bulk, Not One by One",
+    guideText:
+      "Redirect chains and silent status errors hide in large URL lists. This tool checks them in batches so migration and launch audits take minutes.",
+    bestFor: [
+      "SEOs verifying redirect maps after migrations.",
+      "Developers checking staging and production URLs.",
+    ],
+    relatedLinks: [
+      {
+        title: "Bulk Redirect Generator",
+        description: "Generate bulk 301/302 redirect rules for Apache, Nginx, and Cloudflare.",
+        path: "/tools/bulk-redirect-generator",
+      },
+    ],
+    standalone: true,
+  },
+  {
+    toolType: "ssl",
+    slug: "ssl-checker",
+    contentKey: "ssl-checker",
+    badge: "Free SEO Tool",
+    title: "SSL Checker",
+    pageTitle: "Free SSL Checker",
+    metaTitle: "Free SSL Checker: Certificate Expiry & Validity | RankVelt",
+    metaDescription:
+      "Check any domain's SSL certificate free: expiration date, days remaining, issuer, validity, and hostname match. No signup required.",
+    shortDescription:
+      "Check any domain's SSL certificate expiry, issuer, and validity.",
+    intro:
+      "Enter a domain and instantly see whether its SSL certificate is valid, who issued it, when it expires, and how many days are left.",
+    guideTitle: "Never Let a Certificate Expire Silently",
+    guideText:
+      "An expired certificate shows visitors a scary browser warning and can pause your traffic overnight. Check expiry dates before they become emergencies.",
+    bestFor: [
+      "Site owners renewing certificates on time.",
+      "Agencies auditing client website health.",
+    ],
+    relatedLinks: [
+      {
+        title: "Robots.txt Generator",
+        description: "Build a valid robots.txt with rules, sitemap, and AI crawler controls.",
+        path: "/tools/robots-txt-generator",
+      },
+    ],
+    standalone: true,
+  },
+  {
+    toolType: "utm",
+    slug: "utm-builder",
+    contentKey: "utm-builder",
+    badge: "Free Marketing Tool",
+    title: "UTM Builder",
+    pageTitle: "Free UTM Builder",
+    metaTitle: "Free UTM Builder: Campaign URL Builder | RankVelt",
+    metaDescription:
+      "Build UTM campaign URLs in seconds with presets and bulk mode. Free UTM builder for Google Analytics, ads, social, and email campaigns.",
+    shortDescription:
+      "Build UTM campaign URLs with presets and a bulk mode.",
+    intro:
+      "Fill in source, medium, and campaign to generate clean tracking URLs, or switch to bulk mode and tag a whole list of landing pages at once.",
+    guideTitle: "Track Every Campaign Without the Mess",
+    guideText:
+      "Consistent UTM naming keeps your GA4 reports clean. Presets for ads, social, and email plus bulk mode make it fast to tag every link the same way.",
+    bestFor: [
+      "Marketers tagging ad and social campaigns.",
+      "Newsletter owners tracking email clicks in GA4.",
+    ],
+    relatedLinks: [
+      {
+        title: "Title Tag Preview",
+        description: "Preview Google snippets with pixel-accurate desktop and mobile views.",
+        path: "/tools/title-tag-preview",
+      },
+    ],
+    standalone: true,
+  },
 ];
 
 const getIcon = (
@@ -700,6 +828,18 @@ const getIcon = (
 
     case "email-extractor":
       return <MailSearch className={className} />;
+
+    case "broken-link":
+      return <Unlink className={className} />;
+
+    case "http-status":
+      return <Activity className={className} />;
+
+    case "ssl":
+      return <Lock className={className} />;
+
+    case "utm":
+      return <Link2 className={className} />;
 
     case "meta-title":
       return <Target className={className} />;
@@ -750,6 +890,18 @@ const getIconClass = (toolType: ToolType) => {
 
     case "email-extractor":
       return "text-cyan-400";
+
+    case "broken-link":
+      return "text-red-400";
+
+    case "http-status":
+      return "text-teal-400";
+
+    case "ssl":
+      return "text-green-400";
+
+    case "utm":
+      return "text-indigo-400";
 
     case "meta-title":
       return "text-amber-400";
