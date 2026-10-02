@@ -52,6 +52,41 @@ export type SeoServicePageConfig = {
   outcomesTitle: string;
   outcomes: string[];
 
+  aiVisibility?: {
+    title: string;
+    intro: string;
+    points: string[];
+  };
+
+  guide?: {
+    title: string;
+    intro?: string;
+    sections: {
+      heading: string;
+      paragraphs: string[];
+      bullets?: string[];
+      links?: {
+        label: string;
+        path: string;
+      }[];
+    }[];
+  };
+
+  pricing?: {
+    title: string;
+    intro: string;
+    steps: {
+      title: string;
+      description: string;
+    }[];
+    price: string;
+    unit: string;
+    term: string;
+    includes: string[];
+    note: string;
+    founderNote: string;
+  };
+
   faqs: ServiceFaq[];
   relatedServices: RelatedService[];
 };
@@ -306,6 +341,39 @@ const SeoServiceTemplate = ({
         </div>
       </section>
 
+      {config.aiVisibility && (
+        <section className="border-b border-white/[0.06] py-16 sm:py-20">
+          <div className="mx-auto max-w-7xl px-6">
+            <div className="mx-auto max-w-3xl text-center">
+              <Sparkles className="mx-auto text-primary" />
+
+              <h2 className="mt-5 text-3xl font-black sm:text-4xl">
+                {config.aiVisibility.title}
+              </h2>
+
+              <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/65">
+                {config.aiVisibility.intro}
+              </p>
+            </div>
+
+            <div className="mx-auto mt-10 grid max-w-5xl gap-4 sm:grid-cols-2">
+              {config.aiVisibility.points.map((point) => (
+                <div
+                  key={point}
+                  className="flex gap-3 rounded-2xl border border-white/10 bg-white/[0.025] p-5 text-sm leading-relaxed text-white/70"
+                >
+                  <CheckCircle2
+                    size={17}
+                    className="mt-0.5 shrink-0 text-primary"
+                  />
+                  {point}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       <section className="py-16 sm:py-20">
         <div className="mx-auto grid max-w-7xl gap-8 px-6 lg:grid-cols-2">
           <div className="rounded-3xl border border-white/10 bg-white/[0.025] p-7">
@@ -390,6 +458,155 @@ const SeoServiceTemplate = ({
           </div>
         </div>
       </section>
+
+      {config.pricing && (
+        <section className="border-y border-white/[0.06] bg-black/20 py-16 sm:py-20">
+          <div className="mx-auto max-w-7xl px-6">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-3xl font-black sm:text-4xl">
+                {config.pricing.title}
+              </h2>
+
+              <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/65">
+                {config.pricing.intro}
+              </p>
+            </div>
+
+            <div className="mx-auto mt-10 grid max-w-5xl gap-4 md:grid-cols-3">
+              {config.pricing.steps.map((item, index) => (
+                <article
+                  key={item.title}
+                  className="rounded-2xl border border-white/10 bg-white/[0.025] p-6"
+                >
+                  <span className="text-xs font-black text-primary">
+                    Step {index + 1}
+                  </span>
+
+                  <h3 className="mt-3 text-lg font-black">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-2 text-sm leading-relaxed text-white/60">
+                    {item.description}
+                  </p>
+                </article>
+              ))}
+            </div>
+
+            <div className="mx-auto mt-8 max-w-3xl rounded-3xl border border-primary/25 bg-primary/[0.05] p-8 text-center">
+              <p className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">
+                {config.pricing.term}
+              </p>
+
+              <p className="mt-4 text-5xl font-black tracking-tight">
+                {config.pricing.price}
+                <span className="text-lg font-bold text-white/60">
+                  {config.pricing.unit}
+                </span>
+              </p>
+
+              <ul className="mx-auto mt-7 grid max-w-xl gap-3 text-left sm:grid-cols-2">
+                {config.pricing.includes.map((item) => (
+                  <li
+                    key={item}
+                    className="flex gap-2.5 text-sm leading-relaxed text-white/75"
+                  >
+                    <CheckCircle2
+                      size={16}
+                      className="mt-0.5 shrink-0 text-primary"
+                    />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+
+              <button
+                type="button"
+                onClick={openStrategyForm}
+                className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-7 py-4 text-sm font-black text-black transition-transform hover:scale-[1.02]"
+              >
+                Start with the Free SEO Opportunity Check
+                <ArrowRight size={17} />
+              </button>
+
+              <p className="mx-auto mt-6 max-w-xl text-sm leading-relaxed text-white/55">
+                {config.pricing.note}
+              </p>
+
+              <p className="mx-auto mt-3 max-w-xl text-sm font-semibold leading-relaxed text-white/75">
+                {config.pricing.founderNote}
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {config.guide && (
+        <section className="border-t border-white/[0.06] py-16 sm:py-20">
+          <div className="mx-auto max-w-4xl px-6">
+            <h2 className="text-center text-3xl font-black sm:text-4xl">
+              {config.guide.title}
+            </h2>
+
+            {config.guide.intro && (
+              <p className="mx-auto mt-5 max-w-2xl text-center text-base leading-relaxed text-white/65">
+                {config.guide.intro}
+              </p>
+            )}
+
+            <div className="mt-12 space-y-12">
+              {config.guide.sections.map((section) => (
+                <div key={section.heading}>
+                  <h3 className="text-2xl font-black tracking-tight">
+                    {section.heading}
+                  </h3>
+
+                  {section.paragraphs.map((paragraph) => (
+                    <p
+                      key={paragraph}
+                      className="mt-4 text-base leading-relaxed text-white/65"
+                    >
+                      {paragraph}
+                    </p>
+                  ))}
+
+                  {section.bullets && (
+                    <ul className="mt-5 space-y-3">
+                      {section.bullets.map((item) => (
+                        <li
+                          key={item}
+                          className="flex gap-3 text-sm leading-relaxed text-white/70"
+                        >
+                          <CheckCircle2
+                            size={17}
+                            className="mt-0.5 shrink-0 text-primary"
+                          />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+
+                  {section.links && (
+                    <div className="mt-5 flex flex-wrap gap-3">
+                      {section.links.map((link) => (
+                        <Link
+                          key={link.path}
+                          to={link.path}
+                          className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/[0.07] px-4 py-2 text-xs font-bold text-primary transition-colors hover:border-primary/50"
+                        >
+                          {link.label}
+                          <ArrowRight size={13} />
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-4xl px-6">
