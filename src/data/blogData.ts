@@ -1845,7 +1845,7 @@ export const blogPosts: BlogPost[] = [
 
     date: "Aug 11, 2026",
     datePublished: "2026-08-11",
-    dateModified: "2026-08-11",
+    dateModified: "2026-10-03",
 
     author: "RankVelt Editorial Team",
     authorType: "Organization",
@@ -1901,6 +1901,26 @@ export const blogPosts: BlogPost[] = [
         question: "When should I increase GEO spending?",
         answer:
           "Increase GEO spending after your priority pages are indexable, competitive, and commercially useful. Invest sooner when buyers use AI tools for vendor comparisons and competitors already receive relevant citations or recommendations.",
+      },
+      {
+        question: "What is the difference between SEO and AEO?",
+        answer:
+          "SEO improves how pages rank in traditional search results and earn clicks. AEO improves how clearly a page answers a specific question so search engines and AI systems can quote it directly. SEO targets the results page, AEO targets the answer itself.",
+      },
+      {
+        question: "Does AEO replace SEO completely?",
+        answer:
+          "No. AEO builds on SEO fundamentals like crawlability, indexation, content quality, and authority. AEO changes how you structure and phrase content, but it does not replace the technical and authority work that SEO covers.",
+      },
+      {
+        question: "How do I merge SEO and AEO for AI visibility?",
+        answer:
+          "Keep your ranking foundation, then add AEO layers: a direct 40 to 60 word answer under each main heading, FAQ sections with two-sentence answers, original evidence or data, and consistent entity information across your site and third-party profiles.",
+      },
+      {
+        question: "How do I measure AEO vs SEO performance side by side?",
+        answer:
+          "Track SEO with rankings, impressions, and clicks in Search Console. Track AEO with monthly AI citation checks for your target queries. Put both on one scorecard to see whether visibility gains come from rankings, answers, or both.",
       },
     ],
 
@@ -2368,6 +2388,28 @@ export const blogPosts: BlogPost[] = [
         <summary>When should I increase GEO spending?</summary>
         <p>Increase GEO spending after your priority pages are indexable, competitive, and commercially useful. Invest sooner when buyers use AI tools for vendor comparisons and competitors already receive relevant citations or recommendations.</p>
       </details>
+
+
+      <details>
+        <summary>What is the difference between SEO and AEO?</summary>
+        <p>SEO improves how pages rank in traditional search results and earn clicks. AEO improves how clearly a page answers a specific question so search engines and AI systems can quote it directly. SEO targets the results page, AEO targets the answer itself. Most businesses need both working from the same content base.</p>
+      </details>
+
+      <details>
+        <summary>Does AEO replace SEO completely?</summary>
+        <p>No. AEO builds on SEO fundamentals: crawlability, indexation, content quality, and authority all still decide whether your page is eligible to be quoted. AEO changes how you structure and phrase content, but it does not replace the technical and authority work that SEO covers.</p>
+      </details>
+
+      <details>
+        <summary>How do I merge SEO and AEO for AI visibility?</summary>
+        <p>Start from your existing SEO pages. Keep the ranking foundation, then add AEO layers: a direct 40 to 60 word answer under each main heading, FAQ sections with two-sentence answers, original evidence or data, and consistent entity information across your site and third-party profiles. Measure both rankings and AI citations side by side.</p>
+      </details>
+
+      <details>
+        <summary>How do I measure AEO vs SEO performance side by side?</summary>
+        <p>Track SEO with rankings, impressions, and clicks in Search Console. Track AEO with AI citation checks: how often your brand or pages appear inside AI answers for your target queries, tested monthly. Put both on one scorecard so you can see whether visibility gains come from rankings, answers, or both.</p>
+      </details>
+
 
       <h2 id="final-recommendation">Final Recommendation</h2>
 
@@ -11179,7 +11221,779 @@ export const blogPosts: BlogPost[] = [
       </div>
     `,
   },
+
+  {
+    id: "how-to-get-cited-by-chatgpt-gemini-perplexity",
+
+    title: "How to Get Cited by ChatGPT, Gemini & Perplexity in 2026",
+
+    seoTitle:
+      "How to Get Cited by ChatGPT, Gemini & Perplexity: 2026 Guide",
+
+    metaDescription:
+      "Learn how to get cited by ChatGPT, Gemini, and Perplexity in 2026: the content traits LLMs quote, per-platform tactics, and a local business playbook.",
+
+    ogTitle: "Get Cited by ChatGPT, Gemini & Perplexity",
+
+    socialDescription:
+      "The content traits LLMs quote most, per-platform tactics, and a measurement routine for AI citations.",
+
+    date: "Oct 3, 2026",
+    datePublished: "2026-10-03",
+    dateModified: "2026-10-03",
+
+    author: "RankVelt Editorial Team",
+    authorType: "Organization",
+
+    category: "AI SEARCH SEO",
+    readTime: "12 min read",
+
+    image: "/how-to-get-cited-by-chatgpt-gemini-perplexity.webp",
+
+    imageAlt:
+      "Workflow showing how businesses get cited by ChatGPT, Gemini, and Perplexity through quotable content and brand mentions",
+
+    excerpt:
+      "How to get cited by ChatGPT, Gemini, and Perplexity comes down to quotable content, consistent entity signals, and off-site presence. This guide covers what LLMs quote, per-platform tactics, and a local business playbook.",
+
+    relatedPostIds: [
+      "optimize-google-ai-overviews",
+      "show-up-in-google-ai-overviews",
+      "seo-vs-aeo-vs-geo",
+    ],
+
+    primaryService: {
+      title: "Business SEO",
+      description:
+        "Improve technical eligibility, content structure, internal linking, search visibility, and the conversion journey across commercially important pages.",
+      path: "/business-seo",
+    },
+
+    showStandardCta: true,
+
+    keyTakeaways: [
+      "LLMs cite pages that are quotable: clear answers, original data, and short self-contained passages.",
+      "ChatGPT, Gemini, and Perplexity select sources differently. One generic tactic does not win on all three.",
+      "Off-site presence on Reddit, YouTube, and review platforms feeds the training and retrieval layer.",
+      "Local businesses can win AI citations with consistent NAP, reviews, and location-specific FAQ content.",
+      "Track citations monthly with prompt tests. AI citation data is directional, not exact.",
+    ],
+
+    faqItems: [
+      {
+        question: "How do I get cited by AI like ChatGPT?",
+        answer:
+          "Publish quotable content: direct answers under clear headings, original data or observations, and short self-contained passages. Then build consistent brand mentions across your site, Google Business Profile, Reddit, YouTube, and review platforms so the model sees your entity everywhere.",
+      },
+      {
+        question: "Can ChatGPT cite sources?",
+        answer:
+          "Yes. ChatGPT browse mode and Perplexity show inline citations with links. Gemini cites sources in AI Overviews and AI Mode. A citation links to your page, while a mention only names your brand. Both build visibility, but citations can also send clicks.",
+      },
+      {
+        question: "How do I get cited by ChatGPT as a local business?",
+        answer:
+          "Keep your name, address, and phone number identical everywhere, collect steady Google reviews that mention your services by name, publish location-specific FAQ pages, and get listed on the directories your industry actually uses. Local AI answers pull heavily from these signals.",
+      },
+      {
+        question: "Does AI cite sources for every answer?",
+        answer:
+          "No. Simple factual answers often come without citations. Citations appear most for shopping research, local recommendations, how-to queries, and comparisons. Target the query types where citations actually happen.",
+      },
+      {
+        question: "How long does it take to start getting AI citations?",
+        answer:
+          "Expect 2 to 4 months of consistent work before citations appear regularly. Models need time to crawl, index, and trust new content, and competitive queries take longer than niche ones.",
+      },
+      {
+        question: "How do I get my B2B brand cited by ChatGPT?",
+        answer:
+          "Publish original research or data no one else has, get quoted in industry publications and podcasts, keep executive LinkedIn profiles active with substantive posts, and make sure your product pages answer comparison questions directly. B2B citations follow demonstrable expertise.",
+      },
+    ],
+
+    toc: [
+      { id: "how-llms-choose", title: "How Do LLMs Choose What to Cite?", level: 2 },
+      { id: "quotable-content", title: "What Makes Content Quotable?", level: 2 },
+      { id: "chatgpt-tactics", title: "How to Get Cited by ChatGPT", level: 2 },
+      { id: "gemini-tactics", title: "How to Get Cited by Gemini", level: 2 },
+      { id: "perplexity-tactics", title: "How to Get Cited by Perplexity", level: 2 },
+      { id: "local-playbook", title: "The Local Business Playbook", level: 2 },
+      { id: "off-site", title: "Why Off-Site Presence Decides Citations", level: 2 },
+      { id: "measure", title: "How to Measure AI Citations", level: 2 },
+      { id: "hire-agency", title: "When Should You Hire an Agency for AI Citations?", level: 2 },
+    ],
+
+    content: `
+      <p class="standalone-line">AI answers are the new page one.</p>
+
+      <p>When someone asks ChatGPT for the best CRM for a small agency, or asks Perplexity which plumber to call in Lahore, the models answer with a shortlist. Brands on that shortlist win. Brands missing from it never even enter the conversation.</p>
+
+      <p>Getting cited by ChatGPT, Gemini, and Perplexity is not luck. Models select sources using patterns you can engineer for: quotable passages, consistent entity signals, and off-site presence in the places their training data trusts.</p>
+
+      <h2 id="how-llms-choose">How Do LLMs Choose What to Cite?</h2>
+
+      <p>Large language models do not browse the whole web for every answer. They work from two layers:</p>
+
+      <ul>
+        <li><strong>Training data:</strong> what the model learned before its cutoff. Mentions in books, Wikipedia, news, Reddit threads, and documentation live here.</li>
+        <li><strong>Retrieval layer:</strong> live search results the model pulls for fresh queries. This is where your indexed pages, reviews, and listings compete right now.</li>
+      </ul>
+
+      <p>Citations go to sources that are easy to quote and easy to trust. A page with a clear 50-word answer under a question heading is quotable. A brand mentioned identically across its site, LinkedIn, Crunchbase, and review profiles is trustworthy. Most businesses fail on one of these two.</p>
+
+      <h2 id="quotable-content">What Makes Content Quotable?</h2>
+
+      <p>Study the passages that actually appear inside AI answers and a pattern emerges:</p>
+
+      <ul>
+        <li><strong>Direct answers first.</strong> Put the answer in the first 40 to 60 words under the heading. Models lift these blocks verbatim.</li>
+        <li><strong>Self-contained passages.</strong> Each section should make sense without the rest of the page. Models quote chunks, not articles.</li>
+        <li><strong>Original data.</strong> A stat from your own work cannot be found anywhere else, so the model must cite you to use it.</li>
+        <li><strong>Short sentences.</strong> Dense paragraphs get skipped. Two to three line blocks get quoted.</li>
+        <li><strong>Named entities.</strong> Say the product name, the city, the price range. Vague content is unquotable.</li>
+      </ul>
+
+      <h2 id="chatgpt-tactics">How to Get Cited by ChatGPT</h2>
+
+      <p>ChatGPT answers from training data plus browse-mode retrieval. Tactics that work:</p>
+
+      <ul>
+        <li>Publish comparison and best-of content. ChatGPT shortlists come from pages that already compare options.</li>
+        <li>Get mentioned on Reddit and in niche communities. ChatGPT training data weights real discussions heavily.</li>
+        <li>Keep a fact-dense about page. Entity consistency (founder name, location, founding facts) helps the model trust you.</li>
+        <li>Answer pricing and process questions directly. "How much does X cost" pages get cited in buying journeys.</li>
+      </ul>
+
+      <h2 id="gemini-tactics">How to Get Cited by Gemini</h2>
+
+      <p>Gemini is Google's model, so it leans on Google's index and Google's trust signals:</p>
+
+      <ul>
+        <li>Win in Google AI Overviews first. Our guide on <a href="/blog/optimize-google-ai-overviews">how to optimize for Google AI Overviews</a> covers the mechanics. Gemini citations follow the same eligibility.</li>
+        <li>Keep your Google Business Profile complete and active. For local queries, Gemini pulls from the same local pack data.</li>
+        <li>Use schema markup correctly. Structured data helps Google parse your facts, which feeds Gemini answers.</li>
+        <li>Build topical authority with content clusters. Gemini favors sites that cover a topic in depth over one-off pages.</li>
+      </ul>
+
+      <h2 id="perplexity-tactics">How to Get Cited by Perplexity</h2>
+
+      <p>Perplexity is the most citation-friendly of the three. Every answer shows sources, which makes it the fastest win:</p>
+
+      <ul>
+        <li>Target question queries. Perplexity answers "how" and "what is" queries with heavy citation.</li>
+        <li>Publish fresh content regularly. Perplexity weights recency more than the other two.</li>
+        <li>Write listicles and step-by-step guides. Its answer format mirrors structured how-to content.</li>
+        <li>Check your own citations with the free tier. Search your target queries on Perplexity weekly and note who gets cited.</li>
+      </ul>
+
+      <h2 id="local-playbook">The Local Business Playbook</h2>
+
+      <p>Local businesses have an unfair advantage in AI citations: the models need structured local facts, and most competitors have messy ones.</p>
+
+      <ul>
+        <li><strong>NAP consistency.</strong> Your name, address, and phone number must match character-for-character across your site, Google Business Profile, and directories.</li>
+        <li><strong>Reviews that name services.</strong> Ask happy customers to mention the actual service ("teeth cleaning", not just "great dentist"). Models read review text.</li>
+        <li><strong>Location FAQ pages.</strong> One page per service area answering real local questions. See <a href="/blog/local-seo-ai-overviews">how local SEO works with AI Overviews</a>.</li>
+        <li><strong>Industry directories.</strong> Get listed where your industry actually looks. A law firm needs legal directories, not generic ones.</li>
+      </ul>
+
+      <h2 id="off-site">Why Off-Site Presence Decides Citations</h2>
+
+      <p>Your own site is only half the equation. Models cross-check claims against third parties:</p>
+
+      <ul>
+        <li>Reddit threads and YouTube videos where real users name your brand</li>
+        <li>Review platforms (Google, Trustpilot, Clutch, G2) with detailed reviews</li>
+        <li>Podcast appearances and guest posts with quotable statements</li>
+        <li>Consistent profiles on LinkedIn, Crunchbase, and industry listings</li>
+      </ul>
+
+      <p>One detailed Reddit answer naming your agency can do more for AI citations than ten blog posts. The training data trusts humans talking to humans.</p>
+
+      <h2 id="measure">How to Measure AI Citations</h2>
+
+      <p>Build a simple monthly routine:</p>
+
+      <ul>
+        <li>List 20 to 30 target queries your buyers actually ask.</li>
+        <li>Run each through ChatGPT, Gemini, and Perplexity. Record whether you are cited, mentioned, or absent.</li>
+        <li>Track the trend, not the absolute number. AI citation data is directional.</li>
+        <li>When a competitor gets cited and you do not, read their page and find the quotable passage you are missing.</li>
+      </ul>
+
+      <p>For the full measurement system, read our guide on <a href="/blog/monitor-google-ai-overviews-performance">monitoring Google AI Overviews performance</a>.</p>
+
+      <h2 id="hire-agency">When Should You Hire an Agency for AI Citations?</h2>
+
+      <p>Do it yourself when you have one site, one market, and time to publish weekly. Hire when AI answers already shape your buying journey and competitors are getting cited instead of you. An agency brings the prompt-testing routine, the off-site mention engine, and the content system most teams cannot run alone.</p>
+
+      <p><a href="/">RankVelt</a> runs AI citation programs for businesses that want to be the name AI answers recommend. The work covers quotable content, entity cleanup, review and mention building, and monthly citation tracking.</p>
+
+      <div class="cta-premium-block">
+        <h2>Want AI Answers to Recommend You?</h2>
+        <p>RankVelt builds the content, mentions, and measurement system that gets businesses cited by ChatGPT, Gemini, and Perplexity.</p>
+        <a href="/strategy-call?package=AI%20Search%20Visibility%20Audit" class="shimmer-btn">Get Your AI Search Audit</a>
+      </div>
+    `,
+  },
   
+  {
+    id: "ai-overviews-rank-tracking-tools",
+
+    title: "Rank Tracking Tools for AI Overviews: 2026 Comparison",
+
+    seoTitle:
+      "Rank Tracking Tool for AI Overviews: Best Options Compared (2026)",
+
+    metaDescription:
+      "Compare the best rank tracking tools for AI Overviews in 2026: what to track, how tools differ, free vs paid options, and how to choose.",
+
+    ogTitle: "Rank Tracking Tools for AI Overviews Compared",
+
+    socialDescription:
+      "What actually matters in an AI Overviews tracker, how the main tools compare, and a free tracking setup that works.",
+
+    date: "Oct 3, 2026",
+    datePublished: "2026-10-03",
+    dateModified: "2026-10-03",
+
+    author: "RankVelt Editorial Team",
+    authorType: "Organization",
+
+    category: "AI SEARCH SEO",
+    readTime: "11 min read",
+
+    image: "/ai-overviews-rank-tracking-tools.webp",
+
+    imageAlt:
+      "Comparison of AI Overviews rank tracking tools showing citation tracking, SERP snapshots, and volatility metrics",
+
+    excerpt:
+      "Rank tracking tools for AI Overviews measure what classic rank trackers miss: overview presence, citations, and brand mentions. Here is how the main tools compare and how to choose one.",
+
+    relatedPostIds: [
+      "monitor-google-ai-overviews-performance",
+      "optimize-google-ai-overviews",
+      "show-up-in-google-ai-overviews",
+    ],
+
+    primaryService: {
+      title: "Business SEO",
+      description:
+        "Improve technical eligibility, content structure, internal linking, search visibility, and the conversion journey across commercially important pages.",
+      path: "/business-seo",
+    },
+
+    showStandardCta: true,
+
+    keyTakeaways: [
+      "AI Overviews tracking adds three metrics classic trackers miss: overview presence, citations, and brand mentions.",
+      "Judge tools on tracking pipeline quality: snapshots, country coverage, citation extraction, volatility, and exports.",
+      "Most listicles rank their own product first. Use an independent decision framework instead.",
+      "A free setup (Search Console AI reports plus manual checks) covers small sites. Pay when queries or markets scale.",
+      "Tool data is directional. Confirm big moves with manual checks before acting.",
+    ],
+
+    faqItems: [
+      {
+        question: "What is a rank tracking tool for AI Overviews?",
+        answer:
+          "It is a tool that monitors how Google AI Overviews affect your keywords: whether an overview appears, whether your site is cited inside it, and how overview presence changes your clicks. Classic rank trackers only report positions, which no longer explain traffic.",
+      },
+      {
+        question: "Which tools are best to track Google AI Overviews?",
+        answer:
+          "Semrush, SE Ranking, Ahrefs, and newer AI-focused tools like Omnia and Surfer all offer AI Overviews tracking with different strengths. The best choice depends on your query volume, markets, and whether you need citation-level detail or just presence tracking.",
+      },
+      {
+        question: "How do I track AI Overviews in Semrush?",
+        answer:
+          "Semrush includes AI Overviews tracking in its position tracking and SERP features reporting. Set up a project, add your keywords, and review the SERP features data to see which queries trigger overviews and whether your domain appears.",
+      },
+      {
+        question: "Can I track AI Overviews for free?",
+        answer:
+          "Yes, for small sites. Google Search Console's AI performance reports show impressions from AI search experiences, and a weekly manual check of your top 20 to 30 queries in a spreadsheet covers presence and citations. Paid tools become worth it when you track hundreds of queries or multiple countries.",
+      },
+      {
+        question: "What is AI overview tracking vs traditional rank tracking?",
+        answer:
+          "Traditional rank tracking reports your position for a keyword. AI overview tracking adds whether an AI answer appears above the results, whether you are cited in it, and how that presence affects clicks. You need both views to understand traffic in 2026.",
+      },
+    ],
+
+    toc: [
+      { id: "what-to-track", title: "What an AI Overviews Tracker Must Measure", level: 2 },
+      { id: "how-tools-differ", title: "How the Main Tools Compare", level: 2 },
+      { id: "semrush", title: "Semrush", level: 3 },
+      { id: "ai-native", title: "AI-native trackers", level: 3 },
+      { id: "se-ranking", title: "SE Ranking and similar mid-market suites", level: 3 },
+      { id: "ahrefs", title: "Ahrefs Brand Radar and enterprise options", level: 3 },
+      { id: "decision-framework", title: "A Decision Framework That Is Not a Sales Pitch", level: 2 },
+      { id: "free-setup", title: "The Free Tracking Setup That Actually Works", level: 2 },
+      { id: "mistakes", title: "Mistakes to Avoid", level: 2 },
+      { id: "hire-agency", title: "When Does Tracking Turn Into Client Work?", level: 2 },
+    ],
+
+    content: `
+      <p class="standalone-line">Your rank tracker is telling half the story.</p>
+
+      <p>A keyword can hold position 3 while an AI Overview above it takes most of the clicks. Your classic tracker reports "no change." Your traffic disagrees. That gap is why rank tracking tools for AI Overviews exist: they measure overview presence, citations, and brand mentions alongside positions.</p>
+
+      <h2 id="what-to-track">What an AI Overviews Tracker Must Measure</h2>
+
+      <p>Before comparing tools, know what matters. A serious tracker covers five things:</p>
+
+      <ul>
+        <li><strong>Overview presence:</strong> for each keyword, does an AI Overview appear at all?</li>
+        <li><strong>Citation extraction:</strong> which domains get cited inside the overview, and in what order?</li>
+        <li><strong>Brand mentions:</strong> is your brand named in the answer text even without a link?</li>
+        <li><strong>Volatility:</strong> how often do the cited sources change week to week?</li>
+        <li><strong>Exports and API:</strong> can you get the data out for reporting and analysis?</li>
+      </ul>
+
+      <p>A tool missing citation extraction is just a classic tracker with a new label. That is the first filter.</p>
+
+      <h2 id="how-tools-differ">How the Main Tools Compare</h2>
+
+      <p>Most comparison listicles rank their own product first, so use this independent read instead. Evaluate each tool against the five dimensions above plus refresh cadence and country coverage.</p>
+
+      <h3 id="semrush">Semrush</h3>
+
+      <p>The established all-rounder. AI Overviews data sits inside position tracking and SERP features reporting, so it fits teams already on the platform. Strength: huge keyword database and historical data. Watch out: citation-level detail is thinner than in AI-native tools, and meaningful AI tracking sits on higher-tier plans.</p>
+
+      <h3 id="ai-native">AI-native trackers (Omnia, Surfer, and similar)</h3>
+
+      <p>Built specifically for AI search. Strength: deeper citation extraction, share-of-voice views, and prompt-level testing across ChatGPT and Perplexity alongside Google. Watch out: younger products with smaller keyword databases, and listicles from these vendors rank their own tool first. Verify claims with a trial on your own keywords.</p>
+
+      <h3 id="se-ranking">SE Ranking and similar mid-market suites</h3>
+
+      <p>Strong value option for agencies and multi-site owners. AI Overviews tracking is typically included without enterprise pricing. Strength: cost per project. Watch out: check citation depth and country coverage for your specific markets before committing.</p>
+
+      <h3 id="ahrefs">Ahrefs Brand Radar and enterprise options</h3>
+
+      <p>Ahrefs approaches AI visibility through brand monitoring rather than classic rank tracking. Strength: best-in-class backlink and brand data to pair with AI metrics. Watch out: pricing and learning curve suit larger teams.</p>
+
+      <h2 id="decision-framework">A Decision Framework That Is Not a Sales Pitch</h2>
+
+      <p>Answer these five questions and the right tool picks itself:</p>
+
+      <ul>
+        <li><strong>How many keywords?</strong> Under 50: free methods may be enough. Hundreds across markets: you need automation.</li>
+        <li><strong>Which markets?</strong> If you need country-level AI Overview data outside the US and UK, verify coverage before paying.</li>
+        <li><strong>Citations or presence?</strong> Presence tracking is cheaper. Citation extraction (who exactly gets cited) costs more and matters for competitive niches.</li>
+        <li><strong>Who reads the reports?</strong> Client-facing agencies need white-label exports. Solo owners need a dashboard they will actually open.</li>
+        <li><strong>What is the exit cost?</strong> Prefer tools with CSV exports and no annual lock-in until the data proves its value.</li>
+      </ul>
+
+      <h2 id="free-setup">The Free Tracking Setup That Actually Works</h2>
+
+      <p>For small sites, paid tools are optional. This free routine covers the essentials:</p>
+
+      <ul>
+        <li>Use Search Console's AI performance reports for impression data from AI search experiences.</li>
+        <li>Keep a spreadsheet of your 20 to 30 most important queries.</li>
+        <li>Check each weekly: overview present or not, cited or not, mentioned or not.</li>
+        <li>Review monthly and turn patterns into content decisions.</li>
+      </ul>
+
+      <p>Our full walkthrough of this system is in the guide on <a href="/blog/monitor-google-ai-overviews-performance">monitoring Google AI Overviews performance</a>.</p>
+
+      <h2 id="mistakes">Mistakes to Avoid</h2>
+
+      <ul>
+        <li><strong>Tracking rankings only.</strong> Position 3 with an overview above it is not the same as position 3 without one.</li>
+        <li><strong>Trusting one snapshot.</strong> AI Overview sources change frequently. Weekly tracking beats one-off checks.</li>
+        <li><strong>Ignoring zero-citation queries.</strong> Queries where no one gets cited are opportunities, not dead ends.</li>
+        <li><strong>Acting on decimals.</strong> Tool data is directional. Confirm big moves manually before rewriting content.</li>
+      </ul>
+
+      <h2 id="hire-agency">When Does Tracking Turn Into Client Work?</h2>
+
+      <p>Tracking is step one. The value comes from what the data changes: which pages to rewrite, which queries to target, which competitors to study. If your reports pile up without content decisions, the tool is not the problem. <a href="/">RankVelt</a> turns AI visibility data into action plans: citation tracking, competitor citation analysis, and the content rewrites that win the citations back.</p>
+
+      <div class="cta-premium-block">
+        <h2>See Your True AI Visibility</h2>
+        <p>RankVelt tracks your AI Overview citations, brand mentions, and competitor gaps, then turns them into a clear action plan.</p>
+        <a href="/strategy-call?package=AI%20Search%20Visibility%20Audit" class="shimmer-btn">Get Your AI Search Audit</a>
+      </div>
+    `,
+  },
+
+  {
+    id: "ecommerce-seo-ai-search",
+
+    title: "Ecommerce SEO for AI Search: Get Products Cited in 2026",
+
+    seoTitle:
+      "Ecommerce SEO for AI Search: Get Products Cited by ChatGPT (2026)",
+
+    metaDescription:
+      "Ecommerce SEO for AI search in 2026: how to get your products cited by ChatGPT, Perplexity, and Google AI answers, plus on-site AI search basics.",
+
+    ogTitle: "Ecommerce SEO for AI Search",
+
+    socialDescription:
+      "Get your products recommended by AI shopping answers: product page tactics, feeds, reviews, and measurement.",
+
+    date: "Oct 3, 2026",
+    datePublished: "2026-10-03",
+    dateModified: "2026-10-03",
+
+    author: "RankVelt Editorial Team",
+    authorType: "Organization",
+
+    category: "ECOMMERCE SEO",
+    readTime: "12 min read",
+
+    image: "/ecommerce-seo-ai-search.webp",
+
+    imageAlt:
+      "Ecommerce products appearing in AI shopping answers from ChatGPT and Perplexity with product schema and reviews",
+
+    excerpt:
+      "AI shopping assistants now recommend products directly. This guide covers how to get your products cited by ChatGPT and Perplexity: product page structure, feeds, reviews, and measurement.",
+
+    relatedPostIds: [
+      "show-up-in-google-ai-overviews",
+      "optimize-google-ai-overviews",
+      "how-to-get-cited-by-chatgpt-gemini-perplexity",
+    ],
+
+    primaryService: {
+      title: "eCommerce SEO",
+      description:
+        "Grow product and category visibility across Google and AI shopping answers with technical fixes, content, and authority building.",
+      path: "/ecommerce-seo",
+    },
+
+    showStandardCta: true,
+
+    keyTakeaways: [
+      "AI search for ecommerce has two fronts: on-site AI search and product visibility inside AI shopping answers.",
+      "Nobody is writing about getting Shopify products cited by ChatGPT and Perplexity. That gap is yours to take.",
+      "Product pages need quotable blocks: who it is for, key specs, price context, and real pros and cons.",
+      "Reviews, product feeds, and schema are the trust layer AI shopping answers read first.",
+      "Track product citations with prompt tests on shopping queries, not just rankings.",
+    ],
+
+    faqItems: [
+      {
+        question: "What is AI search for ecommerce?",
+        answer:
+          "It covers two things: AI-powered search inside your own store (semantic site search) and your products appearing inside AI shopping answers from ChatGPT, Perplexity, and Google. The second one is the new battleground for product visibility.",
+      },
+      {
+        question: "How do I get my products cited by ChatGPT?",
+        answer:
+          "Make product pages quotable with clear specs, use cases, and honest pros and cons. Keep product schema accurate, collect detailed reviews, and get your products mentioned in comparison articles and Reddit discussions. ChatGPT shortlists come from sources that already compare options.",
+      },
+      {
+        question: "How can I improve ecommerce search relevance?",
+        answer:
+          "Use semantic site search that understands intent rather than keyword matching, enrich product data with synonyms and use cases, fix zero-result searches weekly, and surface buying guides inside search results. Relevance improves when the search engine understands what the shopper means, not just what they typed.",
+      },
+      {
+        question: "Is AI replacing search for ecommerce products?",
+        answer:
+          "Not replacing, splitting. Discovery increasingly starts in AI answers while checkout still happens on sites. Stores that appear in both win. Stores visible in neither lose the customer before the visit.",
+      },
+      {
+        question: "Do product reviews impact AI search visibility?",
+        answer:
+          "Yes, significantly. AI shopping answers lean on review content for pros, cons, and real-world verdicts. Detailed reviews mentioning specific features and use cases are far more quotable than star ratings alone.",
+      },
+      {
+        question: "What is the best AI search optimization for Shopify?",
+        answer:
+          "Combine a semantic site-search app for on-store relevance with AI-answer visibility work: product schema, detailed reviews, comparison content, and accurate product feeds in Google Merchant Center. No single app covers both fronts.",
+      },
+    ],
+
+    toc: [
+      { id: "two-fronts", title: "The Two Fronts of AI Search for Ecommerce", level: 2 },
+      { id: "ai-shopping-answers", title: "How to Get Products Into AI Shopping Answers", level: 2 },
+      { id: "product-pages", title: "Make product pages quotable", level: 3 },
+      { id: "trust-layer", title: "Build the trust layer", level: 3 },
+      { id: "off-site-products", title: "Get mentioned where models listen", level: 3 },
+      { id: "onsite-search", title: "Improve On-Site AI Search Relevance", level: 2 },
+      { id: "category-pages", title: "Do Not Forget Category Pages", level: 2 },
+      { id: "measure-ecommerce", title: "How to Measure AI Search Performance", level: 2 },
+      { id: "hire-agency", title: "When Ecommerce AI Search Needs an Agency", level: 2 },
+    ],
+
+    content: `
+      <p class="standalone-line">Shoppers now ask AI what to buy.</p>
+
+      <p>"Best running shoes for flat feet under $100." ChatGPT answers with three picks. Perplexity shows a comparison table with citations. Google's AI answer sits above the product listings. If your products are not in those answers, you lost the sale before the shopper ever saw your store.</p>
+
+      <p>AI search for ecommerce has two fronts. Most guides cover only the first. This one covers both.</p>
+
+      <h2 id="two-fronts">The Two Fronts of AI Search for Ecommerce</h2>
+
+      <ul>
+        <li><strong>On-site AI search:</strong> semantic search inside your own store that understands intent, handles long-tail queries, and converts browsers to buyers.</li>
+        <li><strong>AI shopping answers:</strong> your products getting recommended inside ChatGPT, Perplexity, and Google AI answers when shoppers research purchases.</li>
+      </ul>
+
+      <p>Front one improves conversion. Front two creates demand. You need both, but front two is where almost no competitor content exists yet.</p>
+
+      <h2 id="ai-shopping-answers">How to Get Products Into AI Shopping Answers</h2>
+
+      <p>AI models build product shortlists from quotable, trustworthy sources. Here is what to fix:</p>
+
+      <h3 id="product-pages">Make product pages quotable</h3>
+
+      <ul>
+        <li>Add a 50-word "who is this for" block near the top. Models quote these verbatim.</li>
+        <li>List key specs in scannable format, not buried in paragraphs.</li>
+        <li>Include honest pros and cons. AI answers distrust pages that only praise.</li>
+        <li>State price context: what it costs and what comparable options cost.</li>
+      </ul>
+
+      <h3 id="trust-layer">Build the trust layer</h3>
+
+      <ul>
+        <li><strong>Product schema:</strong> keep price, availability, ratings, and SKU accurate. Wrong schema kills eligibility.</li>
+        <li><strong>Reviews with substance:</strong> encourage reviews that mention specific features and use cases. "Battery lasted two full days of travel" beats "great phone."</li>
+        <li><strong>Google Merchant Center:</strong> clean product feeds feed Google's shopping surfaces and AI answers.</li>
+        <li><strong>Comparison content:</strong> publish genuine buying guides comparing your products with alternatives. AI shortlists come from pages that already compare.</li>
+      </ul>
+
+      <h3 id="off-site-products">Get mentioned where models listen</h3>
+
+      <ul>
+        <li>Reddit threads where real buyers discuss your category</li>
+        <li>YouTube reviews with chapters and detailed descriptions</li>
+        <li>Niche blogs and publications that review products in your space</li>
+      </ul>
+
+      <h2 id="onsite-search">Improve On-Site AI Search Relevance</h2>
+
+      <p>Once shoppers reach your store, semantic search decides whether they find the product:</p>
+
+      <ul>
+        <li>Move from keyword matching to semantic search that understands intent ("gift for a coffee lover" should find coffee gear).</li>
+        <li>Enrich product data with synonyms, use cases, and shopper language.</li>
+        <li>Review zero-result searches weekly and fix the top misses with synonyms or new content.</li>
+        <li>Show buying guides and FAQs inside search results, not just products.</li>
+      </ul>
+
+      <h2 id="category-pages">Do Not Forget Category Pages</h2>
+
+      <p>Category pages are citation magnets for broad queries like "best wireless earbuds 2026." Structure them with a quotable intro, genuine comparison criteria, and FAQ answers. A strong category page can get cited while individual product pages handle the long tail.</p>
+
+      <h2 id="measure-ecommerce">How to Measure AI Search Performance</h2>
+
+      <ul>
+        <li>List 20 to 30 shopping queries your buyers ask (best X for Y, X vs Z, cheapest quality X).</li>
+        <li>Run them through ChatGPT, Perplexity, and Google AI answers monthly. Record whether your products appear.</li>
+        <li>Track on-site search metrics: zero-result rate, search-to-purchase rate, and top failing queries.</li>
+        <li>Watch branded vs non-branded AI mentions separately. Non-branded citations are new demand.</li>
+      </ul>
+
+      <h2 id="hire-agency">When Ecommerce AI Search Needs an Agency</h2>
+
+      <p>Handle it in-house when you have one store, a small catalog, and someone who owns SEO weekly. Bring in help when AI answers already influence your category and competitors show up in them instead of you. <a href="/">RankVelt</a> runs ecommerce AI search programs: product page rewrites, schema and feed cleanup, review strategy, and monthly citation tracking across the platforms that recommend products.</p>
+
+      <div class="cta-premium-block">
+        <h2>Want AI to Recommend Your Products?</h2>
+        <p>RankVelt gets ecommerce products cited in AI shopping answers with page rewrites, trust signals, and monthly tracking.</p>
+        <a href="/strategy-call?package=Ecommerce%20SEO" class="shimmer-btn">Get Your Ecommerce SEO Audit</a>
+      </div>
+    `,
+  },
+
+  {
+    id: "local-seo-citations-ai-overviews",
+
+    title: "Local SEO Citations for AI Overviews: 2026 Guide",
+
+    seoTitle:
+      "Local SEO Citations for AI Overviews: Get Your Business Cited (2026)",
+
+    metaDescription:
+      "How local SEO citations feed Google AI Overviews in 2026: citation strategy for AI answers, legal local search shifts, and a measurement routine.",
+
+    ogTitle: "Local SEO Citations for AI Overviews",
+
+    socialDescription:
+      "Citations now feed AI answers, not just the map pack. Strategy, legal niche shifts, and measurement.",
+
+    date: "Oct 3, 2026",
+    datePublished: "2026-10-03",
+    dateModified: "2026-10-03",
+
+    author: "RankVelt Editorial Team",
+    authorType: "Organization",
+
+    category: "LOCAL SEO",
+    readTime: "11 min read",
+
+    image: "/local-seo-citations-ai-overviews.webp",
+
+    imageAlt:
+      "Local business citations feeding Google AI Overviews with consistent NAP data across directories and review platforms",
+
+    excerpt:
+      "Local SEO citations now feed AI answers, not just the map pack. Learn the citation strategy for AI Overviews, how legal local search is changing, and how to measure it.",
+
+    relatedPostIds: [
+      "local-seo-ai-overviews",
+      "optimize-google-ai-overviews",
+      "how-to-get-cited-by-chatgpt-gemini-perplexity",
+    ],
+
+    primaryService: {
+      title: "Local SEO",
+      description:
+        "Win local searches and AI answers with optimized profiles, citations, reviews, and location content that turns nearby searchers into customers.",
+      path: "/local-seo",
+    },
+
+    showStandardCta: true,
+
+    keyTakeaways: [
+      "Citations now feed two systems: the local pack and AI-generated answers. Optimize for both.",
+      "AI answers cross-check your facts across sources. One inconsistent listing can cost you the citation.",
+      "Legal local search is shifting fastest: AI answers now summarize firm comparisons before anyone clicks.",
+      "No major citation guide covers the AI Overviews angle. Early movers take this space.",
+      "Measure citations plus AI mention checks monthly. Rankings alone hide the shift.",
+    ],
+
+    faqItems: [
+      {
+        question: "What are local SEO citations?",
+        answer:
+          "A local citation is any online mention of your business name, address, and phone number. They appear on directories, review sites, and social profiles. Search engines use them to verify that your business is real and to decide which businesses to show for local queries.",
+      },
+      {
+        question: "How do AI Overviews change local search behavior?",
+        answer:
+          "AI Overviews now answer many local queries directly with summarized recommendations, which means fewer searchers scroll to the map pack. Businesses get chosen inside the answer based on consistent citations, reviews, and clear service information rather than proximity alone.",
+      },
+      {
+        question: "How do AI Overviews change legal local search behavior?",
+        answer:
+          "For lawyers, AI answers now summarize firm comparisons, fee structures, and practice-area fit before a potential client clicks anything. Firms with consistent citations, detailed Google reviews naming practice areas, and FAQ content answering real client questions get recommended. Firms with thin profiles get skipped entirely.",
+      },
+      {
+        question: "How do I build local citations for SEO?",
+        answer:
+          "Start with the core data aggregators and major directories, then add industry-specific directories your customers actually use. Keep name, address, and phone identical everywhere, add complete business descriptions and categories, and audit quarterly for duplicates and inconsistencies.",
+      },
+      {
+        question: "How can a local business get found by AI?",
+        answer:
+          "Keep NAP data identical across every listing, collect reviews that mention specific services, publish location and service FAQ pages, and maintain complete profiles on Google Business Profile and industry directories. AI answers pull local facts from exactly these sources.",
+      },
+      {
+        question: "Do citations still matter in 2026?",
+        answer:
+          "Yes, more than before. Citations used to matter mainly for map pack rankings. Now they also feed AI-generated answers, which cross-check business facts across multiple sources before recommending anyone. Consistent citations are the price of admission to AI answers.",
+      },
+    ],
+
+    toc: [
+      { id: "two-jobs", title: "The Two Jobs of Citations in 2026", level: 2 },
+      { id: "citation-strategy", title: "A Citation Strategy Built for AI Answers", level: 2 },
+      { id: "consistency", title: "Fix consistency first", level: 3 },
+      { id: "priority-order", title: "Build in priority order", level: 3 },
+      { id: "rich-citations", title: "Make citations rich, not just present", level: 3 },
+      { id: "legal-shift", title: "How AI Overviews Are Changing Legal Local Search", level: 2 },
+      { id: "reviews", title: "Reviews Are Citations Too", level: 2 },
+      { id: "audit", title: "Quarterly Citation Audit Routine", level: 2 },
+      { id: "hire-agency", title: "When Citation Work Needs an Agency", level: 2 },
+    ],
+
+    content: `
+      <p class="standalone-line">Citations used to win the map pack. Now they win the answer.</p>
+
+      <p>For years, local SEO citations had one job: help you rank in Google's local pack. That job still exists. But a second job appeared: feeding Google's AI Overviews and AI Mode with the verified business facts they need to recommend you.</p>
+
+      <p>No major citation guide covers this second job. This one does.</p>
+
+      <h2 id="two-jobs">The Two Jobs of Citations in 2026</h2>
+
+      <ul>
+        <li><strong>Job 1, classic:</strong> citations verify your business is real and relevant, supporting local pack rankings.</li>
+        <li><strong>Job 2, new:</strong> AI answers cross-check your name, address, hours, and services across multiple sources before naming you. Inconsistent data means no recommendation.</li>
+      </ul>
+
+      <p>Read our breakdown of <a href="/blog/local-seo-ai-overviews">how local SEO works with AI Overviews</a> for the full mechanics. The short version: AI answers are citation-hungry, and messy business data starves them.</p>
+
+      <h2 id="citation-strategy">A Citation Strategy Built for AI Answers</h2>
+
+      <h3 id="consistency">Fix consistency first</h3>
+
+      <p>Pick one exact version of your business name, address, and phone number. Use it character-for-character everywhere: website footer, Google Business Profile, directories, social profiles, email signatures. AI systems treat small mismatches as different businesses.</p>
+
+      <h3 id="priority-order">Build in priority order</h3>
+
+      <ul>
+        <li><strong>Tier 1:</strong> Google Business Profile, Apple Business Connect, Bing Places. These feed AI systems directly.</li>
+        <li><strong>Tier 2:</strong> major directories and data aggregators in your country.</li>
+        <li><strong>Tier 3:</strong> industry-specific directories your customers actually use. A dentist needs health directories; a lawyer needs legal ones.</li>
+        <li><strong>Tier 4:</strong> local chambers, sponsorships, and community pages. These add the local trust signals AI answers notice.</li>
+      </ul>
+
+      <h3 id="rich-citations">Make citations rich, not just present</h3>
+
+      <p>A bare listing verifies existence. A rich listing wins recommendations:</p>
+
+      <ul>
+        <li>Complete business descriptions with services named explicitly</li>
+        <li>Correct categories, including secondary ones</li>
+        <li>Photos of the premises, team, and work</li>
+        <li>Hours, including holiday hours</li>
+        <li>Links to specific service pages, not just the homepage</li>
+      </ul>
+
+      <h2 id="legal-shift">How AI Overviews Are Changing Legal Local Search</h2>
+
+      <p>Legal is the niche where the shift is most visible, and the keyword data proves it: "how ai overviews change legal local search behavior" gets 390 searches a month with almost no competition.</p>
+
+      <p>Here is what is happening: someone searching for a personal injury lawyer used to scan the map pack. Now an AI Overview summarizes firm comparisons, fee structures, and who handles their case type. The firms named in that summary win the consultation. The firms with thin profiles never enter the comparison.</p>
+
+      <p>What gets law firms recommended:</p>
+
+      <ul>
+        <li>Google reviews that name the practice area ("handled my car accident case"), not just "great lawyer"</li>
+        <li>FAQ pages answering real client questions about fees, timelines, and process</li>
+        <li>Consistent citations across legal directories, not just generic ones</li>
+        <li>Attorney bios with specific case types and outcomes described factually</li>
+      </ul>
+
+      <p>The same pattern is reaching dentists, plumbers, and every local trade. Legal is just first.</p>
+
+      <h2 id="reviews">Reviews Are Citations Too</h2>
+
+      <p>AI answers read review text, not just star counts. A review saying "Dr. Ahmed fixed my root canal painlessly and the clinic near DHA was easy to reach" gives the model quotable facts: service, experience, location. Encourage customers to mention the specific service they received.</p>
+
+      <h2 id="audit">Quarterly Citation Audit Routine</h2>
+
+      <ul>
+        <li>Search your business name plus city. Note every listing on page one and two.</li>
+        <li>Check NAP consistency across all of them. Fix mismatches at the source.</li>
+        <li>Look for duplicates and unclaimed listings. Claim or merge them.</li>
+        <li>Check that hours, categories, and service lists are current.</li>
+        <li>Run 10 local queries through Google AI answers and note whether your business appears.</li>
+      </ul>
+
+      <h2 id="hire-agency">When Citation Work Needs an Agency</h2>
+
+      <p>Do it yourself with one location and an afternoon per quarter. Get help with multiple locations, a messy listing history, or a competitive legal or medical market where AI answers already shape client choice. <a href="/">RankVelt</a> runs citation programs built for AI answers: full audits, cleanup across aggregators, industry directory placement, review strategy, and monthly AI mention tracking.</p>
+
+      <div class="cta-premium-block">
+        <h2>Want AI Answers to Recommend Your Business?</h2>
+        <p>RankVelt builds the citations, reviews, and local content that get businesses cited in AI answers.</p>
+        <a href="/strategy-call?package=Local%20SEO" class="shimmer-btn">Get Your Local SEO Audit</a>
+      </div>
+    `,
+  },
+  
+
   // Old articles Shopify
   
   {
