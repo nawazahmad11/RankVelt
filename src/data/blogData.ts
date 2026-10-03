@@ -325,8 +325,7 @@ export const blogPosts: BlogPost[] = [
       </details>
       <h2 id="conclusion">Conclusion</h2>
       <p>To monitor google ai overviews performance, you do not need a big budget or complex software. Start with Search Console's AI reports, add a simple weekly spreadsheet check of your most important queries, and review the patterns once a month. Track citations, mentions, overview presence, and the clicks-versus-impressions gap, and you will always know what the AI layer is doing to your traffic.</p>
-      <p>If you want the full picture of how to not just track but actually win citations, read our main guide on <a href="/blog/optimize-google-ai-overviews">how to optimize for Google AI Overviews</a>. And if you are still fuzzy on the basics, start with <a href="/blog/google-ai-overviews-how-it-works">how Google AI Overviews work</a>.</p>
-
+<p>If you want the full picture of how to not just track but actually win citations, read our main guide on <a href="/blog/optimize-google-ai-overviews">how to optimize for Google AI Overviews</a>. And if you are still fuzzy on the basics, start with <a href="/blog/google-ai-overviews-how-it-works">how Google AI Overviews work</a>. Local businesses should also read our <a href="/blog/local-seo-ai-overviews">local SEO guide for AI Overviews</a>.</p>
       <div class="cta-premium-block">
         <h2>Want to See Your AI Visibility Clearly?</h2>
         <p>RankVelt tracks your AI Overview citations, brand mentions, and the metrics that matter, then turns them into a clear action plan.</p>
@@ -334,7 +333,6 @@ export const blogPosts: BlogPost[] = [
       </div>
     `,
   },
-
   {
     id: "show-up-in-google-ai-overviews",
 
@@ -605,8 +603,7 @@ export const blogPosts: BlogPost[] = [
       </details>
       <h2 id="conclusion">Conclusion</h2>
       <p>Learning how to show up in ai overviews seo comes down to one principle: become the clearest answer on the page. Answer directly, structure with real questions, keep facts fresh, and build authority topic by topic. You do not need the biggest site, just the most quotable content.</p>
-      <p>Want the complete system? Read our main guide on <a href="/blog/optimize-google-ai-overviews">how to optimize for Google AI Overviews</a>. And to understand what you are optimizing for, see <a href="/blog/google-ai-overviews-how-it-works">how Google AI Overviews work</a>. For the page-level details, our guide on <a href="/blog/structure-content-for-ai-overviews">structuring content for AI Overviews</a> goes deeper.</p>
-
+     <p>Want the complete system? Read our main guide on <a href="/blog/optimize-google-ai-overviews">how to optimize for Google AI Overviews</a>. And to understand what you are optimizing for, see <a href="/blog/google-ai-overviews-how-it-works">how Google AI Overviews work</a>. For the page-level details, our guide on <a href="/blog/structure-content-for-ai-overviews">structuring content for AI Overviews</a> goes deeper. If you serve local customers, read our <a href="/blog/local-seo-ai-overviews">local SEO guide for AI Overviews</a>.</p>
       <div class="cta-premium-block">
         <h2>Want Your Site Cited in AI Overviews?</h2>
         <p>RankVelt helps businesses become the source Google quotes with answer-focused content, smart structure, and citation tracking.</p>
@@ -614,7 +611,6 @@ export const blogPosts: BlogPost[] = [
       </div>
     `,
   },
-
   {
     id: "how-ai-overviews-change-seo",
 
@@ -890,7 +886,6 @@ export const blogPosts: BlogPost[] = [
       </div>
     `,
   },
-
   {
     id: "structure-content-for-ai-overviews",
 
@@ -1152,7 +1147,6 @@ export const blogPosts: BlogPost[] = [
       </div>
     `,
   },
-
   {
     id: "benefits-of-ai-overviews-seo",
 
@@ -1421,8 +1415,6 @@ export const blogPosts: BlogPost[] = [
       </div>
     `,
   },
-
-
   {
     id: "google-ai-overviews-how-it-works",
 
@@ -1833,8 +1825,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>Start small. Pick your five most important pages. Add a direct answer under each main heading, add a short FAQ, and refresh your stats. Those three steps alone put you ahead of most competitors.</p>
 
-      <p>For the full optimization playbook, read our guide on <a href="/blog/optimize-google-ai-overviews">how to optimize for Google AI Overviews and AI Mode</a>.</p>
-
+     <p>For the full optimization playbook, read our guide on <a href="/blog/optimize-google-ai-overviews">how to optimize for Google AI Overviews and AI Mode</a>. For location-based businesses, see <a href="/blog/local-seo-ai-overviews">how local SEO works with AI Overviews</a>.</p>
       <div class="cta-premium-block">
         <h2>Want Your Site Cited in AI Overviews?</h2>
         <p>RankVelt helps businesses become the source Google quotes with AI-first SEO audits, answer-focused content structure, and citation tracking.</p>
@@ -1842,9 +1833,6 @@ export const blogPosts: BlogPost[] = [
       </div>
     `,
   },
-
-  
-  
   {
     id: "seo-vs-aeo-vs-geo",
     title: "SEO vs AEO vs GEO in 2026: What Businesses Actually Need",
@@ -3204,11 +3192,13 @@ export const blogPosts: BlogPost[] = [
 
       <p>For a B2B company with stable rankings and falling CTR, the strongest next move is a focused audit of commercially valuable pages. Compare current eligibility, content depth, source quality, fan-out coverage, citations, conversion paths, and measurement gaps before commissioning a large content expansion.</p>
 
-      <p>RankVelt SEO Agency can position its service around that outcome: identifying where AI-generated search is affecting visibility, prioritizing the pages closest to revenue, and building a measurable optimization roadmap rather than selling an isolated GEO tactic.</p>
+      <p><a href="/">RankVelt</a> SEO Agency can position its service around that outcome: identifying where AI-generated search is affecting visibility, prioritizing the pages closest to revenue, and building a measurable optimization roadmap rather than selling an isolated GEO tactic.</p>
 
       <p>This guide covers Google AI Overviews, AI Mode, website eligibility, content strategy, citation visibility, and conversion measurement. It does not fully address ecommerce feeds, local inventory systems, publisher-specific preferred-source strategies, or agentic commerce implementation.</p>
 
       <p>Those areas require separate technical plans.</p>
+
+      <p>Related guides: <a href="/blog/monitor-google-ai-overviews-performance">monitor Google AI Overviews performance</a>, learn <a href="/blog/show-up-in-google-ai-overviews">how to show up in Google AI Overviews</a>, understand <a href="/blog/google-ai-overviews-how-it-works">how Google AI Overviews work</a>, and see <a href="/blog/local-seo-ai-overviews">how local SEO works with AI Overviews</a>.</p>
     `,
   },
   {
@@ -7783,7 +7773,6 @@ export const blogPosts: BlogPost[] = [
       </p>
     `,
   },
-
   {
     id: "website-redesign-seo-checklist",
 
@@ -8520,7 +8509,6 @@ export const blogPosts: BlogPost[] = [
       </p>
     `,
   },
-
   {
     id: "internal-linking-seo-ai",
 
@@ -9626,7 +9614,6 @@ export const blogPosts: BlogPost[] = [
       <p class="standalone-line">Start there before expanding the content calendar.</p>
     `,
   },
-
   {
     id: "plumbing-seo-guide",
   
@@ -9970,347 +9957,341 @@ export const blogPosts: BlogPost[] = [
       </div>
     `,
   },
+  {
+      id: "dentist-seo-guide",
 
-  // PASTE THIS OBJECT into the blogPosts array in blogData.ts (comma separated).
-// Pairs with image: /blog/dentist-seo-guide.webp (public/blog/dentist-seo-guide.webp)
-{
-  id: "dentist-seo-guide",
+      title: "Dental SEO: The Complete Guide to More Patient Bookings",
 
-  title: "Dental SEO: The Complete Guide to More Patient Bookings",
+      seoTitle:
+        "Dental SEO Guide 2026: Rank Higher & Book More Patients",
 
-  seoTitle:
-    "Dental SEO Guide 2026: Rank Higher & Book More Patients",
+      metaDescription:
+        "A practical dental SEO guide covering local rankings, Google Business Profile, treatment pages, reviews, and a step-by-step checklist for dental practices in the USA, UK, Canada and Australia.",
 
-  metaDescription:
-    "A practical dental SEO guide covering local rankings, Google Business Profile, treatment pages, reviews, and a step-by-step checklist for dental practices in the USA, UK, Canada and Australia.",
+      ogTitle:
+        "The Complete Dental SEO Guide for More Patient Bookings",
 
-  ogTitle:
-    "The Complete Dental SEO Guide for More Patient Bookings",
+      socialDescription:
+        "Practical dental SEO guidance covering local rankings, treatment pages, reviews, and a checklist your practice can use this week.",
 
-  socialDescription:
-    "Practical dental SEO guidance covering local rankings, treatment pages, reviews, and a checklist your practice can use this week.",
+      date: "Oct 2, 2026",
+      datePublished: "2026-10-02",
+      dateModified: "2026-10-02",
 
-  date: "Oct 2, 2026",
-  datePublished: "2026-10-02",
-  dateModified: "2026-10-02",
+      author: "RankVelt Editorial Team",
+      authorType: "Organization",
 
-  author: "RankVelt Editorial Team",
-  authorType: "Organization",
+      category: "LOCAL SEO",
+      readTime: "12 min read",
 
-  category: "LOCAL SEO",
-  readTime: "12 min read",
+      image: "/blog/dentist-seo-guide.webp",
 
-  image: "/blog/dentist-seo-guide.webp",
+      imageAlt:
+        "Dental SEO guide showing Google Business Profile, local rankings and treatment pages for a dental practice",
 
-  imageAlt:
-    "Dental SEO guide showing Google Business Profile, local rankings and treatment pages for a dental practice",
+      excerpt:
+        "A complete dental SEO guide covering local rankings, Google Business Profile, treatment pages, reviews, common mistakes, and a practical checklist for dental practices in the USA, UK, Canada and Australia.",
 
-  excerpt:
-    "A complete dental SEO guide covering local rankings, Google Business Profile, treatment pages, reviews, common mistakes, and a practical checklist for dental practices in the USA, UK, Canada and Australia.",
+      relatedPostIds: [
+        "plumbing-seo-guide",
+        "electrician-seo-guide",
+        "local-seo-ai-overviews",
+      ],
 
-  relatedPostIds: [
-    "plumbing-seo-guide",
-    "electrician-seo-guide",
-    "local-seo-ai-overviews",
-  ],
+      showStandardCta: true,
 
-  showStandardCta: true,
+      faqItems: [
+        {
+          question: "What is dental SEO?",
+          answer:
+            "Dental SEO is the process of improving a dental practice's online visibility so it appears higher in Google search results and the Google Map Pack when local patients search for treatments like implants, orthodontics or emergency dentistry.",
+        },
+        {
+          question: "How long does dental SEO take to show results?",
+          answer:
+            "Most dental practices start seeing meaningful movement within three to six months. Competitive city markets and high-value treatments like implants can take longer, while quieter local areas may show progress sooner.",
+        },
+        {
+          question: "How much does dental SEO cost?",
+          answer:
+            "Pricing depends on your market, the treatments you prioritise and the condition of your website. RankVelt publishes its starting price openly: dental SEO engagements start at $525 per month with a minimum of three months, confirmed after a free opportunity check.",
+        },
+        {
+          question: "Do dentists really need local SEO?",
+          answer:
+            "Yes. Patients choose a dentist based on who appears in local search and Google Maps, how trustworthy the practice looks and how easy it is to book. If your practice is invisible at that moment, a competitor gets the patient.",
+        },
+        {
+          question: "What is the difference between dental SEO and Google Ads?",
+          answer:
+            "Google Ads gives you visibility immediately, but it stops the moment you stop paying. SEO takes longer to build but keeps generating patient enquiries without a cost per click, which matters for high-value treatments with long decision cycles.",
+        },
+        {
+          question: "Can I do dental SEO myself?",
+          answer:
+            "Basic steps, like keeping your Google Business Profile accurate and asking happy patients for reviews, can be done in-house. Treatment page strategy, technical fixes and multi-location structure usually benefit from experienced help.",
+        },
+      ],
 
-  faqItems: [
-    {
-      question: "What is dental SEO?",
-      answer:
-        "Dental SEO is the process of improving a dental practice's online visibility so it appears higher in Google search results and the Google Map Pack when local patients search for treatments like implants, orthodontics or emergency dentistry.",
-    },
-    {
-      question: "How long does dental SEO take to show results?",
-      answer:
-        "Most dental practices start seeing meaningful movement within three to six months. Competitive city markets and high-value treatments like implants can take longer, while quieter local areas may show progress sooner.",
-    },
-    {
-      question: "How much does dental SEO cost?",
-      answer:
-        "Pricing depends on your market, the treatments you prioritise and the condition of your website. RankVelt publishes its starting price openly: dental SEO engagements start at $525 per month with a minimum of three months, confirmed after a free opportunity check.",
-    },
-    {
-      question: "Do dentists really need local SEO?",
-      answer:
-        "Yes. Patients choose a dentist based on who appears in local search and Google Maps, how trustworthy the practice looks and how easy it is to book. If your practice is invisible at that moment, a competitor gets the patient.",
-    },
-    {
-      question: "What is the difference between dental SEO and Google Ads?",
-      answer:
-        "Google Ads gives you visibility immediately, but it stops the moment you stop paying. SEO takes longer to build but keeps generating patient enquiries without a cost per click, which matters for high-value treatments with long decision cycles.",
-    },
-    {
-      question: "Can I do dental SEO myself?",
-      answer:
-        "Basic steps, like keeping your Google Business Profile accurate and asking happy patients for reviews, can be done in-house. Treatment page strategy, technical fixes and multi-location structure usually benefit from experienced help.",
-    },
-  ],
+      howTo: {
+        name: "How to Improve Local SEO for a Dental Practice",
 
-  howTo: {
-    name: "How to Improve Local SEO for a Dental Practice",
+        description:
+          "A six-step process for reviewing and improving a dental practice's Google Business Profile, treatment pages, and local search visibility.",
 
-    description:
-      "A six-step process for reviewing and improving a dental practice's Google Business Profile, treatment pages, and local search visibility.",
-
-    steps: [
-      {
-        name: "Audit your Google Business Profile",
-        text: "Check your opening hours, treatment list, categories, photos and booking link for accuracy.",
+        steps: [
+          {
+            name: "Audit your Google Business Profile",
+            text: "Check your opening hours, treatment list, categories, photos and booking link for accuracy.",
+          },
+          {
+            name: "Fix citation inconsistencies",
+            text: "Make sure your practice name, address, and phone number match across every directory and insurer listing.",
+          },
+          {
+            name: "Build dedicated treatment pages",
+            text: "Create a separate, detailed page for each high-value treatment instead of one generic services page.",
+          },
+          {
+            name: "Collect detailed reviews",
+            text: "Ask patients to mention the treatment and their experience in the review, and reply to every review.",
+          },
+          {
+            name: "Improve the booking journey",
+            text: "Test your website on a real phone and make calling or booking an appointment effortless.",
+          },
+          {
+            name: "Track calls and bookings",
+            text: "Review call volume, form submissions and appointment requests monthly, not just keyword rankings.",
+          },
+        ],
       },
-      {
-        name: "Fix citation inconsistencies",
-        text: "Make sure your practice name, address, and phone number match across every directory and insurer listing.",
-      },
-      {
-        name: "Build dedicated treatment pages",
-        text: "Create a separate, detailed page for each high-value treatment instead of one generic services page.",
-      },
-      {
-        name: "Collect detailed reviews",
-        text: "Ask patients to mention the treatment and their experience in the review, and reply to every review.",
-      },
-      {
-        name: "Improve the booking journey",
-        text: "Test your website on a real phone and make calling or booking an appointment effortless.",
-      },
-      {
-        name: "Track calls and bookings",
-        text: "Review call volume, form submissions and appointment requests monthly, not just keyword rankings.",
-      },
-    ],
+
+      toc: [
+        {
+          id: "what-is-dental-seo",
+          title: "What Is Dental SEO?",
+          level: 2,
+        },
+        {
+          id: "why-dentists-need-seo",
+          title: "Why Dental Practices Need SEO",
+          level: 2,
+        },
+        {
+          id: "how-local-seo-works",
+          title: "How Local SEO Works for Dentists",
+          level: 2,
+        },
+        {
+          id: "core-parts",
+          title: "The Core Parts of a Dental SEO Strategy",
+          level: 2,
+        },
+        {
+          id: "treatment-pages",
+          title: "Treatment Pages That Book Appointments",
+          level: 2,
+        },
+        {
+          id: "common-mistakes",
+          title: "Common Mistakes Dental Practices Make With SEO",
+          level: 2,
+        },
+        {
+          id: "what-most-blogs-dont-tell-you",
+          title: "What Most Dental SEO Blogs Don't Tell You",
+          level: 3,
+        },
+        {
+          id: "quick-wins",
+          title: "5 Quick Wins to Improve Dental SEO Fast",
+          level: 2,
+        },
+        {
+          id: "expert-tips",
+          title: "Expert Tips for Long-Term Growth",
+          level: 2,
+        },
+        {
+          id: "checklist",
+          title: "Actionable Dental SEO Checklist",
+          level: 2,
+        },
+        {
+          id: "rankvelt-approach",
+          title: "How RankVelt Approaches Dental SEO",
+          level: 2,
+        },
+        {
+          id: "faqs",
+          title: "Frequently Asked Questions",
+          level: 2,
+        },
+      ],
+
+      content: `
+        <p class="article-updated"><strong>Last updated:</strong> October 2026</p>
+
+        <div class="answer-box">
+          <p><strong>Dental SEO</strong> is the process of improving a dental practice's website and Google Business Profile so it ranks higher for local searches. It combines local SEO, treatment-page content, technical fixes, and reviews. The goal is simple: show up when a patient searches for a dentist nearby, and make booking easy.</p>
+        </div>
+
+        <p>Most patients do not choose a dentist from a directory or an advert alone. They search Google first. They compare a few practices fast. They book the one that looks trustworthy, close by, and easy to contact.</p>
+
+        <p>This guide covers what dental SEO actually means and how it works in practice. It also covers treatment pages, common mistakes, and a checklist you can use right away. This guide applies to dental practices in the USA, UK, Canada, and Australia.</p>
+
+        <h2 id="what-is-dental-seo">What Is Dental SEO?</h2>
+
+        <p>Dental SEO is the process of improving a dental practice's online presence so it ranks higher on Google. It covers your Google Business Profile, your treatment pages, your technical setup, and the trust signals around your practice. The goal is to show up when local patients search for care.</p>
+
+        <p>SEO is different from paid ads. Ads stop working the moment you stop paying. SEO builds visibility that keeps working over time, even on days you spend nothing. For treatments with long decision cycles, like implants or orthodontics, that steady visibility matters even more, because patients research for days before they book.</p>
+
+        <h2 id="why-dentists-need-seo">Why Dental Practices Need SEO</h2>
+
+        <p>Dental searches come in two forms. Urgent searches, such as a toothache, a chipped tooth or a lost crown, are won by the practice that appears in Google Maps with strong reviews and a tap to call button. Planned searches, such as implants, Invisalign or veneers, are researched carefully, and won by the practice whose treatment pages answer questions honestly.</p>
+
+        <p>This pattern holds true across the USA, UK, Canada, and Australia. Search behaviour is nearly identical in all four markets. Local search comes first, reviews come second, and website trust comes third. The main differences are directory names and local competition levels, not the underlying strategy.</p>
+
+        <p>Practices that invest in SEO build a steadier flow of patient enquiries without paying for every click. Over time, this lowers the cost of attracting new patients compared to relying only on ads or referral platforms.</p>
+
+        <h2 id="how-local-seo-works">How Local SEO Works for Dentists</h2>
+
+        <p>Local SEO controls whether you appear in the Google Map Pack. This is the group of three business listings shown above regular search results. For dentists, this is often the most valuable part of the whole strategy, because it is where urgent patients pick a practice.</p>
+
+        <p>Three things drive local rankings the most. These are your Google Business Profile accuracy, the number and quality of your reviews, and citation consistency across directories. Citations are simply your practice name, address, and phone number listed the same way everywhere online, including insurer and healthcare directories.</p>
+
+        <div class="answer-box">
+          <p><strong>Google Business Profile accuracy matters more than most practices realise.</strong> A profile with outdated opening hours, a missing booking link, or services you no longer offer actively hurts your visibility. Google rewards accuracy and consistency, and it quietly penalises confusion, even from a small typo in your practice name.</p>
+        </div>
+
+        <p>The full framework behind this is the same one RankVelt applies to every local business. You can see it on our <a href="/local-seo">local SEO services</a> page.</p>
+
+        <h2 id="core-parts">The Core Parts of a Dental SEO Strategy</h2>
+
+        <p>A complete dental SEO strategy has four working parts. Each part supports the others, so skipping one weakens the whole system.</p>
+
+        <ul>
+          <li><strong>On-page SEO:</strong> Clear treatment pages for each major service, such as implants, orthodontics, and emergency dentistry.</li>
+          <li><strong>Technical SEO:</strong> A fast, mobile-friendly website with clean structure and no broken booking paths.</li>
+          <li><strong>Content:</strong> Helpful guides that answer real patient questions before they book.</li>
+          <li><strong>Off-page SEO:</strong> Citations, reviews, and links that build trust signals outside your own website.</li>
+        </ul>
+
+        <h2 id="treatment-pages">Treatment Pages That Book Appointments</h2>
+
+        <p>One page trying to cover every treatment ranks for none of them. Implants, orthodontics, emergency care and cosmetic work each deserve a dedicated page written around what a patient in that situation actually searches for and worries about.</p>
+
+        <p>A strong treatment page explains who the treatment suits, what the process involves, how long it takes, what it costs in honest general terms, and what happens next. Then it makes booking or calling effortless. Written this way, the page earns rankings and appointments at the same time. The same service page principle powers trade businesses too, as our <a href="/blog/plumbing-seo-guide">plumbing SEO guide</a> shows.</p>
+
+        <p>Emergency dentistry deserves special attention. It is usually the highest intent search a practice can win, and many practices bury it in a paragraph on the homepage. A dedicated emergency page, matched to your real availability, turns panic searches into booked appointments.</p>
+
+        <h2 id="common-mistakes">Common Mistakes Dental Practices Make With SEO</h2>
+
+        <h3>Mistake 1: Ignoring the Google Business Profile</h3>
+        <p><strong>What it is:</strong> Many practices set up their profile once and never touch it again.</p>
+        <p><strong>Why it happens:</strong> Owners assume the profile runs itself once it is created.</p>
+        <p><strong>The impact:</strong> Outdated hours, missing photos, and old treatment lists quietly push you below competitors who stay active.</p>
+        <p><strong>The fix:</strong> Update your profile monthly. Add real photos of the practice and team, respond to reviews, and keep your treatment list and booking link current.</p>
+
+        <h3>Mistake 2: One Generic Services Page for Every Treatment</h3>
+        <p><strong>What it is:</strong> A single "Our Services" page listing implants, braces, whitening and emergency care in a few bullet points.</p>
+        <p><strong>Why it happens:</strong> It feels faster than writing a dedicated page for each treatment.</p>
+        <p><strong>The impact:</strong> Google cannot match a thin, generic page to a specific search like "dental implants near me" as well as a focused page built for that exact treatment.</p>
+        <p><strong>The fix:</strong> Create a separate page for each high-value treatment, with real detail about how your practice handles it.</p>
+
+        <h3>Mistake 3: Template Website Copy Copied From Every Other Practice</h3>
+        <p><strong>What it is:</strong> Stock text supplied by a website vendor, identical to hundreds of other dental websites.</p>
+        <p><strong>Why it happens:</strong> Template packages include copy as a convenience, and nobody rewrites it.</p>
+        <p><strong>The impact:</strong> Search engines see duplicate content with nothing unique to rank, and patients see a practice that sounds like everyone else.</p>
+        <p><strong>The fix:</strong> Rewrite your key pages in your own words, around your real treatments, team and patients.</p>
+
+        <h3>Mistake 4: Reviews Collected but Never Used</h3>
+        <p><strong>What it is:</strong> Happy patients leave reviews, but nobody replies, and the website never shows them.</p>
+        <p><strong>Why it happens:</strong> Review requests happen by chance instead of by routine.</p>
+        <p><strong>The impact:</strong> Reviews influence both your Map Pack position and whether a nervous patient trusts you enough to book. Ignoring them wastes both.</p>
+        <p><strong>The fix:</strong> Ask at the right moment after treatment, reply to every review, and show genuine reviews on the treatment pages they support.</p>
+
+        <h2 id="what-most-blogs-dont-tell-you">What Most Dental SEO Blogs Don't Tell You</h2>
+
+        <p>Rankings are not the finish line. A practice can rank well and still lose patients to a slow mobile site, a booking form that asks for insurance details before a phone number, or a reception journey that sends callers to voicemail at lunch. SEO brings the patient to your door. The booking experience decides whether they walk in.</p>
+
+        <p>The honest measure of dental SEO is not a position report. It is calls, form submissions and booked appointments, reviewed monthly. If those numbers are not moving, the strategy needs adjusting, no matter what the rankings say.</p>
+
+        <h2 id="quick-wins">5 Quick Wins to Improve Dental SEO Fast</h2>
+
+        <ul>
+          <li><strong>Fix your opening hours everywhere:</strong> Match your website, Google Business Profile and directories, including holiday hours.</li>
+          <li><strong>Add your booking link to your profile:</strong> If patients can book online, the profile should say so and link to it.</li>
+          <li><strong>Create an emergency dentistry page:</strong> One focused page for urgent searches, with your real availability and phone number.</li>
+          <li><strong>Reply to every review this week:</strong> Start with the most recent ones. Responses show patients and Google that the practice is active.</li>
+          <li><strong>Test your site on a phone:</strong> Time how long it takes to find the phone number and book. Fix whatever slows that down first.</li>
+        </ul>
+
+        <h2 id="expert-tips">Expert Tips for Long-Term Growth</h2>
+
+        <p>Build treatment pages before blog posts. A page about implants that books consultations is worth more than a year of general oral health articles. Add content in the order patients make money decisions, not in the order topics are easy to write.</p>
+
+        <p>Treat reviews as a system, not a campaign. A short, kind request at the right moment after treatment, repeated every week, beats a one-off push. Mention the treatment in the request so reviews naturally describe what you want to rank for.</p>
+
+        <p>For multi-location practices, keep every location honest and separate: its own profile, its own page, its own reviews. Duplicated location pages with swapped town names create the same doorway page problem that hurts trade businesses, and Google treats them the same way.</p>
+
+        <h2 id="checklist">Actionable Dental SEO Checklist</h2>
+
+        <ul>
+          <li>Google Business Profile audited for hours, categories, treatments, photos and booking link.</li>
+          <li>Practice name, address and phone number consistent across directories and insurer listings.</li>
+          <li>One dedicated page per high-value treatment, starting with implants, orthodontics and emergency care.</li>
+          <li>Review routine in place, with replies to every review.</li>
+          <li>Mobile booking journey tested on a real phone, end to end.</li>
+          <li>Calls, form submissions and appointments tracked monthly.</li>
+        </ul>
+
+        <p>You can score your own basics first with RankVelt's free <a href="/tools/local-seo-checklist">Local SEO Checklist</a> before you change anything.</p>
+
+        <h2 id="rankvelt-approach">How RankVelt Approaches Dental SEO</h2>
+
+        <p>Most dental SEO problems come down to the same root causes. These are an inconsistent Google Business Profile, thin treatment pages, and reviews that are collected by chance. Fixing these three things alone solves a large part of the visibility problem for most practices.</p>
+
+        <p>RankVelt focuses on genuine local relevance rather than shortcuts like duplicate location pages. That means real treatment pages, accurate citations, honest reviews and a Google Business Profile that stays current instead of being set up once and forgotten.</p>
+
+        <p>If your practice has visibility but weak bookings, or no visibility at all, a focused review of your current setup is usually the fastest way to find what is actually holding you back. See RankVelt's <a href="/local-seo/dentists">dental SEO services</a> for how this works in practice, including published pricing.</p>
+
+        <h2 id="faqs">Frequently Asked Questions</h2>
+
+        <div class="faq-accordion">
+          <details>
+            <summary>What is dental SEO?</summary>
+            <p>Dental SEO is the process of improving a dental practice's online visibility so it appears higher in Google search results and the Google Map Pack when local patients search for treatments like implants, orthodontics or emergency dentistry.</p>
+          </details>
+
+          <details>
+            <summary>How long does dental SEO take to show results?</summary>
+            <p>Most dental practices start seeing meaningful movement within three to six months. Competitive city markets and high-value treatments like implants can take longer, while quieter local areas may show progress sooner.</p>
+          </details>
+
+          <details>
+            <summary>How much does dental SEO cost?</summary>
+            <p>Pricing depends on your market, the treatments you prioritise and the condition of your website. RankVelt publishes its starting price openly: dental SEO engagements start at $525 per month with a minimum of three months, confirmed after a free opportunity check.</p>
+          </details>
+
+          <details>
+            <summary>Do dentists really need local SEO?</summary>
+            <p>Yes. Patients choose a dentist based on who appears in local search and Google Maps, how trustworthy the practice looks and how easy it is to book. If your practice is invisible at that moment, a competitor gets the patient.</p>
+          </details>
+
+          <details>
+            <summary>What is the difference between dental SEO and Google Ads?</summary>
+            <p>Google Ads gives you visibility immediately, but it stops the moment you stop paying. SEO takes longer to build but keeps generating patient enquiries without a cost per click, which matters for high-value treatments with long decision cycles.</p>
+          </details>
+
+          <details>
+            <summary>Can I do dental SEO myself?</summary>
+            <p>Basic steps, like keeping your Google Business Profile accurate and asking happy patients for reviews, can be done in-house. Treatment page strategy, technical fixes and multi-location structure usually benefit from experienced help.</p>
+          </details>
+        </div>
+      `,
   },
-
-  toc: [
-    {
-      id: "what-is-dental-seo",
-      title: "What Is Dental SEO?",
-      level: 2,
-    },
-    {
-      id: "why-dentists-need-seo",
-      title: "Why Dental Practices Need SEO",
-      level: 2,
-    },
-    {
-      id: "how-local-seo-works",
-      title: "How Local SEO Works for Dentists",
-      level: 2,
-    },
-    {
-      id: "core-parts",
-      title: "The Core Parts of a Dental SEO Strategy",
-      level: 2,
-    },
-    {
-      id: "treatment-pages",
-      title: "Treatment Pages That Book Appointments",
-      level: 2,
-    },
-    {
-      id: "common-mistakes",
-      title: "Common Mistakes Dental Practices Make With SEO",
-      level: 2,
-    },
-    {
-      id: "what-most-blogs-dont-tell-you",
-      title: "What Most Dental SEO Blogs Don't Tell You",
-      level: 3,
-    },
-    {
-      id: "quick-wins",
-      title: "5 Quick Wins to Improve Dental SEO Fast",
-      level: 2,
-    },
-    {
-      id: "expert-tips",
-      title: "Expert Tips for Long-Term Growth",
-      level: 2,
-    },
-    {
-      id: "checklist",
-      title: "Actionable Dental SEO Checklist",
-      level: 2,
-    },
-    {
-      id: "rankvelt-approach",
-      title: "How RankVelt Approaches Dental SEO",
-      level: 2,
-    },
-    {
-      id: "faqs",
-      title: "Frequently Asked Questions",
-      level: 2,
-    },
-  ],
-
-  content: `
-    <p class="article-updated"><strong>Last updated:</strong> October 2026</p>
-
-    <div class="answer-box">
-      <p><strong>Dental SEO</strong> is the process of improving a dental practice's website and Google Business Profile so it ranks higher for local searches. It combines local SEO, treatment-page content, technical fixes, and reviews. The goal is simple: show up when a patient searches for a dentist nearby, and make booking easy.</p>
-    </div>
-
-    <p>Most patients do not choose a dentist from a directory or an advert alone. They search Google first. They compare a few practices fast. They book the one that looks trustworthy, close by, and easy to contact.</p>
-
-    <p>This guide covers what dental SEO actually means and how it works in practice. It also covers treatment pages, common mistakes, and a checklist you can use right away. This guide applies to dental practices in the USA, UK, Canada, and Australia.</p>
-
-    <h2 id="what-is-dental-seo">What Is Dental SEO?</h2>
-
-    <p>Dental SEO is the process of improving a dental practice's online presence so it ranks higher on Google. It covers your Google Business Profile, your treatment pages, your technical setup, and the trust signals around your practice. The goal is to show up when local patients search for care.</p>
-
-    <p>SEO is different from paid ads. Ads stop working the moment you stop paying. SEO builds visibility that keeps working over time, even on days you spend nothing. For treatments with long decision cycles, like implants or orthodontics, that steady visibility matters even more, because patients research for days before they book.</p>
-
-    <h2 id="why-dentists-need-seo">Why Dental Practices Need SEO</h2>
-
-    <p>Dental searches come in two forms. Urgent searches, such as a toothache, a chipped tooth or a lost crown, are won by the practice that appears in Google Maps with strong reviews and a tap to call button. Planned searches, such as implants, Invisalign or veneers, are researched carefully, and won by the practice whose treatment pages answer questions honestly.</p>
-
-    <p>This pattern holds true across the USA, UK, Canada, and Australia. Search behaviour is nearly identical in all four markets. Local search comes first, reviews come second, and website trust comes third. The main differences are directory names and local competition levels, not the underlying strategy.</p>
-
-    <p>Practices that invest in SEO build a steadier flow of patient enquiries without paying for every click. Over time, this lowers the cost of attracting new patients compared to relying only on ads or referral platforms.</p>
-
-    <h2 id="how-local-seo-works">How Local SEO Works for Dentists</h2>
-
-    <p>Local SEO controls whether you appear in the Google Map Pack. This is the group of three business listings shown above regular search results. For dentists, this is often the most valuable part of the whole strategy, because it is where urgent patients pick a practice.</p>
-
-    <p>Three things drive local rankings the most. These are your Google Business Profile accuracy, the number and quality of your reviews, and citation consistency across directories. Citations are simply your practice name, address, and phone number listed the same way everywhere online, including insurer and healthcare directories.</p>
-
-    <div class="answer-box">
-      <p><strong>Google Business Profile accuracy matters more than most practices realise.</strong> A profile with outdated opening hours, a missing booking link, or services you no longer offer actively hurts your visibility. Google rewards accuracy and consistency, and it quietly penalises confusion, even from a small typo in your practice name.</p>
-    </div>
-
-    <p>The full framework behind this is the same one RankVelt applies to every local business. You can see it on our <a href="/local-seo">local SEO services</a> page.</p>
-
-    <h2 id="core-parts">The Core Parts of a Dental SEO Strategy</h2>
-
-    <p>A complete dental SEO strategy has four working parts. Each part supports the others, so skipping one weakens the whole system.</p>
-
-    <ul>
-      <li><strong>On-page SEO:</strong> Clear treatment pages for each major service, such as implants, orthodontics, and emergency dentistry.</li>
-      <li><strong>Technical SEO:</strong> A fast, mobile-friendly website with clean structure and no broken booking paths.</li>
-      <li><strong>Content:</strong> Helpful guides that answer real patient questions before they book.</li>
-      <li><strong>Off-page SEO:</strong> Citations, reviews, and links that build trust signals outside your own website.</li>
-    </ul>
-
-    <h2 id="treatment-pages">Treatment Pages That Book Appointments</h2>
-
-    <p>One page trying to cover every treatment ranks for none of them. Implants, orthodontics, emergency care and cosmetic work each deserve a dedicated page written around what a patient in that situation actually searches for and worries about.</p>
-
-    <p>A strong treatment page explains who the treatment suits, what the process involves, how long it takes, what it costs in honest general terms, and what happens next. Then it makes booking or calling effortless. Written this way, the page earns rankings and appointments at the same time. The same service page principle powers trade businesses too, as our <a href="/blog/plumbing-seo-guide">plumbing SEO guide</a> shows.</p>
-
-    <p>Emergency dentistry deserves special attention. It is usually the highest intent search a practice can win, and many practices bury it in a paragraph on the homepage. A dedicated emergency page, matched to your real availability, turns panic searches into booked appointments.</p>
-
-    <h2 id="common-mistakes">Common Mistakes Dental Practices Make With SEO</h2>
-
-    <h3>Mistake 1: Ignoring the Google Business Profile</h3>
-    <p><strong>What it is:</strong> Many practices set up their profile once and never touch it again.</p>
-    <p><strong>Why it happens:</strong> Owners assume the profile runs itself once it is created.</p>
-    <p><strong>The impact:</strong> Outdated hours, missing photos, and old treatment lists quietly push you below competitors who stay active.</p>
-    <p><strong>The fix:</strong> Update your profile monthly. Add real photos of the practice and team, respond to reviews, and keep your treatment list and booking link current.</p>
-
-    <h3>Mistake 2: One Generic Services Page for Every Treatment</h3>
-    <p><strong>What it is:</strong> A single "Our Services" page listing implants, braces, whitening and emergency care in a few bullet points.</p>
-    <p><strong>Why it happens:</strong> It feels faster than writing a dedicated page for each treatment.</p>
-    <p><strong>The impact:</strong> Google cannot match a thin, generic page to a specific search like "dental implants near me" as well as a focused page built for that exact treatment.</p>
-    <p><strong>The fix:</strong> Create a separate page for each high-value treatment, with real detail about how your practice handles it.</p>
-
-    <h3>Mistake 3: Template Website Copy Copied From Every Other Practice</h3>
-    <p><strong>What it is:</strong> Stock text supplied by a website vendor, identical to hundreds of other dental websites.</p>
-    <p><strong>Why it happens:</strong> Template packages include copy as a convenience, and nobody rewrites it.</p>
-    <p><strong>The impact:</strong> Search engines see duplicate content with nothing unique to rank, and patients see a practice that sounds like everyone else.</p>
-    <p><strong>The fix:</strong> Rewrite your key pages in your own words, around your real treatments, team and patients.</p>
-
-    <h3>Mistake 4: Reviews Collected but Never Used</h3>
-    <p><strong>What it is:</strong> Happy patients leave reviews, but nobody replies, and the website never shows them.</p>
-    <p><strong>Why it happens:</strong> Review requests happen by chance instead of by routine.</p>
-    <p><strong>The impact:</strong> Reviews influence both your Map Pack position and whether a nervous patient trusts you enough to book. Ignoring them wastes both.</p>
-    <p><strong>The fix:</strong> Ask at the right moment after treatment, reply to every review, and show genuine reviews on the treatment pages they support.</p>
-
-    <h2 id="what-most-blogs-dont-tell-you">What Most Dental SEO Blogs Don't Tell You</h2>
-
-    <p>Rankings are not the finish line. A practice can rank well and still lose patients to a slow mobile site, a booking form that asks for insurance details before a phone number, or a reception journey that sends callers to voicemail at lunch. SEO brings the patient to your door. The booking experience decides whether they walk in.</p>
-
-    <p>The honest measure of dental SEO is not a position report. It is calls, form submissions and booked appointments, reviewed monthly. If those numbers are not moving, the strategy needs adjusting, no matter what the rankings say.</p>
-
-    <h2 id="quick-wins">5 Quick Wins to Improve Dental SEO Fast</h2>
-
-    <ul>
-      <li><strong>Fix your opening hours everywhere:</strong> Match your website, Google Business Profile and directories, including holiday hours.</li>
-      <li><strong>Add your booking link to your profile:</strong> If patients can book online, the profile should say so and link to it.</li>
-      <li><strong>Create an emergency dentistry page:</strong> One focused page for urgent searches, with your real availability and phone number.</li>
-      <li><strong>Reply to every review this week:</strong> Start with the most recent ones. Responses show patients and Google that the practice is active.</li>
-      <li><strong>Test your site on a phone:</strong> Time how long it takes to find the phone number and book. Fix whatever slows that down first.</li>
-    </ul>
-
-    <h2 id="expert-tips">Expert Tips for Long-Term Growth</h2>
-
-    <p>Build treatment pages before blog posts. A page about implants that books consultations is worth more than a year of general oral health articles. Add content in the order patients make money decisions, not in the order topics are easy to write.</p>
-
-    <p>Treat reviews as a system, not a campaign. A short, kind request at the right moment after treatment, repeated every week, beats a one-off push. Mention the treatment in the request so reviews naturally describe what you want to rank for.</p>
-
-    <p>For multi-location practices, keep every location honest and separate: its own profile, its own page, its own reviews. Duplicated location pages with swapped town names create the same doorway page problem that hurts trade businesses, and Google treats them the same way.</p>
-
-    <h2 id="checklist">Actionable Dental SEO Checklist</h2>
-
-    <ul>
-      <li>Google Business Profile audited for hours, categories, treatments, photos and booking link.</li>
-      <li>Practice name, address and phone number consistent across directories and insurer listings.</li>
-      <li>One dedicated page per high-value treatment, starting with implants, orthodontics and emergency care.</li>
-      <li>Review routine in place, with replies to every review.</li>
-      <li>Mobile booking journey tested on a real phone, end to end.</li>
-      <li>Calls, form submissions and appointments tracked monthly.</li>
-    </ul>
-
-    <p>You can score your own basics first with RankVelt's free <a href="/tools/local-seo-checklist">Local SEO Checklist</a> before you change anything.</p>
-
-    <h2 id="rankvelt-approach">How RankVelt Approaches Dental SEO</h2>
-
-    <p>Most dental SEO problems come down to the same root causes. These are an inconsistent Google Business Profile, thin treatment pages, and reviews that are collected by chance. Fixing these three things alone solves a large part of the visibility problem for most practices.</p>
-
-    <p>RankVelt focuses on genuine local relevance rather than shortcuts like duplicate location pages. That means real treatment pages, accurate citations, honest reviews and a Google Business Profile that stays current instead of being set up once and forgotten.</p>
-
-    <p>If your practice has visibility but weak bookings, or no visibility at all, a focused review of your current setup is usually the fastest way to find what is actually holding you back. See RankVelt's <a href="/local-seo/dentists">dental SEO services</a> for how this works in practice, including published pricing.</p>
-
-    <h2 id="faqs">Frequently Asked Questions</h2>
-
-    <div class="faq-accordion">
-      <details>
-        <summary>What is dental SEO?</summary>
-        <p>Dental SEO is the process of improving a dental practice's online visibility so it appears higher in Google search results and the Google Map Pack when local patients search for treatments like implants, orthodontics or emergency dentistry.</p>
-      </details>
-
-      <details>
-        <summary>How long does dental SEO take to show results?</summary>
-        <p>Most dental practices start seeing meaningful movement within three to six months. Competitive city markets and high-value treatments like implants can take longer, while quieter local areas may show progress sooner.</p>
-      </details>
-
-      <details>
-        <summary>How much does dental SEO cost?</summary>
-        <p>Pricing depends on your market, the treatments you prioritise and the condition of your website. RankVelt publishes its starting price openly: dental SEO engagements start at $525 per month with a minimum of three months, confirmed after a free opportunity check.</p>
-      </details>
-
-      <details>
-        <summary>Do dentists really need local SEO?</summary>
-        <p>Yes. Patients choose a dentist based on who appears in local search and Google Maps, how trustworthy the practice looks and how easy it is to book. If your practice is invisible at that moment, a competitor gets the patient.</p>
-      </details>
-
-      <details>
-        <summary>What is the difference between dental SEO and Google Ads?</summary>
-        <p>Google Ads gives you visibility immediately, but it stops the moment you stop paying. SEO takes longer to build but keeps generating patient enquiries without a cost per click, which matters for high-value treatments with long decision cycles.</p>
-      </details>
-
-      <details>
-        <summary>Can I do dental SEO myself?</summary>
-        <p>Basic steps, like keeping your Google Business Profile accurate and asking happy patients for reviews, can be done in-house. Treatment page strategy, technical fixes and multi-location structure usually benefit from experienced help.</p>
-      </details>
-    </div>
-  `,
-},
-
-
-
   {
     id: "electrician-seo-guide",
   
@@ -10608,7 +10589,6 @@ export const blogPosts: BlogPost[] = [
       </div>
     `,
   },
-
   {
     id: "hvac-seo-guide",
   
@@ -10904,7 +10884,6 @@ export const blogPosts: BlogPost[] = [
       </div>
     `,
   },
-
   {
     id: "law-firm-seo-guide",
   
@@ -11201,7 +11180,6 @@ export const blogPosts: BlogPost[] = [
     `,
   },
   
-
   // Old articles Shopify
   
   {
@@ -12103,7 +12081,6 @@ export const blogPosts: BlogPost[] = [
       </div>
     `,
   },
-
 ];
 
 
