@@ -8587,6 +8587,716 @@ export const blogPosts: BlogPost[] = [
       </p>
     `,
   },
+
+
+  {
+    id: "woocommerce-seo",
+
+    title: "WooCommerce SEO: The Complete Guide for 2026",
+
+    seoTitle:
+      "WooCommerce SEO: Complete Guide, Plugins & Services (2026)",
+
+    metaDescription:
+      "WooCommerce SEO done right: plugin comparison (RankMath vs Yoast vs AIOSEO), product schema, indexation control, and speed. Agency guide with real depth.",
+
+    ogTitle: "WooCommerce SEO: The Complete Guide",
+
+    socialDescription:
+      "RankMath vs Yoast vs AIOSEO for WooCommerce, product schema, faceted navigation, cart indexation, and speed. The guide agencies do not write.",
+
+    date: "Oct 4, 2026",
+    datePublished: "2026-10-04",
+    dateModified: "2026-10-04",
+
+    author: "RankVelt Editorial Team",
+    authorType: "Organization",
+
+    category: "WOOCOMMERCE SEO",
+    readTime: "13 min read",
+
+    image: "/blog/woocommerce-seo.webp",
+
+    imageAlt:
+      "Illustration of WooCommerce SEO optimization with product schema and speed elements",
+
+    excerpt:
+      "WooCommerce SEO has platform specific challenges generic guides skip: product schema, faceted navigation bloat, cart and checkout leaking into Google's index, and speed. This is the complete guide.",
+
+    relatedPostIds: [
+      "woocommerce-seo-problems",
+      "wordpress-seo-expert",
+      "ecommerce-seo-ai-search",
+    ],
+
+    primaryService: {
+      title: "eCommerce SEO",
+      description:
+        "Technical SEO, product and category optimization, and content strategy built for WooCommerce, Shopify, and other ecommerce platforms.",
+      path: "/ecommerce-seo",
+    },
+
+    showStandardCta: true,
+
+    keyTakeaways: [
+      "WooCommerce SEO differs from regular WordPress SEO: product schema, variation duplicates, faceted navigation, and cart/checkout indexation need handling.",
+      "No plugin does everything. RankMath, Yoast WooCommerce SEO, AIOSEO, and SEOPress each have strengths; the right pick depends on your catalog and workflow.",
+      "Cart, checkout, and my-account pages should never be indexed. Most stores leak them into Google without knowing.",
+      "Speed work on WooCommerce means HPOS, cart fragment control, and image discipline, not just caching.",
+      "Published market data: WooCommerce SEO services publicly list from around $999 one-time to $1,000-$3,000 per month retainers.",
+    ],
+
+    faqItems: [
+      {
+        question: "What is WooCommerce SEO?",
+        answer:
+          "The practice of optimizing a WooCommerce store so its products and categories rank in Google. It covers product page optimization, product schema markup, indexation control for cart and checkout pages, faceted navigation handling, site speed, and authority building, all inside WordPress.",
+      },
+      {
+        question: "What is the best SEO plugin for WooCommerce?",
+        answer:
+          "There is no single best pick. RankMath offers the most features in its free version including schema controls. Yoast WooCommerce SEO is the most established premium add-on with strong breadcrumb and schema handling. AIOSEO is beginner friendly with a solid setup wizard. SEOPress is lightweight and developer friendly. The right choice depends on your catalog size, budget, and who manages the site.",
+      },
+      {
+        question: "RankMath or Yoast for WooCommerce?",
+        answer:
+          "RankMath gives more WooCommerce features free: product schema types, advanced schema builder, and 404 monitoring without paying. Yoast WooCommerce SEO is a paid add-on but has years of refinement in breadcrumb control and product schema output. Stores on a budget usually start with RankMath; stores already invested in the Yoast ecosystem stay with Yoast. Both need proper configuration, neither works well on defaults.",
+      },
+      {
+        question: "Should cart and checkout pages be indexed by Google?",
+        answer:
+          "No. Cart, checkout, and my-account pages should be noindexed. They add zero search value and can leak into results looking broken. Block them in your SEO plugin settings and confirm with a site: search. This is one of the most common WooCommerce indexation mistakes.",
+      },
+      {
+        question: "How much does WooCommerce SEO cost?",
+        answer:
+          "Published market rates vary. Freelancers publicly list WooCommerce SEO packages from around $999 one-time. Agency retainers publicly range from about $1,000 to $3,000 per month depending on catalog size and competition. Broader SEO market data shows Upwork's median at $21 per hour for SEO experts and Ahrefs survey retainers most commonly at $501 to $1,000 per month. These are market observations, not our prices.",
+      },
+      {
+        question: "Why is my WooCommerce store slow?",
+        answer:
+          "The usual culprits: too many plugins loading on every page, unoptimized product images, cart fragments firing AJAX requests on pages that do not need them, no object caching, and cheap shared hosting. WooCommerce-specific fixes include HPOS (high performance order storage), disabling cart fragments where safe, and image compression. Caching plugins help, but they cannot fix plugin bloat.",
+      },
+      {
+        question: "Can I do WooCommerce SEO myself?",
+        answer:
+          "The basics, yes: install a solid SEO plugin, write unique product titles and descriptions, add product schema, noindex cart and checkout, and compress images. DIY stops working when problems interact: faceted navigation creating thousands of thin URLs, schema errors across variable products, or speed issues tied to essential plugins. That is when an expert pays for itself.",
+      },
+    ],
+
+    toc: [
+      { id: "why-different", title: "Why WooCommerce SEO Is Its Own Discipline", level: 2 },
+      { id: "plugin-comparison", title: "RankMath vs Yoast vs AIOSEO vs SEOPress for WooCommerce", level: 2 },
+      { id: "product-pages", title: "Product Page Optimization", level: 2 },
+      { id: "schema", title: "Product Schema That Actually Works", level: 2 },
+      { id: "indexation", title: "Indexation Control: What Google Should Never See", level: 2 },
+      { id: "speed", title: "Speed for WooCommerce Stores", level: 2 },
+      { id: "pricing", title: "What WooCommerce SEO Costs", level: 2 },
+      { id: "rankvelt-woo", title: "WooCommerce SEO with RankVelt", level: 2 },
+    ],
+
+    content: `
+      <p class="standalone-line">WooCommerce is WordPress, but its SEO problems are ecommerce problems.</p>
+
+      <p>WooCommerce powers a huge share of online stores, and most SEO advice for it is either written by plugin vendors selling their own tool or by agencies writing generic copy with the word WooCommerce sprinkled in. This guide is neither. It covers what actually moves rankings for WooCommerce stores: plugin setup done properly, product schema, indexation control, and speed work that respects how WooCommerce really behaves.</p>
+
+      <h2 id="why-different">Why WooCommerce SEO Is Its Own Discipline</h2>
+
+      <p>WordPress SEO knowledge transfers only partly. WooCommerce adds its own layer:</p>
+
+      <ul>
+        <li><strong>Product variations multiply URLs.</strong> One product with size and color options can generate dozens of URLs. Without canonical discipline, they compete with each other.</li>
+        <li><strong>Faceted navigation creates index bloat.</strong> Filter combinations (brand + size + color + price) generate thousands of thin pages Google dutifully crawls and nobody searches for.</li>
+        <li><strong>Cart and checkout leak into the index.</strong> These pages have no search value and look broken in results, yet many stores leave them indexable.</li>
+        <li><strong>Speed has WooCommerce-specific causes.</strong> Cart fragments, admin-ajax calls, and unoptimized product galleries hurt scores in ways a caching plugin alone cannot fix.</li>
+        <li><strong>Schema expectations are higher.</strong> Product rich results (price, availability, reviews) directly affect click through rates. Broken or missing product schema is lost revenue, not just a technical nit.</li>
+      </ul>
+
+      <h2 id="plugin-comparison">RankMath vs Yoast vs AIOSEO vs SEOPress for WooCommerce</h2>
+
+      <p>Every vendor claims to be the best WooCommerce SEO plugin. Here is the impartial version, from someone who configures all of them and sells none of them.</p>
+
+      <ul>
+        <li><strong>RankMath:</strong> The most generous free tier. Product schema types, an advanced schema builder, 404 monitoring, and redirection management cost nothing. The WooCommerce integration handles product schema and breadcrumbs well. Downsides: the settings panel is enormous and beginners enable things they do not understand. Free is only free if you configure it right.</li>
+        <li><strong>Yoast WooCommerce SEO:</strong> A paid add-on to Yoast SEO Premium. The most mature breadcrumb implementation and reliable product schema output. Years of edge case fixes baked in. Downsides: you pay for both the base premium plugin and the WooCommerce add-on, and the feature set per dollar is thinner than RankMath's free offering.</li>
+        <li><strong>AIOSEO:</strong> The friendliest setup wizard and sensible defaults. Good for owners who will manage SEO themselves and want guardrails. Downsides: advanced WooCommerce schema control lags behind RankMath, and some useful features sit in higher pricing tiers.</li>
+        <li><strong>SEOPress:</strong> Lightweight, no ads in the admin, developer friendly with clean hooks. A strong pick for performance-conscious stores and developers. Downsides: smaller community means fewer tutorials when something breaks, and the WooCommerce-specific UI is less hand holding than the others.</li>
+      </ul>
+
+      <p>Our honest default: RankMath for stores that want maximum capability without ongoing cost, Yoast WooCommerce SEO for stores already committed to the Yoast ecosystem, AIOSEO for hands-on owners who want simplicity, SEOPress for developers and speed-focused builds. The plugin matters less than the configuration. Every one of these fails on default settings.</p>
+
+      <h2 id="product-pages">Product Page Optimization</h2>
+
+      <p>Product pages are where WooCommerce SEO is won or lost. Audit your top revenue products first.</p>
+
+      <ul>
+        <li><strong>Titles:</strong> Unique per product, main keyword near the front, no SKU codes or internal jargon customers never search.</li>
+        <li><strong>Descriptions:</strong> Original copy. Manufacturer text duplicated across fifty stores ranks nowhere. Write for the buyer first, the keyword second.</li>
+        <li><strong>Variations:</strong> Decide whether each variation deserves its own URL or should canonicalize to the parent product. Indexing every variation is the most common WooCommerce duplicate content mistake.</li>
+        <li><strong>Images:</strong> Descriptive file names, alt text, compressed formats. Product images can rank in image search and feed AI answers, but only if labeled.</li>
+        <li><strong>Reviews:</strong> Real customer reviews add unique content and feed review schema. Stores without reviews fight with one hand tied.</li>
+      </ul>
+
+      <h2 id="schema">Product Schema That Actually Works</h2>
+
+      <p>Product rich results show price, availability, and ratings directly in search. Getting there requires valid schema, and WooCommerce stores break it in predictable ways.</p>
+
+      <ul>
+        <li>Validate with Google's Rich Results Test on several product URLs, including variable products, not just simple ones.</li>
+        <li>Variable products need correct offer schema per variation. Many plugins output schema for the parent only, leaving variations invalid.</li>
+        <li>Availability must reflect reality. Marking out-of-stock items as in stock for the rich result is a fast way to lose trust and clicks.</li>
+        <li>Do not stack schema from two sources. A theme plus a plugin plus a snippet plugin emitting product schema creates conflicts Google resolves by ignoring all of it. One source of truth.</li>
+      </ul>
+
+      <h2 id="indexation">Indexation Control: What Google Should Never See</h2>
+
+      <p>WooCommerce generates pages that exist for shoppers, not searchers. Keep them out of the index.</p>
+
+      <ul>
+        <li><strong>Cart, checkout, my-account:</strong> Noindex all three. Confirm with a site: search. If they appear, your plugin settings are wrong.</li>
+        <li><strong>Faceted navigation:</strong> Filter URLs should be noindexed or canonicalized to the parent category in almost all cases. The exception is a filter combination with genuine search demand, which is rare and should be a deliberate decision, not an accident.</li>
+        <li><strong>Pagination:</strong> Paginated category pages should canonicalize sensibly and not each claim to be the category.</li>
+        <li><strong>Tag and attribute archives:</strong> WooCommerce product tags and attribute pages are usually thin duplicates of categories. Noindex the ones with no unique value.</li>
+        <li><strong>Search results pages:</strong> Your internal site search URLs should never be indexed. Block them in robots.txt.</li>
+      </ul>
+
+      <p>Run this check quarterly. Plugins update, settings reset, and index bloat creeps back silently.</p>
+
+      <h2 id="speed">Speed for WooCommerce Stores</h2>
+
+      <p>Generic speed advice (install a caching plugin, compress images) helps but misses WooCommerce-specific drag.</p>
+
+      <ul>
+        <li><strong>HPOS:</strong> High Performance Order Storage moves order data to dedicated tables. If your store still runs on the legacy posts table for orders, this is the single biggest backend win available.</li>
+        <li><strong>Cart fragments:</strong> WooCommerce's cart fragment AJAX calls run on every page by default, including pages with no cart. Disable or defer them where safe. This alone fixes many failing Core Web Vitals scores.</li>
+        <li><strong>Plugin audit:</strong> Every plugin loads code on pages that do not need it. Audit with a profiler, not guesses. Remove or conditionally load what is not earning its weight.</li>
+        <li><strong>Images:</strong> Product galleries are the heaviest asset on most WooCommerce pages. Modern formats, proper sizing, and lazy loading below the fold.</li>
+        <li><strong>Hosting:</strong> WooCommerce is database heavy. Cheap shared hosting throttles exactly the queries a store needs most. Object caching (Redis) on decent hosting beats any plugin trick on bad hosting.</li>
+      </ul>
+
+      <h2 id="pricing">What WooCommerce SEO Costs</h2>
+
+      <p>Published market data gives you a reality check. Freelance specialists publicly list WooCommerce SEO packages from around $999 one-time. Agency retainers publicly range from about $1,000 to $3,000 per month depending on catalog size and competition. In the broader market, Upwork's own pricing page shows a median of $21 per hour for SEO experts, and an Ahrefs survey of 439 providers found the most popular retainer band was $501 to $1,000 per month. These are market observations, not our prices. Use them to spot quotes that are suspiciously cheap or wildly inflated.</p>
+
+      <p>What drives your number: catalog size, technical debt (legacy order tables, plugin bloat), content needs, and niche competition. Any quote given before someone has looked inside your WordPress admin is a guess.</p>
+
+      <h2 id="rankvelt-woo">WooCommerce SEO with RankVelt</h2>
+
+      <p>RankVelt's ecommerce SEO practice covers WooCommerce end to end: plugin stack configured properly, product schema validated across simple and variable products, indexation cleaned up, faceted navigation controlled, and speed work that addresses HPOS and cart fragments, not just caching. Audit first, fix in priority order, report on revenue.</p>
+
+      <p><a href="/strategy-call">Book a free strategy call</a>. We will review your store, show you the highest leverage issues, and tell you plainly whether we are the right fit. If the fixes are simple enough to DIY, we will say that too.</p>
+    `,
+  },
+
+  {
+    id: "woocommerce-seo-problems",
+
+    title: "12 Common WooCommerce SEO Problems (and How to Fix Them)",
+
+    seoTitle:
+      "12 WooCommerce SEO Problems & Fixes: Speed, Schema, Indexation",
+
+    metaDescription:
+      "The 12 WooCommerce SEO problems we see most: faceted navigation bloat, cart pages in Google's index, schema errors, slow checkout. Each with a real fix.",
+
+    ogTitle: "12 WooCommerce SEO Problems & Fixes",
+
+    socialDescription:
+      "Faceted navigation bloat, cart pages leaking into Google, schema errors, slow checkout. The 12 real WooCommerce SEO problems, each with a fix.",
+
+    date: "Oct 4, 2026",
+    datePublished: "2026-10-04",
+    dateModified: "2026-10-04",
+
+    author: "RankVelt Editorial Team",
+    authorType: "Organization",
+
+    category: "WOOCOMMERCE SEO",
+    readTime: "12 min read",
+
+    image: "/blog/woocommerce-seo-problems.webp",
+
+    imageAlt:
+      "Illustration of common WooCommerce SEO problems being diagnosed and fixed",
+
+    excerpt:
+      "Most WooCommerce SEO problems come from a short list: faceted navigation bloat, cart and checkout in Google's index, schema errors, and speed. Here are the 12 we see most, each with a fix.",
+
+    relatedPostIds: [
+      "woocommerce-seo",
+      "wordpress-seo-issues",
+      "shopify-seo-audit",
+    ],
+
+    primaryService: {
+      title: "eCommerce SEO",
+      description:
+        "Technical SEO, product and category optimization, and content strategy built for WooCommerce, Shopify, and other ecommerce platforms.",
+      path: "/ecommerce-seo",
+    },
+
+    showStandardCta: true,
+
+    keyTakeaways: [
+      "Most WooCommerce SEO problems come from a short list: faceted navigation bloat, cart/checkout indexation leaks, schema errors, and speed.",
+      "Filter combinations generate thousands of thin URLs. Noindex or canonicalize them before writing new content.",
+      "Cart, checkout, and my-account pages in Google's index is a configuration failure, not a mystery. Check with a site: search.",
+      "Variable products break schema in predictable ways. Validate simple and variable products separately.",
+      "Speed problems on WooCommerce are usually cart fragments, plugin bloat, and images, not just caching.",
+    ],
+
+    faqItems: [
+      {
+        question: "What are the most common WooCommerce SEO problems?",
+        answer:
+          "Faceted navigation creating thousands of thin indexed URLs, cart and checkout pages leaking into Google's index, duplicate content from product variations and tags, product schema errors on variable products, slow load times from cart fragments and plugin bloat, and thin product descriptions copied from manufacturers.",
+      },
+      {
+        question: "How do I stop faceted navigation from hurting my WooCommerce SEO?",
+        answer:
+          "Set filter and layered navigation URLs to noindex, or canonicalize them to the parent category. Only allow indexation for a filter combination with genuine search demand, which is rare. Configure this in your SEO plugin (RankMath, Yoast, and SEOPress all support it) and verify with a site: search for filter URL patterns.",
+      },
+      {
+        question: "Why are my cart and checkout pages showing in Google?",
+        answer:
+          "Because nothing told Google to stay out. Set cart, checkout, and my-account pages to noindex in your SEO plugin settings. This is a configuration step most stores skip during setup. After fixing, request removal of the indexed URLs in Search Console.",
+      },
+      {
+        question: "How do I fix WooCommerce product schema errors?",
+        answer:
+          "First find where the schema comes from: theme, SEO plugin, or a snippet plugin. Keep exactly one source. Then validate with Google's Rich Results Test on simple and variable products separately. Variable products need correct offer schema per variation. Fix availability values to match reality.",
+      },
+      {
+        question: "Why is my WooCommerce checkout so slow?",
+        answer:
+          "Common causes: cart fragments firing AJAX on every page, too many plugins loading checkout scripts site-wide, no object caching, and underpowered hosting. WooCommerce-specific fixes include disabling cart fragments where safe, conditionally loading scripts, enabling HPOS, and adding Redis object caching. Caching plugins alone rarely fix checkout speed.",
+      },
+      {
+        question: "Do product variations hurt WooCommerce SEO?",
+        answer:
+          "They can, when every variation gets indexed as its own page with near identical content. Decide per product: index variations only when each targets distinct search demand, otherwise canonicalize variations to the parent product. This single decision fixes a large share of WooCommerce duplicate content.",
+      },
+      {
+        question: "When should I hire someone to fix WooCommerce SEO problems?",
+        answer:
+          "When you have worked through the basics and problems persist or interact: schema errors you cannot trace, index bloat that returns after fixes, or speed issues tied to plugins you cannot remove. A professional audit finds the root cause instead of treating symptoms. Our <a href='/blog/woocommerce-seo'>WooCommerce SEO guide</a> covers the full system these fixes fit into.",
+      },
+    ],
+
+    toc: [
+      { id: "indexation-bloat", title: "1-3. Indexation Bloat Problems", level: 2 },
+      { id: "duplicate-content", title: "4-6. Duplicate Content Problems", level: 2 },
+      { id: "schema-errors", title: "7-8. Schema Problems", level: 2 },
+      { id: "speed-problems", title: "9-11. Speed Problems", level: 2 },
+      { id: "content-problems", title: "12. Thin Content Problem", level: 2 },
+      { id: "fix-priority", title: "What to Fix First", level: 2 },
+      { id: "problems-rankvelt", title: "Get the Problems Fixed Properly", level: 2 },
+    ],
+
+    content: `
+      <p class="standalone-line">Most WooCommerce stores share the same twelve problems.</p>
+
+      <p>After auditing WooCommerce stores for years, the same issues appear again and again. Not exotic edge cases. The same twelve, in different combinations. This article lists all of them, explains why each happens, and gives you the actual fix. Work through them in the priority order at the end.</p>
+
+      <h2 id="indexation-bloat">1-3. Indexation Bloat Problems</h2>
+
+      <p><strong>Problem 1: Faceted navigation generates thousands of thin URLs.</strong> Every filter combination (brand plus size plus color plus price range) creates a URL. Google crawls them, indexes some, and your crawl budget evaporates on pages nobody searches for. Fix: noindex filter URLs or canonicalize them to the parent category. All major SEO plugins support this. The rare exception is a filter combination with real search demand, which should be a deliberate decision.</p>
+
+      <p><strong>Problem 2: Cart, checkout, and my-account pages are indexed.</strong> Search for site:yourstore.com/cart or /checkout. If they appear, your store is telling Google these are worth indexing. They are not. Fix: set all three to noindex in your SEO plugin, then request removal in Search Console for URLs already indexed.</p>
+
+      <p><strong>Problem 3: Tag and attribute archives indexed as thin duplicates.</strong> WooCommerce product tags and attribute pages usually mirror category content with less value. Fix: noindex the thin ones. Keep only archives you have deliberately built out with unique content.</p>
+
+      <h2 id="duplicate-content">4-6. Duplicate Content Problems</h2>
+
+      <p><strong>Problem 4: Every product variation indexed separately.</strong> A product with 4 sizes and 5 colors can mean 20 near-identical indexed pages. Fix: canonicalize variations to the parent product unless a variation targets genuinely distinct search demand.</p>
+
+      <p><strong>Problem 5: Internal site search URLs indexed.</strong> Your store's search results pages (/?s= or /search/) sometimes end up in Google's index, creating infinite thin pages. Fix: block them in robots.txt with Disallow. This one is a single line and people still miss it.</p>
+
+      <p><strong>Problem 6: HTTP/HTTPS and www/non-www duplicates.</strong> Less common now, but migrations and bad host setups still create it. Fix: one canonical domain version, enforced with 301 redirects, confirmed in Search Console.</p>
+
+      <h2 id="schema-errors">7-8. Schema Problems</h2>
+
+      <p><strong>Problem 7: Product schema missing or invalid on variable products.</strong> Simple products validate fine while variable products fail silently, because the plugin only outputs schema for the parent. Fix: test variable products separately in the Rich Results Test, and configure per-variation offer schema.</p>
+
+      <p><strong>Problem 8: Conflicting schema from multiple sources.</strong> Theme outputs product schema, the SEO plugin outputs product schema, and a snippet plugin adds a third layer. Google resolves the conflict by trusting none of it. Fix: audit every schema source and keep exactly one. View source on a product page and count the Product entities.</p>
+
+      <h2 id="speed-problems">9-11. Speed Problems</h2>
+
+      <p><strong>Problem 9: Cart fragments on every page.</strong> WooCommerce fires AJAX cart fragment requests even on pages with no cart functionality. This is one of the most common Core Web Vitals killers on WooCommerce. Fix: disable cart fragments where safe or defer them. Measure before and after in PageSpeed Insights.</p>
+
+      <p><strong>Problem 10: Plugin bloat loading everywhere.</strong> Twenty plugins each loading scripts on pages that do not need them. Fix: audit with a profiler (not guesses), remove what is unused, and conditionally load the rest. No caching plugin compensates for this.</p>
+
+      <p><strong>Problem 11: Product gallery images unoptimized.</strong> Galleries are the heaviest asset on product pages. Fix: modern formats, correct sizing (no 4000px images displayed at 600px), and lazy loading below the fold.</p>
+
+      <h2 id="content-problems">12. Thin Content Problem</h2>
+
+      <p><strong>Problem 12: Manufacturer descriptions duplicated across the web.</strong> Copy-pasted supplier text means your product pages are identical to dozens of competitors. Google has no reason to prefer yours. Fix: rewrite top revenue products first with original copy focused on buyer questions. You do not need to rewrite all 5,000 SKUs on day one. Start with the 20 that drive revenue.</p>
+
+      <h2 id="fix-priority">What to Fix First</h2>
+
+      <p>Priority order matters more than completeness:</p>
+
+      <ol>
+        <li><strong>Indexation leaks.</strong> Cart, checkout, and search URLs in the index is an emergency. Fix today.</li>
+        <li><strong>Schema conflicts.</strong> One source of truth for product schema. Invalid rich results cost clicks daily.</li>
+        <li><strong>Faceted navigation.</strong> Noindex or canonicalize filter URLs before creating new content.</li>
+        <li><strong>Speed blockers.</strong> Cart fragments and plugin audit. Measurable across every page.</li>
+        <li><strong>Variation duplicates.</strong> Canonical strategy for product variations.</li>
+        <li><strong>Content.</strong> Rewrite top products last, because the foundation above determines whether that content can rank.</li>
+      </ol>
+
+      <h2 id="problems-rankvelt">Get the Problems Fixed Properly</h2>
+
+      <p>These twelve problems interact. Faceted navigation bloat plus slow speed plus broken schema is not three separate issues, it is one sick store. Our WooCommerce SEO audits find the root causes in priority order, then we implement the fixes. No generic reports.</p>
+
+      <p><a href="/strategy-call">Book a free strategy call</a> and we will start with a mini audit: the top issues on your store, what they cost you, and what fixing them looks like. You keep the findings either way.</p>
+    `,
+  },
+
+  {
+    id: "wordpress-seo-expert",
+
+    title: "WordPress SEO Expert: What They Do and When to Hire One",
+
+    seoTitle:
+      "WordPress SEO Expert: Services, Process & Pricing (2026)",
+
+    metaDescription:
+      "What does a WordPress SEO expert do? The real process, RankMath vs Yoast vs SEOPress setup, and transparent pricing. No generic agency copy.",
+
+    ogTitle: "WordPress SEO Expert: Services & Pricing",
+
+    socialDescription:
+      "The actual WordPress SEO process, an honest RankMath vs Yoast vs SEOPress comparison, and what it costs. Written by practitioners.",
+
+    date: "Oct 4, 2026",
+    datePublished: "2026-10-04",
+    dateModified: "2026-10-04",
+
+    author: "RankVelt Editorial Team",
+    authorType: "Organization",
+
+    category: "WORDPRESS SEO",
+    readTime: "11 min read",
+
+    image: "/blog/wordpress-seo-expert.webp",
+
+    imageAlt:
+      "Illustration of a WordPress SEO expert optimizing a website with plugin tools",
+
+    excerpt:
+      "A WordPress SEO expert does platform specific work generic SEO misses: plugin stack setup, theme performance, indexation control, and content systems. Here is the process and what it costs.",
+
+    relatedPostIds: [
+      "wordpress-seo-issues",
+      "woocommerce-seo",
+      "ecommerce-seo-ai-search",
+    ],
+
+    primaryService: {
+      title: "Business SEO",
+      description:
+        "Full funnel SEO for WordPress business websites: technical health, content strategy, and authority building tied to revenue.",
+      path: "/business-seo",
+    },
+
+    showStandardCta: true,
+
+    keyTakeaways: [
+      "WordPress SEO expertise shows in the plugin stack: RankMath, Yoast, and SEOPress each need proper configuration, and defaults fail everywhere.",
+      "The real process runs audit, plugin and theme setup, technical fixes, content systems, then authority building, in that order.",
+      "No competitor covers RankMath vs Yoast vs SEOPress with real setup depth. This guide does.",
+      "Published market data: WordPress SEO freelancers list from around $21 per hour, specialists higher; project and retainer ranges inside.",
+      "Hire when organic traffic is flat despite solid basics, before a redesign or migration, or when DIY fixes stop compounding.",
+    ],
+
+    faqItems: [
+      {
+        question: "What does a WordPress SEO expert do?",
+        answer:
+          "They run the full organic growth system for WordPress sites: technical audits, plugin stack setup (RankMath, Yoast, or SEOPress configured properly), theme and speed optimization, indexation control, content strategy, internal linking, and authority building. The WordPress specialization is knowing which levers the platform actually gives you.",
+      },
+      {
+        question: "RankMath or Yoast: which should my expert use?",
+        answer:
+          "Both work when configured properly, which is the part most sites skip. RankMath offers more features free including advanced schema controls. Yoast is the most mature with years of edge case fixes. SEOPress is the lightweight developer friendly option. An expert picks based on your site's needs and who will manage it, not based on which one pays affiliate commissions.",
+      },
+      {
+        question: "How much does a WordPress SEO expert cost?",
+        answer:
+          "Published market data gives a range. Upwork's pricing page shows a median of $21 per hour for SEO experts with a typical band of $15 to $35. An Ahrefs survey of 439 providers found the most popular retainer band was $501 to $1,000 per month and the most popular hourly band $75 to $100. WordPress specialists with plugin and theme expertise usually price above generalist rates. These are market observations, not our prices.",
+      },
+      {
+        question: "Can a general SEO freelancer handle WordPress SEO?",
+        answer:
+          "Sometimes, but WordPress has platform specifics a generalist misses: plugin conflicts that break schema, theme-baked SEO settings fighting the plugin, indexation bloat from tags and date archives, and speed issues from page builders. Ask specifically about their WordPress experience, not just SEO experience.",
+      },
+      {
+        question: "How long does WordPress SEO take to show results?",
+        answer:
+          "Most sites see early movement in 2 to 3 months and meaningful traffic change in 4 to 6 months. Technical fixes can move faster; content and authority compound slower. Anyone promising page one in 30 days is selling something SEO cannot deliver.",
+      },
+      {
+        question: "WordPress SEO expert or agency?",
+        answer:
+          "A solo expert suits a defined task like a technical cleanup or plugin stack rebuild. An agency suits sites needing ongoing work across technical, content, and authority simultaneously. Match the engagement shape to the problem size.",
+      },
+      {
+        question: "What should I ask before hiring a WordPress SEO expert?",
+        answer:
+          "Ask which SEO plugin they recommend for your specific site and why. Ask how they handle theme versus plugin conflicts. Ask what their first 30 days look like and how they report. Ask for their process on indexation bloat from tags, archives, and search pages. Vague answers to WordPress specific questions are a warning sign.",
+      },
+    ],
+
+    toc: [
+      { id: "what-they-do", title: "What a WordPress SEO Expert Actually Does", level: 2 },
+      { id: "plugin-setup", title: "RankMath vs Yoast vs SEOPress: Honest Setup Comparison", level: 2 },
+      { id: "process", title: "The Process: What Happens in What Order", level: 2 },
+      { id: "when-to-hire", title: "When to Hire One", level: 2 },
+      { id: "pricing", title: "What It Costs", level: 2 },
+      { id: "rankvelt-wp", title: "WordPress SEO with RankVelt", level: 2 },
+    ],
+
+    content: `
+      <p class="standalone-line">WordPress runs half the web. Most of it is badly optimized.</p>
+
+      <p>WordPress makes publishing easy and SEO easy to get wrong. Plugin conflicts, theme settings fighting your SEO plugin, tag archives multiplying into thousands of thin pages, page builders bloating every page. A WordPress SEO expert is someone who has seen these patterns enough times to fix them in hours instead of weeks. This article explains what that expertise covers, how the plugin choice really works, and what it costs.</p>
+
+      <h2 id="what-they-do">What a WordPress SEO Expert Actually Does</h2>
+
+      <p>Five workstreams, in priority order:</p>
+
+      <ul>
+        <li><strong>Audit:</strong> Crawl the site, check indexation in Search Console, map technical faults, content gaps, and authority position. Diagnosis before prescription.</li>
+        <li><strong>Plugin stack setup:</strong> One SEO plugin configured properly, schema validated, sitemaps correct, indexation rules set for tags, archives, and search pages.</li>
+        <li><strong>Technical fixes:</strong> Speed (theme and builder bloat, images, caching, hosting), mobile experience, redirects, canonical discipline.</li>
+        <li><strong>Content systems:</strong> Keyword mapping, internal linking structure, content briefs or content itself, refresh cycles for decaying pages.</li>
+        <li><strong>Authority building:</strong> Earning mentions and links over time. Slow, compounding, impossible to fake well.</li>
+      </ul>
+
+      <h2 id="plugin-setup">RankMath vs Yoast vs SEOPress: Honest Setup Comparison</h2>
+
+      <p>This is the section competitors skip. Every agency page names the plugins; almost none explain how to choose or configure them. Here is the impartial version.</p>
+
+      <ul>
+        <li><strong>RankMath:</strong> The most features free: advanced schema builder, 404 monitor, redirection manager, keyword tracking hooks. The settings panel is huge, which is both the strength and the risk. Common misconfiguration: enabling every module, which bloats the admin and occasionally the front end. Best for sites that want maximum capability without ongoing cost and have someone competent configuring it.</li>
+        <li><strong>Yoast SEO:</strong> The most mature codebase with years of edge cases solved. Readable, stable, well documented. The free version covers the essentials; Premium adds internal linking suggestions and redirect management. Common misconfiguration: leaving the default indexation settings, which index tag and archive pages most sites should exclude. Best for teams that value stability and documentation over feature count.</li>
+        <li><strong>SEOPress:</strong> Lightweight, no admin ads, clean code, developer friendly hooks. No upsell nag screens. Common misconfiguration: assuming fewer settings means less to get wrong; the indexation controls still need deliberate setup. Best for performance-focused sites and developers who want control without bloat.</li>
+      </ul>
+
+      <p>What matters more than the pick: exactly one SEO plugin active (two emit conflicting schema and meta), indexation rules deliberately set for every archive type, schema validated after setup, and sitemaps submitted. We have fixed sites running each of these three plugins. The failures were always configuration, never the plugin.</p>
+
+      <h2 id="process">The Process: What Happens in What Order</h2>
+
+      <p>A credible expert works in this sequence. Anyone starting at step four is guessing.</p>
+
+      <ol>
+        <li><strong>Audit (week 1-2):</strong> Full crawl, Search Console analysis, plugin and theme review, content inventory, competitor gap check.</li>
+        <li><strong>Quick wins (week 2-4):</strong> Indexation leaks closed, critical speed faults fixed, schema corrected, redirect chains cleaned.</li>
+        <li><strong>Foundation (month 2):</strong> Plugin stack finalized, site architecture and internal linking rebuilt, keyword mapping done.</li>
+        <li><strong>Content (month 2+):</strong> Briefs, publishing cadence, refresh of decaying pages. This is where compounding starts.</li>
+        <li><strong>Authority (ongoing):</strong> Digital PR, resource link building, community presence. Never bought links.</li>
+      </ol>
+
+      <h2 id="when-to-hire">When to Hire One</h2>
+
+      <ul>
+        <li>Organic traffic is flat for months while competitors climb.</li>
+        <li>You have done the basics (plugin installed, titles written, caching on) and nothing moved.</li>
+        <li>A redesign or migration is planned. SEO input before the rebuild avoids expensive repair after it.</li>
+        <li>Your site grew (more content, more pages) but organic revenue did not follow.</li>
+        <li>Something is technically wrong and you cannot diagnose it: traffic drops, indexation weirdness, schema failures.</li>
+      </ul>
+
+      <p>Do not hire to fix a broken offer. SEO amplifies what exists. If the product or positioning is wrong, traffic will not save it.</p>
+
+      <h2 id="pricing">What It Costs</h2>
+
+      <p>Published market data gives you a reality check. Upwork's own pricing page lists a median of $21 per hour for SEO experts with a typical band of $15 to $35. Ahrefs surveyed 439 providers and found the most popular retainer band was $501 to $1,000 per month and the most popular hourly band $75 to $100. WordPress specialists usually price above generalist rates because plugin, theme, and builder expertise is scarcer. Project pricing for a full WordPress SEO setup commonly falls in the low four figures on freelance marketplaces. These are market observations, not our prices.</p>
+
+      <p>What drives your number: site size, technical debt (builder bloat, plugin conflicts, legacy theme), content needs, and niche competition. Any quote given before an audit is a guess. Treat it like one.</p>
+
+      <h2 id="rankvelt-wp">WordPress SEO with RankVelt</h2>
+
+      <p>We run WordPress SEO the way this article describes: audit first, plugin stack configured deliberately, technical foundation fixed, content systems built, authority earned. No plugin favoritism, no generic reports, no vanity metrics. Reports tie to organic revenue.</p>
+
+      <p><a href="/strategy-call">Book a free strategy call</a>. We will audit your site, show you exactly what is holding it back, and give you a straight answer on whether we are the right fit. Three month initial term, then month to month.</p>
+    `,
+  },
+
+  {
+    id: "wordpress-seo-issues",
+
+    title: "15 Common WordPress SEO Issues (and How to Fix Them)",
+
+    seoTitle:
+      "15 WordPress SEO Issues & Fixes: Indexation, Speed, Schema",
+
+    metaDescription:
+      "The 15 WordPress SEO issues we see most: indexation bloat, plugin conflicts, schema errors, slow themes. Each with the cause and the real fix.",
+
+    ogTitle: "15 WordPress SEO Issues & Fixes",
+
+    socialDescription:
+      "Indexation bloat, plugin conflicts, schema errors, slow themes. The 15 real WordPress SEO issues, each with cause and fix.",
+
+    date: "Oct 4, 2026",
+    datePublished: "2026-10-04",
+    dateModified: "2026-10-04",
+
+    author: "RankVelt Editorial Team",
+    authorType: "Organization",
+
+    category: "WORDPRESS SEO",
+    readTime: "12 min read",
+
+    image: "/blog/wordpress-seo-issues.webp",
+
+    imageAlt:
+      "Illustration of common WordPress SEO issues being diagnosed and fixed",
+
+    excerpt:
+      "Most WordPress SEO issues come from a short list: indexation bloat, plugin conflicts, schema errors, and theme speed problems. Here are the 15 we see most, each with cause and fix.",
+
+    relatedPostIds: [
+      "wordpress-seo-expert",
+      "woocommerce-seo-problems",
+      "shopify-seo-audit",
+    ],
+
+    primaryService: {
+      title: "Business SEO",
+      description:
+        "Full funnel SEO for WordPress business websites: technical health, content strategy, and authority building tied to revenue.",
+      path: "/business-seo",
+    },
+
+    showStandardCta: true,
+
+    keyTakeaways: [
+      "Most WordPress SEO issues come from a short list: indexation bloat, plugin conflicts, schema errors, and theme or builder speed problems.",
+      "Two SEO plugins active at once is one of the most damaging and most common misconfigurations.",
+      "Tag pages, date archives, and internal search URLs should almost never be indexed.",
+      "Page builder bloat is the usual speed culprit, and caching plugins cannot fix it alone.",
+      "Fix in priority order: indexation leaks first, then schema conflicts, then speed, then content.",
+    ],
+
+    faqItems: [
+      {
+        question: "What are the most common WordPress SEO issues?",
+        answer:
+          "Indexation bloat from tag pages, date archives, and internal search URLs; two SEO plugins running at once and emitting conflicting schema; theme settings fighting the SEO plugin; slow load times from page builder bloat; missing or invalid schema markup; and thin content spread across too many weak pages.",
+      },
+      {
+        question: "How do I find SEO issues on my WordPress site?",
+        answer:
+          "Start with Google Search Console: check the Pages report for indexed versus excluded URLs and look for anything indexed that should not be. Run a crawl with a tool like Screaming Frog or the free RankMath analyzer. Check PageSpeed Insights for mobile scores. Validate schema with Google's Rich Results Test. Most issues surface in these four checks.",
+      },
+      {
+        question: "Can two SEO plugins hurt my WordPress SEO?",
+        answer:
+          "Yes, seriously. Two SEO plugins output duplicate title tags, meta descriptions, canonical tags, and schema markup. Google resolves the conflict by trusting none of it. Deactivate one completely (not just disable features) and keep exactly one source of truth for all SEO output.",
+      },
+      {
+        question: "Why are my WordPress tag pages indexed?",
+        answer:
+          "Because the default settings in most SEO plugins allow it, or because nobody changed the defaults. Tag and date archive pages are almost always thin duplicates. Set them to noindex in your SEO plugin's indexation settings. This single change removes hundreds of thin URLs from Google's index on many sites.",
+      },
+      {
+        question: "How do I fix WordPress schema errors?",
+        answer:
+          "First identify every schema source: theme, SEO plugin, and any snippet plugins. Keep exactly one. Then validate with Google's Rich Results Test. Common WordPress schema failures come from themes outputting their own schema that conflicts with the plugin, and from page builders stripping structured data. Fix the source conflict before tweaking individual fields.",
+      },
+      {
+        question: "Why is my WordPress site slow even with caching?",
+        answer:
+          "Caching helps repeat visits but cannot fix the underlying weight: page builder bloat, too many plugins loading on every page, unoptimized images, and cheap hosting. Audit what actually loads with a profiler. Remove unused plugins, conditionally load the rest, optimize images properly, and consider whether the hosting is throttling your database queries.",
+      },
+      {
+        question: "When should I hire someone to fix WordPress SEO issues?",
+        answer:
+          "When you have fixed the obvious issues and problems persist or return: recurring indexation bloat, schema conflicts you cannot trace, or speed problems tied to a theme or builder you cannot replace alone. A professional audit finds root causes instead of symptoms. Our <a href='/blog/wordpress-seo-expert'>WordPress SEO expert guide</a> explains what proper help looks like.",
+      },
+    ],
+
+    toc: [
+      { id: "indexation-issues", title: "1-4. Indexation Issues", level: 2 },
+      { id: "plugin-issues", title: "5-7. Plugin Issues", level: 2 },
+      { id: "schema-issues", title: "8-9. Schema Issues", level: 2 },
+      { id: "speed-issues", title: "10-12. Speed Issues", level: 2 },
+      { id: "content-issues", title: "13-15. Content Issues", level: 2 },
+      { id: "fix-priority", title: "What to Fix First", level: 2 },
+      { id: "issues-rankvelt", title: "Get the Issues Fixed Properly", level: 2 },
+    ],
+
+    content: `
+      <p class="standalone-line">WordPress sites do not have exotic SEO problems. They have the same fifteen.</p>
+
+      <p>Every WordPress audit we run surfaces some combination of the same fifteen issues. This article lists all of them with the cause and the fix. No theory, just the patterns and what to do about each one. Fix them in the priority order at the end.</p>
+
+      <h2 id="indexation-issues">1-4. Indexation Issues</h2>
+
+      <p><strong>Issue 1: Tag pages indexed.</strong> WordPress creates an archive page for every tag. Most sites accumulate hundreds, all thin. Fix: noindex tag archives in your SEO plugin settings. One checkbox, enormous effect.</p>
+
+      <p><strong>Issue 2: Date archives indexed.</strong> Monthly and daily archives duplicate your blog listing with no added value. Fix: noindex date archives. Almost no site has a reason to index these.</p>
+
+      <p><strong>Issue 3: Internal search URLs indexed.</strong> Your site's search results pages end up in Google, creating infinite thin URLs. Fix: block them in robots.txt. A single Disallow line.</p>
+
+      <p><strong>Issue 4: Attachment pages indexed.</strong> Every uploaded image gets its own page, usually with nothing but the image. Fix: redirect attachment URLs to the image file itself. All three major SEO plugins offer this as a setting.</p>
+
+      <h2 id="plugin-issues">5-7. Plugin Issues</h2>
+
+      <p><strong>Issue 5: Two SEO plugins active.</strong> Perhaps the most damaging common misconfiguration. Duplicate titles, descriptions, canonicals, and schema from two sources. Fix: pick one, deactivate the other completely, and re-validate everything it used to output.</p>
+
+      <p><strong>Issue 6: Theme SEO settings fighting the plugin.</strong> Many themes include their own title, meta, and schema options. When both theme and plugin output the same tags, conflicts follow. Fix: disable the theme's SEO features wherever the plugin covers them. Check the theme customizer and theme options panels, not just the plugin.</p>
+
+      <p><strong>Issue 7: SEO plugin on default settings.</strong> Installing RankMath or Yoast and changing nothing leaves tag archives indexed, sitemaps including junk, and schema half configured. Fix: walk through every settings panel once, deliberately. Defaults are starting points, not configurations.</p>
+
+      <h2 id="schema-issues">8-9. Schema Issues</h2>
+
+      <p><strong>Issue 8: Conflicting schema sources.</strong> Theme plus plugin plus snippet plugin emitting overlapping structured data. Fix: audit view-source on key templates, count the schema entities, keep exactly one source per schema type.</p>
+
+      <p><strong>Issue 9: Page builder stripping schema.</strong> Some builders output content in ways that break the structured data the plugin tries to attach. Fix: validate pages built with the builder separately from standard pages. If the builder is the problem, the fix is builder configuration or builder replacement, not more plugins.</p>
+
+      <h2 id="speed-issues">10-12. Speed Issues</h2>
+
+      <p><strong>Issue 10: Page builder bloat.</strong> Builders load heavy CSS and JS on every page whether the page uses them or not. Fix: audit what loads, disable unused builder features, consider whether the builder earns its weight on simple pages.</p>
+
+      <p><strong>Issue 11: Plugin overload.</strong> Thirty plugins, each adding scripts site-wide. Fix: profile, remove the unused, conditionally load the rest. There is no caching configuration that compensates for this.</p>
+
+      <p><strong>Issue 12: Unoptimized images at scale.</strong> Years of uploads at full resolution. Fix: bulk compress existing media, enforce sensible upload limits going forward, use modern formats and proper sizing.</p>
+
+      <h2 id="content-issues">13-15. Content Issues</h2>
+
+      <p><strong>Issue 13: Thin content spread across too many pages.</strong> Dozens of 200-word posts targeting micro variations of the same keyword. Fix: consolidate into comprehensive pages and redirect the remnants.</p>
+
+      <p><strong>Issue 14: No internal linking structure.</strong> Posts published and forgotten, orphaned from the rest of the site. Fix: build hub pages and link related content deliberately. Internal links are the cheapest ranking lever on WordPress.</p>
+
+      <p><strong>Issue 15: Decaying old content.</strong> Posts from 2021 ranking on borrowed time with outdated facts and screenshots. Fix: quarterly content refresh cycles. Updating beats rewriting for pages with existing authority.</p>
+
+      <h2 id="fix-priority">What to Fix First</h2>
+
+      <ol>
+        <li><strong>Indexation leaks.</strong> Search URLs, tag archives, and attachment pages in the index. Fix today.</li>
+        <li><strong>Plugin conflicts.</strong> One SEO plugin, theme SEO features disabled where the plugin covers them.</li>
+        <li><strong>Schema conflicts.</strong> One source of truth per schema type, validated.</li>
+        <li><strong>Speed blockers.</strong> Builder audit, plugin audit, image compression.</li>
+        <li><strong>Content consolidation.</strong> Merge thin pages, build internal linking, start refresh cycles.</li>
+      </ol>
+
+      <h2 id="issues-rankvelt">Get the Issues Fixed Properly</h2>
+
+      <p>These fifteen issues interact. Indexation bloat plus plugin conflicts plus slow speed is not three problems, it is one underperforming site. Our WordPress SEO audits find root causes in priority order, then we implement the fixes. No generic reports.</p>
+
+      <p><a href="/strategy-call">Book a free strategy call</a> and we will start with a mini audit: the top issues on your site, what they cost you, and what fixing them looks like. You keep the findings either way.</p>
+    `,
+  },
+
+
+
+
+
+
   {
     id: "website-redesign-seo-checklist",
 
