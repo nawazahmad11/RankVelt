@@ -40,6 +40,10 @@
     "destination": "https://www.rankvelt.com/:path*",
     "permanent": true
   },
+  { "source": "/blog/why-shopify-stores-fail", "destination": "/blog/shopify-seo-audit", "permanent": true },
+  { "source": "/blog/high-converting-product-pages", "destination": "/blog/shopify-seo-expert", "permanent": true },
+  { "source": "/blog/shopify-redesign-signs", "destination": "/blog/hire-shopify-seo-expert", "permanent": true },
+
   {
     "source": "/",
     "has": [

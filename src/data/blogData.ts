@@ -1416,7 +1416,6 @@ export const blogPosts: BlogPost[] = [
     `,
   },
 
-
   {
     id: "how-to-get-cited-by-chatgpt-gemini-perplexity",
 
@@ -2187,11 +2186,6 @@ export const blogPosts: BlogPost[] = [
       </div>
     `,
   },
-
-
-
-
-
 
   {
     id: "google-ai-overviews-how-it-works",
@@ -6055,9 +6049,9 @@ export const blogPosts: BlogPost[] = [
       "A Shopify SEO Checklist for 2026 is an ordered set of technical, on-page, content and product-data tasks used to improve a Shopify store’s visibility across Google Search, Shopping results and AI-powered search features.",
 
       relatedPostIds: [
-        "why-shopify-stores-fail",
-        "high-converting-product-pages",
-        "shopify-redesign-signs",
+          "hire-shopify-seo-expert",
+          "shopify-seo-audit",
+          "shopify-seo-expert",
       ],
 
     primaryService: {
@@ -7608,9 +7602,9 @@ export const blogPosts: BlogPost[] = [
       "Structured website design organizes pages, navigation, URLs, and internal links around a clear hierarchy. It gives search engines reliable crawl paths and gives visitors an obvious route from discovery to decision.",
 
       relatedPostIds: [
-        "why-shopify-stores-fail",
-        "high-converting-product-pages",
-        "shopify-redesign-signs",
+        "hire-shopify-seo-expert",
+        "shopify-seo-audit",
+        "shopify-seo-expert",
       ],
 
     primaryService: {
@@ -8629,7 +8623,7 @@ export const blogPosts: BlogPost[] = [
       "Website Redesign Without Losing Rankings refers to the controls used to preserve URLs, content signals, crawlability, internal links, analytics, and conversion paths while changing a site’s design or platform.",
 
       relatedPostIds: [
-        "shopify-redesign-signs",
+        "shopify-seo-audit",
         "structured-website-design",
         "internal-linking-seo-ai",
       ],
@@ -12005,905 +11999,1491 @@ export const blogPosts: BlogPost[] = [
 
   // Old articles Shopify
   
+  // {
+  //   id: "why-shopify-stores-fail",
+  
+  //   title:
+  //     "Why Shopify Stores Fail After Launch: 10 SEO, UX and Conversion Fixes",
+  
+  //   seoTitle:
+  //     "Why Shopify Stores Fail: 10 SEO, UX & Conversion Fixes",
+  
+  //   metaDescription:
+  //     "Learn why Shopify stores fail after launch and use 10 practical SEO, UX, trust, mobile, technical and conversion fixes to improve traffic and sales.",
+  
+  //   ogTitle:
+  //     "Why Shopify Stores Fail After Launch: 10 Practical Fixes",
+  
+  //   socialDescription:
+  //     "Discover the SEO, UX, technical and conversion problems that prevent Shopify stores from growing after launch.",
+  
+  //   date: "Aug 11, 2026",
+  //   datePublished: "2026-08-11",
+  //   dateModified: "2026-08-11",
+  
+  //   author: "RankVelt Editorial Team",
+  //   authorType: "Organization",
+  
+  //   category: "ECOMMERCE SEO",
+  //   readTime: "9 min read",
+  
+  //   image: "/shopify-store-failure-reasons.webp",
+  
+  //   imageAlt:
+  //     "Shopify store failure reasons covering SEO, mobile UX, product pages, trust and conversion problems",
+  
+  //   excerpt:
+  //     "Many Shopify stores struggle after launch because search visibility, product information, mobile usability, trust and conversion paths do not work together.",
+  
+  //   relatedPostIds: [
+  //     "high-converting-product-pages",
+  //     "shopify-redesign-signs",
+  //   ],
+  
+  //   showStandardCta: false,
+  
+  //   faqItems: [
+  //     {
+  //       question:
+  //         "Why is my Shopify store getting traffic but not sales?",
+  //       answer:
+  //         "Traffic may be poorly targeted, product pages may not answer customer questions, or the website journey may create friction. Review search intent, trust, mobile usability, product information, and checkout pathways together.",
+  //     },
+  //     {
+  //       question:
+  //         "Can SEO help a Shopify store get more sales?",
+  //       answer:
+  //         "SEO can help relevant customers discover collections, products, and useful content through search. Results also depend on product-market fit, pricing, trust, user experience, and the strength of the conversion journey.",
+  //     },
+  //     {
+  //       question:
+  //         "Should I redesign my whole Shopify store?",
+  //       answer:
+  //         "Not always. Start with an audit. Many stores improve through collection-page SEO, product-page clarity, technical fixes, internal linking, mobile UX, and better conversion paths before a full redesign is necessary.",
+  //     },
+  //   ],
+  
+  //   toc: [
+  //     {
+  //       id: "intro",
+  //       title: "Why Shopify Stores Struggle After Launch",
+  //       level: 2,
+  //     },
+  //     {
+  //       id: "traffic-problem",
+  //       title: "1. Traffic Without Search Intent",
+  //       level: 2,
+  //     },
+  //     {
+  //       id: "collection-pages",
+  //       title: "2. Weak Collection and Category Pages",
+  //       level: 2,
+  //     },
+  //     {
+  //       id: "product-pages",
+  //       title: "3. Product Pages That Do Not Answer Questions",
+  //       level: 2,
+  //     },
+  //     {
+  //       id: "technical-seo",
+  //       title: "4. Technical SEO Problems",
+  //       level: 2,
+  //     },
+  //     {
+  //       id: "trust",
+  //       title: "5. Missing Trust Signals",
+  //       level: 2,
+  //     },
+  //     {
+  //       id: "mobile-ux",
+  //       title: "6. Poor Mobile Shopping Experience",
+  //       level: 2,
+  //     },
+  //     {
+  //       id: "conversion-path",
+  //       title: "7. Broken Conversion Paths",
+  //       level: 2,
+  //     },
+  //     {
+  //       id: "measurement",
+  //       title: "8. No Clear Measurement Plan",
+  //       level: 2,
+  //     },
+  //     {
+  //       id: "action-plan",
+  //       title: "9. A Practical 30-Day Improvement Plan",
+  //       level: 2,
+  //     },
+  //     {
+  //       id: "faqs",
+  //       title: "Frequently Asked Questions",
+  //       level: 2,
+  //     },
+  //   ],
+  
+  //   content: `
+  //     <h2 id="intro">Why Shopify Stores Struggle After Launch</h2>
+  
+  //     <p>Launching a Shopify store is an important milestone, but launch day is only the beginning. A store can look polished, have good products, and still struggle to attract qualified traffic or convert visitors into customers.</p>
+  
+  //     <p>The problem is rarely one single issue. It is usually a combination of weak search visibility, unclear collection pages, thin product information, poor mobile usability, missing trust signals, and a customer journey that creates unnecessary friction.</p>
+  
+  //     <p>For eCommerce brands, the goal is not simply to get more visitors. The goal is to attract relevant visitors, help them understand the product quickly, and make the next step feel simple and trustworthy.</p>
+  
+  //     <h2 id="traffic-problem">1. Traffic Without Search Intent</h2>
+  
+  //     <p>Many Shopify stores focus on getting traffic before deciding what type of traffic they need. Visitors who arrive through broad social posts, unrelated keywords, or weak advertising audiences may browse without any real purchase intent.</p>
+  
+  //     <p>A better approach is to map pages around how customers search. A person looking for a specific product type, comparison, gift idea, material, style, or problem-solving product needs a page that clearly matches that search.</p>
+  
+  //     <p>Start by identifying the commercial pages that matter most:</p>
+  
+  //     <ul>
+  //       <li>Core collection and category pages.</li>
+  //       <li>High-margin or high-demand product pages.</li>
+  //       <li>Seasonal product opportunities.</li>
+  //       <li>Comparison pages where customers are researching options.</li>
+  //       <li>Guides that answer real product questions before purchase.</li>
+  //     </ul>
+  
+  //     <p>Strong <a href="/ecommerce-seo">eCommerce SEO</a> connects those search opportunities to the correct Shopify pages instead of publishing random content that does not support sales.</p>
+  
+  //     <h2 id="collection-pages">2. Weak Collection and Category Pages</h2>
+  
+  //     <p>Collection pages are often some of the most valuable SEO pages in a Shopify store. They help search engines understand product categories and help customers browse products with more confidence.</p>
+  
+  //     <p>A weak collection page usually has only a heading, product grid, and filter. That may be enough for basic browsing, but it often does not explain what makes the collection useful, who it is for, or how products differ.</p>
+  
+  //     <p>A stronger collection page can include:</p>
+  
+  //     <ul>
+  //       <li>A clear, keyword-relevant collection title.</li>
+  //       <li>A short introduction that explains the category.</li>
+  //       <li>Helpful internal links to related categories or buying guides.</li>
+  //       <li>Filters that make product comparison easier.</li>
+  //       <li>Useful product sorting and consistent category structure.</li>
+  //       <li>A small FAQ section where it genuinely helps customers.</li>
+  //     </ul>
+  
+  //     <p>The aim is not to add text for search engines alone. The aim is to make the page more useful for shoppers who are comparing options.</p>
+  
+  //     <h2 id="product-pages">3. Product Pages That Do Not Answer Questions</h2>
+  
+  //     <p>Product pages should do more than display a product image, price, and button. A customer may need to understand sizing, materials, shipping expectations, care instructions, product use, compatibility, benefits, and return details before buying.</p>
+  
+  //     <p>When important answers are missing, visitors either leave, search elsewhere, or delay the purchase. That is why product page content should reduce uncertainty rather than simply repeat the product title.</p>
+  
+  //     <h3 id="product-content">Useful Product Page Content</h3>
+  
+  //     <ul>
+  //       <li>Clear, descriptive product titles.</li>
+  //       <li>Product benefits written in plain language.</li>
+  //       <li>Material, size, fit, use, or compatibility information.</li>
+  //       <li>High-quality images that show the product in context.</li>
+  //       <li>Delivery, returns, warranty, or support information.</li>
+  //       <li>Related products, bundles, or complementary items.</li>
+  //     </ul>
+  
+  //     <p>Good product copy helps both users and search engines understand what the product is, who it is for, and why it deserves attention.</p>
+  
+  //     <h2 id="technical-seo">4. Technical SEO Problems</h2>
+  
+  //     <p>Technical SEO issues can make it harder for search engines to crawl, understand, and prioritise important Shopify pages. These problems are not always visible to customers, but they can weaken search visibility over time.</p>
+  
+  //     <p>Common Shopify technical SEO issues include:</p>
+  
+  //     <ul>
+  //       <li>Duplicate collection or filter URLs.</li>
+  //       <li>Weak internal linking between collections, products, and guides.</li>
+  //       <li>Important pages with unclear titles or duplicate meta descriptions.</li>
+  //       <li>Large images that slow key page sections.</li>
+  //       <li>Broken links, redirect chains, or outdated pages.</li>
+  //       <li>Product pages that are difficult for search engines to discover.</li>
+  //     </ul>
+  
+  //     <p>A technical audit should not become a long list of low-priority warnings. The best audit identifies which issues are actually affecting important commercial pages and customer journeys.</p>
+  
+  //     <h2 id="trust">5. Missing Trust Signals</h2>
+  
+  //     <p>Customers need enough information to feel comfortable buying from a store they may not know. Trust is built through clarity, consistency, and transparent information.</p>
+  
+  //     <p>Useful trust signals can include:</p>
+  
+  //     <ul>
+  //       <li>A clear About page that explains the brand or business.</li>
+  //       <li>Visible contact details and realistic support options.</li>
+  //       <li>Clear delivery, returns, privacy, and terms information.</li>
+  //       <li>Real product reviews or verified customer feedback.</li>
+  //       <li>Secure payment methods and transparent checkout information.</li>
+  //       <li>Consistent design across product, collection, and checkout pathways.</li>
+  //     </ul>
+  
+  //     <p>Trust should not rely on fake counters, invented stock messages, or unverified claims. Clear information is usually more valuable than aggressive urgency tactics.</p>
+  
+  //     <h2 id="mobile-ux">6. Poor Mobile Shopping Experience</h2>
+  
+  //     <p>A large percentage of eCommerce browsing happens on mobile devices. A page that feels comfortable on a wide desktop screen may feel slow, crowded, or difficult to use on a phone.</p>
+  
+  //     <p>Review your store on a real mobile device and ask simple questions:</p>
+  
+  //     <ul>
+  //       <li>Can a visitor understand the product within a few seconds?</li>
+  //       <li>Are the main buttons easy to find and tap?</li>
+  //       <li>Do filters and menus work without frustration?</li>
+  //       <li>Do images load quickly enough on mobile data?</li>
+  //       <li>Can shoppers reach delivery, returns, sizing, and support information easily?</li>
+  //     </ul>
+  
+  //     <p>Mobile UX improvements often support both conversion and SEO because they make important pages clearer, easier to use, and less likely to create frustration.</p>
+  
+  //     <h2 id="conversion-path">7. Broken Conversion Paths</h2>
+  
+  //     <p>A visitor may find the right product and still not buy because the next step is unclear. Conversion paths become weak when navigation is confusing, product options are poorly explained, shipping information is hidden, or checkout creates unnecessary steps.</p>
+  
+  //     <p>Review the route from homepage to collection, product page, cart, and checkout. Look for moments where a customer has to guess what to do next.</p>
+  
+  //     <p>Useful conversion improvements can include:</p>
+  
+  //     <ul>
+  //       <li>Clear calls to action.</li>
+  //       <li>Better product filtering and category navigation.</li>
+  //       <li>Simple cart and checkout pathways.</li>
+  //       <li>Visible shipping and returns information before checkout.</li>
+  //       <li>Related products that are genuinely useful.</li>
+  //       <li>Landing pages aligned with specific campaigns or search intent.</li>
+  //     </ul>
+  
+  //     <h2 id="measurement">8. No Clear Measurement Plan</h2>
+  
+  //     <p>Without measurement, it is difficult to know which pages are helping the business and which pages need work. You do not need to track everything at once, but you should understand how visitors move through important pages.</p>
+  
+  //     <p>Track meaningful signals such as:</p>
+  
+  //     <ul>
+  //       <li>Organic traffic to collections and product pages.</li>
+  //       <li>Search impressions and clicks for priority keywords.</li>
+  //       <li>Product-page engagement.</li>
+  //       <li>Add-to-cart activity.</li>
+  //       <li>Checkout starts and completed orders.</li>
+  //       <li>Form submissions or customer support questions.</li>
+  //     </ul>
+  
+  //     <p>Use the information to improve high-value pages first. A small number of meaningful improvements often matters more than dozens of cosmetic changes.</p>
+  
+  //     <h2 id="action-plan">9. A Practical 30-Day Improvement Plan</h2>
+  
+  //     <p>A good improvement plan does not require rebuilding the entire store at once. Start with the pages and issues closest to customer discovery and purchase decisions.</p>
+  
+  //     <h3 id="week-one">Week One: Review the Foundation</h3>
+  
+  //     <ul>
+  //       <li>Check core collection and product pages.</li>
+  //       <li>Review mobile experience and page speed.</li>
+  //       <li>Identify broken links, duplicate pages, and missing metadata.</li>
+  //     </ul>
+  
+  //     <h3 id="week-two">Week Two: Improve Priority Pages</h3>
+  
+  //     <ul>
+  //       <li>Rewrite key collection page introductions.</li>
+  //       <li>Improve product titles, descriptions, and product information.</li>
+  //       <li>Add internal links between related collections and guides.</li>
+  //     </ul>
+  
+  //     <h3 id="week-three">Week Three: Improve Trust and UX</h3>
+  
+  //     <ul>
+  //       <li>Clarify returns, delivery, support, and contact information.</li>
+  //       <li>Improve mobile navigation and call-to-action placement.</li>
+  //       <li>Remove unnecessary visual clutter or confusing popups.</li>
+  //     </ul>
+  
+  //     <h3 id="week-four">Week Four: Measure and Prioritise</h3>
+  
+  //     <ul>
+  //       <li>Review search visibility and visitor behaviour.</li>
+  //       <li>Identify pages with opportunity but weak engagement.</li>
+  //       <li>Create the next SEO and conversion improvement roadmap.</li>
+  //     </ul>
+  
+  //     <h2 id="faqs">Frequently Asked Questions</h2>
+  
+  //     <details>
+  //       <summary>Why is my Shopify store getting traffic but not sales?</summary>
+  //       <p>Traffic may be poorly targeted, product pages may not answer customer questions, or the website journey may create friction. Review search intent, trust, mobile usability, product information, and checkout pathways together.</p>
+  //     </details>
+  
+  //     <details>
+  //       <summary>Can SEO help a Shopify store get more sales?</summary>
+  //       <p>SEO can help relevant customers discover collections, products, and useful content through search. Results also depend on product-market fit, pricing, trust, user experience, and the strength of the conversion journey.</p>
+  //     </details>
+  
+  //     <details>
+  //       <summary>Should I redesign my whole Shopify store?</summary>
+  //       <p>Not always. Start with an audit. Many stores improve through collection-page SEO, product-page clarity, technical fixes, internal linking, mobile UX, and better conversion paths before a full redesign is necessary.</p>
+  //     </details>
+  
+  //     <div class="cta-premium-block">
+  //       <h2>Need Help Improving Your Shopify Store?</h2>
+  //       <p>RankVelt helps eCommerce brands improve Shopify SEO, product discovery, collection structure, technical foundations, and conversion-focused website journeys.</p>
+  //       <a href="/ecommerce-seo" class="shimmer-btn">Explore eCommerce SEO</a>
+  //     </div>
+  //   `,
+  // },
   {
-    id: "why-shopify-stores-fail",
+      id: "hire-shopify-seo-expert",
   
-    title:
-      "Why Shopify Stores Fail After Launch: 10 SEO, UX and Conversion Fixes",
+      title: "How to Hire a Shopify SEO Expert Without Getting Burned",
   
+      seoTitle:
+        "How to Hire a Shopify SEO Expert: Vetting Checklist for 2026",
+  
+      metaDescription:
+        "Hiring a Shopify SEO expert? This vetting checklist covers red flags, interview questions, pricing models, and contract terms that protect your store.",
+  
+      ogTitle: "How to Hire a Shopify SEO Expert",
+  
+      socialDescription:
+        "Red flags, interview questions, pricing models, and contract terms. The complete vetting checklist before you hire.",
+  
+      date: "Oct 4, 2026",
+      datePublished: "2026-10-04",
+      dateModified: "2026-10-04",
+  
+      author: "RankVelt Editorial Team",
+      authorType: "Organization",
+  
+      category: "SHOPIFY SEO",
+      readTime: "11 min read",
+  
+      image: "/blog/hire-shopify-seo-expert.webp",
+  
+      imageAlt:
+        "Checklist illustration for vetting and hiring a Shopify SEO expert",
+  
+      excerpt:
+        "Hiring a Shopify SEO expert is a high trust decision. This guide gives you a vetting checklist, red flags, interview questions, pricing models, and contract terms so you hire with confidence.",
+  
+      relatedPostIds: [
+        "shopify-seo-expert",
+        "shopify-seo-audit",
+        "ecommerce-seo-ai-search",
+      ],
+  
+      primaryService: {
+        title: "eCommerce SEO",
+        description:
+          "Technical SEO, product and collection optimization, and content strategy built for Shopify and other ecommerce platforms.",
+        path: "/ecommerce-seo",
+      },
+  
+      showStandardCta: true,
+  
+      keyTakeaways: [
+        "A real Shopify SEO expert knows platform specifics: forced URL structures, duplicate collection content, Liquid, and app bloat.",
+        "Vet with a checklist: ask for their process, not promises. Rankings guarantees are a red flag.",
+        "Pricing usually follows three models: hourly, monthly retainer, or project based. The model matters more than the number.",
+        "Your contract should define deliverables, reporting, and who owns what. Never sign open ended SEO.",
+        "Interview with scenario questions. How they think about your store matters more than certificates.",
+      ],
+  
+      faqItems: [
+        {
+          question: "What should I ask a Shopify SEO expert before hiring?",
+          answer:
+            "Ask how they handle Shopify specific issues like duplicate collection URLs, forced URL structures, and app related speed problems. Ask what their first 30 days look like, how they report progress, and what they need from you. Vague answers to platform specific questions are a warning sign.",
+        },
+        {
+          question: "How long does Shopify SEO take to show results?",
+          answer:
+            "Most stores see early movement in 2 to 3 months and meaningful traffic change in 4 to 6 months. Anyone promising page one in 30 days is selling something SEO cannot deliver. Timelines depend on your niche competition, site history, and how much technical debt exists.",
+        },
+        {
+          question: "Can a general SEO freelancer handle Shopify SEO?",
+          answer:
+            "Sometimes, but Shopify has platform quirks a generalist may miss: locked URL structures, duplicate content from collections and tags, limited robots.txt control, and app bloat that kills speed scores. Ask specifically about their Shopify experience, not just SEO experience.",
+        },
+        {
+          question: "Should I hire a freelancer or an agency for Shopify SEO?",
+          answer:
+            "Freelancers suit smaller stores with a defined task, like a technical cleanup. Agencies suit stores that need ongoing strategy across technical, content, and authority work. Match the engagement shape to the problem size, not just the budget.",
+        },
+        {
+          question: "What should be in a Shopify SEO contract?",
+          answer:
+            "Defined deliverables, a reporting schedule, what access they need, who owns the work product, a clear term length, and exit terms. Avoid open ended agreements with no milestones. You should always know what you are paying for each month.",
+        },
+        {
+          question: "How much does it cost to hire a Shopify SEO expert?",
+          answer:
+            "Published market data gives a range. Upwork's pricing page shows a median of $21 per hour for SEO experts with a typical band of $15 to $35, and ecommerce SEO projects commonly fall between $500 and $2,500 per project. An Ahrefs survey of 439 providers found the most popular retainer band was $501 to $1,000 per month. Shopify specialized retainers run higher, with a 2026 rate card putting them at $2,700 to $3,600 per month. Your store's size and competition decide where you land in these ranges.",
+        },
+        {
+          question: "What is the biggest red flag when hiring an SEO expert?",
+          answer:
+            "Guaranteed rankings. No one controls Google. Other red flags: no questions about your business, secret methods they will not explain, and pressure to sign long contracts before any audit. A good expert diagnoses before prescribing.",
+        },
+      ],
+  
+      toc: [
+        { id: "what-they-do", title: "What Does a Shopify SEO Expert Actually Do?", level: 2 },
+        { id: "when-to-hire", title: "When Should You Hire One?", level: 2 },
+        { id: "vetting-checklist", title: "The Vetting Checklist", level: 2 },
+        { id: "red-flags", title: "Red Flags That Mean Walk Away", level: 2 },
+        { id: "interview-questions", title: "Interview Questions That Reveal Skill", level: 2 },
+        { id: "pricing-models", title: "How Pricing Usually Works", level: 2 },
+        { id: "contract-terms", title: "Contract Terms That Protect You", level: 2 },
+        { id: "hire-rankvelt", title: "A Faster Path: Let RankVelt Vet Itself", level: 2 },
+      ],
+  
+      content: `
+        <p class="standalone-line">Hire for process, not promises.</p>
+  
+        <p>Hiring a Shopify SEO expert is a high trust decision. You hand over access to your store, your data, and your revenue channel. Done right, the right expert compounds your organic traffic for years. Done wrong, you pay monthly for reports that say nothing and rankings that never move.</p>
+  
+        <p>This guide gives you the full vetting system: what the expert should actually do, when hiring makes sense, a checklist to evaluate candidates, red flags, interview questions, pricing models, and contract terms. Use it before you sign anything.</p>
+  
+        <h2 id="what-they-do">What Does a Shopify SEO Expert Actually Do?</h2>
+  
+        <p>A Shopify SEO expert does three kinds of work. Technical, on page, and authority. Technical covers crawlability, indexation, site speed, and structured data. On page covers product titles, collection pages, internal linking, and content. Authority covers the off site signals that make Google trust your store.</p>
+  
+        <p>The Shopify part matters. This platform has quirks a generalist misses. URL structures are forced: every product lives under /products/ and every collection under /collections/, and you cannot change that. Collections and tags create duplicate content by default. The robots.txt file is locked down. Apps pile on JavaScript that wrecks speed scores. An expert knows these constraints and works inside them instead of fighting them.</p>
+  
+        <p>Ask any candidate how they handle duplicate collection URLs. If they look confused, keep looking.</p>
+  
+        <h2 id="when-to-hire">When Should You Hire One?</h2>
+  
+        <p>Hire when SEO is the bottleneck, not everything else. Signs it is time:</p>
+  
+        <ul>
+          <li>Your store converts but organic traffic is flat while competitors grow.</li>
+          <li>You have done the basics (titles, speed, sitemap) and growth stalled.</li>
+          <li>A redesign or migration is coming. SEO input before the rebuild prevents disasters after it.</li>
+          <li>You are spending heavily on ads and want a channel you own.</li>
+        </ul>
+  
+        <p>Do not hire to fix a broken business model. SEO amplifies what exists. If the product, pricing, or offer is wrong, traffic will not save it. Fix the offer first.</p>
+  
+        <h2 id="vetting-checklist">The Vetting Checklist</h2>
+  
+        <p>Run every candidate through this list. It takes one call to separate professionals from pretenders.</p>
+  
+        <ul>
+          <li><strong>Platform proof:</strong> They can name Shopify specific issues without prompting: duplicate collections, forced URLs, app bloat, Liquid limitations.</li>
+          <li><strong>Process over promises:</strong> They describe a diagnostic process (audit first, then plan). They do not open with guarantees.</li>
+          <li><strong>Reporting clarity:</strong> They can show you a sample report. It ties work done to metrics that matter: organic revenue, not just rankings.</li>
+          <li><strong>References with context:</strong> They can describe past store situations similar to yours, without naming clients they should not name.</li>
+          <li><strong>Questions for you:</strong> They ask about your margins, best sellers, and goals. An expert who never asks about your business is just selling hours.</li>
+          <li><strong>Realistic timelines:</strong> They talk in months and ranges, not certainties.</li>
+        </ul>
+  
+        <h2 id="red-flags">Red Flags That Mean Walk Away</h2>
+  
+        <p>Some signals end the conversation immediately.</p>
+  
+        <ul>
+          <li><strong>Guaranteed rankings.</strong> No one controls Google. Guarantees are either lies or target keywords no one searches.</li>
+          <li><strong>Secret methods.</strong> Real SEO is explainable. "Proprietary system" usually means they cannot explain it or do not want you to see it.</li>
+          <li><strong>No audit before a proposal.</strong> Prescribing without diagnosing is malpractice in any field.</li>
+          <li><strong>Long lock in contracts.</strong> Confidence looks like short terms with renewal on results, not 12 month handcuffs.</li>
+          <li><strong>Only vanity metrics.</strong> If every report leads with impressions and buries revenue, the work is not tied to your business.</li>
+        </ul>
+  
+        <h2 id="interview-questions">Interview Questions That Reveal Skill</h2>
+  
+        <p>Use scenario questions. They reveal thinking better than credentials do.</p>
+  
+        <ul>
+          <li>"Our collection pages compete with our product pages in search. How would you fix that?" (Tests duplicate content handling.)</li>
+          <li>"Our speed score is red because of apps we need. What is your approach?" (Tests pragmatism vs textbook answers.)</li>
+          <li>"Walk me through your first 30 days on our store." (Tests process. Look for audit, quick wins, then strategy.)</li>
+          <li>"A product we rank for goes out of stock for two months. What do you do with the page?" (Tests judgment. There is no single right answer, but there are wrong ones.)</li>
+          <li>"How do you measure whether your work is paying off?" (Tests business thinking. Revenue and profit talk beats ranking talk.)</li>
+        </ul>
+  
+        <p>Listen for specifics. Strong candidates name tools, Shopify settings, and tradeoffs. Weak candidates stay in generalities.</p>
+  
+        <h2 id="pricing-models">How Pricing Usually Works</h2>
+  
+        <p>SEO pricing follows three models. The model matters more than the number, because it shapes incentives.</p>
+  
+        <ul>
+          <li><strong>Hourly:</strong> Good for defined tasks like a technical cleanup. You pay for time, so scope must be tight or costs drift.</li>
+          <li><strong>Monthly retainer:</strong> The standard for ongoing growth work. Make sure the agreement lists monthly deliverables, not just "SEO services."</li>
+          <li><strong>Project based:</strong> Good for audits, migrations, or rebuilds. Fixed scope, fixed price, clear end date.</li>
+        </ul>
+  
+        <p>What drives cost: your catalog size, technical debt, content needs, and competition in your niche. A 50 product store in a quiet niche costs less to move than a 5,000 SKU store fighting national brands. Any quote given before an audit is a guess. Treat it like one.</p>
+  
+        <p>Published market data gives you a reality check before you collect quotes. Upwork's own pricing page lists a median of $21 per hour for SEO experts with a typical band of $15 to $35, and ecommerce SEO projects on the platform commonly fall between $500 and $2,500 per project. Ahrefs surveyed 439 providers and found the most popular retainer band was $501 to $1,000 per month and the most popular hourly band was $75 to $100. Shopify specialized retainers run higher: a 2026 rate card for Shopify experts puts monthly retainers at $2,700 to $3,600. These are market observations, not our prices. Use them to spot quotes that are suspiciously cheap or wildly inflated.</p>
+  
+        <h2 id="contract-terms">Contract Terms That Protect You</h2>
+  
+        <p>Never sign open ended SEO. Your agreement should spell out:</p>
+  
+        <ul>
+          <li>Exact deliverables per month or per project phase.</li>
+          <li>Reporting schedule and what metrics get reported.</li>
+          <li>What access they need (and that access gets revoked at the end).</li>
+          <li>Who owns the work product: content, fixes, and documentation stay with you.</li>
+          <li>Term length, renewal terms, and how either side exits.</li>
+          <li>What happens to unfinished work if you part ways.</li>
+        </ul>
+  
+        <p>Read the exit clause before the price. The cheapest engagement with a painful exit is the most expensive one.</p>
+  
+        <h2 id="hire-rankvelt">A Faster Path: Let RankVelt Vet Itself</h2>
+  
+        <p>We built RankVelt to be the agency this checklist describes. Platform specific Shopify knowledge. Audit before proposals. Short initial terms. Reports tied to revenue, not vanity metrics.</p>
+  
+        <p>If you would rather skip the vetting marathon, <a href="/strategy-call">book a free strategy call</a>. We will audit your store, show you exactly what is holding it back, and give you a straight answer on whether we are the right fit. Three month initial term, then month to month. No secret methods.</p>
+      `,
+  },
+
+
+  // {
+  //   id: "high-converting-product-pages",
+  
+  //   title:
+  //     "How to Build High-Converting Shopify Product Pages for SEO and Sales",
+  
+  //   seoTitle:
+  //     "High-Converting Shopify Product Pages for SEO and Sales",
+  
+  //   metaDescription:
+  //     "Build high-converting Shopify product pages with clearer titles, useful copy, better images, mobile UX, trust signals, internal links and technical SEO.",
+  
+  //   ogTitle:
+  //     "How to Build High-Converting Shopify Product Pages",
+  
+  //   socialDescription:
+  //     "Improve Shopify product pages with clearer content, stronger trust signals, better mobile UX, internal links and technical SEO.",
+  
+  //   date: "Aug 11, 2026",
+  //   datePublished: "2026-08-11",
+  //   dateModified: "2026-08-11",
+  
+  //   author: "RankVelt Editorial Team",
+  //   authorType: "Organization",
+  
+  //   category: "ECOMMERCE SEO",
+  //   readTime: "8 min read",
+  
+  //   image: "/shopify-conversion-rates.webp",
+  
+  //   imageAlt:
+  //     "Shopify product page showing SEO, product content, mobile usability, trust signals and conversion improvements",
+  
+  //   excerpt:
+  //     "High-converting Shopify product pages combine clear product information, useful images, mobile usability, trust signals, technical SEO and simple conversion paths.",
+  
+  //   relatedPostIds: [
+  //     "why-shopify-stores-fail",
+  //     "shopify-redesign-signs",
+  //   ],
+  
+  //   showStandardCta: false,
+  
+  //   faqItems: [
+  //     {
+  //       question:
+  //         "How long should a Shopify product description be?",
+  //       answer:
+  //         "The right length depends on the product. Keep the first section easy to scan, then provide useful details for customers who need more information. The goal is clarity, not word count.",
+  //     },
+  //     {
+  //       question:
+  //         "Do product pages help Shopify SEO?",
+  //       answer:
+  //         "Yes. Product pages can appear in search results when they are properly structured, useful, discoverable, and aligned with real customer search terms. Collection pages and supporting content also play an important role.",
+  //     },
+  //     {
+  //       question:
+  //         "Should every Shopify product have a unique description?",
+  //       answer:
+  //         "Important product pages should have useful, original content wherever possible. Avoid copying manufacturer descriptions or repeating the same copy across multiple products.",
+  //     },
+  //   ],
+  
+  //   toc: [
+  //     {
+  //       id: "intro",
+  //       title: "Why Product Pages Matter",
+  //       level: 2,
+  //     },
+  //     {
+  //       id: "search-intent",
+  //       title: "1. Match Product Pages to Search Intent",
+  //       level: 2,
+  //     },
+  //     {
+  //       id: "product-title",
+  //       title: "2. Write Clear Product Titles",
+  //       level: 2,
+  //     },
+  //     {
+  //       id: "product-copy",
+  //       title: "3. Explain Benefits, Details and Use Cases",
+  //       level: 2,
+  //     },
+  //     {
+  //       id: "visuals",
+  //       title: "4. Use Better Product Images",
+  //       level: 2,
+  //     },
+  //     {
+  //       id: "trust",
+  //       title: "5. Add Useful Trust Information",
+  //       level: 2,
+  //     },
+  //     {
+  //       id: "mobile",
+  //       title: "6. Build for Mobile Product Discovery",
+  //       level: 2,
+  //     },
+  //     {
+  //       id: "technical",
+  //       title: "7. Improve Product Page Technical SEO",
+  //       level: 2,
+  //     },
+  //     {
+  //       id: "internal-links",
+  //       title: "8. Use Internal Links and Related Products",
+  //       level: 2,
+  //     },
+  //     {
+  //       id: "checklist",
+  //       title: "Product Page SEO Checklist",
+  //       level: 2,
+  //     },
+  //     {
+  //       id: "faqs",
+  //       title: "Frequently Asked Questions",
+  //       level: 2,
+  //     },
+  //   ],
+  
+  //   content: `
+  //     <h2 id="intro">Why Product Pages Matter</h2>
+  
+  //     <p>For an eCommerce store, a product page is often the final step between search visibility and a purchase decision. A customer may arrive from Google, a collection page, an email, social media, or a paid campaign. Regardless of the source, the page must quickly explain the product and make the next action feel clear.</p>
+  
+  //     <p>High-converting product pages are not built around pressure. They are built around clarity. Customers should be able to understand what the product is, why it is useful, who it is for, what it costs, when it will arrive, and what happens if it is not right for them.</p>
+  
+  //     <h2 id="search-intent">1. Match Product Pages to Search Intent</h2>
+  
+  //     <p>Before writing product copy, understand why a customer might search for the product. Some people know exactly what they want. Others are comparing materials, styles, sizes, features, or alternatives.</p>
+  
+  //     <p>A product page should reflect the language and questions that matter to the buyer. For example, a customer searching for a specific type of jacket may care about fit, warmth, leather quality, colour, shipping, and styling. A customer searching for a skincare product may care about ingredients, routine compatibility, skin type, and expected use.</p>
+  
+  //     <p>Search intent should influence:</p>
+  
+  //     <ul>
+  //       <li>The product title.</li>
+  //       <li>The first paragraph or benefit summary.</li>
+  //       <li>Specifications and usage details.</li>
+  //       <li>Image selection.</li>
+  //       <li>Frequently asked questions.</li>
+  //       <li>Links to related collections and products.</li>
+  //     </ul>
+  
+  //     <h2 id="product-title">2. Write Clear Product Titles</h2>
+  
+  //     <p>A product title should help customers and search engines understand the product without sounding unnatural. Avoid vague titles that only make sense internally, such as product codes, generic names, or brand-only labels.</p>
+  
+  //     <p>A clearer product title often includes the product type and a meaningful differentiator. The right level of detail depends on the category. Do not force every keyword into the title. Use language that would make sense to a real buyer.</p>
+  
+  //     <h3 id="title-example">A Simple Product Title Framework</h3>
+  
+  //     <ul>
+  //       <li>Primary product type.</li>
+  //       <li>Important material, style, or use case.</li>
+  //       <li>Optional colour, audience, or differentiator where helpful.</li>
+  //     </ul>
+  
+  //     <p>For example, a title such as <strong>Men's Brown Leather Biker Jacket</strong> is clearer than a vague internal product name. The goal is clarity, not keyword stuffing.</p>
+  
+  //     <h2 id="product-copy">3. Explain Benefits, Details and Use Cases</h2>
+  
+  //     <p>Many product descriptions list features without explaining why they matter. Features are useful, but customers often need help connecting those details to real benefits.</p>
+  
+  //     <p>Instead of only saying that a bag has multiple compartments, explain what that helps the customer do. Instead of only saying that a jacket is made from leather, explain the feel, use case, fit, care needs, or styling value where accurate.</p>
+  
+  //     <p>A useful product page normally includes:</p>
+  
+  //     <ul>
+  //       <li>A short benefit-led introduction.</li>
+  //       <li>Clear bullet points for key product details.</li>
+  //       <li>Material, size, compatibility, or care information.</li>
+  //       <li>Usage or styling context where relevant.</li>
+  //       <li>Delivery, returns, or support information.</li>
+  //     </ul>
+  
+  //     <h2 id="visuals">4. Use Better Product Images</h2>
+  
+  //     <p>Product images are often the first thing customers notice. Images should help people understand the product from different angles, in context, and at a useful level of detail.</p>
+  
+  //     <p>Consider adding a mix of:</p>
+  
+  //     <ul>
+  //       <li>Clean product images.</li>
+  //       <li>Close-up detail shots.</li>
+  //       <li>Scale or size reference images.</li>
+  //       <li>Lifestyle images that show real use.</li>
+  //       <li>Video where it helps explain movement, texture, or use.</li>
+  //     </ul>
+  
+  //     <p>Use descriptive image filenames and alt text where appropriate. Alt text should explain the image for accessibility, not repeat the same keyword across every image.</p>
+  
+  //     <h2 id="trust">5. Add Useful Trust Information</h2>
+  
+  //     <p>Trust information should reduce uncertainty. Customers often want to know whether the store is real, how delivery works, whether returns are possible, and what support is available.</p>
+  
+  //     <p>Useful trust content can include:</p>
+  
+  //     <ul>
+  //       <li>Clear shipping and delivery expectations.</li>
+  //       <li>Visible return or exchange policy links.</li>
+  //       <li>Secure payment information.</li>
+  //       <li>Real customer reviews where available.</li>
+  //       <li>Accurate contact or support details.</li>
+  //       <li>Brand information that explains who is behind the store.</li>
+  //     </ul>
+  
+  //     <p>Avoid using made-up urgency messages, fake review counts, or unclear claims. Genuine clarity usually creates more durable trust.</p>
+  
+  //     <h2 id="mobile">6. Build for Mobile Product Discovery</h2>
+  
+  //     <p>Product pages must be easy to use on smaller screens. A visitor should not have to search for the product price, variant options, delivery details, or add-to-cart button.</p>
+  
+  //     <p>Review mobile pages for:</p>
+  
+  //     <ul>
+  //       <li>Readable text and clear spacing.</li>
+  //       <li>Easy-to-tap product options.</li>
+  //       <li>Visible add-to-cart actions.</li>
+  //       <li>Images that load efficiently.</li>
+  //       <li>Product details that are easy to scan.</li>
+  //       <li>Simple access to shipping and returns information.</li>
+  //     </ul>
+  
+  //     <h2 id="technical">7. Improve Product Page Technical SEO</h2>
+  
+  //     <p>Technical SEO supports product visibility by helping search engines discover, crawl, and understand important product pages. It also helps avoid creating unnecessary duplicate or low-value pages.</p>
+  
+  //     <p>Review these product-page SEO foundations:</p>
+  
+  //     <ul>
+  //       <li>Unique page title and meta description.</li>
+  //       <li>Clear page headings.</li>
+  //       <li>Descriptive image alt text where needed.</li>
+  //       <li>Structured product data where correctly implemented.</li>
+  //       <li>Fast-loading primary images.</li>
+  //       <li>Internal links from collections and supporting content.</li>
+  //     </ul>
+  
+  //     <p>For broader technical and collection-page improvements, explore <a href="/ecommerce-seo">RankVelt eCommerce SEO services</a>.</p>
+  
+  //     <h2 id="internal-links">8. Use Internal Links and Related Products</h2>
+  
+  //     <p>Internal linking helps customers discover relevant products and helps search engines understand how pages relate to one another.</p>
+  
+  //     <p>Useful internal links may include:</p>
+  
+  //     <ul>
+  //       <li>Links back to the main collection.</li>
+  //       <li>Links to relevant guides or buying advice.</li>
+  //       <li>Links to related products or complementary products.</li>
+  //       <li>Links to size guides, material guides, or care instructions.</li>
+  //       <li>Links to shipping and returns pages when relevant.</li>
+  //     </ul>
+  
+  //     <p>Related products should genuinely help the customer continue their journey. They should not create clutter or distract from the main purchase decision.</p>
+  
+  //     <h2 id="checklist">Product Page SEO Checklist</h2>
+  
+  //     <ul>
+  //       <li>Is the product title clear and descriptive?</li>
+  //       <li>Does the page explain benefits as well as features?</li>
+  //       <li>Are images helpful, accurate, and mobile-friendly?</li>
+  //       <li>Can customers find shipping and returns information easily?</li>
+  //       <li>Is the call to action visible and understandable?</li>
+  //       <li>Does the page link to a relevant collection?</li>
+  //       <li>Are important product details easy to scan?</li>
+  //       <li>Does the page support the search intent behind the product?</li>
+  //     </ul>
+  
+  //     <h2 id="faqs">Frequently Asked Questions</h2>
+  
+  //     <details>
+  //       <summary>How long should a Shopify product description be?</summary>
+  //       <p>The right length depends on the product. Keep the first section easy to scan, then provide useful details for customers who need more information. The goal is clarity, not word count.</p>
+  //     </details>
+  
+  //     <details>
+  //       <summary>Do product pages help Shopify SEO?</summary>
+  //       <p>Yes. Product pages can appear in search results when they are properly structured, useful, discoverable, and aligned with real customer search terms. Collection pages and supporting content also play an important role.</p>
+  //     </details>
+  
+  //     <details>
+  //       <summary>Should every Shopify product have a unique description?</summary>
+  //       <p>Important product pages should have useful, original content wherever possible. Avoid copying manufacturer descriptions or repeating the same copy across multiple products.</p>
+  //     </details>
+  
+  //     <div class="cta-premium-block">
+  //       <h2>Want Better Product Discovery and Conversion Paths?</h2>
+  //       <p>RankVelt helps Shopify stores improve product pages, collection pages, technical SEO, internal linking, and search-focused customer journeys.</p>
+  //       <a href="/ecommerce-seo" class="shimmer-btn">Explore eCommerce SEO</a>
+  //     </div>
+  //   `,
+  // },
+  {
+    id: "shopify-seo-audit",
+
+    title: "Shopify SEO Audit: The Professional Checklist for 2026",
+
     seoTitle:
-      "Why Shopify Stores Fail: 10 SEO, UX & Conversion Fixes",
-  
+      "Shopify SEO Audit: Professional Checklist & What to Fix First",
+
     metaDescription:
-      "Learn why Shopify stores fail after launch and use 10 practical SEO, UX, trust, mobile, technical and conversion fixes to improve traffic and sales.",
-  
-    ogTitle:
-      "Why Shopify Stores Fail After Launch: 10 Practical Fixes",
-  
+      "Run a proper Shopify SEO audit: technical checks, on-page fixes, and off-page signals. Includes the full checklist plus when to hire a professional.",
+
+    ogTitle: "Shopify SEO Audit: The Professional Checklist",
+
     socialDescription:
-      "Discover the SEO, UX, technical and conversion problems that prevent Shopify stores from growing after launch.",
-  
-    date: "Aug 11, 2026",
-    datePublished: "2026-08-11",
-    dateModified: "2026-08-11",
-  
+      "The full technical, on-page, and off-page checklist for auditing a Shopify store, plus what to fix first.",
+
+    date: "Oct 4, 2026",
+    datePublished: "2026-10-04",
+    dateModified: "2026-10-04",
+
     author: "RankVelt Editorial Team",
     authorType: "Organization",
-  
-    category: "ECOMMERCE SEO",
-    readTime: "9 min read",
-  
-    image: "/shopify-store-failure-reasons.webp",
-  
+
+    category: "SHOPIFY SEO",
+    readTime: "12 min read",
+
+    image: "/blog/shopify-seo-audit.webp",
+
     imageAlt:
-      "Shopify store failure reasons covering SEO, mobile UX, product pages, trust and conversion problems",
-  
+      "Illustration of a professional SEO audit checklist for a Shopify store",
+
     excerpt:
-      "Many Shopify stores struggle after launch because search visibility, product information, mobile usability, trust and conversion paths do not work together.",
-  
+      "A Shopify SEO audit finds what is actually holding your store back: technical issues, on-page gaps, and weak authority signals. This is the professional checklist, in priority order.",
+
     relatedPostIds: [
-      "high-converting-product-pages",
-      "shopify-redesign-signs",
+      "hire-shopify-seo-expert",
+      "shopify-seo-expert",
+      "ecommerce-seo-ai-search",
     ],
-  
-    showStandardCta: false,
-  
+
+    primaryService: {
+      title: "eCommerce SEO",
+      description:
+        "Technical SEO, product and collection optimization, and content strategy built for Shopify and other ecommerce platforms.",
+      path: "/ecommerce-seo",
+    },
+
+    showStandardCta: true,
+
+    keyTakeaways: [
+      "Most Shopify SEO problems come from a short list: duplicate collection content, thin product pages, app bloat, and weak internal linking.",
+      "Audit in priority order: indexation first, then technical health, then on-page, then authority. Fixing in the wrong order wastes effort.",
+      "Shopify locks some settings (URL structure, robots.txt), so a good audit focuses on what you can actually change.",
+      "A professional audit pays for itself when it finds the one or two issues blocking everything else.",
+      "Re-audit after any redesign or migration. That is when the expensive mistakes happen.",
+    ],
+
     faqItems: [
       {
-        question:
-          "Why is my Shopify store getting traffic but not sales?",
+        question: "What is a Shopify SEO audit?",
         answer:
-          "Traffic may be poorly targeted, product pages may not answer customer questions, or the website journey may create friction. Review search intent, trust, mobile usability, product information, and checkout pathways together.",
+          "A systematic review of everything affecting your store's search visibility: whether Google can crawl and index your pages, technical health like speed and structured data, on-page quality of products and collections, and off-page authority signals. The output is a prioritized fix list, not just a score.",
       },
       {
-        question:
-          "Can SEO help a Shopify store get more sales?",
+        question: "How often should I audit my Shopify store's SEO?",
         answer:
-          "SEO can help relevant customers discover collections, products, and useful content through search. Results also depend on product-market fit, pricing, trust, user experience, and the strength of the conversion journey.",
+          "A full audit once or twice a year, plus a mini audit after any redesign, migration, or major app installation. Stores that publish content weekly should also do a quarterly content quality pass on products and collections.",
       },
       {
-        question:
-          "Should I redesign my whole Shopify store?",
+        question: "What are the most common Shopify SEO issues?",
         answer:
-          "Not always. Start with an audit. Many stores improve through collection-page SEO, product-page clarity, technical fixes, internal linking, mobile UX, and better conversion paths before a full redesign is necessary.",
+          "Duplicate content from collections and product tags, thin or manufacturer copied product descriptions, slow load times from app bloat, missing or weak internal linking between collections, and product pages competing with collection pages for the same keywords.",
+      },
+      {
+        question: "Can I do a Shopify SEO audit myself?",
+        answer:
+          "You can cover the basics with this checklist: check indexation in Search Console, run PageSpeed Insights, review your top product titles, and look for duplicate content. A professional audit goes deeper into log level crawl behavior, structured data, and competitive gaps most owners miss.",
+      },
+      {
+        question: "How long does a professional Shopify SEO audit take?",
+        answer:
+          "A thorough audit of a typical store takes one to two weeks including the fix priority report. Larger catalogs take longer. Be wary of instant automated audits: they flag generic issues but miss the store specific problems that actually block rankings.",
+      },
+      {
+        question: "Will an SEO audit fix my rankings by itself?",
+        answer:
+          "No. An audit finds problems and prioritizes them. Rankings move when the fixes get implemented. When hiring, ask who implements: some auditors hand you a document, others fix everything as part of the engagement.",
+      },
+      {
+        question: "How much does a Shopify SEO audit cost?",
+        answer:
+          "Market rates vary by depth. Freelance marketplaces publicly list simple audits around $300, while deeper audit projects on Upwork commonly range from $500 to $2,000 depending on catalog size and how much analysis is included. Automated tool audits cost less but miss store specific problems. When comparing quotes, check whether implementation is included or the audit is a document only.",
       },
     ],
-  
+
     toc: [
-      {
-        id: "intro",
-        title: "Why Shopify Stores Struggle After Launch",
-        level: 2,
-      },
-      {
-        id: "traffic-problem",
-        title: "1. Traffic Without Search Intent",
-        level: 2,
-      },
-      {
-        id: "collection-pages",
-        title: "2. Weak Collection and Category Pages",
-        level: 2,
-      },
-      {
-        id: "product-pages",
-        title: "3. Product Pages That Do Not Answer Questions",
-        level: 2,
-      },
-      {
-        id: "technical-seo",
-        title: "4. Technical SEO Problems",
-        level: 2,
-      },
-      {
-        id: "trust",
-        title: "5. Missing Trust Signals",
-        level: 2,
-      },
-      {
-        id: "mobile-ux",
-        title: "6. Poor Mobile Shopping Experience",
-        level: 2,
-      },
-      {
-        id: "conversion-path",
-        title: "7. Broken Conversion Paths",
-        level: 2,
-      },
-      {
-        id: "measurement",
-        title: "8. No Clear Measurement Plan",
-        level: 2,
-      },
-      {
-        id: "action-plan",
-        title: "9. A Practical 30-Day Improvement Plan",
-        level: 2,
-      },
-      {
-        id: "faqs",
-        title: "Frequently Asked Questions",
-        level: 2,
-      },
+      { id: "what-audit-covers", title: "What a Real Audit Covers", level: 2 },
+      { id: "indexation", title: "Step 1: Indexation Check", level: 2 },
+      { id: "technical", title: "Step 2: Technical Health", level: 2 },
+      { id: "on-page", title: "Step 3: On-Page Review", level: 2 },
+      { id: "off-page", title: "Step 4: Off-Page Signals", level: 2 },
+      { id: "priority", title: "What to Fix First", level: 2 },
+      { id: "diy-vs-pro", title: "DIY Audit vs Professional Audit", level: 2 },
+      { id: "audit-rankvelt", title: "Get a Professional Audit from RankVelt", level: 2 },
     ],
-  
+
     content: `
-      <h2 id="intro">Why Shopify Stores Struggle After Launch</h2>
-  
-      <p>Launching a Shopify store is an important milestone, but launch day is only the beginning. A store can look polished, have good products, and still struggle to attract qualified traffic or convert visitors into customers.</p>
-  
-      <p>The problem is rarely one single issue. It is usually a combination of weak search visibility, unclear collection pages, thin product information, poor mobile usability, missing trust signals, and a customer journey that creates unnecessary friction.</p>
-  
-      <p>For eCommerce brands, the goal is not simply to get more visitors. The goal is to attract relevant visitors, help them understand the product quickly, and make the next step feel simple and trustworthy.</p>
-  
-      <h2 id="traffic-problem">1. Traffic Without Search Intent</h2>
-  
-      <p>Many Shopify stores focus on getting traffic before deciding what type of traffic they need. Visitors who arrive through broad social posts, unrelated keywords, or weak advertising audiences may browse without any real purchase intent.</p>
-  
-      <p>A better approach is to map pages around how customers search. A person looking for a specific product type, comparison, gift idea, material, style, or problem-solving product needs a page that clearly matches that search.</p>
-  
-      <p>Start by identifying the commercial pages that matter most:</p>
-  
+      <p class="standalone-line">An audit is a diagnosis, not a grade.</p>
+
+      <p>A Shopify SEO audit finds what is actually holding your store back. Not a vanity score. Not a generic report. A prioritized list of real problems, in the order that fixing them moves revenue.</p>
+
+      <p>Most stores suffer from a short list of repeat offenders. This checklist walks through all of them: indexation, technical health, on-page quality, and off-page signals. Work it in order. Fixing in the wrong order wastes effort.</p>
+
+      <h2 id="what-audit-covers">What a Real Audit Covers</h2>
+
+      <p>Four layers. Skip one and the audit is incomplete.</p>
+
       <ul>
-        <li>Core collection and category pages.</li>
-        <li>High-margin or high-demand product pages.</li>
-        <li>Seasonal product opportunities.</li>
-        <li>Comparison pages where customers are researching options.</li>
-        <li>Guides that answer real product questions before purchase.</li>
+        <li><strong>Indexation:</strong> Can Google find, crawl, and index your important pages?</li>
+        <li><strong>Technical:</strong> Speed, mobile experience, structured data, and Shopify specific constraints.</li>
+        <li><strong>On-page:</strong> Titles, descriptions, content quality, and internal linking on products and collections.</li>
+        <li><strong>Off-page:</strong> The authority signals pointing at your store from the rest of the web.</li>
       </ul>
-  
-      <p>Strong <a href="/ecommerce-seo">eCommerce SEO</a> connects those search opportunities to the correct Shopify pages instead of publishing random content that does not support sales.</p>
-  
-      <h2 id="collection-pages">2. Weak Collection and Category Pages</h2>
-  
-      <p>Collection pages are often some of the most valuable SEO pages in a Shopify store. They help search engines understand product categories and help customers browse products with more confidence.</p>
-  
-      <p>A weak collection page usually has only a heading, product grid, and filter. That may be enough for basic browsing, but it often does not explain what makes the collection useful, who it is for, or how products differ.</p>
-  
-      <p>A stronger collection page can include:</p>
-  
+
+      <h2 id="indexation">Step 1: Indexation Check</h2>
+
+      <p>Start here. Nothing else matters if Google cannot see your pages.</p>
+
       <ul>
-        <li>A clear, keyword-relevant collection title.</li>
-        <li>A short introduction that explains the category.</li>
-        <li>Helpful internal links to related categories or buying guides.</li>
-        <li>Filters that make product comparison easier.</li>
-        <li>Useful product sorting and consistent category structure.</li>
-        <li>A small FAQ section where it genuinely helps customers.</li>
+        <li>Open Google Search Console. Check the Pages report for indexed vs excluded pages. Investigate anything important sitting in excluded.</li>
+        <li>Search <strong>site:yourstore.com</strong> on Google. Compare the count to your real catalog size. Big gaps mean crawl problems.</li>
+        <li>Check for duplicate collection URLs. Shopify generates multiple paths to the same collection (/collections/x, /collections/x?page=2, tag filtered variants). Decide which versions should be indexed and which should be canonicalized or noindexed.</li>
+        <li>Review your sitemap. Shopify generates it automatically, but confirm it is submitted and error free in Search Console.</li>
       </ul>
-  
-      <p>The aim is not to add text for search engines alone. The aim is to make the page more useful for shoppers who are comparing options.</p>
-  
-      <h2 id="product-pages">3. Product Pages That Do Not Answer Questions</h2>
-  
-      <p>Product pages should do more than display a product image, price, and button. A customer may need to understand sizing, materials, shipping expectations, care instructions, product use, compatibility, benefits, and return details before buying.</p>
-  
-      <p>When important answers are missing, visitors either leave, search elsewhere, or delay the purchase. That is why product page content should reduce uncertainty rather than simply repeat the product title.</p>
-  
-      <h3 id="product-content">Useful Product Page Content</h3>
-  
+
+      <h2 id="technical">Step 2: Technical Health</h2>
+
+      <p>Shopify handles hosting and security for you. Your job is everything it lets you touch.</p>
+
       <ul>
-        <li>Clear, descriptive product titles.</li>
-        <li>Product benefits written in plain language.</li>
-        <li>Material, size, fit, use, or compatibility information.</li>
-        <li>High-quality images that show the product in context.</li>
-        <li>Delivery, returns, warranty, or support information.</li>
-        <li>Related products, bundles, or complementary items.</li>
+        <li><strong>Speed:</strong> Run PageSpeed Insights on your homepage, a collection page, and a product page. Note the mobile scores separately. App bloat is the usual culprit: audit installed apps and remove anything not earning its load time.</li>
+        <li><strong>Mobile experience:</strong> Test checkout on a real phone. Thumb reach, sticky buttons, readable text. Most Shopify traffic is mobile, so desktop scores are secondary.</li>
+        <li><strong>Structured data:</strong> Check that product schema (price, availability, reviews) renders correctly. Use Google's Rich Results Test on several product URLs.</li>
+        <li><strong>URL hygiene:</strong> You cannot change Shopify's /products/ and /collections/ prefixes. Accept that. Focus on clean handles: short, keyword relevant, no auto generated strings.</li>
+        <li><strong>Redirects:</strong> Every deleted product should 301 to the closest live equivalent, not the homepage. Check for redirect chains while you are at it.</li>
       </ul>
-  
-      <p>Good product copy helps both users and search engines understand what the product is, who it is for, and why it deserves attention.</p>
-  
-      <h2 id="technical-seo">4. Technical SEO Problems</h2>
-  
-      <p>Technical SEO issues can make it harder for search engines to crawl, understand, and prioritise important Shopify pages. These problems are not always visible to customers, but they can weaken search visibility over time.</p>
-  
-      <p>Common Shopify technical SEO issues include:</p>
-  
+
+      <h2 id="on-page">Step 3: On-Page Review</h2>
+
+      <p>This is where most Shopify stores leak the most value. Audit your top 20 revenue driving pages first, then expand.</p>
+
       <ul>
-        <li>Duplicate collection or filter URLs.</li>
-        <li>Weak internal linking between collections, products, and guides.</li>
-        <li>Important pages with unclear titles or duplicate meta descriptions.</li>
-        <li>Large images that slow key page sections.</li>
-        <li>Broken links, redirect chains, or outdated pages.</li>
-        <li>Product pages that are difficult for search engines to discover.</li>
+        <li><strong>Product titles:</strong> Unique per product, front loaded with the main keyword, no manufacturer codes or internal SKUs.</li>
+        <li><strong>Product descriptions:</strong> Original copy, not manufacturer text duplicated across the web. Benefits before features. Short paragraphs.</li>
+        <li><strong>Collection pages:</strong> These are your category ranking pages. They need unique introductory content, not just a product grid. Thin collections rarely rank.</li>
+        <li><strong>Internal linking:</strong> Products should link to related products and back to their parent collection. Collections should link down to best sellers. Orphaned products get orphaned rankings.</li>
+        <li><strong>Images:</strong> Descriptive file names and alt text. Compressed formats. Your images can rank in image search and feed AI answers, but only if they are labeled.</li>
+        <li><strong>Keyword cannibalization:</strong> Check whether product and collection pages compete for the same terms. Decide which page should win each keyword and support it with internal links.</li>
       </ul>
-  
-      <p>A technical audit should not become a long list of low-priority warnings. The best audit identifies which issues are actually affecting important commercial pages and customer journeys.</p>
-  
-      <h2 id="trust">5. Missing Trust Signals</h2>
-  
-      <p>Customers need enough information to feel comfortable buying from a store they may not know. Trust is built through clarity, consistency, and transparent information.</p>
-  
-      <p>Useful trust signals can include:</p>
-  
+
+      <h2 id="off-page">Step 4: Off-Page Signals</h2>
+
+      <p>Google trusts stores the wider web vouches for. Audit your position honestly.</p>
+
       <ul>
-        <li>A clear About page that explains the brand or business.</li>
-        <li>Visible contact details and realistic support options.</li>
-        <li>Clear delivery, returns, privacy, and terms information.</li>
-        <li>Real product reviews or verified customer feedback.</li>
-        <li>Secure payment methods and transparent checkout information.</li>
-        <li>Consistent design across product, collection, and checkout pathways.</li>
+        <li>Review your backlink profile for relevance and quality. A few links from industry sites beat dozens from directories.</li>
+        <li>Check brand mentions: are review sites, forums, and publications describing your store accurately and consistently?</li>
+        <li>Look at competitors ranking above you. Note the gap in referring domains and content depth. That gap is your roadmap.</li>
       </ul>
-  
-      <p>Trust should not rely on fake counters, invented stock messages, or unverified claims. Clear information is usually more valuable than aggressive urgency tactics.</p>
-  
-      <h2 id="mobile-ux">6. Poor Mobile Shopping Experience</h2>
-  
-      <p>A large percentage of eCommerce browsing happens on mobile devices. A page that feels comfortable on a wide desktop screen may feel slow, crowded, or difficult to use on a phone.</p>
-  
-      <p>Review your store on a real mobile device and ask simple questions:</p>
-  
-      <ul>
-        <li>Can a visitor understand the product within a few seconds?</li>
-        <li>Are the main buttons easy to find and tap?</li>
-        <li>Do filters and menus work without frustration?</li>
-        <li>Do images load quickly enough on mobile data?</li>
-        <li>Can shoppers reach delivery, returns, sizing, and support information easily?</li>
-      </ul>
-  
-      <p>Mobile UX improvements often support both conversion and SEO because they make important pages clearer, easier to use, and less likely to create frustration.</p>
-  
-      <h2 id="conversion-path">7. Broken Conversion Paths</h2>
-  
-      <p>A visitor may find the right product and still not buy because the next step is unclear. Conversion paths become weak when navigation is confusing, product options are poorly explained, shipping information is hidden, or checkout creates unnecessary steps.</p>
-  
-      <p>Review the route from homepage to collection, product page, cart, and checkout. Look for moments where a customer has to guess what to do next.</p>
-  
-      <p>Useful conversion improvements can include:</p>
-  
-      <ul>
-        <li>Clear calls to action.</li>
-        <li>Better product filtering and category navigation.</li>
-        <li>Simple cart and checkout pathways.</li>
-        <li>Visible shipping and returns information before checkout.</li>
-        <li>Related products that are genuinely useful.</li>
-        <li>Landing pages aligned with specific campaigns or search intent.</li>
-      </ul>
-  
-      <h2 id="measurement">8. No Clear Measurement Plan</h2>
-  
-      <p>Without measurement, it is difficult to know which pages are helping the business and which pages need work. You do not need to track everything at once, but you should understand how visitors move through important pages.</p>
-  
-      <p>Track meaningful signals such as:</p>
-  
-      <ul>
-        <li>Organic traffic to collections and product pages.</li>
-        <li>Search impressions and clicks for priority keywords.</li>
-        <li>Product-page engagement.</li>
-        <li>Add-to-cart activity.</li>
-        <li>Checkout starts and completed orders.</li>
-        <li>Form submissions or customer support questions.</li>
-      </ul>
-  
-      <p>Use the information to improve high-value pages first. A small number of meaningful improvements often matters more than dozens of cosmetic changes.</p>
-  
-      <h2 id="action-plan">9. A Practical 30-Day Improvement Plan</h2>
-  
-      <p>A good improvement plan does not require rebuilding the entire store at once. Start with the pages and issues closest to customer discovery and purchase decisions.</p>
-  
-      <h3 id="week-one">Week One: Review the Foundation</h3>
-  
-      <ul>
-        <li>Check core collection and product pages.</li>
-        <li>Review mobile experience and page speed.</li>
-        <li>Identify broken links, duplicate pages, and missing metadata.</li>
-      </ul>
-  
-      <h3 id="week-two">Week Two: Improve Priority Pages</h3>
-  
-      <ul>
-        <li>Rewrite key collection page introductions.</li>
-        <li>Improve product titles, descriptions, and product information.</li>
-        <li>Add internal links between related collections and guides.</li>
-      </ul>
-  
-      <h3 id="week-three">Week Three: Improve Trust and UX</h3>
-  
-      <ul>
-        <li>Clarify returns, delivery, support, and contact information.</li>
-        <li>Improve mobile navigation and call-to-action placement.</li>
-        <li>Remove unnecessary visual clutter or confusing popups.</li>
-      </ul>
-  
-      <h3 id="week-four">Week Four: Measure and Prioritise</h3>
-  
-      <ul>
-        <li>Review search visibility and visitor behaviour.</li>
-        <li>Identify pages with opportunity but weak engagement.</li>
-        <li>Create the next SEO and conversion improvement roadmap.</li>
-      </ul>
-  
-      <h2 id="faqs">Frequently Asked Questions</h2>
-  
-      <details>
-        <summary>Why is my Shopify store getting traffic but not sales?</summary>
-        <p>Traffic may be poorly targeted, product pages may not answer customer questions, or the website journey may create friction. Review search intent, trust, mobile usability, product information, and checkout pathways together.</p>
-      </details>
-  
-      <details>
-        <summary>Can SEO help a Shopify store get more sales?</summary>
-        <p>SEO can help relevant customers discover collections, products, and useful content through search. Results also depend on product-market fit, pricing, trust, user experience, and the strength of the conversion journey.</p>
-      </details>
-  
-      <details>
-        <summary>Should I redesign my whole Shopify store?</summary>
-        <p>Not always. Start with an audit. Many stores improve through collection-page SEO, product-page clarity, technical fixes, internal linking, mobile UX, and better conversion paths before a full redesign is necessary.</p>
-      </details>
-  
-      <div class="cta-premium-block">
-        <h2>Need Help Improving Your Shopify Store?</h2>
-        <p>RankVelt helps eCommerce brands improve Shopify SEO, product discovery, collection structure, technical foundations, and conversion-focused website journeys.</p>
-        <a href="/ecommerce-seo" class="shimmer-btn">Explore eCommerce SEO</a>
-      </div>
+
+      <h2 id="priority">What to Fix First</h2>
+
+      <p>Priority order matters more than completeness. Fix in this sequence:</p>
+
+      <ol>
+        <li><strong>Indexation blockers.</strong> Important pages not indexed is an emergency. Everything else waits.</li>
+        <li><strong>Critical technical faults.</strong> Broken checkout elements, mobile usability failures, missing product schema.</li>
+        <li><strong>Duplicate content.</strong> Canonicalize collection variants before writing new content, or new content competes with itself.</li>
+        <li><strong>Top revenue pages.</strong> Optimize the 20 pages that drive most revenue before touching the long tail.</li>
+        <li><strong>Speed.</strong> App audit and image compression. Measurable, compounds across every page.</li>
+        <li><strong>Content expansion.</strong> Collection intros, buying guides, FAQ content. Last because it needs the foundation above to convert.</li>
+      </ol>
+
+      <h2 id="diy-vs-pro">DIY Audit vs Professional Audit</h2>
+
+      <p>This checklist covers the honest DIY version. It will catch the obvious problems, which are often the expensive ones.</p>
+
+      <p>A professional audit goes further: crawl log analysis showing how Googlebot actually spends its budget on your site, structured data validation across templates, competitive content gap mapping, and a fix sequence weighted by revenue impact. The DIY audit tells you what is broken. The professional version tells you what is broken, what it costs you, and what to fix Tuesday morning.</p>
+
+      <p>One more distinction: ask who implements. Some auditors deliver a PDF and disappear. Others fix everything as part of the engagement. Know which one you are buying.</p>
+
+      <h2 id="audit-rankvelt">Get a Professional Audit from RankVelt</h2>
+
+      <p>We audit Shopify stores against this exact checklist, then implement the fixes in priority order. No generic reports. No vanity metrics. A fix list tied to your revenue, worked through by people who know Shopify's platform constraints.</p>
+
+      <p><a href="/strategy-call">Book a free strategy call</a> and we will start with a mini audit of your store: the top issues, what they cost you, and what fixing them looks like. You keep the findings either way.</p>
     `,
   },
 
+  // {
+  //   id: "shopify-redesign-signs",
+  
+  //   title:
+  //     "7 Signs Your Shopify Store Needs a Redesign for SEO and Conversions",
+  
+  //   seoTitle:
+  //     "Shopify Store Redesign: 7 Signs You Need One Now",
+  
+  //   metaDescription:
+  //     "Discover seven signs your Shopify store needs a redesign to improve SEO, mobile usability, product discovery, trust, performance and conversions.",
+  
+  //   ogTitle:
+  //     "7 Signs Your Shopify Store Needs a Redesign",
+  
+  //   socialDescription:
+  //     "Learn when a Shopify redesign can improve product discovery, mobile usability, SEO foundations, customer trust and conversion paths.",
+  
+  //   date: "Aug 11, 2026",
+  //   datePublished: "2026-08-11",
+  //   dateModified: "2026-08-11",
+  
+  //   author: "RankVelt Editorial Team",
+  //   authorType: "Organization",
+  
+  //   category: "ECOMMERCE SEO",
+  //   readTime: "8 min read",
+  
+  //   image: "/shopify-store-redesign-signs.webp",
+  
+  //   imageAlt:
+  //     "Shopify store redesign signs covering navigation, mobile usability, SEO, page speed, product structure and customer trust",
+  
+  //   excerpt:
+  //     "A Shopify redesign becomes useful when poor navigation, weak mobile usability, unclear product pages, technical limitations or inconsistent branding restrict growth.",
+  
+  //   relatedPostIds: [
+  //     "website-redesign-seo-checklist",
+  //     "high-converting-product-pages",
+  //     "why-shopify-stores-fail",
+  //   ],
+  
+  //   showStandardCta: false,
+  
+  //   faqItems: [
+  //     {
+  //       question:
+  //         "Will a Shopify redesign hurt SEO?",
+  //       answer:
+  //         "It can hurt SEO when important URLs, content, redirects, internal links, or technical foundations are ignored. An SEO-aware redesign plans those elements before launch and checks them after launch.",
+  //     },
+  //     {
+  //       question:
+  //         "Should I redesign my Shopify store or optimise the current one?",
+  //       answer:
+  //         "Start with an audit. Optimisation may be enough when the current theme and structure can support your goals. A redesign becomes more useful when the website has structural, technical, navigation, usability, or scalability limitations.",
+  //     },
+  //     {
+  //       question:
+  //         "Can RankVelt help with Shopify redesign and SEO together?",
+  //       answer:
+  //         "Yes. RankVelt can scope Shopify design support around search-ready collection structure, product discovery, mobile UX, technical SEO, internal linking, and conversion-focused page journeys.",
+  //     },
+  //   ],
+  
+  //   toc: [
+  //     {
+  //       id: "intro",
+  //       title: "When a Shopify Redesign Is Worth Considering",
+  //       level: 2,
+  //     },
+  //     {
+  //       id: "sign-one",
+  //       title: "1. Your Navigation Makes Products Hard to Find",
+  //       level: 2,
+  //     },
+  //     {
+  //       id: "sign-two",
+  //       title: "2. Your Store Is Difficult to Use on Mobile",
+  //       level: 2,
+  //     },
+  //     {
+  //       id: "sign-three",
+  //       title: "3. Important Pages Are Slow or Unclear",
+  //       level: 2,
+  //     },
+  //     {
+  //       id: "sign-four",
+  //       title: "4. Collection and Product Pages Lack Structure",
+  //       level: 2,
+  //     },
+  //     {
+  //       id: "sign-five",
+  //       title: "5. The Website Does Not Support SEO",
+  //       level: 2,
+  //     },
+  //     {
+  //       id: "sign-six",
+  //       title: "6. The Store Looks Inconsistent or Untrustworthy",
+  //       level: 2,
+  //     },
+  //     {
+  //       id: "sign-seven",
+  //       title: "7. Your Website Cannot Support the Next Stage of Growth",
+  //       level: 2,
+  //     },
+  //     {
+  //       id: "redesign-process",
+  //       title: "How to Plan a Shopify Redesign",
+  //       level: 2,
+  //     },
+  //     {
+  //       id: "faqs",
+  //       title: "Frequently Asked Questions",
+  //       level: 2,
+  //     },
+  //   ],
+  
+  //   content: `
+  //     <h2 id="intro">When a Shopify Redesign Is Worth Considering</h2>
+  
+  //     <p>A Shopify redesign should not happen simply because a store feels old. A good redesign should solve specific business problems such as poor navigation, weak mobile usability, unclear product discovery, technical limitations, inconsistent branding, or pages that do not support search visibility.</p>
+  
+  //     <p>Before rebuilding a store, identify what is actually holding it back. Some issues can be fixed through page optimisation, technical cleanup, collection restructuring, or better content. Other issues need new templates, new navigation, a different information architecture, or a more complete redesign.</p>
+  
+  //     <h2 id="sign-one">1. Your Navigation Makes Products Hard to Find</h2>
+  
+  //     <p>Navigation should help customers reach the right products quickly. When menus are overloaded, category names are unclear, filters are weak, or collections are poorly organised, visitors may leave before finding what they need.</p>
+  
+  //     <p>Common navigation problems include:</p>
+  
+  //     <ul>
+  //       <li>Too many top-level menu items.</li>
+  //       <li>Categories that overlap or use unclear names.</li>
+  //       <li>Important collections hidden several clicks deep.</li>
+  //       <li>Product filters that are difficult to use.</li>
+  //       <li>Search results that do not help customers continue browsing.</li>
+  //     </ul>
+  
+  //     <p>A redesign can improve navigation by building a clearer category hierarchy around how customers shop and search.</p>
+  
+  //     <h2 id="sign-two">2. Your Store Is Difficult to Use on Mobile</h2>
+  
+  //     <p>Mobile visitors should be able to browse collections, view product images, select variants, read key information, and add products to cart without friction.</p>
+  
+  //     <p>Signs that mobile UX needs attention include:</p>
+  
+  //     <ul>
+  //       <li>Buttons are too small or difficult to tap.</li>
+  //       <li>Menus take too long to open or feel crowded.</li>
+  //       <li>Product content requires excessive scrolling.</li>
+  //       <li>Images create layout shifts or load slowly.</li>
+  //       <li>Important details are hidden in hard-to-find areas.</li>
+  //     </ul>
+  
+  //     <p>A mobile-first redesign does not mean removing useful content. It means arranging content so customers can understand and act without unnecessary effort.</p>
+  
+  //     <h2 id="sign-three">3. Important Pages Are Slow or Unclear</h2>
+  
+  //     <p>A store can feel slow because of large images, too many scripts, unnecessary apps, heavy sliders, or complicated page sections. It can also feel slow because the visitor has to work too hard to understand the offer.</p>
+  
+  //     <p>Review your homepage, best-selling collection pages, and top product pages. These are often the pages that deserve the first performance and UX review.</p>
+  
+  //     <p>Improve page speed by prioritising:</p>
+  
+  //     <ul>
+  //       <li>Optimised image formats and dimensions.</li>
+  //       <li>Reduced unnecessary third-party scripts.</li>
+  //       <li>Lean page sections.</li>
+  //       <li>Better loading behaviour for images and video.</li>
+  //       <li>Clearer content hierarchy above the fold.</li>
+  //     </ul>
+  
+  //     <h2 id="sign-four">4. Collection and Product Pages Lack Structure</h2>
+  
+  //     <p>Collections and products should do more than display inventory. They need to help customers understand the category, compare options, and move toward a decision.</p>
+  
+  //     <p>Consider a redesign when:</p>
+  
+  //     <ul>
+  //       <li>Collection pages have no explanation or category context.</li>
+  //       <li>Product pages are inconsistent across the store.</li>
+  //       <li>Important product information is hidden or missing.</li>
+  //       <li>Related products do not support customer discovery.</li>
+  //       <li>Templates cannot support the content your customers need.</li>
+  //     </ul>
+  
+  //     <p>Better templates can support SEO, conversion, and customer confidence at the same time.</p>
+  
+  //     <h2 id="sign-five">5. The Website Does Not Support SEO</h2>
+  
+  //     <p>A redesign should consider SEO before changing URLs, templates, collections, navigation, or content. Poorly planned redesigns can damage organic traffic when important pages disappear, redirects are missed, internal links break, or search-focused content is removed.</p>
+  
+  //     <p>An SEO-ready Shopify redesign should include:</p>
+  
+  //     <ul>
+  //       <li>Keyword mapping for key collections and products.</li>
+  //       <li>Redirect planning for changed URLs.</li>
+  //       <li>Clear heading and content structure.</li>
+  //       <li>Internal linking between collections, products, and guides.</li>
+  //       <li>Technical SEO checks before and after launch.</li>
+  //       <li>Indexation and crawlability review.</li>
+  //     </ul>
+  
+  //     <p>For stores that need search-focused page restructuring, see <a href="/ecommerce-seo">RankVelt eCommerce SEO</a>.</p>
+  
+  //     <h2 id="sign-six">6. The Store Looks Inconsistent or Untrustworthy</h2>
+  
+  //     <p>Brand consistency affects customer confidence. A store may feel untrustworthy when fonts, colours, product images, button styles, page layouts, and policies feel disconnected.</p>
+  
+  //     <p>A redesign can strengthen trust by creating a consistent visual system across the homepage, collections, products, cart, and support pages.</p>
+  
+  //     <p>Focus on useful consistency:</p>
+  
+  //     <ul>
+  //       <li>Clear typography and readable spacing.</li>
+  //       <li>Consistent buttons and calls to action.</li>
+  //       <li>Reliable product image style.</li>
+  //       <li>Visible returns, support, and delivery information.</li>
+  //       <li>Clear brand story and contact details.</li>
+  //     </ul>
+  
+  //     <h2 id="sign-seven">7. Your Website Cannot Support the Next Stage of Growth</h2>
+  
+  //     <p>Your business may have outgrown the website when you need new collections, new markets, content hubs, better filtering, more complex product information, integrations, or landing pages for campaigns and search growth.</p>
+  
+  //     <p>A redesign should create a flexible system rather than a temporary visual update. The goal is to make future content, collections, campaigns, and optimisation easier to manage.</p>
+  
+  //     <h2 id="redesign-process">How to Plan a Shopify Redesign</h2>
+  
+  //     <h3 id="audit-first">Start With an Audit</h3>
+  
+  //     <p>Review your existing pages, traffic sources, collection structure, product templates, mobile usability, technical SEO, customer support questions, and conversion pathways before deciding what to rebuild.</p>
+  
+  //     <h3 id="preserve-seo">Protect Existing SEO Value</h3>
+  
+  //     <p>Keep a record of important URLs, rankings, internal links, page titles, and traffic pages. Plan redirects before launch and review the store after launch to ensure important pages remain accessible.</p>
+  
+  //     <h3 id="build-clear-templates">Build Clear Templates</h3>
+  
+  //     <p>Create flexible templates for product pages, collection pages, landing pages, guides, and promotional content. The templates should support both user needs and SEO requirements.</p>
+  
+  //     <h3 id="test-launch">Test Before and After Launch</h3>
+  
+  //     <p>Test navigation, mobile layouts, product options, cart functions, checkout links, redirects, search visibility, images, and page speed. A redesign is stronger when it is treated as an ongoing improvement process rather than a one-time visual change.</p>
+  
+  //     <h2 id="faqs">Frequently Asked Questions</h2>
+  
+  //     <details>
+  //       <summary>Will a Shopify redesign hurt SEO?</summary>
+  //       <p>It can hurt SEO when important URLs, content, redirects, internal links, or technical foundations are ignored. An SEO-aware redesign plans those elements before launch and checks them after launch.</p>
+  //     </details>
+  
+  //     <details>
+  //       <summary>Should I redesign my Shopify store or optimise the current one?</summary>
+  //       <p>Start with an audit. Optimisation may be enough when the current theme and structure can support your goals. A redesign becomes more useful when the website has structural, technical, navigation, usability, or scalability limitations.</p>
+  //     </details>
+  
+  //     <details>
+  //       <summary>Can RankVelt help with Shopify redesign and SEO together?</summary>
+  //       <p>Yes. RankVelt can scope Shopify design support around search-ready collection structure, product discovery, mobile UX, technical SEO, internal linking, and conversion-focused page journeys.</p>
+  //     </details>
+  
+  //     <div class="cta-premium-block">
+  //       <h2>Planning a Shopify Redesign?</h2>
+  //       <p>RankVelt helps eCommerce brands improve Shopify store structure, product discovery, SEO foundations, mobile usability, and conversion-ready customer journeys.</p>
+  //       <a href="/strategy-call?package=Shopify%20Store%20Design%20%26%20SEO%20Consultation" class="shimmer-btn">Discuss Your Shopify Project</a>
+  //     </div>
+  //   `,
+  // },
+
   {
-    id: "high-converting-product-pages",
-  
-    title:
-      "How to Build High-Converting Shopify Product Pages for SEO and Sales",
-  
+    id: "shopify-seo-expert",
+
+    title: "Shopify SEO Expert: What They Do and When Your Store Needs One",
+
     seoTitle:
-      "High-Converting Shopify Product Pages for SEO and Sales",
-  
+      "Shopify SEO Expert: Services, Benefits & When to Hire (2026)",
+
     metaDescription:
-      "Build high-converting Shopify product pages with clearer titles, useful copy, better images, mobile UX, trust signals, internal links and technical SEO.",
-  
-    ogTitle:
-      "How to Build High-Converting Shopify Product Pages",
-  
+      "What does a Shopify SEO expert do? Platform-specific services, how expert SEO differs from generic SEO, and the signs your store needs one.",
+
+    ogTitle: "Shopify SEO Expert: What They Do & When to Hire",
+
     socialDescription:
-      "Improve Shopify product pages with clearer content, stronger trust signals, better mobile UX, internal links and technical SEO.",
-  
-    date: "Aug 11, 2026",
-    datePublished: "2026-08-11",
-    dateModified: "2026-08-11",
-  
+      "Why Shopify SEO needs platform expertise, what expert services cover, and how to tell when your store needs one.",
+
+    date: "Oct 4, 2026",
+    datePublished: "2026-10-04",
+    dateModified: "2026-10-04",
+
     author: "RankVelt Editorial Team",
     authorType: "Organization",
-  
-    category: "ECOMMERCE SEO",
-    readTime: "8 min read",
-  
-    image: "/shopify-conversion-rates.webp",
-  
+
+    category: "SHOPIFY SEO",
+    readTime: "10 min read",
+
+    image: "/blog/shopify-seo-expert.webp",
+
     imageAlt:
-      "Shopify product page showing SEO, product content, mobile usability, trust signals and conversion improvements",
-  
+      "Illustration showing a Shopify SEO expert optimizing an online store",
+
     excerpt:
-      "High-converting Shopify product pages combine clear product information, useful images, mobile usability, trust signals, technical SEO and simple conversion paths.",
-  
+      "A Shopify SEO expert handles the platform specific work generic SEO misses: URL constraints, duplicate collections, app bloat, and Liquid. Here is what the service covers and when it pays.",
+
     relatedPostIds: [
-      "why-shopify-stores-fail",
-      "shopify-redesign-signs",
+      "hire-shopify-seo-expert",
+      "shopify-seo-audit",
+      "ecommerce-seo-ai-search",
     ],
-  
-    showStandardCta: false,
-  
+
+    primaryService: {
+      title: "eCommerce SEO",
+      description:
+        "Technical SEO, product and collection optimization, and content strategy built for Shopify and other ecommerce platforms.",
+      path: "/ecommerce-seo",
+    },
+
+    showStandardCta: true,
+
+    keyTakeaways: [
+      "Shopify SEO differs from generic SEO: forced URL structures, duplicate collection content, locked robots.txt, and app related speed issues.",
+      "An expert covers technical health, product and collection optimization, content strategy, and authority building as one system.",
+      "Hire when organic traffic is flat despite solid basics, before a redesign or migration, or when ads are your only channel.",
+      "Expertise shows in specifics: platform constraints named without prompting, audit before proposals, revenue tied reporting.",
+      "The wrong hire costs more than the fee. Vet with the hiring checklist before signing anything.",
+    ],
+
     faqItems: [
       {
-        question:
-          "How long should a Shopify product description be?",
+        question: "What does a Shopify SEO expert do?",
         answer:
-          "The right length depends on the product. Keep the first section easy to scan, then provide useful details for customers who need more information. The goal is clarity, not word count.",
+          "They handle the full organic growth system for Shopify stores: technical health (crawlability, speed, structured data), on-page optimization (product titles, collections, internal linking), content strategy, and authority building. The Shopify specialization covers platform quirks like forced URL structures and duplicate collection content.",
       },
       {
-        question:
-          "Do product pages help Shopify SEO?",
+        question: "How is Shopify SEO different from regular SEO?",
         answer:
-          "Yes. Product pages can appear in search results when they are properly structured, useful, discoverable, and aligned with real customer search terms. Collection pages and supporting content also play an important role.",
+          "Shopify locks several things other platforms leave open: URL prefixes (/products/, /collections/) cannot change, robots.txt control is limited, and collections generate duplicate content by default. Apps add JavaScript that hurts speed scores. An expert works inside these constraints instead of applying generic advice that does not fit.",
       },
       {
-        question:
-          "Should every Shopify product have a unique description?",
+        question: "When should I hire a Shopify SEO expert?",
         answer:
-          "Important product pages should have useful, original content wherever possible. Avoid copying manufacturer descriptions or repeating the same copy across multiple products.",
+          "When your store converts but organic traffic is flat, when you have covered the basics and growth stalled, before a redesign or migration, or when paid ads are your only acquisition channel. Do not hire to fix a broken offer: SEO amplifies what exists.",
+      },
+      {
+        question: "What is the difference between a Shopify SEO expert and an agency?",
+        answer:
+          "An expert is a specialist role focused on Shopify organic growth. An agency is a team covering strategy plus execution across technical, content, and authority work. Solo experts suit defined tasks; agencies suit stores needing ongoing multi discipline growth.",
+      },
+      {
+        question: "Can a Shopify SEO expert guarantee rankings?",
+        answer:
+          "No, and anyone who does is a red flag. No one controls Google. A credible expert commits to process, deliverables, and reporting, and talks about timelines in months and ranges. Guarantees usually target keywords no one searches.",
+      },
+      {
+        question: "Do I need a Shopify SEO expert if I already run ads?",
+        answer:
+          "Ads and SEO solve different problems. Ads rent attention: stop paying and traffic stops. SEO builds an asset you own that compounds. Stores running only ads usually hire an expert to diversify acquisition and lower blended customer acquisition cost over time.",
+      },
+      {
+        question: "How much does a Shopify SEO expert cost?",
+        answer:
+          "Published market data gives a range. Upwork's pricing page shows a median of $21 per hour for SEO experts with a typical band of $15 to $35, and ecommerce SEO projects commonly fall between $500 and $2,500 per project. An Ahrefs survey of 439 providers found the most popular retainer band was $501 to $1,000 per month, while Shopify specialized monthly retainers run higher at $2,700 to $3,600 according to a 2026 rate card. Shopify specialization usually costs more than general SEO because the platform constraints demand it.",
       },
     ],
-  
+
     toc: [
-      {
-        id: "intro",
-        title: "Why Product Pages Matter",
-        level: 2,
-      },
-      {
-        id: "search-intent",
-        title: "1. Match Product Pages to Search Intent",
-        level: 2,
-      },
-      {
-        id: "product-title",
-        title: "2. Write Clear Product Titles",
-        level: 2,
-      },
-      {
-        id: "product-copy",
-        title: "3. Explain Benefits, Details and Use Cases",
-        level: 2,
-      },
-      {
-        id: "visuals",
-        title: "4. Use Better Product Images",
-        level: 2,
-      },
-      {
-        id: "trust",
-        title: "5. Add Useful Trust Information",
-        level: 2,
-      },
-      {
-        id: "mobile",
-        title: "6. Build for Mobile Product Discovery",
-        level: 2,
-      },
-      {
-        id: "technical",
-        title: "7. Improve Product Page Technical SEO",
-        level: 2,
-      },
-      {
-        id: "internal-links",
-        title: "8. Use Internal Links and Related Products",
-        level: 2,
-      },
-      {
-        id: "checklist",
-        title: "Product Page SEO Checklist",
-        level: 2,
-      },
-      {
-        id: "faqs",
-        title: "Frequently Asked Questions",
-        level: 2,
-      },
+      { id: "why-different", title: "Why Shopify SEO Needs Platform Expertise", level: 2 },
+      { id: "what-covered", title: "What Expert Shopify SEO Covers", level: 2 },
+      { id: "signs", title: "Signs Your Store Needs One", level: 2 },
+      { id: "expert-vs-diy", title: "Expert vs DIY: An Honest Comparison", level: 2 },
+      { id: "how-to-choose", title: "How to Choose the Right One", level: 2 },
+      { id: "rankvelt-expert", title: "Work With a RankVelt Shopify SEO Expert", level: 2 },
     ],
-  
+
     content: `
-      <h2 id="intro">Why Product Pages Matter</h2>
-  
-      <p>For an eCommerce store, a product page is often the final step between search visibility and a purchase decision. A customer may arrive from Google, a collection page, an email, social media, or a paid campaign. Regardless of the source, the page must quickly explain the product and make the next action feel clear.</p>
-  
-      <p>High-converting product pages are not built around pressure. They are built around clarity. Customers should be able to understand what the product is, why it is useful, who it is for, what it costs, when it will arrive, and what happens if it is not right for them.</p>
-  
-      <h2 id="search-intent">1. Match Product Pages to Search Intent</h2>
-  
-      <p>Before writing product copy, understand why a customer might search for the product. Some people know exactly what they want. Others are comparing materials, styles, sizes, features, or alternatives.</p>
-  
-      <p>A product page should reflect the language and questions that matter to the buyer. For example, a customer searching for a specific type of jacket may care about fit, warmth, leather quality, colour, shipping, and styling. A customer searching for a skincare product may care about ingredients, routine compatibility, skin type, and expected use.</p>
-  
-      <p>Search intent should influence:</p>
-  
+      <p class="standalone-line">Generic SEO advice breaks on Shopify.</p>
+
+      <p>Shopify is a closed platform with opinions. It decides your URL structure. It limits your robots.txt. It duplicates your collections unless you intervene. Most generic SEO playbooks were written for WordPress, and large parts of them simply do not apply here.</p>
+
+      <p>A Shopify SEO expert is a specialist who works inside these constraints. This article explains what that specialization covers, how it differs from general SEO, the signs your store needs one, and how to choose well.</p>
+
+      <h2 id="why-different">Why Shopify SEO Needs Platform Expertise</h2>
+
+      <p>Four platform realities shape every decision:</p>
+
       <ul>
-        <li>The product title.</li>
-        <li>The first paragraph or benefit summary.</li>
-        <li>Specifications and usage details.</li>
-        <li>Image selection.</li>
-        <li>Frequently asked questions.</li>
-        <li>Links to related collections and products.</li>
+        <li><strong>Forced URL structures.</strong> Products live under /products/, collections under /collections/. You cannot flatten or customize this. Strategy must work with it.</li>
+        <li><strong>Duplicate content by default.</strong> Collections, tags, and pagination generate multiple URLs for the same content. Without canonical discipline, your pages compete with themselves.</li>
+        <li><strong>Locked robots.txt (mostly).</strong> Control is limited compared to open platforms. Crawl budget management happens through site architecture instead.</li>
+        <li><strong>App bloat.</strong> Every app injects scripts. Ten useful apps can still wreck your speed scores. Performance work on Shopify is largely app triage plus theme discipline.</li>
       </ul>
-  
-      <h2 id="product-title">2. Write Clear Product Titles</h2>
-  
-      <p>A product title should help customers and search engines understand the product without sounding unnatural. Avoid vague titles that only make sense internally, such as product codes, generic names, or brand-only labels.</p>
-  
-      <p>A clearer product title often includes the product type and a meaningful differentiator. The right level of detail depends on the category. Do not force every keyword into the title. Use language that would make sense to a real buyer.</p>
-  
-      <h3 id="title-example">A Simple Product Title Framework</h3>
-  
+
+      <p>A generalist who has never fought these constraints will prescribe fixes the platform cannot execute. That is the core argument for specialization.</p>
+
+      <h2 id="what-covered">What Expert Shopify SEO Covers</h2>
+
+      <p>Real engagements cover four workstreams as one system:</p>
+
       <ul>
-        <li>Primary product type.</li>
-        <li>Important material, style, or use case.</li>
-        <li>Optional colour, audience, or differentiator where helpful.</li>
+        <li><strong>Technical foundation:</strong> indexation, crawlability, speed, mobile experience, structured data, redirects. The unglamorous work everything else stands on.</li>
+        <li><strong>Product and collection optimization:</strong> unique titles, original descriptions, collection intros with real content, internal linking between products and collections, cannibalization resolution.</li>
+        <li><strong>Content strategy:</strong> buying guides, comparisons, and FAQ content that captures research intent and feeds AI answers. Ecommerce content must sell and rank at the same time.</li>
+        <li><strong>Authority building:</strong> earning mentions and links from industry publications, partners, and communities. Slow, compounding, and impossible to fake well.</li>
       </ul>
-  
-      <p>For example, a title such as <strong>Men's Brown Leather Biker Jacket</strong> is clearer than a vague internal product name. The goal is clarity, not keyword stuffing.</p>
-  
-      <h2 id="product-copy">3. Explain Benefits, Details and Use Cases</h2>
-  
-      <p>Many product descriptions list features without explaining why they matter. Features are useful, but customers often need help connecting those details to real benefits.</p>
-  
-      <p>Instead of only saying that a bag has multiple compartments, explain what that helps the customer do. Instead of only saying that a jacket is made from leather, explain the feel, use case, fit, care needs, or styling value where accurate.</p>
-  
-      <p>A useful product page normally includes:</p>
-  
+
+      <p>Beware anyone selling only one workstream as "Shopify SEO." Rankings come from the system, not a single tactic.</p>
+
+      <h2 id="signs">Signs Your Store Needs One</h2>
+
       <ul>
-        <li>A short benefit-led introduction.</li>
-        <li>Clear bullet points for key product details.</li>
-        <li>Material, size, compatibility, or care information.</li>
-        <li>Usage or styling context where relevant.</li>
-        <li>Delivery, returns, or support information.</li>
+        <li>Organic traffic is flat for months while competitors climb.</li>
+        <li>You have done the basics (titles, speed, sitemap) and nothing moved.</li>
+        <li>A redesign or migration is planned. SEO planned before the rebuild avoids expensive repair after it.</li>
+        <li>Paid ads are your only channel and acquisition costs keep rising.</li>
+        <li>Your catalog grew but organic revenue did not follow.</li>
       </ul>
-  
-      <h2 id="visuals">4. Use Better Product Images</h2>
-  
-      <p>Product images are often the first thing customers notice. Images should help people understand the product from different angles, in context, and at a useful level of detail.</p>
-  
-      <p>Consider adding a mix of:</p>
-  
+
+      <p>The common thread: you have outgrown DIY. The problems left are the ones checklists do not solve.</p>
+
+      <h2 id="expert-vs-diy">Expert vs DIY: An Honest Comparison</h2>
+
+      <p>DIY works up to a point, and we say so openly. Our own <a href="/blog/shopify-seo-audit">Shopify SEO audit checklist</a> covers what a careful owner can handle: indexation checks, speed basics, title reviews, duplicate content triage.</p>
+
+      <p>DIY stops working when problems interact. A speed issue caused by a revenue critical app. Cannibalization between a collection and a product that both convert. A migration with thousands of URLs. These need judgment from someone who has seen the pattern before, not just a checklist.</p>
+
+      <p>Honest rule: DIY the obvious, hire for the interconnected. The most expensive SEO mistake is spending six months fixing the wrong problem confidently.</p>
+
+      <h2 id="how-to-choose">How to Choose the Right One</h2>
+
+      <p>Three filters do most of the work:</p>
+
       <ul>
-        <li>Clean product images.</li>
-        <li>Close-up detail shots.</li>
-        <li>Scale or size reference images.</li>
-        <li>Lifestyle images that show real use.</li>
-        <li>Video where it helps explain movement, texture, or use.</li>
+        <li><strong>Platform fluency:</strong> they name Shopify constraints without prompting and describe how they work around them.</li>
+        <li><strong>Diagnosis before prescription:</strong> they audit first and propose second. Anyone quoting before looking is guessing.</li>
+        <li><strong>Revenue tied reporting:</strong> they talk about organic revenue and contribution, not just rankings and impressions.</li>
       </ul>
-  
-      <p>Use descriptive image filenames and alt text where appropriate. Alt text should explain the image for accessibility, not repeat the same keyword across every image.</p>
-  
-      <h2 id="trust">5. Add Useful Trust Information</h2>
-  
-      <p>Trust information should reduce uncertainty. Customers often want to know whether the store is real, how delivery works, whether returns are possible, and what support is available.</p>
-  
-      <p>Useful trust content can include:</p>
-  
-      <ul>
-        <li>Clear shipping and delivery expectations.</li>
-        <li>Visible return or exchange policy links.</li>
-        <li>Secure payment information.</li>
-        <li>Real customer reviews where available.</li>
-        <li>Accurate contact or support details.</li>
-        <li>Brand information that explains who is behind the store.</li>
-      </ul>
-  
-      <p>Avoid using made-up urgency messages, fake review counts, or unclear claims. Genuine clarity usually creates more durable trust.</p>
-  
-      <h2 id="mobile">6. Build for Mobile Product Discovery</h2>
-  
-      <p>Product pages must be easy to use on smaller screens. A visitor should not have to search for the product price, variant options, delivery details, or add-to-cart button.</p>
-  
-      <p>Review mobile pages for:</p>
-  
-      <ul>
-        <li>Readable text and clear spacing.</li>
-        <li>Easy-to-tap product options.</li>
-        <li>Visible add-to-cart actions.</li>
-        <li>Images that load efficiently.</li>
-        <li>Product details that are easy to scan.</li>
-        <li>Simple access to shipping and returns information.</li>
-      </ul>
-  
-      <h2 id="technical">7. Improve Product Page Technical SEO</h2>
-  
-      <p>Technical SEO supports product visibility by helping search engines discover, crawl, and understand important product pages. It also helps avoid creating unnecessary duplicate or low-value pages.</p>
-  
-      <p>Review these product-page SEO foundations:</p>
-  
-      <ul>
-        <li>Unique page title and meta description.</li>
-        <li>Clear page headings.</li>
-        <li>Descriptive image alt text where needed.</li>
-        <li>Structured product data where correctly implemented.</li>
-        <li>Fast-loading primary images.</li>
-        <li>Internal links from collections and supporting content.</li>
-      </ul>
-  
-      <p>For broader technical and collection-page improvements, explore <a href="/ecommerce-seo">RankVelt eCommerce SEO services</a>.</p>
-  
-      <h2 id="internal-links">8. Use Internal Links and Related Products</h2>
-  
-      <p>Internal linking helps customers discover relevant products and helps search engines understand how pages relate to one another.</p>
-  
-      <p>Useful internal links may include:</p>
-  
-      <ul>
-        <li>Links back to the main collection.</li>
-        <li>Links to relevant guides or buying advice.</li>
-        <li>Links to related products or complementary products.</li>
-        <li>Links to size guides, material guides, or care instructions.</li>
-        <li>Links to shipping and returns pages when relevant.</li>
-      </ul>
-  
-      <p>Related products should genuinely help the customer continue their journey. They should not create clutter or distract from the main purchase decision.</p>
-  
-      <h2 id="checklist">Product Page SEO Checklist</h2>
-  
-      <ul>
-        <li>Is the product title clear and descriptive?</li>
-        <li>Does the page explain benefits as well as features?</li>
-        <li>Are images helpful, accurate, and mobile-friendly?</li>
-        <li>Can customers find shipping and returns information easily?</li>
-        <li>Is the call to action visible and understandable?</li>
-        <li>Does the page link to a relevant collection?</li>
-        <li>Are important product details easy to scan?</li>
-        <li>Does the page support the search intent behind the product?</li>
-      </ul>
-  
-      <h2 id="faqs">Frequently Asked Questions</h2>
-  
-      <details>
-        <summary>How long should a Shopify product description be?</summary>
-        <p>The right length depends on the product. Keep the first section easy to scan, then provide useful details for customers who need more information. The goal is clarity, not word count.</p>
-      </details>
-  
-      <details>
-        <summary>Do product pages help Shopify SEO?</summary>
-        <p>Yes. Product pages can appear in search results when they are properly structured, useful, discoverable, and aligned with real customer search terms. Collection pages and supporting content also play an important role.</p>
-      </details>
-  
-      <details>
-        <summary>Should every Shopify product have a unique description?</summary>
-        <p>Important product pages should have useful, original content wherever possible. Avoid copying manufacturer descriptions or repeating the same copy across multiple products.</p>
-      </details>
-  
-      <div class="cta-premium-block">
-        <h2>Want Better Product Discovery and Conversion Paths?</h2>
-        <p>RankVelt helps Shopify stores improve product pages, collection pages, technical SEO, internal linking, and search-focused customer journeys.</p>
-        <a href="/ecommerce-seo" class="shimmer-btn">Explore eCommerce SEO</a>
-      </div>
+
+      <p>For the full vetting system: red flags, interview questions, pricing models, and contract terms, read our guide on <a href="/blog/hire-shopify-seo-expert">how to hire a Shopify SEO expert</a>.</p>
+
+      <h2 id="rankvelt-expert">Work With a RankVelt Shopify SEO Expert</h2>
+
+      <p>RankVelt's ecommerce SEO practice is built for exactly this: Shopify stores that need platform specific expertise tied to revenue. Audit first, fix in priority order, report on what matters.</p>
+
+      <p><a href="/strategy-call">Book a free strategy call</a>. We will review your store, show you the highest leverage issues, and tell you plainly whether we are the right fit. If DIY is still the right answer for your stage, we will say that too.</p>
     `,
   },
 
-  {
-    id: "shopify-redesign-signs",
-  
-    title:
-      "7 Signs Your Shopify Store Needs a Redesign for SEO and Conversions",
-  
-    seoTitle:
-      "Shopify Store Redesign: 7 Signs You Need One Now",
-  
-    metaDescription:
-      "Discover seven signs your Shopify store needs a redesign to improve SEO, mobile usability, product discovery, trust, performance and conversions.",
-  
-    ogTitle:
-      "7 Signs Your Shopify Store Needs a Redesign",
-  
-    socialDescription:
-      "Learn when a Shopify redesign can improve product discovery, mobile usability, SEO foundations, customer trust and conversion paths.",
-  
-    date: "Aug 11, 2026",
-    datePublished: "2026-08-11",
-    dateModified: "2026-08-11",
-  
-    author: "RankVelt Editorial Team",
-    authorType: "Organization",
-  
-    category: "ECOMMERCE SEO",
-    readTime: "8 min read",
-  
-    image: "/shopify-store-redesign-signs.webp",
-  
-    imageAlt:
-      "Shopify store redesign signs covering navigation, mobile usability, SEO, page speed, product structure and customer trust",
-  
-    excerpt:
-      "A Shopify redesign becomes useful when poor navigation, weak mobile usability, unclear product pages, technical limitations or inconsistent branding restrict growth.",
-  
-    relatedPostIds: [
-      "website-redesign-seo-checklist",
-      "high-converting-product-pages",
-      "why-shopify-stores-fail",
-    ],
-  
-    showStandardCta: false,
-  
-    faqItems: [
-      {
-        question:
-          "Will a Shopify redesign hurt SEO?",
-        answer:
-          "It can hurt SEO when important URLs, content, redirects, internal links, or technical foundations are ignored. An SEO-aware redesign plans those elements before launch and checks them after launch.",
-      },
-      {
-        question:
-          "Should I redesign my Shopify store or optimise the current one?",
-        answer:
-          "Start with an audit. Optimisation may be enough when the current theme and structure can support your goals. A redesign becomes more useful when the website has structural, technical, navigation, usability, or scalability limitations.",
-      },
-      {
-        question:
-          "Can RankVelt help with Shopify redesign and SEO together?",
-        answer:
-          "Yes. RankVelt can scope Shopify design support around search-ready collection structure, product discovery, mobile UX, technical SEO, internal linking, and conversion-focused page journeys.",
-      },
-    ],
-  
-    toc: [
-      {
-        id: "intro",
-        title: "When a Shopify Redesign Is Worth Considering",
-        level: 2,
-      },
-      {
-        id: "sign-one",
-        title: "1. Your Navigation Makes Products Hard to Find",
-        level: 2,
-      },
-      {
-        id: "sign-two",
-        title: "2. Your Store Is Difficult to Use on Mobile",
-        level: 2,
-      },
-      {
-        id: "sign-three",
-        title: "3. Important Pages Are Slow or Unclear",
-        level: 2,
-      },
-      {
-        id: "sign-four",
-        title: "4. Collection and Product Pages Lack Structure",
-        level: 2,
-      },
-      {
-        id: "sign-five",
-        title: "5. The Website Does Not Support SEO",
-        level: 2,
-      },
-      {
-        id: "sign-six",
-        title: "6. The Store Looks Inconsistent or Untrustworthy",
-        level: 2,
-      },
-      {
-        id: "sign-seven",
-        title: "7. Your Website Cannot Support the Next Stage of Growth",
-        level: 2,
-      },
-      {
-        id: "redesign-process",
-        title: "How to Plan a Shopify Redesign",
-        level: 2,
-      },
-      {
-        id: "faqs",
-        title: "Frequently Asked Questions",
-        level: 2,
-      },
-    ],
-  
-    content: `
-      <h2 id="intro">When a Shopify Redesign Is Worth Considering</h2>
-  
-      <p>A Shopify redesign should not happen simply because a store feels old. A good redesign should solve specific business problems such as poor navigation, weak mobile usability, unclear product discovery, technical limitations, inconsistent branding, or pages that do not support search visibility.</p>
-  
-      <p>Before rebuilding a store, identify what is actually holding it back. Some issues can be fixed through page optimisation, technical cleanup, collection restructuring, or better content. Other issues need new templates, new navigation, a different information architecture, or a more complete redesign.</p>
-  
-      <h2 id="sign-one">1. Your Navigation Makes Products Hard to Find</h2>
-  
-      <p>Navigation should help customers reach the right products quickly. When menus are overloaded, category names are unclear, filters are weak, or collections are poorly organised, visitors may leave before finding what they need.</p>
-  
-      <p>Common navigation problems include:</p>
-  
-      <ul>
-        <li>Too many top-level menu items.</li>
-        <li>Categories that overlap or use unclear names.</li>
-        <li>Important collections hidden several clicks deep.</li>
-        <li>Product filters that are difficult to use.</li>
-        <li>Search results that do not help customers continue browsing.</li>
-      </ul>
-  
-      <p>A redesign can improve navigation by building a clearer category hierarchy around how customers shop and search.</p>
-  
-      <h2 id="sign-two">2. Your Store Is Difficult to Use on Mobile</h2>
-  
-      <p>Mobile visitors should be able to browse collections, view product images, select variants, read key information, and add products to cart without friction.</p>
-  
-      <p>Signs that mobile UX needs attention include:</p>
-  
-      <ul>
-        <li>Buttons are too small or difficult to tap.</li>
-        <li>Menus take too long to open or feel crowded.</li>
-        <li>Product content requires excessive scrolling.</li>
-        <li>Images create layout shifts or load slowly.</li>
-        <li>Important details are hidden in hard-to-find areas.</li>
-      </ul>
-  
-      <p>A mobile-first redesign does not mean removing useful content. It means arranging content so customers can understand and act without unnecessary effort.</p>
-  
-      <h2 id="sign-three">3. Important Pages Are Slow or Unclear</h2>
-  
-      <p>A store can feel slow because of large images, too many scripts, unnecessary apps, heavy sliders, or complicated page sections. It can also feel slow because the visitor has to work too hard to understand the offer.</p>
-  
-      <p>Review your homepage, best-selling collection pages, and top product pages. These are often the pages that deserve the first performance and UX review.</p>
-  
-      <p>Improve page speed by prioritising:</p>
-  
-      <ul>
-        <li>Optimised image formats and dimensions.</li>
-        <li>Reduced unnecessary third-party scripts.</li>
-        <li>Lean page sections.</li>
-        <li>Better loading behaviour for images and video.</li>
-        <li>Clearer content hierarchy above the fold.</li>
-      </ul>
-  
-      <h2 id="sign-four">4. Collection and Product Pages Lack Structure</h2>
-  
-      <p>Collections and products should do more than display inventory. They need to help customers understand the category, compare options, and move toward a decision.</p>
-  
-      <p>Consider a redesign when:</p>
-  
-      <ul>
-        <li>Collection pages have no explanation or category context.</li>
-        <li>Product pages are inconsistent across the store.</li>
-        <li>Important product information is hidden or missing.</li>
-        <li>Related products do not support customer discovery.</li>
-        <li>Templates cannot support the content your customers need.</li>
-      </ul>
-  
-      <p>Better templates can support SEO, conversion, and customer confidence at the same time.</p>
-  
-      <h2 id="sign-five">5. The Website Does Not Support SEO</h2>
-  
-      <p>A redesign should consider SEO before changing URLs, templates, collections, navigation, or content. Poorly planned redesigns can damage organic traffic when important pages disappear, redirects are missed, internal links break, or search-focused content is removed.</p>
-  
-      <p>An SEO-ready Shopify redesign should include:</p>
-  
-      <ul>
-        <li>Keyword mapping for key collections and products.</li>
-        <li>Redirect planning for changed URLs.</li>
-        <li>Clear heading and content structure.</li>
-        <li>Internal linking between collections, products, and guides.</li>
-        <li>Technical SEO checks before and after launch.</li>
-        <li>Indexation and crawlability review.</li>
-      </ul>
-  
-      <p>For stores that need search-focused page restructuring, see <a href="/ecommerce-seo">RankVelt eCommerce SEO</a>.</p>
-  
-      <h2 id="sign-six">6. The Store Looks Inconsistent or Untrustworthy</h2>
-  
-      <p>Brand consistency affects customer confidence. A store may feel untrustworthy when fonts, colours, product images, button styles, page layouts, and policies feel disconnected.</p>
-  
-      <p>A redesign can strengthen trust by creating a consistent visual system across the homepage, collections, products, cart, and support pages.</p>
-  
-      <p>Focus on useful consistency:</p>
-  
-      <ul>
-        <li>Clear typography and readable spacing.</li>
-        <li>Consistent buttons and calls to action.</li>
-        <li>Reliable product image style.</li>
-        <li>Visible returns, support, and delivery information.</li>
-        <li>Clear brand story and contact details.</li>
-      </ul>
-  
-      <h2 id="sign-seven">7. Your Website Cannot Support the Next Stage of Growth</h2>
-  
-      <p>Your business may have outgrown the website when you need new collections, new markets, content hubs, better filtering, more complex product information, integrations, or landing pages for campaigns and search growth.</p>
-  
-      <p>A redesign should create a flexible system rather than a temporary visual update. The goal is to make future content, collections, campaigns, and optimisation easier to manage.</p>
-  
-      <h2 id="redesign-process">How to Plan a Shopify Redesign</h2>
-  
-      <h3 id="audit-first">Start With an Audit</h3>
-  
-      <p>Review your existing pages, traffic sources, collection structure, product templates, mobile usability, technical SEO, customer support questions, and conversion pathways before deciding what to rebuild.</p>
-  
-      <h3 id="preserve-seo">Protect Existing SEO Value</h3>
-  
-      <p>Keep a record of important URLs, rankings, internal links, page titles, and traffic pages. Plan redirects before launch and review the store after launch to ensure important pages remain accessible.</p>
-  
-      <h3 id="build-clear-templates">Build Clear Templates</h3>
-  
-      <p>Create flexible templates for product pages, collection pages, landing pages, guides, and promotional content. The templates should support both user needs and SEO requirements.</p>
-  
-      <h3 id="test-launch">Test Before and After Launch</h3>
-  
-      <p>Test navigation, mobile layouts, product options, cart functions, checkout links, redirects, search visibility, images, and page speed. A redesign is stronger when it is treated as an ongoing improvement process rather than a one-time visual change.</p>
-  
-      <h2 id="faqs">Frequently Asked Questions</h2>
-  
-      <details>
-        <summary>Will a Shopify redesign hurt SEO?</summary>
-        <p>It can hurt SEO when important URLs, content, redirects, internal links, or technical foundations are ignored. An SEO-aware redesign plans those elements before launch and checks them after launch.</p>
-      </details>
-  
-      <details>
-        <summary>Should I redesign my Shopify store or optimise the current one?</summary>
-        <p>Start with an audit. Optimisation may be enough when the current theme and structure can support your goals. A redesign becomes more useful when the website has structural, technical, navigation, usability, or scalability limitations.</p>
-      </details>
-  
-      <details>
-        <summary>Can RankVelt help with Shopify redesign and SEO together?</summary>
-        <p>Yes. RankVelt can scope Shopify design support around search-ready collection structure, product discovery, mobile UX, technical SEO, internal linking, and conversion-focused page journeys.</p>
-      </details>
-  
-      <div class="cta-premium-block">
-        <h2>Planning a Shopify Redesign?</h2>
-        <p>RankVelt helps eCommerce brands improve Shopify store structure, product discovery, SEO foundations, mobile usability, and conversion-ready customer journeys.</p>
-        <a href="/strategy-call?package=Shopify%20Store%20Design%20%26%20SEO%20Consultation" class="shimmer-btn">Discuss Your Shopify Project</a>
-      </div>
-    `,
-  },
 ];
 
 
