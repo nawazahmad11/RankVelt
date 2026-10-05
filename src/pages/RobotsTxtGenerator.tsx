@@ -598,6 +598,7 @@ export default function RobotsTxtGenerator() {
                     <button
                       key={b.agent}
                       onClick={() => toggleAiBot(b.agent)}
+                      aria-pressed={on}
                       className={`flex items-center justify-between gap-2 rounded-lg border px-3 py-2 text-left text-xs font-semibold transition-colors ${
                         on
                           ? "border-purple-500/50 bg-purple-500/[0.12] text-purple-200"
@@ -606,6 +607,7 @@ export default function RobotsTxtGenerator() {
                     >
                       <span className="font-mono">{b.label}</span>
                       <span
+                        aria-hidden="true"
                         className={`flex h-4 w-4 shrink-0 items-center justify-center rounded border text-[10px] ${
                           on ? "border-purple-400 bg-purple-500 text-white" : "border-white/25 text-transparent"
                         }`}
