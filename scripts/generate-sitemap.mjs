@@ -32,6 +32,12 @@ const staticRoutes = [
   "/ecommerce-seo",
   "/business-seo",
 
+  "/ai-seo-agency",
+  "/hire-seo-expert",
+  "/ecommerce-seo-services",
+  "/shopify-seo-services",
+  "/seo-audit-services",
+
   "/blog",
 
   "/tools",
@@ -110,7 +116,7 @@ const blogDataSource = await readFile(
  *     content: `
  */
 const articlePattern =
-  /^\s{2}\{\s*\r?\n([\s\S]*?)^\s{4}content:\s*`/gm;
+  /^\s*\{\s*\r?\n([\s\S]*?)^\s*content:\s*`/gm;
 
 const blogRoutes = [];
 
@@ -118,7 +124,7 @@ for (const match of blogDataSource.matchAll(articlePattern)) {
   const metadataBlock = match[1];
 
   const idMatch = metadataBlock.match(
-    /^\s{4}id:\s*["']([^"']+)["'],?/m,
+    /^\s*id:\s*["']([^"']+)["'],?/m,
   );
 
   if (!idMatch) {
@@ -126,11 +132,11 @@ for (const match of blogDataSource.matchAll(articlePattern)) {
   }
 
   const dateModifiedMatch = metadataBlock.match(
-    /^\s{4}dateModified:\s*["'](\d{4}-\d{2}-\d{2})["'],?/m,
+    /^\s*dateModified:\s*["'](\d{4}-\d{2}-\d{2})["'],?/m,
   );
 
   const datePublishedMatch = metadataBlock.match(
-    /^\s{4}datePublished:\s*["'](\d{4}-\d{2}-\d{2})["'],?/m,
+    /^\s*datePublished:\s*["'](\d{4}-\d{2}-\d{2})["'],?/m,
   );
 
   const articleId = idMatch[1].trim();
