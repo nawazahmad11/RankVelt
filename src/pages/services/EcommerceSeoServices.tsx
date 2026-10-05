@@ -311,7 +311,7 @@ const ecommerceSeoServicesConfig: SeoServicePageConfig =
     ],
   };
 
-export default function EcommerceSeoServicesService() {
+export default function EcommerceSeoServices() {
   return (
     <SeoServiceTemplate
       config={ecommerceSeoServicesConfig}

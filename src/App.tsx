@@ -219,8 +219,8 @@ const HireSeoExpertService = lazy(
   () => import("./pages/services/HireSeoExpertService"),
 );
 
-const EcommerceSeoServicesService = lazy(
-  () => import("./pages/services/EcommerceSeoServicesService"),
+const EcommerceSeoServices = lazy(
+  () => import("./pages/services/EcommerceSeoServices"),
 );
 
 const ShopifySeoServicesService = lazy(
@@ -350,7 +350,7 @@ const App = () => (
 
             <Route
               path="/ecommerce-seo-services"
-              element={<EcommerceSeoServicesService />}
+              element={<EcommerceSeoServices />}
             />
 
             <Route

@@ -6,18 +6,18 @@ const ecommerceSeoConfig: SeoServicePageConfig = {
   slug: "/ecommerce-seo",
 
   metaTitle:
-    "eCommerce SEO Services for Shopify Growth | RankVelt",
+    "eCommerce SEO Company for Shopify Stores | RankVelt",
 
   metaDescription:
-    "RankVelt provides eCommerce SEO services for Shopify stores that need stronger product discovery, collection visibility, technical SEO and organic sales.",
+    "RankVelt is an eCommerce SEO company for Shopify stores, improving product discovery, collection visibility, technical SEO and organic sales.",
 
-  eyebrow: "eCommerce SEO Services",
+  eyebrow: "eCommerce SEO Company",
 
   h1:
-    "eCommerce SEO Services for Better Product Discovery and Organic Sales",
+    "eCommerce SEO Company for Better Product Discovery and Organic Sales",
 
   intro:
-    "RankVelt helps Shopify stores improve collection visibility, product-page relevance, technical SEO, internal linking and the customer journey from search result to purchase.",
+    "RankVelt is an eCommerce SEO company helping Shopify stores improve collection visibility, product-page relevance, technical SEO, internal linking and the customer journey from search result to purchase.",
 
   focusAreas: [
     "Shopify SEO",
