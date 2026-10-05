@@ -85,21 +85,29 @@ const StrategyCallForm = () => {
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
 
-    if (
-      !form.name.trim() ||
-      !form.email.trim() ||
-      !form.whatsapp.trim() ||
-      !form.message.trim() ||
-      !form.hasStore ||
-      !form.revenueGoal ||
-      !form.readyToInvest
-    ) {
+    if (!form.name.trim() || !form.email.trim() || !form.whatsapp.trim() || !form.message.trim() || !form.hasStore || !form.revenueGoal || !form.readyToInvest) {
       toast({
         title: "Missing information",
         description:
           "Please complete all fields so RankVelt can review your request properly.",
         variant: "destructive",
       });
+
+      const firstMissingFieldId = !form.name.trim()
+        ? "sc-name"
+        : !form.email.trim()
+          ? "sc-email"
+          : !form.whatsapp.trim()
+            ? "sc-whatsapp"
+            : !form.hasStore
+              ? "sc-group-situation"
+              : !form.revenueGoal
+                ? "sc-group-goal"
+                : !form.readyToInvest
+                  ? "sc-group-invest"
+                  : "sc-message";
+
+      document.getElementById(firstMissingFieldId)?.focus();
 
       return;
     }
@@ -172,7 +180,7 @@ const StrategyCallForm = () => {
   };
 
   const selectionButtonClass = (isSelected: boolean) =>
-    `rounded-lg border px-3 py-3 text-sm font-medium transition-all ${
+    `rounded-lg border px-3 py-3 text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 ${
       isSelected
         ? "border-primary bg-primary/10 text-primary"
         : "border-white/10 bg-secondary/30 text-muted-foreground hover:border-white/30 hover:text-white"
@@ -193,7 +201,7 @@ const StrategyCallForm = () => {
             className="mb-10 text-center"
           >
             <div className="mb-3 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-primary">
-              <CheckCircle className="h-4 w-4" />
+              <CheckCircle className="h-4 w-4" aria-hidden="true" />
               Final Step
             </div>
 
@@ -216,7 +224,10 @@ const StrategyCallForm = () => {
           >
             <div className="rounded-2xl border border-primary/15 bg-primary/5 p-4">
               <div className="flex items-start gap-3">
-                <Target className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                <Target
+                  className="mt-0.5 h-5 w-5 shrink-0 text-primary"
+                  aria-hidden="true"
+                />
 
                 <p className="text-sm leading-relaxed text-white/70">
                   Share a few details about your business. This helps RankVelt
@@ -227,14 +238,21 @@ const StrategyCallForm = () => {
             </div>
 
             <div>
-              <label className="mb-1.5 block text-sm font-medium">
+              <label
+                htmlFor="sc-name"
+                className="mb-1.5 block text-sm font-medium"
+              >
                 Full Name
               </label>
 
               <div className="relative">
-                <User className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-white/40" />
+                <User
+                  className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-white/40"
+                  aria-hidden="true"
+                />
 
                 <input
+                  id="sc-name"
                   type="text"
                   required
                   value={form.name}
@@ -248,14 +266,21 @@ const StrategyCallForm = () => {
             </div>
 
             <div>
-              <label className="mb-1.5 block text-sm font-medium">
+              <label
+                htmlFor="sc-email"
+                className="mb-1.5 block text-sm font-medium"
+              >
                 Business Email
               </label>
 
               <div className="relative">
-                <Mail className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-white/40" />
+                <Mail
+                  className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-white/40"
+                  aria-hidden="true"
+                />
 
                 <input
+                  id="sc-email"
                   type="email"
                   required
                   value={form.email}
@@ -269,14 +294,21 @@ const StrategyCallForm = () => {
             </div>
 
             <div>
-              <label className="mb-1.5 block text-sm font-medium">
+              <label
+                htmlFor="sc-whatsapp"
+                className="mb-1.5 block text-sm font-medium"
+              >
                 WhatsApp Number
               </label>
 
               <div className="relative">
-                <Phone className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-white/40" />
+                <Phone
+                  className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-white/40"
+                  aria-hidden="true"
+                />
 
                 <input
+                  id="sc-whatsapp"
                   type="tel"
                   required
                   value={form.whatsapp}
@@ -290,11 +322,20 @@ const StrategyCallForm = () => {
             </div>
 
             <div>
-              <label className="mb-2 block text-sm font-medium">
+              <span
+                id="sc-group-situation-label"
+                className="mb-2 block text-sm font-medium"
+              >
                 What is your website situation?
-              </label>
+              </span>
 
-              <div className="grid gap-3 sm:grid-cols-3">
+              <div
+                role="radiogroup"
+                aria-labelledby="sc-group-situation-label"
+                id="sc-group-situation"
+                tabIndex={-1}
+                className="grid gap-3 rounded-lg outline-none focus-visible:ring-2 focus-visible:ring-primary/50 sm:grid-cols-3"
+              >
                 {[
                   "I have an existing website",
                   "I need a new website",
@@ -303,6 +344,8 @@ const StrategyCallForm = () => {
                   <button
                     key={option}
                     type="button"
+                    role="radio"
+                    aria-checked={form.hasStore === option}
                     onClick={() => handleChange("hasStore", option)}
                     className={selectionButtonClass(
                       form.hasStore === option,
@@ -315,11 +358,20 @@ const StrategyCallForm = () => {
             </div>
 
             <div>
-              <label className="mb-2 block text-sm font-medium">
+              <span
+                id="sc-group-goal-label"
+                className="mb-2 block text-sm font-medium"
+              >
                 What is your main growth goal?
-              </label>
+              </span>
 
-              <div className="grid gap-3 sm:grid-cols-3">
+              <div
+                role="radiogroup"
+                aria-labelledby="sc-group-goal-label"
+                id="sc-group-goal"
+                tabIndex={-1}
+                className="grid gap-3 rounded-lg outline-none focus-visible:ring-2 focus-visible:ring-primary/50 sm:grid-cols-3"
+              >
                 {[
                   "More local leads",
                   "More organic traffic",
@@ -328,6 +380,8 @@ const StrategyCallForm = () => {
                   <button
                     key={option}
                     type="button"
+                    role="radio"
+                    aria-checked={form.revenueGoal === option}
                     onClick={() => handleChange("revenueGoal", option)}
                     className={selectionButtonClass(
                       form.revenueGoal === option,
@@ -340,16 +394,27 @@ const StrategyCallForm = () => {
             </div>
 
             <div>
-              <label className="mb-2 block text-sm font-medium">
+              <span
+                id="sc-group-invest-label"
+                className="mb-2 block text-sm font-medium"
+              >
                 When are you ready to invest in growth?
-              </label>
+              </span>
 
-              <div className="grid gap-3 sm:grid-cols-3">
+              <div
+                role="radiogroup"
+                aria-labelledby="sc-group-invest-label"
+                id="sc-group-invest"
+                tabIndex={-1}
+                className="grid gap-3 rounded-lg outline-none focus-visible:ring-2 focus-visible:ring-primary/50 sm:grid-cols-3"
+              >
                 {["Ready now", "Within 30 days", "Researching options"].map(
                   (option) => (
                     <button
                       key={option}
                       type="button"
+                      role="radio"
+                      aria-checked={form.readyToInvest === option}
                       onClick={() => handleChange("readyToInvest", option)}
                       className={selectionButtonClass(
                         form.readyToInvest === option,
@@ -363,14 +428,21 @@ const StrategyCallForm = () => {
             </div>
 
             <div>
-              <label className="mb-1.5 block text-sm font-medium">
+              <label
+                htmlFor="sc-message"
+                className="mb-1.5 block text-sm font-medium"
+              >
                 Tell RankVelt about your business and goals
               </label>
 
               <div className="relative">
-                <PenTool className="absolute left-3 top-3 h-4 w-4 text-white/40" />
+                <PenTool
+                  className="absolute left-3 top-3 h-4 w-4 text-white/40"
+                  aria-hidden="true"
+                />
 
                 <textarea
+                  id="sc-message"
                   required
                   value={form.message}
                   onChange={(event) =>
@@ -383,7 +455,10 @@ const StrategyCallForm = () => {
             </div>
 
             <div className="flex items-start gap-3 rounded-xl border border-white/5 bg-white/[0.03] p-4">
-              <Globe2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+              <Globe2
+                className="mt-0.5 h-4 w-4 shrink-0 text-primary"
+                aria-hidden="true"
+              />
 
               <p className="text-xs leading-relaxed text-white/55">
                 By sending this request, you agree that RankVelt may contact
@@ -394,9 +469,9 @@ const StrategyCallForm = () => {
             <button
               type="submit"
               disabled={loading}
-              className="gradient-cta flex w-full items-center justify-center gap-2 rounded-lg py-4 text-base font-bold disabled:cursor-not-allowed disabled:opacity-60"
+              className="gradient-cta flex w-full items-center justify-center gap-2 rounded-lg py-4 text-base font-bold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-60"
             >
-              <Send className="h-5 w-5" />
+              <Send className="h-5 w-5" aria-hidden="true" />
               {loading
                 ? "Submitting Request..."
                 : "Confirm My Strategy Request"}

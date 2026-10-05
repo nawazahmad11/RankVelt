@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import { blogPosts } from "@/data/blogData";
 import { caseStudies } from "@/data/caseStudyData";
 
-const SITE_URL = "https://rankvelt.com";
+const SITE_URL = "https://www.rankvelt.com";
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.webp`;
 
 // Every valid /tools/ slug: the 21 hub tools plus the short aliases that
@@ -59,21 +59,51 @@ const staticPageMeta: Record<string, RouteMeta> = {
   },
 
   "/local-seo": {
-    title: "Local SEO Services for Local Businesses | RankVelt",
+    title: "Local SEO Services for More Local Leads | RankVelt",
     description:
-      "RankVelt provides Local SEO services for businesses that want stronger Google Maps visibility, local search rankings, service-area traffic, calls, and qualified leads.",
+      "RankVelt provides local SEO services for stronger Google Maps visibility, local rankings, service-area traffic, calls, bookings and qualified leads.",
   },
 
   "/ecommerce-seo": {
-    title: "eCommerce SEO Services for Shopify Stores | RankVelt",
+    title: "eCommerce SEO Company for Shopify Stores | RankVelt",
     description:
-      "RankVelt provides eCommerce SEO services for Shopify stores and online brands that need stronger product discovery, collection-page visibility, technical SEO, and organic sales growth.",
+      "RankVelt is an eCommerce SEO company for Shopify stores, improving product discovery, collection visibility, technical SEO and organic sales.",
   },
 
   "/business-seo": {
-    title: "Business SEO Services for Organic Lead Generation | RankVelt",
+    title: "Business SEO Services for Organic Leads | RankVelt",
     description:
-      "RankVelt provides Business SEO services for service companies, consultants, agencies, and growing businesses that need stronger website visibility, qualified traffic, and organic leads.",
+      "RankVelt provides business SEO services for companies, consultants and agencies that need qualified organic traffic, stronger service pages and leads.",
+  },
+
+  "/ai-seo-agency": {
+    title: "AI SEO Agency: AI-First Search Visibility | RankVelt",
+    description:
+      "RankVelt is an AI-first SEO agency helping brands get cited in AI Overviews, ChatGPT and Perplexity with AEO, GEO and technical SEO built for AI search.",
+  },
+
+  "/hire-seo-expert": {
+    title: "Hire SEO Expert: Vetted Agency Specialist | RankVelt",
+    description:
+      "Hire an SEO expert from RankVelt and skip the marketplace gamble. Vetted agency specialists with AI search and GEO expertise, from $525/month.",
+  },
+
+  "/ecommerce-seo-services": {
+    title: "eCommerce SEO Services for Online Stores | RankVelt",
+    description:
+      "RankVelt offers ecommerce SEO services for online stores: AI search optimisation, product discovery, technical SEO and content that turns searches into sales.",
+  },
+
+  "/shopify-seo-services": {
+    title: "Shopify SEO Services for AI-Ready Stores | RankVelt",
+    description:
+      "RankVelt's Shopify SEO services make stores AI-search ready: technical audits, product discovery, collection SEO and content for ChatGPT and Perplexity.",
+  },
+
+  "/seo-audit-services": {
+    title: "SEO Audit Services That Find Growth Blocks | RankVelt",
+    description:
+      "RankVelt provides SEO audit services covering technical SEO, content and AI search visibility, so you know what blocks rankings, citations and leads.",
   },
 
   "/local-seo/dentists": {

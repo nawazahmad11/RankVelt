@@ -8896,7 +8896,7 @@ export const blogPosts: BlogPost[] = [
     content: `
       <p class="standalone-line">Most WooCommerce stores share the same twelve problems.</p>
 
-      <p>After auditing WooCommerce stores for years, the same issues appear again and again. Not exotic edge cases. The same twelve, in different combinations. This article lists all of them, explains why each happens, and gives you the actual fix. Work through them in the priority order at the end.</p>
+      <p>Across WooCommerce stores, the same issues appear again and again. Not exotic edge cases. The same twelve, in different combinations. This article lists all of them, explains why each happens, and gives you the actual fix. Work through them in the priority order at the end.</p>
 
       <h2 id="indexation-bloat">1-3. Indexation Bloat Problems</h2>
 
@@ -9084,7 +9084,7 @@ export const blogPosts: BlogPost[] = [
         <li><strong>SEOPress:</strong> Lightweight, no admin ads, clean code, developer friendly hooks. No upsell nag screens. Common misconfiguration: assuming fewer settings means less to get wrong; the indexation controls still need deliberate setup. Best for performance-focused sites and developers who want control without bloat.</li>
       </ul>
 
-      <p>What matters more than the pick: exactly one SEO plugin active (two emit conflicting schema and meta), indexation rules deliberately set for every archive type, schema validated after setup, and sitemaps submitted. We have fixed sites running each of these three plugins. The failures were always configuration, never the plugin.</p>
+      <p>What matters more than the pick: exactly one SEO plugin active (two emit conflicting schema and meta), indexation rules deliberately set for every archive type, schema validated after setup, and sitemaps submitted. Each of these three plugins works fine when configured properly. The failures were always configuration, never the plugin.</p>
 
       <h2 id="process">The Process: What Happens in What Order</h2>
 
@@ -9232,7 +9232,7 @@ export const blogPosts: BlogPost[] = [
     content: `
       <p class="standalone-line">WordPress sites do not have exotic SEO problems. They have the same fifteen.</p>
 
-      <p>Every WordPress audit we run surfaces some combination of the same fifteen issues. This article lists all of them with the cause and the fix. No theory, just the patterns and what to do about each one. Fix them in the priority order at the end.</p>
+      <p>Most WordPress sites suffer from some combination of the same fifteen issues. This article lists all of them with the cause and the fix. No theory, just the patterns and what to do about each one. Fix them in the priority order at the end.</p>
 
       <h2 id="indexation-issues">1-4. Indexation Issues</h2>
 
