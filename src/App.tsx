@@ -209,6 +209,32 @@ const BusinessSEOService = lazy(
   () => import("./pages/services/BusinessSEOService"),
 );
 
+
+
+const AiSeoAgencyService = lazy(
+  () => import("./pages/services/AiSeoAgencyService"),
+);
+
+const HireSeoExpertService = lazy(
+  () => import("./pages/services/HireSeoExpertService"),
+);
+
+const EcommerceSeoServicesService = lazy(
+  () => import("./pages/services/EcommerceSeoServicesService"),
+);
+
+const ShopifySeoServicesService = lazy(
+  () => import("./pages/services/ShopifySeoServicesService"),
+);
+
+const SeoAuditServicesService = lazy(
+  () => import("./pages/services/SeoAuditServicesService"),
+);
+
+
+
+
+
 /*
  * Shopify and website support services
  */
@@ -309,6 +335,40 @@ const App = () => (
               path="/business-seo"
               element={<BusinessSEOService />}
             />
+
+
+
+            <Route
+              path="/ai-seo-agency"
+              element={<AiSeoAgencyService />}
+            />
+
+            <Route
+              path="/hire-seo-expert"
+              element={<HireSeoExpertService />}
+            />
+
+            <Route
+              path="/ecommerce-seo-services"
+              element={<EcommerceSeoServicesService />}
+            />
+
+            <Route
+              path="/shopify-seo-services"
+              element={<ShopifySeoServicesService />}
+            />
+
+            <Route
+              path="/seo-audit-services"
+              element={<SeoAuditServicesService />}
+            />
+
+
+
+
+
+
+
 
             {/* Blog */}
             <Route
