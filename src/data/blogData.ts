@@ -9292,11 +9292,2139 @@ export const blogPosts: BlogPost[] = [
     `,
   },
 
+// ======================================================================
+
+// RankVelt money-topics blog batch (Oct 2026)
+// Paste these 9 objects into the blogPosts array in src/blogData-4.ts (or wherever blogPosts lives).
+// Add a comma between objects. Keep the file's existing style.
+
+{
+  id: "best-ai-seo-agencies",
+
+  title: "Best AI SEO Agencies in 2026: How to Choose",
+
+  seoTitle: "Best AI SEO Agencies in 2026: How to Choose One",
+
+  metaDescription:
+    "How to pick from the best AI SEO agencies in 2026: what AI-first really means, 7 evaluation criteria, red flags to avoid, and smart questions to ask.",
+
+  ogTitle: "Best AI SEO Agencies in 2026: How to Choose One",
+
+  socialDescription:
+    "AI-first vs AI-branded: 7 criteria and red flags for choosing an AI SEO agency in 2026.",
+
+  date: "Oct 5, 2026",
+  datePublished: "2026-10-05",
+  dateModified: "2026-10-05",
+
+  author: "RankVelt Editorial Team",
+  authorType: "Organization",
+
+  category: "AI SEARCH SEO",
+  readTime: "9 min read",
+
+  image: "/blog/best-ai-seo-agencies.webp",
+
+  imageAlt:
+    "Illustration comparing a traditional SEO agency approach with an AI-first SEO agency approach for 2026",
+
+  excerpt:
+    "Learn how to choose among the best AI SEO agencies in 2026. What AI-first really means, 7 evaluation criteria, red flags that signal pure branding, and the questions that reveal real AI search expertise.",
+
+  relatedPostIds: [
+    "seo-freelancer-vs-agency",
+    "technical-seo-audit-services",
+    "generative-engine-optimization-services",
+    "hire-remote-seo-specialist",
+  ],
+
+  primaryService: {
+    title: "AI SEO Agency",
+    description:
+      "AI-first SEO, AEO and GEO services built to win classic rankings and AI citations together, from $525/month.",
+    path: "/ai-seo-agency",
+  },
+
+  secondaryService: {
+    title: "SEO Audit Services",
+    description:
+      "A proper technical and AI-readiness audit that shows exactly where your site stands before you commit to anything.",
+    path: "/seo-audit-services",
+  },
+
+  showStandardCta: true,
+
+  keyTakeaways: [
+    "AI-first is a working method, not a label: audits, content structure, and reporting should all treat AI answers as a separate search surface.",
+    "Judge agencies on 7 criteria: AI visibility audits, source-selection knowledge, separate AI metrics, their own citations, quotable-first content, entity work, and honest timelines.",
+    "Red flags: AI only in the headline, secret tools they cannot name, guaranteed citations, no questions about your customers, identical packages for every business.",
+    "Ask specific questions on sales calls. Boring, specific answers beat exciting, vague ones every time.",
+    "Price the work, not the buzzword. AI visibility should be core scope, not a paid upsell.",
+    "If an agency cannot get itself cited in AI answers, it will struggle to do it for you.",
+  ],
+
+  faqItems: [
+    {
+      question: "What is an AI SEO agency?",
+      answer:
+        "An AI SEO agency optimises your visibility across two search surfaces: traditional search rankings and AI-generated answers from assistants, AI Overviews, and answer engines. A genuine one audits AI citations, structures content to be quotable, manages entity signals, and reports AI metrics separately.",
+    },
+    {
+      question: "How is AI SEO different from traditional SEO?",
+      answer:
+        "Traditional SEO chases rankings and clicks. AI SEO adds citation optimisation: getting your brand named or linked inside AI-generated answers. The tactics overlap heavily, but AI SEO adds entity consistency, quotable content structure, and citation monitoring on top of classic work.",
+    },
+    {
+      question: "How long does AI SEO take to show results?",
+      answer:
+        "Roughly the same timeline as traditional SEO: expect early signals in two to three months and meaningful movement in four to six, depending on competition and your starting point. Anyone promising AI citations in 30 days is not being honest.",
+    },
+    {
+      question: "Can I do AI SEO myself instead of hiring an agency?",
+      answer:
+        "The basics, yes: answer questions directly on your pages, use clear headings, keep business details consistent everywhere, and publish genuinely useful content. An agency earns its fee on scale, technical depth, and ongoing monitoring that one person rarely sustains alone.",
+    },
+    {
+      question: "What should an AI SEO audit include?",
+      answer:
+        "Beyond the classic technical checks, it should include citation checks in AI answers for your key queries, entity consistency review, content quotability analysis, and brand mention footprint. If the audit has no AI-specific section, the agency's AI offering is branding only.",
+    },
+    {
+      question: "Do small businesses need AI SEO?",
+      answer:
+        "If your customers ask questions in search or chat with AI assistants, yes. Local businesses are affected too: AI assistants increasingly answer local questions like best plumber near me, and only businesses with clean entity signals get named.",
+    },
+    {
+      question: "How do I verify an agency's AI SEO claims?",
+      answer:
+        "Search questions in their specialty inside an AI assistant and see if they are cited. Ask for a page they optimised to be quoted and what changed. Ask how they measure AI citations. Specific, checkable answers signal real expertise; vague excitement signals marketing.",
+    },
+  ],
+
+  toc: [
+    {
+      id: "what-ai-first-actually-means",
+      title: "What AI-First Actually Means",
+      level: 2,
+    },
+    {
+      id: "the-7-criteria-that-matter",
+      title: "The 7 Criteria That Matter",
+      level: 2,
+    },
+    {
+      id: "red-flags-to-watch-for",
+      title: "Red Flags to Watch For",
+      level: 2,
+    },
+    {
+      id: "questions-to-ask-before-you-sign",
+      title: "Questions to Ask Before You Sign",
+      level: 2,
+    },
+    {
+      id: "a-note-on-pricing",
+      title: "A Note on Pricing",
+      level: 2,
+    },
+    {
+      id: "faqs",
+      title: "Frequently Asked Questions",
+      level: 2,
+    },
+    {
+      id: "conclusion",
+      title: "Conclusion",
+      level: 2,
+    },
+  ],
+
+  content: `
+      <p>Choosing among the best AI SEO agencies in 2026 is harder than it looks. Almost every agency now claims to do AI SEO. Few can explain what that actually changes about their work.</p>
+      <p>The difference matters because AI search rewards different things than classic SEO. An agency that only renamed its old service page will optimise you for rankings while your competitors get cited in AI answers. This guide shows you how to tell the two apart before you sign anything.</p>
+      <p>Below you will find what AI-first really means, seven criteria for judging any agency, the red flags that signal pure branding, and the questions that reveal real expertise in a single call.</p>
+      <h2 id="what-ai-first-actually-means">What AI-First Actually Means</h2>
+      <p>AI-first is a way of working, not a label. A genuinely AI-first agency plans every engagement around two search surfaces: traditional results and AI answers.</p>
+      <p>In practice that means a few concrete things. They audit whether your brand gets cited by AI assistants, not just where you rank. They structure content so it can be quoted: direct answers early, clear headings, FAQ sections. They track entity signals like consistent business details across the web, because AI systems rely on them. And they report on AI visibility with its own metrics instead of burying it inside a rankings report.</p>
+      <p>An AI-branded traditional agency does none of this differently. It sells the same keyword rankings and backlink packages, then adds the words AI SEO to the proposal. The deliverables look identical to years past. If you strip the word AI from their pitch and nothing changes, you have your answer.</p>
+      <h2 id="the-7-criteria-that-matter">The 7 Criteria That Matter</h2>
+      <p>Use these seven checks on every agency you shortlist. A strong agency passes most of them. A weak one fails the first three.</p>
+      <ol>
+        <li><strong>They audit AI visibility, not just rankings.</strong> Ask what their audit covers. A real AI SEO audit includes citation checks in AI answers, entity consistency, and content quotability. If the audit is only crawl errors and meta tags, their AI offering is decoration.</li>
+        <li><strong>They can explain how AI answers choose sources.</strong> They should talk about clear direct answers, topical authority, fresh content, and brand mentions across the web. Vague talk about algorithms without specifics is a warning sign.</li>
+        <li><strong>Their reporting separates AI metrics from classic metrics.</strong> Look for citation counts, brand mentions in AI answers, and AI impression data alongside rankings and traffic. One blended number hides what is actually happening.</li>
+        <li><strong>They show their own AI visibility.</strong> Search a question in their specialty in an AI assistant and see if they appear. An agency that cannot get itself cited will struggle to do it for you.</li>
+        <li><strong>Their content advice is quotable-first.</strong> They should push for answer-first structure: the direct answer in the opening, question headings, short paragraphs. If their content briefs look like old keyword stuffing guides, walk away.</li>
+        <li><strong>They talk about entities and consistency.</strong> Business name, address, phone, and brand descriptions should match across your site and the wider web. AI systems cross-check these signals. Agencies that never mention them are not thinking about AI search.</li>
+        <li><strong>They set honest expectations.</strong> AI visibility builds over months, like all SEO. Anyone promising page-one AI citations in 30 days is selling fantasy. Good agencies explain the timeline before you ask.</li>
+      </ol>
+      <h2 id="red-flags-to-watch-for">Red Flags to Watch For</h2>
+      <p><strong>Red flag 1: AI appears only in the headline.</strong> The proposal mentions AI ten times but the deliverables list is classic SEO with no AI-specific tasks. Marketing wrapped around an old product.</p>
+      <p><strong>Red flag 2: Secret AI tools they cannot name.</strong> Some agencies claim proprietary AI systems but cannot explain what they do. Real practitioners name their methods plainly.</p>
+      <p><strong>Red flag 3: Guaranteed AI citations.</strong> Nobody controls what an AI assistant cites. Guarantees in this space are dishonest by definition.</p>
+      <p><strong>Red flag 4: No questions about your customers.</strong> AI search is question driven. An agency that never asks what your customers actually ask cannot optimise you for those questions.</p>
+      <p><strong>Red flag 5: One package for every business.</strong> A local plumber and a SaaS company need different AI search strategies. Identical packages mean no real strategy work is happening.</p>
+      <h2 id="questions-to-ask-before-you-sign">Questions to Ask Before You Sign</h2>
+      <p>Take these five questions to every sales call. The quality of the answers tells you everything.</p>
+      <ul>
+        <li>What does your AI SEO audit cover that a normal SEO audit does not?</li>
+        <li>How do you measure whether our brand is being cited in AI answers?</li>
+        <li>Can you show me a page you optimised specifically to be quoted by an AI assistant, and what changed?</li>
+        <li>How do you handle entity consistency across our site and third party listings?</li>
+        <li>What will month three look like if the AI metrics are flat?</li>
+      </ul>
+      <p>Good answers are specific and a little boring. Bad answers are exciting and vague. Choose boring.</p>
+      <h2 id="a-note-on-pricing">A Note on Pricing</h2>
+      <p>AI SEO pricing looks much like SEO pricing because the work overlaps heavily. Be suspicious of prices far below market: real audits, content restructuring, and ongoing monitoring take genuine hours. Also be suspicious of huge premiums justified only by the word AI. Honest agencies price the work, not the buzzword.</p>
+      <p>For reference, RankVelt engagements start at $525 per month with a three month minimum, and every engagement includes AI search visibility work as standard rather than as a paid add-on. Whatever agency you choose, make sure AI visibility sits in the core scope, not in the upsell column.</p>
+      <h2 id="faqs">Frequently Asked Questions</h2>
+      <details>
+        <summary>What is an AI SEO agency?</summary>
+        <p>An AI SEO agency optimises your visibility across two search surfaces: traditional search rankings and AI-generated answers from assistants, AI Overviews, and answer engines. A genuine one audits AI citations, structures content to be quotable, manages entity signals, and reports AI metrics separately.</p>
+      </details>
+      <details>
+        <summary>How is AI SEO different from traditional SEO?</summary>
+        <p>Traditional SEO chases rankings and clicks. AI SEO adds citation optimisation: getting your brand named or linked inside AI-generated answers. The tactics overlap heavily, but AI SEO adds entity consistency, quotable content structure, and citation monitoring on top of classic work.</p>
+      </details>
+      <details>
+        <summary>How long does AI SEO take to show results?</summary>
+        <p>Roughly the same timeline as traditional SEO: expect early signals in two to three months and meaningful movement in four to six, depending on competition and your starting point. Anyone promising AI citations in 30 days is not being honest.</p>
+      </details>
+      <details>
+        <summary>Can I do AI SEO myself instead of hiring an agency?</summary>
+        <p>The basics, yes: answer questions directly on your pages, use clear headings, keep business details consistent everywhere, and publish genuinely useful content. An agency earns its fee on scale, technical depth, and ongoing monitoring that one person rarely sustains alone.</p>
+      </details>
+      <details>
+        <summary>What should an AI SEO audit include?</summary>
+        <p>Beyond the classic technical checks, it should include citation checks in AI answers for your key queries, entity consistency review, content quotability analysis, and brand mention footprint. If the audit has no AI-specific section, the agency's AI offering is branding only.</p>
+      </details>
+      <details>
+        <summary>Do small businesses need AI SEO?</summary>
+        <p>If your customers ask questions in search or chat with AI assistants, yes. Local businesses are affected too: AI assistants increasingly answer local questions like best plumber near me, and only businesses with clean entity signals get named.</p>
+      </details>
+      <details>
+        <summary>How do I verify an agency's AI SEO claims?</summary>
+        <p>Search questions in their specialty inside an AI assistant and see if they are cited. Ask for a page they optimised to be quoted and what changed. Ask how they measure AI citations. Specific, checkable answers signal real expertise; vague excitement signals marketing.</p>
+      </details>
+      <h2 id="conclusion">Conclusion</h2>
+      <p>The best AI SEO agency for you is the one that treats AI search as real work, not as a headline. Check for genuine audits, quotable-first content, entity discipline, and separate AI reporting. Dodge the red flags, ask the hard questions, and pick the boring specific answers over the exciting vague ones.</p>
+      <p>If you are weighing an agency against going solo with a freelancer, read our <a href="/blog/seo-freelancer-vs-agency">SEO freelancer vs agency guide</a> next. And if you want to see what a proper audit looks like before you buy one, see <a href="/blog/technical-seo-audit-services">what technical SEO audit services cover in 2026</a>.</p>
+      <p>Want an honest read on where your site stands today? <a href="/strategy-call">Book a free SEO opportunity check</a> and get clear next steps for both rankings and AI citations.</p>
+      <div class="cta-premium-block">
+        <h2>Not Sure Which Agency Fits?</h2>
+        <p>Talk to RankVelt first. Get a straight answer on what your site needs for Google and AI search, with pricing from $525/month and no jargon.</p>
+        <a href="/strategy-call" class="shimmer-btn">Book Your Free Strategy Call</a>
+      </div>
+    `,
+},
+
+{
+  id: "seo-freelancer-vs-agency",
+
+  title: "SEO Freelancer vs Agency: Which Should You Hire in 2026",
+
+  seoTitle: "SEO Freelancer vs Agency: Which to Hire in 2026",
+
+  metaDescription:
+    "SEO freelancer vs agency in 2026: when a freelancer makes sense, when an agency wins, cost and accountability differences, and the AI-search expertise gap.",
+
+  ogTitle: "SEO Freelancer vs Agency: Which to Hire in 2026",
+
+  socialDescription:
+    "Freelancer or agency for SEO in 2026? Honest comparison of cost, accountability, and the AI-search gap.",
+
+  date: "Oct 5, 2026",
+  datePublished: "2026-10-05",
+  dateModified: "2026-10-05",
+
+  author: "RankVelt Editorial Team",
+  authorType: "Organization",
+
+  category: "SEO SERVICES",
+  readTime: "8 min read",
+
+  image: "/blog/seo-freelancer-vs-agency.webp",
+
+  imageAlt:
+    "Side by side illustration of a freelance SEO specialist working solo and an SEO agency team collaborating",
+
+  excerpt:
+    "SEO freelancer vs agency: an honest 2026 comparison covering when a freelancer makes sense, when an agency wins, cost and accountability differences, and the AI-search expertise gap most guides ignore.",
+
+  relatedPostIds: [
+    "best-ai-seo-agencies",
+    "technical-seo-audit-services",
+    "hire-remote-seo-specialist",
+    "why-hire-local-seo-company",
+  ],
+
+  primaryService: {
+    title: "Hire SEO Expert",
+    description:
+      "A vetted agency SEO expert with AI-search skills, from $525/month. Not a marketplace gamble.",
+    path: "/hire-seo-expert",
+  },
+
+  secondaryService: {
+    title: "AI SEO Agency",
+    description:
+      "The full AI-first team: technical SEO, content, and GEO/AEO under one roof.",
+    path: "/ai-seo-agency",
+  },
+
+  showStandardCta: true,
+
+  keyTakeaways: [
+    "One clear, narrow task favours a specialist freelancer. A multi-skill programme favours an agency.",
+    "Freelancers usually cost less in fees but need more of your management time. Compare total cost, not just the invoice.",
+    "Agencies win on continuity and accountability: teams, contracts, and reputations beat solo availability.",
+    "AI search expertise is the 2026 tiebreaker. Most freelancers have not built this muscle yet.",
+    "Ask both candidates how they will get you cited in AI answers, then compare the specificity of the answers.",
+    "A hybrid model works well: agency for strategy and technical work, freelancer for content volume.",
+  ],
+
+  faqItems: [
+    {
+      question: "Is it better to hire an SEO freelancer or an agency?",
+      answer:
+        "It depends on scope. A specialist freelancer is excellent for one well-defined task like a technical cleanup or content writing. An agency is better for ongoing programmes needing technical, content, and authority work together. Match the hire to the shape of the work.",
+    },
+    {
+      question: "How much does an SEO freelancer cost compared to an agency?",
+      answer:
+        "Freelancers generally charge less than agencies because they carry no overhead, but the gap narrows once you count your own management time. Compare deliverables and reporting, not just the monthly number. For reference, RankVelt agency engagements start at $525 per month.",
+    },
+    {
+      question: "Can a freelancer handle technical SEO?",
+      answer:
+        "A specialist technical freelancer can, and often brilliantly. The risk is hiring a generalist freelancer who claims to cover technical, content, and outreach all at once. Ask what they do not do: a good specialist will tell you plainly.",
+    },
+    {
+      question: "What should I ask before hiring an SEO freelancer?",
+      answer:
+        "Ask for two references you can contact, ask what a typical month of deliverables looks like, ask how they report results, and ask how they handle AI search visibility. Vague answers on any of these are disqualifying.",
+    },
+    {
+      question: "Do agencies do AI SEO better than freelancers?",
+      answer:
+        "Currently, usually yes. Agencies that invested early in AI search have shared testing across many clients and dedicated research time. Most solo freelancers have not had the demand or the hours to build the same depth. This gap may close, but today it is real.",
+    },
+    {
+      question: "Can I switch from a freelancer to an agency later?",
+      answer:
+        "Yes, and many businesses do exactly this as they grow. Keep your logins, your Search Console access, and your content files in your own accounts from day one, and the handover stays painless whoever you hire next.",
+    },
+    {
+      question: "What is the biggest risk of hiring a cheap SEO freelancer?",
+      answer:
+        "Low quality link building and thin AI-generated content that can trigger penalties or simply waste months. The cheapest option in SEO is rarely the cheapest outcome. Check references and insist on seeing exactly what work was done each month.",
+    },
+  ],
+
+  toc: [
+    {
+      id: "when-a-freelancer-is-the-right-call",
+      title: "When a Freelancer Is the Right Call",
+      level: 2,
+    },
+    {
+      id: "when-an-agency-wins",
+      title: "When an Agency Wins",
+      level: 2,
+    },
+    {
+      id: "cost-and-accountability-compared",
+      title: "Cost and Accountability Compared",
+      level: 2,
+    },
+    {
+      id: "the-ai-search-expertise-gap",
+      title: "The AI Search Expertise Gap",
+      level: 2,
+    },
+    {
+      id: "how-to-make-the-decision",
+      title: "How to Make the Decision",
+      level: 2,
+    },
+    {
+      id: "faqs",
+      title: "Frequently Asked Questions",
+      level: 2,
+    },
+    {
+      id: "conclusion",
+      title: "Conclusion",
+      level: 2,
+    },
+  ],
+
+  content: `
+      <p>Hiring for SEO in 2026 usually comes down to two options: a freelancer or an agency. Both can work. Both can fail. The right choice depends on your budget, your goals, and how much management you want to do yourself.</p>
+      <p>This guide gives you an honest comparison. No winner declared in advance. Just the real trade-offs on cost, accountability, skill range, and the newer question of AI search expertise, so you can decide with clear eyes.</p>
+      <h2 id="when-a-freelancer-is-the-right-call">When a Freelancer Is the Right Call</h2>
+      <p>A good freelancer is the best value in SEO when your needs are narrow and well defined. If you need one thing done well, like a technical cleanup, a content refresh, or ongoing blog writing, a specialist freelancer often beats a generalist agency team on both price and focus.</p>
+      <p>Freelancers also suit early stage businesses. When your budget is tight and you can manage the work yourself, paying for one skilled person beats paying for an agency's overhead. You get direct communication with the person doing the work, fast decisions, and no account manager telephone game.</p>
+      <p>The key word is specialist. A freelancer who does one thing deeply, technical audits or link outreach or content, can outperform anyone. A freelancer who claims to do everything is usually mediocre at all of it.</p>
+      <h2 id="when-an-agency-wins">When an Agency Wins</h2>
+      <p>Agencies win when the job needs more than one skill. A serious SEO engagement touches technical work, content, digital PR, and analytics at the same time. One person rarely covers all four well. An agency gives you the bench.</p>
+      <p>Agencies also win on continuity. Freelancers get sick, take holidays, and sometimes disappear mid-project. An agency has backup. Your work does not stop because one person is unavailable.</p>
+      <p>Then there is accountability. A real agency has a reputation to protect, documented processes, and contracts with clear deliverables. If something goes wrong, there is a company to answer for it. With a freelancer, your recourse is often just a bad review on a marketplace.</p>
+      <h2 id="cost-and-accountability-compared">Cost and Accountability Compared</h2>
+      <p>On cost, freelancers usually win the sticker comparison. You pay for hours, not overhead. But compare carefully. A cheap freelancer who needs heavy management from you can cost more in your time than an agency that runs itself.</p>
+      <p>Ask both candidates the same question: what exactly do I get each month, and how will I know it worked? The freelancer should name deliverables and metrics. The agency should too. Whoever answers vaguely is the riskier hire regardless of price.</p>
+      <p>For reference on agency pricing, RankVelt engagements start at $525 per month with a three month minimum, which includes readable reporting and a named point of contact. Use any agency's starting price as a baseline, then judge freelancers against the value, not just the number.</p>
+      <p>On accountability, agencies have structural advantages: contracts, teams, and reputations. Good freelancers match this with long client relationships and public track records. Ask both for references you can actually contact. Silence on this question is disqualifying for either.</p>
+      <h2 id="the-ai-search-expertise-gap">The AI Search Expertise Gap</h2>
+      <p>Here is the 2026 factor most comparisons miss. AI search, meaning citations in AI answers from assistants and AI Overviews, needs its own skill set: entity optimisation, quotable content structure, and citation monitoring. Most freelancers have not built this muscle yet because their clients never asked for it.</p>
+      <p>This does not mean freelancers cannot learn it. But right now, agencies that invested early in AI search have a head start: shared testing across many clients, dedicated research time, and proper tooling. A solo freelancer splitting time between ten clients rarely gets that depth.</p>
+      <p>If AI visibility matters for your business, and for most businesses it now does, make it an explicit hiring criterion. Ask the freelancer and the agency the same question: how will you get our brand cited in AI answers? Compare the specificity of the two answers. That comparison alone often settles the decision.</p>
+      <h2 id="how-to-make-the-decision">How to Make the Decision</h2>
+      <p>Run through this short checklist:</p>
+      <ul>
+        <li><strong>Scope.</strong> One clear task points to a freelancer, a multi-skill programme points to an agency.</li>
+        <li><strong>Budget.</strong> Tight and hands-on favours freelancers, funded and hands-off favours agencies.</li>
+        <li><strong>Risk tolerance.</strong> If the project cannot pause when one person is unavailable, choose the agency.</li>
+        <li><strong>AI search.</strong> If citations in AI answers matter to you, weight proven AI search expertise heavily.</li>
+        <li><strong>Management.</strong> Be honest about how much direction you will give. Freelancers need more of it.</li>
+      </ul>
+      <p>There is also a hybrid path many businesses take: an agency for strategy and technical work, plus a freelancer for content volume. It is not either or unless your budget forces it. If you decide to hire in-house instead, read our guide on <a href="/blog/hire-remote-seo-specialist">how to hire a remote SEO specialist</a>.</p>
+      <h2 id="faqs">Frequently Asked Questions</h2>
+      <details>
+        <summary>Is it better to hire an SEO freelancer or an agency?</summary>
+        <p>It depends on scope. A specialist freelancer is excellent for one well-defined task like a technical cleanup or content writing. An agency is better for ongoing programmes needing technical, content, and authority work together. Match the hire to the shape of the work.</p>
+      </details>
+      <details>
+        <summary>How much does an SEO freelancer cost compared to an agency?</summary>
+        <p>Freelancers generally charge less than agencies because they carry no overhead, but the gap narrows once you count your own management time. Compare deliverables and reporting, not just the monthly number. For reference, RankVelt agency engagements start at $525 per month.</p>
+      </details>
+      <details>
+        <summary>Can a freelancer handle technical SEO?</summary>
+        <p>A specialist technical freelancer can, and often brilliantly. The risk is hiring a generalist freelancer who claims to cover technical, content, and outreach all at once. Ask what they do not do: a good specialist will tell you plainly.</p>
+      </details>
+      <details>
+        <summary>What should I ask before hiring an SEO freelancer?</summary>
+        <p>Ask for two references you can contact, ask what a typical month of deliverables looks like, ask how they report results, and ask how they handle AI search visibility. Vague answers on any of these are disqualifying.</p>
+      </details>
+      <details>
+        <summary>Do agencies do AI SEO better than freelancers?</summary>
+        <p>Currently, usually yes. Agencies that invested early in AI search have shared testing across many clients and dedicated research time. Most solo freelancers have not had the demand or the hours to build the same depth. This gap may close, but today it is real.</p>
+      </details>
+      <details>
+        <summary>Can I switch from a freelancer to an agency later?</summary>
+        <p>Yes, and many businesses do exactly this as they grow. Keep your logins, your Search Console access, and your content files in your own accounts from day one, and the handover stays painless whoever you hire next.</p>
+      </details>
+      <details>
+        <summary>What is the biggest risk of hiring a cheap SEO freelancer?</summary>
+        <p>Low quality link building and thin AI-generated content that can trigger penalties or simply waste months. The cheapest option in SEO is rarely the cheapest outcome. Check references and insist on seeing exactly what work was done each month.</p>
+      </details>
+      <h2 id="conclusion">Conclusion</h2>
+      <p>Freelancer or agency is not a loyalty question, it is a fit question. Narrow task plus tight budget plus your own management time points to a specialist freelancer. Broad programme plus need for continuity plus AI search ambitions points to an agency. Run the checklist honestly and the answer usually picks itself.</p>
+      <p>If you are still evaluating agencies after this, read our <a href="/blog/best-ai-seo-agencies">guide to choosing an AI SEO agency</a> next. And if you want to understand what the work itself looks like, see <a href="/blog/technical-seo-audit-services">what a proper technical SEO audit covers</a>.</p>
+      <p>Want help deciding what your site actually needs? <a href="/strategy-call">Book a free SEO opportunity check</a> and get a straight recommendation, freelancer, agency, or hybrid, with no obligation.</p>
+      <div class="cta-premium-block">
+        <h2>Get an Honest Hiring Recommendation</h2>
+        <p>Tell RankVelt about your goals and budget. We will tell you plainly whether you need a freelancer, an agency, or neither yet. Engagements start at $525/month.</p>
+        <a href="/strategy-call" class="shimmer-btn">Book Your Free Strategy Call</a>
+      </div>
+    `,
+},
+
+{
+  id: "technical-seo-audit-services",
+
+  title: "Technical SEO Audit Services: What a Proper Audit Covers in 2026",
+
+  seoTitle: "Technical SEO Audit Services: What They Cover (2026)",
+
+  metaDescription:
+    "What technical SEO audit services cover in 2026: crawlability, indexation, Core Web Vitals, schema, plus the new AI-search readiness layer. Includes red flags.",
+
+  ogTitle: "Technical SEO Audit Services: What They Cover (2026)",
+
+  socialDescription:
+    "What a real technical SEO audit covers in 2026, from crawlability to the new AI-search readiness layer.",
+
+  date: "Oct 5, 2026",
+  datePublished: "2026-10-05",
+  dateModified: "2026-10-05",
+
+  author: "RankVelt Editorial Team",
+  authorType: "Organization",
+
+  category: "SEO SERVICES",
+  readTime: "10 min read",
+
+  image: "/blog/technical-seo-audit-services.webp",
+
+  imageAlt:
+    "Illustration of a technical SEO audit checklist covering crawlability, Core Web Vitals, schema, and AI search readiness",
+
+  excerpt:
+    "What technical SEO audit services cover in 2026: crawlability, indexation, Core Web Vitals, schema, and the new AI-search readiness layer most audits still miss. Plus red flags to avoid.",
+
+  relatedPostIds: [
+    "best-ai-seo-agencies",
+    "seo-freelancer-vs-agency",
+    "shopify-technical-seo-audit-service",
+    "generative-engine-optimization-services",
+  ],
+
+  primaryService: {
+    title: "SEO Audit Services",
+    description:
+      "A proper technical and AI-readiness audit with prioritised fixes, the classic foot-in-the-door to a stronger site.",
+    path: "/seo-audit-services",
+  },
+
+  secondaryService: {
+    title: "AI SEO Agency",
+    description:
+      "After the audit, ongoing AI-first SEO that fixes the issues and builds on them month after month.",
+    path: "/ai-seo-agency",
+  },
+
+  showStandardCta: true,
+
+  keyTakeaways: [
+    "A proper audit is a prioritised fix list ranked by impact, not a raw export of tool warnings.",
+    "The classic pillars still matter: crawlability, indexation, Core Web Vitals, and valid schema.",
+    "The 2026 layer most audits miss: AI search readiness, meaning citation checks, entity consistency, and quotability.",
+    "Judge the deliverable: executive summary, plain-language explanations, quick wins separated from long term work.",
+    "Red flags: instant delivery, no priorities, panic selling of fixes, and no AI layer at all.",
+    "A trustworthy audit is useful even if you fix everything yourself.",
+  ],
+
+  faqItems: [
+    {
+      question: "What is included in a technical SEO audit?",
+      answer:
+        "A proper audit covers crawlability and indexation, redirect and link health, sitemaps and robots rules, JavaScript rendering, Core Web Vitals, schema validity, and, in 2026, AI search readiness: citation checks, entity consistency, and content quotability. Every issue should come prioritised with a fix.",
+    },
+    {
+      question: "How much does a technical SEO audit cost?",
+      answer:
+        "Prices vary widely with site size and depth. Be suspicious of suspiciously cheap instant audits: real analysis takes days of expert time. A useful rule is that the audit should pay for itself through the fixes it prioritises. Ask exactly what the deliverable contains before comparing prices.",
+    },
+    {
+      question: "How long does a technical SEO audit take?",
+      answer:
+        "A genuine audit typically takes several days to two weeks of analysis for a small to mid-size site, longer for large or complex ones. A report delivered hours after payment is automated output, not an audit.",
+    },
+    {
+      question: "How often should I audit my site?",
+      answer:
+        "A full technical audit once a year is a sensible baseline, plus a lighter check after any redesign, migration, or major template change. Ongoing monitoring in between catches new issues before they compound.",
+    },
+    {
+      question: "Can I do a technical SEO audit myself?",
+      answer:
+        "You can run the scans yourself with free crawlers and Search Console, and that catches the obvious issues. What you miss without experience is prioritisation: knowing which of 300 warnings actually matter. Use this guide as your checklist and consider expert review for the judgement layer.",
+    },
+    {
+      question: "What is AI search readiness in an audit?",
+      answer:
+        "It is the 2026 addition to technical audits: checking whether AI assistants cite your brand for key queries, whether your business details are consistent across the web, whether your pages are structured to be quoted, and whether your brand mention footprint supports trust.",
+    },
+    {
+      question: "Will fixing audit issues guarantee better rankings?",
+      answer:
+        "No, and anyone who guarantees it is misleading you. Fixing technical issues removes the barriers stopping your content from performing; it does not replace the need for good content and authority. Think of it as fixing the engine before worrying about the paint.",
+    },
+  ],
+
+  toc: [
+    {
+      id: "what-a-technical-seo-audit-actually-is",
+      title: "What a Technical SEO Audit Actually Is",
+      level: 2,
+    },
+    {
+      id: "crawlability-and-indexation",
+      title: "Crawlability and Indexation",
+      level: 2,
+    },
+    {
+      id: "core-web-vitals-and-page-experience",
+      title: "Core Web Vitals and Page Experience",
+      level: 2,
+    },
+    {
+      id: "structured-data-and-schema",
+      title: "Structured Data and Schema",
+      level: 2,
+    },
+    {
+      id: "the-new-layer-ai-search-readiness",
+      title: "The New Layer: AI Search Readiness",
+      level: 2,
+    },
+    {
+      id: "what-a-good-audit-report-looks-like",
+      title: "What a Good Audit Report Looks Like",
+      level: 2,
+    },
+    {
+      id: "red-flags-in-audit-services",
+      title: "Red Flags in Audit Services",
+      level: 2,
+    },
+    {
+      id: "faqs",
+      title: "Frequently Asked Questions",
+      level: 2,
+    },
+    {
+      id: "conclusion",
+      title: "Conclusion",
+      level: 2,
+    },
+  ],
+
+  content: `
+      <p>A technical SEO audit is a health check for your website. It finds the structural problems that stop search engines from crawling, understanding, and ranking your pages. Done well, it is the highest value document in SEO: a prioritised fix list ranked by impact.</p>
+      <p>Done badly, it is a long PDF of automated tool output that nobody reads and nothing changes. This guide explains what a proper technical SEO audit covers in 2026, including the new layer most audits still miss: AI search readiness.</p>
+      <p>Whether you hire an agency or run the audit in house, use this as your checklist for what good looks like.</p>
+      <h2 id="what-a-technical-seo-audit-actually-is">What a Technical SEO Audit Actually Is</h2>
+      <p>A technical audit examines everything except your content's words and your backlinks. It answers one question: can search engines access, understand, and trust your site's structure? The output should be a prioritised list of issues, each with what is wrong, why it matters, and how to fix it.</p>
+      <p>Note the word prioritised. A raw export of 400 warnings is not an audit. A proper audit tells you which ten issues actually move the needle and which 390 can wait. If the deliverable has no priorities, you paid for a scan, not an audit.</p>
+      <h2 id="crawlability-and-indexation">Crawlability and Indexation</h2>
+      <p>This is the foundation. If search engines cannot reach your pages, nothing else matters.</p>
+      <ul>
+        <li><strong>Crawl budget and behaviour.</strong> Are bots reaching your important pages, or wasting time on filters, tags, and internal search URLs? Crawl stats review shows the real picture.</li>
+        <li><strong>Index coverage.</strong> Which pages are indexed, which are excluded, and why? Thin, duplicate, or accidentally noindexed pages surface here.</li>
+        <li><strong>Redirect chains and broken links.</strong> Chains of three or more redirects slow crawlers and leak authority. They are common after redesigns.</li>
+        <li><strong>XML sitemaps and robots.txt.</strong> The sitemap should list only indexable pages and match what is actually indexed. Robots rules should block junk without blocking value.</li>
+        <li><strong>JavaScript rendering.</strong> If key content loads only through JavaScript, the audit should verify what Google actually sees after rendering, not what your browser shows.</li>
+      </ul>
+      <h2 id="core-web-vitals-and-page-experience">Core Web Vitals and Page Experience</h2>
+      <p>Speed and stability are ranking factors and conversion factors. A proper audit measures the real Core Web Vitals, not just a lab score:</p>
+      <ul>
+        <li><strong>Largest Contentful Paint.</strong> How fast the main content appears. Slow hero images and heavy scripts are the usual causes.</li>
+        <li><strong>Interaction to Next Paint.</strong> How quickly the page responds to input. Bloated JavaScript is the usual suspect.</li>
+        <li><strong>Cumulative Layout Shift.</strong> How much the layout jumps while loading. Missing image dimensions and late loading ads cause it.</li>
+      </ul>
+      <p>The audit should separate template level issues from page level ones. A slow header affects every page and is worth fixing first. A slow single page is a smaller job. Good audits also check mobile separately, since most of your visitors are on phones and mobile scores often differ sharply from desktop.</p>
+      <h2 id="structured-data-and-schema">Structured Data and Schema</h2>
+      <p>Schema markup helps search engines understand your pages and can earn rich results. The audit should check:</p>
+      <ul>
+        <li><strong>Validity.</strong> Markup with errors may be ignored entirely. Validation against current requirements matters more than the number of schema types used.</li>
+        <li><strong>Relevance.</strong> Every schema type should match visible page content. Hidden or mismatched markup is worse than none.</li>
+        <li><strong>Coverage.</strong> Key templates, like product, article, local business, and FAQ pages, should carry the schema types that fit them.</li>
+        <li><strong>Honesty about FAQ schema.</strong> Google limited FAQ rich results to government and health sites. For most businesses, FAQ schema no longer earns visible results, though the visible FAQ content itself still helps. An audit that sells FAQ schema as a big win is behind the times.</li>
+      </ul>
+      <h2 id="the-new-layer-ai-search-readiness">The New Layer: AI Search Readiness</h2>
+      <p>This is what separates a 2026 audit from an older one. AI assistants and AI Overviews choose sources using signals most technical audits never check:</p>
+      <ul>
+        <li><strong>Citation check.</strong> For your most important queries, does an AI answer appear, and is your brand cited in it? This is the AI equivalent of a rank check.</li>
+        <li><strong>Entity consistency.</strong> Your business name, address, phone number, and descriptions should match across your site, Google Business Profile, and major listings. AI systems cross reference these signals before trusting you as a source.</li>
+        <li><strong>Quotability.</strong> Can an AI lift a clean answer from your pages? Direct answers in the first paragraph, question based headings, and short paragraphs make citation far more likely.</li>
+        <li><strong>Brand mention footprint.</strong> AI systems notice how often your brand is mentioned across the web, with or without links. A thin mention footprint is a trust gap.</li>
+        <li><strong>Freshness signals.</strong> AI answers favour current information. Stale dates and outdated statistics on key pages quietly cost citations.</li>
+      </ul>
+      <p>If an audit service cannot explain this layer, it is selling you the past. Ask for it by name before you buy.</p>
+      <h2 id="what-a-good-audit-report-looks-like">What a Good Audit Report Looks Like</h2>
+      <p>Judge the deliverable, not the sales call. A good report has:</p>
+      <ul>
+        <li>An executive summary a non technical owner can understand in ten minutes.</li>
+        <li>Issues ranked by expected impact, not by tool severity scores.</li>
+        <li>Each issue explained in plain language: what it is, why it matters, how to fix it.</li>
+        <li>Separate sections for quick wins, medium projects, and long term work.</li>
+        <li>The AI readiness layer covered as its own section, not a footnote.</li>
+      </ul>
+      <p>A bad report is a PDF export from a crawler with your logo on the cover. If you could have generated it yourself in one click, you overpaid.</p>
+      <h2 id="red-flags-in-audit-services">Red Flags in Audit Services</h2>
+      <p><strong>Red flag 1: Instant delivery.</strong> A real audit takes days of analysis. A report delivered an hour after payment is automated output.</p>
+      <p><strong>Red flag 2: No priorities.</strong> Hundreds of undifferentiated warnings help nobody. Prioritisation is the actual skill you are buying.</p>
+      <p><strong>Red flag 3: Fixes sold separately with pressure.</strong> Some auditors manufacture panic to sell the repair contract. A trustworthy audit stands alone as useful even if you fix things yourself.</p>
+      <p><strong>Red flag 4: No AI layer in 2026.</strong> An audit that ignores AI search readiness is incomplete for any business that depends on search visibility.</p>
+      <h2 id="faqs">Frequently Asked Questions</h2>
+      <details>
+        <summary>What is included in a technical SEO audit?</summary>
+        <p>A proper audit covers crawlability and indexation, redirect and link health, sitemaps and robots rules, JavaScript rendering, Core Web Vitals, schema validity, and, in 2026, AI search readiness: citation checks, entity consistency, and content quotability. Every issue should come prioritised with a fix.</p>
+      </details>
+      <details>
+        <summary>How much does a technical SEO audit cost?</summary>
+        <p>Prices vary widely with site size and depth. Be suspicious of suspiciously cheap instant audits: real analysis takes days of expert time. A useful rule is that the audit should pay for itself through the fixes it prioritises. Ask exactly what the deliverable contains before comparing prices.</p>
+      </details>
+      <details>
+        <summary>How long does a technical SEO audit take?</summary>
+        <p>A genuine audit typically takes several days to two weeks of analysis for a small to mid-size site, longer for large or complex ones. A report delivered hours after payment is automated output, not an audit.</p>
+      </details>
+      <details>
+        <summary>How often should I audit my site?</summary>
+        <p>A full technical audit once a year is a sensible baseline, plus a lighter check after any redesign, migration, or major template change. Ongoing monitoring in between catches new issues before they compound.</p>
+      </details>
+      <details>
+        <summary>Can I do a technical SEO audit myself?</summary>
+        <p>You can run the scans yourself with free crawlers and Search Console, and that catches the obvious issues. What you miss without experience is prioritisation: knowing which of 300 warnings actually matter. Use this guide as your checklist and consider expert review for the judgement layer.</p>
+      </details>
+      <details>
+        <summary>What is AI search readiness in an audit?</summary>
+        <p>It is the 2026 addition to technical audits: checking whether AI assistants cite your brand for key queries, whether your business details are consistent across the web, whether your pages are structured to be quoted, and whether your brand mention footprint supports trust.</p>
+      </details>
+      <details>
+        <summary>Will fixing audit issues guarantee better rankings?</summary>
+        <p>No, and anyone who guarantees it is misleading you. Fixing technical issues removes the barriers stopping your content from performing; it does not replace the need for good content and authority. Think of it as fixing the engine before worrying about the paint.</p>
+      </details>
+      <h2 id="conclusion">Conclusion</h2>
+      <p>A technical SEO audit is only as good as its priorities and its honesty. Demand the classic pillars done properly, insist on the AI search readiness layer, and judge the report by whether a non technical person can understand what to fix first. Anything less is a scan with a cover page.</p>
+      <p>Shopping for an agency to run one? Read our <a href="/blog/best-ai-seo-agencies">guide to choosing an AI SEO agency</a> first. Still deciding between hiring models? See <a href="/blog/seo-freelancer-vs-agency">SEO freelancer vs agency</a>. On Shopify? See our <a href="/blog/shopify-technical-seo-audit-service">Shopify technical SEO audit walkthrough</a>. On WooCommerce? Read our <a href="/blog/woocommerce-seo-services">WooCommerce SEO services guide</a>.</p>
+      <p>Want to know what is actually wrong with your site? <a href="/strategy-call">Book a free SEO opportunity check</a> and get a prioritised view of your biggest technical and AI-readiness gaps.</p>
+      <div class="cta-premium-block">
+        <h2>Get a Proper Audit, Not a PDF Export</h2>
+        <p>RankVelt audits cover the full technical picture plus AI search readiness, with fixes ranked by impact. Engagements start at $525/month.</p>
+        <a href="/strategy-call" class="shimmer-btn">Book Your Free Strategy Call</a>
+      </div>
+    `,
+},
+
+{
+  id: "shopify-technical-seo-audit-service",
+
+  title: "Shopify Technical SEO Audit Service: What Gets Checked and Why",
+
+  seoTitle: "Shopify Technical SEO Audit: What Gets Checked and Why",
+
+  metaDescription:
+    "What does a Shopify technical SEO audit cover? Duplicate URLs, faceted filters, thin content, app bloat, schema markup and AI-search readiness, explained.",
+
+  ogTitle: "Shopify Technical SEO Audit: What Gets Checked and Why",
+
+  socialDescription:
+    "Inside a proper Shopify technical SEO audit: the checks that matter, the issues they catch, and how to pick a service worth paying for.",
+
+  date: "Oct 5, 2026",
+  datePublished: "2026-10-05",
+  dateModified: "2026-10-05",
+
+  author: "RankVelt Editorial Team",
+  authorType: "Organization",
+
+  category: "ECOMMERCE SEO",
+  readTime: "9 min read",
+
+  image: "/blog/shopify-technical-seo-audit-service.webp",
+
+  imageAlt:
+    "Checklist style illustration of a Shopify store technical SEO audit covering URLs, speed, schema and indexation",
+
+  excerpt:
+    "A Shopify technical SEO audit checks what actually holds stores back: duplicate collection URLs, faceted navigation bloat, thin product content, app-driven speed problems, structured data errors and AI-search readiness.",
+
+  relatedPostIds: [
+    "technical-seo-audit-services",
+    "seo-freelancer-vs-agency",
+    "woocommerce-seo-services",
+    "generative-engine-optimization-services",
+  ],
+
+  primaryService: {
+    title: "SEO Audit Services",
+    description:
+      "A deep technical audit of your store covering crawlability, indexation, speed, structured data and AI-search readiness, with fixes ranked by impact.",
+    path: "/seo-audit-services",
+  },
+
+  secondaryService: {
+    title: "Shopify SEO Services",
+    description:
+      "Ongoing Shopify SEO that fixes audit findings and builds rankings: technical cleanup, product optimisation and content that converts.",
+    path: "/shopify-seo-services",
+  },
+
+  showStandardCta: true,
+
+  keyTakeaways: [
+    "A technical audit is a diagnostic. It finds what blocks crawling, indexing and ranking, then ranks fixes by impact.",
+    "Duplicate collection URLs and faceted filter pages are the most common indexation problems on Shopify stores.",
+    "App bloat is the usual cause of slow Core Web Vitals. Every app adds JavaScript, and few stores audit which ones earn their place.",
+    "Product schema with correct price, availability and review data helps search engines and shopping features understand your catalogue.",
+    "AI search tools read the same product data as Google, so clean structured data also helps product discovery in ChatGPT and Perplexity.",
+    "A good audit ends with a prioritised fix list your developer can act on, not a generic PDF export.",
+  ],
+
+  faqItems: [
+    {
+      question: "What is a Shopify technical SEO audit?",
+      answer:
+        "It is a systematic review of the technical factors that affect how search engines crawl, index and rank a Shopify store. It covers URL structure, indexation controls, site speed, structured data, internal linking and content quality issues, and ends with a prioritised list of fixes.",
+    },
+    {
+      question: "How is a Shopify audit different from a general SEO audit?",
+      answer:
+        "Shopify has platform-specific quirks: duplicate collection URLs, faceted navigation filters that create thousands of thin pages, app-driven speed problems and theme-level schema errors. A Shopify-focused audit checks these specifically instead of applying generic checks.",
+    },
+    {
+      question: "How long does a Shopify technical SEO audit take?",
+      answer:
+        "For a typical store it takes one to two weeks, depending on catalogue size and complexity. Very large catalogues with heavy faceting can take longer because the crawl and indexation analysis is more involved.",
+    },
+    {
+      question: "How much does a Shopify technical SEO audit cost?",
+      answer:
+        "Pricing varies by store size and audit depth. RankVelt's SEO services start at $525 per month, and audit work is scoped around what your store actually needs rather than a fixed package.",
+    },
+    {
+      question: "Will a technical audit fix my rankings on its own?",
+      answer:
+        "No. An audit finds the problems, but someone still has to fix them. Rankings improve after the fixes are implemented: canonical issues resolved, speed improved, thin content rewritten. The audit tells you exactly where to spend that effort.",
+    },
+    {
+      question: "Can I run a Shopify SEO audit myself with free tools?",
+      answer:
+        "You can catch surface issues with free crawlers and PageSpeed Insights. What DIY audits usually miss is judgement: which of the 200 flagged issues actually matter, how Shopify's URL quirks interact, and how to prioritise fixes by revenue impact.",
+    },
+    {
+      question: "Does a technical audit cover AI search visibility?",
+      answer:
+        "A modern one should. AI shopping assistants read product titles, descriptions, specs and structured data when recommending products. An audit that checks data quality for AI discovery covers both Google and the AI layer at once.",
+    },
+  ],
+
+  toc: [
+    {
+      id: "what-is-a-shopify-technical-seo-audit",
+      title: "What Is a Shopify Technical SEO Audit?",
+      level: 2,
+    },
+    {
+      id: "duplicate-collection-urls",
+      title: "Duplicate Collection URLs",
+      level: 2,
+    },
+    {
+      id: "faceted-navigation-and-indexation",
+      title: "Faceted Navigation and Indexation",
+      level: 2,
+    },
+    {
+      id: "thin-product-content",
+      title: "Thin Product Content",
+      level: 2,
+    },
+    {
+      id: "app-bloat-and-core-web-vitals",
+      title: "App Bloat and Core Web Vitals",
+      level: 2,
+    },
+    {
+      id: "structured-data-for-products",
+      title: "Structured Data for Products",
+      level: 2,
+    },
+    {
+      id: "ai-search-readiness-for-product-discovery",
+      title: "AI-Search Readiness for Product Discovery",
+      level: 2,
+    },
+    {
+      id: "what-a-good-audit-report-includes",
+      title: "What a Good Audit Report Includes",
+      level: 2,
+    },
+    {
+      id: "how-to-choose-an-audit-service",
+      title: "How to Choose an Audit Service",
+      level: 2,
+    },
+    {
+      id: "faqs",
+      title: "Frequently Asked Questions",
+      level: 2,
+    },
+    {
+      id: "conclusion",
+      title: "Conclusion",
+      level: 2,
+    },
+  ],
+
+  content: `
+      <p>A Shopify technical SEO audit is a systematic check of everything that can stop your store from being crawled, indexed and ranked. It looks under the hood: URL structure, indexation controls, site speed, structured data and content quality. This guide explains what a proper audit covers, why each check matters, and how to tell a good audit service from a thin automated report.</p>
+      <p>Shopify is a solid platform for SEO, but it has known quirks. Collection pages create duplicate URLs. Filters generate thousands of near-identical pages. Apps quietly slow the store down. None of this is fatal, but left unchecked it eats away at rankings month after month. An audit finds these issues and ranks them by impact, so you fix what matters first.</p>
+      <h2 id="what-is-a-shopify-technical-seo-audit">What Is a Shopify Technical SEO Audit?</h2>
+      <p>It is a diagnostic, not a fix. Think of it like a health check: the audit finds problems and explains them, then someone still has to do the treatment.</p>
+      <p>A proper Shopify audit covers six areas:</p>
+      <ul>
+        <li><strong>Crawlability.</strong> Can search engines reach every important page without getting stuck in filter loops or dead ends?</li>
+        <li><strong>Indexation.</strong> Which pages are indexed, which are not, and are the right ones kept out?</li>
+        <li><strong>Site architecture.</strong> How many clicks from the homepage to a product, and does link equity flow sensibly?</li>
+        <li><strong>Page speed.</strong> Core Web Vitals on the templates that matter: homepage, collection, product, cart.</li>
+        <li><strong>Structured data.</strong> Is product schema present, valid and accurate?</li>
+        <li><strong>Content quality.</strong> Thin, duplicated or missing content on product and collection pages.</li>
+      </ul>
+      <p>What makes it Shopify-specific is the platform's behaviour. A generic audit flags "duplicate content" and moves on. A Shopify audit knows exactly where Shopify creates duplicates and how to handle each case.</p>
+      <h2 id="duplicate-collection-urls">Duplicate Collection URLs</h2>
+      <p>This is the classic Shopify issue. The platform can serve the same collection through several URLs: the clean collection path, paginated versions, and product URLs that include the collection path. Sorting options add more variants.</p>
+      <p>Canonical tags are supposed to consolidate these, and on a healthy store they do. Problems start when themes are customised or apps rewrite URLs, breaking the canonical logic. Suddenly Google sees five versions of one collection and splits the ranking signals between them.</p>
+      <p>An audit checks canonical tags across collection, product and paginated templates, verifies they point to the right canonical version, and flags cases where the canonical points at a page that itself is not indexable. It also checks that internal links consistently use the canonical URL, because mixed internal linking weakens the signal further.</p>
+      <h2 id="faceted-navigation-and-indexation">Faceted Navigation and Indexation</h2>
+      <p>Filters are great for shoppers and dangerous for SEO. Every combination of size, colour, price and brand filters creates a URL. A store with modest filtering can generate tens of thousands of these pages, most with nearly identical content.</p>
+      <p>Google will crawl them if you let it. That burns crawl budget on pages that will never rank and can dilute the authority of the collection pages that should rank.</p>
+      <p>The audit maps every filter parameter and checks how each is handled. The right treatment depends on the filter:</p>
+      <ul>
+        <li><strong>Canonicalisation</strong> for filters that shoppers use but that add no search value, pointing back to the main collection page.</li>
+        <li><strong>Noindex</strong> for filter combinations with some internal use but no ranking potential.</li>
+        <li><strong>Blocking in robots.txt</strong> for parameter patterns that should never be crawled at all.</li>
+        <li><strong>Indexable landing pages</strong> for the rare filter combinations with real search demand, like a brand plus category page with unique content.</li>
+      </ul>
+      <p>Getting this wrong in either direction costs money. Over-blocking can hide pages that could rank. Under-blocking floods the index with junk. The audit should recommend a per-filter policy, not a blanket rule.</p>
+      <h2 id="thin-product-content">Thin Product Content</h2>
+      <p>Many Shopify stores run on short product descriptions, sometimes a single sentence, sometimes copied from the manufacturer. When fifty products share similar copy, none of them gives Google a reason to rank.</p>
+      <p>An audit measures content depth across product and collection templates: word counts, duplicate ratios, missing descriptions, and empty collection intro text. It flags the worst offenders and, more usefully, identifies which thin pages actually have ranking potential so rewriting effort goes where it pays.</p>
+      <p>Collection pages deserve special attention. A collection targeting a competitive term with no intro text and no supporting content is just a product grid. Google has little to rank beyond the products themselves. The audit should call this out and suggest content blocks that add context without hurting the shopping experience.</p>
+      <h2 id="app-bloat-and-core-web-vitals">App Bloat and Core Web Vitals</h2>
+      <p>Every Shopify app injects JavaScript. Reviews, upsells, chat widgets, popups, loyalty programmes: each one adds weight. Individually they seem harmless. Together they can push a product page's load time from acceptable to painful.</p>
+      <p>The audit measures Core Web Vitals on real templates, not just the homepage. Largest Contentful Paint, Interaction to Next Paint and Cumulative Layout Shift are checked on collection and product pages, because that is where the money is. Then it traces the slowdowns to their sources: which apps load on which templates, which scripts block rendering, which ones can be deferred or removed.</p>
+      <p>Common findings include apps loading on every page when they only work on one template, duplicate functionality from two apps doing the same job, and heavy scripts from apps that were installed for a test and never removed. The fix list usually starts with deleting what is not needed, which is free and often the biggest single speed win.</p>
+      <h2 id="structured-data-for-products">Structured Data for Products</h2>
+      <p>Product schema tells search engines the facts about your catalogue: name, price, availability, reviews, images. Done right, it powers rich results with prices and star ratings. Done wrong, it generates errors that sit in Search Console for months.</p>
+      <p>An audit validates the product markup across templates and checks for the errors that actually matter:</p>
+      <ul>
+        <li><strong>Missing required fields</strong> like price or availability that disqualify the rich result.</li>
+        <li><strong>Stale data</strong>, such as markup showing in-stock on sold-out products.</li>
+        <li><strong>Review schema without real reviews</strong>, which violates guidelines and risks a manual flag.</li>
+        <li><strong>Conflicting markup</strong> from the theme and an SEO app both outputting product schema.</li>
+        <li><strong>Variant handling</strong>, where each variant needs correct price and availability data.</li>
+      </ul>
+      <p>The audit should also check alignment with Google Merchant Center data if you run Shopping ads, because mismatches between site markup and feed data cause disapprovals.</p>
+      <h2 id="ai-search-readiness-for-product-discovery">AI-Search Readiness for Product Discovery</h2>
+      <p>Shoppers increasingly ask AI assistants for product recommendations instead of scrolling search results. A query like "best running shoes for flat feet under $150" gets an AI answer that names specific products. Whether your products appear in those answers depends on the same data quality the rest of this audit checks.</p>
+      <p>AI tools read product pages the way search engines do: clear titles, complete specifications, unique descriptions and structured data. Thin manufacturer copy gives an AI nothing quotable. Clean, specific product data gives it material to cite.</p>
+      <p>A modern audit therefore checks AI-search readiness alongside classic SEO: are product facts complete and consistent, is brand and product entity information clear, and do category pages explain who each product is for? Stores that fix this for Google get the AI layer largely for free, because both systems reward the same clarity.</p>
+      <h2 id="what-a-good-audit-report-includes">What a Good Audit Report Includes</h2>
+      <p>A useful report is a work plan, not a data dump. Look for these elements:</p>
+      <ul>
+        <li><strong>Prioritisation.</strong> Every issue ranked by expected impact, so the top five fixes are obvious.</li>
+        <li><strong>Severity ratings.</strong> Critical, important and nice-to-have, applied consistently.</li>
+        <li><strong>Fix instructions.</strong> Each issue explained well enough that a developer can implement it without guesswork.</li>
+        <li><strong>Evidence.</strong> Screenshots, crawl data and examples for every claim, so nothing is taken on trust.</li>
+        <li><strong>Benchmarks.</strong> Before-state measurements for speed and indexation, so progress can be verified after fixes.</li>
+      </ul>
+      <p>What you do not want is a 100-page automated crawl export with no judgement. If the report cannot tell you what to fix first, it has not done its job.</p>
+      <h2 id="how-to-choose-an-audit-service">How to Choose an Audit Service</h2>
+      <p>Ask how much of the audit is manual. Crawlers find issues, humans decide which ones matter. A service that only runs software and exports the results is selling you something you could generate yourself.</p>
+      <p>Ask for Shopify-specific experience. The platform's URL behaviour, theme architecture and app ecosystem reward specialists. Generic auditors miss the quirks or, worse, recommend fixes that break Shopify functionality.</p>
+      <p>Ask what happens after the report. The best services either implement fixes or give your developer exact instructions. An audit that ends at delivery leaves the hardest part, the actual work, entirely on you.</p>
+      <p>Red flags: fully automated reports with no manual review, no prioritisation, vague recommendations like "improve site speed" with no specifics, and heavy upsell pressure before the findings are even discussed.</p>
+      <h2 id="faqs">Frequently Asked Questions</h2>
+      <details>
+        <summary>What is a Shopify technical SEO audit?</summary>
+        <p>It is a systematic review of the technical factors that affect how search engines crawl, index and rank a Shopify store. It covers URL structure, indexation controls, site speed, structured data, internal linking and content quality issues, and ends with a prioritised list of fixes.</p>
+      </details>
+      <details>
+        <summary>How is a Shopify audit different from a general SEO audit?</summary>
+        <p>Shopify has platform-specific quirks: duplicate collection URLs, faceted navigation filters that create thousands of thin pages, app-driven speed problems and theme-level schema errors. A Shopify-focused audit checks these specifically instead of applying generic checks.</p>
+      </details>
+      <details>
+        <summary>How long does a Shopify technical SEO audit take?</summary>
+        <p>For a typical store it takes one to two weeks, depending on catalogue size and complexity. Very large catalogues with heavy faceting can take longer because the crawl and indexation analysis is more involved.</p>
+      </details>
+      <details>
+        <summary>How much does a Shopify technical SEO audit cost?</summary>
+        <p>Pricing varies by store size and audit depth. RankVelt's SEO services start at $525 per month, and audit work is scoped around what your store actually needs rather than a fixed package.</p>
+      </details>
+      <details>
+        <summary>Will a technical audit fix my rankings on its own?</summary>
+        <p>No. An audit finds the problems, but someone still has to fix them. Rankings improve after the fixes are implemented: canonical issues resolved, speed improved, thin content rewritten. The audit tells you exactly where to spend that effort.</p>
+      </details>
+      <details>
+        <summary>Can I run a Shopify SEO audit myself with free tools?</summary>
+        <p>You can catch surface issues with free crawlers and PageSpeed Insights. What DIY audits usually miss is judgement: which of the 200 flagged issues actually matter, how Shopify's URL quirks interact, and how to prioritise fixes by revenue impact.</p>
+      </details>
+      <details>
+        <summary>Does a technical audit cover AI search visibility?</summary>
+        <p>A modern one should. AI shopping assistants read product titles, descriptions, specs and structured data when recommending products. An audit that checks data quality for AI discovery covers both Google and the AI layer at once.</p>
+      </details>
+      <h2 id="conclusion">Conclusion</h2>
+      <p>A Shopify technical SEO audit service earns its fee by finding the specific things holding your store back and telling you what to fix first. Duplicate collection URLs, runaway faceted navigation, thin product content, app bloat and broken schema are the usual suspects. Add AI-search readiness to the checklist and one audit covers both Google rankings and product discovery in AI answers.</p>
+      <p>If your store has grown organically without a proper technical review, an audit is the highest-leverage SEO spend available. You cannot fix what you have not found.</p>
+      <p>If you want a Shopify audit that covers the technical foundations and AI-search readiness in one pass, <a href="/strategy-call">book a free strategy call</a> and we will scope it around your store.</p>
+      <div class="cta-premium-block">
+        <h2>Get a Shopify Audit That Finds What Matters</h2>
+        <p>RankVelt audits your store's URLs, speed, schema and AI-search readiness, then hands you a prioritised fix list ranked by revenue impact.</p>
+        <a href="/strategy-call?package=Shopify%20SEO%20Audit" class="shimmer-btn">Book Your Free Strategy Call</a>
+      </div>
+    `,
+},
+
+{
+  id: "local-citation-building-services",
+
+  title: "Local Citation Building Services: What They Are and When You Need Them",
+
+  seoTitle: "Local Citation Building Services: A Complete Guide",
+
+  metaDescription:
+    "What are local citation building services? Learn what citations are, why NAP consistency matters, which directories count, and how to pick a service.",
+
+  ogTitle: "Local Citation Building Services: A Complete Guide",
+
+  socialDescription:
+    "Citations explained: what they are, why consistency matters for Google and AI search, and how to evaluate a citation building service.",
+
+  date: "Oct 5, 2026",
+  datePublished: "2026-10-05",
+  dateModified: "2026-10-05",
+
+  author: "RankVelt Editorial Team",
+  authorType: "Organization",
+
+  category: "SEO SERVICES",
+  readTime: "8 min read",
+
+  image: "/blog/local-citation-building-services.webp",
+
+  imageAlt:
+    "Illustration of local business citations across directories with consistent name, address and phone details",
+
+  excerpt:
+    "Local citation building services create consistent listings of your business across directories. Learn what citations are, why NAP consistency matters for Google and AI search, and when hiring a service beats DIY.",
+
+  relatedPostIds: [
+    "why-hire-local-seo-company",
+    "hire-remote-seo-specialist",
+    "technical-seo-audit-services",
+    "best-ai-seo-agencies",
+  ],
+
+  primaryService: {
+    title: "Local SEO",
+    description:
+      "Rank in Google Maps and AI local answers with optimised profiles, consistent citations and review strategy built for local customers.",
+    path: "/local-seo",
+  },
+
+  secondaryService: {
+    title: "SEO Audit Services",
+    description:
+      "Find out where your local presence is leaking: citation gaps, profile issues and technical problems, ranked by impact.",
+    path: "/seo-audit-services",
+  },
+
+  showStandardCta: true,
+
+  keyTakeaways: [
+    "Citations are mentions of your business name, address and phone number across directories and websites.",
+    "Consistent NAP data builds trust with Google and with AI search tools that cross-check business details.",
+    "A handful of major directories and data aggregators matter far more than hundreds of weak listings.",
+    "AI assistants verify business facts across multiple sources, so citation consistency now feeds AI visibility too.",
+    "Citation building is slow, repetitive manual work, which is exactly why services exist.",
+    "Judge a citation service on manual submissions, reporting and cleanup work, not on raw listing counts.",
+  ],
+
+  faqItems: [
+    {
+      question: "What is a local citation?",
+      answer:
+        "A local citation is any online mention of your business name, address and phone number. It can be a full directory listing with a link, or just a text mention on another website. Search engines use citations to verify that a business is real and to understand where it operates.",
+    },
+    {
+      question: "Do citations still matter for local SEO in 2026?",
+      answer:
+        "Yes. Citations remain a core local ranking factor because they confirm business legitimacy and location. Their role has also grown: AI search tools cross-check business details across sources, so consistent citations now support visibility in AI answers as well as Google Maps.",
+    },
+    {
+      question: "What is NAP consistency?",
+      answer:
+        "NAP stands for name, address and phone number. Consistency means these details are identical everywhere they appear online: same spelling, same abbreviations, same phone format. Inconsistencies confuse search engines and erode trust in your business data.",
+    },
+    {
+      question: "Which directories matter most for citations?",
+      answer:
+        "Your Google Business Profile matters most, followed by major platforms like Apple Maps, Bing Places and Facebook, plus data aggregators that feed hundreds of smaller directories. Industry-specific directories relevant to your trade come next. Beyond that, returns diminish quickly.",
+    },
+    {
+      question: "Can I build citations myself instead of hiring a service?",
+      answer:
+        "Yes, and for a brand-new business with no existing listings, DIY is reasonable. It becomes worth hiring a service when you have dozens of inconsistent listings to clean up, multiple locations, or simply no time for the repetitive submission work.",
+    },
+    {
+      question: "How long does citation building take to affect rankings?",
+      answer:
+        "New citations typically take several weeks to be discovered and factored in. Cleanup of wrong listings can take longer because incorrect data has to be corrected at the source. Expect a two to three month window before judging results.",
+    },
+    {
+      question: "Do citations help my business show up in ChatGPT and Perplexity?",
+      answer:
+        "Indirectly but genuinely. AI assistants verify business facts against multiple sources before recommending a local business. Consistent citations across trusted directories make your business data easier to verify, which supports inclusion in AI-generated local answers.",
+    },
+  ],
+
+  toc: [
+    {
+      id: "what-are-local-citations",
+      title: "What Are Local Citations?",
+      level: 2,
+    },
+    {
+      id: "why-nap-consistency-matters",
+      title: "Why NAP Consistency Matters",
+      level: 2,
+    },
+    {
+      id: "which-directories-actually-matter",
+      title: "Which Directories Actually Matter",
+      level: 2,
+    },
+    {
+      id: "citations-as-ai-search-entity-signals",
+      title: "Citations as AI-Search Entity Signals",
+      level: 2,
+    },
+    {
+      id: "when-you-need-a-citation-service",
+      title: "When You Need a Citation Service",
+      level: 2,
+    },
+    {
+      id: "diy-vs-citation-building-service",
+      title: "DIY vs Citation Building Service",
+      level: 2,
+    },
+    {
+      id: "how-to-evaluate-a-citation-service",
+      title: "How to Evaluate a Citation Service",
+      level: 2,
+    },
+    {
+      id: "faqs",
+      title: "Frequently Asked Questions",
+      level: 2,
+    },
+    {
+      id: "conclusion",
+      title: "Conclusion",
+      level: 2,
+    },
+  ],
+
+  content: `
+      <p>A local citation is any online mention of your business name, address and phone number. Local citation building services create and correct these listings across directories, so search engines see consistent business data everywhere. This guide explains what citations are, why consistency matters, which directories count, and when paying for a service makes sense.</p>
+      <p>Citations are one of the least glamorous parts of local SEO. Nobody gets excited about directory submissions. But they are foundational: before Google trusts your business enough to rank it in the map pack, it checks whether the rest of the web agrees on who you are and where you operate.</p>
+      <h2 id="what-are-local-citations">What Are Local Citations?</h2>
+      <p>A citation has three core parts, known as NAP: name, address and phone number. A complete citation also includes your website URL, opening hours and business category, but NAP is the minimum.</p>
+      <p>Citations come in two forms. Structured citations are formal directory listings: your Google Business Profile, Yelp, industry directories. Unstructured citations are plain text mentions: a local newspaper naming your business and address, a blog listing local suppliers. Both count, because both are evidence that your business exists at a real location.</p>
+      <p>What citations are not: they are not backlinks in the traditional sense. Most citation links are nofollow, and that is fine. Their value is verification, not link equity. They tell Google your business is legitimate, located where you claim, and reachable at the number you publish.</p>
+      <h2 id="why-nap-consistency-matters">Why NAP Consistency Matters</h2>
+      <p>Search engines compare your business details across every source they can find. When ten directories show the same name, address and phone number, confidence is high. When three show an old address, two show a different phone format and one abbreviates your business name differently, confidence drops.</p>
+      <p>Inconsistency usually comes from history, not carelessness. Businesses move premises, change phone numbers, rebrand slightly. Each change leaves old data behind on directories nobody remembers creating. Over years, the web accumulates several versions of your business.</p>
+      <p>The practical rule is simple: pick one exact format for your name, address and phone number, and use it everywhere. "Street" versus "St." matters. A tracking number that differs from your main number matters. Decide once, document it, and never deviate. Citation building services start every engagement by locking this canonical format, because everything else depends on it.</p>
+      <h2 id="which-directories-actually-matter">Which Directories Actually Matter</h2>
+      <p>Not all citations are equal. A small set of sources carries most of the weight:</p>
+      <ul>
+        <li><strong>Your Google Business Profile.</strong> The single most important local listing. Everything else supports it.</li>
+        <li><strong>Major platforms.</strong> Apple Maps, Bing Places, Facebook. These are where customers actually look, and Google cross-references them.</li>
+        <li><strong>Data aggregators.</strong> A few large data companies feed business information to hundreds of smaller directories and apps. Correct data at the aggregator level propagates outward.</li>
+        <li><strong>Industry directories.</strong> The directories specific to your trade, like legal or medical or home services directories, carry topical relevance that generic ones do not.</li>
+        <li><strong>Local sources.</strong> Chamber of commerce pages, local news sites, community directories. Few in number, high in trust.</li>
+      </ul>
+      <p>Beyond this tier, returns diminish fast. A service boasting "500 citations" is usually padding the number with directories nobody visits and search engines barely trust. Forty correct listings on sources that matter beat five hundred on sources that do not.</p>
+      <h2 id="citations-as-ai-search-entity-signals">Citations as AI-Search Entity Signals</h2>
+      <p>Here is the part most citation guides have not caught up with. AI assistants like ChatGPT, Perplexity and Google's AI answers now recommend local businesses directly. When someone asks for the best plumber in an area, the AI does not just check Google rankings. It verifies business details across multiple sources before naming anyone.</p>
+      <p>This makes citation consistency an AI visibility factor. If your hours, address and phone number agree across trusted directories, the AI can verify your business with confidence. If sources disagree, the AI either skips you or, worse, states the wrong details to a potential customer.</p>
+      <p>The implication for citation work: accuracy now matters beyond Google. Every listing is a data point that AI systems may read. A citation building service that understands this will treat consistency as entity management, not just directory submissions, and will prioritise the sources AI systems actually consult.</p>
+      <h2 id="when-you-need-a-citation-service">When You Need a Citation Service</h2>
+      <p>Not every business needs one. Here is how to decide.</p>
+      <p><strong>You probably need a service if:</strong> your business has moved, rebranded or changed phone numbers and old data is scattered everywhere; you operate multiple locations and keeping listings in sync is unmanageable; or previous DIY attempts left a mess of duplicates and half-finished profiles.</p>
+      <p><strong>You can probably DIY if:</strong> the business is brand new with no existing listings, you have one location, and you have a few free afternoons. The major directories all accept free submissions. It is slow but straightforward.</p>
+      <p><strong>Cleanup is the real use case.</strong> Building fresh citations is the easy part. Finding every wrong, duplicate and outdated listing for an established business, then correcting each at its source, is detective work. That is where a service earns its fee.</p>
+      <h2 id="diy-vs-citation-building-service">DIY vs Citation Building Service</h2>
+      <p>Doing it yourself costs nothing but time. Expect several hours for the first batch of major directories, plus ongoing monitoring. The work is repetitive: same business details, same categories, same descriptions, submitted one directory at a time, each with its own quirks and verification steps.</p>
+      <p>A service brings three things: speed through process, knowledge of which directories matter for your industry and country, and cleanup capability. The last one is the differentiator. Anyone can submit new listings. Finding and fixing wrong ones requires knowing where to look and how each platform's correction process works.</p>
+      <p>Watch out for services that only build and never clean. If your problem is inconsistent existing data, new citations on top of wrong ones just add noise. The engagement should start with an audit of what already exists.</p>
+      <p>If managing the whole local presence feels like too much on top of running the business, read <a href="/blog/why-hire-local-seo-company">why businesses hire a local SEO company</a>.</p>
+      <h2 id="how-to-evaluate-a-citation-service">How to Evaluate a Citation Service</h2>
+      <p>Ask these questions before hiring anyone:</p>
+      <ul>
+        <li><strong>Do they start with an audit?</strong> A serious service maps your existing citations first and shows you the inconsistencies before quoting cleanup work.</li>
+        <li><strong>Are submissions manual?</strong> Automated blasts to hundreds of directories create more problems than they solve. Manual submission with correct categories and descriptions is the standard worth paying for.</li>
+        <li><strong>What do they report?</strong> You should get a list of live listings with URLs, not just a count. Verify a sample yourself.</li>
+        <li><strong>Do they handle duplicates and wrong data?</strong> Building is easy. Suppression of duplicates and correction of wrong listings is the skilled part.</li>
+        <li><strong>What is the ongoing plan?</strong> Business data changes. A one-time blast decays. Ask how they monitor and maintain accuracy over time.</li>
+      </ul>
+      <p>Red flags: promises of a specific ranking improvement from citations alone, counts in the hundreds as the main selling point, no audit before quoting, and no reporting you can verify.</p>
+      <h2 id="faqs">Frequently Asked Questions</h2>
+      <details>
+        <summary>What is a local citation?</summary>
+        <p>A local citation is any online mention of your business name, address and phone number. It can be a full directory listing with a link, or just a text mention on another website. Search engines use citations to verify that a business is real and to understand where it operates.</p>
+      </details>
+      <details>
+        <summary>Do citations still matter for local SEO in 2026?</summary>
+        <p>Yes. Citations remain a core local ranking factor because they confirm business legitimacy and location. Their role has also grown: AI search tools cross-check business details across sources, so consistent citations now support visibility in AI answers as well as Google Maps.</p>
+      </details>
+      <details>
+        <summary>What is NAP consistency?</summary>
+        <p>NAP stands for name, address and phone number. Consistency means these details are identical everywhere they appear online: same spelling, same abbreviations, same phone format. Inconsistencies confuse search engines and erode trust in your business data.</p>
+      </details>
+      <details>
+        <summary>Which directories matter most for citations?</summary>
+        <p>Your Google Business Profile matters most, followed by major platforms like Apple Maps, Bing Places and Facebook, plus data aggregators that feed hundreds of smaller directories. Industry-specific directories relevant to your trade come next. Beyond that, returns diminish quickly.</p>
+      </details>
+      <details>
+        <summary>Can I build citations myself instead of hiring a service?</summary>
+        <p>Yes, and for a brand-new business with no existing listings, DIY is reasonable. It becomes worth hiring a service when you have dozens of inconsistent listings to clean up, multiple locations, or simply no time for the repetitive submission work.</p>
+      </details>
+      <details>
+        <summary>How long does citation building take to affect rankings?</summary>
+        <p>New citations typically take several weeks to be discovered and factored in. Cleanup of wrong listings can take longer because incorrect data has to be corrected at the source. Expect a two to three month window before judging results.</p>
+      </details>
+      <details>
+        <summary>Do citations help my business show up in ChatGPT and Perplexity?</summary>
+        <p>Indirectly but genuinely. AI assistants verify business facts against multiple sources before recommending a local business. Consistent citations across trusted directories make your business data easier to verify, which supports inclusion in AI-generated local answers.</p>
+      </details>
+      <h2 id="conclusion">Conclusion</h2>
+      <p>Local citation building services do unglamorous but necessary work: making sure the web agrees on your business details. Consistent NAP data supports Google Maps rankings, and now it also feeds the entity verification that AI assistants perform before recommending local businesses.</p>
+      <p>If your listings are a mess of old addresses and duplicate profiles, a cleanup-focused service is money well spent. If you are starting fresh with one location, DIY the major directories and spend your budget on reviews and content instead.</p>
+      <p>If you want your local presence audited, citations cleaned up and AI-search ready in one engagement, <a href="/strategy-call">book a free strategy call</a> and we will map out what your business actually needs.</p>
+      <div class="cta-premium-block">
+        <h2>Fix Your Local Citations Once, Properly</h2>
+        <p>RankVelt audits your existing listings, cleans up duplicates and wrong data, and builds consistent citations that Google and AI assistants can trust.</p>
+        <a href="/strategy-call?package=Local%20SEO" class="shimmer-btn">Book Your Free Strategy Call</a>
+      </div>
+    `,
+},
+
+{
+  id: "woocommerce-seo-services",
+
+  title: "WooCommerce SEO Services: Getting Your Store Found in 2026",
+
+  seoTitle: "WooCommerce SEO Services: Get Found in 2026",
+
+  metaDescription:
+    "WooCommerce SEO services explained: product and category optimisation, duplicate content fixes, speed, schema and AI-search product discovery for 2026.",
+
+  ogTitle: "WooCommerce SEO Services: Get Found in 2026",
+
+  socialDescription:
+    "How WooCommerce SEO services get stores found: foundations, product pages, technical fixes and AI-search product discovery.",
+
+  date: "Oct 5, 2026",
+  datePublished: "2026-10-05",
+  dateModified: "2026-10-05",
+
+  author: "RankVelt Editorial Team",
+  authorType: "Organization",
+
+  category: "ECOMMERCE SEO",
+  readTime: "9 min read",
+
+  image: "/blog/woocommerce-seo-services.webp",
+
+  imageAlt:
+    "Illustration of a WooCommerce store being optimised for search with product pages, speed and structured data",
+
+  excerpt:
+    "WooCommerce gives you full SEO control, but most stores waste it. Learn what WooCommerce SEO services cover: product and category optimisation, duplicate content fixes, speed, schema and AI-search product discovery.",
+
+  relatedPostIds: [
+    "shopify-technical-seo-audit-service",
+    "generative-engine-optimization-services",
+    "seo-freelancer-vs-agency",
+    "best-ai-seo-agencies",
+  ],
+
+  primaryService: {
+    title: "Ecommerce SEO Services",
+    description:
+      "Full-funnel SEO for online stores: technical foundations, product and category optimisation, and content built to rank and convert.",
+    path: "/ecommerce-seo-services",
+  },
+
+  secondaryService: {
+    title: "AI SEO Agency",
+    description:
+      "AI-first SEO that gets your products cited in Google AI Overviews, ChatGPT and Perplexity, not just ranked in blue links.",
+    path: "/ai-seo-agency",
+  },
+
+  showStandardCta: true,
+
+  keyTakeaways: [
+    "WooCommerce's strength is control: you own the code, the URLs and the server, so every SEO lever is available.",
+    "Most WooCommerce SEO problems come from neglect, not the platform: thin product pages, duplicate content and slow hosting.",
+    "Category pages are your highest-leverage pages. They target the broad terms that product pages cannot.",
+    "Duplicate content from tags, filters and pagination needs a deliberate indexation policy.",
+    "Product schema with accurate price and availability data powers rich results and shopping features.",
+    "AI shopping assistants read the same product data as Google, so optimisation for one helps the other.",
+  ],
+
+  faqItems: [
+    {
+      question: "Is WooCommerce good for SEO?",
+      answer:
+        "Yes. Because it runs on WordPress, you control URLs, site structure, schema, speed optimisation and content completely. That control is its biggest SEO advantage over closed platforms. The downside is that nothing is handled for you, so neglected stores accumulate technical debt.",
+    },
+    {
+      question: "What is the biggest SEO problem with WooCommerce stores?",
+      answer:
+        "Thin and duplicated product content. Short manufacturer descriptions, empty category pages, and tag and filter URLs creating thousands of near-identical pages are the most common issues. A good service fixes content depth and indexation policy together.",
+    },
+    {
+      question: "Do I need an SEO plugin for WooCommerce?",
+      answer:
+        "A solid SEO plugin helps with titles, meta descriptions, sitemaps and basic schema, but it does not do SEO for you. Think of it as plumbing: necessary, but the strategy, content and technical fixes are what actually move rankings.",
+    },
+    {
+      question: "How do I optimise WooCommerce product pages?",
+      answer:
+        "Write unique descriptions that answer buyer questions, use descriptive titles with the key product attributes, add original images with descriptive alt text, include specifications in a structured format, and mark up the page with valid product schema including price and availability.",
+    },
+    {
+      question: "How do I fix duplicate content in WooCommerce?",
+      answer:
+        "Audit tag, attribute and pagination URLs first. Then apply the right treatment per URL type: noindex for thin filter pages, canonical tags for paginated series, and consolidation or deletion for tags that add no value. One blanket rule rarely fits.",
+    },
+    {
+      question: "Can WooCommerce products show up in AI search answers?",
+      answer:
+        "Yes. AI shopping assistants read product pages the same way search engines do. Stores with complete product data, unique descriptions and valid structured data are far more likely to be quoted when an AI recommends products.",
+    },
+    {
+      question: "How long does WooCommerce SEO take to work?",
+      answer:
+        "Technical fixes can show effects within weeks once recrawled. Content and authority building typically take three to six months to move competitive terms. New stores should expect the longer end of that range while trust signals accumulate.",
+    },
+  ],
+
+  toc: [
+    {
+      id: "woocommerce-seo-foundations",
+      title: "WooCommerce SEO Foundations",
+      level: 2,
+    },
+    {
+      id: "product-page-optimisation",
+      title: "Product Page Optimisation",
+      level: 2,
+    },
+    {
+      id: "category-page-optimisation",
+      title: "Category Page Optimisation",
+      level: 2,
+    },
+    {
+      id: "duplicate-content-and-pagination",
+      title: "Duplicate Content and Pagination",
+      level: 2,
+    },
+    {
+      id: "site-speed-for-woocommerce",
+      title: "Site Speed for WooCommerce",
+      level: 2,
+    },
+    {
+      id: "structured-data-for-products",
+      title: "Structured Data for Products",
+      level: 2,
+    },
+    {
+      id: "ai-search-product-discovery",
+      title: "AI-Search Product Discovery",
+      level: 2,
+    },
+    {
+      id: "faqs",
+      title: "Frequently Asked Questions",
+      level: 2,
+    },
+    {
+      id: "conclusion",
+      title: "Conclusion",
+      level: 2,
+    },
+  ],
+
+  content: `
+      <p>WooCommerce powers a huge share of online stores, and for SEO it offers something rare: complete control. You own the code, the URLs, the server and the content. That control is powerful, but most stores waste it. This guide explains what WooCommerce SEO services actually do, from foundations to product pages to the technical pitfalls that quietly hold stores back.</p>
+      <p>The pattern is familiar. A store launches, products get added quickly with short descriptions, plugins pile up, and nobody looks at the technical side for a year. Rankings stall. The platform is not the problem. Neglect is. A proper SEO engagement starts by fixing the foundations, then builds on them.</p>
+      <h2 id="woocommerce-seo-foundations">WooCommerce SEO Foundations</h2>
+      <p>Before tactics, get the basics right. These are unglamorous and non-negotiable:</p>
+      <ul>
+        <li><strong>Clean URL structure.</strong> Short, descriptive product and category URLs without unnecessary parameters or dates.</li>
+        <li><strong>HTTPS everywhere.</strong> No mixed content warnings, which still appear on stores with hardcoded image links.</li>
+        <li><strong>XML sitemaps.</strong> Product, category and image sitemaps submitted and kept current as stock changes.</li>
+        <li><strong>Robots.txt sanity.</strong> Admin, cart and checkout areas blocked; nothing important accidentally disallowed.</li>
+        <li><strong>One domain version.</strong> Consistent www or non-www with proper redirects, since WordPress makes it easy to end up with both.</li>
+      </ul>
+      <p>An SEO service should verify all of this in the first week. If an agency jumps straight to link building while the foundations are broken, that is a red flag.</p>
+      <h2 id="product-page-optimisation">Product Page Optimisation</h2>
+      <p>Product pages are where revenue happens, so they deserve the most content effort. The common failure is manufacturer copy: the same short description that appears on fifty other stores. Google has no reason to rank your version over anyone else's.</p>
+      <p>What strong product pages include:</p>
+      <ul>
+        <li><strong>Unique descriptions</strong> that answer real buyer questions: who is this for, what problem does it solve, how does it compare to alternatives?</li>
+        <li><strong>Descriptive titles</strong> with the attributes buyers search for: material, size, use case, not just a model number.</li>
+        <li><strong>Original images</strong> with descriptive file names and alt text, not the supplier's stock photos alone.</li>
+        <li><strong>Structured specifications</strong> in tables or lists, which both shoppers and machines parse easily.</li>
+        <li><strong>Reviews.</strong> Real customer reviews add unique content no competitor can copy and feed star ratings in search results.</li>
+      </ul>
+      <p>Prioritise by revenue. Rewrite the top twenty percent of products by sales first. Long-tail products can wait, but your money pages cannot.</p>
+      <h2 id="category-page-optimisation">Category Page Optimisation</h2>
+      <p>Category pages are the most undervalued asset in WooCommerce SEO. They target the broad commercial terms, the "buy running shoes" queries, that individual product pages rarely rank for. Yet most category pages are just product grids with no text at all.</p>
+      <p>A service worth hiring will treat categories as landing pages: a clear H1 matching the target term, a few hundred words of genuinely useful intro content, buying guidance, and links to subcategories and top products. This content sits above or below the grid without hurting the shopping experience.</p>
+      <p>Category pages also shape site architecture. A logical hierarchy, with subcategories nested properly and linked consistently, distributes authority to the products beneath. Flat structures where every category hangs off the homepage waste that distribution.</p>
+      <h2 id="duplicate-content-and-pagination">Duplicate Content and Pagination</h2>
+      <p>WordPress plus WooCommerce creates duplicates in several ways, and stores rarely address all of them:</p>
+      <ul>
+        <li><strong>Tag pages.</strong> Product tags generate thin archive pages that add nothing beyond the category. Most should be noindexed or the tags removed.</li>
+        <li><strong>Attribute filters.</strong> Colour and size filters create parameter URLs with near-identical content. These need canonical or noindex treatment.</li>
+        <li><strong>Pagination.</strong> Page two, three and four of a category series need proper rel canonical or noindex handling so they do not compete with page one.</li>
+        <li><strong>HTTP versus HTTPS and www variants.</strong> Old WordPress installs often resolve multiple versions. Redirects must consolidate them.</li>
+      </ul>
+      <p>The fix is a deliberate indexation policy, decided per URL type, not a plugin setting applied blindly. An audit should map every duplicate source first, because you cannot fix what you have not inventoried.</p>
+      <h2 id="site-speed-for-woocommerce">Site Speed for WooCommerce</h2>
+      <p>WooCommerce stores are often slow, and the causes are predictable: shared hosting straining under database queries, too many plugins, unoptimised images, and no caching strategy.</p>
+      <p>Speed work follows a clear order. Hosting comes first, because no plugin fixes an overloaded server. Then caching, configured correctly for dynamic cart and checkout pages that must never be cached. Then images: modern formats, proper sizing, lazy loading below the fold. Then plugin triage: every active plugin justified, duplicates removed, heavy scripts deferred.</p>
+      <p>Measure on product and category templates, not just the homepage. A homepage that scores well while product pages crawl is a common and misleading result. Core Web Vitals should be checked where the transactions happen.</p>
+      <h2 id="structured-data-for-products">Structured Data for Products</h2>
+      <p>Product schema is one of the highest-value technical tasks for a store. It powers price and availability in search results, star ratings from reviews, and product carousels. It also feeds Google's shopping surfaces.</p>
+      <p>The markup must be accurate. Price and availability in the schema have to match what the page shows, or you risk losing rich results. Review markup requires actual reviews on the page. Variant products need per-variant data, not one generic block.</p>
+      <p>Common WooCommerce issues include schema output by both the theme and an SEO plugin, creating conflicting markup, and stale availability data when stock changes are not reflected in the structured data. An SEO service should validate the markup across templates and fix the source, not just silence the errors.</p>
+      <h2 id="ai-search-product-discovery">AI-Search Product Discovery</h2>
+      <p>Product discovery is moving into AI answers. Shoppers ask ChatGPT or Perplexity for recommendations and get named products with reasons. Whether your products get named depends on the same data quality this whole guide covers.</p>
+      <p>AI assistants read product pages like search engines do: titles, descriptions, specifications and structured data. A store with complete, specific, well-structured product data gives AI systems quotable material. A store with thin manufacturer copy gives them nothing to work with.</p>
+      <p>This is why WooCommerce SEO services in 2026 should cover AI-search readiness as standard. The work overlaps almost completely with classic product optimisation: unique content, complete specs, valid schema, clear brand information. Do it once, benefit in both Google results and AI answers.</p>
+      <h2 id="faqs">Frequently Asked Questions</h2>
+      <details>
+        <summary>Is WooCommerce good for SEO?</summary>
+        <p>Yes. Because it runs on WordPress, you control URLs, site structure, schema, speed optimisation and content completely. That control is its biggest SEO advantage over closed platforms. The downside is that nothing is handled for you, so neglected stores accumulate technical debt.</p>
+      </details>
+      <details>
+        <summary>What is the biggest SEO problem with WooCommerce stores?</summary>
+        <p>Thin and duplicated product content. Short manufacturer descriptions, empty category pages, and tag and filter URLs creating thousands of near-identical pages are the most common issues. A good service fixes content depth and indexation policy together.</p>
+      </details>
+      <details>
+        <summary>Do I need an SEO plugin for WooCommerce?</summary>
+        <p>A solid SEO plugin helps with titles, meta descriptions, sitemaps and basic schema, but it does not do SEO for you. Think of it as plumbing: necessary, but the strategy, content and technical fixes are what actually move rankings.</p>
+      </details>
+      <details>
+        <summary>How do I optimise WooCommerce product pages?</summary>
+        <p>Write unique descriptions that answer buyer questions, use descriptive titles with the key product attributes, add original images with descriptive alt text, include specifications in a structured format, and mark up the page with valid product schema including price and availability.</p>
+      </details>
+      <details>
+        <summary>How do I fix duplicate content in WooCommerce?</summary>
+        <p>Audit tag, attribute and pagination URLs first. Then apply the right treatment per URL type: noindex for thin filter pages, canonical tags for paginated series, and consolidation or deletion for tags that add no value. One blanket rule rarely fits.</p>
+      </details>
+      <details>
+        <summary>Can WooCommerce products show up in AI search answers?</summary>
+        <p>Yes. AI shopping assistants read product pages the same way search engines do. Stores with complete product data, unique descriptions and valid structured data are far more likely to be quoted when an AI recommends products.</p>
+      </details>
+      <details>
+        <summary>How long does WooCommerce SEO take to work?</summary>
+        <p>Technical fixes can show effects within weeks once recrawled. Content and authority building typically take three to six months to move competitive terms. New stores should expect the longer end of that range while trust signals accumulate.</p>
+      </details>
+      <h2 id="conclusion">Conclusion</h2>
+      <p>WooCommerce gives you every SEO lever a store could want. The stores that win are the ones that actually pull them: unique product content, category pages treated as landing pages, a deliberate indexation policy, fast hosting and accurate structured data. Layer AI-search readiness on top and the same work pays off in Google results and AI answers alike.</p>
+      <p>If your store has been running on default settings and thin content, the opportunity is significant. The fixes are known, the order is clear, and the compounding starts the day they ship.</p>
+      <p>If you want a WooCommerce SEO plan built around your catalogue, not a generic checklist, <a href="/strategy-call">book a free strategy call</a> and we will map the highest-impact work first.</p>
+      <div class="cta-premium-block">
+        <h2>Get Your WooCommerce Store Found</h2>
+        <p>RankVelt fixes the technical foundations, rebuilds product and category content, and makes your catalogue ready for Google and AI search alike.</p>
+        <a href="/strategy-call?package=Ecommerce%20SEO" class="shimmer-btn">Book Your Free Strategy Call</a>
+      </div>
+    `,
+},
+
+{
+  id: "generative-engine-optimization-services",
+
+  title: "Generative Engine Optimization Services: What GEO Actually Involves",
+
+  seoTitle: "GEO Services: What Generative Engine Optimization Involves",
+
+  metaDescription:
+    "What do generative engine optimization services actually include? An honest guide to entity optimisation, citation-friendly content, and schema markup.",
+
+  ogTitle: "GEO Services: What Generative Engine Optimization Involves",
+
+  socialDescription:
+    "GEO explained honestly: entities, citations, schema, and why solid SEO is the real foundation.",
+
+  date: "Oct 5, 2026",
+  datePublished: "2026-10-05",
+  dateModified: "2026-10-05",
+
+  author: "RankVelt Editorial Team",
+  authorType: "Organization",
+
+  category: "AI SEARCH SEO",
+  readTime: "9 min read",
+
+  image: "/blog/generative-engine-optimization-services.webp",
+
+  imageAlt:
+    "Illustration of a website being cited as a source inside AI-generated search answers",
+
+  excerpt:
+    "Generative engine optimization services promise AI search visibility. Here is an honest breakdown of what GEO actually involves: entity optimisation, citation-friendly structure, schema, and the SEO fundamentals underneath it all.",
+
+  relatedPostIds: [
+    "best-ai-seo-agencies",
+    "technical-seo-audit-services",
+    "hire-remote-seo-specialist",
+  ],
+
+  primaryService: {
+    title: "AI SEO Agency",
+    description:
+      "AI-first SEO that targets Google rankings and AI search citations together, built for how customers actually search in 2026.",
+    path: "/ai-seo-agency",
+  },
+
+  secondaryService: {
+    title: "SEO Audit Services",
+    description:
+      "A full technical and AI-visibility audit that shows exactly where your site stands and what to fix first.",
+    path: "/seo-audit-services",
+  },
+
+  showStandardCta: true,
+
+  keyTakeaways: [
+    "GEO aims for citations inside AI answers, while traditional SEO aims for ranking positions. The two overlap but the target differs.",
+    "Entity optimisation means making it unambiguous who you are, what you offer, and why you are credible.",
+    "Citation-friendly content answers questions directly, early, with clear structure AI systems can lift cleanly.",
+    "FAQPage and Article schema help indirectly through rich results, but no schema magically unlocks AI visibility.",
+    "Solid SEO fundamentals are the foundation of GEO. There are no shortcuts, secret files, or magic markup.",
+    "Judge a GEO provider by their process and transparency, not by jargon or guaranteed citation counts.",
+  ],
+
+  faqItems: [
+    {
+      question: "What is generative engine optimization?",
+      answer:
+        "Generative engine optimization (GEO) is the practice of structuring your website content and brand signals so AI search engines like ChatGPT, Perplexity, and Google AI Overviews can understand, trust, and cite your pages when generating answers.",
+    },
+    {
+      question: "How is GEO different from traditional SEO?",
+      answer:
+        "Traditional SEO targets ranking positions and clicks in search results. GEO targets citations and brand mentions inside AI-generated answers. The tactics overlap heavily, because AI systems largely draw from the same well-ranked, trustworthy pages, but the goal being measured is different.",
+    },
+    {
+      question: "Do I need an llms.txt file for GEO?",
+      answer:
+        "No. This is one of the most repeated myths. AI search systems do not require or reward a special llms.txt file. Standard crawlable HTML content, good structure, and genuine authority are what matter.",
+    },
+    {
+      question: "Which schema markup helps with GEO?",
+      answer:
+        "FAQPage, Article, Organization, and LocalBusiness schema help indirectly by earning rich results and clarifying your entities to search engines. But no schema type directly forces an AI system to cite you. Treat schema as supporting infrastructure, not the strategy itself.",
+    },
+    {
+      question: "Can GEO replace traditional SEO?",
+      answer:
+        "No, and any provider who says otherwise is selling something. AI search features are built on top of the same ranking systems as traditional search. Pages that rank well and demonstrate real expertise are the ones that get cited. GEO extends SEO, it does not replace it.",
+    },
+    {
+      question: "How long does GEO take to show results?",
+      answer:
+        "Like SEO, it is a medium-term investment. Technical fixes and content restructuring can show movement within weeks, but building the entity authority that earns consistent citations typically takes a few months of sustained work.",
+    },
+    {
+      question: "What should a GEO service actually deliver?",
+      answer:
+        "At minimum: an entity and content audit, citation-friendly restructuring of key pages, schema implementation, a plan for original expert content, and honest reporting on citations and mentions. Be wary of vague promises or guaranteed placement counts.",
+    },
+  ],
+
+  toc: [
+    {
+      id: "what-is-generative-engine-optimization",
+      title: "What Is Generative Engine Optimization?",
+      level: 2,
+    },
+    {
+      id: "how-geo-differs-from-traditional-seo",
+      title: "How GEO Differs From Traditional SEO",
+      level: 2,
+    },
+    {
+      id: "what-geo-services-actually-include",
+      title: "What GEO Services Actually Include",
+      level: 2,
+    },
+    {
+      id: "entity-optimisation",
+      title: "Entity Optimisation",
+      level: 3,
+    },
+    {
+      id: "citation-friendly-content-structure",
+      title: "Citation-Friendly Content Structure",
+      level: 3,
+    },
+    {
+      id: "schema-markup-that-helps",
+      title: "Schema Markup That Helps",
+      level: 3,
+    },
+    {
+      id: "technical-foundations",
+      title: "Technical Foundations",
+      level: 3,
+    },
+    {
+      id: "geo-myths-to-ignore",
+      title: "GEO Myths to Ignore",
+      level: 2,
+    },
+    {
+      id: "how-to-evaluate-a-geo-service-provider",
+      title: "How to Evaluate a GEO Service Provider",
+      level: 2,
+    },
+    {
+      id: "faqs",
+      title: "Frequently Asked Questions",
+      level: 2,
+    },
+    {
+      id: "conclusion",
+      title: "Conclusion",
+      level: 2,
+    },
+  ],
+
+  content: `
+      <p>Generative engine optimization services are everywhere right now. Every agency seems to offer them, and every pitch promises to get your brand cited by ChatGPT, Perplexity, and Google AI Overviews. But what do these services actually involve, and how do you separate a legitimate offering from clever marketing? This guide gives you the honest picture.</p>
+      <p>The short version: GEO is the practice of structuring your content and brand signals so AI search engines understand, trust, and cite you. It is not a trick and it is not a hack. It builds on solid SEO fundamentals, then adds layers designed for how AI systems read and reference the web.</p>
+      <h2 id="what-is-generative-engine-optimization">What Is Generative Engine Optimization?</h2>
+      <p>When someone asks ChatGPT for the best project management tool for remote teams, the AI does not invent an answer from nothing. It draws on sources it considers trustworthy and synthesises them into a response, sometimes with links, sometimes with brand mentions.</p>
+      <p>Generative engine optimization is the work of becoming one of those trusted sources. It covers everything that helps an AI system find your content, understand what it says, judge it credible, and reference it in answers.</p>
+      <p>Notice what this definition does not include: secret files, magic markup, or prompt manipulation. Those do not work, and we will cover the myths later in this guide.</p>
+      <h2 id="how-geo-differs-from-traditional-seo">How GEO Differs From Traditional SEO</h2>
+      <p>Traditional SEO and GEO share most of their DNA. AI search features sit on top of the same ranking systems that power regular search results. A page that ranks well, demonstrates expertise, and earns links is already a strong candidate for AI citations.</p>
+      <p>The differences are in emphasis:</p>
+      <ul>
+        <li><strong>Traditional SEO</strong> optimises for ranking positions and the clicks those positions earn.</li>
+        <li><strong>GEO</strong> optimises for citations and brand mentions inside AI-generated answers, whether or not a click follows.</li>
+        <li><strong>Traditional SEO</strong> measures success in positions, traffic, and conversions.</li>
+        <li><strong>GEO</strong> adds citation frequency, mention share, and presence in AI answers to the scoreboard.</li>
+      </ul>
+      <p>In practice, a good GEO service does traditional SEO properly first, then layers on the AI-specific work. Anyone offering GEO without solid SEO underneath is building on sand.</p>
+      <h2 id="what-geo-services-actually-include">What GEO Services Actually Include</h2>
+      <p>A legitimate GEO service has four working parts. If a proposal is missing any of them, ask why.</p>
+      <h3 id="entity-optimisation">Entity Optimisation</h3>
+      <p>AI systems think in entities: businesses, people, products, places, and the relationships between them. Entity optimisation means making it unambiguous who you are, what you offer, and why you are credible.</p>
+      <p>In practice this means: a clear, factual About page and homepage that state your value proposition in plain language. Consistent business details across your site and third-party listings. Author attribution on content so expertise is traceable to real people or a real organisation. Structured data that identifies your organisation with sameAs links to established profiles.</p>
+      <p>The test is simple: could an AI system explain your business accurately after reading your site once? If the answer is no, your messaging is too vague.</p>
+      <h3 id="citation-friendly-content-structure">Citation-Friendly Content Structure</h3>
+      <p>AI systems lift passages from pages. Pages that get cited tend to share a structure: the direct answer appears early, headings are phrased as real questions, paragraphs are short and self-contained, and claims are specific rather than fluffy.</p>
+      <p>This does not mean dumbing content down. It means organising it so both humans and machines can extract the point quickly. A 2,000-word guide with a clear answer in the first 100 words beats a 2,000-word guide that buries the answer at the end.</p>
+      <p>Original data, examples, and first-hand detail matter enormously here. AI systems favour sources that add something new, not pages that restate what ten other pages already say.</p>
+      <h3 id="schema-markup-that-helps">Schema Markup That Helps</h3>
+      <p>Schema markup helps search engines understand your content, which feeds AI features indirectly. The useful types for most businesses:</p>
+      <ul>
+        <li><strong>Organization and LocalBusiness:</strong> clarifies who you are as an entity.</li>
+        <li><strong>Article:</strong> marks up guides and blog content with authorship and dates.</li>
+        <li><strong>FAQPage:</strong> structures question-and-answer content for rich results.</li>
+        <li><strong>Product and Review:</strong> for ecommerce, clarifies offerings and social proof.</li>
+      </ul>
+      <p>Implement schema correctly and completely, but keep expectations honest. No schema type directly forces an AI system to cite you. It is supporting infrastructure, not the strategy.</p>
+      <h3 id="technical-foundations">Technical Foundations</h3>
+      <p>None of the above works if AI crawlers cannot access and render your site. A GEO service should verify crawlability, page speed, mobile rendering, and clean indexation. These are classic technical SEO tasks, and they matter just as much for AI visibility as for rankings.</p>
+      <h2 id="geo-myths-to-ignore">GEO Myths to Ignore</h2>
+      <p>The GEO space is full of confident claims that do not hold up. Three to discard:</p>
+      <p><strong>Myth 1: You need an llms.txt file.</strong> You do not. AI search systems have stated clearly that no special machine-readable file earns preferential treatment. A clean, crawlable website is what counts.</p>
+      <p><strong>Myth 2: There is a secret schema for AI search.</strong> There is not. Structured data earns rich results, which feed AI features indirectly. Beyond that, no markup unlocks generative visibility.</p>
+      <p><strong>Myth 3: You must chop content into tiny fragments for AI.</strong> AI systems handle nuance across full pages and surface the relevant part themselves. Write complete, well-structured pages and let the systems do their job.</p>
+      <p>The boring truth underneath all three myths: continuing solid SEO practice is GEO. Rank well, write with real expertise, keep technical hygiene tight, and AI citations tend to follow.</p>
+      <h2 id="how-to-evaluate-a-geo-service-provider">How to Evaluate a GEO Service Provider</h2>
+      <p>Ask these questions before signing anything:</p>
+      <ul>
+        <li><strong>What is your process?</strong> Look for audits, restructuring, content plans, and reporting. Vague answers about "AI signals" are a red flag.</li>
+        <li><strong>How do you measure success?</strong> Citations, mentions, and AI impression trends are honest metrics. Guaranteed citation counts are not, because no one controls AI outputs.</li>
+        <li><strong>Do you do traditional SEO too?</strong> If they dismiss rankings and technical SEO, they do not understand how AI search actually works.</li>
+        <li><strong>Can you show your methodology on a sample page?</strong> A competent provider can walk through exactly what they would change on one of your pages and why.</li>
+      </ul>
+      <p>Good GEO work is transparent and methodical. If the pitch relies on jargon you cannot verify, walk away.</p>
+      <h2 id="faqs">Frequently Asked Questions</h2>
+      <details>
+        <summary>What is generative engine optimization?</summary>
+        <p>Generative engine optimization (GEO) is the practice of structuring your website content and brand signals so AI search engines like ChatGPT, Perplexity, and Google AI Overviews can understand, trust, and cite your pages when generating answers.</p>
+      </details>
+      <details>
+        <summary>How is GEO different from traditional SEO?</summary>
+        <p>Traditional SEO targets ranking positions and clicks in search results. GEO targets citations and brand mentions inside AI-generated answers. The tactics overlap heavily, because AI systems largely draw from the same well-ranked, trustworthy pages, but the goal being measured is different.</p>
+      </details>
+      <details>
+        <summary>Do I need an llms.txt file for GEO?</summary>
+        <p>No. This is one of the most repeated myths. AI search systems do not require or reward a special llms.txt file. Standard crawlable HTML content, good structure, and genuine authority are what matter.</p>
+      </details>
+      <details>
+        <summary>Which schema markup helps with GEO?</summary>
+        <p>FAQPage, Article, Organization, and LocalBusiness schema help indirectly by earning rich results and clarifying your entities to search engines. But no schema type directly forces an AI system to cite you. Treat schema as supporting infrastructure, not the strategy itself.</p>
+      </details>
+      <details>
+        <summary>Can GEO replace traditional SEO?</summary>
+        <p>No, and any provider who says otherwise is selling something. AI search features are built on top of the same ranking systems as traditional search. Pages that rank well and demonstrate real expertise are the ones that get cited. GEO extends SEO, it does not replace it.</p>
+      </details>
+      <details>
+        <summary>How long does GEO take to show results?</summary>
+        <p>Like SEO, it is a medium-term investment. Technical fixes and content restructuring can show movement within weeks, but building the entity authority that earns consistent citations typically takes a few months of sustained work.</p>
+      </details>
+      <details>
+        <summary>What should a GEO service actually deliver?</summary>
+        <p>At minimum: an entity and content audit, citation-friendly restructuring of key pages, schema implementation, a plan for original expert content, and honest reporting on citations and mentions. Be wary of vague promises or guaranteed placement counts.</p>
+      </details>
+      <h2 id="conclusion">Conclusion</h2>
+      <p>Generative engine optimization services are worth paying for when they do the real work: entity clarity, citation-friendly content structure, proper schema, and the SEO fundamentals underneath it all. They are worth avoiding when they sell myths, secret files, and guaranteed placements.</p>
+      <p>If you are comparing providers, start with our guide on <a href="/blog/best-ai-seo-agencies">how to evaluate AI SEO agencies</a> so you know what good looks like. And if your site has technical issues holding it back, a <a href="/blog/technical-seo-audit-services">technical SEO audit</a> is the right first step before any AI visibility work.</p>
+      <p>Want an honest assessment of your AI search visibility? <a href="/strategy-call">Book a free strategy call</a> and we will show you exactly where your brand stands in AI answers today.</p>
+    `,
+},
+
+{
+  id: "hire-remote-seo-specialist",
+
+  title: "Hire a Remote SEO Specialist: A Practical Guide for 2026",
+
+  seoTitle: "Hire a Remote SEO Specialist: Practical Guide 2026",
+
+  metaDescription:
+    "How to hire a remote SEO specialist in 2026: vetting questions, red flags, freelancer vs agency costs, and why AI-search expertise matters now.",
+
+  ogTitle: "Hire a Remote SEO Specialist: Practical Guide 2026",
+
+  socialDescription:
+    "Vetting questions, red flags, and pricing clarity for hiring a remote SEO specialist who can win in AI search.",
+
+  date: "Oct 5, 2026",
+  datePublished: "2026-10-05",
+  dateModified: "2026-10-05",
+
+  author: "RankVelt Editorial Team",
+  authorType: "Organization",
+
+  category: "SEO SERVICES",
+  readTime: "8 min read",
+
+  image: "/blog/hire-remote-seo-specialist.webp",
+
+  imageAlt:
+    "Illustration of a remote SEO specialist working with a client over video call on search strategy",
+
+  excerpt:
+    "Hiring a remote SEO specialist in 2026? This practical guide covers what to look for, the vetting questions that reveal real skill, red flags to avoid, and why AI-search expertise is now non-negotiable.",
+
+  relatedPostIds: [
+    "seo-freelancer-vs-agency",
+    "generative-engine-optimization-services",
+    "why-hire-local-seo-company",
+  ],
+
+  primaryService: {
+    title: "Hire SEO Expert",
+    description:
+      "Work with a dedicated SEO specialist backed by an agency team, with transparent pricing and AI-search expertise built in.",
+    path: "/hire-seo-expert",
+  },
+
+  secondaryService: {
+    title: "AI SEO Agency",
+    description:
+      "AI-first SEO that targets Google rankings and AI search citations together, built for how customers actually search in 2026.",
+    path: "/ai-seo-agency",
+  },
+
+  showStandardCta: true,
+
+  keyTakeaways: [
+    "A good remote SEO specialist combines technical skill, content judgement, and clear reporting. Test all three before hiring.",
+    "Freelancers suit small defined projects, agencies suit ongoing growth, and in-house suits companies with constant SEO demand.",
+    "Vetting questions about past process, failure stories, and AI search reveal far more than portfolio screenshots.",
+    "Guaranteed rankings, secret methods, and rock-bottom prices are the three classic red flags.",
+    "AI-search expertise is now essential: your specialist should optimise for citations in AI answers, not just blue links.",
+    "RankVelt pairs you with a dedicated specialist from $525 per month, minimum three months, then month to month.",
+  ],
+
+  faqItems: [
+    {
+      question: "What does a remote SEO specialist do?",
+      answer:
+        "A remote SEO specialist handles your search visibility from anywhere: technical audits, keyword strategy, on-page optimisation, content guidance, link building, and reporting. The good ones also track how your brand appears in AI-generated answers, not just traditional rankings.",
+    },
+    {
+      question: "How much does it cost to hire a remote SEO specialist?",
+      answer:
+        "Pricing varies widely. Freelancers may charge hourly or per project, while agencies typically work on monthly retainers. RankVelt's dedicated specialist model starts at $525 per month with a minimum three-month term, then continues month to month. Be cautious of prices far below market rate: quality SEO takes real hours each month.",
+    },
+    {
+      question: "Freelancer, agency, or in-house: which is best?",
+      answer:
+        "Freelancers suit small, well-defined projects and tight budgets. Agencies suit businesses that want ongoing growth with a team behind one point of contact. In-house specialists suit larger companies with constant SEO demand and the budget for a full-time salary. Most small and mid-size businesses get the best balance from an agency specialist.",
+    },
+    {
+      question: "What questions should I ask before hiring an SEO specialist?",
+      answer:
+        "Ask how they would audit your site, what they would prioritise in the first 90 days, how they measure success beyond rankings, and how they approach AI search visibility. Ask for a failure story too: honest specialists can describe something that did not work and what they learned.",
+    },
+    {
+      question: "What are red flags when hiring an SEO specialist?",
+      answer:
+        "Guaranteed #1 rankings, claims of secret methods or special relationships with Google, prices far below market rate, no clear reporting process, and anyone who cannot explain their work in plain language. Also be wary of specialists who dismiss AI search entirely: that channel is only growing.",
+    },
+    {
+      question: "How long before SEO work shows results?",
+      answer:
+        "Technical fixes can show movement within weeks. Meaningful ranking and traffic growth typically takes three to six months of consistent work. AI citation visibility follows a similar timeline. Anyone promising dramatic results in days is not being honest.",
+    },
+    {
+      question: "Do I need AI-search expertise from my SEO specialist?",
+      answer:
+        "Yes. A growing share of product and service research now happens inside AI answers from ChatGPT, Perplexity, and Google AI Overviews. A specialist who only thinks in blue links is optimising for half the search landscape. Ask candidates specifically how they approach AI citations.",
+    },
+  ],
+
+  toc: [
+    {
+      id: "what-a-remote-seo-specialist-actually-does",
+      title: "What a Remote SEO Specialist Actually Does",
+      level: 2,
+    },
+    {
+      id: "freelancer-vs-agency-vs-in-house",
+      title: "Freelancer vs Agency vs In-House",
+      level: 2,
+    },
+    {
+      id: "what-to-look-for-before-you-hire",
+      title: "What to Look for Before You Hire",
+      level: 2,
+    },
+    {
+      id: "vetting-questions-that-reveal-real-skill",
+      title: "Vetting Questions That Reveal Real Skill",
+      level: 2,
+    },
+    {
+      id: "red-flags-that-mean-walk-away",
+      title: "Red Flags That Mean Walk Away",
+      level: 2,
+    },
+    {
+      id: "why-ai-search-expertise-matters-in-2026",
+      title: "Why AI-Search Expertise Matters in 2026",
+      level: 2,
+    },
+    {
+      id: "how-rankvelts-dedicated-specialist-model-works",
+      title: "How RankVelt's Dedicated Specialist Model Works",
+      level: 2,
+    },
+    {
+      id: "faqs",
+      title: "Frequently Asked Questions",
+      level: 2,
+    },
+    {
+      id: "conclusion",
+      title: "Conclusion",
+      level: 2,
+    },
+  ],
+
+  content: `
+      <p>Hiring a remote SEO specialist sounds simple until you start looking. Marketplaces are full of profiles promising first-page rankings, agencies all sound the same, and the price range runs from suspiciously cheap to frighteningly expensive. This guide gives you a practical way through it.</p>
+      <p>The core idea: you are not buying rankings. You are hiring judgement. A good specialist knows what to fix first, what to ignore, and how to explain both in plain language. Here is how to find one.</p>
+      <h2 id="what-a-remote-seo-specialist-actually-does">What a Remote SEO Specialist Actually Does</h2>
+      <p>A remote SEO specialist owns your search visibility from wherever they work. The day-to-day job covers technical audits, keyword strategy, on-page optimisation, content briefs, internal linking, digital PR and link building, plus reporting that connects the work to business results.</p>
+      <p>In 2026 the job has grown a second half: AI search visibility. Your specialist should also track whether your brand gets cited in ChatGPT answers, Perplexity responses, and Google AI Overviews, and know how to improve those odds. If a candidate only talks about blue links, their map of search is out of date.</p>
+      <h2 id="freelancer-vs-agency-vs-in-house">Freelancer vs Agency vs In-House</h2>
+      <p>Three hiring models, three different fits:</p>
+      <ul>
+        <li><strong>Freelancer.</strong> Best for small, well-defined projects: a one-time audit, a site migration, a few months of link building. Lower cost, but you get one person's skill set and availability. Quality varies enormously, which makes vetting critical.</li>
+        <li><strong>Agency specialist.</strong> Best for ongoing growth. You get a dedicated specialist plus a team behind them: technical backup, content support, and someone to cover holidays. More structured reporting and accountability than a solo freelancer.</li>
+        <li><strong>In-house.</strong> Best for larger companies with constant SEO demand. Full attention on your brand, but you carry the full salary, benefits, and the risk that one person cannot cover every specialty.</li>
+      </ul>
+      <p>For most small and mid-size businesses, the agency specialist model hits the sweet spot: dedicated attention without a full-time salary, and a team when the work needs more than one skill set.</p>
+      <h2 id="what-to-look-for-before-you-hire">What to Look for Before You Hire</h2>
+      <p>Three qualities matter more than years on a CV:</p>
+      <ul>
+        <li><strong>Technical competence.</strong> They should read a crawl report, diagnose indexation issues, and explain site speed problems without hand-waving.</li>
+        <li><strong>Content judgement.</strong> SEO is mostly content decisions now. They should brief writers well, recognise thin pages, and know what deserves to exist on your site.</li>
+        <li><strong>Clear reporting.</strong> They should connect work to outcomes: what changed, what moved, what is next. Reports full of vanity metrics and no decisions are a warning sign.</li>
+      </ul>
+      <p>Bonus quality for 2026: curiosity about AI search. Ask what they have tested in ChatGPT or Perplexity lately. Specialists who experiment stay ahead of the ones who wait for blog posts to tell them what changed.</p>
+      <h2 id="vetting-questions-that-reveal-real-skill">Vetting Questions That Reveal Real Skill</h2>
+      <p>Portfolio screenshots are easy to fake and hard to interpret. These questions are harder to bluff:</p>
+      <ul>
+        <li><strong>"How would you audit our site?"</strong> Listen for a structured process: crawl, indexation, content quality, links, then prioritisation. Rambling means no process.</li>
+        <li><strong>"What would you do in the first 90 days?"</strong> Good answers sequence quick technical wins, then content gaps, then authority building. Anyone who starts with link packages has it backwards.</li>
+        <li><strong>"How do you measure success beyond rankings?"</strong> Look for traffic quality, conversions, and AI citation visibility. Rankings-only thinking is a decade old.</li>
+        <li><strong>"Tell me about something that failed."</strong> Honest specialists have failure stories and lessons. Anyone who claims everything always worked is either inexperienced or dishonest.</li>
+        <li><strong>"How do you approach AI search visibility?"</strong> In 2026 this separates current practitioners from outdated ones. Vague answers here are disqualifying.</li>
+      </ul>
+      <h2 id="red-flags-that-mean-walk-away">Red Flags That Mean Walk Away</h2>
+      <p><strong>Guaranteed rankings.</strong> Nobody controls Google. Guarantees are either lies or target keywords so obscure the guarantee is meaningless.</p>
+      <p><strong>Secret methods.</strong> Legitimate SEO is explainable. "Proprietary techniques" usually means link schemes they do not want you to inspect.</p>
+      <p><strong>Prices far below market.</strong> Real SEO takes real hours each month: audits, content, outreach, reporting. Prices that cannot cover those hours mean corners are being cut, often with risky link tactics.</p>
+      <p><strong>No reporting process.</strong> If they cannot tell you what you will receive each month and how success is judged, you are buying a black box.</p>
+      <p><strong>Dismissal of AI search.</strong> A specialist who says AI search does not matter is not watching where their own industry is going.</p>
+      <h2 id="why-ai-search-expertise-matters-in-2026">Why AI-Search Expertise Matters in 2026</h2>
+      <p>A growing share of buying research now happens inside AI answers. Someone comparing email tools or local plumbers may never see ten blue links at all. They read a ChatGPT summary, and the brands cited there win the shortlist.</p>
+      <p>This changes what your specialist must do: structure content so AI systems can cite it cleanly, build entity clarity so your brand is understood, and track citation visibility alongside rankings. It is not a separate discipline bolted onto SEO. It is SEO, extended to where the answers now live.</p>
+      <p>When vetting candidates, this is the simplest filter. Ask how they would get your brand cited in AI answers for your main buying queries. The good ones have a concrete answer. The rest will change the subject.</p>
+      <h2 id="how-rankvelts-dedicated-specialist-model-works">How RankVelt's Dedicated Specialist Model Works</h2>
+      <p>RankVelt pairs you with a dedicated SEO specialist backed by an agency team. You get one point of contact who knows your business, plus technical and content support behind them when the work needs it.</p>
+      <p>The model is built around AI-first SEO: traditional rankings and AI search citations are handled together, because in 2026 they are two halves of the same job. Monthly reporting shows what changed, what moved, and what happens next, in plain language.</p>
+      <p>Pricing starts at $525 per month, with a minimum term of three months, then continuing month to month. No long lock-ins, no vague deliverables.</p>
+      <h2 id="faqs">Frequently Asked Questions</h2>
+      <details>
+        <summary>What does a remote SEO specialist do?</summary>
+        <p>A remote SEO specialist handles your search visibility from anywhere: technical audits, keyword strategy, on-page optimisation, content guidance, link building, and reporting. The good ones also track how your brand appears in AI-generated answers, not just traditional rankings.</p>
+      </details>
+      <details>
+        <summary>How much does it cost to hire a remote SEO specialist?</summary>
+        <p>Pricing varies widely. Freelancers may charge hourly or per project, while agencies typically work on monthly retainers. RankVelt's dedicated specialist model starts at $525 per month with a minimum three-month term, then continues month to month. Be cautious of prices far below market rate: quality SEO takes real hours each month.</p>
+      </details>
+      <details>
+        <summary>Freelancer, agency, or in-house: which is best?</summary>
+        <p>Freelancers suit small, well-defined projects and tight budgets. Agencies suit businesses that want ongoing growth with a team behind one point of contact. In-house specialists suit larger companies with constant SEO demand and the budget for a full-time salary. Most small and mid-size businesses get the best balance from an agency specialist.</p>
+      </details>
+      <details>
+        <summary>What questions should I ask before hiring an SEO specialist?</summary>
+        <p>Ask how they would audit your site, what they would prioritise in the first 90 days, how they measure success beyond rankings, and how they approach AI search visibility. Ask for a failure story too: honest specialists can describe something that did not work and what they learned.</p>
+      </details>
+      <details>
+        <summary>What are red flags when hiring an SEO specialist?</summary>
+        <p>Guaranteed number-one rankings, claims of secret methods or special relationships with Google, prices far below market rate, no clear reporting process, and anyone who cannot explain their work in plain language. Also be wary of specialists who dismiss AI search entirely: that channel is only growing.</p>
+      </details>
+      <details>
+        <summary>How long before SEO work shows results?</summary>
+        <p>Technical fixes can show movement within weeks. Meaningful ranking and traffic growth typically takes three to six months of consistent work. AI citation visibility follows a similar timeline. Anyone promising dramatic results in days is not being honest.</p>
+      </details>
+      <details>
+        <summary>Do I need AI-search expertise from my SEO specialist?</summary>
+        <p>Yes. A growing share of product and service research now happens inside AI answers from ChatGPT, Perplexity, and Google AI Overviews. A specialist who only thinks in blue links is optimising for half the search landscape. Ask candidates specifically how they approach AI citations.</p>
+      </details>
+      <h2 id="conclusion">Conclusion</h2>
+      <p>Hiring a remote SEO specialist comes down to vetting judgement, not credentials. Ask about process, demand honest answers about failures, check for AI-search fluency, and walk away from guarantees and secrets. Get those filters right and the choice usually makes itself.</p>
+      <p>Still weighing freelancer against agency? Read our <a href="/blog/seo-freelancer-vs-agency">freelancer vs agency comparison</a> for the full breakdown. And if you want to understand what modern SEO actually covers, our guide to <a href="/blog/generative-engine-optimization-services">generative engine optimization services</a> explains the AI-search half most specialists miss.</p>
+      <p>Want a dedicated specialist without the hiring gamble? <a href="/strategy-call">Book a free strategy call</a> and we will map out your first 90 days.</p>
+    `,
+},
+
+{
+  id: "why-hire-local-seo-company",
+
+  title: "Why Hire a Local SEO Company Instead of Doing It Yourself",
+
+  seoTitle: "Why Hire a Local SEO Company? DIY vs Pro in 2026",
+
+  metaDescription:
+    "DIY local SEO has limits. Learn what a local SEO company actually does, how AI search changed local visibility, and how to hire the right one.",
+
+  ogTitle: "Why Hire a Local SEO Company? DIY vs Pro in 2026",
+
+  socialDescription:
+    "What local SEO companies really do, where DIY breaks down, and how AI search rewrote the local playbook.",
+
+  date: "Oct 5, 2026",
+  datePublished: "2026-10-05",
+  dateModified: "2026-10-05",
+
+  author: "RankVelt Editorial Team",
+  authorType: "Organization",
+
+  category: "LOCAL SEO",
+  readTime: "8 min read",
+
+  image: "/blog/why-hire-local-seo-company.webp",
+
+  imageAlt:
+    "Illustration of a local business appearing in map results and AI-generated local answers",
+
+  excerpt:
+    "Doing local SEO yourself works until it does not. Here is what a local SEO company actually does, where DIY hits its limits, how AI search changed local visibility, and how to hire the right partner.",
+
+  relatedPostIds: [
+    "local-citation-building-services",
+    "hire-remote-seo-specialist",
+    "technical-seo-audit-services",
+  ],
+
+  primaryService: {
+    title: "Local SEO",
+    description:
+      "Rank in Google Maps and get cited in AI answers, with GBP optimisation, citations, reviews, and local content handled for you.",
+    path: "/local-seo",
+  },
+
+  secondaryService: {
+    title: "SEO Audit Services",
+    description:
+      "A full technical and AI-visibility audit that shows exactly where your local presence stands and what to fix first.",
+    path: "/seo-audit-services",
+  },
+
+  showStandardCta: true,
+
+  keyTakeaways: [
+    "A local SEO company handles GBP optimisation, citations, reviews, local content, and technical issues as one system.",
+    "DIY local SEO breaks down on consistency: citations drift, reviews go unmanaged, and technical issues pile up silently.",
+    "AI search changed local visibility: customers now ask ChatGPT and Perplexity for local recommendations too.",
+    "Evaluate companies on process, reporting, and local proof, not on ranking guarantees.",
+    "Quality local SEO takes real monthly hours. RankVelt's local SEO starts at $525 per month.",
+    "The right partner treats your Google Business Profile as a living asset, not a one-time setup.",
+  ],
+
+  faqItems: [
+    {
+      question: "What does a local SEO company actually do?",
+      answer:
+        "It manages your local search presence as a system: Google Business Profile optimisation, citation building and cleanup across directories, review strategy, localised website content, and technical fixes. Increasingly it also covers AI-search visibility, making sure your business gets cited when AI assistants answer local questions.",
+    },
+    {
+      question: "Can I do local SEO myself?",
+      answer:
+        "You can handle the basics: claiming your Google Business Profile, asking for reviews, and keeping your details consistent. Most owners hit limits on time and expertise within a few months, especially on citation cleanup, technical issues, and content. DIY is a fine start, but it rarely scales.",
+    },
+    {
+      question: "How has AI search changed local SEO?",
+      answer:
+        "Customers now ask ChatGPT, Perplexity, and Google AI Overviews for local recommendations, not just Google Maps. Visibility now means being cited in those AI answers as well as ranking in the map pack. That requires entity clarity, consistent citations, and review signals that AI systems trust.",
+    },
+    {
+      question: "How do I choose a local SEO company?",
+      answer:
+        "Ask for their process, what monthly reporting looks like, and examples of local work with measurable outcomes. Avoid guaranteed rankings and anyone who cannot explain their work plainly. A good company audits before it pitches and sets honest timelines.",
+    },
+    {
+      question: "How much does local SEO cost?",
+      answer:
+        "It depends on competition and scope, but quality local SEO requires real monthly hours: profile management, citations, reviews, content, and reporting. RankVelt's local SEO starts at $525 per month with a three-month minimum, then month to month. Be wary of prices far below that: the hours behind real local SEO cannot be faked.",
+    },
+    {
+      question: "How long does local SEO take to work?",
+      answer:
+        "Profile optimisations and quick fixes can improve visibility within weeks. Competitive map-pack rankings and steady review growth typically take three to six months. AI citation visibility follows a similar timeline as your entity signals strengthen.",
+    },
+    {
+      question: "Do I still need a website if I have a Google Business Profile?",
+      answer:
+        "Yes. Your profile handles the map pack, but your website carries the content, service detail, and authority signals that both Google and AI systems use to judge you. Businesses with thin or missing websites consistently underperform those with solid localised sites.",
+    },
+  ],
+
+  toc: [
+    {
+      id: "what-a-local-seo-company-actually-does",
+      title: "What a Local SEO Company Actually Does",
+      level: 2,
+    },
+    {
+      id: "where-diy-local-seo-hits-its-limits",
+      title: "Where DIY Local SEO Hits Its Limits",
+      level: 2,
+    },
+    {
+      id: "the-ai-search-shift-local-businesses-cant-ignore",
+      title: "The AI-Search Shift Local Businesses Can't Ignore",
+      level: 2,
+    },
+    {
+      id: "how-to-evaluate-and-hire-a-local-seo-company",
+      title: "How to Evaluate and Hire a Local SEO Company",
+      level: 2,
+    },
+    {
+      id: "what-local-seo-costs-and-what-to-expect",
+      title: "What Local SEO Costs and What to Expect",
+      level: 2,
+    },
+    {
+      id: "faqs",
+      title: "Frequently Asked Questions",
+      level: 2,
+    },
+    {
+      id: "conclusion",
+      title: "Conclusion",
+      level: 2,
+    },
+  ],
+
+  content: `
+      <p>Most local business owners start with DIY local SEO. You claim your Google Business Profile, add some photos, ask a few customers for reviews, and things improve. Then progress stalls, competitors pull ahead, and the work starts eating hours you do not have. That is usually the moment hiring a local SEO company starts making sense.</p>
+      <p>This guide explains what these companies actually do, where DIY breaks down, how AI search rewrote the local playbook, and how to hire the right partner without getting burned.</p>
+      <h2 id="what-a-local-seo-company-actually-does">What a Local SEO Company Actually Does</h2>
+      <p>A good local SEO company manages your local presence as one connected system, not a list of disconnected tasks:</p>
+      <ul>
+        <li><strong>Google Business Profile optimisation.</strong> Categories, services, descriptions, photos, posts, and Q&A, kept current and complete. Your profile is treated as a living asset, not a one-time setup.</li>
+        <li><strong>Citation building and cleanup.</strong> Your business name, address, and phone number published consistently across directories, with duplicates and errors fixed. Inconsistent citations confuse both Google and AI systems.</li>
+        <li><strong>Review strategy.</strong> Systems for earning a steady flow of genuine reviews, plus professional responses to every review, good or bad.</li>
+        <li><strong>Localised website content.</strong> Service and location pages written for real local search intent, with proper internal linking.</li>
+        <li><strong>Technical maintenance.</strong> Site speed, mobile usability, and indexation issues fixed before they cost you visibility.</li>
+      </ul>
+      <p>The newer addition to that list is AI-search visibility: making sure your business gets cited when AI assistants answer local questions. More on that below.</p>
+      <h2 id="where-diy-local-seo-hits-its-limits">Where DIY Local SEO Hits Its Limits</h2>
+      <p>DIY works for the basics. It breaks down in three places:</p>
+      <p><strong>Consistency at scale.</strong> Keeping dozens of directory listings accurate sounds easy until you try it. Listings drift, duplicates appear, and old addresses resurface. Cleaning this up properly is tedious specialist work.</p>
+      <p><strong>Technical issues.</strong> Most owners cannot diagnose why their site loads slowly on phones, why pages drop from the index, or why their profile keeps getting suspended. These problems compound silently while rankings slip.</p>
+      <p><strong>Time.</strong> This is the real killer. Reviews need responses, profiles need posts, content needs writing, and competitors are not standing still. Local SEO done properly takes several focused hours every month. Owners who try to squeeze it between running the business end up doing it badly or not at all.</p>
+      <p>None of this means DIY was wrong. It means DIY was the starter phase, and the business has outgrown it.</p>
+      <h2 id="the-ai-search-shift-local-businesses-cant-ignore">The AI-Search Shift Local Businesses Can't Ignore</h2>
+      <p>Local search used to mean one thing: Google Maps rankings. That is still important, but it is no longer the whole picture.</p>
+      <p>Customers now ask ChatGPT which plumber to call, ask Perplexity for the best dentist nearby, and read Google AI Overviews before ever opening the map. The businesses cited in those AI answers win enquiries that never touch a traditional ranking.</p>
+      <p>What earns AI citations for local businesses? The same trust signals, sharpened: a complete and active Google Business Profile, consistent citations everywhere your details appear, a healthy stream of genuine reviews, and website content that answers local questions directly. AI systems also weigh entity clarity heavily: they need to understand unambiguously what your business is, where it operates, and what customers say about it.</p>
+      <p>This is why the DIY playbook from a few years ago is incomplete. Claiming your profile was enough when the map pack was the only game. Now your local presence has to be machine-readable, consistent, and review-backed across the web.</p>
+      <h2 id="how-to-evaluate-and-hire-a-local-seo-company">How to Evaluate and Hire a Local SEO Company</h2>
+      <p>Use these filters and most bad options eliminate themselves:</p>
+      <ul>
+        <li><strong>They audit before they pitch.</strong> Any company that quotes a price without looking at your profile, citations, and site is selling a package, not a solution.</li>
+        <li><strong>Reporting is concrete.</strong> Ask what you receive each month. Good answers name metrics: profile views, direction requests, calls, ranking positions, review counts, and increasingly, AI citation visibility. Vague "visibility reports" mean nothing.</li>
+        <li><strong>No guaranteed rankings.</strong> Nobody controls Google or AI outputs. Honest companies promise process and effort, not positions.</li>
+        <li><strong>They explain AI search without jargon.</strong> Ask how they will get your business cited in AI answers. Clear, specific answers signal real knowledge. Buzzwords signal the opposite.</li>
+        <li><strong>Local proof exists.</strong> They should show local work with measurable outcomes: profile growth, review velocity, ranking improvements for real local queries.</li>
+      </ul>
+      <p>Finally, judge the first conversation. If they listen more than they pitch and ask about your business before your budget, that is a good sign.</p>
+      <h2 id="what-local-seo-costs-and-what-to-expect">What Local SEO Costs and What to Expect</h2>
+      <p>Honest pricing talk: quality local SEO takes real monthly hours. Profile management, citation work, review systems, content, technical fixes, and reporting cannot be compressed into nothing. Prices far below market rate mean something is being skipped, usually the unglamorous work that actually moves rankings.</p>
+      <p>RankVelt's local SEO starts at $525 per month, with a minimum term of three months, then continuing month to month. That covers the full system: GBP optimisation, citations, reviews, local content, technical health, and AI-search visibility tracking.</p>
+      <p>What should you expect for that investment? Profile improvements and quick technical wins in the first weeks. Meaningful movement in map-pack visibility and review growth over three to six months. AI citation visibility building on a similar timeline as your entity signals strengthen across the web.</p>
+      <p>Anyone promising dramatic local results in days is selling fiction. Local SEO compounds, and the compounding is the point.</p>
+      <h2 id="faqs">Frequently Asked Questions</h2>
+      <details>
+        <summary>What does a local SEO company actually do?</summary>
+        <p>It manages your local search presence as a system: Google Business Profile optimisation, citation building and cleanup across directories, review strategy, localised website content, and technical fixes. Increasingly it also covers AI-search visibility, making sure your business gets cited when AI assistants answer local questions.</p>
+      </details>
+      <details>
+        <summary>Can I do local SEO myself?</summary>
+        <p>You can handle the basics: claiming your Google Business Profile, asking for reviews, and keeping your details consistent. Most owners hit limits on time and expertise within a few months, especially on citation cleanup, technical issues, and content. DIY is a fine start, but it rarely scales.</p>
+      </details>
+      <details>
+        <summary>How has AI search changed local SEO?</summary>
+        <p>Customers now ask ChatGPT, Perplexity, and Google AI Overviews for local recommendations, not just Google Maps. Visibility now means being cited in those AI answers as well as ranking in the map pack. That requires entity clarity, consistent citations, and review signals that AI systems trust.</p>
+      </details>
+      <details>
+        <summary>How do I choose a local SEO company?</summary>
+        <p>Ask for their process, what monthly reporting looks like, and examples of local work with measurable outcomes. Avoid guaranteed rankings and anyone who cannot explain their work plainly. A good company audits before it pitches and sets honest timelines.</p>
+      </details>
+      <details>
+        <summary>How much does local SEO cost?</summary>
+        <p>It depends on competition and scope, but quality local SEO requires real monthly hours: profile management, citations, reviews, content, and reporting. RankVelt's local SEO starts at $525 per month with a three-month minimum, then month to month. Be wary of prices far below that: the hours behind real local SEO cannot be faked.</p>
+      </details>
+      <details>
+        <summary>How long does local SEO take to work?</summary>
+        <p>Profile optimisations and quick fixes can improve visibility within weeks. Competitive map-pack rankings and steady review growth typically take three to six months. AI citation visibility follows a similar timeline as your entity signals strengthen.</p>
+      </details>
+      <details>
+        <summary>Do I still need a website if I have a Google Business Profile?</summary>
+        <p>Yes. Your profile handles the map pack, but your website carries the content, service detail, and authority signals that both Google and AI systems use to judge you. Businesses with thin or missing websites consistently underperform those with solid localised sites.</p>
+      </details>
+      <h2 id="conclusion">Conclusion</h2>
+      <p>Hiring a local SEO company makes sense when DIY stops scaling: citations drift, technical issues pile up, reviews go unmanaged, and the hours disappear. Add the AI-search shift, and professional help is less a luxury than the new baseline for competitive local markets.</p>
+      <p>Evaluate on process, reporting, and proof. Avoid guarantees and jargon. And make sure whoever you hire treats AI citations as part of the job, not an upsell. For the citation side specifically, see our guide to <a href="/blog/local-citation-building-services">local citation building services</a>.</p>
+      <p>Want to see where your local presence actually stands? <a href="/strategy-call">Book a free strategy call</a> and we will audit your profile, citations, and AI visibility.</p>
+    `,
+},
 
 
 
-
-
+// ====================================================================
   {
     id: "website-redesign-seo-checklist",
 
