@@ -296,11 +296,11 @@ const staticPageMeta: Record<string, RouteMeta> = {
 
 const noIndexMeta: Record<string, RouteMeta> = {
   "/strategy-call": {
-    title: "Request a Strategy Call | RankVelt",
-    description:
-      "Submit your RankVelt SEO, website, Shopify, or growth-service request.",
-    robots: "noindex, nofollow",
-  },
+  title: "Request a Strategy Call | RankVelt",
+  description:
+    "Submit your RankVelt SEO, website, Shopify, or growth-service request.",
+},
+
 
   "/thank-you": {
     title: "Request Received | RankVelt",
@@ -453,7 +453,16 @@ const RouteSeoManager = () => {
       };
     }
 
-    const robots = routeMeta.robots || "index, follow";
+    // const robots = routeMeta.robots || "index, follow";
+    
+    const isParameterizedStrategyCall =
+  pathname === "/strategy-call" && location.search.length > 0;
+const robots = isParameterizedStrategyCall
+  ? "noindex, nofollow"
+  : routeMeta.robots || "index, follow";
+
+
+
     const canonicalUrl = `${SITE_URL}${pathname}`;
     const imageUrl = toAbsoluteImageUrl(routeMeta.image);
 
@@ -475,7 +484,7 @@ const RouteSeoManager = () => {
     setMetaByProperty("og:image", imageUrl);
     setMetaByProperty("og:site_name", "RankVelt");
     setMetaByProperty("og:type", routeMeta.type || "website");
-  }, [location.pathname]);
+  }, [location.pathname, location.search]);
 
   return null;
 };
