@@ -20,14 +20,20 @@ import {
   ExternalLink,
   Gauge,
   Activity,
+  Image,
   Layout,
   Link2,
   Lock,
   MailSearch,
+  Palette,
+  PenLine,
+  QrCode,
+  ScanSearch,
   Search,
   ShieldCheck,
   ShoppingBag,
   Sparkles,
+  Star,
   Target,
   Unlink,
 } from "lucide-react";
@@ -66,7 +72,13 @@ type ToolType =
   | "ssl"
   | "speed"
   | "aeo"
-  | "utm";
+  | "utm"
+  | "writing"
+  | "image-seo"
+  | "seo-audit"
+  | "qr-barcode"
+  | "local-tool"
+  | "design";
 
 type ToolFaq = {
   q: string;
@@ -861,6 +873,440 @@ const tools: ToolConfig[] = [
     ],
     standalone: true,
   },
+  {
+    toolType: "writing",
+    slug: "sentence-counter",
+    contentKey: "sentence-counter",
+    badge: "Free Writing Tool",
+    title: "Sentence Counter",
+    pageTitle: "Free Sentence Counter",
+    metaTitle: "Free Sentence Counter: Count Sentences, Words & Paragraphs",
+    metaDescription:
+      "Count sentences, words, characters and paragraphs free with RankVelt's sentence counter. Paste text and get instant counts, no signup.",
+    shortDescription:
+      "Count sentences, words, characters and paragraphs instantly.",
+    intro:
+      "Paste any text and get live sentence, word, character and paragraph counts with reading time estimates.",
+    guideTitle: "Count What Matters in Your Writing",
+    guideText:
+      "Sentence and word counts shape readability, briefs, and publishing limits. This counter gives you the numbers instantly as you write or edit.",
+    bestFor: [
+      "Writers checking brief and assignment limits.",
+      "Editors reviewing sentence length and rhythm.",
+      "Students counting words for essays and submissions.",
+    ],
+    relatedLinks: [
+      {
+        title: "Paragraph Generator",
+        description: "Generate placeholder paragraphs for layouts and mockups.",
+        path: "/tools/paragraph-generator",
+      },
+    ],
+    standalone: true,
+  },
+  {
+    toolType: "image-seo",
+    slug: "image-compressor",
+    contentKey: "image-compressor",
+    badge: "Free SEO Tool",
+    title: "Image Compressor",
+    pageTitle: "Free Image Compressor",
+    metaTitle: "Free Image Compressor: Compress to WebP, JPEG & PNG",
+    metaDescription:
+      "Compress images free in your browser: convert to WebP, shrink JPEG and PNG file sizes with no upload and no signup.",
+    shortDescription:
+      "Compress images to WebP, JPEG or PNG right in your browser.",
+    intro:
+      "Drop in images and compress them to lighter WebP, JPEG or PNG files without uploading anything anywhere.",
+    guideTitle: "Lighter Images, Faster Pages",
+    guideText:
+      "Oversized images are the most common cause of slow pages. Compressing to modern formats cuts load time on every visit.",
+    bestFor: [
+      "Site owners speeding up image-heavy pages.",
+      "eCommerce stores optimizing product photos.",
+      "Bloggers shrinking images before publishing.",
+    ],
+    relatedLinks: [
+      {
+        title: "Alt Text Checker",
+        description: "Audit any page for missing image alt attributes.",
+        path: "/tools/alt-text-checker",
+      },
+    ],
+    standalone: true,
+  },
+  {
+    toolType: "seo-audit",
+    slug: "h1-checker",
+    contentKey: "h1-checker",
+    badge: "Free SEO Tool",
+    title: "H1 Checker",
+    pageTitle: "Free H1 Checker",
+    metaTitle: "Free H1 Checker: Find H1 Tags on Any Page",
+    metaDescription:
+      "Check H1 tags on any URL free: count H1s, list every heading in order, and spot multiple-H1 and missing-H1 issues. No signup.",
+    shortDescription:
+      "Check heading structure on any page URL.",
+    intro:
+      "Enter a URL to list every heading in document order and catch multiple-H1, missing-H1 and skipped-level issues.",
+    guideTitle: "One Page, One Clear Main Heading",
+    guideText:
+      "Headings tell Google what each section is about. A clean H1 to H6 hierarchy keeps the page's topic unmistakable.",
+    bestFor: [
+      "SEOs auditing page structure.",
+      "Site owners checking template heading output.",
+      "Agencies reviewing client pages before launch.",
+    ],
+    relatedLinks: [
+      {
+        title: "Canonical Checker",
+        description: "Verify canonical tags on any URL.",
+        path: "/tools/canonical-checker",
+      },
+    ],
+    standalone: true,
+  },
+  {
+    toolType: "seo-audit",
+    slug: "canonical-checker",
+    contentKey: "canonical-checker",
+    badge: "Free SEO Tool",
+    title: "Canonical Checker",
+    pageTitle: "Free Canonical Checker",
+    metaTitle: "Free Canonical Checker: Verify Canonical Tags on Any URL",
+    metaDescription:
+      "Check the canonical tag on any page free: see if it is self-referencing, missing, or pointing elsewhere. No signup.",
+    shortDescription:
+      "Verify canonical tags on any page URL.",
+    intro:
+      "Enter a URL to see its canonical tag, whether it is self-referencing, missing, or pointing somewhere unexpected.",
+    guideTitle: "Point Every Page at Its Preferred URL",
+    guideText:
+      "Canonical tags resolve duplicate-content confusion. A missing or wrong canonical can split ranking signals across copies.",
+    bestFor: [
+      "eCommerce stores with filtered and sorted URLs.",
+      "SEOs auditing indexation signals.",
+      "Site owners after a migration or redesign.",
+    ],
+    relatedLinks: [
+      {
+        title: "H1 Checker",
+        description: "Check heading structure on any page URL.",
+        path: "/tools/h1-checker",
+      },
+    ],
+    standalone: true,
+  },
+  {
+    toolType: "qr-barcode",
+    slug: "bulk-qr-code-generator",
+    contentKey: "bulk-qr-code-generator",
+    badge: "Free Business Tool",
+    title: "Bulk QR Code Generator",
+    pageTitle: "Free Bulk QR Code Generator",
+    metaTitle: "Free Bulk QR Code Generator: Create Many QR Codes at Once",
+    metaDescription:
+      "Generate QR codes in bulk free: paste a list or upload CSV, download all as PNG. No signup, everything in your browser.",
+    shortDescription:
+      "Generate many QR codes at once from a list or CSV.",
+    intro:
+      "Paste a list of links or upload a CSV and generate a downloadable QR code for every row, all in your browser.",
+    guideTitle: "QR Codes at Scale",
+    guideText:
+      "Menus, packaging, invoices and events often need dozens of QR codes. Bulk generation turns an afternoon of manual work into minutes.",
+    bestFor: [
+      "Restaurants printing table and menu codes.",
+      "eCommerce brands adding QR codes to packaging.",
+      "Event organizers creating per-guest codes.",
+    ],
+    relatedLinks: [
+      {
+        title: "SKU Generator",
+        description: "Generate product SKUs for inventory.",
+        path: "/tools/sku-generator",
+      },
+    ],
+    standalone: true,
+  },
+  {
+    toolType: "writing",
+    slug: "paragraph-generator",
+    contentKey: "paragraph-generator",
+    badge: "Free Writing Tool",
+    title: "Paragraph Generator",
+    pageTitle: "Free Random Paragraph Generator",
+    metaTitle: "Free Random Paragraph Generator: Dummy Text in One Click",
+    metaDescription:
+      "Generate random paragraphs free for mockups and layouts: choose paragraph count and length. No signup.",
+    shortDescription:
+      "Generate placeholder paragraphs for layouts.",
+    intro:
+      "Generate as many placeholder paragraphs as you need, in classic lorem ipsum or plain-English style, for mockups and wireframes.",
+    guideTitle: "Realistic Placeholder Text for Real Layouts",
+    guideText:
+      "Good placeholder text reveals layout problems early. Generate realistic paragraph blocks before final copy exists.",
+    bestFor: [
+      "Designers building wireframes and mockups.",
+      "Developers testing text-heavy layouts.",
+      "Agencies presenting page concepts.",
+    ],
+    relatedLinks: [
+      {
+        title: "Sentence Counter",
+        description: "Count sentences, words and characters instantly.",
+        path: "/tools/sentence-counter",
+      },
+    ],
+    standalone: true,
+  },
+  {
+    toolType: "image-seo",
+    slug: "alt-text-checker",
+    contentKey: "alt-text-checker",
+    badge: "Free SEO Tool",
+    title: "Alt Text Checker",
+    pageTitle: "Free Alt Text Checker",
+    metaTitle: "Free Alt Text Checker: Find Missing Image Alt Attributes",
+    metaDescription:
+      "Audit any page for missing image alt text free: see every image, its alt status, and fix guidance. No signup.",
+    shortDescription:
+      "Find images missing alt text on any page.",
+    intro:
+      "Enter a URL to audit every image for missing or empty alt attributes, with a clear fix list.",
+    guideTitle: "Every Image Deserves a Description",
+    guideText:
+      "Missing alt text hurts accessibility and image search visibility. This audit shows exactly which images need attention.",
+    bestFor: [
+      "eCommerce stores with large product catalogs.",
+      "Bloggers improving image SEO.",
+      "Agencies running accessibility checks.",
+    ],
+    relatedLinks: [
+      {
+        title: "Image Compressor",
+        description: "Compress images to WebP, JPEG or PNG.",
+        path: "/tools/image-compressor",
+      },
+    ],
+    standalone: true,
+  },
+  {
+    toolType: "seo-audit",
+    slug: "meta-tag-generator",
+    contentKey: "meta-tag-generator",
+    badge: "Free SEO Tool",
+    title: "Meta Tag Generator",
+    pageTitle: "Free Meta Tag Generator",
+    metaTitle: "Free Meta Tag Generator & Checker for Any Page",
+    metaDescription:
+      "Generate SEO meta tags and check any page's meta tags free: title, description, Open Graph and Twitter cards. No signup.",
+    shortDescription:
+      "Generate meta tags or check any page's tags.",
+    intro:
+      "Build clean title, description and social meta tags with a form, or check what any live page currently declares.",
+    guideTitle: "Meta Tags That Earn the Click",
+    guideText:
+      "Titles and descriptions are your search-result sales pitch. Generate them at the right length and validate them against any URL.",
+    bestFor: [
+      "Site owners writing new page titles.",
+      "SEOs auditing meta tag coverage.",
+      "Bloggers fixing social share previews.",
+    ],
+    relatedLinks: [
+      {
+        title: "Open Graph Checker",
+        description: "Check Open Graph tags on any URL.",
+        path: "/tools/open-graph-checker",
+      },
+    ],
+    standalone: true,
+  },
+  {
+    toolType: "design",
+    slug: "color-contrast-checker",
+    contentKey: "color-contrast-checker",
+    badge: "Free Design Tool",
+    title: "Color Contrast Checker",
+    pageTitle: "Free Color Contrast Checker",
+    metaTitle: "Free Color Contrast Checker: WCAG AA & AAA Ratios",
+    metaDescription:
+      "Check text color contrast free: WCAG contrast ratios with AA and AAA pass/fail for normal and large text. No signup.",
+    shortDescription:
+      "Check WCAG color contrast ratios.",
+    intro:
+      "Pick foreground and background colors to get the WCAG contrast ratio with AA and AAA pass or fail verdicts.",
+    guideTitle: "Readable Text Is Not Optional",
+    guideText:
+      "Low contrast excludes visitors and weakens trust. Check your palette against WCAG before you ship.",
+    bestFor: [
+      "Designers validating brand palettes.",
+      "Developers checking component contrast.",
+      "Site owners improving accessibility.",
+    ],
+    relatedLinks: [
+      {
+        title: "Image Compressor",
+        description: "Compress images to WebP, JPEG or PNG.",
+        path: "/tools/image-compressor",
+      },
+    ],
+    standalone: true,
+  },
+  {
+    toolType: "calculator",
+    slug: "markup-calculator",
+    contentKey: "markup-calculator",
+    badge: "Free eCommerce Calculator",
+    title: "Markup Calculator",
+    pageTitle: "Free Markup Calculator",
+    metaTitle: "Free Markup Calculator: Price From Cost & Margin",
+    metaDescription:
+      "Calculate product markup free: cost to price, margin to markup, and reverse markup with instant results. No signup.",
+    shortDescription:
+      "Price products from cost and markup.",
+    intro:
+      "Turn product cost and target markup into a selling price, convert margin to markup, or reverse-engineer cost from price.",
+    guideTitle: "Price With the Math Showing",
+    guideText:
+      "Markup and margin are not the same number. This calculator keeps them straight so pricing decisions rest on real math.",
+    bestFor: [
+      "eCommerce stores setting product prices.",
+      "Wholesalers quoting retail partners.",
+      "Founders sanity-checking pricing models.",
+    ],
+    relatedLinks: [
+      {
+        title: "Profit Margin Calculator",
+        description: "Estimate product profit and margin direction.",
+        path: "/tools/profit-margin-calculator",
+      },
+    ],
+    standalone: true,
+  },
+  {
+    toolType: "generator",
+    slug: "sku-generator",
+    contentKey: "sku-generator",
+    badge: "Free eCommerce Tool",
+    title: "SKU Generator",
+    pageTitle: "Free SKU Generator",
+    metaTitle: "Free SKU Generator for Products & Inventory",
+    metaDescription:
+      "Generate product SKUs free: custom patterns from product names, categories and variants, bulk list output. No signup.",
+    shortDescription:
+      "Generate product SKUs in bulk.",
+    intro:
+      "Build consistent SKUs from product names, categories and variants, or paste a product list and generate a SKU for every row.",
+    guideTitle: "SKUs Your Warehouse Will Thank You For",
+    guideText:
+      "Consistent SKU patterns prevent inventory chaos. Generate structured, unique codes instead of improvising them.",
+    bestFor: [
+      "eCommerce stores launching new catalogs.",
+      "Warehouse teams standardizing codes.",
+      "Marketplace sellers managing variants.",
+    ],
+    relatedLinks: [
+      {
+        title: "VIN Barcode Generator",
+        description: "Generate VIN barcodes for vehicles.",
+        path: "/tools/vin-barcode-generator",
+      },
+    ],
+    standalone: true,
+  },
+  {
+    toolType: "qr-barcode",
+    slug: "vin-barcode-generator",
+    contentKey: "vin-barcode-generator",
+    badge: "Free Business Tool",
+    title: "VIN Barcode Generator",
+    pageTitle: "Free VIN Barcode Generator",
+    metaTitle: "Free VIN Barcode Generator: Code 39 Barcodes Online",
+    metaDescription:
+      "Generate VIN barcodes free: Code 39 barcodes for vehicle identification numbers, printable and downloadable. No signup.",
+    shortDescription:
+      "Generate VIN barcodes for vehicles.",
+    intro:
+      "Enter a 17-character VIN to generate a printable Code 39 barcode, with validation on every digit.",
+    guideTitle: "VINs You Can Scan",
+    guideText:
+      "A scannable VIN barcode removes typing errors from vehicle paperwork, service bays and inventory counts.",
+    bestFor: [
+      "Dealerships labeling vehicle paperwork.",
+      "Service centers tracking jobs by VIN.",
+      "Fleet operators managing vehicle records.",
+    ],
+    relatedLinks: [
+      {
+        title: "Bulk QR Code Generator",
+        description: "Generate many QR codes at once.",
+        path: "/tools/bulk-qr-code-generator",
+      },
+    ],
+    standalone: true,
+  },
+  {
+    toolType: "local-tool",
+    slug: "google-review-link-generator",
+    contentKey: "google-review-link-generator",
+    badge: "Free Local SEO Tool",
+    title: "Google Review Link Generator",
+    pageTitle: "Free Google Review Link Generator",
+    metaTitle: "Free Google Review Link Generator for Local Businesses",
+    metaDescription:
+      "Create a direct Google review link free: paste your Place ID and get a shareable review link plus QR code. No signup.",
+    shortDescription:
+      "Create a direct Google review link.",
+    intro:
+      "Paste your Google Place ID and get a one-click review link plus a QR code you can print, share and embed.",
+    guideTitle: "Make Leaving a Review Effortless",
+    guideText:
+      "Every extra step loses reviews. A direct review link takes customers straight to the review form.",
+    bestFor: [
+      "Local businesses collecting Google reviews.",
+      "Agencies setting up review flows for clients.",
+      "Restaurants and clinics printing review QR codes.",
+    ],
+    relatedLinks: [
+      {
+        title: "Local SEO Checklist",
+        description: "Audit local visibility step by step.",
+        path: "/tools/local-seo-checklist",
+      },
+    ],
+    standalone: true,
+  },
+  {
+    toolType: "seo-audit",
+    slug: "open-graph-checker",
+    contentKey: "open-graph-checker",
+    badge: "Free SEO Tool",
+    title: "Open Graph Checker",
+    pageTitle: "Free Open Graph Checker",
+    metaTitle: "Free Open Graph Checker: Preview Social Share Tags",
+    metaDescription:
+      "Check Open Graph tags on any URL free: preview how the page looks when shared, with missing-tag warnings. No signup.",
+    shortDescription:
+      "Check social share tags on any URL.",
+    intro:
+      "Enter a URL to preview its social share card and catch missing Open Graph and Twitter Card tags before you share.",
+    guideTitle: "Control How Your Links Look When Shared",
+    guideText:
+      "Broken share previews cost clicks. Verify your Open Graph tags render the title, description and image you intended.",
+    bestFor: [
+      "Bloggers checking share previews.",
+      "Marketers validating campaign pages.",
+      "Site owners fixing social snippets.",
+    ],
+    relatedLinks: [
+      {
+        title: "Meta Tag Generator",
+        description: "Generate meta tags or check any page's tags.",
+        path: "/tools/meta-tag-generator",
+      },
+    ],
+    standalone: true,
+  },
 ];
 
 const getIcon = (
@@ -928,6 +1374,24 @@ const getIcon = (
     case "redirect-map":
       return <ArrowRight className={className} />;
 
+    case "writing":
+      return <PenLine className={className} />;
+
+    case "image-seo":
+      return <Image className={className} />;
+
+    case "seo-audit":
+      return <ScanSearch className={className} />;
+
+    case "qr-barcode":
+      return <QrCode className={className} />;
+
+    case "local-tool":
+      return <Star className={className} />;
+
+    case "design":
+      return <Palette className={className} />;
+
     case "generator":
     default:
       return <ShoppingBag className={className} />;
@@ -989,6 +1453,24 @@ const getIconClass = (toolType: ToolType) => {
 
     case "redirect-map":
       return "text-orange-400";
+
+    case "writing":
+      return "text-rose-400";
+
+    case "image-seo":
+      return "text-fuchsia-400";
+
+    case "seo-audit":
+      return "text-cyan-300";
+
+    case "qr-barcode":
+      return "text-violet-400";
+
+    case "local-tool":
+      return "text-amber-300";
+
+    case "design":
+      return "text-pink-300";
 
     case "generator":
     default:

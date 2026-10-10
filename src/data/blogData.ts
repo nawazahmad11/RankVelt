@@ -325,7 +325,8 @@ export const blogPosts: BlogPost[] = [
       </details>
       <h2 id="conclusion">Conclusion</h2>
       <p>To monitor google ai overviews performance, you do not need a big budget or complex software. Start with Search Console's AI reports, add a simple weekly spreadsheet check of your most important queries, and review the patterns once a month. Track citations, mentions, overview presence, and the clicks-versus-impressions gap, and you will always know what the AI layer is doing to your traffic.</p>
-<p>If you want the full picture of how to not just track but actually win citations, read our main guide on <a href="/blog/optimize-google-ai-overviews">how to optimize for Google AI Overviews</a>. And if you are still fuzzy on the basics, start with <a href="/blog/google-ai-overviews-how-it-works">how Google AI Overviews work</a>. Local businesses should also read our <a href="/blog/local-seo-ai-overviews">local SEO guide for AI Overviews</a>.</p>
+<p>If you want the full picture of how to not just track but actually win citations, read our main guide on <a href="/blog/optimize-google-ai-overviews">how to optimize for Google AI Overviews</a>. And if you are still fuzzy on the basics, start with <a href="/blog/google-ai-overviews-how-it-works">how Google AI Overviews work</a>. Local businesses should also read our <a href="/blog/local-seo-ai-overviews">local SEO guide for AI Overviews</a>. To check any page in seconds, try our free <a href="/tools/aeo-readiness-checker">AEO Readiness Checker</a>.</p>
+
       <div class="cta-premium-block">
         <h2>Want to See Your AI Visibility Clearly?</h2>
         <p>RankVelt tracks your AI Overview citations, brand mentions, and the metrics that matter, then turns them into a clear action plan.</p>

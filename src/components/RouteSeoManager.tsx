@@ -32,6 +32,20 @@ const KNOWN_TOOL_SLUGS = new Set([
   "utm-builder",
   "website-speed-test",
   "aeo-readiness-checker",
+  "sentence-counter",
+  "image-compressor",
+  "h1-checker",
+  "canonical-checker",
+  "bulk-qr-code-generator",
+  "paragraph-generator",
+  "alt-text-checker",
+  "meta-tag-generator",
+  "color-contrast-checker",
+  "markup-calculator",
+  "sku-generator",
+  "vin-barcode-generator",
+  "google-review-link-generator",
+  "open-graph-checker",
   "calculator",
   "policy",
   "policy-generator",
@@ -243,6 +257,90 @@ const staticPageMeta: Record<string, RouteMeta> = {
     title: "Free AEO Readiness Checker: AI Answer Visibility Score | RankVelt",
     description:
       "Check how ready any page is for AI answers: structure, schema, questions, and citable content scored free. No signup required.",
+  },
+
+  "/tools/sentence-counter": {
+    title: "Free Sentence Counter: Count Sentences, Words & Paragraphs",
+    description:
+      "Count sentences, words, characters and paragraphs free with RankVelt's sentence counter. Paste text and get instant counts, no signup.",
+  },
+
+  "/tools/image-compressor": {
+    title: "Free Image Compressor: Compress to WebP, JPEG & PNG",
+    description:
+      "Compress images free in your browser: convert to WebP, shrink JPEG and PNG file sizes with no upload and no signup.",
+  },
+
+  "/tools/h1-checker": {
+    title: "Free H1 Checker: Find H1 Tags on Any Page",
+    description:
+      "Check H1 tags on any URL free: count H1s, list every heading in order, and spot multiple-H1 and missing-H1 issues. No signup.",
+  },
+
+  "/tools/canonical-checker": {
+    title: "Free Canonical Checker: Verify Canonical Tags on Any URL",
+    description:
+      "Check the canonical tag on any page free: see if it is self-referencing, missing, or pointing elsewhere. No signup.",
+  },
+
+  "/tools/bulk-qr-code-generator": {
+    title: "Free Bulk QR Code Generator: Create Many QR Codes at Once",
+    description:
+      "Generate QR codes in bulk free: paste a list or upload CSV, download all as PNG. No signup, everything in your browser.",
+  },
+
+  "/tools/paragraph-generator": {
+    title: "Free Random Paragraph Generator: Dummy Text in One Click",
+    description:
+      "Generate random paragraphs free for mockups and layouts: choose paragraph count and length. No signup.",
+  },
+
+  "/tools/alt-text-checker": {
+    title: "Free Alt Text Checker: Find Missing Image Alt Attributes",
+    description:
+      "Audit any page for missing image alt text free: see every image, its alt status, and fix guidance. No signup.",
+  },
+
+  "/tools/meta-tag-generator": {
+    title: "Free Meta Tag Generator & Checker for Any Page",
+    description:
+      "Generate SEO meta tags and check any page's meta tags free: title, description, Open Graph and Twitter cards. No signup.",
+  },
+
+  "/tools/color-contrast-checker": {
+    title: "Free Color Contrast Checker: WCAG AA & AAA Ratios",
+    description:
+      "Check text color contrast free: WCAG contrast ratios with AA and AAA pass/fail for normal and large text. No signup.",
+  },
+
+  "/tools/markup-calculator": {
+    title: "Free Markup Calculator: Price From Cost & Margin",
+    description:
+      "Calculate product markup free: cost to price, margin to markup, and reverse markup with instant results. No signup.",
+  },
+
+  "/tools/sku-generator": {
+    title: "Free SKU Generator for Products & Inventory",
+    description:
+      "Generate product SKUs free: custom patterns from product names, categories and variants, bulk list output. No signup.",
+  },
+
+  "/tools/vin-barcode-generator": {
+    title: "Free VIN Barcode Generator: Code 39 Barcodes Online",
+    description:
+      "Generate VIN barcodes free: Code 39 barcodes for vehicle identification numbers, printable and downloadable. No signup.",
+  },
+
+  "/tools/google-review-link-generator": {
+    title: "Free Google Review Link Generator for Local Businesses",
+    description:
+      "Create a direct Google review link free: paste your Place ID and get a shareable review link plus QR code. No signup.",
+  },
+
+  "/tools/open-graph-checker": {
+    title: "Free Open Graph Checker: Preview Social Share Tags",
+    description:
+      "Check Open Graph tags on any URL free: preview how the page looks when shared, with missing-tag warnings. No signup.",
   },
 
   "/privacy-policy": {

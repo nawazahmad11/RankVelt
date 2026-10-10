@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   Activity,
   ArrowRight,
+  Barcode,
   Bot,
   Calculator,
   ChevronDown,
@@ -14,12 +15,17 @@ import {
   Lock,
   MailSearch,
   Menu,
+  Palette,
+  PenLine,
+  QrCode,
   Repeat,
   Rocket,
   ScanSearch,
   Search,
   ShieldCheck,
   ShoppingBag,
+  Star,
+  Tags,
   Unlink,
   X,
 } from "lucide-react";
@@ -159,6 +165,76 @@ const tools = [
     name: "AEO Readiness Checker",
     icon: <Bot size={14} />,
     path: "/tools/aeo-readiness-checker",
+  },
+  {
+    name: "Sentence Counter",
+    icon: <PenLine size={14} />,
+    path: "/tools/sentence-counter",
+  },
+  {
+    name: "Image Compressor",
+    icon: <Image size={14} />,
+    path: "/tools/image-compressor",
+  },
+  {
+    name: "H1 Checker",
+    icon: <ScanSearch size={14} />,
+    path: "/tools/h1-checker",
+  },
+  {
+    name: "Canonical Checker",
+    icon: <Link2 size={14} />,
+    path: "/tools/canonical-checker",
+  },
+  {
+    name: "Bulk QR Code Generator",
+    icon: <QrCode size={14} />,
+    path: "/tools/bulk-qr-code-generator",
+  },
+  {
+    name: "Paragraph Generator",
+    icon: <PenLine size={14} />,
+    path: "/tools/paragraph-generator",
+  },
+  {
+    name: "Alt Text Checker",
+    icon: <Image size={14} />,
+    path: "/tools/alt-text-checker",
+  },
+  {
+    name: "Meta Tag Generator",
+    icon: <Tags size={14} />,
+    path: "/tools/meta-tag-generator",
+  },
+  {
+    name: "Color Contrast Checker",
+    icon: <Palette size={14} />,
+    path: "/tools/color-contrast-checker",
+  },
+  {
+    name: "Markup Calculator",
+    icon: <Calculator size={14} />,
+    path: "/tools/markup-calculator",
+  },
+  {
+    name: "SKU Generator",
+    icon: <Barcode size={14} />,
+    path: "/tools/sku-generator",
+  },
+  {
+    name: "VIN Barcode Generator",
+    icon: <Barcode size={14} />,
+    path: "/tools/vin-barcode-generator",
+  },
+  {
+    name: "Google Review Link Generator",
+    icon: <Star size={14} />,
+    path: "/tools/google-review-link-generator",
+  },
+  {
+    name: "Open Graph Checker",
+    icon: <Search size={14} />,
+    path: "/tools/open-graph-checker",
   },
 ];
 

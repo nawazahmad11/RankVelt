@@ -32,12 +32,6 @@ const staticRoutes = [
   "/ecommerce-seo",
   "/business-seo",
 
-  "/ai-seo-agency",
-  "/hire-seo-expert",
-  "/ecommerce-seo-services",
-  "/shopify-seo-services",
-  "/seo-audit-services",
-
   "/blog",
 
   "/tools",
@@ -52,6 +46,20 @@ const staticRoutes = [
   "/tools/xml-sitemap-generator",
   "/tools/local-seo-checklist",
   "/tools/redirect-mapping-generator",
+  "/tools/sentence-counter",
+  "/tools/image-compressor",
+  "/tools/h1-checker",
+  "/tools/canonical-checker",
+  "/tools/bulk-qr-code-generator",
+  "/tools/paragraph-generator",
+  "/tools/alt-text-checker",
+  "/tools/meta-tag-generator",
+  "/tools/color-contrast-checker",
+  "/tools/markup-calculator",
+  "/tools/sku-generator",
+  "/tools/vin-barcode-generator",
+  "/tools/google-review-link-generator",
+  "/tools/open-graph-checker",
 
   "/case-studies",
   "/case-studies/product-discovery-at-scale",
@@ -116,7 +124,7 @@ const blogDataSource = await readFile(
  *     content: `
  */
 const articlePattern =
-  /^\s*\{\s*\r?\n([\s\S]*?)^\s*content:\s*`/gm;
+  /^\s{2}\{\s*\r?\n([\s\S]*?)^\s{4}content:\s*`/gm;
 
 const blogRoutes = [];
 
@@ -124,7 +132,7 @@ for (const match of blogDataSource.matchAll(articlePattern)) {
   const metadataBlock = match[1];
 
   const idMatch = metadataBlock.match(
-    /^\s*id:\s*["']([^"']+)["'],?/m,
+    /^\s{4}id:\s*["']([^"']+)["'],?/m,
   );
 
   if (!idMatch) {
@@ -132,11 +140,11 @@ for (const match of blogDataSource.matchAll(articlePattern)) {
   }
 
   const dateModifiedMatch = metadataBlock.match(
-    /^\s*dateModified:\s*["'](\d{4}-\d{2}-\d{2})["'],?/m,
+    /^\s{4}dateModified:\s*["'](\d{4}-\d{2}-\d{2})["'],?/m,
   );
 
   const datePublishedMatch = metadataBlock.match(
-    /^\s*datePublished:\s*["'](\d{4}-\d{2}-\d{2})["'],?/m,
+    /^\s{4}datePublished:\s*["'](\d{4}-\d{2}-\d{2})["'],?/m,
   );
 
   const articleId = idMatch[1].trim();

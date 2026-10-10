@@ -152,6 +152,63 @@ const AeoReadinessChecker = lazy(
   () => import("./pages/tools/AeoReadinessChecker"),
 );
 
+/* New Batch 4 tools: 9 SEO/writing/design tools + 5 eCommerce/local tools. */
+const SentenceCounter = lazy(
+  () => import("./pages/tools/SentenceCounter"),
+);
+
+const ImageCompressor = lazy(
+  () => import("./pages/tools/ImageCompressor"),
+);
+
+const H1Checker = lazy(
+  () => import("./pages/tools/H1Checker"),
+);
+
+const CanonicalChecker = lazy(
+  () => import("./pages/tools/CanonicalChecker"),
+);
+
+const BulkQrCodeGenerator = lazy(
+  () => import("./pages/tools/BulkQrCodeGenerator"),
+);
+
+const ParagraphGenerator = lazy(
+  () => import("./pages/tools/ParagraphGenerator"),
+);
+
+const AltTextChecker = lazy(
+  () => import("./pages/tools/AltTextChecker"),
+);
+
+const MetaTagGenerator = lazy(
+  () => import("./pages/tools/MetaTagGenerator"),
+);
+
+const ColorContrastChecker = lazy(
+  () => import("./pages/tools/ColorContrastChecker"),
+);
+
+const MarkupCalculator = lazy(
+  () => import("./pages/tools/MarkupCalculator"),
+);
+
+const SkuGenerator = lazy(
+  () => import("./pages/tools/SkuGenerator"),
+);
+
+const VinBarcodeGenerator = lazy(
+  () => import("./pages/tools/VinBarcodeGenerator"),
+);
+
+const GoogleReviewLinkGenerator = lazy(
+  () => import("./pages/tools/GoogleReviewLinkGenerator"),
+);
+
+const OpenGraphChecker = lazy(
+  () => import("./pages/tools/OpenGraphChecker"),
+);
+
 /*
  * Case-study pages
  */
@@ -489,6 +546,77 @@ const App = () => (
             <Route
               path="/tools/aeo-readiness-checker"
               element={<AeoReadinessChecker />}
+            />
+
+            {/* ROUTES-VERSION-16: Batch 4 tools */}
+            <Route
+              path="/tools/sentence-counter"
+              element={<SentenceCounter />}
+            />
+
+            <Route
+              path="/tools/image-compressor"
+              element={<ImageCompressor />}
+            />
+
+            <Route
+              path="/tools/h1-checker"
+              element={<H1Checker />}
+            />
+
+            <Route
+              path="/tools/canonical-checker"
+              element={<CanonicalChecker />}
+            />
+
+            <Route
+              path="/tools/bulk-qr-code-generator"
+              element={<BulkQrCodeGenerator />}
+            />
+
+            <Route
+              path="/tools/paragraph-generator"
+              element={<ParagraphGenerator />}
+            />
+
+            <Route
+              path="/tools/alt-text-checker"
+              element={<AltTextChecker />}
+            />
+
+            <Route
+              path="/tools/meta-tag-generator"
+              element={<MetaTagGenerator />}
+            />
+
+            <Route
+              path="/tools/color-contrast-checker"
+              element={<ColorContrastChecker />}
+            />
+
+            <Route
+              path="/tools/markup-calculator"
+              element={<MarkupCalculator />}
+            />
+
+            <Route
+              path="/tools/sku-generator"
+              element={<SkuGenerator />}
+            />
+
+            <Route
+              path="/tools/vin-barcode-generator"
+              element={<VinBarcodeGenerator />}
+            />
+
+            <Route
+              path="/tools/google-review-link-generator"
+              element={<GoogleReviewLinkGenerator />}
+            />
+
+            <Route
+              path="/tools/open-graph-checker"
+              element={<OpenGraphChecker />}
             />
 
             <Route
