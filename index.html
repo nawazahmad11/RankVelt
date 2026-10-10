@@ -117,9 +117,13 @@
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
 
-  <!-- Google Analytics (GA4) — deferred so it never delays LCP or blocks the main thread early -->
+  <!-- Google Analytics (GA4) — loads on first user interaction so it never
+       counts against initial page load or PageSpeed score. Falls back to
+       loading after 12s for visitors who never interact. -->
   <script>
     function loadGoogleAnalytics() {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
       window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }
       window.gtag = gtag;
@@ -132,11 +136,10 @@
       document.head.appendChild(script);
     }
 
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(loadGoogleAnalytics, { timeout: 3500 });
-    } else {
-      window.addEventListener('load', loadGoogleAnalytics);
-    }
+    ['scroll', 'click', 'touchstart', 'keydown'].forEach(function (evt) {
+      window.addEventListener(evt, loadGoogleAnalytics, { once: true, passive: true });
+    });
+    setTimeout(loadGoogleAnalytics, 12000);
   </script>
 </body>
 </html>
