@@ -64,14 +64,13 @@ export const blogPosts: BlogPost[] = [
   {
     id: "monitor-google-ai-overviews-performance",
 
-    title: "How to Monitor Google AI Overviews Performance in 2026",
+    title: "Track AI Overviews Performance: 5 Metrics That Matter (2026)",
 
-    seoTitle: "How to Track Google AI Overviews: Monitoring Guide 2026",
+    seoTitle: "Track AI Overviews Performance: 5 Metrics That Matter (2026)",
 
-    metaDescription:
-      "Learn how to monitor Google AI Overviews performance in 2026: key metrics, Search Console setup, and simple tracking methods for AI citations.",
+    metaDescription: "Stop guessing. Track these 5 metrics to measure your AI Overviews visibility: citation rate, share of voice, and more. Free Search Console setup guide inside.",
 
-    ogTitle: "How to Track Google AI Overviews: Monitoring Guide 2026",
+    ogTitle: "Track AI Overviews Performance: 5 Metrics That Matter (2026)",
 
     socialDescription:
       "Track AI Overview citations, brand mentions, and Search Console AI data with simple free methods.",
@@ -1636,15 +1635,15 @@ export const blogPosts: BlogPost[] = [
   {
     id: "ai-overviews-rank-tracking-tools",
 
-    title: "Rank Tracking Tools for AI Overviews: 2026 Comparison",
+    // title: "AI Overviews Rank Tracking Tools Compared: Pick the Right One (2026)",
+    title: "AI Overviews Rank Tracking Tools Compared: Pick the Right One (2026)",
 
-    seoTitle:
-      "Rank Tracking Tool for AI Overviews: Best Options Compared (2026)",
 
-    metaDescription:
-      "Compare the best rank tracking tools for AI Overviews in 2026: what to track, how tools differ, free vs paid options, and how to choose.",
+    seoTitle: "AI Overviews Rank Tracking Tools Compared: Pick the Right One (2026)",
 
-    ogTitle: "Rank Tracking Tools for AI Overviews Compared",
+    metaDescription: "Compare AI Overviews rank tracking tools by what they measure: overview presence, citations, brand mentions. Decision framework included.",
+
+    ogTitle: "AI Overviews Rank Tracking Tools Compared (2026)",
 
     socialDescription:
       "What actually matters in an AI Overviews tracker, how the main tools compare, and a free tracking setup that works.",
@@ -3196,15 +3195,13 @@ export const blogPosts: BlogPost[] = [
   {
     id: "optimize-google-ai-overviews",
 
-    title: "How to Optimize for Google AI Overviews and AI Mode 2026",
+    title: "How to Rank in Google AI Overviews: 8-Step Guide (2026)",
 
-    seoTitle:
-      "How to Optimize for Google AI Overviews: 2026 Guide",
+    seoTitle: "How to Rank in Google AI Overviews: 8-Step Guide (2026)",
 
-    metaDescription:
-      "A 7-step process to optimize for Google AI Overviews and AI Mode: technical eligibility, original content, citations, internal linking, and AI search tracking.",
+    metaDescription: "Rank in Google AI Overviews with this 8-step process: eligibility audit, evidence-based content, entity signals. Includes 90-day plan.",
 
-    ogTitle: "Optimize for Google AI Overviews and AI Mode",
+    ogTitle: "How to Rank in Google AI Overviews: 8-Step Guide (2026)",
 
     socialDescription:
       "Improve AI search visibility with proven SEO, content, citation, and tracking tactics.",
@@ -13096,14 +13093,13 @@ export const blogPosts: BlogPost[] = [
 {
   id: "best-ai-seo-agencies",
 
-  title: "Best AI SEO Agencies in 2026: How to Choose",
+  title: "How to Choose an AI SEO Agency: 7 Criteria and Red Flags (2026)",
 
-  seoTitle: "Best AI SEO Agencies in 2026: How to Choose One",
+  seoTitle: "How to Choose an AI SEO Agency: 7 Criteria and Red Flags (2026)",
 
-  metaDescription:
-    "How to pick from the best AI SEO agencies in 2026: what AI-first really means, 7 evaluation criteria, red flags to avoid, and smart questions to ask.",
+  metaDescription: "The 7 criteria that separate real AI SEO agencies from pretenders, plus red flags to avoid before signing. Honest 2026 guide.",
 
-  ogTitle: "Best AI SEO Agencies in 2026: How to Choose One",
+  ogTitle: "How to Choose an AI SEO Agency: 7 Criteria and Red Flags (2026)",
 
   socialDescription:
     "AI-first vs AI-branded: 7 criteria and red flags for choosing an AI SEO agency in 2026.",
