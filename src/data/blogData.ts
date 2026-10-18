@@ -1174,7 +1174,7 @@ export const blogPosts: BlogPost[] = [
   category: "NICHE SEO",
   readTime: "17 min read",
 
-  image: "/ai-seo-for-movers-cover.webp",
+  image: "/blog/ai-seo-for-movers-cover.webp",
 
   imageAlt:
     "Illustration of an AI assistant recommending a moving company, with a moving truck, review stars, and business listing signals",
@@ -1492,7 +1492,7 @@ export const blogPosts: BlogPost[] = [
   category: "NICHE SEO",
   readTime: "18 min read",
 
-  image: "/fire-damage-restoration-seo-cover.webp",
+  image: "/blog/fire-damage-restoration-seo-cover.webp",
 
   imageAlt:
     "Flat vector illustration of fire damage restoration SEO on a cream background, showing a restored home, search ranking symbols, and emergency call icons in teal, navy, and amber",
@@ -1682,7 +1682,7 @@ export const blogPosts: BlogPost[] = [
     <h2 id="the-fire-damage-restoration-keyword-map">The Fire Damage Restoration Keyword Map</h2>
     <p>Every generic restoration guide gives water examples and tacks fire on at the end. Here is the map built for fire. It is grouped by how the customer actually searches. These are the query families to build pages and content around.</p>
     <p>The SEMrush data below shows the monthly US search volume for the main keyword variations.</p>
-    <img src="/fire-damage-restoration-seo-chart.webp" alt="Chart showing monthly US search volume for fire damage restoration SEO keyword variations" />
+    <img src="/blog/fire-damage-restoration-seo-chart.webp" alt="Chart showing monthly US search volume for fire damage restoration SEO keyword variations" />
     <p><strong>Emergency and urgent queries.</strong> These are searched in crisis, convert fast, and reward speed and clarity:</p>
     <ul>
       <li>fire damage restoration near me</li>
@@ -1886,7 +1886,7 @@ export const blogPosts: BlogPost[] = [
   category: "AI SEARCH SEO",
   readTime: "20 min read",
 
-  image: "/generative-engine-optimization-guide-cover.webp",
+  image: "/blog/generative-engine-optimization-guide-cover.webp",
 
   imageAlt:
     "Illustration showing the step by step generative engine optimization process for getting cited in AI answers",
@@ -2185,7 +2185,7 @@ export const blogPosts: BlogPost[] = [
     <p><strong>Mistake 2: Rewriting everything before testing anything.</strong> Rewrite a few pages, test, then scale. Untested mass rewrites burn weeks and teach you nothing.</p>
     <p><strong>Mistake 3: Chasing the head term.</strong> "Generative engine optimization" as a keyword is brutally competitive. Target the specific questions your customers ask AI assistants instead. Long-tail prompts are both easier to win and closer to revenue.</p>
     <p>The numbers below show the gap in plain terms. The head term gets more searches, but its keyword difficulty of 72% makes it far harder to rank for.</p>
-    <img src="/generative-engine-optimization-guide-chart.webp" alt="Chart comparing search volume and keyword difficulty of GEO keywords, showing why this guide targets long-tail keywords" />
+    <img src="/blog/generative-engine-optimization-guide-chart.webp" alt="Chart comparing search volume and keyword difficulty of GEO keywords, showing why this guide targets long-tail keywords" />
     <p>This guide targets two keywords from the chart above. It also targets the question "how to do generative engine optimization", which gets 210 searches per month and is even easier to win.</p>
     <p><strong>Mistake 4: Publishing generic AI-sounding content.</strong> AI engines do not need to cite your page to say "SEO is important." They cite pages that contain specific facts. Vague content is invisible content.</p>
     <p><strong>Mistake 5: Treating GEO as a one-time project.</strong> Monthly re-testing is part of the system, not an add-on.</p>
@@ -2289,7 +2289,7 @@ export const blogPosts: BlogPost[] = [
   category: "NICHE SEO",
   readTime: "17 min read",
 
-  image: "/pediatric-dental-seo-cover.webp",
+  image: "/blog/pediatric-dental-seo-cover.webp",
 
   imageAlt:
     "Illustration of pediatric dental SEO with a friendly kids dental office, a search map pin, and ranking charts on a light background",
@@ -2476,7 +2476,7 @@ export const blogPosts: BlogPost[] = [
       <li><strong>Multi-location pediatric groups: $2,500 to $5,000+ per month.</strong> Each location needs its own GBP, location pages, and review engine. Pricing scales with locations and markets.</li>
     </ul>
     <p>The chart below shows the only fully published dental SEO pricing found in this research, next to RankVelt's starting price for comparison.</p>
-    <img src="/pediatric-dental-seo-chart.webp" alt="Bar chart comparing observed monthly pricing tiers for dental SEO, from freelancers at $300 per month up to multi-location groups at $5,000 per month, with RankVelt starting price shown for comparison" />
+    <img src="/blog/pediatric-dental-seo-chart.webp" alt="Bar chart comparing observed monthly pricing tiers for dental SEO, from freelancers at $300 per month up to multi-location groups at $5,000 per month, with RankVelt starting price shown for comparison" />
     <p>Source: agency pricing observed in research, Oct 2026. Consultant tiers are published package prices. RankVelt starting price shown for comparison.</p>
     <p><strong>Red flags on pricing:</strong> anyone charging under $300 a month for ongoing SEO is almost certainly doing nothing or automating everything. Anyone refusing to itemize what the monthly fee buys is selling a black box. Beware the $99 "SEO setup" too. That is usually an upsell funnel.</p>
     <p>RankVelt's local SEO work starts at $525 per month with a 3 month initial term, then rolling monthly. That sits below the dental-specialty tier. We will be direct about what that means. At this price you get solid fundamentals: GBP, on-page, technical, citations, review systems, reporting.</p>
@@ -2669,7 +2669,7 @@ export const blogPosts: BlogPost[] = [
   category: "NICHE SEO",
   readTime: "17 min read",
 
-  image: "/seo-for-pest-control-cover.webp",
+  image: "/blog/seo-for-pest-control-cover.webp",
 
   imageAlt:
     "Illustration showing pest control SEO themes: local search, online reviews, seasonal pest content, and recurring commercial service plans",
@@ -2851,7 +2851,7 @@ export const blogPosts: BlogPost[] = [
     <p>Nobody in the current top 10 results maps content to recurring revenue. This guide will.</p>
     <h2 id="pest-control-seo-keyword-volumes">The Search Demand: Pest Control SEO Keyword Volumes</h2>
     <p>Here is what pest control owners are actually searching for, with real SEMrush volumes from October 2026. The head term gets 880 monthly searches in the US, and the company and local variations add meaningful extra demand on top of it.</p>
-    <img src="/seo-for-pest-control-chart.webp" alt="Monthly search volume for pest control SEO keyword variations from SEMrush, October 2026" />
+    <img src="/blog/seo-for-pest-control-chart.webp" alt="Monthly search volume for pest control SEO keyword variations from SEMrush, October 2026" />
     <h2 id="pest-control-seo-costs-2026">How Much Pest Control SEO Costs in 2026</h2>
     <p>Let us get the uncomfortable question out of the way first.</p>
     <p>Published retainer prices from agencies serving this niche cluster in a wide band. Loopex Digital cites $1,500 to $5,000 per month. SEO Optimizers cite $500 to $4,000 per month. Cube Creative cites $750 to $2,500 per month for a single-location company.</p>
@@ -3033,7 +3033,7 @@ export const blogPosts: BlogPost[] = [
   category: "SEO SERVICES",
   readTime: "20 min read",
 
-  image: "/white-label-seo-services-cover.webp",
+  image: "/blog/white-label-seo-services-cover.webp",
 
   imageAlt:
     "Illustration of agency owners reviewing white label SEO pricing bands, net margin math, and a provider vetting checklist",
@@ -3200,7 +3200,7 @@ export const blogPosts: BlogPost[] = [
     <p>You will also learn what your contract must lock down for the day you leave. And what AEO and GEO fulfillment should look like this year.</p>
     <p>No provider endorsements. No invented numbers. Only the math and the mechanics.</p>
     <p>Agency owners search for this topic every month. Here is the demand picture from SEMrush.</p>
-    <img src="/white-label-seo-services-chart.webp" alt="Bar chart of monthly search volume for white label SEO keyword variations from SEMrush" />
+    <img src="/blog/white-label-seo-services-chart.webp" alt="Bar chart of monthly search volume for white label SEO keyword variations from SEMrush" />
     <h2 id="what-white-label-seo-includes">What White Label SEO Services Actually Include in 2026</h2>
     <p>White label SEO means a fulfillment partner does SEO work that you resell under your own brand. Your client never sees the provider's name. Deliverables arrive unbranded or rebranded with your logo.</p>
     <p>Reports come through a white label dashboard or as white label PDFs. The provider typically signs a non disclosure agreement. They never contact your clients directly.</p>
