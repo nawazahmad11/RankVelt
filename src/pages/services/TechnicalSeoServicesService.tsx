@@ -2,12 +2,6 @@ import SeoServiceTemplate, {
   type SeoServicePageConfig,
 } from "./SeoServiceTemplate";
 
-// Chart image placement: the SeoServicePageConfig pattern has no image
-// field, so the chart is not rendered by the template. When the template
-// supports section images, place it as:
-// <img src="/technical-seo-services-chart.webp" alt="Monthly search volume for technical SEO keyword variations" />
-// in the demand/volume section near the top of the page.
-
 const technicalSeoServicesConfig: SeoServicePageConfig = {
   slug: "/technical-seo-services",
 
@@ -345,6 +339,46 @@ const technicalSeoServicesConfig: SeoServicePageConfig = {
 
 export default function TechnicalSeoServicesService() {
   return (
-    <SeoServiceTemplate config={technicalSeoServicesConfig} />
+    <>
+      <figure
+        style={{ maxWidth: "1000px", margin: "2rem auto", padding: "0 1.5rem" }}
+      >
+        <img
+          src="/blog/technical-seo-services-cover.webp"
+          alt="Illustration for the technical SEO services guide"
+          style={{
+            width: "100%",
+            height: "auto",
+            borderRadius: "12px",
+            display: "block",
+          }}
+        />
+      </figure>
+      <SeoServiceTemplate config={technicalSeoServicesConfig} />
+      <section
+        style={{ maxWidth: "900px", margin: "3rem auto", padding: "0 1.5rem" }}
+      >
+        <h2>Monthly Search Demand for Technical SEO Services</h2>
+        <figure style={{ margin: "1.5rem 0" }}>
+          <img
+            src="/blog/technical-seo-services-chart.webp"
+            alt="Monthly search volume for technical SEO keyword variations"
+            loading="lazy"
+            style={{
+              width: "100%",
+              height: "auto",
+              borderRadius: "12px",
+              display: "block",
+            }}
+          />
+          <figcaption
+            style={{ fontSize: "0.9rem", marginTop: "0.75rem", opacity: 0.75 }}
+          >
+            Monthly US search volume for technical SEO keyword variations.
+            Source: SEMrush, US database, Oct 2026.
+          </figcaption>
+        </figure>
+      </section>
+    </>
   );
 }

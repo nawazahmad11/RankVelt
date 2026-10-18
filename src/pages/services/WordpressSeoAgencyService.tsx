@@ -313,14 +313,51 @@ const wordpressSeoAgencyConfig: SeoServicePageConfig = {
   ],
 };
 
-// Chart placement: SeoServicePageConfig has no image field, so the chart
-// wordpress-seo-agency-chart.webp (pages optimized per month by price tier)
-// should be placed by SeoServiceTemplate inside the "What Each Price Tier
-// Actually Buys You" deliverables section. <img src="/wordpress-seo-agency-chart.webp" />
-// Cover image wordpress-seo-agency-cover.webp goes with the H1 hero block.
+// Chart: wordpress-seo-agency-chart.webp (pages optimized per month by price tier)
+// placed below as its own figure section. Cover image renders as the hero banner above.
 
 export default function WordpressSeoAgencyService() {
   return (
-    <SeoServiceTemplate config={wordpressSeoAgencyConfig} />
+    <>
+      <figure
+        style={{ maxWidth: "1000px", margin: "2rem auto", padding: "0 1.5rem" }}
+      >
+        <img
+          src="/blog/wordpress-seo-agency-cover.webp"
+          alt="Illustration for the affordable WordPress SEO agency guide"
+          style={{
+            width: "100%",
+            height: "auto",
+            borderRadius: "12px",
+            display: "block",
+          }}
+        />
+      </figure>
+      <SeoServiceTemplate config={wordpressSeoAgencyConfig} />
+      <section
+        style={{ maxWidth: "900px", margin: "3rem auto", padding: "0 1.5rem" }}
+      >
+        <h2>Pages Optimized per Month, by Price Tier</h2>
+        <figure style={{ margin: "1.5rem 0" }}>
+          <img
+            src="/blog/wordpress-seo-agency-chart.webp"
+            alt="Pages optimized per month by WordPress SEO price tier"
+            loading="lazy"
+            style={{
+              width: "100%",
+              height: "auto",
+              borderRadius: "12px",
+              display: "block",
+            }}
+          />
+          <figcaption
+            style={{ fontSize: "0.9rem", marginTop: "0.75rem", opacity: 0.75 }}
+          >
+            Typical pages optimized per month at each price tier, based on the
+            pricing bands compared in this guide.
+          </figcaption>
+        </figure>
+      </section>
+    </>
   );
 }
