@@ -267,6 +267,15 @@ const BusinessSEOService = lazy(
 );
 
 
+const WordpressSeoAgencyService = lazy(
+  () => import("./pages/services/WordpressSeoAgencyService"),
+);
+
+const TechnicalSeoServicesService = lazy(
+  () => import("./pages/services/TechnicalSeoServicesService"),
+);
+
+
 
 const AiSeoAgencyService = lazy(
   () => import("./pages/services/AiSeoAgencyService"),
@@ -390,6 +399,17 @@ const App = () => (
               element={<BusinessSEOService />}
             />
 
+
+
+            <Route
+              path="/wordpress-seo-agency"
+              element={<WordpressSeoAgencyService />}
+            />
+
+            <Route
+              path="/technical-seo-services"
+              element={<TechnicalSeoServicesService />}
+            />
 
 
             <Route
