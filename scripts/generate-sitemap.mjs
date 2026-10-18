@@ -79,6 +79,9 @@ const staticRoutes = [
   "/services/app-api-sync",
   "/services/checkout-flow",
 
+  "/wordpress-seo-agency",
+  "/technical-seo-services",
+
   "/privacy-policy",
   "/terms-of-service",
   "/refund-policy",
