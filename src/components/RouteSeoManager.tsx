@@ -120,6 +120,19 @@ const staticPageMeta: Record<string, RouteMeta> = {
       "RankVelt provides SEO audit services covering technical SEO, content and AI search visibility, so you know what blocks rankings, citations and leads.",
   },
 
+
+"/wordpress-seo-agency": {
+  title: "Affordable WordPress SEO Agency | Honest Pricing from $525/mo | RankVelt",
+  description:
+    "Shopping for an affordable WordPress SEO agency? Compare real price tiers, see what each tier buys, and check RankVelt's honest $525/mo WordPress SEO service.",
+},
+
+"/technical-seo-services": {
+  title: "Technical SEO Services: What's Included, Real Pricing and Timelines | RankVelt",
+  description:
+    "Technical SEO services explained: what's included, audit vs retainer, honest pricing ranges, realistic timelines, and RankVelt's $525/mo plan.",
+},
+
   "/local-seo/dentists": {
   title: "Dental SEO Services | Local SEO for Dentists | RankVelt",
   description:
