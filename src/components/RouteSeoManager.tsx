@@ -121,6 +121,22 @@ const staticPageMeta: Record<string, RouteMeta> = {
   },
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 "/wordpress-seo-agency": {
   title: "Affordable WordPress SEO Agency | Honest Pricing from $525/mo | RankVelt",
   description:
