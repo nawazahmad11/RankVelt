@@ -226,6 +226,11 @@ const OpenGraphChecker = lazy(
   () => import("./pages/tools/OpenGraphChecker"),
 );
 
+const AiOverviewsVisibilityTracker = lazy(
+  () => import("./pages/tools/AiOverviewsVisibilityTracker"),
+);
+
+
 /*
  * Case-study pages
  */
@@ -415,7 +420,10 @@ const App = () => (
               path="/business-seo"
               element={<BusinessSEOService />}
             />
-
+            <Route
+              path="/tools/ai-overviews-visibility-tracker"
+              element={<AiOverviewsVisibilityTracker />}
+            />
             <Route
               path="/seo-services-abu-dhabi"
               element={<SeoServicesAbuDhabiService />}

@@ -65,6 +65,7 @@ const staticRoutes = [
   "/tools/vin-barcode-generator",
   "/tools/google-review-link-generator",
   "/tools/open-graph-checker",
+  "/tools/ai-overviews-visibility-tracker",
 
   "/case-studies",
   "/case-studies/product-discovery-at-scale",

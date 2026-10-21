@@ -240,6 +240,12 @@ const staticPageMeta: Record<string, RouteMeta> = {
       "Use RankVelt's Shopify Theme Detector to check public storefront signals and identify the likely theme setup behind a Shopify store.",
   },
 
+  "/tools/ai-overviews-visibility-tracker": {
+  title: "AI Overviews Visibility Tracker: Free Tool | RankVelt",
+  description:
+    "Track your AI Overview citations and brand mentions with a guided manual check. Scores, trends and client ready reports. Free, no signup.",
+},
+
   "/tools/business-name-generator": {
     title: "Free Business Name Generator | RankVelt",
     description:
