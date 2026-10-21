@@ -21,6 +21,8 @@ const sitemapOutputPath = resolve(
 const staticRoutes = [
   "/",
 
+
+  
   "/local-seo",
   "/local-seo/dentists",
   "/local-seo/plumbers",
