@@ -56,6 +56,23 @@ const LocalSEOLawyers = lazy(
 );
 
 
+const SeoServicesAbuDhabiService = lazy(
+  () => import("./pages/services/SeoServicesAbuDhabiService"),
+);
+
+const SeoServicesQatarService = lazy(
+  () => import("./pages/services/SeoServicesQatarService"),
+);
+
+const SeoServicesDubaiService = lazy(
+  () => import("./pages/services/SeoServicesDubaiService"),
+);
+
+const SeoServicesSaudiArabiaService = lazy(
+  () => import("./pages/services/SeoServicesSaudiArabiaService"),
+);
+
+
 
 /*
  * Lead funnel pages
@@ -399,7 +416,25 @@ const App = () => (
               element={<BusinessSEOService />}
             />
 
+            <Route
+              path="/seo-services-abu-dhabi"
+              element={<SeoServicesAbuDhabiService />}
+            />
 
+            <Route
+              path="/seo-services-qatar"
+              element={<SeoServicesQatarService />}
+            />
+
+            <Route
+              path="/seo-services-dubai"
+              element={<SeoServicesDubaiService />}
+            />
+
+            <Route
+              path="/seo-services-saudi-arabia"
+              element={<SeoServicesSaudiArabiaService />}
+            />
 
             <Route
               path="/wordpress-seo-agency"

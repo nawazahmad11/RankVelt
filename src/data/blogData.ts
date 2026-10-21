@@ -77,7 +77,7 @@ export const blogPosts: BlogPost[] = [
 
     date: "Sep 30, 2026",
     datePublished: "2026-09-30",
-    dateModified: "2026-09-30",
+    dateModified: "2026-10-21",
 
     author: "RankVelt Editorial Team",
     authorType: "Organization",
@@ -181,6 +181,11 @@ export const blogPosts: BlogPost[] = [
         level: 2,
       },
       {
+        id: "how-do-i-track-my-brand-in-google-ai-overviews",
+        title: "How Do I Track My Brand in Google AI Overviews?",
+        level: 2,
+      },
+      {
         id: "the-5-metrics-that-actually-matter",
         title: "The 5 Metrics That Actually Matter",
         level: 2,
@@ -269,7 +274,17 @@ export const blogPosts: BlogPost[] = [
       </ul>
       <p>Should you pay for one? It depends on scale. If you track 30 queries, the spreadsheet method is enough. If you track 500 queries across many locations, manual checking becomes impossible and a tracker earns its cost. Start free, upgrade when the manual work breaks.</p>
       <p>One honest warning: every tracker samples AI answers, and AI answers change between users and over time. Treat the numbers as directional, not exact. A tool telling you "cited in 42% of prompts" means roughly two in five, not precisely 42.</p>
-      <h2 id="the-5-metrics-that-actually-matter">The 5 Metrics That Actually Matter</h2>
+      <h2 id="how-do-i-track-my-brand-in-google-ai-overviews">How Do I Track My Brand in Google AI Overviews?</h2>
+        <p>You can start with a simple manual method before paying for any tool:</p>
+        <ul>
+          <li><strong>Pick 10 to 20 questions</strong> your customers actually ask Google, the ones where an AI Overview appears.</li>
+          <li><strong>Search each one signed out</strong> or in a private window, and note whether your brand is mentioned or cited in the AI answer.</li>
+          <li><strong>Record the date, the question, and the result</strong> (mention, citation, or not at all) in a simple spreadsheet.</li>
+          <li><strong>Repeat every two weeks</strong> with the same questions. AI answers shift, so the trend matters more than any single check.</li>
+          <li><strong>Cross check in Google Search Console:</strong> pages cited by AI Overviews often gain impressions before clicks, so watch impressions on your informational pages.</li>
+        </ul>
+        <p>Once the manual routine feels too small, the tracking tools compared in our <a href="/blog/ai-overviews-rank-tracking-tools">AI Overviews rank tracking guide</a> automate the mention and citation checks for you.</p>
+        <h2 id="the-5-metrics-that-actually-matter">The 5 Metrics That Actually Matter</h2>
       <p>Trackers and dashboards can drown you in numbers. Ignore most of them. These five metrics are the ones that lead to decisions:</p>
       <ol>
         <li><strong>Citation rate.</strong> Out of the queries you track, in how many does your site get cited? If this rises over time, your content work is paying off.</li>
@@ -333,6 +348,12 @@ export const blogPosts: BlogPost[] = [
       </div>
     `,
   },
+
+
+
+
+
+  
   {
     id: "show-up-in-google-ai-overviews",
 
@@ -3931,7 +3952,7 @@ export const blogPosts: BlogPost[] = [
 
     date: "Oct 3, 2026",
     datePublished: "2026-10-03",
-    dateModified: "2026-10-03",
+    dateModified: "2026-10-21",
 
     author: "RankVelt Editorial Team",
     authorType: "Organization",
@@ -3996,10 +4017,26 @@ export const blogPosts: BlogPost[] = [
         answer:
           "Traditional rank tracking reports your position for a keyword. AI overview tracking adds whether an AI answer appears above the results, whether you are cited in it, and how that presence affects clicks. You need both views to understand traffic in 2026.",
       },
-    ],
+      {
+        question: "What is the best AI Overviews rank tracker?",
+        answer:
+          "There is no single best tool for everyone. If you run an agency, choose a tool with citation tracking, brand mentions and query level history across many client sites. If you run one business site, a lighter tool or the free manual method in this guide is usually enough. Compare what each tool measures before you compare prices.",
+      },
+      {
+        question: "How do I track my rankings in AI Overviews?",
+        answer:
+          "Choose the questions your customers ask where an AI Overview appears, then regularly check whether your site is cited or your brand is mentioned in the answer. Log the results over time in a spreadsheet, or use a tracking tool to automate the checks. Our monitoring guide on this blog walks through the metrics step by step.",
+      },
+      {
+        question: "Can I track AI Overviews for free?",
+        answer:
+          "Yes, for a small set of queries. Search your key questions in a private window, note mentions and citations, and repeat every two weeks. Free methods do not scale to hundreds of queries, which is where paid tools earn their cost.",
+      },
+],
 
     toc: [
       { id: "what-to-track", title: "What an AI Overviews Tracker Must Measure", level: 2 },
+      { id: "ai-mode-features", title: "What Features Are Essential for Tracking AI Mode Performance?", level: 2 },
       { id: "how-tools-differ", title: "How the Main Tools Compare", level: 2 },
       { id: "semrush", title: "Semrush", level: 3 },
       { id: "ai-native", title: "AI-native trackers", level: 3 },
@@ -4016,7 +4053,8 @@ export const blogPosts: BlogPost[] = [
 
       <p>A keyword can hold position 3 while an AI Overview above it takes most of the clicks. Your classic tracker reports "no change." Your traffic disagrees. That gap is why rank tracking tools for AI Overviews exist: they measure overview presence, citations, and brand mentions alongside positions.</p>
 
-      <h2 id="what-to-track">What an AI Overviews Tracker Must Measure</h2>
+      <p><strong>Short version:</strong> If you only take one thing from this guide, take this: track three numbers. Which of your key queries trigger an AI Overview, how often you are cited in it, and how often your brand is mentioned. Paid tools automate these checks. The free manual method below covers the same ground for a small set of queries. Pick a tool by what it measures, not by how long its feature list is.</p>
+        <h2 id="what-to-track">What an AI Overviews Tracker Must Measure</h2>
 
       <p>Before comparing tools, know what matters. A serious tracker covers five things:</p>
 
@@ -4030,9 +4068,34 @@ export const blogPosts: BlogPost[] = [
 
       <p>A tool missing citation extraction is just a classic tracker with a new label. That is the first filter.</p>
 
-      <h2 id="how-tools-differ">How the Main Tools Compare</h2>
+      <h2 id="ai-mode-features">What Features Are Essential for Tracking AI Mode Performance?</h2>
+        <p>Not every rank tracker handles AI Mode and AI Overviews well. When you compare tools, look for these features:</p>
+        <ul>
+          <li><strong>AI Overview presence tracking:</strong> does the tool show whether an AI Overview appears for your keyword at all?</li>
+          <li><strong>Citation tracking:</strong> which sources the AI answer cites, and whether your site is one of them.</li>
+          <li><strong>Brand mention tracking:</strong> whether your brand is named in the answer text, even without a citation link.</li>
+          <li><strong>AI Mode coverage:</strong> Google AI Mode is a separate surface from AI Overviews, so the tool should say clearly which one it measures.</li>
+          <li><strong>Query level history:</strong> results change fast, so you need a history per query, not a single snapshot.</li>
+          <li><strong>Share of voice:</strong> how often you appear across a set of queries compared with competitors.</li>
+        </ul>
+        <p>A tool that only tracks classic blue link positions cannot answer any of these questions.</p>
+        <h2 id="how-tools-differ">How the Main Tools Compare</h2>
 
       <p>Most comparison listicles rank their own product first, so use this independent read instead. Evaluate each tool against the five dimensions above plus refresh cadence and country coverage.</p>
+        <p>The short comparison, before the detail:</p>
+        <table>
+          <thead>
+            <tr><th>Approach</th><th>Strength, in this guide's reading</th><th>Watch out for</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Semrush</strong></td><td>Huge keyword database and historical data; AI Overviews data sits inside position tracking and SERP features reporting</td><td>Citation level detail is thinner than in AI native tools, and meaningful AI tracking sits on higher tier plans</td></tr>
+            <tr><td><strong>AI native trackers</strong></td><td>Deeper citation extraction, share of voice views, and prompt level testing across ChatGPT and Perplexity alongside Google</td><td>Younger products with smaller keyword databases; vendor listicles rank their own tool first</td></tr>
+            <tr><td><strong>SE Ranking and similar mid market suites</strong></td><td>Strong value for agencies and multi site owners; AI Overviews tracking typically included without enterprise pricing</td><td>Check citation depth and country coverage for your specific markets before committing</td></tr>
+            <tr><td><strong>Ahrefs Brand Radar and enterprise options</strong></td><td>Best in class backlink and brand data to pair with AI metrics</td><td>Pricing and learning curve suit larger teams</td></tr>
+            <tr><td><strong>Free manual setup</strong></td><td>A weekly check of your top 20 to 30 queries in a spreadsheet covers presence and citations at zero cost</td><td>Manual work does not scale to hundreds of queries or multiple countries</td></tr>
+          </tbody>
+        </table>
+        
 
       <h3 id="semrush">Semrush</h3>
 
@@ -18387,6 +18450,7 @@ http://cheap-guest-posts.example/my-post</code></pre>
       </p>
     `,
   },
+
   {
     id: "woocommerce-seo",
 
@@ -18405,7 +18469,7 @@ http://cheap-guest-posts.example/my-post</code></pre>
 
     date: "Oct 4, 2026",
     datePublished: "2026-10-04",
-    dateModified: "2026-10-04",
+    dateModified: "2026-10-21",
 
     author: "RankVelt Editorial Team",
     authorType: "Organization",
@@ -18582,9 +18646,11 @@ http://cheap-guest-posts.example/my-post</code></pre>
 
       <p>RankVelt's <a href="/ecommerce-seo-services">ecommerce SEO</a> practice covers WooCommerce end to end: plugin stack configured properly, product schema validated across simple and variable products, indexation cleaned up, faceted navigation controlled, and speed work that addresses HPOS and cart fragments, not just caching. Audit first, fix in priority order, report on revenue.</p>
 
-      <p><a href="/strategy-call">Book a free strategy call</a>. We will review your store, show you the highest leverage issues, and tell you plainly whether we are the right fit. If the fixes are simple enough to DIY, we will say that too.</p>
+      <p>Running your store on Shopify instead? The same work applies with platform specific differences, and our <a href="/shopify-seo-services">Shopify SEO services</a> page covers that side.</p>
+        <p><a href="/strategy-call">Book a free strategy call</a>. We will review your store, show you the highest leverage issues, and tell you plainly whether we are the right fit. If the fixes are simple enough to DIY, we will say that too.</p>
     `,
   },
+
   {
     id: "woocommerce-seo-problems",
 
@@ -19094,20 +19160,20 @@ http://cheap-guest-posts.example/my-post</code></pre>
 {
   id: "best-ai-seo-agencies",
 
-  title: "How to Choose an AI SEO Agency: 7 Criteria and Red Flags (2026)",
+  title: "How to Choose the Best AI SEO Agency: 7 Criteria and Red Flags (2026)",
 
-  seoTitle: "How to Choose an AI SEO Agency: 7 Criteria and Red Flags (2026)",
+  seoTitle: "How to Choose the Best AI SEO Agency: 7 Criteria and Red Flags (2026)",
 
-  metaDescription: "The 7 criteria that separate real AI SEO agencies from pretenders, plus red flags to avoid before signing. Honest 2026 guide.",
+  metaDescription: "Looking for the best AI SEO agency? Judge by these 7 criteria and red flags, and see honestly where a small founder led agency fits. 2026 guide.",
 
-  ogTitle: "How to Choose an AI SEO Agency: 7 Criteria and Red Flags (2026)",
+  ogTitle: "How to Choose the Best AI SEO Agency: 7 Criteria and Red Flags (2026)",
 
   socialDescription:
     "AI-first vs AI-branded: 7 criteria and red flags for choosing an AI SEO agency in 2026.",
 
   date: "Oct 5, 2026",
   datePublished: "2026-10-05",
-  dateModified: "2026-10-05",
+  dateModified: "2026-10-21",
 
   author: "RankVelt Editorial Team",
   authorType: "Organization",
@@ -19191,7 +19257,12 @@ http://cheap-guest-posts.example/my-post</code></pre>
       answer:
         "Search questions in their specialty inside an AI assistant and see if they are cited. Ask for a page they optimised to be quoted and what changed. Ask how they measure AI citations. Specific, checkable answers signal real expertise; vague excitement signals marketing.",
     },
-  ],
+    {
+      question: "What is the best AI SEO agency?",
+      answer:
+        "There is no single best agency for every business. The best fit depends on your size, your market and how you like to work. Judge any agency by its method, its reporting and its honesty about limits. A small founder led agency like RankVelt suits businesses that want senior work and straight answers. A large agency suits enterprises that need scale and multiple services under one contract.",
+    },
+],
 
   toc: [
     {
@@ -19222,6 +19293,11 @@ http://cheap-guest-posts.example/my-post</code></pre>
     {
       id: "faqs",
       title: "Frequently Asked Questions",
+      level: 2,
+    },
+    {
+      id: "where-rankvelt-fits-honestly",
+      title: "Where RankVelt Fits, Honestly",
       level: 2,
     },
     {
@@ -19298,7 +19374,12 @@ http://cheap-guest-posts.example/my-post</code></pre>
         <summary>How do I verify an agency's AI SEO claims?</summary>
         <p>Search questions in their specialty inside an AI assistant and see if they are cited. Ask for a page they optimised to be quoted and what changed. Ask how they measure AI citations. Specific, checkable answers signal real expertise; vague excitement signals marketing.</p>
       </details>
-      <h2 id="conclusion">Conclusion</h2>
+      <h2 id="where-rankvelt-fits-honestly">Where RankVelt Fits, Honestly</h2>
+        <p>Most agencies writing pages like this one place themselves at number one. We will not do that, because a ranking we invented about ourselves would prove nothing.</p>
+        <p>Here is where RankVelt honestly fits. We are a small, founder led AI SEO agency. Engagements start from $525 per month with a 3 month initial term, then month-to-month. Reporting is plain language: what we did, what changed, what is next. Your work is led personally by our founder, Nawaz Ahmad, not handed to juniors.</p>
+        <p>We are a strong fit if you are a small or mid sized business that wants AI search visibility without enterprise retainers, and you value direct answers over account management layers.</p>
+        <p>We are not the right fit if you need a large team in your own city, a household brand name for your board, or paid media and PR under the same contract. Plenty of agencies do those things well. We do search, and we do it properly.</p>
+        <h2 id="conclusion">Conclusion</h2>
       <p>The <a href="/ai-seo-agency">best AI SEO agency</a> for you is the one that treats AI search as real work, not as a headline. Check for genuine audits, quotable-first content, entity discipline, and separate AI reporting. Dodge the red flags, ask the hard questions, and pick the boring specific answers over the exciting vague ones.</p>
       <p>If you are weighing an agency against going solo with a freelancer, read our <a href="/blog/seo-freelancer-vs-agency">SEO freelancer vs agency guide</a> next. And if you want to see what a proper audit looks like before you buy one, see <a href="/blog/technical-seo-audit-services">what technical SEO audit services cover in 2026</a>.</p>
       <p>Want an honest read on where your site stands today? <a href="/strategy-call">Book a free SEO opportunity check</a> and get clear next steps for both rankings and AI citations.</p>
@@ -19309,6 +19390,7 @@ http://cheap-guest-posts.example/my-post</code></pre>
       </div>
     `,
 },
+
 {
   id: "seo-freelancer-vs-agency",
 
@@ -20037,6 +20119,7 @@ http://cheap-guest-posts.example/my-post</code></pre>
       </div>
     `,
 },
+
 {
   id: "local-citation-building-services",
 
@@ -20054,7 +20137,7 @@ http://cheap-guest-posts.example/my-post</code></pre>
 
   date: "Oct 5, 2026",
   datePublished: "2026-10-05",
-  dateModified: "2026-10-05",
+  dateModified: "2026-10-21",
 
   author: "RankVelt Editorial Team",
   authorType: "Organization",
@@ -20138,7 +20221,22 @@ http://cheap-guest-posts.example/my-post</code></pre>
       answer:
         "Indirectly but genuinely. AI assistants verify business facts against multiple sources before recommending a local business. Consistent citations across trusted directories make your business data easier to verify, which supports inclusion in AI-generated local answers.",
     },
-  ],
+    {
+      question: "How can I improve my local business citations in AI-generated responses?",
+      answer:
+        "Keep your name, address and phone identical on every listing, complete your Google Business Profile, stay on the key directories for your industry, match your website details to your listings, and earn genuine reviews. AI systems cite businesses whose facts agree across sources.",
+    },
+    {
+      question: "Is manual or automated citation building more effective for local search visibility?",
+      answer:
+        "Manual building is usually more effective for a single business because a person verifies each listing, picks relevant directories and cleans duplicates. Automated building is faster and cheaper, but accuracy and duplicate control are weaker. Consistent, correct citations matter more than raw count.",
+    },
+    {
+      question: "What does a local citations specialist do?",
+      answer:
+        "A local citations specialist builds, corrects and maintains a business's listings across directories and platforms. The work includes finding duplicates, fixing wrong name, address or phone details, choosing the right directories for the industry, and keeping everything consistent so Google and AI systems trust the business's data.",
+    },
+],
 
   toc: [
     {
@@ -20162,6 +20260,11 @@ http://cheap-guest-posts.example/my-post</code></pre>
       level: 2,
     },
     {
+      id: "citations-in-ai-responses",
+      title: "How to Improve Local Business Citations in AI-Generated Responses",
+      level: 2,
+    },
+    {
       id: "when-you-need-a-citation-service",
       title: "When You Need a Citation Service",
       level: 2,
@@ -20169,6 +20272,16 @@ http://cheap-guest-posts.example/my-post</code></pre>
     {
       id: "diy-vs-citation-building-service",
       title: "DIY vs Citation Building Service",
+      level: 2,
+    },
+    {
+      id: "manual-vs-automated-citation-building",
+      title: "Manual vs Automated Citation Building: An Honest Comparison",
+      level: 2,
+    },
+    {
+      id: "local-citation-submitter-options",
+      title: "Local Citation Submitter Options: DIY, Tools and Services",
       level: 2,
     },
     {
@@ -20184,6 +20297,11 @@ http://cheap-guest-posts.example/my-post</code></pre>
     {
       id: "conclusion",
       title: "Conclusion",
+      level: 2,
+    },
+    {
+      id: "need-your-citations-built-or-fixed",
+      title: "Need Your Citations Built or Fixed?",
       level: 2,
     },
   ],
@@ -20213,7 +20331,17 @@ http://cheap-guest-posts.example/my-post</code></pre>
       <p>Here is the part most citation guides have not caught up with. AI assistants like ChatGPT, Perplexity and Google's AI answers now recommend local businesses directly. When someone asks for the best plumber in an area, the AI does not just check Google rankings. It verifies business details across multiple sources before naming anyone.</p>
       <p>This makes citation consistency an AI visibility factor. If your hours, address and phone number agree across trusted directories, the AI can verify your business with confidence. If sources disagree, the AI either skips you or, worse, states the wrong details to a potential customer.</p>
       <p>The implication for citation work: accuracy now matters beyond Google. Every listing is a data point that AI systems may read. A citation building service that understands this will treat consistency as entity management, not just directory submissions, and will prioritise the sources AI systems actually consult.</p>
-      <h2 id="when-you-need-a-citation-service">When You Need a Citation Service</h2>
+      <h2 id="citations-in-ai-responses">How to Improve Local Business Citations in AI-Generated Responses</h2>
+        <p>AI systems pull local business facts from the same sources Google uses: your Google Business Profile, major directories, review platforms and your own website. To improve how often AI answers mention and cite your business:</p>
+        <ul>
+          <li><strong>Keep your name, address and phone identical everywhere.</strong> Small differences split your identity in the data AI systems read.</li>
+          <li><strong>Complete your Google Business Profile fully:</strong> categories, services, hours, photos and attributes.</li>
+          <li><strong>Stay listed on the directories that matter</strong> in your industry and city, not hundreds of low quality ones.</li>
+          <li><strong>Keep your website consistent:</strong> contact and location pages should match your listings, supported by LocalBusiness schema.</li>
+          <li><strong>Earn steady, genuine reviews</strong> that mention your real services, because AI answers quote review text.</li>
+        </ul>
+        <p>Consistency is the whole game. AI can only cite a business confidently when every source tells the same story.</p>
+        <h2 id="when-you-need-a-citation-service">When You Need a Citation Service</h2>
       <p>Not every business needs one. Here is how to decide.</p>
       <p><strong>You probably need a service if:</strong> your business has moved, rebranded or changed phone numbers and old data is scattered everywhere; you operate multiple locations and keeping listings in sync is unmanageable; or previous DIY attempts left a mess of duplicates and half-finished profiles.</p>
       <p><strong>You can probably DIY if:</strong> the business is brand new with no existing listings, you have one location, and you have a few free afternoons. The major directories all accept free submissions. It is slow but straightforward.</p>
@@ -20223,7 +20351,26 @@ http://cheap-guest-posts.example/my-post</code></pre>
       <p>A service brings three things: speed through process, knowledge of which directories matter for your industry and country, and cleanup capability. The last one is the differentiator. Anyone can submit new listings. Finding and fixing wrong ones requires knowing where to look and how each platform's correction process works.</p>
       <p>Watch out for services that only build and never clean. If your problem is inconsistent existing data, new citations on top of wrong ones just add noise. The engagement should start with an audit of what already exists.</p>
       <p>If managing the whole local presence feels like too much on top of running the business, read <a href="/blog/why-hire-local-seo-company">why businesses hire a local SEO company</a>.</p>
-      <h2 id="how-to-evaluate-a-citation-service">How to Evaluate a Citation Service</h2>
+      <h2 id="manual-vs-automated-citation-building">Manual vs Automated Citation Building: An Honest Comparison</h2>
+        <p>Most citation services use one of two methods, and the difference shows up in your data quality:</p>
+        <table>
+          <thead>
+            <tr><th>Factor</th><th>Manual building</th><th>Automated building</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Accuracy of name, address, phone</strong></td><td>High, a person checks each listing</td><td>Varies, errors can slip through</td></tr>
+            <tr><td><strong>Directory selection</strong></td><td>Chosen per business and industry</td><td>Usually a fixed network list</td></tr>
+            <tr><td><strong>Duplicate cleanup</strong></td><td>Included in careful manual work</td><td>Often weak or missing</td></tr>
+            <tr><td><strong>Speed</strong></td><td>Slower, days to weeks</td><td>Fast, hours to days</td></tr>
+            <tr><td><strong>Cost pattern</strong></td><td>Higher per listing</td><td>Lower per listing</td></tr>
+            <tr><td><strong>Best for</strong></td><td>Businesses that need accuracy and cleanup</td><td>Simple listings at large scale</td></tr>
+          </tbody>
+        </table>
+        <p>For most local businesses, accuracy beats volume. A smaller set of correct, consistent citations does more for visibility than a large set with errors in it.</p>
+        <h2 id="local-citation-submitter-options">Local Citation Submitter Options: DIY, Tools and Services</h2>
+        <p>There are three ways citations get submitted. You can submit them yourself, directory by directory, which costs time but gives full control. You can use submission software or aggregator services, which push your data to a network of directories quickly but with less control over each listing. Or you can hire a citation building service that submits and verifies listings manually.</p>
+        <p>The right choice depends on how many locations you run and how messy your current listings are. Whatever route you choose, verify a sample of listings afterwards with your own eyes.</p>
+        <h2 id="how-to-evaluate-a-citation-service">How to Evaluate a Citation Service</h2>
       <p>Ask these questions before hiring anyone:</p>
       <ul>
         <li><strong>Do they start with an audit?</strong> A serious service maps your existing citations first and shows you the inconsistencies before quoting cleanup work.</li>
@@ -20266,13 +20413,17 @@ http://cheap-guest-posts.example/my-post</code></pre>
       <p>Local citation building services do unglamorous but necessary work: making sure the web agrees on your business details. Consistent NAP data supports Google Maps rankings, and now it also feeds the entity verification that AI assistants perform before recommending local businesses.</p>
       <p>If your listings are a mess of old addresses and duplicate profiles, a cleanup-focused service is money well spent. If you are starting fresh with one location, DIY the major directories and spend your budget on reviews and content instead.</p>
       <p>If you want your local presence audited, citations cleaned up and AI-search ready in one engagement, <a href="/strategy-call">book a free strategy call</a> and we will map out what your business actually needs.</p>
-      <div class="cta-premium-block">
+      <h2 id="need-your-citations-built-or-fixed">Need Your Citations Built or Fixed?</h2>
+        <p>Everything in this guide can be done by hand, and many businesses start that way. It is slow work: finding every listing, fixing every variation of your name and address, and checking the results one directory at a time.</p>
+        <p>If you would rather spend those hours running your business, this is part of what our <a href="/local-seo">local SEO service</a> covers. Citation building and cleanup, Google Business Profile work and the website fixes that support them, from $525 per month with reporting you can actually read. Start with the <a href="/strategy-call?package=Free%20SEO%20Opportunity%20Check">free SEO Opportunity Check</a>. We will look at your current listings and tell you honestly how much work your citations need, whether you hire us or not.</p>
+        <div class="cta-premium-block">
         <h2>Fix Your Local Citations Once, Properly</h2>
         <p>RankVelt audits your existing listings, cleans up duplicates and wrong data, and builds consistent citations that Google and AI assistants can trust.</p>
         <a href="/strategy-call?package=Local%20SEO" class="shimmer-btn">Book Your Free Strategy Call</a>
       </div>
     `,
 },
+
 {
   id: "woocommerce-seo-services",
 

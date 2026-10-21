@@ -85,6 +85,15 @@ const staticRoutes = [
   "/privacy-policy",
   "/terms-of-service",
   "/refund-policy",
+
+
+
+  "/seo-services-abu-dhabi",
+  "/seo-services-qatar",
+  "/seo-services-dubai",
+  "/seo-services-saudi-arabia",
+
+
 ];
 
 const escapeXml = (value) => {

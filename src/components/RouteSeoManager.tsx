@@ -178,6 +178,30 @@ const staticPageMeta: Record<string, RouteMeta> = {
 },
 
 
+"/seo-services-abu-dhabi": {
+  title: "SEO Services in Abu Dhabi for Growing Businesses | RankVelt",
+  description:
+    "SEO services in Abu Dhabi by RankVelt: technical audits, local search, Google Maps and AI visibility for Abu Dhabi businesses. From $525/mo, founder led.",
+},
+
+"/seo-services-qatar": {
+  title: "SEO Company in Qatar: SEO Services for Doha Businesses | RankVelt",
+  description:
+    "SEO services in Qatar by RankVelt, a specialist SEO company serving Doha businesses remotely: audits, local search, Maps and AI visibility. From $525/mo.",
+},
+
+"/seo-services-dubai": {
+  title: "SEO Services in Dubai: Local and eCommerce SEO | RankVelt",
+  description:
+    "SEO services in Dubai focused on local SEO packages, Google Maps and eCommerce SEO for Dubai businesses. Founder led, from $525/mo, delivered remotely.",
+},
+
+"/seo-services-saudi-arabia": {
+  title: "SEO Services in Saudi Arabia for Growing Businesses | RankVelt",
+  description:
+    "SEO services in Saudi Arabia by RankVelt: technical audits, local search, eCommerce SEO and AI visibility, delivered remotely. From $525/mo, founder led.",
+},
+
 
 
   "/blog": {
