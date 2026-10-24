@@ -155,6 +155,52 @@ const pageFaqs = [
     answer:
       "No. This case study confirms the Google Search Console and PageSpeed metrics visible in the supplied screenshots. It does not claim leads, sales, revenue, conversions, individual keyword rankings, or specific implementation tasks not shown in the evidence.",
   },
+  {
+    question: "How quickly did the growth appear in the report?",
+    answer:
+      "The graph showed a quiet baseline through much of the early period. Visibility started rising in June, and both clicks and impressions climbed sharply during the final weeks of the three-month window. That pattern is common when pages gain traction, but the timing is specific to this website and its market. It is not a promised timeline for other businesses.",
+  },
+  {
+    question: "Why focus on pages that already have impressions?",
+    answer:
+      "A page with impressions has already proven that Google connects it with real search demand. Improving that page is usually a safer move than publishing new content without evidence. RankVelt starts most engagements this way: protect what already earns visibility, fix what limits clicks, then expand only where the data shows a real opportunity.",
+  },
+];
+
+const keyTakeaways = [
+  "6.68K organic clicks and 49K impressions over one three-month Search Console period.",
+  "A 13.6% average CTR and 5.5 average position show the visibility earned was also relevant.",
+  "The search curve stayed quiet early, then rose sharply in the final weeks of the period.",
+  "Mobile Performance improved from 59 to 79, Accessibility from 79 to 96, and Best Practices from 69 to 100.",
+  "Largest Contentful Paint was still 5.2s in the later audit, so technical work continues.",
+  "The evidence covers search and audit metrics only. It does not claim leads, sales, or revenue.",
+];
+
+const moreCaseStudies = [
+  {
+    title: "Civic Access",
+    href: "/case-studies/civic-access",
+    description:
+      "32.3K organic clicks in 28 days for a public-service information platform, with a 3.7 average position.",
+  },
+  {
+    title: "Clear Ride Auto Glass",
+    href: "/case-studies/clear-ride-auto-glass",
+    description:
+      "18.4K organic clicks in 28 days for a local auto glass service, with a stronger mobile audit after optimisation.",
+  },
+  {
+    title: "Harborline",
+    href: "/case-studies/harborline",
+    description:
+      "18.7K organic clicks in 28 days, 387K impressions, and a 91 mobile Performance score.",
+  },
+  {
+    title: "Product Discovery at Scale",
+    href: "/case-studies/product-discovery-at-scale",
+    description:
+      "An eCommerce SEO case study with 26.9K organic clicks and 1.82M impressions over three months.",
+  },
 ];
 
 const ensureMetaByName = (name: string) => {
@@ -337,10 +383,38 @@ const Bluebridge = () => {
               Next Steps
             </a>
 
+            <a href="#lessons" className="transition-colors hover:text-primary">
+              Lessons
+            </a>
+
             <a href="#faqs" className="transition-colors hover:text-primary">
               FAQs
             </a>
           </nav>
+
+          <section
+            aria-label="Key takeaways"
+            className="mt-10 rounded-lg border border-white/10 bg-white/[0.03] p-6 sm:p-8"
+          >
+            <h2 className="text-sm font-black uppercase tracking-[0.18em] text-primary">
+              Key Takeaways
+            </h2>
+
+            <ul className="mt-4 space-y-3">
+              {keyTakeaways.map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-3 text-sm leading-relaxed text-white/85"
+                >
+                  <CheckCircle2
+                    size={16}
+                    className="mt-0.5 shrink-0 text-primary"
+                  />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </section>
 
           <section
             id="results"
@@ -467,6 +541,20 @@ const Bluebridge = () => {
                   </div>
                 ))}
               </div>
+
+              <p className="mt-8 text-base leading-relaxed text-white/85">
+                This evidence first approach is the habit behind every
+                result on this page. We wrote it up in our{" "}
+                <Link
+                  to="/blog/seo-growth-case-study-lessons"
+                  className="font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:decoration-primary"
+                >
+                  SEO growth case study lessons
+                </Link>
+                : read the data you already have, protect the pages that
+                earn attention, and let measured demand decide what gets
+                built next.
+              </p>
             </section>
 
             <section
@@ -637,6 +725,64 @@ const Bluebridge = () => {
               </div>
             </section>
 
+            <section
+              id="lessons"
+              className="scroll-mt-28 mt-14 border-t border-white/10 pt-14"
+            >
+              <p className="text-[11px] font-black uppercase tracking-[0.2em] text-primary">
+                Lessons for Growing Businesses
+              </p>
+
+              <h2 className="mt-3 text-3xl font-black tracking-[-0.03em] text-white sm:text-4xl">
+                What Other Businesses Can Learn From This Data
+              </h2>
+
+              <p className="mt-5 text-base leading-relaxed text-white/85">
+                The first lesson is patience with proof. For much of the
+                period the curve looked flat. Then visibility compounded.
+                Businesses that judge SEO in the first few weeks often stop
+                right before the data turns. A three-month window gave this
+                website enough time to show a real direction.
+              </p>
+
+              <p className="mt-4 text-base leading-relaxed text-white/85">
+                The second lesson is that technical progress is rarely one
+                clean jump. Total Blocking Time fell from 1,990ms to zero
+                and layout shift nearly disappeared, yet Largest Contentful
+                Paint still needs work. Honest{" "}
+                <Link
+                  to="/technical-seo-services"
+                  className="font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:decoration-primary"
+                >
+                  technical SEO
+                </Link>{" "}
+                means reporting both sides of that picture, then fixing the
+                remaining bottleneck instead of celebrating the score.
+              </p>
+
+              <p className="mt-4 text-base leading-relaxed text-white/85">
+                The third lesson is about ownership. Results like these hold
+                up when someone keeps watching the data after the first win.
+                That is the work RankVelt does when a business chooses to{" "}
+                <Link
+                  to="/hire-seo-expert"
+                  className="font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:decoration-primary"
+                >
+                  hire an SEO expert
+                </Link>{" "}
+                instead of buying one-time fixes. And if you are not sure
+                where your own website stands, an{" "}
+                <Link
+                  to="/seo-audit-services"
+                  className="font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:decoration-primary"
+                >
+                  SEO audit
+                </Link>{" "}
+                will show you the same kind of evidence this page is built
+                on.
+              </p>
+            </section>
+
             <section className="mt-14 border-l-2 border-primary pl-5">
               <h2 className="text-2xl font-black text-white">
                 Evidence and Scope Note
@@ -695,6 +841,49 @@ const Bluebridge = () => {
                 </details>
               ))}
             </div>
+          </section>
+
+          <section className="mx-auto mt-20 max-w-3xl border-t border-white/10 pt-14">
+            <p className="text-[11px] font-black uppercase tracking-[0.2em] text-primary">
+              More RankVelt Case Studies
+            </p>
+
+            <h2 className="mt-3 text-3xl font-black tracking-[-0.03em] text-white sm:text-4xl">
+              See How Other Websites Turned Search Data Into Growth
+            </h2>
+
+            <div className="mt-8">
+              {moreCaseStudies.map((study) => (
+                <Link
+                  key={study.href}
+                  to={study.href}
+                  className="group block border-b border-white/10 py-6 first:border-t"
+                >
+                  <h3 className="flex items-center justify-between gap-4 text-xl font-black text-white transition-colors group-hover:text-primary">
+                    {study.title}
+                    <ArrowRight
+                      size={18}
+                      className="shrink-0 text-primary transition-transform group-hover:translate-x-1"
+                    />
+                  </h3>
+
+                  <p className="mt-2 text-base leading-relaxed text-white/85">
+                    {study.description}
+                  </p>
+                </Link>
+              ))}
+            </div>
+
+            <p className="mt-6 text-sm leading-relaxed text-white/75">
+              Or browse the full{" "}
+              <Link
+                to="/case-studies"
+                className="font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:decoration-primary"
+              >
+                case studies library
+              </Link>{" "}
+              for every published result.
+            </p>
           </section>
 
           <section className="mt-20 border-t border-white/10 pt-12">

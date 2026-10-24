@@ -155,6 +155,51 @@ const pageFaqs = [
     answer:
       "No. The supplied evidence confirms Google Search Console metrics and PageSpeed audit results only. It does not prove calls, quote requests, bookings, revenue, customer lifetime value, or individual keyword positions.",
   },
+  {
+    question: "What should a local service business improve first: rankings or clicks?",
+    answer:
+      "Start with the data you already have. This website was already visible 779K times, so the bigger lever was turning more impressions into clicks with clearer titles, service relevance, and location clarity. A business with very low impressions has the opposite problem and needs visibility work first. The right order always comes from your own Search Console report.",
+  },
+  {
+    question: "Can another local business expect the same results?",
+    answer:
+      "No honest agency can promise that. Local results depend on the service area, competition, reviews, the starting condition of the website, and how urgently customers need the service. What can be repeated is the method: clear service pages, honest local information, fast mobile pages, and decisions based on real search data instead of guesses.",
+  },
+];
+
+const keyTakeaways = [
+  "18.4K organic clicks and 779K impressions in one 28-day Google Search Console period.",
+  "The final visible day alone recorded 2,283 clicks and 107,133 impressions.",
+  "A 2.4% average CTR is the clearest next opportunity: visibility is strong, click quality can improve.",
+  "Mobile Performance rose from 76 to 91 and the SEO audit score from 85 to 100 after optimisation.",
+  "The evidence covers search and audit metrics only. It does not claim calls, bookings, or revenue.",
+];
+
+const moreCaseStudies = [
+  {
+    title: "Civic Access",
+    href: "/case-studies/civic-access",
+    description:
+      "32.3K organic clicks in 28 days for a public-service information platform, with a 3.7 average position.",
+  },
+  {
+    title: "Bluebridge Partners",
+    href: "/case-studies/bluebridge",
+    description:
+      "6.68K organic clicks in three months, a 13.6% average CTR, and clear mobile audit progress.",
+  },
+  {
+    title: "Harborline",
+    href: "/case-studies/harborline",
+    description:
+      "18.7K organic clicks in 28 days, 387K impressions, and a 91 mobile Performance score.",
+  },
+  {
+    title: "Product Discovery at Scale",
+    href: "/case-studies/product-discovery-at-scale",
+    description:
+      "An eCommerce SEO case study with 26.9K organic clicks and 1.82M impressions over three months.",
+  },
 ];
 
 const ensureMetaByName = (name: string) => {
@@ -337,10 +382,38 @@ const ClearRide = () => {
               Growth Plan
             </a>
 
+            <a href="#lessons" className="transition-colors hover:text-primary">
+              Lessons
+            </a>
+
             <a href="#faqs" className="transition-colors hover:text-primary">
               FAQs
             </a>
           </nav>
+
+          <section
+            aria-label="Key takeaways"
+            className="mt-10 rounded-lg border border-white/10 bg-white/[0.03] p-6 sm:p-8"
+          >
+            <h2 className="text-sm font-black uppercase tracking-[0.18em] text-primary">
+              Key Takeaways
+            </h2>
+
+            <ul className="mt-4 space-y-3">
+              {keyTakeaways.map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-3 text-sm leading-relaxed text-white/85"
+                >
+                  <CheckCircle2
+                    size={16}
+                    className="mt-0.5 shrink-0 text-primary"
+                  />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </section>
 
           <section
             id="results"
@@ -497,6 +570,27 @@ const ClearRide = () => {
                   </div>
                 ))}
               </div>
+
+              <p className="mt-8 text-base leading-relaxed text-white/85">
+                These journey points are the core of RankVelt&apos;s{" "}
+                <Link
+                  to="/local-seo"
+                  className="font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:decoration-primary"
+                >
+                  local SEO
+                </Link>{" "}
+                work for service businesses. Each service and coverage area
+                needs its own clear page, built around the real request
+                behind the search. We explain that structure in our guide to{" "}
+                <Link
+                  to="/blog/service-area-pages"
+                  className="font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:decoration-primary"
+                >
+                  service area pages
+                </Link>
+                , including how to keep location pages useful instead of
+                thin.
+              </p>
             </section>
 
             <section
@@ -663,6 +757,58 @@ const ClearRide = () => {
               </div>
             </section>
 
+            <section
+              id="lessons"
+              className="scroll-mt-28 mt-14 border-t border-white/10 pt-14"
+            >
+              <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-primary">
+                Lessons for Local Service Businesses
+              </p>
+
+              <h2 className="mt-3 text-3xl font-bold leading-tight text-white sm:text-4xl">
+                What Other Local Businesses Can Learn From This Data
+              </h2>
+
+              <p className="mt-5 text-base leading-relaxed text-white/85">
+                The first lesson is that visibility and clicks are different
+                problems. This website did not have a visibility problem. It
+                appeared 779K times in 28 days. Its opportunity sat in the
+                quality of each click: the right service, the right city,
+                and a clear next step inside the search result itself.
+              </p>
+
+              <p className="mt-4 text-base leading-relaxed text-white/85">
+                The second lesson is about speed with a purpose. The before
+                report showed a 2.1s Time to First Byte holding back the
+                whole page experience. Fixing response time is unglamorous
+                work, but for a customer with a cracked windshield it is the
+                difference between waiting and calling. That is why RankVelt
+                treats server response and mobile audits as part of{" "}
+                <Link
+                  to="/technical-seo-services"
+                  className="font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:decoration-primary"
+                >
+                  technical SEO
+                </Link>
+                , not as a separate developer chore.
+              </p>
+
+              <p className="mt-4 text-base leading-relaxed text-white/85">
+                The third lesson is about honest measurement. This page does
+                not claim booked jobs, because the supplied evidence does
+                not show them. If your business needs the same clarity about
+                what search is really delivering, start with an{" "}
+                <Link
+                  to="/seo-audit-services"
+                  className="font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:decoration-primary"
+                >
+                  SEO audit
+                </Link>{" "}
+                that separates search demand, click quality, and technical
+                health before recommending any fix.
+              </p>
+            </section>
+
             <section className="mt-14 border-l-2 border-primary pl-5">
               <h2 className="text-2xl font-black text-white">
                 Evidence and Scope Note
@@ -721,6 +867,49 @@ const ClearRide = () => {
                 </details>
               ))}
             </div>
+          </section>
+
+          <section className="mx-auto mt-20 max-w-3xl border-t border-white/10 pt-14">
+            <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-primary">
+              More RankVelt Case Studies
+            </p>
+
+            <h2 className="mt-3 text-3xl font-bold leading-tight text-white sm:text-4xl">
+              See How Other Websites Turned Search Data Into Growth
+            </h2>
+
+            <div className="mt-8">
+              {moreCaseStudies.map((study) => (
+                <Link
+                  key={study.href}
+                  to={study.href}
+                  className="group block border-b border-white/10 py-6 first:border-t"
+                >
+                  <h3 className="flex items-center justify-between gap-4 text-xl font-black text-white transition-colors group-hover:text-primary">
+                    {study.title}
+                    <ArrowRight
+                      size={18}
+                      className="shrink-0 text-primary transition-transform group-hover:translate-x-1"
+                    />
+                  </h3>
+
+                  <p className="mt-2 text-base leading-relaxed text-white/85">
+                    {study.description}
+                  </p>
+                </Link>
+              ))}
+            </div>
+
+            <p className="mt-6 text-sm leading-relaxed text-white/75">
+              Or browse the full{" "}
+              <Link
+                to="/case-studies"
+                className="font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:decoration-primary"
+              >
+                case studies library
+              </Link>{" "}
+              for every published result.
+            </p>
           </section>
 
           <section className="mt-20 border-t border-white/10 pt-12">

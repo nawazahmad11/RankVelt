@@ -140,6 +140,51 @@ const pageFaqs = [
     answer:
       "No. This case study confirms the supplied search, third-party visibility, and PageSpeed audit metrics only. It does not claim revenue, leads, application approvals, user outcomes, rankings for individual redacted terms, or official-government affiliation.",
   },
+  {
+    question: "How can an information platform keep this kind of growth going?",
+    answer:
+      "Growth like this is protected by routine work. High-impression pages need regular accuracy checks. Internal links should keep related questions connected. Titles and descriptions should stay clear as services change. RankVelt follows the same approach in its technical SEO services: fix what blocks users first, then expand the pages that already show demand.",
+  },
+  {
+    question: "Can another information website expect the same numbers?",
+    answer:
+      "No honest agency can promise that. Results depend on search demand, competition, the starting condition of the website, and how well the content answers real user tasks. What can be repeated is the method: clear structure, trustworthy guidance, fast mobile pages, and decisions based on Search Console data. A free SEO audit is the right first step to see what your own data supports.",
+  },
+];
+
+const keyTakeaways = [
+  "32.3K organic clicks and 439K impressions in one 28-day Google Search Console period.",
+  "A 3.7 average position and 7.4% CTR show visibility and click quality moving together.",
+  "Third-party estimates pointed the same way, with 94.9K estimated organic traffic.",
+  "Mobile audit scores of 97 Performance and 100 SEO supported the user experience after the click.",
+  "The evidence covers search and audit metrics only. It does not claim leads, revenue, or approval outcomes.",
+];
+
+const moreCaseStudies = [
+  {
+    title: "Clear Ride Auto Glass",
+    href: "/case-studies/clear-ride-auto-glass",
+    description:
+      "18.4K organic clicks in 28 days for a local auto glass service, with a stronger mobile audit after optimisation.",
+  },
+  {
+    title: "Bluebridge Partners",
+    href: "/case-studies/bluebridge",
+    description:
+      "6.68K organic clicks in three months, a 13.6% average CTR, and clear mobile audit progress.",
+  },
+  {
+    title: "Harborline",
+    href: "/case-studies/harborline",
+    description:
+      "18.7K organic clicks in 28 days, 387K impressions, and a 91 mobile Performance score.",
+  },
+  {
+    title: "Product Discovery at Scale",
+    href: "/case-studies/product-discovery-at-scale",
+    description:
+      "An eCommerce SEO case study with 26.9K organic clicks and 1.82M impressions over three months.",
+  },
 ];
 
 const ensureMetaByName = (name: string) => {
@@ -329,10 +374,38 @@ const CivicAccess = () => {
               Next Steps
             </a>
 
+            <a href="#lessons" className="transition-colors hover:text-primary">
+              Lessons
+            </a>
+
             <a href="#faqs" className="transition-colors hover:text-primary">
               FAQs
             </a>
           </nav>
+
+          <section
+            aria-label="Key takeaways"
+            className="mt-10 rounded-lg border border-white/10 bg-white/[0.03] p-6 sm:p-8"
+          >
+            <h2 className="text-sm font-black uppercase tracking-[0.18em] text-primary">
+              Key Takeaways
+            </h2>
+
+            <ul className="mt-4 space-y-3">
+              {keyTakeaways.map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-3 text-sm leading-relaxed text-white/85"
+                >
+                  <CheckCircle2
+                    size={16}
+                    className="mt-0.5 shrink-0 text-primary"
+                  />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </section>
 
           <section
             id="results"
@@ -446,6 +519,21 @@ const CivicAccess = () => {
                 titles, helpful descriptions, relevant content, and a search
                 result that makes the visitor believe they will find a useful
                 answer after clicking.
+              </p>
+
+              <p className="mt-4 text-base leading-relaxed text-white/85">
+                This pattern is not unique to public-service content. It is
+                the same pattern RankVelt looks for in every audit: proven
+                demand first, then clearer pages built around that demand. We
+                explain the wider method in our{" "}
+                <Link
+                  to="/blog/seo-growth-case-study-lessons"
+                  className="font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:decoration-primary"
+                >
+                  SEO growth case study lessons
+                </Link>
+                , including how to read clicks, impressions, and CTR together
+                instead of chasing one metric at a time.
               </p>
             </section>
 
@@ -645,6 +733,67 @@ const CivicAccess = () => {
               </div>
             </section>
 
+            <section
+              id="lessons"
+              className="scroll-mt-28 mt-14 border-t border-white/10 pt-14"
+            >
+              <p className="text-[11px] font-black uppercase tracking-[0.2em] text-primary">
+                Lessons for Similar Platforms
+              </p>
+
+              <h2 className="mt-3 text-3xl font-black tracking-[-0.03em] text-white">
+                What Other Information Websites Can Learn From This Data
+              </h2>
+
+              <p className="mt-5 text-base leading-relaxed text-white/85">
+                The first lesson is about intent. People searching for
+                public-service help are not browsing. They want to finish a
+                task. Pages that respect that intent, answer fast, and show
+                the next step clearly are the pages that earn both rankings
+                and clicks. Vague content fails this audience even when it is
+                long.
+              </p>
+
+              <p className="mt-4 text-base leading-relaxed text-white/85">
+                The second lesson is about structure. One strong page rarely
+                carries a whole platform. Related questions need to connect,
+                so a visitor can move from a general answer to the specific
+                guidance they need. That is deliberate{" "}
+                <Link
+                  to="/blog/internal-linking-seo-ai"
+                  className="font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:decoration-primary"
+                >
+                  internal linking
+                </Link>
+                , and it also helps Google understand which pages matter
+                most. On larger sites, the same structure protects crawl
+                efficiency, which is why we treat it as part of{" "}
+                <Link
+                  to="/technical-seo-services"
+                  className="font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:decoration-primary"
+                >
+                  technical SEO
+                </Link>{" "}
+                rather than a content extra.
+              </p>
+
+              <p className="mt-4 text-base leading-relaxed text-white/85">
+                The third lesson is about proof. Every number on this page
+                comes from a supplied report, and the limits of each number
+                are stated openly. That honesty is what makes a case study
+                useful for decisions. If your own platform needs the same
+                clarity, start with evidence. Our{" "}
+                <Link
+                  to="/seo-audit-services"
+                  className="font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:decoration-primary"
+                >
+                  SEO audit services
+                </Link>{" "}
+                show you what your Search Console data really supports
+                before anyone recommends a fix.
+              </p>
+            </section>
+
             <section className="mt-14 border-l-2 border-primary pl-5">
               <h2 className="text-2xl font-black text-white">
                 Data Integrity Note
@@ -703,6 +852,49 @@ const CivicAccess = () => {
                 </details>
               ))}
             </div>
+          </section>
+
+          <section className="mx-auto mt-20 max-w-3xl border-t border-white/10 pt-14">
+            <p className="text-[11px] font-black uppercase tracking-[0.2em] text-primary">
+              More RankVelt Case Studies
+            </p>
+
+            <h2 className="mt-3 text-3xl font-black tracking-[-0.03em] text-white">
+              See How Other Websites Turned Search Data Into Growth
+            </h2>
+
+            <div className="mt-8">
+              {moreCaseStudies.map((study) => (
+                <Link
+                  key={study.href}
+                  to={study.href}
+                  className="group block border-b border-white/10 py-6 first:border-t"
+                >
+                  <h3 className="flex items-center justify-between gap-4 text-xl font-black text-white transition-colors group-hover:text-primary">
+                    {study.title}
+                    <ArrowRight
+                      size={18}
+                      className="shrink-0 text-primary transition-transform group-hover:translate-x-1"
+                    />
+                  </h3>
+
+                  <p className="mt-2 text-base leading-relaxed text-white/85">
+                    {study.description}
+                  </p>
+                </Link>
+              ))}
+            </div>
+
+            <p className="mt-6 text-sm leading-relaxed text-white/75">
+              Or browse the full{" "}
+              <Link
+                to="/case-studies"
+                className="font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:decoration-primary"
+              >
+                case studies library
+              </Link>{" "}
+              for every published result.
+            </p>
           </section>
 
           <section className="mt-20 border-t border-white/10 pt-12">

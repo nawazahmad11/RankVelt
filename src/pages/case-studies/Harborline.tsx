@@ -116,6 +116,52 @@ const pageFaqs = [
     answer:
       "No. This case study confirms only the metrics visible in the supplied Google Search Console and PageSpeed Insights screenshots. It does not claim leads, revenue, sales, conversions, individual keyword positions, or exact implementation work not shown in the evidence.",
   },
+  {
+    question: "How should a business actually use numbers like these?",
+    answer:
+      "Use them to decide where to work next. Pages earning impressions have proven demand, so they deserve accuracy checks and better internal links first. Pages with impressions but weak clicks need clearer titles and descriptions. Numbers like these are a work plan, not a trophy. RankVelt reviews them with clients every month so effort stays on the pages with real search demand behind them.",
+  },
+  {
+    question: "Does a strong mobile audit score guarantee more organic traffic?",
+    answer:
+      "No. A strong audit supports a better experience after the click, and that protects the value of traffic. It does not create demand on its own. Traffic grows when relevant pages match real searches and earn visibility. Technical quality and content relevance have to move together, which is why this case study reports both kinds of evidence side by side.",
+  },
+];
+
+const keyTakeaways = [
+  "18.7K organic clicks and 387K impressions in one 28-day Google Search Console period.",
+  "Clicks and impressions rose together across the window, which is a stronger momentum signal than either metric alone.",
+  "A 4.8% average CTR and 5.8 average position show solid engagement from the visibility earned.",
+  "The mobile audit showed 91 Performance, 93 Accessibility, and 100 for Best Practices and SEO.",
+  "No real-user field data was available, so the audit scores are a tested snapshot, not a per-visitor guarantee.",
+  "The evidence covers search and audit metrics only. It does not claim leads, sales, or revenue.",
+];
+
+const moreCaseStudies = [
+  {
+    title: "Civic Access",
+    href: "/case-studies/civic-access",
+    description:
+      "32.3K organic clicks in 28 days for a public-service information platform, with a 3.7 average position.",
+  },
+  {
+    title: "Clear Ride Auto Glass",
+    href: "/case-studies/clear-ride-auto-glass",
+    description:
+      "18.4K organic clicks in 28 days for a local auto glass service, with a stronger mobile audit after optimisation.",
+  },
+  {
+    title: "Bluebridge Partners",
+    href: "/case-studies/bluebridge",
+    description:
+      "6.68K organic clicks in three months, a 13.6% average CTR, and clear mobile audit progress.",
+  },
+  {
+    title: "Product Discovery at Scale",
+    href: "/case-studies/product-discovery-at-scale",
+    description:
+      "An eCommerce SEO case study with 26.9K organic clicks and 1.82M impressions over three months.",
+  },
 ];
 
 const ensureMetaByName = (name: string) => {
@@ -297,10 +343,38 @@ const Harborline = () => {
               Next Priorities
             </a>
 
+            <a href="#lessons" className="transition-colors hover:text-primary">
+              Lessons
+            </a>
+
             <a href="#faqs" className="transition-colors hover:text-primary">
               FAQs
             </a>
           </nav>
+
+          <section
+            aria-label="Key takeaways"
+            className="mt-10 rounded-lg border border-white/10 bg-white/[0.03] p-6 sm:p-8"
+          >
+            <h2 className="text-sm font-black uppercase tracking-[0.18em] text-primary">
+              Key Takeaways
+            </h2>
+
+            <ul className="mt-4 space-y-3">
+              {keyTakeaways.map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-3 text-sm leading-relaxed text-white/85"
+                >
+                  <CheckCircle2
+                    size={16}
+                    className="mt-0.5 shrink-0 text-primary"
+                  />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </section>
 
           <section
             id="results"
@@ -412,6 +486,55 @@ const Harborline = () => {
                 page count. The priority is to protect pages that already earn
                 attention, improve the experience after the click, and use
                 search data to identify the clearest growth opportunities.
+              </p>
+            </section>
+
+            <section className="mt-14 border-t border-white/10 pt-14">
+              <p className="text-[11px] font-black uppercase tracking-[0.2em] text-primary">
+                How to Read These Numbers
+              </p>
+
+              <h2 className="mt-3 text-3xl font-black tracking-[-0.03em] text-white sm:text-4xl">
+                Each Metric Answers a Different Question
+              </h2>
+
+              <p className="mt-5 text-base leading-relaxed text-white/85">
+                Impressions answer the visibility question. Google showed
+                this website 387K times, so its pages were part of the
+                conversation for a large set of searches. A rising
+                impressions trend usually means Google is testing the site
+                on more queries, or the site is holding stronger positions
+                on the queries it already had.
+              </p>
+
+              <p className="mt-4 text-base leading-relaxed text-white/85">
+                Clicks answer the relevance question. 18.7K people chose
+                this website after seeing it. A click is a small vote that
+                the title, description, and brand looked more useful than
+                the results around it. That is why snippet quality matters
+                as much as ranking position.
+              </p>
+
+              <p className="mt-4 text-base leading-relaxed text-white/85">
+                CTR and average position answer the quality question
+                together. A 4.8% CTR at a 5.8 average position is a healthy
+                pairing. It suggests the site was not buying visibility with
+                misleading titles. The clicks came from results that matched
+                what searchers actually wanted.
+              </p>
+
+              <p className="mt-4 text-base leading-relaxed text-white/85">
+                Read this way, a Search Console report becomes a work plan
+                instead of a scoreboard. We use the same reading method in
+                our{" "}
+                <Link
+                  to="/blog/seo-growth-case-study-lessons"
+                  className="font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:decoration-primary"
+                >
+                  SEO growth case study lessons
+                </Link>
+                , where clicks, impressions, CTR, and position are broken
+                down the way we review them with clients.
               </p>
             </section>
 
@@ -530,6 +653,64 @@ const Harborline = () => {
               </div>
             </section>
 
+            <section
+              id="lessons"
+              className="scroll-mt-28 mt-14 border-t border-white/10 pt-14"
+            >
+              <p className="text-[11px] font-black uppercase tracking-[0.2em] text-primary">
+                Lessons for Similar Businesses
+              </p>
+
+              <h2 className="mt-3 text-3xl font-black tracking-[-0.03em] text-white sm:text-4xl">
+                What Other Businesses Can Learn From This Data
+              </h2>
+
+              <p className="mt-5 text-base leading-relaxed text-white/85">
+                The first lesson is to protect momentum. When impressions
+                and clicks rise together, the worst move is a random
+                redesign or a wave of untested new pages. The better move
+                is to guard the pages already earning attention and improve
+                them carefully, one change at a time.
+              </p>
+
+              <p className="mt-4 text-base leading-relaxed text-white/85">
+                The second lesson is that connections between pages carry
+                growth. A visitor who lands from search should find a clear
+                path to the next useful page, not a dead end. Planned{" "}
+                <Link
+                  to="/blog/internal-linking-seo-ai"
+                  className="font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:decoration-primary"
+                >
+                  internal linking
+                </Link>{" "}
+                turns one good page into a stronger whole website, and it
+                helps Google understand which pages deserve the most
+                attention.
+              </p>
+
+              <p className="mt-4 text-base leading-relaxed text-white/85">
+                The third lesson is to keep technical quality boring and
+                consistent. A 91 Performance score is not a finish line. It
+                is a snapshot that needs defending as content grows. RankVelt
+                builds that discipline into its{" "}
+                <Link
+                  to="/technical-seo-services"
+                  className="font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:decoration-primary"
+                >
+                  technical SEO services
+                </Link>{" "}
+                and its monthly reporting. If you want the same clarity on
+                your own numbers first, start with our{" "}
+                <Link
+                  to="/seo-audit-services"
+                  className="font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:decoration-primary"
+                >
+                  SEO audit services
+                </Link>
+                .
+              </p>
+            </section>
+
             <section className="mt-14 border-l-2 border-primary pl-5">
               <h2 className="text-2xl font-black text-white">
                 Evidence and Scope Note
@@ -586,6 +767,49 @@ const Harborline = () => {
                 </details>
               ))}
             </div>
+          </section>
+
+          <section className="mx-auto mt-20 max-w-3xl border-t border-white/10 pt-14">
+            <p className="text-[11px] font-black uppercase tracking-[0.2em] text-primary">
+              More RankVelt Case Studies
+            </p>
+
+            <h2 className="mt-3 text-3xl font-black tracking-[-0.03em] text-white sm:text-4xl">
+              See How Other Websites Turned Search Data Into Growth
+            </h2>
+
+            <div className="mt-8">
+              {moreCaseStudies.map((study) => (
+                <Link
+                  key={study.href}
+                  to={study.href}
+                  className="group block border-b border-white/10 py-6 first:border-t"
+                >
+                  <h3 className="flex items-center justify-between gap-4 text-xl font-black text-white transition-colors group-hover:text-primary">
+                    {study.title}
+                    <ArrowRight
+                      size={18}
+                      className="shrink-0 text-primary transition-transform group-hover:translate-x-1"
+                    />
+                  </h3>
+
+                  <p className="mt-2 text-base leading-relaxed text-white/85">
+                    {study.description}
+                  </p>
+                </Link>
+              ))}
+            </div>
+
+            <p className="mt-6 text-sm leading-relaxed text-white/75">
+              Or browse the full{" "}
+              <Link
+                to="/case-studies"
+                className="font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:decoration-primary"
+              >
+                case studies library
+              </Link>{" "}
+              for every published result.
+            </p>
           </section>
 
           <section className="mt-20 border-t border-white/10 pt-12">

@@ -216,6 +216,36 @@ const staticPageMeta: Record<string, RouteMeta> = {
       "Explore RankVelt website and eCommerce project showcases focused on product discovery, mobile UX, Shopify structure, visual storytelling, and conversion-ready customer journeys.",
   },
 
+  "/case-studies/civic-access": {
+    title: "Civic Access SEO Case Study: 32.3K Organic Clicks | RankVelt",
+    description:
+      "See how Civic Access reached 32.3K organic clicks, 439K Google impressions, a 7.4% CTR, and a 3.7 average position in 28 days.",
+  },
+
+  "/case-studies/clear-ride-auto-glass": {
+    title: "Auto Glass SEO Case Study: 18.4K Organic Clicks | RankVelt",
+    description:
+      "See how a local auto glass service reached 18.4K organic clicks and 779K Google impressions in 28 days while improving its mobile PageSpeed audit.",
+  },
+
+  "/case-studies/bluebridge": {
+    title: "SEO Case Study: 6.68K Organic Clicks in 3 Months | RankVelt",
+    description:
+      "See how Bluebridge Partners earned 6.68K organic clicks, 49K Google Search impressions, a 13.6% CTR, and improved mobile audit quality.",
+  },
+
+  "/case-studies/harborline": {
+    title: "Harborline SEO Case Study: 18.7K Organic Clicks | RankVelt",
+    description:
+      "See how Harborline reached 18.7K organic clicks, 387K Google Search impressions, a 4.8% CTR, and a 5.8 average position in 28 days.",
+  },
+
+  "/case-studies/product-discovery-at-scale": {
+    title: "Ecommerce SEO Case Study: 26.9K Organic Clicks | RankVelt",
+    description:
+      "Explore an ecommerce SEO case study showing 26.9K organic clicks, 1.82M Google Search impressions, a 1.5% CTR, and 6.8 average position over three months.",
+  },
+
   "/tools": {
     title: "Free eCommerce & Business Tools | RankVelt",
     description:
