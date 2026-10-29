@@ -304,6 +304,12 @@ const ecommerceSeoConfig: SeoServicePageConfig = {
         "Reduce cart and checkout friction.",
       path: "/services/checkout-flow",
     },
+    {
+      title: "eCommerce SEO Services",
+      description:
+        "Done for you eCommerce SEO services for online stores, from $525 per month.",
+      path: "/ecommerce-seo-services",
+    },    
   ],
 };
 
