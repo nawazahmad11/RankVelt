@@ -88,7 +88,7 @@ const staticRoutes = [
   "/privacy-policy",
   "/terms-of-service",
   "/refund-policy",
-
+"/about",
 
 
   "/seo-services-abu-dhabi",

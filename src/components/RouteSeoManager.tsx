@@ -78,6 +78,13 @@ const staticPageMeta: Record<string, RouteMeta> = {
       "RankVelt provides local SEO services for stronger Google Maps visibility, local rankings, service-area traffic, calls, bookings and qualified leads.",
   },
 
+
+  "/about": {
+  title: "About RankVelt: AI First SEO Agency in Lahore | RankVelt",
+  description:
+    "About RankVelt, a founder led AI first SEO agency in Lahore, Pakistan, founded in 2025. Honest SEO, free tools and clear reports for small businesses.",
+},
+
   "/ecommerce-seo": {
     title: "eCommerce SEO Company for Shopify Stores | RankVelt",
     description:

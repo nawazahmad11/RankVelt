@@ -72,7 +72,9 @@ const SeoServicesSaudiArabiaService = lazy(
   () => import("./pages/services/SeoServicesSaudiArabiaService"),
 );
 
-
+const About = lazy(
+  () => import("./pages/About"),
+);
 
 /*
  * Lead funnel pages
@@ -459,7 +461,10 @@ const App = () => (
               path="/ai-seo-agency"
               element={<AiSeoAgencyService />}
             />
-
+<Route
+  path="/about"
+  element={<About />}
+/>
             <Route
               path="/hire-seo-expert"
               element={<HireSeoExpertService />}
