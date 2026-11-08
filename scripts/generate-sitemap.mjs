@@ -132,35 +132,43 @@ const blogDataSource = await readFile(
 );
 
 /*
- * Har top-level blog object ko find karta hai.
+ * Har post object ko us ke id se find karta hai.
+ * Post ki pehchan: us ke apne hisse mein datePublished field
+ * hota hai, jabke sections ke objects mein nahi hota.
+ * Field indentation par depend nahi karta, is liay kisi bhi
+ * format mein paste ki gayi post bhi sitemap se miss nahi hoti.
  */
-const articlePattern = /^(?:    |  |)id:\s*["\x27]([^\x27\x22]+)["\x27],/gm;
-
 const blogRoutes = [];
 
-for (const match of blogDataSource.matchAll(articlePattern)) {
-  const blogPostStart = match.index;
-  // We need to look ahead for date/content to get the metadata for sorting/lastmod
-  // This is a bit brittle, but should work given the structure
-  const contentAfterId = blogDataSource.substring(blogPostStart);
+const idLinePattern = /^\s*id:\s*["\x27]([^\x27\x22]+)["\x27]\s*,/gm;
 
-  const id = match[1];
+const idMatches = [...blogDataSource.matchAll(idLinePattern)];
 
-  const dateModifiedMatch = contentAfterId.match(
-    /^\s*dateModified:\s*["\x27](\d{4}-\d{2}-\d{2})["\x27],/m,
+for (let i = 0; i < idMatches.length; i++) {
+  const match = idMatches[i];
+
+  const segmentEnd =
+    i + 1 < idMatches.length
+      ? idMatches[i + 1].index
+      : blogDataSource.length;
+
+  const segment = blogDataSource.substring(match.index, segmentEnd);
+
+  const datePublishedMatch = segment.match(
+    /\bdatePublished:\s*["\x27](\d{4}-\d{2}-\d{2})["\x27]/,
   );
 
-  const datePublishedMatch = contentAfterId.match(
-    /^\s*datePublished:\s*["\x27](\d{4}-\d{2}-\d{2})["\x27],/m,
-  );
+  if (!datePublishedMatch) {
+    continue;
+  }
 
-  const lastmod =
-    dateModifiedMatch?.[1] ||
-    datePublishedMatch?.[1];
+  const dateModifiedMatch = segment.match(
+    /\bdateModified:\s*["\x27](\d{4}-\d{2}-\d{2})["\x27]/,
+  );
 
   blogRoutes.push({
-    path: `/blog/${id}`,
-    lastmod,
+    path: `/blog/${match[1]}`,
+    lastmod: dateModifiedMatch?.[1] || datePublishedMatch[1],
   });
 }
 
