@@ -350,9 +350,6 @@ export const blogPosts: BlogPost[] = [
   },
 
 
-
-
-
   
   {
     id: "show-up-in-google-ai-overviews",

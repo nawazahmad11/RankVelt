@@ -72,6 +72,7 @@ type ToolType =
   | "ssl"
   | "speed"
   | "aeo"
+  | "ai-tracker"
   | "utm"
   | "writing"
   | "image-seo"
@@ -150,6 +151,9 @@ const toolMapping: Record<string, ToolType> = {
 
   "guest-post-finder": "guest-post",
   "guest-post": "guest-post",
+
+  "ai-overviews-visibility-tracker": "ai-tracker",
+  "ai-tracker": "ai-tracker",
 
   "bulk-email-extractor": "email-extractor",
   "email-extractor": "email-extractor",
@@ -874,6 +878,64 @@ const tools: ToolConfig[] = [
     standalone: true,
   },
   {
+    toolType: "ai-tracker",
+    slug: "ai-overviews-visibility-tracker",
+    contentKey: "ai-overviews-visibility-tracker",
+    badge: "Free AI Search Tool",
+    title: "AI Overviews Visibility Tracker",
+    pageTitle: "AI Overviews Visibility Tracker",
+    metaTitle: "AI Overviews Visibility Tracker: Free Tool | RankVelt",
+    metaDescription:
+      "Track your AI Overview citations and brand mentions with a guided manual check. Scores, trends and client ready reports. Free, no signup.",
+    shortDescription:
+      "Track whether AI Overviews cite and mention your brand, with scores and reports.",
+    intro:
+      "Run a guided manual check of whether Google AI Overviews cite your pages or mention your brand. About 10 minutes a week gives you a visibility score, a trend and a clear action list. Your data stays in your browser and no signup is needed.",
+    guideTitle: "See What AI Answers Say About Your Brand",
+    guideText:
+      "Google offers no API for AI Overview data, so this tool guides a manual check instead of pretending to fetch results automatically. You see exactly what a real searcher sees, and every score on the dashboard shows the formula behind it.",
+    bestFor: [
+      "Small business owners checking if AI answers mention them.",
+      "SEO freelancers who need a clean client report.",
+      "Marketers tracking a brand against its competitors.",
+    ],
+    relatedLinks: [
+      {
+        title: "AEO Readiness Checker",
+        description: "Score any page for AI answer readiness across 12 checks.",
+        path: "/tools/aeo-readiness-checker",
+      },
+      {
+        title: "AI Overviews Rank Tracking Tools",
+        description:
+          "How AI Overviews trackers compare and what each one actually measures.",
+        path: "/blog/ai-overviews-rank-tracking-tools",
+      },
+    ],
+    standalone: true,
+    article: {
+      sections: [
+        {
+          heading: "How does the AI Overviews Visibility Tracker work?",
+          paragraphs: [
+            "Start by setting up your project: your brand name, your website domain and up to 3 competitors. Then build a query bank with the searches your customers actually run, adding them one by one or pasting a list.",
+            "Once a week, run the guided check. For each query the tool walks you through one simple question at a time: was an AI Overview shown, were you cited, and was your brand mentioned. One tap per answer is all it takes.",
+            "The dashboard turns those answers into an AI Visibility Score, a citation rate, a mention rate and an overview presence figure, with a trend against your last session so you can see whether you are gaining or losing ground.",
+            "New to this? Load the built in sample project with one click and see a full dashboard straight away, then replace it with your own brand when you are ready.",
+          ],
+        },
+        {
+          heading: "Why is the check manual, and where does the data live?",
+          paragraphs: [
+            "Google provides no API for AI Overview data, and AI answers change by location, device and time of day. A guided manual check shows you what a real searcher sees instead of a number pulled from somewhere else.",
+            "All of your data is stored only in your own browser, in localStorage. Nothing is uploaded to a server and no account is created, so your tracking stays private to your device.",
+            "When you need to share results, export a CSV of your check history or open the report view and print a clean, client ready report. A full JSON backup is also supported, so you can move your data to another device.",
+          ],
+        },
+      ],
+    },
+  },
+  {
     toolType: "writing",
     slug: "sentence-counter",
     contentKey: "sentence-counter",
@@ -1356,6 +1418,9 @@ const getIcon = (
     case "aeo":
       return <Bot className={className} />;
 
+    case "ai-tracker":
+      return <Bot className={className} />;
+
     case "utm":
       return <Link2 className={className} />;
 
@@ -1438,6 +1503,9 @@ const getIconClass = (toolType: ToolType) => {
 
     case "utm":
       return "text-indigo-400";
+
+    case "ai-tracker":
+      return "text-indigo-300";
 
     case "meta-title":
       return "text-amber-400";
