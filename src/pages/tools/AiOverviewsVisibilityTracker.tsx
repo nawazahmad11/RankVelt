@@ -300,7 +300,7 @@ const STARTER_TEMPLATES: { label: string; items: string[] }[] = [
 ];
 
 const CSS = `
-.aio-wrap{--cream:#FBF6EE;--teal:#0E7C7B;--teal-dark:#0A5E5D;--navy:#0F2A43;--amber:#E8A33D;--ink:#22303C;--muted:#5C6B76;--line:#E7DCC8;--card:#FFFFFF;max-width:1080px;margin:0 auto;padding:24px 16px 56px;font-family:inherit;color:var(--ink)}
+.aio-wrap{--cream:#FBF6EE;--teal:#0E7C7B;--teal-dark:#0A5E5D;--navy:#0F2A43;--amber:#E8A33D;--ink:#22303C;--muted:#5C6B76;--line:#E7DCC8;--card:#FFFFFF;max-width:1280px;margin:0 auto;padding:48px 16px 56px;font-family:inherit;color:var(--ink)}
 .aio-wrap *{box-sizing:border-box}
 .aio-hero{background:var(--navy);color:#fff;border-radius:16px;padding:28px 26px;margin-bottom:18px}
 .aio-hero h1{margin:0 0 8px;font-size:30px;line-height:1.2;color:#fff}
