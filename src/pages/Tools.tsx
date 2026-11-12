@@ -128,6 +128,7 @@ type ToolConfig = {
     path: string;
   }[];
   standalone?: boolean;
+  article?: ToolArticle;
 };
 
 const toolJson = toolContentJson as ToolJsonMap;
