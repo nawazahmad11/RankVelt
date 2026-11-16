@@ -227,6 +227,21 @@ const businessSeoConfig: SeoServicePageConfig = {
           },
         ],
       },
+      {
+        heading: "SEO Services for Small Businesses: What Actually Fits a Small Budget?",
+        paragraphs: [
+          "A small business does not need a smaller version of enterprise SEO. It needs focus. A local service company or a growing online store usually wins from a short list of pages: the services that bring enquiries, the locations that matter, and proof that the business is real and good at the work. Everything else is decoration until those are in place.",
+          "That is how our small business SEO work is scoped. We start with the pages buyers actually land on, your Google Business Profile if local customers matter, and the questions your customers ask before they spend. Content is written to answer those questions properly, not to fill a calendar. Technical problems that block indexing or slow the site down get fixed early, because a small site cannot afford invisible pages.",
+          "Affordable SEO is a fair question, so here is the honest version. Affordable does not mean cheap tricks, bought links or automated content; those cost more in the end than they save. It means a scoped plan with a published price and a work list you can read. Our plan is 525 dollars per month with a three month initial term, then rolling monthly. What that budget buys, and what it does not, is broken down in our guide to SEO package pricing for small businesses.",
+          "If you are comparing providers, ask each one the same three questions. What exactly will you do in the first 90 days? What will you not do? And how will I see the work? A small business budget has no room for vague answers.",
+        ],
+        links: [
+          {
+            label: "Read the guide to SEO package pricing for small businesses",
+            path: "/blog/seo-package-pricing",
+          },
+        ],
+      },
     ],
   },
 
@@ -283,7 +298,17 @@ const businessSeoConfig: SeoServicePageConfig = {
       question: "Do you guarantee results?",
       answer:
         "No honest agency can guarantee specific rankings, because Google controls the results. What RankVelt guarantees is a clear plan, consistent work and transparent reporting, so you always know what was done and why.",
+    },    {
+      question: "How much does SEO cost for a small business?",
+      answer:
+        "Most small businesses we speak to are quoted anywhere from a few hundred dollars a month to several thousand, and the spread usually reflects scope, not quality. Our own plan is a flat 525 dollars per month with a three month initial term. Before you compare prices, compare what is included: page work, content, technical fixes, local profile work and reporting should all be named in writing.",
     },
+    {
+      question: "Is SEO worth it for a small business, or should I just run ads?",
+      answer:
+        "Ads rent attention and stop the day the budget stops. SEO builds pages and visibility that keep working. For most small businesses the honest answer is sequencing: if you need enquiries this week, ads can bridge the gap, but the businesses that win their market over a year are the ones whose own pages show up when buyers search. Start with the pages closest to a sale and grow from there.",
+    },
+
   ],
 
   relatedServices: [

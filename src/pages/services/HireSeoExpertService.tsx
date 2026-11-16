@@ -218,6 +218,14 @@ const hireSeoExpertConfig: SeoServicePageConfig = {
           },
         ],
       },
+      {
+        heading: "SEO Consulting: When You Need Direction, Not Another Pair of Hands",
+        paragraphs: [
+          "Some businesses do not need anyone to do the work. They have a developer, a writer, or a small marketing team, and what they are missing is direction: which pages matter, what to fix first, and whether the advice they are already getting is sound. That is SEO consulting, and it is a different engagement from hiring an expert to execute.",
+          "A consulting engagement with RankVelt is project based. It usually starts with a full audit of your site and your AI search visibility, turns into a written roadmap your own team can follow, and continues with scheduled reviews where we check the work, read the data with you, and reset priorities. If you later decide you would rather hand the execution over as well, it rolls into our monthly SEO service at 525 dollars per month, with the same specialist who wrote the roadmap.",
+          "Consulting is the wrong buy if nobody on your side has the hours to do the work; a roadmap nobody implements is an expensive document. In that case, hire the expert instead and let the execution be our problem. We will tell you honestly which side of that line you are on before you pay for either.",
+        ],
+      },
     ],
   },
 
@@ -271,7 +279,17 @@ const hireSeoExpertConfig: SeoServicePageConfig = {
       question: "What happens if I want to cancel?",
       answer:
         "After the initial 3 months, everything is month to month. You can cancel with notice, keep all the work completed, and receive documentation of what was done.",
+    },    {
+      question: "What does an SEO consultant do?",
+      answer:
+        "An SEO consultant diagnoses and directs: auditing your site, setting strategy and priorities, reviewing your team's work, and translating search data into decisions. Unlike an SEO expert hired for execution, a consultant does not usually publish content or change your site directly. The deliverable is a plan you trust and a regular check that the plan is working.",
     },
+    {
+      question: "How much do SEO consulting services cost?",
+      answer:
+        "Consulting is quoted per project, because the scope depends on your site's size and what your team can implement. A focused audit and roadmap is a one time project; ongoing advisory reviews are scheduled monthly or quarterly. Ongoing execution, if you want it, is separate and runs at our flat 525 dollars per month. The scoping call is free, and you will get the project price in writing before any work starts.",
+    },
+
   ],
 
   relatedServices: [

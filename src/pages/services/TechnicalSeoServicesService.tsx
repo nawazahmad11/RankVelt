@@ -306,7 +306,12 @@ const technicalSeoServicesConfig: SeoServicePageConfig = {
       question: "How do I spot red flags when choosing a technical SEO provider?",
       answer:
         "Watch for guaranteed rankings and free deep audits, no sample deliverable to inspect, a 300-line issue list with no prioritization, audit-only engagements with no implementation path, vague proprietary methodology answers, providers who ignore your platform's limits, and no access to your own Search Console or Analytics data.",
+    },    {
+      question: "Should I hire a technical SEO agency or a consultant?",
+      answer:
+        "Hire for the outcome you need. A consultant gives you a diagnosis and a list; an agency engagement like ours fixes the issues as well, in your codebase or CMS, and verifies the result in Search Console. If your developers have spare capacity and only need direction, a consultant is enough. If the fix list would sit in a backlog, choose the option that ships the fixes.",
     },
+
   ],
 
   relatedServices: [

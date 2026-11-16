@@ -270,11 +270,16 @@ const localSeoConfig: SeoServicePageConfig = {
         paragraphs: [
           "Before you hire anyone, ask five questions. What exactly will you do in the first month? Who does the work, and can I speak to them? What does it cost, and am I locked in? How will I see progress? What do you not do? Clear answers separate a partner from a salesperson.",
           "RankVelt is built to answer all five on the first call: published pricing from $525 per month, a 3 month minimum instead of a 6 or 12 month lock-in, a founder who reviews your account personally and a free opportunity check that shows the plan before you pay anything.",
+          "We published a full breakdown of what drives the price in our guide to local SEO pricing.",
         ],
         links: [
           {
             label: "Start with the free SEO Opportunity Check",
             path: "/strategy-call?package=Free%20SEO%20Opportunity%20Check",
+          },
+          {
+            label: "Read our guide to local SEO pricing",
+            path: "/blog/local-seo-pricing",
           },
         ],
       },
@@ -352,7 +357,12 @@ const localSeoConfig: SeoServicePageConfig = {
         "Why does my business rank on Maps but never appear in ChatGPT answers?",
       answer:
         "Maps rankings and AI citations rely on different signals. AI systems depend on consistent entity information across your website, directories and reviews. If those signals conflict or are incomplete, AI assistants skip your business even when Maps ranks it well.",
+    },    {
+      question: "Should I hire a local SEO agency or handle local SEO myself?",
+      answer:
+        "The basics are genuinely doable yourself: claim and complete your Google Business Profile, keep your hours and services accurate, and ask happy customers for reviews. An agency earns its fee on the parts that take tools and repetition: citation consistency across directories, location and service page structure, review strategy, and tracking why a competitor holds a map spot you want. Many clients start with our free audit so the decision is based on their actual gaps, not a sales pitch.",
     },
+
   ],
 
   relatedServices: [

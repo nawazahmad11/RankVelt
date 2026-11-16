@@ -166,6 +166,19 @@ const seoAuditServicesConfig: SeoServicePageConfig = {
       "A plain English look at what an SEO audit covers, what AI search adds and how to choose who audits your site.",
     sections: [
       {
+        heading: "Start With a Free SEO Audit",
+        paragraphs: [
+          "If you are not sure an audit is worth paying for yet, start with our free SEO audit. It is a first look, not the full service: we check whether Google can index your important pages, scan your titles and headings, flag obvious speed problems, and look at whether AI search can find and describe your business. You get the headline findings and a straight answer on whether a full audit would tell you anything more.",
+          "The paid audit services below are the deep version: a full technical review, content and AI visibility analysis, and a prioritised fix list your team or ours can work through. The free check exists so you can see how we think before you spend anything.",
+        ],
+        links: [
+          {
+            label: "Start with the free SEO Opportunity Check",
+            path: "/strategy-call?package=Free%20SEO%20Opportunity%20Check",
+          },
+        ],
+      },
+      {
         heading: "What an SEO Audit Actually Covers",
         paragraphs: [
           "A proper SEO audit examines three layers: technical health, content quality and authority signals. Technical covers crawlability, indexation, speed and structure. Content covers thin pages, intent matching and internal linking. Authority covers how the wider web treats your brand.",
@@ -225,6 +238,12 @@ const seoAuditServicesConfig: SeoServicePageConfig = {
           },
         ],
       },
+      {
+        heading: "Which Type of Audit Does Your Site Need?",
+        paragraphs: [
+          "Most audits we run fall into three shapes. An eCommerce SEO audit looks at product and collection structure, duplicate and thin product pages, faceted navigation, and whether your money pages can be found and cited. A local SEO audit focuses on your Google Business Profile, citations, reviews and location pages, and why competitors appear in the map results when you do not. A technical SEO audit goes under the site: crawling, indexing, site architecture, structured data and Core Web Vitals. Many sites need a blend, and the scoping call is where we agree the mix before any work starts.",
+        ],
+      },
     ],
   },
 
@@ -281,7 +300,12 @@ const seoAuditServicesConfig: SeoServicePageConfig = {
       question: "Who owns the audit report?",
       answer:
         "You do. The report, data and roadmap are yours to keep and implement with any team you choose.",
+    },    {
+      question: "Do you offer a free SEO audit, and what is the catch?",
+      answer:
+        "Yes. The free audit is a short first look at indexing, titles, speed flags and AI visibility, and the catch is only that it is short. It will not map every template problem or rewrite your content plan; that is what the full audit service is for. There is no obligation to buy anything after the free check.",
     },
+
   ],
 
   relatedServices: [

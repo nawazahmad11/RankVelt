@@ -222,6 +222,20 @@ const ecommerceSeoServicesConfig: SeoServicePageConfig =
             },
           ],
         },
+        {
+          heading: "eCommerce SEO Agency, Freelancer, or In-House: Which One Fits Your Store?",
+          paragraphs: [
+            "Stores usually reach this page at one of three points: a freelancer outgrew the problem, an in-house hire turned out to be a full time cost for a part time need, or paid ads started eating the margin. The right answer depends on what your store actually needs each month.",
+            "An eCommerce SEO agency brings the full stack in one engagement: technical work on your platform, collection and product content, internal linking, digital PR and links, and now AI search visibility, because buyers increasingly meet your store inside an AI answer before they ever see your site. A freelancer can be excellent inside one of those skills, but stores rarely stall for one reason; they stall on structure, content and authority at the same time. In-house gives you total focus, at the cost of a salary, tools, and managing a specialist whose work you may not be able to judge.",
+            "RankVelt is the agency option at a published price: a flat monthly plan, a named work list, and reporting in plain language. If a freelancer or an in-house hire fits your stage better, we will say so on the call. Stores that sell on Shopify specifically should also read our Shopify SEO services page, which covers that platform in depth.",
+          ],
+          links: [
+            {
+              label: "Explore our Shopify SEO services",
+              path: "/shopify-seo-services",
+            },
+          ],
+        },
       ],
     },
 
@@ -280,7 +294,12 @@ const ecommerceSeoServicesConfig: SeoServicePageConfig =
         question: "What do you need from us to start?",
         answer:
           "Your store URL, platform access for audits, and a short conversation about your best sellers and goals. RankVelt handles the analysis from there.",
+      },      {
+        question: "Why hire an eCommerce SEO agency instead of a freelancer?",
+        answer:
+          "Depth and cover. A store's SEO problems usually span technical structure, content and authority at once, and an agency engagement covers all three without you managing separate people. A freelancer is a good fit when the problem is narrow and you already know exactly what it is. If you are not sure which situation you are in, an audit will tell you before you commit to either.",
       },
+
     ],
 
     relatedServices: [

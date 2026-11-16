@@ -282,7 +282,12 @@ const wordpressSeoAgencyConfig: SeoServicePageConfig = {
       question: "Can an affordable agency optimize for AI search too?",
       answer:
         "The basics, yes: quotable content structure, consistent business facts and AI crawler access. That should be standard in any 2026 plan.",
+    },    {
+      question: "What is included in your WordPress SEO services?",
+      answer:
+        "Everything a WordPress site needs to be found and cited: plugin configuration done properly rather than by wizard, theme and Core Web Vitals work that does not break your design, content structure and internal linking, WooCommerce optimisation if you sell products, and AI search visibility checks alongside classic rankings. The work runs on a staging site first, and you see every change before it goes live.",
     },
+
   ],
 
   relatedServices: [
