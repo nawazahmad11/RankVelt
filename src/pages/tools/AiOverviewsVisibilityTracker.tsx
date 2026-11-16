@@ -347,11 +347,13 @@ const CSS = `
 .aio-table th,.aio-table td{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top}
 .aio-saved{font-size:13px;color:var(--teal-dark)}
 .aio-toast{background:var(--navy);color:#fff;border-radius:10px;padding:10px 16px;font-size:14px}
-.aio-article{max-width:820px;margin:34px auto 0}
+.aio-article{max-width:820px;margin:34px auto 0;background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:32px 36px 38px;color:var(--ink)}
 .aio-article h2{color:var(--navy);font-size:24px;margin:30px 0 10px}
+.aio-article h2:first-child{margin-top:0}
 .aio-article h3{color:var(--navy);font-size:18px;margin:20px 0 6px}
 .aio-article p{line-height:1.65;margin:0 0 12px}
 .aio-article a{color:var(--teal-dark);font-weight:600}
+@media (max-width:640px){.aio-article{padding:24px 18px 28px}}
 .aio-faq{border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-bottom:8px;background:#fff}
 .aio-faq summary{cursor:pointer;font-weight:600;color:var(--navy)}
 .aio-report{background:#fff}

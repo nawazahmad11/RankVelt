@@ -16165,6 +16165,11 @@ http://cheap-guest-posts.example/my-post</code></pre>
         level: 2,
       },
       {
+        id: "done-for-you",
+        title: "What If You Would Rather Have This Done for You?",
+        level: 2,
+      },
+      {
         id: "faqs",
         title: "Voice Search and AEO Questions",
         level: 2,
@@ -17440,6 +17445,20 @@ http://cheap-guest-posts.example/my-post</code></pre>
           Issue → Fix → Validation → Visibility change → Revenue outcome
         </p>
       </div>
+
+      <h2 id="done-for-you">
+        What If You Would Rather Have This Done for You?
+      </h2>
+
+      <p>
+        This checklist is the same work RankVelt runs for Shopify
+        clients every month. If you would rather hand the whole
+        list over, our
+        <a href="/shopify-seo-services">Shopify SEO services</a>
+        page explains how the service works, what it includes and
+        the published price, so you can decide with the full
+        picture in front of you.
+      </p>
 
       <h2 id="faqs">Voice Search and AEO Questions</h2>
 
@@ -25588,6 +25607,1725 @@ http://cheap-guest-posts.example/my-post</code></pre>
       <p>RankVelt's ecommerce SEO practice is built for exactly this: Shopify stores that need platform specific expertise tied to revenue. Audit first, fix in priority order, report on what matters.</p>
 
       <p><a href="/strategy-call">Book a free strategy call</a>. We will review your store, show you the highest leverage issues, and tell you plainly whether we are the right fit. If DIY is still the right answer for your stage, we will say that too.</p>
+    `,
+  },
+  {
+    id: "seo-package-pricing",
+
+    title: "SEO Package Pricing: What a Small Business Should Actually Pay in 2026",
+
+    seoTitle:
+      "SEO Package Pricing for Small Business in 2026",
+
+    metaDescription:
+      "See what SEO package pricing should include in 2026, what small businesses actually pay, and why cheap deals often cost more in the end.",
+
+    ogTitle: "SEO Package Pricing for Small Business (2026)",
+
+    socialDescription:
+      "What SEO packages for small business should include, what they should cost, and the pricing traps to avoid in 2026.",
+
+    date: "Nov 17, 2026",
+    datePublished: "2026-11-17",
+    dateModified: "2026-11-17",
+
+    author: "RankVelt Editorial Team",
+    authorType: "Organization",
+
+    category: "SEO SERVICES",
+    readTime: "9 min read",
+
+    image: "/blog/seo-package-pricing.webp",
+
+    imageAlt:
+      "Illustration showing SEO package pricing options for a small business",
+
+    excerpt:
+      "A small business should pay for enough SEO work to be done properly, and no more than that. For most small businesses in 2026, that means a clear monthly package in the mid hundreds of dollars, with the work, the time frame, and the reporting...",
+
+    relatedPostIds: [
+      "in-house-vs-outsourced-seo",
+      "seo-freelancer-vs-agency",
+      "what-is-managed-seo",
+    ],
+
+    primaryService: {
+      title: "Business SEO",
+      description:
+        "Improve technical eligibility, content structure, internal linking, search visibility, and the conversion journey across commercially important pages.",
+      path: "/business-seo",
+    },
+
+    showStandardCta: true,
+
+    faqItems: [
+      {
+        question: "How much do seo packages for small business usually cost?",
+        answer:
+          "Costs vary by site size, competition, and how much content and technical work is needed. What matters most is what work is included for the price. RankVelt publishes its price at $525 per month so you can compare it openly against any other quote you receive.",
+      },
+      {
+        question: "What is the minimum time I should commit to SEO?",
+        answer:
+          "You should commit to at least 3 months to give the work a fair test. Google states in its guidance that SEO changes can take several months to show an effect. After the first 3 months at RankVelt, the agreement is month to month, so you are not locked in.",
+      },
+      {
+        question: "Should I choose fixed price SEO or hourly SEO?",
+        answer:
+          "Fixed price SEO suits most small businesses because the monthly cost is predictable and the scope can be agreed in advance. Hourly work can suit a one off project or advice for an in house team. In both cases, get the work items in writing before you start.",
+      },
+      {
+        question: "Is performance based SEO pricing ever a good idea?",
+        answer:
+          "It is rarely a good idea for a small business. It often focuses on a few keyword rankings rather than real enquiries, and it can encourage risky shortcuts. Google warns that no one can guarantee a top ranking, so any payment model built on that promise should be treated with care.",
+      },
+      {
+        question: "What should I ask before I buy any SEO package?",
+        answer:
+          "Ask what the audit found, what work will happen in the first 3 months, who will do the work, how reporting works, and how you can leave. A good provider will answer each question in plain language and put the answers in writing. If you want a clear answer for your own site before you spend anything, book a free SEO Opportunity Check at /strategy-call. We will audit your site first, show you what we found in plain language, and tell you honestly whether our $525 per month package makes sense for you or whether you should do something else first. There is no pressure and no guarantee talk, just a clear view of your opportunity and your options.",
+      },
+    ],
+
+    toc: [
+      {
+        id: "how-much-should-a-small-business-pay-for-seo-in-2026",
+        title: "How much should a small business pay for SEO in 2026?",
+        level: 2,
+      },
+      {
+        id: "what-should-be-included-in-seo-packages-for-small-business",
+        title: "What should be included in SEO packages for small business?",
+        level: 2,
+      },
+      {
+        id: "what-does-seo-package-pricing-depend-on",
+        title: "What does SEO package pricing depend on?",
+        level: 2,
+      },
+      {
+        id: "is-fixed-price-seo-a-good-idea",
+        title: "Is fixed price SEO a good idea?",
+        level: 2,
+      },
+      {
+        id: "why-is-performance-based-seo-pricing-usually-a-trap",
+        title: "Why is performance based SEO pricing usually a trap?",
+        level: 2,
+      },
+      {
+        id: "how-can-you-tell-if-a-cheap-seo-package-is-too-cheap",
+        title: "How can you tell if a cheap SEO package is too cheap?",
+        level: 2,
+      },
+      {
+        id: "how-long-before-you-know-if-the-price-was-worth-it",
+        title: "How long before you know if the price was worth it?",
+        level: 2,
+      },
+      {
+        id: "faqs",
+        title: "Frequently Asked Questions",
+        level: 2,
+      },
+    ],
+
+    content: `
+      <p>A small business should pay for enough SEO work to be done properly, and no more than that. For most small businesses in 2026, that means a clear monthly package in the mid hundreds of dollars, with the work, the time frame, and the reporting explained before you sign. At RankVelt, that price is published openly at $525 per month, with a minimum of 3 months and then a rolling month to month agreement. You should never have to guess what you are paying for, and you should never pay for promises that no honest provider can keep.</p>
+
+      <h2 id="how-much-should-a-small-business-pay-for-seo-in-2026">How much should a small business pay for SEO in 2026?</h2>
+
+      <p>You should pay a price that covers real hours of skilled work on your site each month. If the price is so low that only an hour or two of work is possible, you will get reports and activity but very little progress. If the price is very high, you should be able to see exactly what extra work you are getting for that money, such as more content, more pages covered, or work across several locations.</p>
+
+      <p>SEO package pricing varies because the work varies. A five page site needs less work than a large online store, and a quiet niche needs less work than a market with national brands. Ask what work will happen in month one, month two, and month three, and how you will check it.</p>
+
+      <h2 id="what-should-be-included-in-seo-packages-for-small-business">What should be included in SEO packages for small business?</h2>
+
+      <p>A proper package should include an audit first, technical fixes, on page work, content guidance or content writing, internal linking, and clear monthly reporting. It should also include work that helps your business appear in AI driven search results, because buyers now ask questions in tools as well as in Google search.</p>
+
+      <p>At RankVelt, every engagement starts with a free audit before any payment. That audit shows what is holding the site back and what should be fixed first. You can also start on your own with our <a href="/tools">free SEO tools</a>. There are 36 of them, and they help you check basic issues before you talk to anyone.</p>
+
+      <p>A complete package normally covers these areas:</p>
+
+      <h3>What technical work should be included?</h3>
+
+      <p>Technical work should cover site speed issues, indexing problems, broken links, duplicate titles, and other faults that stop search engines from understanding your site. This is detailed work, and it is covered in more depth on our <a href="/technical-seo-services">technical SEO services</a> page. Without this base, content and links have much less effect.</p>
+
+      <h3>What content and on page work should be included?</h3>
+
+      <p>Content and on page work should cover page titles, headings, page copy, and internal links, matched to what your customers actually search for. It should also cover how your pages appear in AI answers. Our guide on <a href="/blog/seo-vs-aeo-vs-geo">SEO, AEO, and GEO</a> explains how those three fit together in plain language, and the <a href="/tools/ai-overviews-visibility-tracker">AI Overviews visibility tracker</a> helps you see whether your brand is being mentioned.</p>
+
+      <h3>What reporting should be included?</h3>
+
+      <p>Reporting should be in plain language, once a month, showing what was done, what changed, and what happens next. If a report is full of charts but never says what work was completed, that is a warning sign.</p>
+
+      <h2 id="what-does-seo-package-pricing-depend-on">What does SEO package pricing depend on?</h2>
+
+      <p>Price depends mainly on the size of your site, the strength of your competition, how many locations you serve, and how much content needs to be created or fixed. It also depends on who does the work. Senior time costs more than junior time, and it should, because senior work avoids costly mistakes.</p>
+
+      <p>An online store with hundreds of products needs product and category work, which is why <a href="/ecommerce-seo-services">eCommerce SEO services</a> and <a href="/shopify-seo-services">Shopify SEO services</a> often cost more than SEO for a simple service site. A fair provider will show you the audit, explain the priorities, and let you decide.</p>
+
+      <h2 id="is-fixed-price-seo-a-good-idea">Is fixed price SEO a good idea?</h2>
+
+      <p>Yes, fixed price SEO is a good idea when the scope of work is written down clearly. A fixed monthly price gives a small business a predictable cost, which makes planning much easier. You know what leaves the bank account each month, and the provider knows what work must be delivered.</p>
+
+      <p>The risk with fixed price SEO is a fixed list that never changes. Search needs change as a site improves. In the first months, the priority may be technical fixes. Later, the priority may be content or internal linking. A good fixed price package fixes the price, not the thinking. The plan should be reviewed each month and adjusted inside the same price when priorities change.</p>
+
+      <p>At RankVelt, the price is fixed and published at $525 per month. What changes is the order of work, based on what your site needs most. That is decided from the audit and from the monthly results, and it is explained in your report. There are no surprise add ons for normal work that should have been included from the start.</p>
+
+      <h2 id="why-is-performance-based-seo-pricing-usually-a-trap">Why is performance based SEO pricing usually a trap?</h2>
+
+      <p>Performance based SEO pricing is usually a trap because it rewards the wrong things and gives you very little control. When payment depends only on rankings for a small set of keywords, the provider has a strong reason to chase easy keywords that bring no customers, to use risky shortcuts, or to claim credit for changes that would have happened anyway.</p>
+
+      <p>Google itself is clear on this point. In its own documentation for business owners, Google warns that no one can guarantee a number one ranking on Google. Any deal that is built on guaranteed positions is going against what Google says openly. Google also explains that SEO work takes time to show results, often several months, which makes short term performance deals a poor fit for how search actually works.</p>
+
+      <p>Rankings also move for reasons outside any provider's control, such as algorithm updates and new competitors. Judge results over a fair period using traffic, enquiries, and sales, not just a handful of keyword positions in one month. A clear monthly price for clear monthly work is simpler and safer.</p>
+
+      <h2 id="how-can-you-tell-if-a-cheap-seo-package-is-too-cheap">How can you tell if a cheap SEO package is too cheap?</h2>
+
+      <p>You can tell a package is too cheap when the provider cannot explain what work will be done, by whom, and in how many hours. Very low prices usually mean the work is automated, outsourced without checks, or done by juniors with little supervision. Sometimes it means almost no work is done at all beyond sending an automated report.</p>
+
+      <p>Look for warning signs such as guaranteed rankings, no audit before payment, a long contract with no clear exit, and vague items like secret methods. At RankVelt, the work is founder led. Founder Nawaz Ahmad leads the work himself, with no juniors handed your account in secret. If you prefer a single specialist, see what it means to <a href="/hire-seo-expert">hire an SEO expert</a> directly.</p>
+
+      <h2 id="how-long-before-you-know-if-the-price-was-worth-it">How long before you know if the price was worth it?</h2>
+
+      <p>You should expect to judge value over at least 3 months, and more fairly over 6 months. That is why RankVelt asks for a minimum of 3 months, then moves to a rolling month to month agreement. The minimum gives the work a fair chance. The rolling agreement after that keeps the pressure on us to keep earning your business.</p>
+
+      <p>In the first month, you should see the audit, the priority list, and the first fixes completed. In months two and three, you should see more pages improved, technical issues falling, and early movement in impressions and clicks. Enquiries and sales usually take longer and depend on your market, your offer, and your website itself. SEO can bring the right visitors. Your pages still need to turn those visitors into customers.</p>
+
+      <p>Our <a href="/seo-audit-services">SEO audit services</a> page explains what a proper audit covers. A good audit makes the pricing conversation easier because both sides see the same priorities.</p>
+
+      <h2 id="faqs">Frequently Asked Questions</h2>
+
+      <details>
+
+        <summary>How much do seo packages for small business usually cost?</summary>
+
+        <p>Costs vary by site size, competition, and how much content and technical work is needed. What matters most is what work is included for the price. RankVelt publishes its price at $525 per month so you can compare it openly against any other quote you receive.</p>
+
+      </details>
+
+      <details>
+
+        <summary>What is the minimum time I should commit to SEO?</summary>
+
+        <p>You should commit to at least 3 months to give the work a fair test. Google states in its guidance that SEO changes can take several months to show an effect. After the first 3 months at RankVelt, the agreement is month to month, so you are not locked in.</p>
+
+      </details>
+
+      <details>
+
+        <summary>Should I choose fixed price SEO or hourly SEO?</summary>
+
+        <p>Fixed price SEO suits most small businesses because the monthly cost is predictable and the scope can be agreed in advance. Hourly work can suit a one off project or advice for an in house team. In both cases, get the work items in writing before you start.</p>
+
+      </details>
+
+      <details>
+
+        <summary>Is performance based SEO pricing ever a good idea?</summary>
+
+        <p>It is rarely a good idea for a small business. It often focuses on a few keyword rankings rather than real enquiries, and it can encourage risky shortcuts. Google warns that no one can guarantee a top ranking, so any payment model built on that promise should be treated with care.</p>
+
+      </details>
+
+      <details>
+
+        <summary>What should I ask before I buy any SEO package?</summary>
+
+        <p>Ask what the audit found, what work will happen in the first 3 months, who will do the work, how reporting works, and how you can leave. A good provider will answer each question in plain language and put the answers in writing. If you want a clear answer for your own site before you spend anything, book a free SEO Opportunity Check at <a href="/strategy-call">/strategy-call</a>. We will audit your site first, show you what we found in plain language, and tell you honestly whether our $525 per month package makes sense for you or whether you should do something else first. There is no pressure and no guarantee talk, just a clear view of your opportunity and your options.</p>
+
+      </details>
+    `,
+  },
+  {
+    id: "local-seo-pricing",
+
+    title: "Local SEO Pricing: What It Costs and What Drives the Price",
+
+    seoTitle:
+      "Local SEO Pricing: What It Costs in 2026",
+
+    metaDescription:
+      "Local SEO pricing explained in plain English. What drives the cost, what should be included, and how to compare quotes without overpaying.",
+
+    ogTitle: "Local SEO Pricing: Costs and Price Drivers",
+
+    socialDescription:
+      "Local SEO pricing explained: typical monthly costs, what drives the price up or down, and how to compare quotes honestly.",
+
+    date: "Nov 17, 2026",
+    datePublished: "2026-11-17",
+    dateModified: "2026-11-17",
+
+    author: "RankVelt Editorial Team",
+    authorType: "Organization",
+
+    category: "LOCAL SEO",
+    readTime: "9 min read",
+
+    image: "/blog/local-seo-pricing.webp",
+
+    imageAlt:
+      "Illustration showing local SEO pricing for a business on a map",
+
+    excerpt:
+      "Local SEO pricing is the monthly cost of helping your business show up when nearby customers search on Google Search and Google Maps. For a single location small business, a fair price covers profile work, website fixes, reviews guidance, and...",
+
+    relatedPostIds: [
+      "why-hire-local-seo-company",
+      "google-maps-seo",
+      "seo-package-pricing",
+    ],
+
+    primaryService: {
+      title: "Local SEO",
+      description:
+        "Win local searches and AI answers with optimized profiles, citations, reviews, and location content that turns nearby searchers into customers.",
+      path: "/local-seo",
+    },
+
+    showStandardCta: true,
+
+    faqItems: [
+      {
+        question: "What is a fair monthly price for local SEO for one location?",
+        answer:
+          "A fair price covers profile care, website work, review guidance, and reporting each month, with enough hours to do them properly. RankVelt charges a published $525 per month for this work. Whatever quote you compare it with, ask what hours and tasks are included for that price.",
+      },
+      {
+        question: "Does local SEO pricing change if I have several locations?",
+        answer:
+          "Yes, several locations normally cost more because each location needs its own profile management, local pages, and checks. Ask any provider to show the per location work in writing, so you can see what the extra cost buys.",
+      },
+      {
+        question: "Are setup fees normal for local SEO?",
+        answer:
+          "Setup work is normal when a profile or website needs cleanup, but it should be explained clearly before you agree. At RankVelt, the audit is free, and the setup priorities are included in the plan we show you before you start paying monthly.",
+      },
+      {
+        question: "Can anyone guarantee first place on Google Maps?",
+        answer:
+          "No, no one can honestly guarantee first place on Google Maps. Google warns business owners that top rankings cannot be guaranteed. A provider who promises a set position is telling you something Google itself says is not possible.",
+      },
+      {
+        question: "How soon should I expect more calls from local SEO?",
+        answer:
+          "You should expect early signals within the first few months, such as better visibility and more profile views, with calls and enquiries building as visibility grows. Timing depends on competition and your starting point. Any provider who promises calls by a set date is guessing, not informing you. If you want to know what local SEO should cost for your specific business, book a free SEO Opportunity Check at /strategy-call. We will audit your Google Business Profile, your Maps presence, and your website for free, explain in plain language what is holding you back, and tell you honestly whether the $525 per month package fits your situation. No pressure, no guaranteed rankings, just a clear price for clear work.",
+      },
+    ],
+
+    toc: [
+      {
+        id: "how-much-does-local-seo-cost",
+        title: "How much does local SEO cost?",
+        level: 2,
+      },
+      {
+        id: "what-should-be-included-in-a-local-seo-package",
+        title: "What should be included in a local SEO package?",
+        level: 2,
+      },
+      {
+        id: "what-drives-the-price-of-local-seo-up-or-down",
+        title: "What drives the price of local SEO up or down?",
+        level: 2,
+      },
+      {
+        id: "why-is-very-cheap-local-seo-risky",
+        title: "Why is very cheap local SEO risky?",
+        level: 2,
+      },
+      {
+        id: "how-is-local-seo-different-from-general-seo",
+        title: "How is local SEO different from general SEO?",
+        level: 2,
+      },
+      {
+        id: "how-does-rankvelt-price-local-seo-work",
+        title: "How does RankVelt price local SEO work?",
+        level: 2,
+      },
+      {
+        id: "how-long-does-local-seo-take-to-show-a-return",
+        title: "How long does local SEO take to show a return?",
+        level: 2,
+      },
+      {
+        id: "faqs",
+        title: "Frequently Asked Questions",
+        level: 2,
+      },
+    ],
+
+    content: `
+      <p>Local SEO pricing is the monthly cost of helping your business show up when nearby customers search on Google Search and Google Maps. For a single location small business, a fair price covers profile work, website fixes, reviews guidance, and local content, done properly each month. At RankVelt, local work is included inside a published package at $525 per month, with a minimum of 3 months and then a rolling month to month agreement. The right price for you depends on your locations, your competition, and the current state of your online presence, not on a sales offer.</p>
+
+      <h2 id="how-much-does-local-seo-cost">How much does local SEO cost?</h2>
+
+      <p>Local SEO costs enough to cover several hours of skilled work each month on your profile, your website, and your local signals. If you pay very little, there is not enough time to do that work well. If you pay a lot, you should expect broader coverage, such as several locations, more content, or a difficult and competitive market.</p>
+
+      <p>There is no single correct price for every business. A plumber with one service area and a simple website has different needs from a clinic with three locations and hundreds of pages. A business starting from scratch, with no Google Business Profile and a weak website, needs more setup work than a business that already has a complete profile and a sound site.</p>
+
+      <p>Compare what is included, who does the work, and how success will be reported. Two quotes at the same price can deliver very different work.</p>
+
+      <h2 id="what-should-be-included-in-a-local-seo-package">What should be included in a local SEO package?</h2>
+
+      <p>A local SEO package should include Google Business Profile setup and optimisation, local keyword work on your website, review guidance, local links and citations checks, and plain language monthly reporting. It should start with an audit, so the work follows evidence rather than guesswork.</p>
+
+      <p>At RankVelt, every local engagement starts with a free audit first. We check your profile, your website, and how you appear in Maps and Search before we recommend a plan. You can begin some checks yourself with our <a href="/tools">free SEO tools</a>. There are 36 free tools on the site, and they help you spot basic website problems that also affect local results.</p>
+
+      <p>The core parts of local work are these:</p>
+
+      <h3>What does Google Business Profile work include?</h3>
+
+      <p>Google Business Profile work includes checking your business name, address, phone number, categories, services, opening hours, photos, and description for accuracy and completeness. According to Google's own help documentation, keeping your profile accurate helps customers find correct information about your business on Search and Maps. Our detailed guide to <a href="/blog/google-maps-seo">Google Maps SEO</a> walks through how profile quality and website signals work together.</p>
+
+      <h3>What website work matters for local SEO?</h3>
+
+      <p>Website work for local SEO includes clear service pages, location information that matches your profile, correct contact details, and internal links that show which services you offer in which area. If your website contradicts your profile, that confusion should be fixed early.</p>
+
+      <h3>Should reviews be part of the package?</h3>
+
+      <p>Yes, review guidance should be part of the package, but no honest provider should buy reviews or post fake ones. Google's policies prohibit fake engagement on profiles, and reviews must reflect real customer experience. A good package helps you ask real customers at the right time, reply professionally, and fix the service issues that reviews reveal. The provider should guide the process. The reviews themselves must come from your customers.</p>
+
+      <h2 id="what-drives-the-price-of-local-seo-up-or-down">What drives the price of local SEO up or down?</h2>
+
+      <p>The price is driven mainly by the number of locations, the strength of local competition, the condition of your profile and website, and how much content needs to be created. Each of those factors changes the hours required each month, and hours are what you are really buying.</p>
+
+      <h3>How does the number of locations affect price?</h3>
+
+      <p>More locations raise the price because each location needs its own profile care, its own local pages, and its own reporting. One location means one profile to keep accurate and one area to build visibility in. Five locations means five profiles, more reviews to monitor, and more chances for details to drift out of date. Any quote that charges the same for one location and for five locations deserves careful questions.</p>
+
+      <h3>How does competition in your area affect price?</h3>
+
+      <p>Stronger competition raises the price because you need more work to stand out. In a small town, a complete profile and a decent website may be enough. In a large city with dozens of strong competitors, you will need sustained content, technical, and authority work over a longer period.</p>
+
+      <h3>How does the current state of your profile and website affect price?</h3>
+
+      <p>A poor starting point raises the early cost because setup and cleanup take time. Duplicate profiles, wrong addresses, missing services, a slow website, or thin service pages all need fixing before growth work can pay off. A business that starts with accurate information and a healthy site can put more of its monthly budget into growth from the first month. This is exactly what the initial audit is for. It shows both sides where the time will go.</p>
+
+      <h2 id="why-is-very-cheap-local-seo-risky">Why is very cheap local SEO risky?</h2>
+
+      <p>Very cheap local SEO is risky because the work is often automated, rushed, or based on shortcuts that can harm your profile. Your Google Business Profile is a public asset tied to your real business name and address. Damage there is harder to undo than damage on a single web page.</p>
+
+      <p>Common cheap tactics include adding wrong categories, stuffing keywords into your business name, and building low quality listings with inconsistent details. Google states that no one can guarantee a number one ranking, and that applies to Maps as well. At RankVelt, reporting is in plain language and lists the work completed, what changed, and what comes next.</p>
+
+      <h2 id="how-is-local-seo-different-from-general-seo">How is local SEO different from general SEO?</h2>
+
+      <p>Local SEO is different because it focuses on searches with a place attached, and on your presence in Maps as well as in normal search results. General SEO focuses on your website ranking for searches anywhere. Most local businesses need both, with local signals given priority because their customers are nearby.</p>
+
+      <p>The two overlap a lot. A fast, clear website and good content help both. Local SEO adds profile, reviews, and local consistency work. Customers now ask AI tools for local recommendations too. Our <a href="/tools/aeo-readiness-checker">AEO readiness checker</a> shows how ready your site is, and our article on how to <a href="/blog/optimize-google-ai-overviews">optimise for Google AI Overviews</a> explains more. As an <a href="/ai-seo-agency">AI first SEO agency</a>, we include that work in the same package.</p>
+
+      <h2 id="how-does-rankvelt-price-local-seo-work">How does RankVelt price local SEO work?</h2>
+
+      <p>RankVelt prices local SEO work at a published $525 per month, the same clear package price as our other SEO work for small businesses. There is a minimum of 3 months, because local visibility takes time to build and judge fairly, and after that the agreement rolls month to month with no long lock in.</p>
+
+      <p>The work is founder led. Founder Nawaz Ahmad leads the strategy and does the work himself, with no juniors quietly handling your account. That matters for local SEO, where small details such as categories, service areas, and address consistency have an outsized effect, and where mistakes are visible to your customers.</p>
+
+      <p>Before you pay anything, you get a free audit of your profile, Maps presence, website, and closest competitors. Sometimes the honest answer is to fix your website first. We would rather tell you that than sell you a package you do not need yet. See our <a href="/seo-audit-services">SEO audit services</a> page for what the audit covers.</p>
+
+      <h2 id="how-long-does-local-seo-take-to-show-a-return">How long does local SEO take to show a return?</h2>
+
+      <p>Local SEO usually takes at least 3 months to show a clear pattern, and longer in competitive cities. Profile corrections and website fixes can be done quickly, but search engines need time to recrawl, update, and trust the new information. Google gives the same general guidance for SEO as a whole, that changes can take several months to have an effect.</p>
+
+      <p>Judge return in stages. In month one, look for completed fixes and an accurate profile. In months two and three, look for more appearances in Maps and Search and growth in local searches. Over time, judge on enquiries and customers, not only positions. If there is no movement and no clear explanation, you should be free to leave, which is why the rolling month to month term matters.</p>
+
+      <h2 id="faqs">Frequently Asked Questions</h2>
+
+      <details>
+
+        <summary>What is a fair monthly price for local SEO for one location?</summary>
+
+        <p>A fair price covers profile care, website work, review guidance, and reporting each month, with enough hours to do them properly. RankVelt charges a published $525 per month for this work. Whatever quote you compare it with, ask what hours and tasks are included for that price.</p>
+
+      </details>
+
+      <details>
+
+        <summary>Does local SEO pricing change if I have several locations?</summary>
+
+        <p>Yes, several locations normally cost more because each location needs its own profile management, local pages, and checks. Ask any provider to show the per location work in writing, so you can see what the extra cost buys.</p>
+
+      </details>
+
+      <details>
+
+        <summary>Are setup fees normal for local SEO?</summary>
+
+        <p>Setup work is normal when a profile or website needs cleanup, but it should be explained clearly before you agree. At RankVelt, the audit is free, and the setup priorities are included in the plan we show you before you start paying monthly.</p>
+
+      </details>
+
+      <details>
+
+        <summary>Can anyone guarantee first place on Google Maps?</summary>
+
+        <p>No, no one can honestly guarantee first place on Google Maps. Google warns business owners that top rankings cannot be guaranteed. A provider who promises a set position is telling you something Google itself says is not possible.</p>
+
+      </details>
+
+      <details>
+
+        <summary>How soon should I expect more calls from local SEO?</summary>
+
+        <p>You should expect early signals within the first few months, such as better visibility and more profile views, with calls and enquiries building as visibility grows. Timing depends on competition and your starting point. Any provider who promises calls by a set date is guessing, not informing you. If you want to know what local SEO should cost for your specific business, book a free SEO Opportunity Check at <a href="/strategy-call">/strategy-call</a>. We will audit your Google Business Profile, your Maps presence, and your website for free, explain in plain language what is holding you back, and tell you honestly whether the $525 per month package fits your situation. No pressure, no guaranteed rankings, just a clear price for clear work.</p>
+
+      </details>
+    `,
+  },
+  {
+    id: "semantic-seo",
+
+    title: "Semantic SEO: How to Write for Topics and Entities, Not Keyword Strings",
+
+    seoTitle:
+      "Semantic SEO: Write for Topics, Not Keywords",
+
+    metaDescription:
+      "Semantic SEO explained simply: write for topics and entities, not keyword strings, and build pages Google and AI search can understand and trust.",
+
+    ogTitle: "Semantic SEO: Topics and Entities Explained",
+
+    socialDescription:
+      "Semantic SEO explained in plain language: how Google understands topics and entities, and how to write pages it can trust.",
+
+    date: "Nov 17, 2026",
+    datePublished: "2026-11-17",
+    dateModified: "2026-11-17",
+
+    author: "RankVelt Editorial Team",
+    authorType: "Organization",
+
+    category: "AI SEARCH SEO",
+    readTime: "9 min read",
+
+    image: "/blog/semantic-seo.webp",
+
+    imageAlt:
+      "Illustration showing topics and entities connected around a web page",
+
+    excerpt:
+      "Semantic SEO is writing about a complete topic in clear language, so Google can understand what your page is about, who or what it covers, and why it should be shown. Instead of repeating one keyword string, you cover the real subject, name the...",
+
+    relatedPostIds: [
+      "seo-vs-aeo-vs-geo",
+      "internal-linking-seo-ai",
+      "eeat-seo-guide",
+    ],
+
+    primaryService: {
+      title: "AI SEO Agency",
+      description:
+        "AI-first SEO, AEO and GEO services built to win classic rankings and AI citations together, from $525/month.",
+      path: "/ai-seo-agency",
+    },
+
+    showStandardCta: true,
+
+    faqItems: [
+      {
+        question: "Do I still need keywords if I use semantic SEO?",
+        answer:
+          "Yes, you still need keywords to understand demand and choose pages, but you use them as a starting point, not a script. Let the keyword pick the topic, then write for the full topic in natural language.",
+      },
+      {
+        question: "How many topics should one page cover?",
+        answer:
+          "One page should cover one main topic fully, including its important subtopics. If a subtopic has a different reader job, give it its own page and link the two clearly.",
+      },
+      {
+        question: "Does semantic SEO replace technical SEO?",
+        answer:
+          "No, it does not replace technical SEO. Pages still need to be crawlable, fast enough, and correctly structured. Semantic work decides what a page means. Technical work makes sure search engines can reach and read it.",
+      },
+      {
+        question: "How long does semantic SEO take to work?",
+        answer:
+          "It takes time because Google needs to recrawl pages, understand the changes, and test them against other results. A minimum of 3 months is a sensible first window to judge direction, which is why our monthly work is set up on that basis.",
+      },
+      {
+        question: "Can I do semantic SEO myself with free tools?",
+        answer:
+          "Yes, you can start by mapping one topic properly, rewriting one important page to answer first, and checking your site with free tools. Our free SEO tools cover AI readiness, visibility, and titles, so you can find obvious gaps before paying for help. If your pages target keywords but do not cover the topics behind them, start with a free SEO Opportunity Check at /strategy-call. We will look at your key pages, show you the topic gaps in plain language, and tell you honestly if semantic work is the right next step, or if something else should come first.",
+      },
+    ],
+
+    toc: [
+      {
+        id: "what-is-semantic-seo-in-simple-terms",
+        title: "What is semantic SEO, in simple terms?",
+        level: 2,
+      },
+      {
+        id: "how-does-google-understand-topics-and-entities",
+        title: "How does Google understand topics and entities?",
+        level: 2,
+      },
+      {
+        id: "what-is-the-difference-between-a-keyword-a-topic-and-an-entity",
+        title: "What is the difference between a keyword, a topic, and an entity?",
+        level: 2,
+      },
+      {
+        id: "how-do-you-plan-a-page-around-a-topic-not-a-string",
+        title: "How do you plan a page around a topic, not a string?",
+        level: 2,
+      },
+      {
+        id: "how-do-you-write-so-entities-are-clear-on-the-page",
+        title: "How do you write so entities are clear on the page?",
+        level: 2,
+      },
+      {
+        id: "how-does-semantic-seo-help-you-appear-in-ai-search-results",
+        title: "How does semantic SEO help you appear in AI search results?",
+        level: 2,
+      },
+      {
+        id: "what-mistakes-make-a-page-look-thin-even-when-it-is-long",
+        title: "What mistakes make a page look thin, even when it is long?",
+        level: 2,
+      },
+      {
+        id: "how-does-rankvelt-approach-semantic-seo-for-clients",
+        title: "How does RankVelt approach semantic SEO for clients?",
+        level: 2,
+      },
+      {
+        id: "faqs",
+        title: "Frequently Asked Questions",
+        level: 2,
+      },
+    ],
+
+    content: `
+      <p>Semantic SEO is writing about a complete topic in clear language, so Google can understand what your page is about, who or what it covers, and why it should be shown. Instead of repeating one keyword string, you cover the real subject, name the important entities clearly, and answer the questions a reader actually has. The shift is simple: from matching words to proving understanding.</p>
+
+      <h2 id="what-is-semantic-seo-in-simple-terms">What is semantic SEO, in simple terms?</h2>
+
+      <p>Semantic SEO means organising a page around meaning, not around a single phrase. A keyword is just the words someone types. Meaning is the topic behind those words, the people, places, products, and ideas connected to it, and the job the reader wants to get done.</p>
+
+      <p>Think of a page about running shoes for flat feet. A keyword led page repeats that phrase in every heading and sounds forced. A semantic page explains what flat feet are, how support works, which features matter, how to choose a size, and when to see a specialist. It uses natural, varied language because real topics have many connected words. Google rewards the second page because it serves the reader better.</p>
+
+      <p>At RankVelt, this is how we write every page. Founder led work means the person planning the topic understands your business, not a junior working from a keyword list.</p>
+
+      <h2 id="how-does-google-understand-topics-and-entities">How does Google understand topics and entities?</h2>
+
+      <p>Google understands topics by connecting entities, which are distinct things such as a person, a business, a place, a product, or a concept, and by learning how they relate to each other. Google describes this in its own documentation about the Knowledge Graph, where information about entities and their relationships helps Search show more relevant, connected results.</p>
+
+      <p>Google also says in its helpful content guidance that it looks for content made for people first, with clear expertise and a clear purpose. That points the same way: write for a real reader on a real topic, and organise the page so a person and a search system can both follow it.</p>
+
+      <p>You do not need to trick this system. Use correct names for things, explain terms when you first use them, keep one page on one main topic, and show how subtopics connect. Clarity is the work.</p>
+
+      <h2 id="what-is-the-difference-between-a-keyword-a-topic-and-an-entity">What is the difference between a keyword, a topic, and an entity?</h2>
+
+      <p>A keyword is a search phrase, a topic is the full subject a reader wants to understand, and an entity is a specific thing inside that topic. Keeping those three separate improves almost every page you write.</p>
+
+      <h3>Keywords show demand</h3>
+
+      <p>Keywords tell you people are searching and what language they use. That helps you choose a page and write a title readers will recognise. Keywords do not tell you everything the page must cover.</p>
+
+      <h3>Topics show scope</h3>
+
+      <p>A topic tells you the full scope. If the topic is local SEO for dentists, the scope includes Google Business Profile, reviews, location pages, services, and trust signals. A page that only repeats the main phrase will feel thin, even if it is long.</p>
+
+      <h3>Entities show meaning</h3>
+
+      <p>Entities give the topic its facts. For that dentists page, entities might include the practice name, the dentist, the treatments, the neighbourhood, and Google Maps. Naming them accurately helps Google place your page in the right context, and helps a local reader trust you faster. That is why semantic thinking supports local work like our guide to <a href="/blog/google-maps-seo">Google Maps SEO</a>.</p>
+
+      <h2 id="how-do-you-plan-a-page-around-a-topic-not-a-string">How do you plan a page around a topic, not a string?</h2>
+
+      <p>You plan a topic led page by starting with one clear reader job, listing every question needed to complete that job, and grouping those questions into a simple structure before you write. Planning first stops a common problem: a page that drifts, repeats itself, and still misses what the reader came for.</p>
+
+      <p>Follow this order:</p>
+
+      <ol>
+        <li>Write the reader job in one sentence. For example: help a small shop owner decide whether they need ecommerce SEO.</li>
+        <li>List the questions that job creates. What is included, what does it cost, how long does it take, and what should be checked first?</li>
+        <li>Group related questions under clear headings. Each heading is a promise the section must keep.</li>
+        <li>Decide what only you can say. Add your process, your published pricing, your limits, and your real experience. This original input separates your page from a summary of everyone else.</li>
+        <li>Check for gaps against the topic, not against a keyword density tool. If an important subtopic is missing, add it. If a section does not help the reader job, cut it.</li>
+      </ol>
+
+      <p>An audit helps here. If your pages target phrases but do not cover topics, our <a href="/seo-audit-services">SEO audit services</a> start by mapping that gap, so you fix structure before writing more content.</p>
+
+      <h2 id="how-do-you-write-so-entities-are-clear-on-the-page">How do you write so entities are clear on the page?</h2>
+
+      <p>You make entities clear by naming them in full, using them consistently, and explaining their relationship to the main topic in plain sentences. Readers and search systems both struggle when a page uses vague words like "it" or "this solution" for pages at a time.</p>
+
+      <p>Use these habits:</p>
+
+      <p>* Introduce the main entity early, in full, in the opening section. * Use one name for one thing. Do not rename it three times for variety. * Add context, not just mentions. Explain what it does, who it is for, and how it connects to the topic. * Use headings that name the subtopic clearly. * Link related pages with descriptive anchor text, so topic relationships are visible on your own site.</p>
+
+      <p>Internal links are not just for passing authority. They show how your topics fit together. We explain this in <a href="/blog/internal-linking-seo-ai">internal linking for SEO and AI</a>, including how to link a guide to a service page without forcing it.</p>
+
+      <h2 id="how-does-semantic-seo-help-you-appear-in-ai-search-results">How does semantic SEO help you appear in AI search results?</h2>
+
+      <p>Semantic SEO helps in AI search because AI systems also need clear topics, clear entities, and direct answers they can summarise with confidence. A page that buries its answer or mixes three topics is hard for any system to quote or recommend.</p>
+
+      <p>Put the direct answer at the start of the page and at the start of each section. Then add explanation and limits underneath. Readers who want depth can keep reading, and a system looking for a clear answer can find one.</p>
+
+      <p>This connects to the shift we cover in <a href="/blog/seo-vs-aeo-vs-geo">SEO vs AEO vs GEO</a>. The labels differ, but the foundation is shared: be the clearest, most complete, and most honest source on your topic. Check your own site with our free <a href="/tools/aeo-readiness-checker">AEO Readiness Checker</a>, and track brand visibility with the <a href="/tools/ai-overviews-visibility-tracker">AI Overviews Visibility Tracker</a>. Both are part of the 36 free tools at RankVelt, built so small businesses can check the basics before paying anyone.</p>
+
+      <h2 id="what-mistakes-make-a-page-look-thin-even-when-it-is-long">What mistakes make a page look thin, even when it is long?</h2>
+
+      <p>A page looks thin when it repeats one idea in different words, covers subtopics only by naming them, and adds no original information. Length alone does not fix that.</p>
+
+      <p>Watch for these signs:</p>
+
+      <p>* The same phrase appears in almost every heading, in a way no person would write. * Sections promise an answer but give only general advice, with no steps or decision points. * The page claims expertise but never explains a process, a trade off, or a limit. * Important questions are missing, so the reader must leave to finish the job elsewhere. * The page could belong to any business in the industry, because nothing specific to yours is on it.</p>
+
+      <p>Fixing this often means replacing repeated paragraphs with one useful section: a checklist, a comparison, or a short explanation of how you actually do the work. One honest, specific section is worth more than five generic ones. Semantic writing also needs a sound base, so it should work alongside <a href="/technical-seo-services">technical SEO services</a> that keep headings and structure clean and crawlable.</p>
+
+      <h2 id="how-does-rankvelt-approach-semantic-seo-for-clients">How does RankVelt approach semantic SEO for clients?</h2>
+
+      <p>RankVelt approaches semantic SEO by starting with a free audit, planning pages around topics your buyers care about, and writing in plain language with founder led oversight on every piece. There are no juniors learning on your site, and no keyword stuffed pages written to hit a word count.</p>
+
+      <p>Our price is published: $525 per month, with a minimum of 3 months and then month to month after that. Topic led SEO needs a fair test, not a lock in. You get plain language monthly reporting that shows what was published, what changed, and what we are doing next. We make no ranking guarantees, because no honest agency can. What we can guarantee is clear work and clear reasoning. If you want focused help first, see how this applies when you <a href="/hire-seo-expert">hire an SEO expert</a>.</p>
+
+      <h2 id="faqs">Frequently Asked Questions</h2>
+
+      <details>
+
+        <summary>Do I still need keywords if I use semantic SEO?</summary>
+
+        <p>Yes, you still need keywords to understand demand and choose pages, but you use them as a starting point, not a script. Let the keyword pick the topic, then write for the full topic in natural language.</p>
+
+      </details>
+
+      <details>
+
+        <summary>How many topics should one page cover?</summary>
+
+        <p>One page should cover one main topic fully, including its important subtopics. If a subtopic has a different reader job, give it its own page and link the two clearly.</p>
+
+      </details>
+
+      <details>
+
+        <summary>Does semantic SEO replace technical SEO?</summary>
+
+        <p>No, it does not replace technical SEO. Pages still need to be crawlable, fast enough, and correctly structured. Semantic work decides what a page means. Technical work makes sure search engines can reach and read it.</p>
+
+      </details>
+
+      <details>
+
+        <summary>How long does semantic SEO take to work?</summary>
+
+        <p>It takes time because Google needs to recrawl pages, understand the changes, and test them against other results. A minimum of 3 months is a sensible first window to judge direction, which is why our monthly work is set up on that basis.</p>
+
+      </details>
+
+      <details>
+
+        <summary>Can I do semantic SEO myself with free tools?</summary>
+
+        <p>Yes, you can start by mapping one topic properly, rewriting one important page to answer first, and checking your site with free tools. Our <a href="/tools">free SEO tools</a> cover AI readiness, visibility, and titles, so you can find obvious gaps before paying for help. If your pages target keywords but do not cover the topics behind them, start with a free SEO Opportunity Check at <a href="/strategy-call">/strategy-call</a>. We will look at your key pages, show you the topic gaps in plain language, and tell you honestly if semantic work is the right next step, or if something else should come first.</p>
+
+      </details>
+    `,
+  },
+  {
+    id: "seo-copywriting",
+
+    title: "SEO Copywriting: How to Write Pages That Rank and Sell",
+
+    seoTitle:
+      "SEO Copywriting: Write Pages That Rank and Sell",
+
+    metaDescription:
+      "SEO copywriting that ranks and sells: clear structure, honest proof, and simple language. See how RankVelt writes copy at a published $525 a month.",
+
+    ogTitle: "SEO Copywriting: Write Pages That Rank and Sell",
+
+    socialDescription:
+      "SEO copywriting that works: how to write product and service pages that rank in search and turn readers into buyers.",
+
+    date: "Nov 17, 2026",
+    datePublished: "2026-11-17",
+    dateModified: "2026-11-17",
+
+    author: "RankVelt Editorial Team",
+    authorType: "Organization",
+
+    category: "CONTENT MARKETING",
+    readTime: "10 min read",
+
+    image: "/blog/seo-copywriting.webp",
+
+    imageAlt:
+      "Illustration showing a web page being written for search and buyers",
+
+    excerpt:
+      "SEO copywriting is writing a page so it does two jobs at once: it answers a search clearly enough to rank, and it explains your offer honestly enough to sell. Good copy does not choose between Google and the reader.",
+
+    relatedPostIds: [
+      "content-marketing-strategies",
+      "semantic-seo",
+      "eeat-seo-guide",
+    ],
+
+    primaryService: {
+      title: "Business SEO",
+      description:
+        "Improve technical eligibility, content structure, internal linking, search visibility, and the conversion journey across commercially important pages.",
+      path: "/business-seo",
+    },
+
+    showStandardCta: true,
+
+    faqItems: [
+      {
+        question: "How is SEO copywriting different from regular copywriting?",
+        answer:
+          "SEO copywriting is different because it starts from a real search and must satisfy both search intent and the buying decision. Regular copywriting often starts from a campaign or brand message. The skill overlaps, but the research and structure are specific to search.",
+      },
+      {
+        question: "How long should an SEO page be?",
+        answer:
+          "An SEO page should be as long as it needs to be to answer the topic fully and handle the readers main doubts, and no longer. There is no word count that guarantees ranking. Cover the job properly, cut padding, and stop when the page has done its work.",
+      },
+      {
+        question: "Can SEO copywriting guarantee a first page ranking?",
+        answer:
+          "No, it cannot guarantee a first page ranking, and any service that promises it should be treated with caution. Good copy improves your chance by making the page clearer and more trustworthy, but Google decides the final order.",
+      },
+      {
+        question: "Do you write copy for ecommerce product pages?",
+        answer:
+          "Yes, we write copy for ecommerce product and collection pages as part of wider ecommerce and Shopify SEO work. Those pages need accurate product detail, clear benefits, and honest answers on shipping, returns, and sizing, in language shoppers actually search with.",
+      },
+      {
+        question: "What do I need to provide before copywriting starts?",
+        answer:
+          "You need to provide accurate facts about your offer, your pricing if you publish it, your process, and any limits a buyer should know. We will ask direct questions at the start, because good copy cannot be built on guessed details. If your pages get traffic but few enquiries, or they read well but never rank, the problem is usually fixable copy, not a broken business. Start with a free SEO Opportunity Check at /strategy-call. We will review your most important page in plain language, show you where it loses readers and search engines, and tell you honestly whether our $525 per month copy and SEO work is the right fit, with no pressure and no ranking guarantees.",
+      },
+    ],
+
+    toc: [
+      {
+        id: "what-is-seo-copywriting",
+        title: "What is SEO copywriting?",
+        level: 2,
+      },
+      {
+        id: "what-makes-copy-rank-and-sell-at-the-same-time",
+        title: "What makes copy rank and sell at the same time?",
+        level: 2,
+      },
+      {
+        id: "how-do-you-research-a-page-before-you-write-it",
+        title: "How do you research a page before you write it?",
+        level: 2,
+      },
+      {
+        id: "how-do-you-structure-a-page-so-people-keep-reading",
+        title: "How do you structure a page so people keep reading?",
+        level: 2,
+      },
+      {
+        id: "how-do-you-write-headings-and-opening-lines-that-work",
+        title: "How do you write headings and opening lines that work?",
+        level: 2,
+      },
+      {
+        id: "what-proof-should-you-use-and-what-should-you-never-invent",
+        title: "What proof should you use, and what should you never invent?",
+        level: 2,
+      },
+      {
+        id: "how-do-you-write-a-call-to-action-that-feels-honest",
+        title: "How do you write a call to action that feels honest?",
+        level: 2,
+      },
+      {
+        id: "how-do-you-edit-seo-copy-without-keyword-stuffing",
+        title: "How do you edit SEO copy without keyword stuffing?",
+        level: 2,
+      },
+      {
+        id: "what-do-seo-copywriting-services-include-at-rankvelt",
+        title: "What do SEO copywriting services include at RankVelt?",
+        level: 2,
+      },
+      {
+        id: "faqs",
+        title: "Frequently Asked Questions",
+        level: 2,
+      },
+    ],
+
+    content: `
+      <p>SEO copywriting is writing a page so it does two jobs at once: it answers a search clearly enough to rank, and it explains your offer honestly enough to sell. Good copy does not choose between Google and the reader. It starts with the reader question, gives a direct answer, adds real detail, and makes the next step obvious.</p>
+
+      <h2 id="what-is-seo-copywriting">What is SEO copywriting?</h2>
+
+      <p>SEO copywriting is the craft of writing web pages, service pages, product pages, and guides in a way that matches what people search for and what they need to decide. It combines topic research, clear structure, and persuasive but honest writing.</p>
+
+      <p>It differs from normal copywriting in one way: the starting point is a real search. Answer that search fast, in plain English, before you talk about yourself. It also differs from keyword writing. Repeating a phrase does not make a page helpful. Strong copy uses the language readers use and ties every section to a decision. At RankVelt, all copy is founder led, with no juniors drafting from a template.</p>
+
+      <h2 id="what-makes-copy-rank-and-sell-at-the-same-time">What makes copy rank and sell at the same time?</h2>
+
+      <p>Copy ranks and sells at the same time when it is clear, complete, and specific to your business. Clarity helps search engines understand the page. Completeness helps you compete for the topic. Specificity helps a reader choose you over a similar business.</p>
+
+      <p>Three things do most of the work:</p>
+
+      <p>* <strong>A direct answer first.</strong> Open the page and each section with the answer, not with background or a sales pitch. * <strong>Detail only you can give.</strong> Your process, published price, timeframes, limits, and how you report results. Competitors can copy general advice. They cannot copy your real way of working. * <strong>A logical path to action.</strong> Each section should answer one doubt that would stop a sale: what is included, what does it cost, how long does it take, and what happens first?</p>
+
+      <p>When those three are in place, you do not need pressure tactics. The page sells by reducing uncertainty.</p>
+
+      <h2 id="how-do-you-research-a-page-before-you-write-it">How do you research a page before you write it?</h2>
+
+      <p>You research a page by defining the reader, the search intent, and the decision the page must support, before you write any headline. Writing first and researching later produces pretty pages that miss the point.</p>
+
+      <p>Start with these questions:</p>
+
+      <ol>
+        <li>Who is this page for, in one sentence?</li>
+        <li>What did they search for, and what job were they trying to get done? Inform, compare, or buy are different intents.</li>
+        <li>What must they understand before they will act? List the doubts in order. Those doubts become your sections.</li>
+        <li>What evidence do you honestly have? Published pricing and a clear process are evidence. Invented results are not.</li>
+        <li>What is the one next step? A page should push one main step, not five.</li>
+      </ol>
+
+      <p>Google makes the same point in its helpful content guidance: content should be made for people first, with a clear purpose and real expertise on show. For ecommerce, research also needs product detail: materials, sizing, shipping, and returns. That is why store copy sits inside work like our <a href="/ecommerce-seo-services">ecommerce SEO services</a> and <a href="/shopify-seo-services">Shopify SEO services</a>.</p>
+
+      <h2 id="how-do-you-structure-a-page-so-people-keep-reading">How do you structure a page so people keep reading?</h2>
+
+      <p>You structure a page so people keep reading by putting the answer first, ordering sections by reader doubt, and making the page easy to scan without making it shallow.</p>
+
+      <p>Use this order for a service page:</p>
+
+      <h3>Open with the outcome and the fit</h3>
+
+      <p>Say what the service does and who it is for in the first few lines, so a reader knows within seconds whether to stay.</p>
+
+      <h3>Explain what is included, in concrete terms</h3>
+
+      <p>List the actual work, not vague benefits. "Monthly topic led articles, internal linking, and plain language reporting" tells a reader more than "a complete SEO solution".</p>
+
+      <h3>Show how the work happens</h3>
+
+      <p>Walk through the steps in order, starting with a free audit if you offer one. Process creates confidence.</p>
+
+      <h3>Answer price, timing, and risk questions directly</h3>
+
+      <p>Do not hide the questions every buyer has. If your price is published, state it. If results take time, say so.</p>
+
+      <h3>End with one clear call to action</h3>
+
+      <p>Repeat the main next step once, clearly, with what will happen after the reader takes it.</p>
+
+      <h2 id="how-do-you-write-headings-and-opening-lines-that-work">How do you write headings and opening lines that work?</h2>
+
+      <p>Headings and opening lines work when they state a real reader question or benefit, and the text underneath immediately delivers on it. A heading is a promise. Breaking it teaches the reader to skim past the rest of your page.</p>
+
+      <p>Write headings as questions where it fits: "How much does it cost?", "What is included?", "How long before I see progress?" Then start the section with the direct answer. A pricing section should start with the price, not with three paragraphs about value.</p>
+
+      <p>Avoid throat clearing. Sentences like "In todays fast moving digital world" say nothing. Start with the point: what this page helps with, for whom, and why your approach is different. Titles and meta descriptions follow the same rule: match the page honestly and give a reason to click. Check yours with the tools among our 36 free tools at <a href="/tools">our tools hub</a>.</p>
+
+      <h2 id="what-proof-should-you-use-and-what-should-you-never-invent">What proof should you use, and what should you never invent?</h2>
+
+      <p>You should use proof you can stand behind: your real process, your published pricing, your qualifications, and your own published thinking. You should never invent client names, results, statistics, reviews, or case studies, even if competitors appear to do it.</p>
+
+      <p>This is a founding rule at RankVelt, set by founder Nawaz Ahmad. We do not guarantee rankings, because no one honestly can. Google controls its results, and its own documentation is clear that many factors affect ranking. What we can show is how we work, what we charge, and what we will report each month in plain language.</p>
+
+      <p>That honesty is also good copy. A page that says "minimum of 3 months, then month to month, because SEO needs a fair test" tells a serious buyer more than a page shouting about guaranteed results. If your site makes claims you cannot prove, fix that first. Our <a href="/seo-audit-services">SEO audit services</a> check for this trust problem.</p>
+
+      <h2 id="how-do-you-write-a-call-to-action-that-feels-honest">How do you write a call to action that feels honest?</h2>
+
+      <p>A call to action feels honest when it names the next step, explains what happens after it, and sets a fair expectation about cost and commitment. Vague buttons like "Get started" or pressure lines about limited spots create doubt, not action.</p>
+
+      <p>Write it in this form: what to do, what you will get, and what it will not commit you to. For example: book a free check, get a plain language review of your biggest opportunity, and decide afterwards whether monthly work makes sense. That lowers risk without lowering seriousness.</p>
+
+      <p>Place it after you have answered the big doubts, and repeat it once at the end. On a long guide, a softer middle step can work better, such as our guide on how to <a href="/blog/optimize-google-ai-overviews">optimise for Google AI Overviews</a>.</p>
+
+      <h2 id="how-do-you-edit-seo-copy-without-keyword-stuffing">How do you edit SEO copy without keyword stuffing?</h2>
+
+      <p>You edit SEO copy without keyword stuffing by reading it aloud, cutting repetition, and checking that every section still answers a reader question. If a sentence exists only to include a phrase, rewrite it for the reader or delete it.</p>
+
+      <p>Use this short editing pass:</p>
+
+      <p>* Read the page out loud. Where you stumble, the reader will stumble too. Shorten those sentences. * Search for your main phrase. If it sounds forced, replace it with natural language. Google understands related words, so you do not need the exact string everywhere. * Check each heading. Does the section answer it in the first two sentences? If not, rewrite the opening. * Cut any claim you cannot prove, and replace it with a specific fact about your process, price, or service. * Check internal links. Link only where it genuinely helps, such as to support if a reader wants to <a href="/hire-seo-expert">hire an SEO expert</a> rather than write everything themselves.</p>
+
+      <h2 id="what-do-seo-copywriting-services-include-at-rankvelt">What do SEO copywriting services include at RankVelt?</h2>
+
+      <p>SEO copywriting services at RankVelt include topic research, page structure, full writing, and editing for service pages, landing pages, and supporting guides, all as founder led work with no juniors. Every engagement starts with a free audit first, so the copy plan is based on your real gaps, not a generic package.</p>
+
+      <p>The published price is $525 per month, with a minimum of 3 months and then month to month after that. Monthly work can include copy as part of a wider programme covering technical fixes, internal linking, and AI search visibility, depending on what your audit shows. You receive plain language monthly reporting on what was written, published, and recommended next.</p>
+
+      <p>We are an AI first agency: we use modern tools, including our own <a href="/tools/ai-overviews-visibility-tracker">AI Overviews Visibility Tracker</a>, to research and check, while judgement and writing stay human. All 36 free tools are available to anyone, client or not.</p>
+
+      <h2 id="faqs">Frequently Asked Questions</h2>
+
+      <details>
+
+        <summary>How is SEO copywriting different from regular copywriting?</summary>
+
+        <p>SEO copywriting is different because it starts from a real search and must satisfy both search intent and the buying decision. Regular copywriting often starts from a campaign or brand message. The skill overlaps, but the research and structure are specific to search.</p>
+
+      </details>
+
+      <details>
+
+        <summary>How long should an SEO page be?</summary>
+
+        <p>An SEO page should be as long as it needs to be to answer the topic fully and handle the readers main doubts, and no longer. There is no word count that guarantees ranking. Cover the job properly, cut padding, and stop when the page has done its work.</p>
+
+      </details>
+
+      <details>
+
+        <summary>Can SEO copywriting guarantee a first page ranking?</summary>
+
+        <p>No, it cannot guarantee a first page ranking, and any service that promises it should be treated with caution. Good copy improves your chance by making the page clearer and more trustworthy, but Google decides the final order.</p>
+
+      </details>
+
+      <details>
+
+        <summary>Do you write copy for ecommerce product pages?</summary>
+
+        <p>Yes, we write copy for ecommerce product and collection pages as part of wider ecommerce and Shopify SEO work. Those pages need accurate product detail, clear benefits, and honest answers on shipping, returns, and sizing, in language shoppers actually search with.</p>
+
+      </details>
+
+      <details>
+
+        <summary>What do I need to provide before copywriting starts?</summary>
+
+        <p>You need to provide accurate facts about your offer, your pricing if you publish it, your process, and any limits a buyer should know. We will ask direct questions at the start, because good copy cannot be built on guessed details. If your pages get traffic but few enquiries, or they read well but never rank, the problem is usually fixable copy, not a broken business. Start with a free SEO Opportunity Check at <a href="/strategy-call">/strategy-call</a>. We will review your most important page in plain language, show you where it loses readers and search engines, and tell you honestly whether our $525 per month copy and SEO work is the right fit, with no pressure and no ranking guarantees.</p>
+
+      </details>
+    `,
+  },
+  {
+    id: "what-is-managed-seo",
+
+    title: "What Is Managed SEO? (And When a Small Business Actually Needs It)",
+
+    seoTitle:
+      "What Is Managed SEO? A Small Business Guide",
+
+    metaDescription:
+      "Managed SEO means an expert handles your SEO for you each month. Learn what it includes, what it costs, and when your business actually needs it.",
+
+    ogTitle: "What Is Managed SEO? A Plain English Guide",
+
+    socialDescription:
+      "Managed SEO explained: what a managed service actually does each month, what it costs, and when a small business needs one.",
+
+    date: "Nov 17, 2026",
+    datePublished: "2026-11-17",
+    dateModified: "2026-11-17",
+
+    author: "RankVelt Editorial Team",
+    authorType: "Organization",
+
+    category: "SEO SERVICES",
+    readTime: "9 min read",
+
+    image: "/blog/what-is-managed-seo.webp",
+
+    imageAlt:
+      "Illustration showing a managed SEO service running monthly tasks",
+
+    excerpt:
+      "Managed SEO is a monthly service where an SEO expert plans, does, and reports on the work needed to help your business get found on Google, instead of you having to learn and do it all yourself. You pay a set monthly fee for a clear plan, steady...",
+
+    relatedPostIds: [
+      "in-house-vs-outsourced-seo",
+      "seo-freelancer-vs-agency",
+      "seo-package-pricing",
+    ],
+
+    primaryService: {
+      title: "Business SEO",
+      description:
+        "Improve technical eligibility, content structure, internal linking, search visibility, and the conversion journey across commercially important pages.",
+      path: "/business-seo",
+    },
+
+    showStandardCta: true,
+
+    faqItems: [
+      {
+        question: "Is managed SEO worth it for a very small business?",
+        answer:
+          "Yes, if customers search on Google for what you sell and you do not have time to do SEO properly yourself. If your business comes only from referrals and you are fully booked, it may not be a priority yet. The free audit helps you decide.",
+      },
+      {
+        question: "How long before managed SEO shows results?",
+        answer:
+          "Most businesses should judge direction after the first 3 months, not after the first few weeks. Technical fixes can help Google understand your site quickly, but ranking changes take longer because Google needs time to recrawl and reassess your pages. That is why our minimum term is 3 months, then month to month.",
+      },
+      {
+        question: "What is the difference between managed SEO and a one time audit?",
+        answer:
+          "A one time audit tells you what is wrong and what to fix. Managed SEO includes the audit, plus doing the fixes, improving pages month after month, and reporting on progress.",
+      },
+      {
+        question: "Can I cancel managed SEO if it is not working?",
+        answer:
+          "At RankVelt, yes, after the first 3 months you are on a rolling month to month basis, so you are not locked into a long contract. Before that point, use the monthly reports to ask hard questions. A good provider should welcome them and show you exactly what work was done.",
+      },
+      {
+        question: "Do you guarantee first page rankings?",
+        answer:
+          "No, and you should be wary of any provider who does. Google itself warns in its documentation about services that guarantee rankings, because no one outside Google controls the results. What we can guarantee is the work itself: a clear plan, founder led monthly work, and honest plain language reporting. If you are not sure whether managed SEO is right for you yet, start with information, not a contract. Book a free SEO Opportunity Check at /strategy-call, and we will explain the main issues in plain language and tell you honestly whether a managed plan makes sense, or whether a few fixes on your own would be enough.",
+      },
+    ],
+
+    toc: [
+      {
+        id: "what-does-managed-seo-actually-include",
+        title: "What does managed SEO actually include?",
+        level: 2,
+      },
+      {
+        id: "how-is-managed-seo-different-from-doing-seo-yourself",
+        title: "How is managed SEO different from doing SEO yourself?",
+        level: 2,
+      },
+      {
+        id: "how-much-does-managed-seo-cost",
+        title: "How much does managed SEO cost?",
+        level: 2,
+      },
+      {
+        id: "when-does-a-small-business-actually-need-managed-seo",
+        title: "When does a small business actually need managed SEO?",
+        level: 2,
+      },
+      {
+        id: "when-do-you-not-need-managed-seo-yet",
+        title: "When do you not need managed SEO yet?",
+        level: 2,
+      },
+      {
+        id: "what-should-you-expect-in-the-first-3-months",
+        title: "What should you expect in the first 3 months?",
+        level: 2,
+      },
+      {
+        id: "how-do-you-choose-a-managed-seo-provider-you-can-trust",
+        title: "How do you choose a managed SEO provider you can trust?",
+        level: 2,
+      },
+      {
+        id: "faqs",
+        title: "Frequently Asked Questions",
+        level: 2,
+      },
+    ],
+
+    content: `
+      <p>Managed SEO is a monthly service where an SEO expert plans, does, and reports on the work needed to help your business get found on Google, instead of you having to learn and do it all yourself. You pay a set monthly fee for a clear plan, steady work on your website, and simple reports. At RankVelt, managed SEO is founder led: the work is done by Nawaz Ahmad, the founder, not passed to juniors. It starts with a free audit, costs a published $525 per month, and runs for a minimum of 3 months and then month to month.</p>
+
+      <h2 id="what-does-managed-seo-actually-include">What does managed SEO actually include?</h2>
+
+      <p>Managed SEO includes the core work that helps a website rank and stay visible: a full audit, keyword and page planning, technical fixes, content improvements, internal linking, local search work where it matters, and monthly reporting. It is not one single task. Good SEO is a mix of small jobs done in the right order, month after month.</p>
+
+      <p>A typical plan starts with an audit. That audit checks for problems that can hold you back, such as slow pages, broken links, missing titles, thin content, or pages Google cannot crawl properly. Our <a href="/seo-audit-services">SEO audit services</a> page explains that process, and you can also try any of the 36 free tools at <a href="/tools">rankvelt.com/tools</a> to check the basics yourself.</p>
+
+      <p>After the audit comes the plan, then the monthly work: fixing <a href="/technical-seo-services">technical SEO</a> issues, improving key pages so they answer customer questions clearly, adding helpful content, and building sensible internal links. If you sell online, the work also covers product and category pages, as explained on our <a href="/ecommerce-seo-services">eCommerce SEO services</a> page. The last part is reporting. You should get a plain language monthly report that says what was done, what changed, and what is planned next.</p>
+
+      <h2 id="how-is-managed-seo-different-from-doing-seo-yourself">How is managed SEO different from doing SEO yourself?</h2>
+
+      <p>Managed SEO is different from doing it yourself because you are paying for experience, time, and consistency, not just for tasks. Doing SEO yourself is free in cash terms, but it costs you hours every week to learn, test, and keep up. Managed SEO costs money, but it saves that time and avoids common mistakes.</p>
+
+      <p>Many owners start with DIY SEO, and that can work at the very beginning. Free tools help a lot here. You can check how ready your site is for AI search with the <a href="/tools/aeo-readiness-checker">AEO Readiness Checker</a>, or track your visibility in Google AI Overviews with the <a href="/tools/ai-overviews-visibility-tracker">AI Overviews Visibility Tracker</a>.</p>
+
+      <p>The problem with DIY is usually not effort. It is knowing what to do next, and in what order. Owners often spend weeks on low impact tasks while a simple technical issue blocks the whole site. They also stop when business gets busy, and SEO suffers in short bursts. A managed service keeps the work moving every month. There is also a middle option: you can <a href="/hire-seo-expert">hire an SEO expert</a> for guidance, rather than a full managed plan.</p>
+
+      <h2 id="how-much-does-managed-seo-cost">How much does managed SEO cost?</h2>
+
+      <p>Managed SEO costs vary widely, but at RankVelt the price is published and simple: $525 per month, with a minimum of 3 months and then month to month after that. There are no hidden tiers you only discover on a sales call, and no long contract that locks you in for a year.</p>
+
+      <p>Why publish the price? Because small businesses need to plan, and a published price keeps us honest. If the work does not feel worth $525 in a given month, you can ask direct questions about the report, and after the first 3 months you are free to leave.</p>
+
+      <p>That fee should cover the audit, the plan, the monthly on site work, and clear reporting. Be careful with cheap offers that promise page one rankings. Google is clear in its own documentation that no one can guarantee a number one ranking on Google. Honest SEO also takes time, because Google needs to recrawl and reassess your pages after changes. That is why we set a 3 month minimum: it is the shortest fair window to do proper work and judge the direction.</p>
+
+      <h2 id="when-does-a-small-business-actually-need-managed-seo">When does a small business actually need managed SEO?</h2>
+
+      <p>A small business actually needs managed SEO when customers are searching for what you sell, your website is not showing up for those searches, and you do not have the time or skill in house to fix that consistently. If those three things are true at the same time, managed SEO is usually a sensible next step.</p>
+
+      <p>The signs are clear. You rely on word of mouth or paid ads alone, and you want a steadier source of enquiries. Your competitors show up on Google for the searches you want, and you do not. You have a decent website and a real offer, but traffic and enquiries from Google are flat. Or you tried DIY SEO and stalled, because it got too technical or you ran out of time.</p>
+
+      <p>Local businesses often reach this point with maps and local search first. If you serve a local area, getting your Google Business Profile and local pages right matters a lot, as our guide to <a href="/blog/google-maps-seo">Google Maps SEO</a> explains. Businesses that sell through Shopify see a similar pattern: the store works, but growth from search is slow, so the work focuses on collection pages, product content, and site structure, as explained on our <a href="/shopify-seo-services">Shopify SEO services</a> page.</p>
+
+      <h2 id="when-do-you-not-need-managed-seo-yet">When do you not need managed SEO yet?</h2>
+
+      <p>You do not need managed SEO yet if your website is brand new and unfinished, if you are still testing whether your offer sells, or if you have no time to provide basic access and feedback. In those cases, paying monthly for SEO is likely to waste money, and an honest provider should tell you so.</p>
+
+      <p>If your site is still being built, finish the build first. If your pages are thin placeholders, write the core pages properly first. If you are not sure who your customer is, SEO will be hard to target. You also do not need a managed plan if you only need one small fix: a single broken redirect or a one time audit may be a project, not a monthly service.</p>
+
+      <p>Start with a free audit first. At RankVelt, the free audit comes before any paid plan, so you can see the real issues and decide if ongoing help makes sense. If it does not, you still keep the findings. And do not buy managed SEO if you need results this week. For instant leads, paid ads or direct outreach may be the better short term tool, with SEO built alongside.</p>
+
+      <h2 id="what-should-you-expect-in-the-first-3-months">What should you expect in the first 3 months?</h2>
+
+      <p>In the first 3 months of managed SEO, you should expect a full audit and fixes in month one, content and page improvements in month two, and clearer reporting on early movement by month three, not instant top rankings. Anyone who sets a different expectation is setting you up for disappointment.</p>
+
+      <p>Month one is about diagnosis and foundations: the audit, access checks, fixing urgent technical problems, and agreeing the priority pages and searches. Month two is about visible work on the site. Key pages get improved titles, headings, and content, and internal linking gets cleaned up so your important pages are easy to find. Our guide on <a href="/blog/internal-linking-seo-ai">internal linking for SEO and AI</a> explains why that step matters.</p>
+
+      <p>Month three is about continuing that work and reviewing early signals. Are the right pages being indexed? Are impressions rising for the searches that matter, even if clicks are still small? Your report should explain those signals in plain language. A good plan now also checks AI visibility, not just classic rankings. Our <a href="/ai-seo-agency">AI SEO agency</a> page and our explainer on <a href="/blog/seo-vs-aeo-vs-geo">SEO vs AEO vs GEO</a> cover how that fits in, including <a href="/blog/optimize-google-ai-overviews">how to optimise for Google AI Overviews</a>.</p>
+
+      <h2 id="how-do-you-choose-a-managed-seo-provider-you-can-trust">How do you choose a managed SEO provider you can trust?</h2>
+
+      <p>You choose a managed SEO provider you can trust by checking four things: who does the work, what the price and terms are in writing, how they report, and whether they are honest about what SEO cannot do. If a provider is vague on any of those four, be careful.</p>
+
+      <p>Ask who will actually work on your site. At RankVelt, the answer is simple: founder led work, no juniors learning on your budget. Ask for the price and terms up front. Ours are $525 per month, minimum 3 months, then month to month. Ask how reporting works. You want a plain language monthly report that lists completed work, not just graphs copied from a tool. A trustworthy provider will talk about steady progress, not guaranteed rankings, traffic numbers, or sales, because no honest provider controls Google. Also ask what happens if you leave. Can you keep the work done on your site? The answer should be yes.</p>
+
+      <h2 id="faqs">Frequently Asked Questions</h2>
+
+      <details>
+
+        <summary>Is managed SEO worth it for a very small business?</summary>
+
+        <p>Yes, if customers search on Google for what you sell and you do not have time to do SEO properly yourself. If your business comes only from referrals and you are fully booked, it may not be a priority yet. The free audit helps you decide.</p>
+
+      </details>
+
+      <details>
+
+        <summary>How long before managed SEO shows results?</summary>
+
+        <p>Most businesses should judge direction after the first 3 months, not after the first few weeks. Technical fixes can help Google understand your site quickly, but ranking changes take longer because Google needs time to recrawl and reassess your pages. That is why our minimum term is 3 months, then month to month.</p>
+
+      </details>
+
+      <details>
+
+        <summary>What is the difference between managed SEO and a one time audit?</summary>
+
+        <p>A one time audit tells you what is wrong and what to fix. Managed SEO includes the audit, plus doing the fixes, improving pages month after month, and reporting on progress.</p>
+
+      </details>
+
+      <details>
+
+        <summary>Can I cancel managed SEO if it is not working?</summary>
+
+        <p>At RankVelt, yes, after the first 3 months you are on a rolling month to month basis, so you are not locked into a long contract. Before that point, use the monthly reports to ask hard questions. A good provider should welcome them and show you exactly what work was done.</p>
+
+      </details>
+
+      <details>
+
+        <summary>Do you guarantee first page rankings?</summary>
+
+        <p>No, and you should be wary of any provider who does. Google itself warns in its documentation about services that guarantee rankings, because no one outside Google controls the results. What we can guarantee is the work itself: a clear plan, founder led monthly work, and honest plain language reporting. If you are not sure whether managed SEO is right for you yet, start with information, not a contract. Book a free SEO Opportunity Check at <a href="/strategy-call">/strategy-call</a>, and we will explain the main issues in plain language and tell you honestly whether a managed plan makes sense, or whether a few fixes on your own would be enough.</p>
+
+      </details>
+    `,
+  },
+  {
+    id: "seo-for-startups",
+
+    title: "SEO for Startups: What to Do First on a Small Budget",
+
+    seoTitle:
+      "SEO for Startups: What to Do First on a Budget",
+
+    metaDescription:
+      "New startup with a small budget? Start SEO with these simple first steps, free tools, and honest advice on when to hire help.",
+
+    ogTitle: "SEO for Startups: First Steps on a Small Budget",
+
+    socialDescription:
+      "SEO for startups: the first moves that matter on a small budget, what to skip, and when to bring in help.",
+
+    date: "Nov 17, 2026",
+    datePublished: "2026-11-17",
+    dateModified: "2026-11-17",
+
+    author: "RankVelt Editorial Team",
+    authorType: "Organization",
+
+    category: "SEO SERVICES",
+    readTime: "10 min read",
+
+    image: "/blog/seo-for-startups.webp",
+
+    imageAlt:
+      "Illustration showing a startup website growing in search results",
+
+    excerpt:
+      "SEO for startups should start small and focused: make sure Google can find and understand your website, write clear pages for the exact problem you solve, and fix the basics before you spend money on anything fancy. Most startups do not fail at...",
+
+    relatedPostIds: [
+      "seo-package-pricing",
+      "what-is-managed-seo",
+      "google-maps-seo",
+    ],
+
+    primaryService: {
+      title: "Business SEO",
+      description:
+        "Improve technical eligibility, content structure, internal linking, search visibility, and the conversion journey across commercially important pages.",
+      path: "/business-seo",
+    },
+
+    showStandardCta: true,
+
+    faqItems: [
+      {
+        question: "Can a startup rank on Google without a big budget?",
+        answer:
+          "Yes, by focusing on specific, lower competition searches, fixing technical basics, and writing clear pages that answer real customer questions. A big budget speeds up some work, but it does not replace a clear offer and a usable site.",
+      },
+      {
+        question: "Should a startup do SEO or paid ads first?",
+        answer:
+          "It depends on your timeline. Paid ads bring fast tests and early leads, while SEO builds slower but more durable visibility. Many startups use small ad tests to learn which messages work, then build SEO pages around the winners.",
+      },
+      {
+        question: "How long does SEO take for a new startup website?",
+        answer:
+          "A new website usually needs several months to build meaningful visibility, because Google needs to discover, index, and trust new pages over time. You can see early signals in Search Console, such as impressions, well before strong traffic arrives. Judge progress monthly, not daily.",
+      },
+      {
+        question: "What is the first SEO tool a startup should use?",
+        answer:
+          "Google Search Console is the first tool a startup should use, because it is free, it comes directly from Google, and it shows how Google sees your site. After that, use free checkers for specific jobs, such as the AEO Readiness Checker.",
+      },
+      {
+        question: "When should a startup hire an SEO agency?",
+        answer:
+          "A startup should hire an SEO agency when its offer and website are ready, early demand exists, and no one in house can do consistent monthly work. Look for published pricing, short terms after an initial minimum, a free audit first, and honest reporting with no ranking guarantees. If your startup is at the stage where the basics are done and you need consistent help without a long contract, book a free SEO Opportunity Check at /strategy-call. We will audit your site for free, explain what to do first in plain language, and tell you honestly whether paid help at $525 per month makes sense now, or whether you should keep going yourself using our free tools.",
+      },
+    ],
+
+    toc: [
+      {
+        id: "what-should-a-startup-do-first-for-seo",
+        title: "What should a startup do first for SEO?",
+        level: 2,
+      },
+      {
+        id: "do-startups-need-an-seo-agency-right-away",
+        title: "Do startups need an SEO agency right away?",
+        level: 2,
+      },
+      {
+        id: "what-seo-can-you-do-yourself-for-free",
+        title: "What SEO can you do yourself for free?",
+        level: 2,
+      },
+      {
+        id: "what-should-you-fix-before-you-spend-any-money",
+        title: "What should you fix before you spend any money?",
+        level: 2,
+      },
+      {
+        id: "how-much-should-a-startup-budget-for-seo",
+        title: "How much should a startup budget for SEO?",
+        level: 2,
+      },
+      {
+        id: "what-seo-mistakes-do-startups-make-most-often",
+        title: "What SEO mistakes do startups make most often?",
+        level: 2,
+      },
+      {
+        id: "when-is-it-time-to-hire-seo-help",
+        title: "When is it time to hire SEO help?",
+        level: 2,
+      },
+      {
+        id: "faqs",
+        title: "Frequently Asked Questions",
+        level: 2,
+      },
+    ],
+
+    content: `
+      <p>SEO for startups should start small and focused: make sure Google can find and understand your website, write clear pages for the exact problem you solve, and fix the basics before you spend money on anything fancy. Most startups do not fail at SEO because they lack a big budget. They fail because they try to do everything at once, chase high competition searches too early, or build content before their core pages are solid. On a small budget, order matters more than volume. This guide sets out the right sequence, and when hiring help, including an SEO agency for startups, actually makes sense.</p>
+
+      <h2 id="what-should-a-startup-do-first-for-seo">What should a startup do first for SEO?</h2>
+
+      <p>A startup should do three things first for SEO: set up a clean, crawlable website, create one clear page for its main offer, and make sure Google can index those pages properly. Everything else works better once those basics are in place.</p>
+
+      <p>Start with the website itself. Pick simple page addresses that use real words. Write a unique title and description for your homepage and your main offer page. Make sure the site loads fast on mobile. Then connect your site to Google Search Console, which is free. Google documentation describes Search Console as the tool that helps you monitor your site presence in Google Search results, and it shows if Google has indexed your pages or found errors.</p>
+
+      <p>Next, write your main offer page properly. Say who it is for, what problem it solves, what you offer, and what the next step is. Use the words your customers use, not startup jargon. One strong page will do more than ten thin pages. Finally, submit your sitemap in Search Console and inspect your key pages. If Google cannot index a page, that page cannot rank.</p>
+
+      <h2 id="do-startups-need-an-seo-agency-right-away">Do startups need an SEO agency right away?</h2>
+
+      <p>No, most startups do not need an SEO agency right away. If your product is still changing, your message is unclear, or your website is unfinished, agency fees will be wasted because SEO needs a stable offer and clear pages to work with.</p>
+
+      <p>This may sound odd coming from an agency, but it is the honest answer. At RankVelt we work founder led, with no juniors, and we start with a free audit first for exactly this reason. If the audit shows your site and offer are not ready, we will say so. Paying $525 per month, our published price, only makes sense when there is a real site and a real offer to grow. Before that point, your money is better spent finishing the product and getting your core pages right.</p>
+
+      <p>There are exceptions. If you have launched, have paying customers, and competitors are winning searches you should be winning, earlier help can save months of trial and error. Look for an SEO agency for startups that understands small budgets and does not lock you into a long contract. Our terms are a minimum of 3 months and then month to month. If you are not ready for a full plan, a lighter option is to <a href="/hire-seo-expert">hire an SEO expert</a> for focused advice.</p>
+
+      <h2 id="what-seo-can-you-do-yourself-for-free">What SEO can you do yourself for free?</h2>
+
+      <p>You can do a surprising amount of SEO yourself for free, including site checks, local setup, and AI visibility checks, using Google tools and the 36 free tools at RankVelt. Free does not mean weak. It means you trade your time instead of your cash, which is often the right trade early on.</p>
+
+      <p>Start with Google Search Console and Google Analytics, both free from Google. Search Console shows you which searches bring impressions, which pages are indexed, and where errors exist. Then use free checkers to find quick wins. The <a href="/tools/aeo-readiness-checker">AEO Readiness Checker</a> shows if your pages are ready to be understood by AI search tools. The <a href="/tools/ai-overviews-visibility-tracker">AI Overviews Visibility Tracker</a> helps you check whether your brand appears in Google AI Overviews. Browse the full set at <a href="/tools">/tools</a> and pick the checks that match your problem.</p>
+
+      <p>Local startups get another free win. If you serve a specific area, complete your Google Business Profile properly. It is free, and for local searches it can matter as much as your website. Our guide to <a href="/blog/google-maps-seo">Google Maps SEO</a> covers the key steps. And write your early content yourself: you know your customers best.</p>
+
+      <h2 id="what-should-you-fix-before-you-spend-any-money">What should you fix before you spend any money?</h2>
+
+      <p>Before you spend any money on SEO, you should fix your homepage message, your page titles, your mobile experience, and any indexing problems, because paid help cannot compensate for a confusing offer or a site Google cannot read. These fixes cost time, not budget.</p>
+
+      <p>Check your homepage first. Can a new visitor understand in ten seconds what you do, who it is for, and what to do next? If not, fix the words before you think about rankings. Check your titles next. Every important page needs a unique, clear title that matches what the page is about.</p>
+
+      <p>Check mobile and speed. If your site is slow on a phone, fix the obvious causes: oversized images, cluttered layouts, and pop ups that block the content. You need a site that feels fast and clear, not a perfect speed score. Check your structure too. Link your important pages from your homepage and from each other, as we explain in our guide on <a href="/blog/internal-linking-seo-ai">internal linking for SEO and AI</a>. Online stores should also check collection and product pages early, as covered on our <a href="/shopify-seo-services">Shopify SEO services</a> page and our <a href="/ecommerce-seo-services">eCommerce SEO services</a> page.</p>
+
+      <h2 id="how-much-should-a-startup-budget-for-seo">How much should a startup budget for SEO?</h2>
+
+      <p>A startup should budget for SEO only after the basics are fixed, and should expect honest monthly pricing with short terms, not cheap promises or long lock ins. At RankVelt, managed help is $525 per month, published up front, with a minimum of 3 months and then month to month. Use that as a benchmark when you compare options.</p>
+
+      <p>Why 3 months as a minimum? Because SEO work needs time to be done, crawled, and reassessed by Google. Google documentation notes that changes can take time to be reflected in results. A one month test is rarely fair. A startup should also avoid 12 month contracts it cannot exit, so month to month after a short term balances both needs.</p>
+
+      <p>Be careful at both extremes. Very cheap SEO, sold on guaranteed rankings, is a red flag. Google warns in its own guidance to be wary of firms that guarantee rankings, because no one can guarantee them. Very expensive retainers can also be wrong if they include work you do not need yet. A sensible rule is this: spend time first, money second. If you then hire help, pay for a clear plan, steady work, and plain language monthly reporting.</p>
+
+      <h2 id="what-seo-mistakes-do-startups-make-most-often">What SEO mistakes do startups make most often?</h2>
+
+      <p>Startups most often hurt their SEO by targeting searches that are too broad, publishing lots of thin content, and ignoring technical basics while chasing trends. These mistakes waste time, the one resource a startup cannot replace.</p>
+
+      <p>The broad search mistake is common. A new startup tries to rank for a huge, competitive term on day one, instead of starting with specific searches that match its exact offer, niche, or location. Specific searches have clearer intent, and a visitor searching for your exact solution is far more valuable than one from a vague term. The thin content mistake follows. Founders publish short, generic posts that say nothing new. That does not help. Search and AI systems reward content that answers a question with original, useful detail. Our explainer on <a href="/blog/seo-vs-aeo-vs-geo">SEO vs AEO vs GEO</a> and our guide on <a href="/blog/optimize-google-ai-overviews">how to optimise for Google AI Overviews</a> show why clear, direct answers matter now.</p>
+
+      <p>The trend mistake is the third trap. AI search matters, and our <a href="/ai-seo-agency">AI SEO agency</a> page covers that work, but AI visibility still rests on the same base: a crawlable site, clear pages, and trustworthy content.</p>
+
+      <h2 id="when-is-it-time-to-hire-seo-help">When is it time to hire SEO help?</h2>
+
+      <p>It is time to hire SEO help when your offer is clear, your website is live and indexed, you are getting some traction, and you no longer have the time or expertise to move SEO forward consistently. At that point, outside help becomes a way to protect momentum.</p>
+
+      <p>Look for these signals. You know who your customer is and what they search for. Your core pages explain your offer well. You can see impressions in Search Console, even if clicks are still low. Competitors are visible for searches you care about. And SEO keeps slipping down your task list because product, sales, and support come first.</p>
+
+      <p>When you do hire, choose for fit, not for hype. Ask who does the work. At RankVelt, work is founder led by Nawaz Ahmad, with no juniors. Ask for the price and terms in writing, and ask for a free audit first. Our <a href="/seo-audit-services">SEO audit services</a> are the starting point we recommend. You should also get a plain language monthly report you can understand fully.</p>
+
+      <h2 id="faqs">Frequently Asked Questions</h2>
+
+      <details>
+
+        <summary>Can a startup rank on Google without a big budget?</summary>
+
+        <p>Yes, by focusing on specific, lower competition searches, fixing technical basics, and writing clear pages that answer real customer questions. A big budget speeds up some work, but it does not replace a clear offer and a usable site.</p>
+
+      </details>
+
+      <details>
+
+        <summary>Should a startup do SEO or paid ads first?</summary>
+
+        <p>It depends on your timeline. Paid ads bring fast tests and early leads, while SEO builds slower but more durable visibility. Many startups use small ad tests to learn which messages work, then build SEO pages around the winners.</p>
+
+      </details>
+
+      <details>
+
+        <summary>How long does SEO take for a new startup website?</summary>
+
+        <p>A new website usually needs several months to build meaningful visibility, because Google needs to discover, index, and trust new pages over time. You can see early signals in Search Console, such as impressions, well before strong traffic arrives. Judge progress monthly, not daily.</p>
+
+      </details>
+
+      <details>
+
+        <summary>What is the first SEO tool a startup should use?</summary>
+
+        <p>Google Search Console is the first tool a startup should use, because it is free, it comes directly from Google, and it shows how Google sees your site. After that, use free checkers for specific jobs, such as the AEO Readiness Checker.</p>
+
+      </details>
+
+      <details>
+
+        <summary>When should a startup hire an SEO agency?</summary>
+
+        <p>A startup should hire an SEO agency when its offer and website are ready, early demand exists, and no one in house can do consistent monthly work. Look for published pricing, short terms after an initial minimum, a free audit first, and honest reporting with no ranking guarantees. If your startup is at the stage where the basics are done and you need consistent help without a long contract, book a free SEO Opportunity Check at <a href="/strategy-call">/strategy-call</a>. We will audit your site for free, explain what to do first in plain language, and tell you honestly whether paid help at $525 per month makes sense now, or whether you should keep going yourself using our free tools.</p>
+
+      </details>
+    `,
+  },
+  {
+    id: "cleaning-service-seo",
+
+    title: "Cleaning Service SEO: How to Win Recurring Local Jobs From Google",
+
+    seoTitle:
+      "Cleaning Service SEO: Win Recurring Local Jobs",
+
+    metaDescription:
+      "Cleaning service SEO helps you rank on Google and Maps, win trust fast, and turn one time cleans into steady recurring local jobs.",
+
+    ogTitle: "Cleaning Service SEO: Win Recurring Local Jobs",
+
+    socialDescription:
+      "Cleaning service SEO: how cleaning companies win recurring local jobs from Google with profiles, reviews and service pages.",
+
+    date: "Nov 17, 2026",
+    datePublished: "2026-11-17",
+    dateModified: "2026-11-17",
+
+    author: "RankVelt Editorial Team",
+    authorType: "Organization",
+
+    category: "INDUSTRY SEO",
+    readTime: "10 min read",
+
+    image: "/blog/cleaning-service-seo.webp",
+
+    imageAlt:
+      "Illustration showing a cleaning service winning local jobs from Google search",
+
+    excerpt:
+      "Cleaning service SEO is how a cleaning company gets found on Google when nearby customers search for help. It is not about ranking nationally.",
+
+    relatedPostIds: [
+      "home-services-seo",
+      "google-maps-seo",
+      "local-seo-pricing",
+    ],
+
+    primaryService: {
+      title: "Local SEO",
+      description:
+        "Win local searches and AI answers with optimized profiles, citations, reviews, and location content that turns nearby searchers into customers.",
+      path: "/local-seo",
+    },
+
+    showStandardCta: true,
+
+    faqItems: [
+      {
+        question: "How long does cleaning service SEO take to work?",
+        answer:
+          "It usually takes a few months to see steady improvement. Profile fixes can help sooner, but reviews and rankings build over time.",
+      },
+      {
+        question: "Do I need a separate page for every cleaning service?",
+        answer:
+          "Yes, for your main services. Separate pages let Google match you to the right search and let customers find clear information quickly.",
+      },
+      {
+        question: "Is a Google Business Profile enough on its own?",
+        answer:
+          "No. Your profile is essential for maps, but customers check services and trust on your website before they call. Both must be complete.",
+      },
+      {
+        question: "Can SEO help me get recurring clients instead of one time cleans?",
+        answer:
+          "Yes, if your pages speak to recurring needs. Content about schedules and consistency attracts better inquiries than pages competing only on a cheap first clean.",
+      },
+      {
+        question: "How much does cleaning service SEO cost with RankVelt?",
+        answer:
+          "Our published price is $525 per month, with a minimum of 3 months and then month to month. We start with a free audit so you understand the priorities before you commit.",
+      },
+    ],
+
+    toc: [
+      {
+        id: "what-is-cleaning-service-seo",
+        title: "What Is Cleaning Service SEO?",
+        level: 2,
+      },
+      {
+        id: "why-cleaning-companies-need-seo",
+        title: "Why Cleaning Companies Need SEO",
+        level: 2,
+      },
+      {
+        id: "how-local-seo-works-for-cleaning-companies",
+        title: "How Local SEO Works for Cleaning Companies",
+        level: 2,
+      },
+      {
+        id: "the-core-parts-of-a-cleaning-service-seo-strategy",
+        title: "The Core Parts of a Cleaning Service SEO Strategy",
+        level: 2,
+      },
+      {
+        id: "common-mistakes-cleaning-companies-make-with-seo",
+        title: "Common Mistakes Cleaning Companies Make With SEO",
+        level: 2,
+      },
+      {
+        id: "what-most-blogs-dont-tell-you",
+        title: "What Most Blogs Don't Tell You",
+        level: 2,
+      },
+      {
+        id: "5-quick-wins-to-improve-cleaning-service-seo-fast",
+        title: "5 Quick Wins to Improve Cleaning Service SEO Fast",
+        level: 2,
+      },
+      {
+        id: "actionable-cleaning-service-seo-checklist",
+        title: "Actionable Cleaning Service SEO Checklist",
+        level: 2,
+      },
+      {
+        id: "how-rankvelt-approaches-cleaning-service-seo",
+        title: "How RankVelt Approaches Cleaning Service SEO",
+        level: 2,
+      },
+      {
+        id: "faqs",
+        title: "Frequently Asked Questions",
+        level: 2,
+      },
+    ],
+
+    content: `
+      <p>Cleaning service SEO is how a cleaning company gets found on Google when nearby customers search for help. It is not about ranking nationally. It is about showing up in your service area, when someone needs a clean, with enough trust to earn the call. That matters because the best job is not a single visit. It repeats every week or two for months.</p>
+
+      <h2 id="what-is-cleaning-service-seo">What Is Cleaning Service SEO?</h2>
+
+      <p>Cleaning service SEO is the work of improving your website and Google presence so you rank higher for local cleaning searches and turn those searches into booked jobs.</p>
+
+      <p>When someone searches for house cleaning near me or office cleaning services, Google decides which companies to show based on your Business Profile, website, reviews, and how clearly your pages match the search. SEO makes those signals clear and consistent. It covers your map listing and your website, including separate pages for house cleaning, deep cleaning, move out cleaning, and commercial cleaning. If either part is weak, you lose jobs to a competitor who looks more complete.</p>
+
+      <h2 id="why-cleaning-companies-need-seo">Why Cleaning Companies Need SEO</h2>
+
+      <p>Cleaning companies need SEO because most customers choose from the first few results on Google and rarely look beyond the map results and top listings.</p>
+
+      <p>Cleaning is a trust purchase. A customer is letting strangers into their home or office. Before they call, they check your rating, read reviews, look at photos, and scan your website to see if you look established. If you do not show up, that trust work cannot happen.</p>
+
+      <p>Paid ads stop when you stop paying. SEO keeps working. A strong service page and a well kept Business Profile can bring quote requests month after month without a cost per click, and one recurring client is worth far more over a year than a single one off clean.</p>
+
+      <h2 id="how-local-seo-works-for-cleaning-companies">How Local SEO Works for Cleaning Companies</h2>
+
+      <p>Local SEO works by matching your business to searches that include a place, a service, or the words near me, then ranking you based on relevance, distance, and prominence.</p>
+
+      <p>Google explains in its own documentation that local rankings are based mainly on those three factors: how relevant you are, how close you are to the searcher, and how prominent your business appears online. You cannot change distance, but you can improve the other two.</p>
+
+      <p>Relevance comes from clear information. List your real services on your profile and on separate pages. Do not rely on one generic page for house cleaning, Airbnb cleaning, and office cleaning. Each has different buyers. Prominence comes from reviews, consistent information, and local mentions. Our guide to <a href="/blog/google-maps-seo">Google Maps SEO</a> covers map factors in detail. Steady recent reviews mentioning specific services help more than many old, vague reviews.</p>
+
+      <h2 id="the-core-parts-of-a-cleaning-service-seo-strategy">The Core Parts of a Cleaning Service SEO Strategy</h2>
+
+      <p>A cleaning service SEO strategy has five core parts: a complete Google Business Profile, focused service pages, honest location coverage, reviews, and technical basics that let Google understand your site.</p>
+
+      <h3>1. Your Google Business Profile</h3>
+
+      <p>Your profile is often the first thing a customer sees, so complete every field, choose the most accurate category, add real service areas, and keep hours current. Add clear team and work photos where you have permission. Google Business Profile guidelines say to represent your business as customers see it in the real world, with your real name and accurate information.</p>
+
+      <h3>2. Service Pages That Sell the Job</h3>
+
+      <p>Write one page per main service. A deep cleaning page should answer what is included, how long it takes, and how pricing works. A move out page should speak differently to tenants and landlords. Answer first, then add detail.</p>
+
+      <h3>3. Location Pages Without Spam</h3>
+
+      <p>Only create location content for areas you genuinely serve. Thin pages that swap a city name and change nothing else do not help. A useful page mentions real areas you cover and the services most requested there.</p>
+
+      <h3>4. Reviews and Proof</h3>
+
+      <p>Ask for a review after a recurring relationship is established, not after a rushed first visit. Make it easy with a direct link. Reply to reviews calmly, because future customers read your replies.</p>
+
+      <h3>5. Technical and On Page Basics</h3>
+
+      <p>Your site should load fast on mobile, use clear headings, and link related pages together. A review through <a href="/seo-audit-services">SEO audit services</a> or our free tools at <a href="/tools">/tools</a> will show crawl issues and weak links. See <a href="/blog/internal-linking-seo-ai">internal linking for SEO and AI search</a>.</p>
+
+      <h2 id="common-mistakes-cleaning-companies-make-with-seo">Common Mistakes Cleaning Companies Make With SEO</h2>
+
+      <p>The most common mistakes are relying on one page for all services, neglecting the Business Profile, and buying cheap tactics that create risk instead of bookings.</p>
+
+      <p>A homepage that tries to rank for everything confuses Google and customers. Separate focused pages perform better. An incomplete profile is the second mistake: wrong hours, an old phone number, and no services listed reduce calls. The third is fake reviews. Never buy reviews. Google's policies prohibit fake engagement, and customers can spot it.</p>
+
+      <p>Other problems include copying text across location pages, hiding pricing information, and ignoring mobile experience. Most searches happen on a phone while someone compares two or three options. If your quote form is hard to use on mobile, rankings alone will not save you.</p>
+
+      <h2 id="what-most-blogs-dont-tell-you">What Most Blogs Don't Tell You</h2>
+
+      <p>What most blogs do not tell you is that SEO only pays for a cleaning company when your operations can turn a first clean into a recurring booking, and retention matters as much as rankings.</p>
+
+      <p>If your quote process is slow, you do not follow up, or the first clean does not match the checklist you promised online, the recurring job never happens. The most profitable approach is narrow: rank for fewer, higher intent services in a tight area where your team arrives on time and works consistently. A smaller area you serve well usually outperforms a huge area you serve poorly, because reviews and referrals reinforce each other locally.</p>
+
+      <p>No agency can guarantee a number one ranking, and Google itself warns against trusting anyone who promises that. If your pages compete only on a cheap first clean, better SEO will bring more price shoppers. Pages that speak to recurring clients and offices that value reliability attract better work.</p>
+
+      <p>AI answers are now part of this. Clear pages, consistent details, and real reviews help AI tools describe you accurately. Check readiness with our free <a href="/tools/aeo-readiness-checker">AEO Readiness Checker</a> and track presence with the <a href="/tools/ai-overviews-visibility-tracker">AI Overviews Visibility Tracker</a>. See also <a href="/blog/seo-vs-aeo-vs-geo">SEO vs AEO vs GEO</a>.</p>
+
+      <h2 id="5-quick-wins-to-improve-cleaning-service-seo-fast">5 Quick Wins to Improve Cleaning Service SEO Fast</h2>
+
+      <p>The fastest improvements come from fixing your profile, clarifying service pages, and making it easier to request a quote.</p>
+
+      <p><strong>1. Complete your Business Profile today.</strong> Add all services, update photos, confirm service areas, and check your phone number and website link.</p>
+
+      <p><strong>2. Add a clear opening to each service page.</strong> State who it is for, what is included, and where you offer it in the first few lines.</p>
+
+      <p><strong>3. Ask recent happy clients for reviews this week.</strong> Send a short personal message with your review link after a job that went well.</p>
+
+      <p><strong>4. Fix titles and headings.</strong> Each page needs one clear title naming the service and location you serve. Headings should be real questions or clear customer topics.</p>
+
+      <p><strong>5. Make the next step obvious on mobile.</strong> Add a visible call button and a short quote form asking only for name, contact details, type of clean, and preferred date.</p>
+
+      <p>For AI visibility, see our guide on how to <a href="/blog/optimize-google-ai-overviews">optimize for Google AI Overviews</a>.</p>
+
+      <h2 id="actionable-cleaning-service-seo-checklist">Actionable Cleaning Service SEO Checklist</h2>
+
+      <p>Use this checklist to cover the basics first.</p>
+
+      <ul>
+        <li>Claim and complete your Google Business Profile with accurate name, category, services, hours, and service areas</li>
+        <li>Create a separate page for each core service: house cleaning, deep cleaning, move in and move out cleaning, recurring cleaning, and commercial cleaning if you offer it</li>
+        <li>Write answer first content covering what is included, who it is for, how pricing works, and how to book</li>
+        <li>Add location information only for areas you genuinely serve, with real local detail</li>
+        <li>Keep your business name, service area, and phone number consistent everywhere you are listed</li>
+        <li>Build a simple review request process and reply to all reviews professionally</li>
+        <li>Check your site on mobile for speed, readable text, and an easy quote request</li>
+        <li>Add internal links between related services and your contact page</li>
+        <li>Review titles, meta descriptions, and headings for clarity, not keyword stuffing</li>
+        <li>Track calls and quote requests from Google so you judge SEO by bookings, not just rankings</li>
+        <li>Check AI visibility monthly and keep business information consistent</li>
+      </ul>
+
+      <p>For technical help, see our <a href="/technical-seo-services">technical SEO services</a> page.</p>
+
+      <h2 id="how-rankvelt-approaches-cleaning-service-seo">How RankVelt Approaches Cleaning Service SEO</h2>
+
+      <p>RankVelt approaches cleaning service SEO by starting with a free audit, fixing local and on page basics first, and reporting in plain language so you can see what was done and why.</p>
+
+      <p>We are founder led. Work is led by our founder, Nawaz Ahmad, with no juniors learning on your budget. We review your profile, service pages, reviews, and visibility for searches that bring recurring work, and tell you honestly if your area is too broad or your site needs technical fixes first.</p>
+
+      <p>Our pricing is published. SEO is $525 per month, with a minimum of 3 months and then month to month. We make no ranking guarantees, because no honest agency can promise that. We commit to clear work and plain language monthly reporting focused on bookings. We also provide 36 free SEO tools at rankvelt.com/tools, whether you hire us or not. If you sell products online, see our <a href="/ecommerce-seo-services">ecommerce SEO services</a> and <a href="/shopify-seo-services">Shopify SEO services</a>, or <a href="/hire-seo-expert">hire an SEO expert</a> for in house guidance.</p>
+
+      <p>Book a free SEO Opportunity Check at /strategy-call and we will review your presence and outline what we would fix first, with no pressure if the fit is not right. As an <a href="/ai-seo-agency">AI first SEO agency</a>, we also check your appearance in AI answers.</p>
+
+      <h2 id="faqs">Frequently Asked Questions</h2>
+
+      <details>
+
+        <summary>How long does cleaning service SEO take to work?</summary>
+
+        <p>It usually takes a few months to see steady improvement. Profile fixes can help sooner, but reviews and rankings build over time.</p>
+
+      </details>
+
+      <details>
+
+        <summary>Do I need a separate page for every cleaning service?</summary>
+
+        <p>Yes, for your main services. Separate pages let Google match you to the right search and let customers find clear information quickly.</p>
+
+      </details>
+
+      <details>
+
+        <summary>Is a Google Business Profile enough on its own?</summary>
+
+        <p>No. Your profile is essential for maps, but customers check services and trust on your website before they call. Both must be complete.</p>
+
+      </details>
+
+      <details>
+
+        <summary>Can SEO help me get recurring clients instead of one time cleans?</summary>
+
+        <p>Yes, if your pages speak to recurring needs. Content about schedules and consistency attracts better inquiries than pages competing only on a cheap first clean.</p>
+
+      </details>
+
+      <details>
+
+        <summary>How much does cleaning service SEO cost with RankVelt?</summary>
+
+        <p>Our published price is $525 per month, with a minimum of 3 months and then month to month. We start with a free audit so you understand the priorities before you commit.</p>
+
+      </details>
     `,
   },
 ];

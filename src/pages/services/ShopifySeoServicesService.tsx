@@ -206,10 +206,21 @@ const shopifySeoServicesConfig: SeoServicePageConfig =
           ],
         },
         {
+          heading: "Agency, Expert, or Consultant: Which One Does Your Store Need?",
+          paragraphs: [
+            "It depends on who will do the work, not on the title. A consultant advises and your team implements. A freelance expert does the work personally, usually alone. An agency does the work with a team and a process. Most Shopify stores do not need the biggest option; they need the work done properly, in the right order, with reporting they can check.",
+            "Shopify SEO consultant: you get audits, strategy and advice. Nothing changes on your store unless you or your developer implement it. This is the right choice if you have a capable in house team and only need direction.",
+            "Shopify SEO expert (freelance specialist): one senior person does the strategy and the work. Often the best value for a focused store, and the risk is capacity: one person is one point of failure, and marketplaces make quality hard to judge before you pay.",
+            "Shopify SEO agency: a team with a process, wider skills and continuity. The right choice for larger catalogues and Shopify Plus stores. The risk is being handed to juniors after the sale call.",
+            "RankVelt sits deliberately in the middle. Your work is led personally by founder Nawaz Ahmad, a specialist, with agency level process around it: a technical audit first, a published price of $525 per month, a 3 month minimum then month to month, and monthly reporting in plain language. No juniors and no handoffs, and no advice only engagements where nothing on your store actually changes.",
+          ],
+        },
+        {
           heading: "What to Expect in the First 90 Days",
           paragraphs: [
             "Month one is the audit and the highest-impact fixes: speed wins, indexation cleanup and priority page improvements. Technical changes can show movement within weeks as Google recrawls.",
             "Months two and three expand into collections, products and content. Organic revenue builds gradually from there. Monthly reports show rankings, traffic and what is next, in plain language.",
+            "Prefer to check your store yourself first? Work through our Shopify SEO checklist, then come back for the free opportunity check.",
           ],
           links: [
             {
@@ -219,6 +230,10 @@ const shopifySeoServicesConfig: SeoServicePageConfig =
             {
               label: "Platform-agnostic ecommerce SEO",
               path: "/ecommerce-seo-services",
+            },
+            {
+              label: "Work through the Shopify SEO checklist",
+              path: "/blog/shopify-seo-checklist",
             },
           ],
         },
@@ -279,6 +294,18 @@ const shopifySeoServicesConfig: SeoServicePageConfig =
         question: "Do I need to give you store access?",
         answer:
           "For the audit, collaborator access is enough. For implementation, staff access with theme permissions is arranged securely and documented.",
+      },
+      {
+        question:
+          "What is the difference between a Shopify SEO expert and an agency?",
+        answer:
+          "An expert is one specialist who does your strategy and implementation personally. An agency spreads the work across a team with a set process. Experts usually cost less and move faster on focused stores; agencies offer more capacity and continuity for large catalogues. RankVelt is founder led, so you get a named specialist with an agency style process and published pricing.",
+      },
+      {
+        question:
+          "Should I hire a freelancer or an agency for Shopify SEO?",
+        answer:
+          "Hire a freelancer when the job is narrow and you can judge the work yourself, for example a one off technical fix. Choose an agency or a founder led service when you need the full cycle every month: audit, fixes, collection and product optimisation, content and reporting. Either way, ask for the audit findings before you commit to a retainer.",
       },
     ],
 
