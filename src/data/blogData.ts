@@ -7981,7 +7981,8 @@ http://cheap-guest-posts.example/my-post</code></pre>
     <p><strong>Reply to every review.</strong> Thank happy customers briefly. Answer unhappy ones calmly and take the conversation offline. Google reads your responses as profile activity.</p>
     <p><strong>Do not buy reviews.</strong> Google filters fake reviews aggressively in 2026, and filtered reviews disappear silently. A pattern of fakes can get your profile suspended. One honest review a week beats fifty fakes that vanish.</p>
     <p><strong>Report fake competitor reviews.</strong> Document why the review is fake and report it through your profile. Appeal if Google rejects the report the first time. Do not respond in anger while you wait.</p>
-    <h2 id="step-4-photos-posts-q-and-a-and-services-the-activity-signals-that-compound">Step 4: Photos, Posts, Q and A, and Services (The Activity Signals That Compound)</h2>
+    <p>If you do not have your short review link yet, our free <a href="/tools/google-review-link-generator">Google review link generator</a> creates it from your business name and listing, ready for a QR code or a text message.</p>
+<h2 id="step-4-photos-posts-q-and-a-and-services-the-activity-signals-that-compound">Step 4: Photos, Posts, Q and A, and Services (The Activity Signals That Compound)</h2>
     <p>An active profile outranks a stale one. These features show Google and customers that your business is alive.</p>
     <p><strong>Google Posts:</strong> Publish one post a week. Offers, seasonal reminders, completed jobs, anything real. Posts expire, so this is a habit, not a one time task. Keep each post short with one photo and one call to action.</p>
     <p><strong>Q and A:</strong> Anyone can ask and answer questions on your profile. Ask and answer your own common questions first so wrong answers do not sit there. Check weekly. A wrong answer from a stranger can sit visible for months if you never look.</p>
@@ -8007,7 +8008,8 @@ http://cheap-guest-posts.example/my-post</code></pre>
     <p><strong>Second locations must be real.</strong> A second profile for a second city only works if you have a real, staffed location there during business hours. A second profile at a mailbox or a rented desk is a violation. Google suspends these regularly. One strong profile beats two suspended ones.</p>
     <p><strong>Hybrids need to pick a setup.</strong> If you have a storefront and also visit customers, show your address and set a service area. That is the honest setup for most home service companies with an office.</p>
     <p>The strongest honest reach strategy is town by town content on your website. See our <a href="/blog/service-area-pages">service area pages guide</a>.</p>
-    <h2 id="realistic-timelines-how-long-it-takes-by-starting-position">Realistic Timelines: How Long It Takes by Starting Position</h2>
+    <p>Plumbers are the classic service area case, so we built a dedicated page on <a href="/local-seo/plumbers">local SEO for plumbers</a> that covers categories, service pages and review habits for the trade.</p>
+<h2 id="realistic-timelines-how-long-it-takes-by-starting-position">Realistic Timelines: How Long It Takes by Starting Position</h2>
     <p>Every guide gives you one generic window. That is useless because your starting position changes everything.</p>
     <p><strong>New profile, low competition market:</strong> Early movement in 4 to 8 weeks, a solid position in 3 to 4 months. If nobody else in town is optimizing, a complete profile with a steady review flow wins fast.</p>
     <p><strong>Established profile stuck at position 4 to 6:</strong> The most common case. You do the basics and sit just below the pack. Targeted fixes show movement in 6 to 12 weeks. Reviews are almost always the gap. Two competitors with 200 reviews each are hard to pass with 40.</p>
@@ -11661,7 +11663,8 @@ http://cheap-guest-posts.example/my-post</code></pre>
       <p>Original research earns links and citations that no other content type can match. Surveys, industry studies, and data analyses get referenced by journalists, bloggers, and AI systems. One strong research piece can generate hundreds of backlinks over its lifetime.</p>
       <p>You do not need a massive budget. Survey your customers, analyze your own data, or compile public data in a novel way. The key is producing a number or finding that does not exist anywhere else.</p>
       <p>Implementation: publish one original research piece per quarter. Promote it to journalists and industry publications. Update it annually to keep earning links.</p>
-      <h2 id="5-video-first-content-repurposing">5. Video-First Content Repurposing</h2>
+      <p>Your own results count as original data too. Publishing what actually happened on a real site, good and bad, is the kind of proof readers and AI systems both trust. We shared ours in these <a href="/blog/seo-growth-case-study-lessons">lessons from an SEO growth case study</a>.</p>
+<h2 id="5-video-first-content-repurposing">5. Video-First Content Repurposing</h2>
       <p>Every long-form article should become multiple content assets. A single 3,000-word guide can become: a YouTube video, five short-form clips, a LinkedIn carousel, an infographic, a podcast episode, and an email series. This multiplies your content ROI without multiplying production effort.</p>
       <p>Video deserves special attention because YouTube is the world's second-largest search engine and short-form video dominates social feeds. Even B2B audiences increasingly prefer video for learning.</p>
       <p>Implementation: build repurposing into your publishing workflow. Every article gets a repurposing checklist before it is considered done.</p>
@@ -11697,7 +11700,8 @@ http://cheap-guest-posts.example/my-post</code></pre>
       <p>Creating content without distribution is like manufacturing products without a store. Build a distribution checklist for every piece: email to subscribers, social posts across platforms, community sharing where relevant, outreach to cited sources, paid boosting for top performers, and internal linking from related pages.</p>
       <p>Most businesses underinvest in distribution by a factor of 10. A good rule: spend as much time promoting content as creating it.</p>
       <p>Implementation: create a distribution template. Assign ownership. Track referral traffic per channel to optimize over time.</p>
-      <h2 id="14-conversion-focused-content-upgrades">14. Conversion-Focused Content Upgrades</h2>
+      <p>One small check belongs on that list: how the piece looks when someone shares it. Our free <a href="/tools/open-graph-checker">open graph checker</a> previews the title, description and image that social platforms will pull from your page.</p>
+<h2 id="14-conversion-focused-content-upgrades">14. Conversion-Focused Content Upgrades</h2>
       <p>Every high-traffic article should have a content upgrade: a checklist, template, or resource that visitors get in exchange for their email. This turns anonymous traffic into leads.</p>
       <p>Match the upgrade to the article's intent. A guide to content calendars gets a downloadable calendar template. A strategy guide gets a planning worksheet.</p>
       <p>Implementation: audit your top 20 traffic pages. Add relevant upgrades to each. Measure conversion rate per page.</p>
@@ -12161,7 +12165,8 @@ http://cheap-guest-posts.example/my-post</code></pre>
       <h2 id="ecommerce-seo-audit-checklist">Ecommerce SEO Audit Checklist</h2>
       <p>Use this to evaluate any online store: unique product descriptions on all products, optimized category page content, logical site architecture (3 clicks max), faceted navigation controlled, mobile page speed under 3 seconds, Product schema on all products, review schema implemented, XML sitemap submitted, no major crawl errors, HTTPS throughout, checkout process optimized, internal linking between related products, blog or guides section active, backlink profile growing naturally, Google Business Profile optimized (if local), analytics and Search Console configured.</p>
       <p>Stores failing more than a few of these have significant untapped SEO potential.</p>
-      <h2 id="choosing-an-ecommerce-seo-agency">Choosing an Ecommerce SEO Agency</h2>
+      <p>If the audit shows your checkout is where buyers leave, that is a fixable problem rather than a traffic problem. Our <a href="/services/checkout-flow">Shopify cart and checkout optimisation service</a> works through those steps with you.</p>
+<h2 id="choosing-an-ecommerce-seo-agency">Choosing an Ecommerce SEO Agency</h2>
       <p>Ask potential agencies: How many ecommerce stores have you grown? What platforms do you specialize in? How do you handle faceted navigation? What is your approach to product page content at scale? How do you report on revenue, not just rankings? Can you show ecommerce-specific case studies?</p>
       <p>Avoid agencies that treat ecommerce like regular SEO, cannot discuss technical platform specifics, report only on traffic without revenue, or promise guaranteed rankings. Ecommerce SEO requires specialized knowledge. Generalists miss the store-specific issues that matter most.</p>
       <h2 id="the-future-of-ecommerce-seo">The Future of Ecommerce SEO</h2>
@@ -13765,7 +13770,8 @@ http://cheap-guest-posts.example/my-post</code></pre>
       <p><strong>Pest Control SEO</strong> is highly local and seasonal. Identification content ("what is this bug") attracts top-of-funnel traffic that converts when problems are confirmed.</p>
       <p><strong>Cleaning Service SEO</strong> includes both residential and commercial tracks. Residential targets homeowners; commercial targets facility managers with different keywords and content.</p>
       <p><strong>Landscaping SEO</strong> is visual. Project galleries, before/after photos, and design content drive engagement. Seasonal content calendars align with planting and maintenance cycles.</p>
-      <h2 id="the-home-services-seo-playbook-90-day-sprint">The Home Services SEO Playbook: 90-Day Sprint</h2>
+      <p>Restoration work has its own pattern again, because demand arrives after a disaster and the jobs are urgent and high value. We cover that trade in detail in our guide to <a href="/blog/fire-damage-restoration-seo">SEO for fire damage restoration companies</a>.</p>
+<h2 id="the-home-services-seo-playbook-90-day-sprint">The Home Services SEO Playbook: 90-Day Sprint</h2>
       <p><strong>Days 1-30: Foundation.</strong> Claim and optimize Google Business Profile. Fix NAP consistency. Audit website for technical issues. Create or optimize core service pages. Set up review generation system. Begin photo uploads.</p>
       <p><strong>Days 31-60: Content.</strong> Publish service area pages. Create trade-specific guides. Optimize for emergency keywords. Build location-specific content. Launch systematic link outreach.</p>
       <p><strong>Days 61-90: Acceleration.</strong> Expand content based on early data. Intensify review generation. Pursue local PR opportunities. Optimize conversion paths. Establish monthly reporting.</p>
@@ -18747,7 +18753,8 @@ http://cheap-guest-posts.example/my-post</code></pre>
         <li><strong>Reviews:</strong> Real customer reviews add unique content and feed review schema. Stores without reviews fight with one hand tied.</li>
       </ul>
 
-      <h2 id="schema">Product Schema That Actually Works</h2>
+      <p>Clean product data underneath matters as much as the visible copy. Consistent SKUs keep your catalog, feeds and reports in agreement, and our free <a href="/tools/sku-generator">SKU generator</a> helps you set a pattern your whole team can follow.</p>
+<h2 id="schema">Product Schema That Actually Works</h2>
 
       <p>Product rich results show price, availability, and ratings directly in search. Getting there requires valid schema, and WooCommerce stores break it in predictable ways.</p>
 
@@ -19253,7 +19260,8 @@ http://cheap-guest-posts.example/my-post</code></pre>
 
       <p><strong>Issue 4: Attachment pages indexed.</strong> Every uploaded image gets its own page, usually with nothing but the image. Fix: redirect attachment URLs to the image file itself. All three major SEO plugins offer this as a setting.</p>
 
-      <h2 id="plugin-issues">5-7. Plugin Issues</h2>
+      <p>Several of these issues quietly create duplicate versions of the same page. Our free <a href="/tools/canonical-checker">canonical checker</a> shows you which version each of your pages is actually pointing at.</p>
+<h2 id="plugin-issues">5-7. Plugin Issues</h2>
 
       <p><strong>Issue 5: Two SEO plugins active.</strong> Perhaps the most damaging common misconfiguration. Duplicate titles, descriptions, canonicals, and schema from two sources. Fix: pick one, deactivate the other completely, and re-validate everything it used to output.</p>
 
@@ -19917,7 +19925,8 @@ http://cheap-guest-posts.example/my-post</code></pre>
         <li><strong>XML sitemaps and robots.txt.</strong> The sitemap should list only indexable pages and match what is actually indexed. Robots rules should block junk without blocking value.</li>
         <li><strong>JavaScript rendering.</strong> If key content loads only through JavaScript, the audit should verify what Google actually sees after rendering, not what your browser shows.</li>
       </ul>
-      <h2 id="core-web-vitals-and-page-experience">Core Web Vitals and Page Experience</h2>
+      <p>You can spot the common version of this yourself in a minute. Run your key pages through our free <a href="/tools/canonical-checker">canonical checker</a> and look for pages pointing at the wrong version of themselves.</p>
+<h2 id="core-web-vitals-and-page-experience">Core Web Vitals and Page Experience</h2>
       <p>Speed and stability are ranking factors and conversion factors. A proper audit measures the real Core Web Vitals, not just a lab score:</p>
       <ul>
         <li><strong>Largest Contentful Paint.</strong> How fast the main content appears. Slow hero images and heavy scripts are the usual causes.</li>
@@ -24027,7 +24036,7 @@ http://cheap-guest-posts.example/my-post</code></pre>
 
         <h2 id="treatment-pages">Treatment Pages That Book Appointments</h2>
 
-        <p>One page trying to cover every treatment ranks for none of them. Implants, orthodontics, emergency care and cosmetic work each deserve a dedicated page written around what a patient in that situation actually searches for and worries about.</p>
+        <p>One page trying to cover every treatment ranks for none of them. Implants, <a href="/blog/seo-for-orthodontists">orthodontics</a>, emergency care and cosmetic work each deserve a dedicated page written around what a patient in that situation actually searches for and worries about.</p>
 
         <p>A strong treatment page explains who the treatment suits, what the process involves, how long it takes, what it costs in honest general terms, and what happens next. Then it makes booking or calling effortless. Written this way, the page earns rankings and appointments at the same time. The same service page principle powers trade businesses too, as our <a href="/blog/plumbing-seo-guide">plumbing SEO guide</a> shows.</p>
 
@@ -25395,7 +25404,8 @@ http://cheap-guest-posts.example/my-post</code></pre>
         <li><strong>Keyword cannibalization:</strong> Check whether product and collection pages compete for the same terms. Decide which page should win each keyword and support it with internal links.</li>
       </ul>
 
-      <h2 id="off-page">Step 4: Off-Page Signals</h2>
+      <p>Headings are the quick win inside this step. Our free <a href="/tools/h1-checker">H1 checker</a> scans a page and flags missing or repeated H1 tags before you move on.</p>
+<h2 id="off-page">Step 4: Off-Page Signals</h2>
 
       <p>Google trusts stores the wider web vouches for. Audit your position honestly.</p>
 
@@ -25738,7 +25748,8 @@ http://cheap-guest-posts.example/my-post</code></pre>
 
       <p>SEO package pricing varies because the work varies. A five page site needs less work than a large online store, and a quiet niche needs less work than a market with national brands. Ask what work will happen in month one, month two, and month three, and how you will check it.</p>
 
-      <h2 id="what-should-be-included-in-seo-packages-for-small-business">What should be included in SEO packages for small business?</h2>
+      <p>If your customers are local, the numbers work a little differently, because map pack and location work change what the hours go on. We break that version down in our guide to <a href="/blog/local-seo-pricing">local SEO pricing</a>.</p>
+<h2 id="what-should-be-included-in-seo-packages-for-small-business">What should be included in SEO packages for small business?</h2>
 
       <p>A proper package should include an audit first, technical fixes, on page work, content guidance or content writing, internal linking, and clear monthly reporting. It should also include work that helps your business appear in AI driven search results, because buyers now ask questions in tools as well as in Google search.</p>
 
@@ -26525,7 +26536,8 @@ http://cheap-guest-posts.example/my-post</code></pre>
 
       <p>Avoid throat clearing. Sentences like "In todays fast moving digital world" say nothing. Start with the point: what this page helps with, for whom, and why your approach is different. Titles and meta descriptions follow the same rule: match the page honestly and give a reason to click. Check yours with the tools among our 36 free tools at <a href="/tools">our tools hub</a>.</p>
 
-      <h2 id="what-proof-should-you-use-and-what-should-you-never-invent">What proof should you use, and what should you never invent?</h2>
+      <p>Before you publish, run the page through our free <a href="/tools/h1-checker">H1 checker</a>. Missing, duplicated or competing H1s are one of the fastest heading problems to fix.</p>
+<h2 id="what-proof-should-you-use-and-what-should-you-never-invent">What proof should you use, and what should you never invent?</h2>
 
       <p>You should use proof you can stand behind: your real process, your published pricing, your qualifications, and your own published thinking. You should never invent client names, results, statistics, reviews, or case studies, even if competitors appear to do it.</p>
 
@@ -26747,7 +26759,8 @@ http://cheap-guest-posts.example/my-post</code></pre>
 
       <p>That fee should cover the audit, the plan, the monthly on site work, and clear reporting. Be careful with cheap offers that promise page one rankings. Google is clear in its own documentation that no one can guarantee a number one ranking on Google. Honest SEO also takes time, because Google needs to recrawl and reassess your pages after changes. That is why we set a 3 month minimum: it is the shortest fair window to do proper work and judge the direction.</p>
 
-      <h2 id="when-does-a-small-business-actually-need-managed-seo">When does a small business actually need managed SEO?</h2>
+      <p>Local businesses often ask how that compares with pricing built only around maps and local rankings. For that narrower picture, see our breakdown of <a href="/blog/local-seo-pricing">local SEO pricing</a> and what it usually includes.</p>
+<h2 id="when-does-a-small-business-actually-need-managed-seo">When does a small business actually need managed SEO?</h2>
 
       <p>A small business actually needs managed SEO when customers are searching for what you sell, your website is not showing up for those searches, and you do not have the time or skill in house to fix that consistently. If those three things are true at the same time, managed SEO is usually a sensible next step.</p>
 
@@ -26771,7 +26784,8 @@ http://cheap-guest-posts.example/my-post</code></pre>
 
       <p>Month three is about continuing that work and reviewing early signals. Are the right pages being indexed? Are impressions rising for the searches that matter, even if clicks are still small? Your report should explain those signals in plain language. A good plan now also checks AI visibility, not just classic rankings. Our <a href="/ai-seo-agency">AI SEO agency</a> page and our explainer on <a href="/blog/seo-vs-aeo-vs-geo">SEO vs AEO vs GEO</a> cover how that fits in, including <a href="/blog/optimize-google-ai-overviews">how to optimise for Google AI Overviews</a>.</p>
 
-      <h2 id="how-do-you-choose-a-managed-seo-provider-you-can-trust">How do you choose a managed SEO provider you can trust?</h2>
+      <p>For a real example of how that growth curve actually looks on a small business site, see the <a href="/blog/seo-growth-case-study-lessons">lessons from our SEO growth case study</a>.</p>
+<h2 id="how-do-you-choose-a-managed-seo-provider-you-can-trust">How do you choose a managed SEO provider you can trust?</h2>
 
       <p>You choose a managed SEO provider you can trust by checking four things: who does the work, what the price and terms are in writing, how they report, and whether they are honest about what SEO cannot do. If a provider is vague on any of those four, be careful.</p>
 
@@ -27221,7 +27235,8 @@ http://cheap-guest-posts.example/my-post</code></pre>
 
       <p>Your site should load fast on mobile, use clear headings, and link related pages together. A review through <a href="/seo-audit-services">SEO audit services</a> or our free tools at <a href="/tools">/tools</a> will show crawl issues and weak links. See <a href="/blog/internal-linking-seo-ai">internal linking for SEO and AI search</a>.</p>
 
-      <h2 id="common-mistakes-cleaning-companies-make-with-seo">Common Mistakes Cleaning Companies Make With SEO</h2>
+      <p>The same five parts work for other home service trades, with the details adjusted to how each trade is searched. Restoration companies, for example, follow the version in our guide to <a href="/blog/fire-damage-restoration-seo">fire damage restoration SEO</a>.</p>
+<h2 id="common-mistakes-cleaning-companies-make-with-seo">Common Mistakes Cleaning Companies Make With SEO</h2>
 
       <p>The most common mistakes are relying on one page for all services, neglecting the Business Profile, and buying cheap tactics that create risk instead of bookings.</p>
 
@@ -27327,6 +27342,708 @@ http://cheap-guest-posts.example/my-post</code></pre>
 
       </details>
     `,
+  },
+  {
+    id: "seo-for-orthodontists",
+
+    title: "SEO for Orthodontists: Win Braces and Aligner Patients From Search",
+
+    seoTitle:
+      "SEO for Orthodontists: A Practical Guide",
+
+    metaDescription:
+      "SEO for orthodontists: treatment pages for braces and aligners, parent and adult patient research, reviews, financing pages, and AI recommendations.",
+
+    ogTitle: "SEO for Orthodontists: A Practical Guide to More Consultations",
+
+    socialDescription:
+      "Orthodontic patients research for months before booking. Here is how treatment pages, reviews, financing clarity, and AI visibility win that decision.",
+
+    date: "Nov 21, 2026",
+    datePublished: "2026-11-21",
+    dateModified: "2026-11-21",
+
+    author: "RankVelt Editorial Team",
+    authorType: "Organization",
+
+    category: "NICHE SEO",
+    readTime: "11 min read",
+
+    image: "/blog/seo-for-orthodontists.webp",
+
+    imageAlt:
+      "Illustration of an orthodontic practice website showing braces and clear aligner treatment pages in local search results",
+
+    excerpt:
+      "Orthodontic patients research for months before they book. This guide covers the SEO that fits that journey: treatment pages, parent research, adult patients, referrals, and AI recommendations.",
+
+    relatedPostIds: [
+      "dentist-seo-guide",
+      "pediatric-dental-seo",
+      "healthcare-legal-seo",
+    ],
+
+    primaryService: {
+      title: "Business SEO",
+      description:
+        "Improve technical eligibility, content structure, internal linking, search visibility, and the conversion journey across commercially important pages.",
+      path: "/business-seo",
+    },
+
+    showStandardCta: true,
+
+    faqItems: [
+      {
+        question: "How long does SEO take to work for an orthodontic practice?",
+        answer:
+          "Expect the first clear movement in about three to six months in a typical local market, and longer in a competitive city. Rankings usually move before consultations do, because orthodontic patients research slowly. Judge the work on consultation requests over a season, not on week to week ranking changes.",
+      },
+      {
+        question: "Should an orthodontist publish treatment prices online?",
+        answer:
+          "You do not need to publish exact fees, and an honest practice cannot give one number before examining the patient. Publish what drives the cost, whether you take a down payment, how monthly payments work, and how insurance benefits usually apply. The American Association of Orthodontists notes that many practices offer monthly payment plans, so if you offer them, say so clearly. Silence about cost sends families to the next practice.",
+      },
+      {
+        question: "Do orthodontists still need dentist referrals if SEO is working?",
+        answer:
+          "Yes. Referrals and search support each other. A referred family still searches your name, reads your reviews and checks your treatment pages before booking, and a strong website makes dentists more confident about referring to you. Practices that rely on only one of the two channels grow more slowly and less steadily.",
+      },
+      {
+        question: "Can an orthodontist rank for Invisalign and clear aligner searches?",
+        answer:
+          "Yes, if the practice genuinely offers aligner treatment and writes the page properly. Build the page around your own experience: who aligners suit, who they do not, how your check ins work, and what patients must commit to. Describe the treatment in your own words rather than copying brand marketing, and support the page with reviews and photos from real aligner patients, with their consent.",
+      },
+      {
+        question: "How much does SEO for orthodontists cost?",
+        answer:
+          "It depends on your market, your competition and how much work your website needs, so be careful with any agency that quotes a fixed result. RankVelt SEO plans start at $525 per month, set up so you can judge the direction over the first three months. If your practice only needs its basics fixed, we will tell you that instead of selling you a plan.",
+      },
+    ],
+
+    toc: [
+      {
+        id: "what-makes-seo-for-orthodontists-different",
+        title: "What makes SEO for orthodontists different?",
+        level: 2,
+      },
+      {
+        id: "which-treatment-pages-does-an-orthodontic-practice-need",
+        title: "Which treatment pages does an orthodontic practice need?",
+        level: 2,
+      },
+      {
+        id: "how-do-parents-research-an-orthodontist-for-their-child-or-teen",
+        title: "How do parents research an orthodontist for their child or teen?",
+        level: 2,
+      },
+      {
+        id: "why-do-adult-patients-need-their-own-pages-and-keywords",
+        title: "Why do adult patients need their own pages and keywords?",
+        level: 2,
+      },
+      {
+        id: "how-do-referrals-from-general-dentists-fit-with-seo",
+        title: "How do referrals from general dentists fit with SEO?",
+        level: 2,
+      },
+      {
+        id: "what-local-seo-basics-should-an-orthodontist-get-right-first",
+        title: "What local SEO basics should an orthodontist get right first?",
+        level: 2,
+      },
+      {
+        id: "how-can-an-orthodontist-get-recommended-by-ai-assistants",
+        title: "How can an orthodontist get recommended by AI assistants?",
+        level: 2,
+      },
+      {
+        id: "faqs",
+        title: "Frequently Asked Questions",
+        level: 2,
+      },
+    ],
+
+    content: `
+      <p>SEO for orthodontists is the work of showing up when parents and adult patients search for braces, clear aligners and orthodontists in their area, and then proving, over a decision that often takes months, that your practice is the safe choice. The searches are led by treatments, the fees are significant, and two very different audiences, parents deciding for a child and adults deciding for themselves, research in different ways. This guide covers only the orthodontic side of that work.</p>
+
+      <h2 id=\"what-makes-seo-for-orthodontists-different\">What makes SEO for orthodontists different?</h2>
+
+      <p>Three things make it different. Patients search by treatment, not by practice type, so braces and aligner searches matter as much as orthodontist searches. The decision is slow, because treatment is a long and significant commitment. And patients arrive through two doors, search and referrals from general dentists, and both doors depend on the same online trust signals.</p>
+
+      <p>Our own keyword research shows the shape of the opportunity. The term seo for orthodontists gets about 1,000 searches a month in the United States, with a keyword difficulty of 12 out of 100 and paid clicks costing about $20 each. That is an unusual mix: real demand, weak competition for the topic, and clear proof that reaching these patients is valuable.</p>
+
+      <p>It also means an orthodontic practice is not competing with every dentist in town. It is competing with the small number of orthodontic practices in its area, and those rivals are usually visible, reviewed and easy to compare. Winning does not require outranking the whole internet. It requires being clearer, better reviewed and easier to book than the few practices next to you.</p>
+
+      <p>One more difference matters for measurement. The journey ends at a booked consultation, often a free one, not at a purchase or a phone call made in a hurry. So orthodontic SEO should be judged on consultation requests and started cases, not on raw traffic. A page that brings twenty parents to a booking form is worth more than a page that brings two hundred casual readers, and your reporting should say so plainly.</p>
+
+      <h2 id=\"which-treatment-pages-does-an-orthodontic-practice-need\">Which treatment pages does an orthodontic practice need?</h2>
+
+      <p>One page for each treatment you offer, and one for each patient group you treat. For most practices that means pages for braces, clear aligners, early treatment for children, treatment for teens, adult orthodontics, and retainers and aftercare.</p>
+
+      <p>Each page has the same job: answer the questions that patient group actually asks. What does the treatment involve, how long does it usually take, what affects the cost, how do visits work, and what happens if a bracket breaks or an aligner tray is lost. A braces page written for parents reads differently from an aligner page written for a working adult, and search engines can tell the difference.</p>
+
+      <p>The comparison question deserves its own honest treatment. Braces or aligners is one of the most researched questions in orthodontics, and a fair page that explains where each option works well, and where it does not, earns trust with both readers and search engines. Write from how your practice actually treats patients, not from a manufacturer brochure.</p>
+
+      <p>Build each page in the order patients read. Open with a plain answer about who the treatment suits. Then cover how it works, how long it usually takes, what affects the cost, how payment can be spread, and what daily life with the appliance is like. Close with the questions that patient group asks most, and a clear way to book a consultation. That structure satisfies a careful parent, an adult comparing options late at night, and the search engines trying to understand the page.</p>
+
+      <p>Every treatment page should also explain how payment works. Say whether you take a down payment, how monthly payments are spread, and how insurance benefits usually apply. The American Association of Orthodontists notes that many practices offer monthly payment plans, so if you do, that fact belongs on the page and not only in the consultation room. Silence about cost is the most common reason families leave a treatment page and keep searching.</p>
+
+      <h2 id=\"how-do-parents-research-an-orthodontist-for-their-child-or-teen\">How do parents research an orthodontist for their child or teen?</h2>
+
+      <p>Carefully, and over time. Most parents shortlist two or three practices, read reviews in detail, look at smile results, compare monthly payments and distance, and only then book a consultation for their child.</p>
+
+      <p>Reviews carry much of that decision. BrightLocal, in its Local Consumer Review Survey 2026, found that 97 percent of consumers read reviews for local businesses, and 74 percent only pay attention to reviews written in the last three months. For an orthodontic practice that means a steady flow of recent reviews matters more than a large pile of old ones. The natural moment to ask is the day the braces come off, when the result is visible and the family is happiest.</p>
+
+      <p>Smile galleries are the second proof parents look for. Use real before and after photos, and only with written consent from the patient and, for minors, from the parent. Never post treatment photos without permission, and never use stock smiles that are not your work. Healthcare marketing carries consent and privacy duties that general businesses do not face, and we cover that side of trust in our guide to <a href=\"/blog/healthcare-legal-seo\">SEO for healthcare and legal practices</a>.</p>
+
+      <p>Parents also read for reassurance about the experience itself: how the first visit works, whether consultations are free, how appointments fit around school, and how emergencies are handled. Practices that treat younger children as well as teens will recognise the same parent led research pattern we describe in our guide to <a href=\"/blog/pediatric-dental-seo\">pediatric dental SEO</a>.</p>
+
+      <h2 id=\"why-do-adult-patients-need-their-own-pages-and-keywords\">Why do adult patients need their own pages and keywords?</h2>
+
+      <p>Because adults are now a large share of the market, and they search with different worries. The American Association of Orthodontists reports that one in three orthodontic patients is over the age of 18, and that the number of adults seeing an orthodontist is at an all time high.</p>
+
+      <p>Adults ask different questions. How visible will treatment be in meetings and on video calls. Can I use clear aligners instead of fixed braces. How long will it take, and can I spread the cost monthly. Many adults also had braces as teenagers and need retreatment after their teeth shifted, which is a search topic and a story of its own.</p>
+
+      <p>A website that shows only smiling teenagers quietly tells adult patients the practice is not for them. Give adult orthodontics its own page, with adult photos, discreet options such as clear aligners and ceramic braces, and straight answers about timelines and payment. That page is often the easiest ranking win on an orthodontic site, because so many competitors still treat adults as an afterthought.</p>
+
+      <h2 id=\"how-do-referrals-from-general-dentists-fit-with-seo\">How do referrals from general dentists fit with SEO?</h2>
+
+      <p>Referrals and search are not competing channels. They feed each other. Many patients still arrive because their general dentist recommended the practice, but the dentist and the family both check the practice online before the consultation happens.</p>
+
+      <p>A referring dentist protects their own reputation with every recommendation, so they look at your website, your reviews and your results before sending a family to you. The family then searches your practice name, reads the same reviews, and checks your treatment and payment pages. If what they find is thin or out of date, the referral quietly dies before the phone rings.</p>
+
+      <p>Make the professional side easy. Keep a clear contact route for referring practices, respond quickly to case questions, and keep referring dentists updated on shared patients, with the patient consent in place. Referral relationships grow from trust and communication, never from payments per patient. And since patients do not need a referral to see an orthodontic specialist, strong search visibility also brings people who have no dentist recommendation at all. A healthy practice works both doors.</p>
+
+      <p>Track which door each patient used. Ask every new patient, at booking or at the first visit, how they heard about the practice, and record the answer. Within a few months you will know whether referrals, search or reviews are doing the heavy lifting in your market, and you can put effort where it is actually producing consultations instead of guessing.</p>
+
+      <h2 id=\"what-local-seo-basics-should-an-orthodontist-get-right-first\">What local SEO basics should an orthodontist get right first?</h2>
+
+      <p>Start with the Google Business Profile. Set the primary category to Orthodontist rather than the general Dentist category, list your treatments as services, and keep your practice name, address, phone number and hours identical on your website and on every profile.</p>
+
+      <p>Add real photos of the office and the team, and build the review habit described above into your weekly routine. Those basics decide which local searches your profile can appear in at all. They are shared with every dental practice, so rather than repeat the full playbook here, we cover it step by step in our <a href=\"/blog/dentist-seo-guide\">dental SEO guide</a>, and it applies to an orthodontic practice in the same way.</p>
+
+      <h2 id=\"how-can-an-orthodontist-get-recommended-by-ai-assistants\">How can an orthodontist get recommended by AI assistants?</h2>
+
+      <p>AI assistants recommend practices they can verify. That means consistent facts about your practice across your website and profiles, clear treatment and payment pages they can quote, and recent reviews on more than one platform.</p>
+
+      <p>This channel is no longer small. BrightLocal, in the same Local Consumer Review Survey 2026, found that use of ChatGPT and other AI tools for local recommendations rose from 6 percent to 45 percent in a year, making AI tools the third most popular source of local business recommendations. When a parent asks an assistant to name the best orthodontist near them, the answer is assembled from your website, your Google profile and reviews around the web.</p>
+
+      <p>So the work is mostly discipline. Keep your treatments, patient groups, payment options, address and hours identical everywhere they appear. Answer the real questions on your own pages, in plain sentences an assistant can lift and cite. Then check how your site looks to these tools: our <a href=\"/tools\">free SEO tools</a> include AI readiness and visibility checks you can run before spending anything.</p>
+
+      <p>Test it the way a patient would. Ask the assistants your future patients use the questions they actually ask: who is the best orthodontist near a named area, which practices offer clear aligners for adults, and which offices offer monthly payments. Note who gets named and what the answer says about them. If your practice is missing, the fix is usually not a trick. It is clearer pages, consistent facts and fresher reviews, the same work this guide describes.</p>
+
+      <h2 id=\"faqs\">Frequently Asked Questions</h2>
+
+      <details>
+
+        <summary>How long does SEO take to work for an orthodontic practice?</summary>
+
+        <p>Expect the first clear movement in about three to six months in a typical local market, and longer in a competitive city. Rankings usually move before consultations do, because orthodontic patients research slowly. Judge the work on consultation requests over a season, not on week to week ranking changes.</p>
+
+      </details>
+
+      <details>
+
+        <summary>Should an orthodontist publish treatment prices online?</summary>
+
+        <p>You do not need to publish exact fees, and an honest practice cannot give one number before examining the patient. Publish what drives the cost, whether you take a down payment, how monthly payments work, and how insurance benefits usually apply. The American Association of Orthodontists notes that many practices offer monthly payment plans, so if you offer them, say so clearly. Silence about cost sends families to the next practice.</p>
+
+      </details>
+
+      <details>
+
+        <summary>Do orthodontists still need dentist referrals if SEO is working?</summary>
+
+        <p>Yes. Referrals and search support each other. A referred family still searches your name, reads your reviews and checks your treatment pages before booking, and a strong website makes dentists more confident about referring to you. Practices that rely on only one of the two channels grow more slowly and less steadily.</p>
+
+      </details>
+
+      <details>
+
+        <summary>Can an orthodontist rank for Invisalign and clear aligner searches?</summary>
+
+        <p>Yes, if the practice genuinely offers aligner treatment and writes the page properly. Build the page around your own experience: who aligners suit, who they do not, how your check ins work, and what patients must commit to. Describe the treatment in your own words rather than copying brand marketing, and support the page with reviews and photos from real aligner patients, with their consent.</p>
+
+      </details>
+
+      <details>
+
+        <summary>How much does SEO for orthodontists cost?</summary>
+
+        <p>It depends on your market, your competition and how much work your website needs, so be careful with any agency that quotes a fixed result. RankVelt SEO plans start at $525 per month, set up so you can judge the direction over the first three months. If your practice only needs its basics fixed, we will tell you that instead of selling you a plan.</p>
+
+      </details>
+
+      <p>If you run an orthodontic practice and you are not sure where your website is losing patients, start with the facts. Our <a href=\"/seo-audit-services\">SEO audit services</a> show you what Google and AI assistants see when they look at your practice, and which fixes matter first. Or book a free <a href=\"/strategy-call\">strategy call</a> and we will look at your market together. No pressure and no promises we cannot keep. If your basics are the problem, we will tell you to fix those before paying anyone for SEO.</p>
+    `,
+  },
+{
+    id: "seo-for-roofing-companies",
+
+    title: "SEO for Roofing Companies: A Practical Guide to More Booked Jobs",
+
+    seoTitle:
+      "SEO for Roofing Companies: Win Jobs From Google",
+
+    metaDescription:
+      "Roofing SEO for owners: storm season demand, emergency vs replacement searches, town pages, project photos, reviews and Local Services Ads, explained plainly.",
+
+    ogTitle: "SEO for Roofing Companies, Explained Simply",
+
+    socialDescription:
+      "How roofing companies get found on Google: storm season searches, emergency vs replacement intent, town pages, project photos, reviews and ads.",
+
+    date: "Nov 21, 2026",
+    datePublished: "2026-11-21",
+    dateModified: "2026-11-21",
+
+    author: "RankVelt Editorial Team",
+    authorType: "Organization",
+
+    category: "LOCAL SEO",
+    readTime: "11 min read",
+
+    image: "/blog/seo-for-roofing-companies.webp",
+
+    imageAlt:
+      "Illustration of a roofing crew installing new shingles on a house roof, with dark storm clouds clearing in the background",
+
+    excerpt:
+      "Roofing demand follows the weather, and so do roofing searches. This guide shows roofers how to win the urgent leak calls after a storm and the long research behind a roof replacement, with pages, photos and reviews.",
+
+    relatedPostIds: [
+      "home-services-seo",
+      "plumbing-seo-guide",
+      "hvac-seo-guide",
+    ],
+
+    primaryService: {
+      title: "Business SEO",
+      description:
+        "Business SEO services that help local companies turn Google searches into calls, quotes and booked work, from $525/month.",
+      path: "/business-seo",
+    },
+
+    showStandardCta: true,
+
+    faqItems: [
+      {
+        question: "How long does SEO take to work for a roofing company?",
+        answer:
+          "Plan on months, not weeks. New town and project pages need time to be indexed and to earn trust, and a review profile only grows one finished job at a time. That is why the work belongs in the quiet months before storm season. Be careful with anyone who promises a first page ranking by a fixed date: Google itself says no one can guarantee a number one ranking.",
+      },
+      {
+        question: "How much does SEO for a roofing company cost?",
+        answer:
+          "It depends on the size of your market and how many competitors are investing. At RankVelt, monthly SEO for local companies starts at $525 per month, and our guide to local SEO pricing explains what drives the price and what you should receive for it. Judge any provider by inspections booked and jobs signed, not by ranking reports alone.",
+      },
+      {
+        question: "Do I need a separate page for every town I serve?",
+        answer:
+          "For your main towns, yes, as long as each page is genuinely written for that town, with local photos, reviews and details. You do not need a page for every village on the map. Start with the towns that already produce most of your work, do those pages properly, and add more only when your crews truly serve the new area.",
+      },
+      {
+        question: "Are Local Services Ads better than SEO for roofers?",
+        answer:
+          "Neither one replaces the other. Local Services Ads buy leads at the top of Google right now, and you pay for each lead. SEO builds pages, a profile and reviews that you own and that keep bringing calls after the ads pause. Many roofers run the ads in their busiest months on top of a website and profile that already rank on their own.",
+      },
+      {
+        question: "What should I do in the first days after a big storm?",
+        answer:
+          "Answer the phone, keep your profile hours accurate, and post a short update on your Google Business Profile so homeowners know you are working. Help your existing customers first, photograph completed repairs as you go, and point new callers to your storm damage and insurance claim pages. Pages written that week will not rank in time; the pages and reviews you built earlier do the work.",
+      },
+    ],
+
+    toc: [
+      {
+        id: "why-does-roofing-search-demand-follow-the-weather",
+        title: "Why does roofing search demand follow the weather?",
+        level: 2,
+      },
+      {
+        id: "how-are-emergency-roof-searches-different-from-planned-replacement-searches",
+        title: "How are emergency roof searches different from planned replacement searches?",
+        level: 2,
+      },
+      {
+        id: "what-pages-does-a-roofing-website-need-for-each-town-you-serve",
+        title: "What pages does a roofing website need for each town you serve?",
+        level: 2,
+      },
+      {
+        id: "how-do-project-pages-with-before-and-after-photos-win-roofing-jobs",
+        title: "How do project pages with before and after photos win roofing jobs?",
+        level: 2,
+      },
+      {
+        id: "what-should-you-publish-after-a-storm-about-insurance-claims",
+        title: "What should you publish after a storm about insurance claims?",
+        level: 2,
+      },
+      {
+        id: "should-roofers-run-google-local-services-ads-as-well-as-seo",
+        title: "Should roofers run Google Local Services Ads as well as SEO?",
+        level: 2,
+      },
+      {
+        id: "why-do-reviews-and-photos-decide-who-wins-the-map-pack",
+        title: "Why do reviews and photos decide who wins the map pack?",
+        level: 2,
+      },
+      {
+        id: "when-should-you-do-the-seo-work-before-or-during-storm-season",
+        title: "When should you do the SEO work, before or during storm season?",
+        level: 2,
+      },
+      {
+        id: "faqs",
+        title: "Frequently Asked Questions",
+        level: 2,
+      },
+    ],
+
+    content: `<p>SEO for a roofing company means being the company Google shows at the two moments that matter: the hour a storm or a leak sends a homeowner to their phone, and the weeks a homeowner spends researching a full roof replacement. Roofing is not like other trades. Demand follows the weather, one replacement job can be worth five figures, and the companies that prepared their pages before the season are the ones that take the work. This guide covers what is specific to roofing. For the wider playbook, start with our guide to <a href=\"/blog/home-services-seo\">SEO for home services companies</a>.</p><h2 id=\"why-does-roofing-search-demand-follow-the-weather\">Why does roofing search demand follow the weather?</h2><p>Because most roofing demand is created by weather, not by planning. A hailstorm or a windstorm can damage hundreds of roofs in one evening, and searches from those streets jump the same night, then fade within days.</p><p>An analysis of NOAA's Storm Events Database counted 9,205 hail reports across the United States in 2025, and 77% of them fell between March and June, with May alone at 31%. The same analysis found that 85% of reports were for hail of 1 inch or larger, the size where damage to asphalt shingles commonly starts. Hurricanes and heavy rain add their own spikes in other regions and other months.</p><p>The practical lesson is simple. When the spike comes, Google can only show the companies it already knows: the pages already indexed, the profile already built, the reviews already earned. A page written the week after a storm will not rank in time to help with that storm. Roofing SEO is therefore built in the quiet months, and the rest of this guide walks through how.</p><h2 id=\"how-are-emergency-roof-searches-different-from-planned-replacement-searches\">How are emergency roof searches different from planned replacement searches?</h2><p>Emergency searches are short, urgent and mostly typed on a phone: 'roof repair near me', 'roof leak repair', 'emergency roofer'. The roof is leaking now, and the homeowner calls the first credible company that looks open and nearby. Replacement searches are the opposite: slow research over days or weeks, full of questions about cost, materials, warranties and who can be trusted with the house.</p><p>Each type needs its own pages and its own setup. Emergency work needs a fast mobile site, a tap to call button that never hides, opening hours that are actually true, and a Google Business Profile that matches all of it. Planned replacement work needs cost guides, material comparisons, project galleries, and clear warranty and financing information. One page cannot do both jobs well, so build repair pages for speed and replacement pages for research.</p><p>Roofers are not alone in this split. <a href=\"/blog/plumbing-seo-guide\">Plumbers live on emergency searches</a> in the same way, and the same fast, honest setup wins there too. The value behind these searches is also unusually high. In our own keyword research, the term 'digital marketing for roofers' carries a cost per click of about $29.60 in the US. Advertisers do not pay close to $30 for one click unless the customer behind the search is worth a great deal, and one signed replacement job explains why.</p><h2 id=\"what-pages-does-a-roofing-website-need-for-each-town-you-serve\">What pages does a roofing website need for each town you serve?</h2><p>One genuine page for each main service in each main town: roof replacement in that town, roof repair in that town, storm damage repair in that town. Each page is written for that place, with its neighbourhoods, its common roof types, and photos and reviews from jobs done there.</p><p>What makes a town page real is local proof. Name the areas you actually cover. Show a finished roof on a street the reader might know. Quote a review from a customer in that town. Mention the weather the area actually gets, whether that is hail in spring or hurricanes in late summer. What does not work is copying one page thirty times and swapping the town name. Google treats near identical location pages as doorway pages under its spam policies, and homeowners can spot a copied page just as quickly.</p><p>Be honest about the map, too. Only publish town pages for places your crews genuinely serve, and start with the towns that already produce most of your work. Five strong town pages beat forty thin ones, and you can add more as the company grows into new areas.</p><h2 id=\"how-do-project-pages-with-before-and-after-photos-win-roofing-jobs\">How do project pages with before and after photos win roofing jobs?</h2><p>A roof replacement is one of the biggest purchases a homeowner makes, and most people shortlist the companies whose past work they can actually see. A short page for each finished job, with the town, the problem, before and after photos, and what was installed, is proof that no sales copy can match.</p><p>Project pages also work as search pages. A page about a shingle replacement in a named town, with real photos and a plain description of the job, is exactly what a researching homeowner hopes to find, and it gives AI search tools concrete facts about your work to repeat. Add the customer's review to the page when it arrives, and use the same photos on your Google Business Profile.</p><p>Our keyword research shows how much owners care about this: the term 'roofing website design' is searched about 1,000 times a month in the US, because a roofing website has to sell trust before anyone picks up the phone. Project pages are the part of that design that does the selling. Keep them simple and real. Phone photos from the crew are fine, captions should name the town and the material, and always get the homeowner's permission first.</p><h2 id=\"what-should-you-publish-after-a-storm-about-insurance-claims\">What should you publish after a storm about insurance claims?</h2><p>One clear page, written before the season, that walks a worried homeowner through the first days: make the home safe, document the damage with photos and dates, read the policy, book an inspection, and understand who decides what. That page should also say plainly that the insurer decides what a claim pays, not the roofing company.</p><p>This kind of page ranks for the exact questions people type at the kitchen table after a storm, and it earns trust because it helps without pushing. Useful content for it includes how to photograph shingle and flashing damage safely from the ground, why temporary repairs and receipts matter, how an inspection report supports a claim, and how to spot the storm chasers who appear after every big storm asking for signatures at the door.</p><p>Write it the way you would want your own family treated. Do not promise that a claim will be approved, do not pressure anyone to sign before they have read their policy, and follow your state's rules on what a contractor may and may not do in the claim process. Honest storm content keeps bringing calls for years, because every new storm sends a new set of neighbours to the same page.</p><h2 id=\"should-roofers-run-google-local-services-ads-as-well-as-seo\">Should roofers run Google Local Services Ads as well as SEO?</h2><p>For many roofing companies, yes, because the two do different jobs. Local Services Ads rent the very top of Google and charge you per lead. SEO builds pages, a profile and reviews that you own. The ads stop the day the budget stops. The pages keep working.</p><p>Here is how the ads work. They sit above regular search ads, next to a badge that, since October 2025, is called Google Verified. Google replaced the old Google Guaranteed badge at that time and ended the money back guarantee that came with it. To run the ads, a roofing company passes Google's screening, which covers licences, insurance and background checks. You pay when a homeowner calls or messages through the ad, not per click, and Google weighs your reviews, your responsiveness and your distance from the searcher when it decides whose ad shows.</p><p>Notice what that ranking leans on: the same reviews and profile that SEO builds. The sensible order is profile and pages first, then Local Services Ads as an amplifier in your busiest months, with a weekly budget your team can actually answer. An unanswered lead still costs money, and it hurts your standing in the ads as well.</p><h2 id=\"why-do-reviews-and-photos-decide-who-wins-the-map-pack\">Why do reviews and photos decide who wins the map pack?</h2><p>Because when three roofing companies appear in the map pack, the homeowner chooses with their eyes in under a minute: star rating, number of reviews, how recent they are, and whether the photos show real crews and real roofs. BrightLocal's Local Consumer Review Survey 2026 found that 97% of consumers read reviews for local businesses, and 47% will not use a business with fewer than 20 Google reviews.</p><p>The same research programme found that 65% of consumers who rejected a business did so for a review related reason, such as a low rating or old reviews. Fresh photos matter for the same reason: a profile with new job photos every week looks like a working company, while one with three photos from years ago looks closed. Ask for the review at the final walkthrough, when the homeowner is standing in front of a finished roof, reply to every review you get, and never buy or fake reviews. The risk is not worth it, and real reviews from real jobs are not hard to earn if you simply ask.</p><p>Reviews now reach beyond Google, too. BrightLocal found that 45% of consumers use ChatGPT or other AI tools for local business recommendations, and those tools lean on the same reviews, photos and consistent business details when they decide which roofers to name.</p><h2 id=\"when-should-you-do-the-seo-work-before-or-during-storm-season\">When should you do the SEO work, before or during storm season?</h2><p>Before, every time. New pages need weeks to be found, indexed and tested by Google, and reviews only build one finished job at a time. The quiet months, when the phone is not ringing, are when roofing SEO actually gets built.</p><p>A simple calendar works. In the quiet months, build your town pages, project pages and storm claim page, fix slow pages, and check the basics with <a href=\"/tools\">free SEO tools</a> so titles, descriptions and headings are right. In early spring, confirm your profile hours and service areas are accurate and your call handling is ready. In season, publish a project page as each big job finishes, post short updates to your profile after storms, and keep asking for reviews. <a href=\"/blog/hvac-seo-guide\">HVAC companies face the same seasonal swing</a>, and the ones that prepare early are the ones the season rewards.</p><p>If you are starting during the season, start anyway, but with honest expectations: this year's work is mostly next season's pipeline. Roofing rewards the company that is ready before the weather turns, and readiness is a choice you make months ahead.</p><p>If you run a roofing company and want to know where your website stands before the next storm season, start with our <a href=\"/seo-audit-services\">SEO audit services</a> or book a <a href=\"/strategy-call\">free strategy call</a>. We will look at your pages, your profile and your reviews, show you the gaps in plain language, and tell you honestly whether SEO is the right next step for your market, or whether something else should come first.</p><h2 id=\"faqs\">Frequently Asked Questions</h2><details><summary>How long does SEO take to work for a roofing company?</summary><p>Plan on months, not weeks. New town and project pages need time to be indexed and to earn trust, and a review profile only grows one finished job at a time. That is why the work belongs in the quiet months before storm season. Be careful with anyone who promises a first page ranking by a fixed date: Google itself says no one can guarantee a number one ranking.</p></details><details><summary>How much does SEO for a roofing company cost?</summary><p>It depends on the size of your market and how many competitors are investing. At RankVelt, monthly SEO for local companies starts at $525 per month, and our guide to <a href=\"/blog/local-seo-pricing\">local SEO pricing</a> explains what drives the price and what you should receive for it. Judge any provider by inspections booked and jobs signed, not by ranking reports alone.</p></details><details><summary>Do I need a separate page for every town I serve?</summary><p>For your main towns, yes, as long as each page is genuinely written for that town, with local photos, reviews and details. You do not need a page for every village on the map. Start with the towns that already produce most of your work, do those pages properly, and add more only when your crews truly serve the new area.</p></details><details><summary>Are Local Services Ads better than SEO for roofers?</summary><p>Neither one replaces the other. Local Services Ads buy leads at the top of Google right now, and you pay for each lead. SEO builds pages, a profile and reviews that you own and that keep bringing calls after the ads pause. Many roofers run the ads in their busiest months on top of a website and profile that already rank on their own.</p></details><details><summary>What should I do in the first days after a big storm?</summary><p>Answer the phone, keep your profile hours accurate, and post a short update on your Google Business Profile so homeowners know you are working. Help your existing customers first, photograph completed repairs as you go, and point new callers to your storm damage and insurance claim pages. Pages written that week will not rank in time; the pages and reviews you built earlier do the work.</p></details>`,
+  },
+{
+    id: "boutique-seo-agency",
+
+    title: "Boutique SEO Agency: What It Means and When It Beats a Big Agency",
+
+    seoTitle:
+      "Boutique SEO Agency: What It Is and When It Wins",
+
+    metaDescription:
+      "A boutique SEO agency is a small, senior team with a limited client list. Compare it honestly with big agencies and freelancers, costs included.",
+
+    ogTitle: "Boutique SEO Agency, Explained Honestly",
+
+    socialDescription:
+      "What boutique really means in SEO, how it compares with big agencies and freelancers, what it should cost, and the questions to ask before you sign.",
+
+    date: "Nov 21, 2026",
+    datePublished: "2026-11-21",
+    dateModified: "2026-11-21",
+
+    author: "RankVelt Editorial Team",
+    authorType: "Organization",
+
+    category: "SEO SERVICES",
+    readTime: "12 min read",
+
+    image: "/blog/boutique-seo-agency.webp",
+
+    imageAlt:
+      "Illustration of a small senior SEO team working directly with one business owner, with no account manager layers in between",
+
+    excerpt:
+      "A boutique SEO agency is a small, senior team with a short client list, so the person who plans your SEO also does the work. Here is the honest comparison with big agencies and freelancers.",
+
+    relatedPostIds: [
+      "seo-freelancer-vs-agency",
+      "in-house-vs-outsourced-seo",
+      "seo-package-pricing",
+    ],
+
+    primaryService: {
+      title: "Hire an SEO Expert",
+      description:
+        "Senior-led SEO strategy, technical fixes and content, with clear monthly reporting and direct access to the person doing the work, from $525/month.",
+      path: "/hire-seo-expert",
+    },
+
+    showStandardCta: true,
+
+    faqItems: [
+      {
+        question: "What is the difference between a boutique agency and a small agency?",
+        answer:
+          "Small only describes headcount. Boutique describes how the work is staffed: senior people do the work themselves, the service list is narrow and specialized, and the client roster is deliberately limited. A small agency can still hand your account to its most junior hire. A genuine boutique does not.",
+      },
+      {
+        question: "Is a boutique SEO agency cheaper than a big agency?",
+        answer:
+          "Usually, yes in total, because you are not paying for large offices, sales teams and layers of account management. The Ahrefs survey of 439 SEO providers found agencies averaging $3,209 a month against $1,348 for freelancers, and boutique retainers usually sit between those two points. Scope decides the final number, so compare what the fee actually covers, not just the fee.",
+      },
+      {
+        question: "How many clients does a boutique agency handle at once?",
+        answer:
+          "There is no standard number, because no industry body defines the term. The useful test is client load per senior person. Ask the agency directly how many accounts the person running yours handles. If the answer is vague, or the number sounds like a call center queue, the boutique label is doing marketing work, not describing a real limit.",
+      },
+      {
+        question: "Can a boutique agency handle a large or international website?",
+        answer:
+          "Sometimes, but often it is the wrong tool. A boutique team can do deep work on one market and one site. A business that needs SEO across many countries, languages and subdomains at the same time usually needs the bench and coverage of a big agency. An honest boutique will tell you this before you sign, not after.",
+      },
+      {
+        question: "How can I check if an agency calling itself boutique really is one?",
+        answer:
+          "Ask who will actually do the work on your account, and speak to that person before signing. Ask how many clients they personally handle, what the monthly report shows, and who covers when they are away. A real boutique answers all of this in plain language. If you want to test how we answer, book a free SEO Opportunity Check at /strategy-call and ask us the same questions.",
+      },
+    ],
+
+    toc: [
+      {
+        id: "what-does-boutique-actually-mean-when-an-seo-agency-uses-the-word",
+        title: "What does boutique actually mean when an SEO agency uses the word?",
+        level: 2,
+      },
+      {
+        id: "how-is-a-boutique-agency-different-from-a-big-agency-and-a-freelancer",
+        title: "How is a boutique agency different from a big agency and a freelancer?",
+        level: 2,
+      },
+      {
+        id: "when-does-a-boutique-agency-beat-a-big-agency",
+        title: "When does a boutique agency beat a big agency?",
+        level: 2,
+      },
+      {
+        id: "when-is-a-boutique-agency-the-wrong-choice",
+        title: "When is a boutique agency the wrong choice?",
+        level: 2,
+      },
+      {
+        id: "what-should-a-boutique-seo-retainer-cost-and-what-does-it-buy",
+        title: "What should a boutique SEO retainer cost, and what does it buy?",
+        level: 2,
+      },
+      {
+        id: "what-are-the-red-flags-on-both-sides",
+        title: "What are the red flags on both sides?",
+        level: 2,
+      },
+      {
+        id: "what-questions-should-you-ask-before-you-sign-with-any-seo-provider",
+        title: "What questions should you ask before you sign with any SEO provider?",
+        level: 2,
+      },
+      {
+        id: "faqs",
+        title: "Frequently Asked Questions",
+        level: 2,
+      },
+    ],
+
+    content: `<p>A boutique SEO agency is a small, senior-led firm that deliberately keeps its client list short, so the person who plans your SEO is the person who does the work and answers your questions. It is not automatically better than a big agency or a freelancer. It is a different trade: less scale in exchange for more direct attention. Our own keyword research in November 2026 found about 1,300 US searches a month for the term boutique seo agency, which tells you buyers are actively comparing this model. This guide explains what the word means in practice, where each option honestly wins, what it should cost, and the questions that show whether an agency using the word has earned it.</p>
+
+<h2 id=\"what-does-boutique-actually-mean-when-an-seo-agency-uses-the-word\">What does boutique actually mean when an SEO agency uses the word?</h2>
+<p>Boutique describes how the work is staffed, not how the office looks. A genuine boutique agency has a small senior team, keeps a deliberately limited client roster, gives you direct access to the people doing the work, and specializes in a narrow set of services instead of selling everything.</p>
+<p>The first marker is who does the work. In a boutique, the senior person you meet on the sales call stays on your account. They run the audit, set the strategy, and review the content. There is no handoff to a junior team once the contract is signed. The second marker is the client cap. A boutique turns work away on purpose, because senior hours are the product and there are only so many of them. The third marker is direct access. When you email a question, the reply comes from someone who knows your site, not from an account manager who has to ask three people before answering. The fourth marker is focus. A boutique usually does SEO and closely related work, and says no to the rest, rather than bolting on every service a client mentions.</p>
+<p>One honest warning before anything else: no standards body defines the word boutique for agencies, and no official team size or client limit exists. Any agency can print the word on its homepage, including large ones. So treat the label as a claim to be tested, not a fact. The tests are simple. Who does the work? How many clients does that person handle? Can you speak to them directly? The rest of this guide is built around those questions.</p>
+
+<h2 id=\"how-is-a-boutique-agency-different-from-a-big-agency-and-a-freelancer\">How is a boutique agency different from a big agency and a freelancer?</h2>
+<p>The three options differ mainly in capacity, breadth and risk. A big agency sells depth and coverage, a boutique sells senior attention on a focused scope, and a freelancer sells one skilled person at the lowest overhead. None of them wins on every row.</p>
+<p><strong>Big agency.</strong> You get a deep bench: technical SEOs, content teams, digital PR, developers and analysts under one roof, with documented processes and strong reporting systems. That machinery is a real advantage on large, complex accounts. The trade offs are cost and distance. Large retainers and minimum fees are common, your day to day contact is usually an account manager rather than the specialist doing the work, and strategy changes move through layers, so pivots can be slow. There is also a well known pattern worth naming plainly: a senior team pitches, and a junior team delivers.</p>
+<p><strong>Boutique agency.</strong> You get a small team where senior people plan and execute, a strategy built around your market instead of selected from a package menu, and short communication lines. The trade offs are a hard capacity ceiling and a narrower service list. A boutique cannot launch a hundred pages in a week, run your paid ads and your PR at the same time, or cover twelve markets at once. If it is well run, it will say so.</p>
+<p><strong>Freelancer.</strong> You get one experienced person, direct contact and usually the lowest price, which is exactly right for a defined, modest scope. The trade off is continuity. Everything sits in one head. Illness, holidays, overload or a better paying client can stall your SEO, and one person rarely covers technical SEO, content and link building equally well. We compare the freelancer and agency routes in more depth in our guide to <a href=\"/blog/seo-freelancer-vs-agency\">SEO freelancer vs agency</a>, and the build your own team route in <a href=\"/blog/in-house-vs-outsourced-seo\">in-house vs outsourced SEO</a>.</p>
+
+<h2 id=\"when-does-a-boutique-agency-beat-a-big-agency\">When does a boutique agency beat a big agency?</h2>
+<p>A boutique usually wins when your scope is focused, your market is one country or a few locations, and the quality of senior thinking matters more than the size of the team. That describes most small and mid sized businesses buying SEO.</p>
+<p>The clearest case is the budget test. At the retainer level most small businesses can afford, a big agency fee buys a lot of account management wrapped around a limited amount of actual SEO work, because their overhead and minimums come off the top. The same money at a boutique buys mostly senior hours on your site. The second case is speed. When a ranking drops or a new competitor appears, a boutique can test and adjust within days, because the person who spots the problem is allowed to act on it. The third case is fit. If your business lives in one niche, a specialized boutique that works in that niche all year will usually out think a generalist team that rotates staff across dozens of industries. The fourth case is communication. If you are the owner and you want straight answers from the person doing the work, the boutique structure gives you that by default.</p>
+
+<h2 id=\"when-is-a-boutique-agency-the-wrong-choice\">When is a boutique agency the wrong choice?</h2>
+<p>A boutique is the wrong choice when your needs are genuinely large, genuinely broad, or genuinely tiny. Being honest about this is part of the model, so here are the cases where we would point you somewhere else.</p>
+<p>Choose a big agency if you are a global enterprise that needs forty hours a week of SEO across twelve markets and several languages, with formal procurement, security reviews and board level reporting. A small team cannot staff that, and pretending otherwise helps nobody. Choose a big agency, or a full service firm, if you need one contract to cover SEO, paid media, brand, PR and web development together. A boutique that claims to do all of that in house is usually reselling other people work without telling you. Choose a freelancer, or a one off project, if your site is a single page or a handful of pages with one clear task, such as fixing titles or setting up local profiles. A monthly retainer of any kind is more than that job needs. And if you have no budget for ongoing work yet, do not sign a retainer you cannot sustain for at least a few months. A single audit with a clear fix list is the more honest purchase at that stage.</p>
+
+<h2 id=\"what-should-a-boutique-seo-retainer-cost-and-what-does-it-buy\">What should a boutique SEO retainer cost, and what does it buy?</h2>
+<p>Most boutique retainers sit between freelancer prices and big agency prices, and published survey data supports that. Ahrefs polled 439 SEO service providers and found that agencies charge $3,209 per month on average, while freelancers charge $1,348 per month. The same Ahrefs survey found the most common single retainer band across all providers was $501 to $1,000 per month, and that 78.2 percent of providers charge by monthly retainer.</p>
+<p>What does that money actually buy at a boutique? Senior time on the work that moves a small business site: a proper audit and the fixes that follow it, keyword and page planning tied to what your customers search for, content written or briefed by someone who knows your market, internal linking, local and profile work where it applies, and a monthly report that connects the work to enquiries rather than listing rankings alone. What it does not buy is a guaranteed position or a result in the first month. Any provider who sells you that is selling you a story. Our breakdown of <a href=\"/blog/seo-package-pricing\">SEO package pricing</a> shows how to read what a package includes, and our explainer on <a href=\"/blog/what-is-managed-seo\">what managed SEO is</a> covers what ongoing monthly work should look like.</p>
+<p>One pricing habit deserves attention: published prices. When an agency puts its price on its website, you can judge the offer before a sales call, compare scope against competitors, and hold the agency to its own number. RankVelt publishes its price openly: $525 per month for ongoing SEO, which sits inside the most common band in the Ahrefs data above. Hidden pricing is not proof of a bad agency, but published pricing is a trust signal, because it removes one layer of games from the buying process.</p>
+
+<h2 id=\"what-are-the-red-flags-on-both-sides\">What are the red flags on both sides?</h2>
+<p>Both models have a characteristic failure mode. At a boutique, the failure is using the word boutique as an excuse for having no process. At a big agency, it is selling senior expertise and delivering junior hours. The warning signs differ, so check for the right ones.</p>
+<p><strong>Boutique red flags.</strong> No written scope or deliverables, because everything is bespoke. No regular report, because you can just ask. No documented process, because the founder keeps it in their head. No cover plan, so work stops when one person is away. Vague answers about who does what. A real boutique is small and senior, but it still runs on written scope, scheduled reporting and a named backup.</p>
+<p><strong>Big agency red flags.</strong> The people in the pitch meeting will never touch your account again. Your account manager cannot answer basic questions about your site without escalating. A long lock in contract with no clear exit. Reports full of ranking charts that never mention calls, forms or sales. Your website, analytics and Search Console accounts held in the agency name, which makes leaving painful. None of these are rare, and all of them are visible before you sign if you ask.</p>
+<p><strong>Red flags at any size.</strong> Guaranteed first page rankings or a promised date for them. Secret link building methods they cannot describe. Refusal to put the scope and fee in writing. Pressure to sign today. These disqualify a freelancer, a boutique and a big agency equally.</p>
+
+<h2 id=\"what-questions-should-you-ask-before-you-sign-with-any-seo-provider\">What questions should you ask before you sign with any SEO provider?</h2>
+<p>Ask the same short set of questions to every provider, whatever their size, and judge the answers rather than the label. A careful provider answers plainly and in writing.</p>
+<ul>
+<li><strong>Who exactly will work on my account, and can I speak to them before signing?</strong> This single question exposes the senior pitch and junior delivery pattern.</li>
+<li><strong>How many clients does that person handle right now?</strong> This is the real boutique test. It is client load per senior person, not office size.</li>
+<li><strong>What will you actually change on my website in the first ninety days?</strong> You should hear specific work: titles, technical fixes, pages, internal links, tied to what your customers search for.</li>
+<li><strong>Who owns the website, analytics and Search Console accounts?</strong> The answer should be you, with the provider given access. Accounts in the provider name are a lock in, whatever the contract says.</li>
+<li><strong>What will the monthly report show?</strong> Look for work completed, what changed, and what happens next, connected to enquiries and sales where possible.</li>
+<li><strong>Who covers the work when the lead person is away?</strong> For a freelancer or boutique, this tests continuity. For a big agency, it tests whether your account survives staff changes.</li>
+<li><strong>What are the contract terms and the exit route?</strong> A clear billing period and a simple way to stop. Long lock ins with no written scope put all the risk on you.</li>
+<li><strong>What do you not do?</strong> An honest provider names its limits and tells you who should handle the rest. Our <a href=\"/hire-seo-expert\">hire an SEO expert</a> page shows how we scope this kind of engagement, so you can compare the format against any other offer.</li>
+</ul>
+<p>RankVelt is itself an example of the boutique model described here: a small, senior-led team, a limited client roster, published pricing at $525 per month, and direct access to the people doing the work. That model will not fit every business, and this guide has said so plainly. If it might fit yours, start with evidence rather than a pitch. Our <a href=\"/seo-audit-services\">SEO audit services</a> give you a clear picture of where your site stands, or you can book a free SEO Opportunity Check at <a href=\"/strategy-call\">/strategy-call</a> and ask us the eight questions above. We will answer them in writing, and we will tell you honestly if a big agency or a freelancer is the better buy for your situation.</p>
+
+<h2 id=\"faqs\">Frequently Asked Questions</h2>
+<details><summary>What is the difference between a boutique agency and a small agency?</summary><p>Small only describes headcount. Boutique describes how the work is staffed: senior people do the work themselves, the service list is narrow and specialized, and the client roster is deliberately limited. A small agency can still hand your account to its most junior hire. A genuine boutique does not.</p></details>
+<details><summary>Is a boutique SEO agency cheaper than a big agency?</summary><p>Usually, yes in total, because you are not paying for large offices, sales teams and layers of account management. The Ahrefs survey of 439 SEO providers found agencies averaging $3,209 a month against $1,348 for freelancers, and boutique retainers usually sit between those two points. Scope decides the final number, so compare what the fee actually covers, not just the fee.</p></details>
+<details><summary>How many clients does a boutique agency handle at once?</summary><p>There is no standard number, because no industry body defines the term. The useful test is client load per senior person. Ask the agency directly how many accounts the person running yours handles. If the answer is vague, or the number sounds like a call center queue, the boutique label is doing marketing work, not describing a real limit.</p></details>
+<details><summary>Can a boutique agency handle a large or international website?</summary><p>Sometimes, but often it is the wrong tool. A boutique team can do deep work on one market and one site. A business that needs SEO across many countries, languages and subdomains at the same time usually needs the bench and coverage of a big agency. An honest boutique will tell you this before you sign, not after.</p></details>
+<details><summary>How can I check if an agency calling itself boutique really is one?</summary><p>Ask who will actually do the work on your account, and speak to that person before signing. Ask how many clients they personally handle, what the monthly report shows, and who covers when they are away. A real boutique answers all of this in plain language. If you want to test how we answer, book a free SEO Opportunity Check at /strategy-call and ask us the same questions.</p></details>`,
+  },
+{
+    id: "seo-for-dermatologists",
+
+    title: "SEO for Dermatologists: Two Patient Types, Two Strategies",
+
+    seoTitle:
+      "SEO for Dermatologists: Medical and Cosmetic",
+
+    metaDescription:
+      "SEO for dermatologists, split the right way: insurance pages for medical patients, price and proof pages for cosmetic patients, within medical rules.",
+
+    ogTitle: "SEO for Dermatologists: Medical and Cosmetic Patients Search Differently",
+
+    socialDescription:
+      "Dermatology marketing explained plainly: why medical and cosmetic patients need different pages, and the content and photo rules a practice cannot break.",
+
+    date: "Nov 21, 2026",
+    datePublished: "2026-11-21",
+    dateModified: "2026-11-21",
+
+    author: "RankVelt Editorial Team",
+    authorType: "Organization",
+
+    category: "NICHE SEO",
+    readTime: "13 min read",
+
+    image: "/blog/seo-for-dermatologists.webp",
+
+    imageAlt:
+      "Illustration of a dermatology practice website split into medical and cosmetic treatment pages",
+
+    excerpt:
+      "Dermatology practices serve two different searchers. Medical patients look for conditions, insurance and trust. Cosmetic patients compare prices, downtime and proof. This guide shows the page plan for both.",
+
+    relatedPostIds: [
+      "healthcare-legal-seo",
+      "dentist-seo-guide",
+      "pediatric-dental-seo",
+    ],
+
+    primaryService: {
+      title: "Business SEO",
+      description:
+        "SEO services for local and service businesses that need steady enquiries from Google and AI search, from $525/month.",
+      path: "/business-seo",
+    },
+
+    showStandardCta: true,
+
+    faqItems: [
+      {
+        question: "How long does SEO take for a dermatology practice?",
+        answer:
+          "Profile fixes, such as the right category and a complete services list, can shift map results within a few weeks. Content and organic rankings take longer, and 3 to 6 months is a realistic window to judge direction. Anyone who promises page one rankings by a fixed date is guessing, because Google controls the timeline, not the agency.",
+      },
+      {
+        question: "How much does SEO cost for a dermatology practice?",
+        answer:
+          "Cost depends on how competitive your city is and how much content your two service lines need. Our local SEO pricing guide breaks down what drives the price. At RankVelt, plans start at $525/month, with a 3 month initial term and honest reporting on rankings, calls and bookings, so you can judge the work on patient enquiries, not promises.",
+      },
+      {
+        question: "Do dermatologists need separate pages for medical and cosmetic services?",
+        answer:
+          "Yes. A patient worried about a changing mole and a patient comparing Botox prices are asking different questions, and one blended page answers neither of them well. Separate pages let each reader find their proof quickly: credentials and insurance on the medical side, prices, downtime and results on the cosmetic side.",
+      },
+      {
+        question: "Can we use before and after photos if the patient's face is cropped out?",
+        answer:
+          "No. Cropping is not consent. Patient photos count as protected health information, and using them in marketing requires a signed written authorization from the patient that covers marketing use and says where the photos may appear. The patient can withdraw that authorization. Without it, do not publish the photo, cropped or not.",
+      },
+      {
+        question: "Can we reply to a review that describes a patient's treatment?",
+        answer:
+          "You can reply, but you must never confirm that the reviewer is a patient or add any detail about treatment, dates or insurance, even if the reviewer shared those details first. Keep the reply general, thank the person, and invite them to call the office. Regulators have fined practices for saying more than that.",
+      },
+    ],
+
+    toc: [
+      {
+        id: "why-does-dermatology-seo-need-two-different-strategies",
+        title: "Why does dermatology SEO need two different strategies?",
+        level: 2,
+      },
+      {
+        id: "which-pages-does-a-dermatology-practice-actually-need",
+        title: "Which pages does a dermatology practice actually need?",
+        level: 2,
+      },
+      {
+        id: "how-should-a-dermatologist-set-up-a-google-business-profile",
+        title: "How should a dermatologist set up a Google Business Profile?",
+        level: 2,
+      },
+      {
+        id: "what-rules-apply-to-medical-content-claims-and-before-and-after-photos",
+        title: "What rules apply to medical content, claims and before and after photos?",
+        level: 2,
+      },
+      {
+        id: "how-do-insurance-and-self-pay-searches-differ",
+        title: "How do insurance and self pay searches differ?",
+        level: 2,
+      },
+      {
+        id: "how-can-a-dermatology-practice-get-recommended-by-ai-assistants",
+        title: "How can a dermatology practice get recommended by AI assistants?",
+        level: 2,
+      },
+      {
+        id: "how-should-a-dermatology-practice-handle-patient-reviews-safely",
+        title: "How should a dermatology practice handle patient reviews safely?",
+        level: 2,
+      },
+      {
+        id: "faqs",
+        title: "Frequently Asked Questions",
+        level: 2,
+      },
+    ],
+
+    content: `<p>Dermatology SEO works when you treat the practice as two businesses sharing one roof. Medical patients search by condition, insurance and trust. Cosmetic patients search by treatment, price and proof. One blended services page serves neither group well, so this guide separates the two, page by page, and covers the strict content, photo and review rules that apply to medical marketing.</p>
+
+<h2 id=\"why-does-dermatology-seo-need-two-different-strategies\">Why does dermatology SEO need two different strategies?</h2>
+<p>Because medical and cosmetic patients search with different intent, different urgency and different proof requirements, and a page written for one group quietly fails the other. Splitting the strategy is the single decision everything else in dermatology marketing follows from.</p>
+<p>The medical patient is usually worried or referred. They search things like 'mole that changed color', 'rash that will not go away' or 'dermatologist who takes my insurance near me'. They want a qualified doctor, a clear answer on insurance, and an appointment soon. Credentials, calm language and practical detail win this patient. Hype loses them, and so does a page that leads with beauty treatments.</p>
+<p>The cosmetic patient is planning a purchase. They search 'Botox near me', 'laser hair removal cost' or 'best treatment for acne scars', and they compare three or four providers over days or weeks before calling anyone. They study prices, downtime, photos and who actually performs the treatment. On these searches your competitors are not only other dermatologists. Med spas and injectables clinics advertise aggressively for the same terms, often with bigger budgets and weaker medical oversight.</p>
+<p>The money at stake is real. In our own SEMrush keyword research for the US market (November 2026), the term 'dermatology marketing' alone carries about 1,000 searches a month, a keyword difficulty of 17 and a cost per click of $11.54. Advertisers do not pay that kind of click price for patients who are not worth winning. A practice that separates its medical and cosmetic funnels can compete for both patient types without confusing either one.</p>
+
+<h2 id=\"which-pages-does-a-dermatology-practice-actually-need\">Which pages does a dermatology practice actually need?</h2>
+<p>A dermatology practice needs one page per condition it treats, one page per cosmetic treatment it offers, one clear insurance and new patient page, and one bio page per doctor. Each page answers one searcher's question fully, instead of one long services page trying to answer everything at once.</p>
+<p>On the medical side, build condition pages around the searches patients actually make: acne treatment, eczema, psoriasis, rosacea, skin cancer screening, mole checks and removal, and Mohs surgery if you offer it. Write each page around the patient's situation. What the condition is, when it needs a doctor rather than a pharmacy product, what the appointment involves, and how booking works. On the cosmetic side, build one page per treatment: Botox, dermal fillers, laser treatments, chemical peels and any other service you genuinely provide, each with its own pricing and downtime detail.</p>
+<p>Doctor bio pages matter more than most practices expect. Patients search doctors by name, and a bio page that carries board certification, training, conditions treated and a real photo gives Google and AI assistants a named expert to attach the practice's content to. Location pages follow the same rule: one per real office, naming the doctors who work there and the plans that office accepts, never copied text with the town name swapped.</p>
+<p>The shared foundation underneath all of this, site structure, trust signals and how Google judges health and legal content, is covered in our guide to <a href=\"/blog/healthcare-legal-seo\">healthcare and legal SEO</a>, so we will not repeat it here. The same specialty page logic is why dentists do better with dedicated guides than generic healthcare pages, as our <a href=\"/blog/dentist-seo-guide\">dental SEO guide</a> shows. One discipline applies to every page on the list: only publish pages for conditions and treatments the practice actually offers. A page built to catch a search you cannot serve wastes the click and damages trust.</p>
+
+<h2 id=\"how-should-a-dermatologist-set-up-a-google-business-profile\">How should a dermatologist set up a Google Business Profile?</h2>
+<p>Set 'Dermatologist' as the primary category, add secondary categories only where they are true, and list every condition and treatment as an individual service with a short description. For most practices, the profile is where the highest intent searches are won or lost, because 'dermatologist near me' results are decided in the map pack before anyone reaches a website.</p>
+<p>Google has said for years that local rankings rest on relevance, distance and prominence. You cannot move your office, so the work is relevance and prominence. Relevance starts with the category. 'Dermatologist' is the primary category. Add 'Skin Care Clinic' if the practice operates one, and 'Medical Spa' only if you genuinely run one under the same roof. Wrong or padded categories hurt more than they help, because they tell Google the wrong story about what the business is.</p>
+<p>Then list services one by one: skin cancer screening, acne treatment, mole and lesion removal, Mohs surgery, Botox, dermal fillers, laser treatments, and anything else you offer, each with a plain description. Add accurate hours, including separate hours for cosmetic appointments if they differ, an online booking link if you take one, and real photos of the office, the rooms and the team. Patient photos belong in marketing only under the consent rules covered in the next section, so keep profile photos to the practice itself. Where individual doctors see patients at the location, their own practitioner profiles should be claimed and kept consistent too, with the same name, address and phone number everywhere the practice appears. Consistency is a prominence signal Google and patients both read.</p>
+
+<h2 id=\"what-rules-apply-to-medical-content-claims-and-before-and-after-photos\">What rules apply to medical content, claims and before and after photos?</h2>
+<p>Medical content sits in Google's 'your money or your life' category, which means it is held to a higher trust standard than ordinary business content. Every medical page should be reviewed by the doctor, carry visible credentials, and state what a treatment can and cannot do. Photos of patients need signed written authorization before they are used anywhere in marketing.</p>
+<p>Start with claims. A treatment page that promises to 'permanently remove', 'guarantee results' or 'cure' a condition is a problem twice over: it misleads patients, and it invites trouble with regulators and advertising rules. Honest pages do the opposite. They say who a treatment suits, who it does not suit, how many sessions are typical, what the risks and downtime are, and when a different treatment or a referral is the better answer. That honesty is also what earns trust with the worried medical patient, who can tell the difference between a doctor explaining and a salesperson pushing.</p>
+<p>Show the expertise behind the words. Name the doctor who reviewed each medical page, link to their bio with board certification and training, and date the review. Assistants and search engines both look for a qualified human behind health content, and patients do the same before they book.</p>
+<p>Before and after photos need the strictest handling. A patient photo is protected health information. Using it in marketing requires a signed written authorization from that patient, kept separate from ordinary treatment consent forms, stating what will be shown and where it may appear, on the website, on social media, in ads. The patient can withdraw that authorization, and if they do, the photos come down. Cropping the face, blurring eyes or removing a name does not replace authorization, and neither does a verbal yes at the front desk. No signed authorization, no photo. Practices that need gallery content before consents exist should use clearly generic imagery and build the consented gallery slowly and properly.</p>
+
+<h2 id=\"how-do-insurance-and-self-pay-searches-differ\">How do insurance and self pay searches differ?</h2>
+<p>Insurance driven patients want a yes or no answer by plan name before they read anything else. Self pay cosmetic patients want a price range, the downtime and the payment options. Each group leaves quickly when its answer is hidden behind 'call our office for details'.</p>
+<p>Build one insurance and new patient page and write it like an answer sheet. List the plans the practice actually accepts, by name. Explain how a patient can verify coverage before the visit, whether referrals are required for medical appointments, and what new patients should expect for wait times. Plans change, so review this page on a schedule and date the update. An out of date insurance list creates angry phone calls and bad reviews, and it quietly teaches search engines that your facts cannot be trusted.</p>
+<p>Cosmetic pages carry the opposite set of answers. Give an honest price range or a clear 'from' price for each treatment, say how many sessions most patients need, state the downtime in plain words, name who performs the treatment and their qualifications, and list financing or payment plan options if you offer them. Med spas publish prices because they know cosmetic patients comparison shop. A dermatology practice that hides every price loses that comparison to a less qualified competitor, even though its medical credentials are stronger. The honest middle ground is a range with the factors that move it, which respects both the patient and the practice.</p>
+
+<h2 id=\"how-can-a-dermatology-practice-get-recommended-by-ai-assistants\">How can a dermatology practice get recommended by AI assistants?</h2>
+<p>AI assistants recommend practices whose facts are published clearly and repeated consistently. BrightLocal's Local Consumer Review Survey 2026 found that the share of US consumers using ChatGPT and other generative AI tools for local recommendations rose from 6 percent to 45 percent in a single year, so 'dermatologist near me' is increasingly a question asked of an assistant, not only typed into Google.</p>
+<p>Assistants build their answers from checkable facts: your services, the insurance plans you name, your hours, your doctors and their credentials, your booking options, and your review record. If a fact is not published anywhere, the assistant cannot use it, and a competitor whose facts are public gets the recommendation instead. So the work is unglamorous. Keep the same facts identical on your website, your Google Business Profile and the main healthcare directories. Publish the insurance page, the treatment pages and the doctor bios described above. Then answer treatment questions in plain language with the doctor's name attached, because assistants cite pages that read like clear answers from an identifiable expert.</p>
+<p>Set expectations honestly about symptom questions. Searches like 'what does skin cancer look like' are usually answered from large medical publishers and health authorities, and a single practice will rarely be the cited source. Where a practice can realistically be cited is local and practical ground: what a full body skin check involves at your office, how a biopsy result is delivered, how quickly a changing mole can be seen, and which local patients you serve. That content combines medical accuracy with facts only your practice can state, which is exactly the combination assistants struggle to find elsewhere.</p>
+
+<h2 id=\"how-should-a-dermatology-practice-handle-patient-reviews-safely\">How should a dermatology practice handle patient reviews safely?</h2>
+<p>Ask every patient the same simple way, reply to every review, and never confirm in a reply that the reviewer is a patient. Reviews decide shortlists in this specialty: rater8's 2025 patient survey found that 84 percent of patients check online reviews before choosing a new provider, and BrightLocal's 2026 survey found that 74 percent of consumers look for reviews written in the last three months, while 80 percent are more likely to use a business that responds to all of its reviews.</p>
+<p>The asking has rules. Google's policies and the FTC's review rule both ban paying for reviews, offering anything in exchange for one, and selectively asking only the patients you expect to be happy. Asking every patient for an honest review after a completed visit is allowed and is the whole system: a short verbal ask at checkout and a text or email with your Google review link the same day. Steady recent reviews beat a large old total, which is why the ask belongs in the daily routine rather than an occasional campaign. Our <a href=\"/blog/local-seo-pricing\">local SEO pricing</a> guide explains how review work fits into a monthly local program and what it should cost.</p>
+<p>The replying has stricter rules. Never mention a diagnosis, a treatment, an appointment date or an insurance detail in a public reply, even when the reviewer described all of it themselves. Your confirmation turns their words into a disclosure of protected health information. This is enforced, not theoretical: in 2022, the US Department of Health and Human Services Office for Civil Rights announced a $23,000 settlement with a California dental practice that had disclosed patient information in replies to online reviews. The safe reply is short and general. Thank the person, say the team works hard to make every visit comfortable, and for any complaint, invite them to call the office so it can be handled privately. Future patients read your tone in replies as closely as they read the reviews.</p>
+
+<h2 id=\"faqs\">Frequently Asked Questions</h2>
+<details><summary>How long does SEO take for a dermatology practice?</summary><p>Profile fixes, such as the right category and a complete services list, can shift map results within a few weeks. Content and organic rankings take longer, and 3 to 6 months is a realistic window to judge direction. Anyone who promises page one rankings by a fixed date is guessing, because Google controls the timeline, not the agency.</p></details>
+<details><summary>How much does SEO cost for a dermatology practice?</summary><p>Cost depends on how competitive your city is and how much content your two service lines need. Our local SEO pricing guide breaks down what drives the price. At RankVelt, plans start at $525/month, with a 3 month initial term and honest reporting on rankings, calls and bookings, so you can judge the work on patient enquiries, not promises.</p></details>
+<details><summary>Do dermatologists need separate pages for medical and cosmetic services?</summary><p>Yes. A patient worried about a changing mole and a patient comparing Botox prices are asking different questions, and one blended page answers neither of them well. Separate pages let each reader find their proof quickly: credentials and insurance on the medical side, prices, downtime and results on the cosmetic side.</p></details>
+<details><summary>Can we use before and after photos if the patient's face is cropped out?</summary><p>No. Cropping is not consent. Patient photos count as protected health information, and using them in marketing requires a signed written authorization from the patient that covers marketing use and says where the photos may appear. The patient can withdraw that authorization. Without it, do not publish the photo, cropped or not.</p></details>
+<details><summary>Can we reply to a review that describes a patient's treatment?</summary><p>You can reply, but you must never confirm that the reviewer is a patient or add any detail about treatment, dates or insurance, even if the reviewer shared those details first. Keep the reply general, thank the person, and invite them to call the office. Regulators have fined practices for saying more than that.</p></details>
+<p>If your practice website mixes medical and cosmetic services on the same pages, or your profile is missing services patients search for, start with a free audit. Our <a href=\"/seo-audit-services\">SEO audit services</a> will show you, in plain language, which pages to split, which facts to publish and which rules your current content breaks, and you can run quick checks yourself first with our <a href=\"/tools\">free SEO tools</a>. If the audit shows real gaps, book a <a href=\"/strategy-call\">free strategy call</a> and we will tell you honestly whether ongoing work makes sense for your practice, or whether a short list of fixes is all you need.</p>`,
   },
 ];
 const validateBlogPosts = (posts: BlogPost[]): void => {
