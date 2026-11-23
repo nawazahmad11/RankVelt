@@ -447,6 +447,44 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Launch badges */}
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-4 border-t border-white/[0.06] pt-8">
+          <a
+            href="https://www.launchscaler.com/v/rankvelt.com?t=JlvHaPaKCSf5i8pNnpg6E0QrFYv8ZmS__ChxcOv2NhQ&utm_source=badge&utm_medium=referral"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="https://www.launchscaler.com/api/badge/rankvelt.com/image?theme=light&variant=credential&tone=outline"
+              alt="RankVelt on LaunchScaler"
+              width={272}
+              height={58}
+              loading="lazy"
+            />
+          </a>
+
+          <a
+            href="https://launchbuff.com/products/rankvelt-free-seo-tools-gs6aip"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Featured on LaunchBuff"
+          >
+            <img
+              src="https://launchbuff.com/badge-featured-dark.svg"
+              alt="Featured on LaunchBuff"
+              width={256}
+              height={80}
+            />
+          </a>
+
+          {/*
+            MegaLaunch badge goes here once the MegaLaunch product exists.
+            Its badge code needs the real product slug, which is not
+            available yet (dashboard checked 2026-11-23: no RankVelt
+            product found in the account).
+          */}
+        </div>
+
         {/* Bottom bar */}
         <div className="mt-10 flex flex-col gap-6 border-t border-white/[0.06] pt-8 md:flex-row md:items-center md:justify-between">
           <p className="text-center text-xs leading-relaxed text-white/70 md:text-left">
