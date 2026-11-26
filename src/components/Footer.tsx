@@ -457,8 +457,8 @@ const Footer = () => {
             <img
               src="https://www.launchscaler.com/api/badge/rankvelt.com/image?theme=light&variant=credential&tone=outline"
               alt="RankVelt on LaunchScaler"
-              width={272}
-              height={58}
+              width={204}
+              height={44}
               loading="lazy"
             />
           </a>
@@ -472,8 +472,8 @@ const Footer = () => {
             <img
               src="https://launchbuff.com/badge-featured-dark.svg"
               alt="Featured on LaunchBuff"
-              width={256}
-              height={80}
+              width={192}
+              height={60}
             />
           </a>
 
@@ -486,18 +486,39 @@ const Footer = () => {
             <img
               src="https://lift-off.sh/images/badges/badgeLaunchedLight.webp"
               alt="RankVelt Free SEO Tools on LiftOff Badge"
-              width={200}
+              width={150}
               className="h-auto"
               loading="lazy"
             />
           </a>
 
-          {/*
-            MegaLaunch badge goes here once the MegaLaunch product exists.
-            Its badge code needs the real product slug, which is not
-            available yet (dashboard checked 2026-11-23: no RankVelt
-            product found in the account).
-          */}
+          <a
+            href="https://megalaun.ch/"
+            target="_blank"
+            rel="noopener"
+            title="Featured on MegaLaunch"
+          >
+            <img
+              src="https://megalaun.ch/badges/featured/asset"
+              alt="Featured on MegaLaunch"
+              width={165}
+              height={48}
+            />
+          </a>
+
+          <a
+            href="https://foundrlist.com/product/rankvelt?utm_source=badge&utm_medium=embed"
+            target="_blank"
+            rel="noopener"
+            title="Featured on FoundrList"
+          >
+            <img
+              src="https://foundrlist.com/api/badge/rankvelt"
+              alt="Featured on FoundrList"
+              width={150}
+              height={48}
+            />
+          </a>
         </div>
 
         {/* Bottom bar */}
