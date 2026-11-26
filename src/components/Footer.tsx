@@ -477,6 +477,21 @@ const Footer = () => {
             />
           </a>
 
+          <a
+            href="https://lift-off.sh/p/rankvelt-free-seo-tools"
+            target="_blank"
+            rel="noopener"
+            title="LiftOff launch badge"
+          >
+            <img
+              src="https://lift-off.sh/images/badges/badgeLaunchedLight.webp"
+              alt="RankVelt Free SEO Tools on LiftOff Badge"
+              width={200}
+              className="h-auto"
+              loading="lazy"
+            />
+          </a>
+
           {/*
             MegaLaunch badge goes here once the MegaLaunch product exists.
             Its badge code needs the real product slug, which is not
