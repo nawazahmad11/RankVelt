@@ -291,6 +291,14 @@ const BusinessSEOService = lazy(
 );
 
 
+const AeoServices = lazy(
+  () => import("./pages/services/AeoServices"),
+);
+
+const GeoServices = lazy(
+  () => import("./pages/services/GeoServices"),
+);
+
 const WordpressSeoAgencyService = lazy(
   () => import("./pages/services/WordpressSeoAgencyService"),
 );
@@ -461,10 +469,10 @@ const App = () => (
               path="/ai-seo-agency"
               element={<AiSeoAgencyService />}
             />
-<Route
-  path="/about"
-  element={<About />}
-/>
+          <Route
+            path="/about"
+            element={<About />}
+          />
             <Route
               path="/hire-seo-expert"
               element={<HireSeoExpertService />}
@@ -502,33 +510,30 @@ const App = () => (
               path="/blog/:id"
               element={<BlogPostDetail />}
             />
+          <Route
+            path="/local-seo/dentists"
+            element={<LocalSEODentists />}
+          />
 
-<Route
-  path="/local-seo/dentists"
-  element={<LocalSEODentists />}
-/>
+          <Route
+            path="/local-seo/plumbers"
+            element={<LocalSEOPlumbers />}
+          />
 
-<Route
-  path="/local-seo/plumbers"
-  element={<LocalSEOPlumbers />}
-/>
+          <Route
+            path="/local-seo/electricians"
+            element={<LocalSEOElectricians />}
+          />
 
-<Route
-  path="/local-seo/electricians"
-  element={<LocalSEOElectricians />}
-/>
+          <Route
+            path="/local-seo/hvac"
+            element={<LocalSEOHvac />}
+          />
 
-<Route
-  path="/local-seo/hvac"
-  element={<LocalSEOHvac />}
-/>
-
-<Route
-  path="/local-seo/lawyers"
-  element={<LocalSEOLawyers />}
-/>
-
-
+          <Route
+            path="/local-seo/lawyers"
+            element={<LocalSEOLawyers />}
+          />
             {/* Tools */}
             <Route
               path="/tools"
@@ -769,6 +774,17 @@ const App = () => (
             <Route
               path="/services/checkout-flow"
               element={<CheckoutFlowService />}
+            />
+
+
+            <Route
+              path="/aeo-services"
+              element={<AeoServices />}
+            />
+
+            <Route
+              path="/geo-services"
+              element={<GeoServices />}
             />
 
             {/* Keep this route last */}

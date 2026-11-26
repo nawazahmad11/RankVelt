@@ -39,6 +39,9 @@ const staticRoutes = [
   "/shopify-seo-services",
   "/seo-audit-services",
 
+  "/aeo-services",
+  "/geo-services",
+
   "/blog",
 
   "/tools",
