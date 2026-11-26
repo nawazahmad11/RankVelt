@@ -43,6 +43,12 @@
   { "source": "/blog/why-shopify-stores-fail", "destination": "/blog/shopify-seo-audit", "permanent": true },
   { "source": "/blog/high-converting-product-pages", "destination": "/blog/shopify-seo-expert", "permanent": true },
   { "source": "/blog/shopify-redesign-signs", "destination": "/blog/hire-shopify-seo-expert", "permanent": true },
+  { "source": "/wordpress-seo-expert", "destination": "/blog/wordpress-seo-expert", "permanent": true },
+  { "source": "/enterprise-seo-audit", "destination": "/blog/enterprise-seo-audit", "permanent": true },
+  { "source": "/wordpress-seo-issues", "destination": "/blog/wordpress-seo-issues", "permanent": true },
+  { "source": "/seo-vs-aeo-vs-geo", "destination": "/blog/seo-vs-aeo-vs-geo", "permanent": true },
+  { "source": "/woocommerce-seo", "destination": "/blog/woocommerce-seo", "permanent": true },
+  { "source": "/blog/ai-overviews-vs-ai-mode", "destination": "/blog/optimize-google-ai-overviews", "permanent": true },
 
   {
     "source": "/",

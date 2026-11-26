@@ -327,6 +327,12 @@ const ecommerceSeoServicesConfig: SeoServicePageConfig =
           "A dedicated specialist for your store instead of marketplace freelancers.",
         path: "/hire-seo-expert",
       },
+      {
+        title: "Shopify Cart and Checkout Optimisation",
+        description:
+          "Clearer shipping information, trust signals and cart UX that reduce purchase friction.",
+        path: "/services/checkout-flow",
+      },
     ],
   };
 
