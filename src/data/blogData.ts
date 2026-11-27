@@ -30160,9 +30160,9 @@ http://cheap-guest-posts.example/my-post</code></pre>
     socialDescription:
       "A practical guide for electrical contractors: the keywords, service pages, profile work and reviews that turn local Google searches into booked jobs.",
 
-    date: "Dec 7, 2026",
-    datePublished: "2026-12-07",
-    dateModified: "2026-12-07",
+    date: "Nov 28, 2026",
+    datePublished: "2026-11-28",
+    dateModified: "2026-11-28",
 
     author: "RankVelt Editorial Team",
     authorType: "Organization",
@@ -30361,9 +30361,9 @@ http://cheap-guest-posts.example/my-post</code></pre>
     socialDescription:
       "Local SEO for HVAC companies explained by season: what to rank for in summer and winter, what it costs, how long it takes, and how to judge it by booked calls.",
 
-    date: "Dec 8, 2026",
-    datePublished: "2026-12-08",
-    dateModified: "2026-12-08",
+    date: "Nov 29, 2026",
+    datePublished: "2026-11-29",
+    dateModified: "2026-11-29",
 
     author: "RankVelt Editorial Team",
     authorType: "Organization",
@@ -30573,9 +30573,9 @@ http://cheap-guest-posts.example/my-post</code></pre>
     socialDescription:
       "How individual agents get seller leads from Google: neighbourhood pages, local market updates and reviews, without trying to outrank the big property portals.",
 
-    date: "Dec 9, 2026",
-    datePublished: "2026-12-09",
-    dateModified: "2026-12-09",
+    date: "Nov 30, 2026",
+    datePublished: "2026-11-30",
+    dateModified: "2026-11-30",
 
     author: "RankVelt Editorial Team",
     authorType: "Organization",
@@ -30795,9 +30795,9 @@ http://cheap-guest-posts.example/my-post</code></pre>
     socialDescription:
       "Practical local SEO for restaurants: the Google profile, menu pages, photos and reviews that turn nearby searches into booked tables.",
 
-    date: "Dec 10, 2026",
-    datePublished: "2026-12-10",
-    dateModified: "2026-12-10",
+    date: "Dec 1, 2026",
+    datePublished: "2026-12-01",
+    dateModified: "2026-12-01",
 
     author: "RankVelt Editorial Team",
     authorType: "Organization",
@@ -30992,9 +30992,9 @@ http://cheap-guest-posts.example/my-post</code></pre>
     socialDescription:
       "Local citations in plain English: what counts as one, where to build them first, how to clean up wrong listings, and why consistency beats volume.",
 
-    date: "Dec 11, 2026",
-    datePublished: "2026-12-11",
-    dateModified: "2026-12-11",
+    date: "Dec 2, 2026",
+    datePublished: "2026-12-02",
+    dateModified: "2026-12-02",
 
     author: "RankVelt Editorial Team",
     authorType: "Organization",
@@ -31179,9 +31179,9 @@ http://cheap-guest-posts.example/my-post</code></pre>
     socialDescription:
       "Consultant or agency for local SEO? A fair comparison of cost, monthly deliverables, reporting and contract terms, so a small business can hire with its eyes open.",
 
-    date: "Dec 12, 2026",
-    datePublished: "2026-12-12",
-    dateModified: "2026-12-12",
+    date: "Dec 3, 2026",
+    datePublished: "2026-12-03",
+    dateModified: "2026-12-03",
 
     author: "RankVelt Editorial Team",
     authorType: "Organization",
